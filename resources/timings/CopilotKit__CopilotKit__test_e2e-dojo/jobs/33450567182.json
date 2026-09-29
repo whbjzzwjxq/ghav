@@ -1,0 +1,4053 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T23:25:02Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:24:48Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679291378,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "detect-changes",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000535463",
+      "started_at": "2026-08-31T23:24:51Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:24:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:24:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:00Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-31T23:24:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:01Z",
+          "conclusion": "success",
+          "name": "Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:01Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:30:33Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344515,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "langgraph-typescript",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-jqf61fz1qv",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "skipped",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "skipped",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "skipped",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:45Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:48Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:52Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:52Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:56Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:56Z",
+          "conclusion": "success",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:00Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:19Z",
+          "conclusion": "success",
+          "name": "Run tests – langgraph-typescript",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:20Z",
+          "conclusion": "success",
+          "name": "Upload traces – langgraph-typescript",
+          "number": 23,
+          "started_at": "2026-08-31T23:30:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:20Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 41,
+          "started_at": "2026-08-31T23:30:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:31Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:30:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:32Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:30:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:32Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:30:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:32Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:30:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:32Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:30:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:30:32Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:29:10Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344554,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "mastra-agent-local",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-v4qjqhbfkl",
+      "started_at": "2026-08-31T23:25:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "skipped",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "skipped",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "skipped",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:00Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:00Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:53Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:56Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:57Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:58Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:02Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:02Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:05Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:57Z",
+          "conclusion": "success",
+          "name": "Run tests – mastra-agent-local",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:57Z",
+          "conclusion": "success",
+          "name": "Upload traces – mastra-agent-local",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:58Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:28:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344557,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "agno",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-b533n85f9c",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:58Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:59Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:04Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:04Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:03Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:07Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:27:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:06Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:27:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:06Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:28:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:10Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:28:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:10Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:16Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:38Z",
+          "conclusion": "success",
+          "name": "Run tests – agno",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:39Z",
+          "conclusion": "success",
+          "name": "Upload traces – agno",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:39Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:28:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:39Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:49Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:49Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:28:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:49Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:28:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:49Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:28:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:50Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:28:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:28:50Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:29:05Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344563,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "adk-middleware",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-7v8l118pvc",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:45Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:46Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:00Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:00Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:52Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:55Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:51Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:51Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:55Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:55Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:57Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:52Z",
+          "conclusion": "success",
+          "name": "Run tests – adk-middleware",
+          "number": 22,
+          "started_at": "2026-08-31T23:27:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:53Z",
+          "conclusion": "success",
+          "name": "Upload traces – adk-middleware",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:53Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:28:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:53Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:04Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:04Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:29:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:04Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:29:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:04Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:29:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:04Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:29:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:29:04Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:28:22Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344568,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "middleware-starter",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-s6j6d99vhw",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "skipped",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "skipped",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "skipped",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:02Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:02Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:53Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:56Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:52Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:53Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:57Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:57Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:59Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:08Z",
+          "conclusion": "success",
+          "name": "Run tests – middleware-starter",
+          "number": 22,
+          "started_at": "2026-08-31T23:27:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:09Z",
+          "conclusion": "success",
+          "name": "Upload traces – middleware-starter",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:09Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:19Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:19Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:28:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:19Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:28:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:19Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:28:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:20Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:28:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:28:20Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:30:21Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344575,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "llama-index",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-c2btdj4l7z",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:46Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:47Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:57Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:03Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:03Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:01Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:05Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:27:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:33Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:27:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:33Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:28:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:40Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:28:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:40Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:44Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:38Z",
+          "conclusion": "success",
+          "name": "Run tests – llama-index",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:39Z",
+          "conclusion": "success",
+          "name": "Upload traces – llama-index",
+          "number": 23,
+          "started_at": "2026-08-31T23:29:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:39Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:29:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:40Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:29:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:19Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:19Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:30:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:19Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:30:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:19Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:30:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:19Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:30:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:30:20Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:28:33Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344591,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "server-starter",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-6sq2m4mxx6",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:02Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:03Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:09Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:26:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:09Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:02Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:05Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:27:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:03Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:27:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:03Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:28:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:08Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:28:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:08Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:11Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:19Z",
+          "conclusion": "success",
+          "name": "Run tests – server-starter",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:20Z",
+          "conclusion": "success",
+          "name": "Upload traces – server-starter",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:20Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:28:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:20Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:28:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:28:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:28:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:28:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:28:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:30:14Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344593,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "langgraph-python",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-dqf1k1vkvj",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:47Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:47Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:02Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:02Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:52Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:55Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:48Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:48Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:53Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:53Z",
+          "conclusion": "success",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:03Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:00Z",
+          "conclusion": "success",
+          "name": "Run tests – langgraph-python",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:00Z",
+          "conclusion": "success",
+          "name": "Upload traces – langgraph-python",
+          "number": 23,
+          "started_at": "2026-08-31T23:30:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:01Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:30:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:01Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:30:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:11Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:30:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:11Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:30:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:11Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:30:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:12Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:30:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:12Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:30:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:30:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:30:12Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:29:55Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344601,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "crew-ai",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-qbs0js2dwv",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:56Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:04Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:05Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:11Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:26:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:11Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:02Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:05Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:27:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:02Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:27:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:02Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:28:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:05Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:28:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:05Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:16Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:41Z",
+          "conclusion": "success",
+          "name": "Run tests – crew-ai",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:41Z",
+          "conclusion": "success",
+          "name": "Upload traces – crew-ai",
+          "number": 23,
+          "started_at": "2026-08-31T23:29:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:42Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:29:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:43Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:29:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:53Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:29:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:53Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:53Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:53Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:53Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:29:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:29:53Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:28:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344608,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "a2a-middleware",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-bb71hm6430",
+      "started_at": "2026-08-31T23:25:04Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:44Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:45Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:53Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:01Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:01Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:57Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:00Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:57Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:27:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:57Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:01Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:01Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:08Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:10Z",
+          "conclusion": "success",
+          "name": "Run tests – a2a-middleware",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:11Z",
+          "conclusion": "success",
+          "name": "Upload traces – a2a-middleware",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:11Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:28:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:11Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:22Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:22Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:28:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:22Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:28:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:22Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:28:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:22Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:28:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:28:22Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:29:57Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344628,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "aws-strands",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-ntbgvr1gmx",
+      "started_at": "2026-08-31T23:25:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:21Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:23Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:54Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:03Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:04Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:26:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:10Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:10Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:26:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:02Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:26:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:05Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:27:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:11Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:27:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:11Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:28:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:15Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:28:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:15Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:28:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:17Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:28:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:43Z",
+          "conclusion": "success",
+          "name": "Run tests – aws-strands",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:44Z",
+          "conclusion": "success",
+          "name": "Upload traces – aws-strands",
+          "number": 23,
+          "started_at": "2026-08-31T23:29:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:44Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:29:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:44Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:29:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:55Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:29:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:55Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:29:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:55Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:29:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:55Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:29:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:56Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:29:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:29:56Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:29:11Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344632,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "mastra",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-g3k5xpgzn0",
+      "started_at": "2026-08-31T23:25:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:48Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:48Z",
+          "conclusion": "skipped",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:48Z",
+          "conclusion": "skipped",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:48Z",
+          "conclusion": "skipped",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:48Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:51Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:51Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:51Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:55Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:55Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:00Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:58Z",
+          "conclusion": "success",
+          "name": "Run tests – mastra",
+          "number": 22,
+          "started_at": "2026-08-31T23:28:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:58Z",
+          "conclusion": "success",
+          "name": "Upload traces – mastra",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:59Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:09Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:10Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:29:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:10Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:29:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:10Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:29:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:29:10Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:28:42Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344659,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "pydantic-ai",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-4hc1451bjg",
+      "started_at": "2026-08-31T23:25:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:12Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:39Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:40Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:49Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:49Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:50Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:53Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:51Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:51Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:55Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:55Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:58Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:28Z",
+          "conclusion": "success",
+          "name": "Run tests – pydantic-ai",
+          "number": 22,
+          "started_at": "2026-08-31T23:27:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:29Z",
+          "conclusion": "success",
+          "name": "Upload traces – pydantic-ai",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:29Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:28:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:29Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:40Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:40Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:28:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:40Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:28:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:40Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:28:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:41Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:28:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:28:41Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:28:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344669,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "server-starter-all",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-8n8vshbf43",
+      "started_at": "2026-08-31T23:25:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:42Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:43Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:51Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:57Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:57Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:25:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:52Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:25:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:55Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:50Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:50Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:56Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:56Z",
+          "conclusion": "skipped",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:58Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:31Z",
+          "conclusion": "success",
+          "name": "Run tests – server-starter-all",
+          "number": 22,
+          "started_at": "2026-08-31T23:27:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:32Z",
+          "conclusion": "success",
+          "name": "Upload traces – server-starter-all",
+          "number": 23,
+          "started_at": "2026-08-31T23:28:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:32Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:28:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:33Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:28:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:43Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:28:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:43Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:28:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:43Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:28:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:43Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:28:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:43Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:28:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:28:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:28:43Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    },
+    {
+      "completed_at": "2026-08-31T23:29:48Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:25:03Z",
+      "head_sha": "0bbfc8411bfb888f4639d68ff229cc788790f626",
+      "id": 99679344756,
+      "labels": [
+        "depot-ubuntu-24.04-4"
+      ],
+      "name": "langgraph-fastapi",
+      "run_attempt": 1,
+      "run_id": 33450567182,
+      "runner_group_name": "default",
+      "runner_name": "depot-5qk9cfc3nh",
+      "started_at": "2026-08-31T23:25:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:25:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Check relevance",
+          "number": 2,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:11Z",
+          "conclusion": "success",
+          "name": "Detect fork PR",
+          "number": 3,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:17Z",
+          "conclusion": "success",
+          "name": "Checkout CPK",
+          "number": 4,
+          "started_at": "2026-08-31T23:25:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Checkout AGUI",
+          "number": 5,
+          "started_at": "2026-08-31T23:25:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:20Z",
+          "conclusion": "success",
+          "name": "Set up Node.js",
+          "number": 6,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Install pnpm",
+          "number": 7,
+          "started_at": "2026-08-31T23:25:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:22Z",
+          "conclusion": "success",
+          "name": "Resolve pnpm store path",
+          "number": 8,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:41Z",
+          "conclusion": "success",
+          "name": "Cache pnpm store",
+          "number": 9,
+          "started_at": "2026-08-31T23:25:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:42Z",
+          "conclusion": "success",
+          "name": "Cache Python dependencies (restore-only)",
+          "number": 10,
+          "started_at": "2026-08-31T23:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:49Z",
+          "conclusion": "success",
+          "name": "Install Poetry",
+          "number": 11,
+          "started_at": "2026-08-31T23:25:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:50Z",
+          "conclusion": "success",
+          "name": "Install uv",
+          "number": 12,
+          "started_at": "2026-08-31T23:25:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Install cpk dependencies",
+          "number": 13,
+          "started_at": "2026-08-31T23:25:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:25:55Z",
+          "conclusion": "success",
+          "name": "Configure Nx Cloud environment",
+          "number": 14,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:49Z",
+          "conclusion": "success",
+          "name": "Build cpk packages",
+          "number": 15,
+          "started_at": "2026-08-31T23:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:26:51Z",
+          "conclusion": "success",
+          "name": "Install ag-ui dependencies",
+          "number": 16,
+          "started_at": "2026-08-31T23:26:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:48Z",
+          "conclusion": "success",
+          "name": "Prepare dojo for e2e",
+          "number": 17,
+          "started_at": "2026-08-31T23:26:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:48Z",
+          "conclusion": "success",
+          "name": "Link cpk into ag-ui",
+          "number": 18,
+          "started_at": "2026-08-31T23:27:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:52Z",
+          "conclusion": "success",
+          "name": "Install e2e dependencies",
+          "number": 19,
+          "started_at": "2026-08-31T23:27:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:52Z",
+          "conclusion": "success",
+          "name": "write langgraph env files",
+          "number": 20,
+          "started_at": "2026-08-31T23:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:27:58Z",
+          "conclusion": "success",
+          "name": "Run dojo+agents",
+          "number": 21,
+          "started_at": "2026-08-31T23:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:33Z",
+          "conclusion": "success",
+          "name": "Run tests – langgraph-fastapi",
+          "number": 22,
+          "started_at": "2026-08-31T23:27:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:33Z",
+          "conclusion": "success",
+          "name": "Upload traces – langgraph-fastapi",
+          "number": 23,
+          "started_at": "2026-08-31T23:29:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:34Z",
+          "conclusion": "success",
+          "name": "Post Run dojo+agents",
+          "number": 40,
+          "started_at": "2026-08-31T23:29:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:35Z",
+          "conclusion": "success",
+          "name": "Post Install uv",
+          "number": 41,
+          "started_at": "2026-08-31T23:29:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:45Z",
+          "conclusion": "success",
+          "name": "Post Cache pnpm store",
+          "number": 42,
+          "started_at": "2026-08-31T23:29:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:45Z",
+          "conclusion": "success",
+          "name": "Post Install pnpm",
+          "number": 43,
+          "started_at": "2026-08-31T23:29:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:45Z",
+          "conclusion": "success",
+          "name": "Post Set up Node.js",
+          "number": 44,
+          "started_at": "2026-08-31T23:29:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:46Z",
+          "conclusion": "success",
+          "name": "Post Checkout AGUI",
+          "number": 45,
+          "started_at": "2026-08-31T23:29:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:46Z",
+          "conclusion": "success",
+          "name": "Post Checkout CPK",
+          "number": 46,
+          "started_at": "2026-08-31T23:29:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:29:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "started_at": "2026-08-31T23:29:46Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test / e2e / dojo"
+    }
+  ],
+  "run_id": 33450567182
+}

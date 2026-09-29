@@ -1,0 +1,8880 @@
+{
+  "benchmark": "babel/babel@3fbcec1ccbe9ebfa5a8575bc88afadd061899bd5:.github/workflows/ci.yml",
+  "benchmark_id": "babel__babel__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33442198690,
+        33433729904,
+        33427340518,
+        33311218361,
+        33285058127
+      ],
+      "window_count": 58
+    },
+    "push": {
+      "runs": [
+        33450946605,
+        33427338900,
+        33327133465,
+        33285043084,
+        32847064145
+      ],
+      "window_count": 21
+    }
+  },
+  "jobs": {
+    "Build Babel 9 Artifacts": {
+      "duration_seconds": 80.0,
+      "durations": [
+        82.0,
+        75.0,
+        85.0,
+        71.0,
+        80.0,
+        80.0,
+        82.0,
+        88.0,
+        80.0,
+        68.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            5.0,
+            3.0,
+            5.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            12.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            11.0,
+            8.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            60.0,
+            64.0,
+            54.0,
+            61.0,
+            62.0,
+            63.0,
+            66.0,
+            62.0,
+            52.0
+          ],
+          "name": "Build babel artifacts",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 62.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/upload-artifact@v7",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build Babel Artifacts": {
+      "duration_seconds": 83.0,
+      "durations": [
+        96.0,
+        82.0,
+        88.0,
+        82.0,
+        70.0,
+        89.0,
+        72.0,
+        89.0,
+        73.0,
+        84.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        6.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            3.0,
+            5.0,
+            2.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            8.0,
+            8.0,
+            7.0,
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            61.0,
+            64.0,
+            59.0,
+            49.0,
+            64.0,
+            49.0,
+            64.0,
+            48.0,
+            61.0
+          ],
+          "name": "Build babel artifacts",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 61.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            3.0,
+            5.0,
+            2.0,
+            5.0,
+            2.0,
+            4.0
+          ],
+          "name": "Build Makefile.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate readmes",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Generate .npmignore",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Cleanup fixtures",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Ensure cwd does not contain uncommitted changes",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/upload-artifact@v7",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build Babel Artifacts on Windows": {
+      "duration_seconds": 122.5,
+      "durations": [
+        141.0,
+        121.0,
+        118.0,
+        128.0,
+        120.0,
+        119.0,
+        137.0,
+        126.0,
+        124.0,
+        107.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        2.0,
+        4.0,
+        2.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            19.0,
+            17.0,
+            19.0,
+            17.0,
+            20.0,
+            16.0,
+            25.0,
+            20.0,
+            16.0,
+            16.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            17.0,
+            20.0,
+            16.0,
+            14.0,
+            15.0,
+            22.0,
+            34.0,
+            20.0,
+            26.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            99.0,
+            82.0,
+            71.0,
+            92.0,
+            81.0,
+            84.0,
+            82.0,
+            65.0,
+            83.0,
+            59.0
+          ],
+          "name": "Build babel artifacts",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 82.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            5.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Ensure cwd does not contain uncommitted changes",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Ensure npm packages exist": {
+      "duration_seconds": 33.5,
+      "durations": [
+        37.0,
+        36.0,
+        36.0,
+        36.0,
+        35.0,
+        32.0,
+        32.0,
+        28.0,
+        30.0,
+        32.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            11.0,
+            9.0,
+            8.0,
+            7.0,
+            9.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            17.0,
+            16.0,
+            16.0,
+            16.0,
+            14.0,
+            16.0,
+            14.0,
+            14.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Ensure npm packages exist",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint": {
+      "duration_seconds": 501.0,
+      "durations": [
+        492.0,
+        407.0,
+        547.0,
+        504.0,
+        498.0,
+        393.0,
+        511.0,
+        510.0,
+        512.0,
+        491.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        2.0,
+        5.0,
+        3.0,
+        6.0,
+        6.0,
+        5.0,
+        7.0,
+        2.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            3.0,
+            5.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            11.0,
+            8.0,
+            10.0,
+            10.0,
+            11.0,
+            10.0,
+            7.0,
+            8.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            11.0,
+            17.0,
+            15.0,
+            16.0,
+            13.0,
+            16.0,
+            15.0,
+            15.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            463.0,
+            374.0,
+            513.0,
+            466.0,
+            460.0,
+            358.0,
+            472.0,
+            480.0,
+            481.0,
+            458.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 464.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Ensure cwd does not contain uncommitted changes",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint (Babel 9)": {
+      "duration_seconds": 491.5,
+      "durations": [
+        520.0,
+        494.0,
+        480.0,
+        507.0,
+        489.0,
+        401.0,
+        488.0,
+        484.0,
+        514.0,
+        500.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        5.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            10.0,
+            7.0,
+            9.0,
+            10.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            14.0,
+            13.0,
+            17.0,
+            16.0,
+            14.0,
+            15.0,
+            14.0,
+            16.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            482.0,
+            459.0,
+            452.0,
+            475.0,
+            458.0,
+            367.0,
+            458.0,
+            455.0,
+            478.0,
+            462.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 458.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Prepare Cache": {
+      "duration_seconds": 26.0,
+      "durations": [
+        32.0,
+        25.0,
+        22.0,
+        24.0,
+        25.0,
+        31.0,
+        27.0,
+        25.0,
+        28.0,
+        27.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        8.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            4.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            7.0,
+            11.0,
+            11.0,
+            10.0,
+            8.0,
+            11.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            7.0,
+            9.0,
+            6.0,
+            8.0,
+            9.0,
+            10.0,
+            8.0,
+            9.0
+          ],
+          "name": "Check or update Yarn cache (fix w/ \"yarn install\")",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Prepare runtime integration tests": {
+      "duration_seconds": 39.5,
+      "durations": [
+        38.0,
+        40.0,
+        37.0,
+        40.0,
+        38.0,
+        40.0,
+        39.0,
+        40.0,
+        45.0,
+        38.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            8.0,
+            8.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0,
+            9.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            15.0,
+            13.0,
+            14.0,
+            12.0,
+            14.0,
+            13.0,
+            14.0,
+            16.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0
+          ],
+          "name": "Test bundlers",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Prepublish on Windows": {
+      "duration_seconds": 810.0,
+      "durations": [
+        796.0,
+        782.0,
+        796.0,
+        780.0,
+        824.0,
+        880.0,
+        585.0,
+        844.0,
+        858.0,
+        924.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            15.0,
+            14.0,
+            15.0,
+            14.0,
+            18.0,
+            17.0,
+            18.0,
+            13.0,
+            16.0,
+            17.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            32.0,
+            13.0,
+            18.0,
+            17.0,
+            19.0,
+            27.0,
+            15.0,
+            21.0,
+            20.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            22.0,
+            24.0,
+            25.0,
+            27.0,
+            28.0,
+            17.0,
+            25.0,
+            27.0,
+            29.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            739.0,
+            711.0,
+            742.0,
+            719.0,
+            758.0,
+            812.0,
+            520.0,
+            788.0,
+            791.0,
+            853.0
+          ],
+          "name": "Prepublish",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 750.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Publint": {
+      "duration_seconds": 695.0,
+      "durations": [
+        703.0,
+        696.0,
+        692.0,
+        689.0,
+        763.0,
+        541.0,
+        701.0,
+        686.0,
+        699.0,
+        694.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 2.5,
+      "overheads": [
+        5.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        3.0,
+        4.0,
+        3.0,
+        2.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            3.0,
+            5.0,
+            4.0,
+            6.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            2.0,
+            5.0,
+            11.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            595.0,
+            590.0,
+            586.0,
+            588.0,
+            646.0,
+            450.0,
+            593.0,
+            582.0,
+            596.0,
+            589.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 589.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            95.0,
+            95.0,
+            94.0,
+            92.0,
+            106.0,
+            72.0,
+            96.0,
+            93.0,
+            94.0,
+            94.0
+          ],
+          "name": "Publint",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 94.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/eslint-* with ESLint (9.0.0)": {
+      "duration_seconds": 40.0,
+      "durations": [
+        40.0,
+        42.0,
+        44.0,
+        41.0,
+        37.0,
+        40.0,
+        37.0,
+        37.0,
+        46.0,
+        38.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        2.0,
+        4.0,
+        3.0,
+        2.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            2.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            9.0,
+            7.0,
+            6.0,
+            8.0,
+            7.0,
+            7.0,
+            10.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            17.0,
+            16.0,
+            17.0,
+            14.0,
+            14.0,
+            14.0,
+            13.0,
+            16.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Downgrade ESLint to 9.0.0",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run babel/eslint tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (10)": {
+      "duration_seconds": 38.5,
+      "durations": [
+        34.0,
+        44.0,
+        43.0,
+        47.0,
+        33.0,
+        36.0,
+        37.0,
+        40.0,
+        36.0,
+        40.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            10.0,
+            10.0,
+            12.0,
+            7.0,
+            9.0,
+            9.0,
+            10.0,
+            8.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            16.0,
+            15.0,
+            14.0,
+            13.0,
+            14.0,
+            15.0,
+            15.0,
+            16.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            9.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            6.0
+          ],
+          "name": "Use Node.js 10",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 10",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (12.0)": {
+      "duration_seconds": 36.0,
+      "durations": [
+        33.0,
+        36.0,
+        37.0,
+        36.0,
+        37.0,
+        36.0,
+        41.0,
+        38.0,
+        33.0,
+        33.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            10.0,
+            10.0,
+            8.0,
+            11.0,
+            10.0,
+            9.0,
+            7.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            15.0,
+            14.0,
+            16.0,
+            12.0,
+            16.0,
+            14.0,
+            13.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Use Node.js 12.0",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 12.0",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (12.12)": {
+      "duration_seconds": 37.5,
+      "durations": [
+        34.0,
+        38.0,
+        43.0,
+        43.0,
+        41.0,
+        32.0,
+        37.0,
+        53.0,
+        36.0,
+        33.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        6.0,
+        6.0,
+        4.0,
+        2.0,
+        4.0,
+        8.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            10.0,
+            7.0,
+            8.0,
+            14.0,
+            10.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            17.0,
+            16.0,
+            14.0,
+            14.0,
+            16.0,
+            15.0,
+            12.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            4.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            5.0,
+            4.0,
+            8.0,
+            3.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0
+          ],
+          "name": "Use Node.js 12.12",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 12.12",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (12.13)": {
+      "duration_seconds": 36.5,
+      "durations": [
+        34.0,
+        40.0,
+        45.0,
+        36.0,
+        35.0,
+        32.0,
+        35.0,
+        37.0,
+        42.0,
+        42.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        3.0,
+        6.0,
+        7.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            11.0,
+            9.0,
+            11.0,
+            8.0,
+            8.0,
+            8.0,
+            10.0,
+            11.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            16.0,
+            15.0,
+            11.0,
+            14.0,
+            16.0,
+            14.0,
+            16.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Use Node.js 12.13",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 12.13",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (12.15)": {
+      "duration_seconds": 37.5,
+      "durations": [
+        37.0,
+        38.0,
+        34.0,
+        34.0,
+        35.0,
+        42.0,
+        42.0,
+        46.0,
+        33.0,
+        43.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            7.0,
+            10.0,
+            7.0,
+            11.0,
+            11.0,
+            12.0,
+            7.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            17.0,
+            15.0,
+            11.0,
+            16.0,
+            15.0,
+            16.0,
+            15.0,
+            15.0,
+            17.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            9.0,
+            4.0,
+            4.0
+          ],
+          "name": "Use Node.js 12.15",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 12.15",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (12.16)": {
+      "duration_seconds": 37.0,
+      "durations": [
+        42.0,
+        37.0,
+        36.0,
+        44.0,
+        42.0,
+        41.0,
+        37.0,
+        36.0,
+        35.0,
+        31.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        3.0,
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            2.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            2.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            8.0,
+            7.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            15.0,
+            17.0,
+            16.0,
+            16.0,
+            13.0,
+            12.0,
+            15.0,
+            16.0,
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Use Node.js 12.16",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 12.16",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (13.2)": {
+      "duration_seconds": 39.0,
+      "durations": [
+        39.0,
+        39.0,
+        41.0,
+        39.0,
+        41.0,
+        36.0,
+        38.0,
+        36.0,
+        39.0,
+        40.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            11.0,
+            9.0,
+            11.0,
+            7.0,
+            11.0,
+            7.0,
+            9.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            16.0,
+            15.0,
+            16.0,
+            13.0,
+            16.0,
+            12.0,
+            16.0,
+            13.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            7.0,
+            4.0,
+            5.0,
+            4.0,
+            7.0,
+            5.0
+          ],
+          "name": "Use Node.js 13.2",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 13.2",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (13.6)": {
+      "duration_seconds": 39.5,
+      "durations": [
+        42.0,
+        43.0,
+        37.0,
+        35.0,
+        42.0,
+        40.0,
+        39.0,
+        44.0,
+        33.0,
+        39.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            6.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            8.0,
+            8.0,
+            9.0,
+            9.0,
+            10.0,
+            11.0,
+            7.0,
+            11.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            16.0,
+            14.0,
+            16.0,
+            15.0,
+            13.0,
+            13.0,
+            13.0,
+            12.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            9.0,
+            4.0,
+            5.0
+          ],
+          "name": "Use Node.js 13.6",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 13.6",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (13.7)": {
+      "duration_seconds": 41.5,
+      "durations": [
+        43.0,
+        42.0,
+        42.0,
+        37.0,
+        42.0,
+        41.0,
+        40.0,
+        44.0,
+        32.0,
+        39.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            6.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            10.0,
+            9.0,
+            10.0,
+            10.0,
+            9.0,
+            9.0,
+            7.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            11.0,
+            13.0,
+            16.0,
+            16.0,
+            15.0,
+            16.0,
+            14.0,
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            9.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0,
+            4.0,
+            8.0
+          ],
+          "name": "Use Node.js 13.7",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 13.7",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (14.2)": {
+      "duration_seconds": 38.0,
+      "durations": [
+        34.0,
+        37.0,
+        40.0,
+        43.0,
+        40.0,
+        34.0,
+        36.0,
+        44.0,
+        39.0,
+        34.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        7.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            10.0,
+            10.0,
+            11.0,
+            7.0,
+            9.0,
+            10.0,
+            8.0,
+            11.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            11.0,
+            16.0,
+            13.0,
+            14.0,
+            14.0,
+            16.0,
+            16.0,
+            12.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            9.0,
+            5.0,
+            7.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Use Node.js 14.2",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Test Node.js 14.2",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (16.5)": {
+      "duration_seconds": 36.5,
+      "durations": [
+        37.0,
+        33.0,
+        38.0,
+        36.0,
+        31.0,
+        43.0,
+        50.0,
+        36.0,
+        35.0,
+        39.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        6.0,
+        5.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            8.0,
+            8.0,
+            9.0,
+            10.0,
+            17.0,
+            9.0,
+            8.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            14.0,
+            16.0,
+            14.0,
+            10.0,
+            17.0,
+            16.0,
+            14.0,
+            15.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            8.0
+          ],
+          "name": "Use Node.js 16.5",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 16.5",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (16.6)": {
+      "duration_seconds": 41.5,
+      "durations": [
+        42.0,
+        32.0,
+        42.0,
+        42.0,
+        34.0,
+        44.0,
+        40.0,
+        46.0,
+        41.0,
+        37.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        2.0,
+        6.0,
+        6.0,
+        4.0,
+        7.0,
+        6.0,
+        7.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            5.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0,
+            5.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            11.0,
+            10.0,
+            8.0,
+            11.0,
+            11.0,
+            14.0,
+            11.0,
+            7.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            14.0,
+            13.0,
+            16.0,
+            14.0,
+            16.0,
+            12.0,
+            12.0,
+            15.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Use Node.js 16.6",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Test Node.js 16.6",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (22.11)": {
+      "duration_seconds": 38.0,
+      "durations": [
+        40.0,
+        43.0,
+        36.0,
+        35.0,
+        35.0,
+        43.0,
+        37.0,
+        35.0,
+        39.0,
+        44.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        6.0,
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            11.0,
+            8.0,
+            8.0,
+            10.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            16.0,
+            14.0,
+            14.0,
+            14.0,
+            16.0,
+            15.0,
+            13.0,
+            13.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Use Node.js 22.11",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 22.11",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (22.12)": {
+      "duration_seconds": 38.5,
+      "durations": [
+        43.0,
+        38.0,
+        39.0,
+        43.0,
+        35.0,
+        34.0,
+        46.0,
+        36.0,
+        45.0,
+        34.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        3.0,
+        6.0,
+        5.0,
+        7.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            7.0,
+            9.0,
+            11.0,
+            8.0,
+            10.0,
+            7.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            12.0,
+            16.0,
+            16.0,
+            15.0,
+            13.0,
+            16.0,
+            13.0,
+            16.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0
+          ],
+          "name": "Use Node.js 22.12",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Test Node.js 22.12",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test @babel/runtime integrations on Node.js (23.10)": {
+      "duration_seconds": 37.5,
+      "durations": [
+        44.0,
+        36.0,
+        38.0,
+        37.0,
+        35.0,
+        46.0,
+        44.0,
+        47.0,
+        34.0,
+        34.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        7.0,
+        6.0,
+        5.0,
+        2.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            6.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            12.0,
+            11.0,
+            11.0,
+            7.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Support self-references on old Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            11.0,
+            16.0,
+            16.0,
+            15.0,
+            13.0,
+            15.0,
+            13.0,
+            14.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Generate absoluteRuntime tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0,
+            6.0,
+            11.0,
+            5.0,
+            5.0
+          ],
+          "name": "Use Node.js 23.10",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Test Node.js 23.10",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Babel 9 changes (macos-latest)": {
+      "duration_seconds": 122.0,
+      "durations": [
+        132.0,
+        116.0,
+        94.0,
+        134.0,
+        128.0,
+        152.0,
+        93.0,
+        149.0,
+        94.0,
+        84.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        7.0,
+        5.0,
+        6.0,
+        6.0,
+        8.0,
+        4.0,
+        6.0,
+        7.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            7.0,
+            7.0,
+            9.0,
+            10.0,
+            9.0,
+            6.0,
+            11.0,
+            7.0,
+            6.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            9.0,
+            11.0,
+            13.0,
+            17.0,
+            13.0,
+            15.0,
+            12.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            20.0,
+            19.0,
+            27.0,
+            22.0,
+            27.0,
+            19.0,
+            27.0,
+            17.0,
+            15.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            73.0,
+            66.0,
+            52.0,
+            78.0,
+            75.0,
+            88.0,
+            50.0,
+            88.0,
+            48.0,
+            46.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 69.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Babel 9 changes (windows-latest)": {
+      "duration_seconds": 152.5,
+      "durations": [
+        144.0,
+        109.0,
+        153.0,
+        151.0,
+        156.0,
+        166.0,
+        151.0,
+        152.0,
+        156.0,
+        155.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            19.0,
+            13.0,
+            17.0,
+            17.0,
+            20.0,
+            20.0,
+            15.0,
+            15.0,
+            17.0,
+            15.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            23.0,
+            17.0,
+            16.0,
+            16.0,
+            23.0,
+            17.0,
+            15.0,
+            16.0,
+            14.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 16.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            17.0,
+            27.0,
+            26.0,
+            28.0,
+            27.0,
+            26.0,
+            28.0,
+            28.0,
+            28.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            80.0,
+            50.0,
+            87.0,
+            85.0,
+            87.0,
+            92.0,
+            86.0,
+            90.0,
+            88.0,
+            89.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 87.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Babel 9 changes (with coverage)": {
+      "duration_seconds": 146.5,
+      "durations": [
+        139.0,
+        161.0,
+        172.0,
+        147.0,
+        146.0,
+        173.0,
+        127.0,
+        145.0,
+        125.0,
+        147.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        8.0,
+        7.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            7.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            10.0,
+            10.0,
+            9.0,
+            10.0,
+            10.0,
+            11.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            17.0,
+            13.0,
+            14.0,
+            17.0,
+            13.0,
+            12.0,
+            14.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0,
+            96.0,
+            99.0,
+            78.0,
+            76.0,
+            102.0,
+            66.0,
+            74.0,
+            65.0,
+            75.0
+          ],
+          "name": "Run tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 77.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            33.0,
+            36.0,
+            32.0,
+            35.0,
+            34.0,
+            28.0,
+            39.0,
+            26.0,
+            34.0
+          ],
+          "name": "Upload coverage report",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 33.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test on (macos-latest)": {
+      "duration_seconds": 113.0,
+      "durations": [
+        110.0,
+        100.0,
+        116.0,
+        91.0,
+        96.0,
+        116.0,
+        158.0,
+        151.0,
+        104.0,
+        128.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 6.5,
+      "overheads": [
+        5.0,
+        5.0,
+        7.0,
+        5.0,
+        7.0,
+        6.0,
+        7.0,
+        7.0,
+        7.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            9.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            13.0,
+            10.0,
+            10.0,
+            13.0,
+            14.0,
+            15.0,
+            12.0,
+            12.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            18.0,
+            21.0,
+            18.0,
+            19.0,
+            21.0,
+            28.0,
+            31.0,
+            20.0,
+            28.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            62.0,
+            53.0,
+            64.0,
+            49.0,
+            50.0,
+            65.0,
+            97.0,
+            86.0,
+            54.0,
+            71.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 63.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test on (windows-latest)": {
+      "duration_seconds": 150.0,
+      "durations": [
+        119.0,
+        180.0,
+        153.0,
+        151.0,
+        149.0,
+        155.0,
+        148.0,
+        152.0,
+        143.0,
+        138.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0,
+            15.0,
+            16.0,
+            33.0,
+            15.0,
+            16.0,
+            15.0,
+            14.0,
+            14.0,
+            14.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            46.0,
+            17.0,
+            25.0,
+            17.0,
+            18.0,
+            14.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            27.0,
+            27.0,
+            22.0,
+            26.0,
+            26.0,
+            27.0,
+            28.0,
+            26.0,
+            25.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            62.0,
+            86.0,
+            86.0,
+            65.0,
+            86.0,
+            87.0,
+            86.0,
+            89.0,
+            85.0,
+            82.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 86.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test on Node.js 22": {
+      "duration_seconds": 113.5,
+      "durations": [
+        117.0,
+        88.0,
+        110.0,
+        108.0,
+        93.0,
+        123.0,
+        108.0,
+        136.0,
+        122.0,
+        121.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        6.0,
+        4.0,
+        7.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            5.0,
+            5.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            9.0,
+            7.0,
+            10.0,
+            12.0,
+            19.0,
+            11.0,
+            10.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            12.0,
+            14.0,
+            14.0,
+            11.0,
+            16.0,
+            16.0,
+            22.0,
+            16.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            7.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            11.0,
+            4.0,
+            1.0,
+            0.0
+          ],
+          "name": "Use Node.js 22",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Ensure that @babel/node's list of node flags is up to date",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0,
+            51.0,
+            75.0,
+            76.0,
+            57.0,
+            83.0,
+            50.0,
+            84.0,
+            84.0,
+            83.0
+          ],
+          "name": "Test on node.js 22",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 78.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test on Node.js 24": {
+      "duration_seconds": 100.5,
+      "durations": [
+        116.0,
+        109.0,
+        100.0,
+        113.0,
+        100.0,
+        95.0,
+        112.0,
+        99.0,
+        101.0,
+        75.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        6.0,
+        5.0,
+        4.0,
+        6.0,
+        4.0,
+        2.0,
+        6.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            7.0,
+            11.0,
+            7.0,
+            9.0,
+            11.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            17.0,
+            14.0,
+            16.0,
+            15.0,
+            15.0,
+            16.0,
+            15.0,
+            14.0,
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            0.0,
+            3.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Ensure that @babel/node's list of node flags is up to date",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            73.0,
+            67.0,
+            73.0,
+            68.0,
+            67.0,
+            72.0,
+            69.0,
+            68.0,
+            41.0
+          ],
+          "name": "Test on node.js 24",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 68.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test on Node.js 25": {
+      "duration_seconds": 107.0,
+      "durations": [
+        109.0,
+        99.0,
+        105.0,
+        118.0,
+        114.0,
+        102.0,
+        116.0,
+        108.0,
+        106.0,
+        103.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        6.0,
+        5.0,
+        4.0,
+        6.0,
+        7.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            11.0,
+            10.0,
+            8.0,
+            12.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            13.0,
+            15.0,
+            16.0,
+            15.0,
+            15.0,
+            16.0,
+            14.0,
+            14.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Use Node.js 25",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Ensure that @babel/node's list of node flags is up to date",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            65.0,
+            68.0,
+            73.0,
+            72.0,
+            66.0,
+            71.0,
+            67.0,
+            69.0,
+            64.0
+          ],
+          "name": "Test on node.js 25",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 68.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test on Node.js Latest (with coverage)": {
+      "duration_seconds": 171.5,
+      "durations": [
+        172.0,
+        161.0,
+        171.0,
+        172.0,
+        128.0,
+        184.0,
+        175.0,
+        179.0,
+        131.0,
+        166.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        7.0,
+        3.0,
+        5.0,
+        8.0,
+        8.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            7.0,
+            12.0,
+            10.0,
+            11.0,
+            10.0,
+            10.0,
+            8.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            15.0,
+            16.0,
+            15.0,
+            17.0,
+            16.0,
+            16.0,
+            13.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            101.0,
+            97.0,
+            94.0,
+            97.0,
+            68.0,
+            109.0,
+            100.0,
+            103.0,
+            74.0,
+            98.0
+          ],
+          "name": "Run tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 97.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            37.0,
+            33.0,
+            47.0,
+            36.0,
+            27.0,
+            37.0,
+            36.0,
+            37.0,
+            29.0,
+            34.0
+          ],
+          "name": "Upload coverage report",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 36.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Third-party Parser Tests": {
+      "duration_seconds": 90.5,
+      "durations": [
+        97.0,
+        96.0,
+        77.0,
+        80.0,
+        80.0,
+        87.0,
+        91.0,
+        93.0,
+        96.0,
+        90.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        6.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            5.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            8.0,
+            10.0,
+            8.0,
+            10.0,
+            8.0,
+            9.0,
+            10.0,
+            9.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            12.0,
+            13.0,
+            11.0,
+            13.0,
+            15.0,
+            16.0,
+            16.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            21.0,
+            21.0,
+            20.0,
+            22.0,
+            24.0,
+            22.0,
+            22.0,
+            22.0,
+            22.0
+          ],
+          "name": "Download tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            36.0,
+            33.0,
+            26.0,
+            25.0,
+            27.0,
+            27.0,
+            32.0,
+            34.0,
+            33.0,
+            31.0
+          ],
+          "name": "Run Test262 Tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 31.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run Flow Tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run TypeScript Tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Validate Yarn dependencies and constraints": {
+      "duration_seconds": 32.5,
+      "durations": [
+        33.0,
+        31.0,
+        32.0,
+        34.0,
+        35.0,
+        34.0,
+        37.0,
+        31.0,
+        30.0,
+        32.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        2.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            3.0,
+            3.0,
+            6.0,
+            5.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            7.0,
+            9.0,
+            8.0,
+            7.0,
+            8.0,
+            10.0,
+            7.0,
+            7.0,
+            10.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check for unmet constraints (fix w/ \"yarn constraints --fix\")",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check for duplicate dependencies (fix w/ \"yarn dedupe\")",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            14.0,
+            16.0,
+            18.0,
+            17.0,
+            16.0,
+            15.0,
+            14.0,
+            14.0
+          ],
+          "name": "Check for dependency cycles",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (0)": {
+      "duration_seconds": 376.5,
+      "durations": [
+        393.0,
+        370.0,
+        394.0,
+        383.0,
+        294.0,
+        312.0,
+        416.0,
+        368.0,
+        395.0,
+        289.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        7.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        7.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            5.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            25.0,
+            27.0,
+            26.0,
+            22.0,
+            24.0,
+            29.0,
+            26.0,
+            27.0,
+            20.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0,
+            9.0,
+            8.0,
+            9.0,
+            8.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            328.0,
+            315.0,
+            339.0,
+            327.0,
+            241.0,
+            252.0,
+            350.0,
+            307.0,
+            333.0,
+            240.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 321.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (1)": {
+      "duration_seconds": 444.5,
+      "durations": [
+        356.0,
+        490.0,
+        468.0,
+        472.0,
+        461.0,
+        444.0,
+        439.0,
+        359.0,
+        445.0,
+        303.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        6.0,
+        5.0,
+        3.0,
+        2.0,
+        6.0,
+        2.0,
+        5.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            5.0,
+            5.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            8.0,
+            6.0,
+            5.0,
+            7.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            27.0,
+            26.0,
+            27.0,
+            27.0,
+            25.0,
+            25.0,
+            23.0,
+            26.0,
+            20.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            3.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            7.0,
+            9.0,
+            9.0,
+            11.0,
+            9.0,
+            8.0,
+            8.0,
+            9.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            303.0,
+            427.0,
+            409.0,
+            417.0,
+            406.0,
+            382.0,
+            384.0,
+            301.0,
+            387.0,
+            247.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 385.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (2)": {
+      "duration_seconds": 471.0,
+      "durations": [
+        478.0,
+        391.0,
+        470.0,
+        384.0,
+        501.0,
+        468.0,
+        481.0,
+        461.0,
+        472.0,
+        475.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        6.0,
+        6.0,
+        4.0,
+        6.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            7.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            9.0,
+            7.0,
+            5.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            22.0,
+            25.0,
+            21.0,
+            27.0,
+            24.0,
+            26.0,
+            27.0,
+            25.0,
+            26.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            7.0,
+            8.0,
+            8.0,
+            10.0,
+            8.0,
+            10.0,
+            9.0,
+            9.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            421.0,
+            331.0,
+            419.0,
+            332.0,
+            440.0,
+            408.0,
+            425.0,
+            393.0,
+            416.0,
+            420.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 417.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (3)": {
+      "duration_seconds": 486.5,
+      "durations": [
+        496.0,
+        476.0,
+        492.0,
+        478.0,
+        493.0,
+        377.0,
+        461.0,
+        496.0,
+        488.0,
+        485.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        7.0,
+        2.0,
+        6.0,
+        3.0,
+        7.0,
+        6.0,
+        4.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            27.0,
+            27.0,
+            27.0,
+            28.0,
+            27.0,
+            26.0,
+            28.0,
+            27.0,
+            26.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            10.0,
+            9.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0,
+            8.0,
+            8.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            432.0,
+            420.0,
+            429.0,
+            423.0,
+            430.0,
+            315.0,
+            406.0,
+            440.0,
+            431.0,
+            425.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 427.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (4)": {
+      "duration_seconds": 484.5,
+      "durations": [
+        479.0,
+        485.0,
+        484.0,
+        447.0,
+        491.0,
+        540.0,
+        341.0,
+        496.0,
+        562.0,
+        440.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            6.0,
+            8.0,
+            9.0,
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            26.0,
+            25.0,
+            24.0,
+            26.0,
+            27.0,
+            23.0,
+            26.0,
+            28.0,
+            29.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            7.0,
+            9.0,
+            8.0,
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            423.0,
+            430.0,
+            432.0,
+            388.0,
+            428.0,
+            476.0,
+            285.0,
+            435.0,
+            498.0,
+            374.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 429.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (5)": {
+      "duration_seconds": 490.5,
+      "durations": [
+        482.0,
+        500.0,
+        512.0,
+        472.0,
+        499.0,
+        503.0,
+        394.0,
+        471.0,
+        440.0,
+        512.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            3.0,
+            5.0,
+            2.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            7.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            27.0,
+            27.0,
+            25.0,
+            26.0,
+            27.0,
+            23.0,
+            24.0,
+            24.0,
+            27.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            11.0,
+            10.0,
+            8.0,
+            6.0,
+            8.0,
+            8.0,
+            9.0,
+            9.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            427.0,
+            443.0,
+            448.0,
+            414.0,
+            443.0,
+            450.0,
+            339.0,
+            415.0,
+            379.0,
+            455.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 435.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (6)": {
+      "duration_seconds": 490.5,
+      "durations": [
+        380.0,
+        498.0,
+        483.0,
+        463.0,
+        500.0,
+        507.0,
+        511.0,
+        426.0,
+        465.0,
+        504.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        4.0,
+        5.0,
+        2.0,
+        4.0,
+        6.0,
+        7.0,
+        6.0,
+        7.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            5.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0,
+            6.0,
+            6.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            28.0,
+            28.0,
+            24.0,
+            28.0,
+            28.0,
+            29.0,
+            25.0,
+            26.0,
+            27.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 27.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            6.0,
+            9.0,
+            8.0,
+            7.0,
+            8.0,
+            10.0,
+            9.0,
+            8.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            324.0,
+            437.0,
+            429.0,
+            410.0,
+            438.0,
+            443.0,
+            440.0,
+            362.0,
+            410.0,
+            443.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 433.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            6.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 (7)": {
+      "duration_seconds": 550.5,
+      "durations": [
+        486.0,
+        555.0,
+        538.0,
+        559.0,
+        549.0,
+        549.0,
+        545.0,
+        575.0,
+        552.0,
+        556.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        6.0,
+        4.0,
+        3.0,
+        6.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            5.0,
+            3.0,
+            2.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            5.0,
+            7.0,
+            8.0,
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            26.0,
+            26.0,
+            25.0,
+            25.0,
+            26.0,
+            26.0,
+            26.0,
+            26.0,
+            25.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install test runner",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            6.0,
+            9.0,
+            8.0,
+            9.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download chunks file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            424.0,
+            496.0,
+            487.0,
+            500.0,
+            488.0,
+            488.0,
+            488.0,
+            519.0,
+            495.0,
+            499.0
+          ],
+          "name": "Run test262",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 491.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 - Analyze results": {
+      "duration_seconds": 33.0,
+      "durations": [
+        35.0,
+        32.0,
+        27.0,
+        33.0,
+        28.0,
+        34.0,
+        33.0,
+        35.0,
+        38.0,
+        26.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        7.0,
+        4.0,
+        2.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        6.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 1,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 2,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 3,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 4,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 5,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 6,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@v8",
+          "occurrence": 7,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            7.0,
+            11.0,
+            8.0,
+            12.0,
+            9.0,
+            6.0,
+            9.0,
+            6.0
+          ],
+          "name": "Merge chunk results",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Create artifact with report results",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            4.0
+          ],
+          "name": "Download previous results",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            5.0,
+            8.0
+          ],
+          "name": "Compare previous main branch & current results",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test262 - Prepare for running in parallel": {
+      "duration_seconds": 49.0,
+      "durations": [
+        52.0,
+        45.0,
+        45.0,
+        51.0,
+        55.0,
+        48.0,
+        43.0,
+        50.0,
+        40.0,
+        59.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        2.0,
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            6.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout Babel",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            5.0,
+            12.0
+          ],
+          "name": "Use Node.js latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout test runner",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            9.0,
+            10.0,
+            10.0,
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            11.0
+          ],
+          "name": "Download test262",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            23.0,
+            18.0,
+            25.0,
+            25.0,
+            23.0,
+            19.0,
+            24.0,
+            18.0,
+            26.0
+          ],
+          "name": "Prepare test262 chunks",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload chunks artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0f122797da25414a117e45d78c4d675651f9fa8c": "efbce60ad761347524e6246b940af6225034c6cd",
+      "2b42cacdf5b5605c654612011a5f9cb0dee73513": "efbce60ad761347524e6246b940af6225034c6cd",
+      "3fbcec1ccbe9ebfa5a8575bc88afadd061899bd5": "efbce60ad761347524e6246b940af6225034c6cd",
+      "8d6f4387f9b0f173599fff4f32dfbb77bb1240a6": "efbce60ad761347524e6246b940af6225034c6cd",
+      "b5366178f8bcd3f47213396cdc51c7a5e0ac529e": "efbce60ad761347524e6246b940af6225034c6cd",
+      "b987fbf59192831ba644bf8b5c0ed254a42bbdfe": "efbce60ad761347524e6246b940af6225034c6cd",
+      "c095ce19f49a727cc73fb28dbb511986d2062c49": "efbce60ad761347524e6246b940af6225034c6cd",
+      "f0df80048e4983e3ea66c0692ec85f40c9bc6a57": "efbce60ad761347524e6246b940af6225034c6cd",
+      "fa93d662617613b4f7046382b1f6d9ccde95f690": "efbce60ad761347524e6246b940af6225034c6cd"
+    },
+    "pinned_oid": "efbce60ad761347524e6246b940af6225034c6cd",
+    "runs_same_version": 9,
+    "runs_total": 9
+  }
+}

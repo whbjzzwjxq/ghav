@@ -1,0 +1,345 @@
+name: Check
+
+on:
+    push:
+        branches: [ master, renovate/** ]
+    pull_request:
+        branches: [ master ]
+
+env:
+    RETRY_TESTS: 1
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    build_and_test:
+        name: Build & Test
+        if: (!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, 'docs:'))
+        runs-on: ${{ matrix.os }}
+        # A green run is ~5-10 min; without a cap a flaky test that leaks a handle hangs to the
+        # 6h default and wastes a full runner. 30 min is a wide margin that still fails fast.
+        timeout-minutes: 30
+
+        strategy:
+            fail-fast: false
+            matrix:
+                # tests on windows are extremely unstable
+                # os: [ ubuntu-22.04, windows-2019 ]
+                os: [ ubuntu-22.04 ]
+                node-version: [ 22, 24, 26 ]
+
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+            -   name: Use Node.js ${{ matrix.node-version }}
+                uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+                with:
+                    node-version: ${{ matrix.node-version }}
+                    package-manager-cache: false
+
+            -   name: Turbo cache
+                id: turbo-cache
+                uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+                with:
+                    path: .turbo
+                    key: turbo-${{ github.job }}-${{ matrix.node-version }}-${{ github.ref_name }}-${{ github.sha }}
+                    restore-keys: |
+                        turbo-${{ github.job }}-${{ matrix.node-version }}-${{ github.ref_name }}-
+
+            -   uses: apify/workflows/pnpm-install@main
+
+            -   name: Install Playwright browsers
+                run: pnpm exec playwright install --with-deps
+
+            -   name: Install Puppeteer Chrome
+                run: pnpm exec puppeteer browsers install chrome
+
+            -   name: Build
+                run: pnpm ci:build
+
+            -   name: Test TS
+                run: pnpm tsc-check-tests
+
+            -   name: Typecheck documentation examples
+                working-directory: ./docs
+                run: pnpm typecheck
+
+            -   name: Tests
+                run: pnpm test
+
+    api_surface:
+        name: Public API surface
+        runs-on: ubuntu-22.04
+
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+
+            -   name: Use Node.js 24
+                uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+                with:
+                    node-version: 24
+                    package-manager-cache: false
+
+            -   name: Turbo cache
+                id: turbo-cache
+                uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+                with:
+                    path: .turbo
+                    key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+                    restore-keys: |
+                        turbo-${{ github.job }}-${{ github.ref_name }}-
+
+            -   uses: apify/workflows/pnpm-install@main
+
+            -   name: Build
+                run: pnpm ci:build
+
+            -   name: Check public API surface
+                run: pnpm api:check
+
+    docs:
+        name: Docs build
+        if: (!contains(github.event.head_commit.message, '[skip ci]') && github.ref != 'refs/heads/master')
+        runs-on: ubuntu-22.04
+        steps:
+            -   name: Checkout Source code
+                uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+            -   name: Use Node.js 24
+                uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+                with:
+                    node-version: 24
+                    package-manager-cache: false
+
+            -   name: Turbo cache
+                id: turbo-cache
+                uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+                with:
+                    path: .turbo
+                    key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+                    restore-keys: |
+                        turbo-${{ github.job }}-${{ github.ref_name }}-
+
+            -   uses: apify/workflows/pnpm-install@main
+
+            -   name: Build & deploy docs
+                run: |
+                    cd website
+                    pnpm build
+                env:
+                    APIFY_SIGNING_TOKEN: ${{ secrets.APIFY_SIGNING_TOKEN }}
+                    SEGMENT_TOKEN: ${{ secrets.SEGMENT_TOKEN }}
+
+            -   name: Install Nginx
+                run: |
+                    sudo apt-get update
+                    sudo apt-get install -y nginx
+
+            -   name: Start Docusaurus server
+                run: |
+                    cd website
+                    nohup pnpm docusaurus serve --port 3000 --no-open &
+                    sleep 5
+                    curl -f http://localhost:3000 > /dev/null
+
+            -   name: Start Nginx with project config
+                run: |
+                    PWD_PATH="$(pwd)"
+                    cat > default.conf <<EOF
+                    worker_processes auto;
+                    error_log ${PWD_PATH}/logs/error.log;
+                    pid ${PWD_PATH}/logs/nginx.pid;
+                    events {}
+                    http {
+                        access_log ${PWD_PATH}/logs/access.log;
+                        include ${PWD_PATH}/website/nginx.conf;
+                    }
+                    EOF
+                    sed -i 's|https://apify.github.io/crawlee|http://localhost:3000|g' default.conf
+                    mkdir -p "${PWD_PATH}/logs"
+                    nginx -c "${PWD_PATH}/default.conf"
+                    sleep 1
+
+            -   name: Run header assertions
+                run: |
+                    set -euo pipefail
+                    function assert_header() {
+                        url=$1
+                        header=$2
+                        expected=$3
+                        shift 3
+                        extra_args=("$@")
+                        actual=$(curl -s -D - -o /dev/null "${extra_args[@]}" "$url" | grep -i "^$header" | tr -d '\r' || true)
+                        echo "→ $url → $actual"
+                        echo "$actual" | grep -q "$expected" || (echo "❌ Expected '$expected' in '$header' for $url" && exit 1)
+                    }
+
+                    function assert_status() {
+                        url=$1
+                        expected=$2
+                        shift 2
+                        extra_args=("$@")
+                        actual=$(curl -s -o /dev/null -w "%{http_code}" "${extra_args[@]}" "$url")
+                        echo "→ $url → HTTP $actual"
+                        [ "$actual" = "$expected" ] || (echo "❌ Expected HTTP $expected but got $actual for $url" && exit 1)
+                    }
+
+                    function assert_no_redirect() {
+                        url=$1
+                        shift
+                        extra_args=("$@")
+                        response=$(curl -s -D - -o /dev/null -w "\n%{http_code}" "${extra_args[@]}" "$url" 2>/dev/null)
+                        status=$(echo "$response" | tail -1)
+                        location=$(echo "$response" | grep -i "^location:" | tr -d '\r' || true)
+                        echo "→ $url → HTTP $status ${location:+(${location})}"
+                        if [ "$status" = "301" ] || [ "$status" = "302" ]; then
+                            echo "❌ Got redirect for $url: $location" && exit 1
+                        fi
+                    }
+
+                    echo "🧪 Checking open redirect protection..."
+                    assert_no_redirect "http://localhost:8080///%5Cevil.com/"
+                    assert_no_redirect "http://localhost:8080/%5Cevil.com/"
+                    assert_no_redirect "http://localhost:8080///%5cevil.com/"
+                    assert_no_redirect "http://localhost:8080" --request-target '/\evil.com/'
+                    assert_no_redirect "http://localhost:8080" --request-target '///\evil.com/'
+                    assert_status "http://localhost:8080/js/docs/quick-start/" "302"
+
+                    echo "🧪 Checking Nginx responses... (crawlee JS)"
+                    assert_header "http://localhost:8080/" "Content-Type" "text/html"
+                    assert_header "http://localhost:8080/" "Content-Type" "text/markdown" -H "Accept: text/markdown"
+                    assert_header "http://localhost:8080/js/docs/quick-start" "Content-Type" "text/html"
+                    assert_header "http://localhost:8080/js/docs/quick-start.md" "Content-Type" "text/markdown"
+                    assert_header "http://localhost:8080/js/docs/quick-start" "Content-Type" "text/markdown" -H "Accept: text/markdown"
+                    assert_header "http://localhost:8080/llms.txt" "Content-Type" "text/markdown"
+                    assert_header "http://localhost:8080/llms-full.txt" "Content-Type" "text/markdown"
+
+                    echo "🧪 Checking Nginx responses... (crawlee Python)"
+                    assert_header "http://localhost:8080/python/docs/quick-start" "Content-Type" "text/html"
+                    assert_header "http://localhost:8080/python/docs/quick-start.md" "Content-Type" "text/markdown"
+                    assert_header "http://localhost:8080/python/docs/quick-start" "Content-Type" "text/markdown" -H "Accept: text/markdown"
+                    assert_header "http://localhost:8080/python/llms.txt" "Content-Type" "text/markdown"
+                    assert_header "http://localhost:8080/python/llms-full.txt" "Content-Type" "text/markdown"
+
+                    echo "✅ All Nginx header checks passed."
+
+            -   name: Stop Nginx
+                if: always()
+                run: nginx -c "$(pwd)/default.conf" -s stop
+
+    lint:
+        name: Lint
+        runs-on: ubuntu-22.04
+
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+            -   name: Use Node.js 24
+                uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+                with:
+                    node-version: 24
+                    package-manager-cache: false
+
+            -   name: Turbo cache
+                id: turbo-cache
+                uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+                with:
+                    path: .turbo
+                    key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+                    restore-keys: |
+                        turbo-${{ github.job }}-${{ github.ref_name }}-
+
+            -   uses: apify/workflows/pnpm-install@main
+
+            -   name: Oxlint
+                run: pnpm lint
+
+            -   name: Oxfmt format check
+                run: pnpm format:check
+
+    release_next:
+        name: Release @next
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master' && (!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, 'docs:'))
+        needs: build_and_test
+        runs-on: ubuntu-22.04
+
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+                with:
+                    token: ${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}
+                    fetch-depth: 0
+
+            -   name: Use Node.js 24
+                uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+                with:
+                    node-version: 24
+                    package-manager-cache: false
+
+            -   name: Turbo cache
+                id: turbo-cache
+                uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+                with:
+                    path: .turbo
+                    key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+                    restore-keys: |
+                        turbo-${{ github.job }}-${{ github.ref_name }}-
+
+            -   uses: apify/workflows/pnpm-install@main
+
+            -   name: Build
+                run: pnpm ci:build
+
+            -   name: Generate changed packages list
+                id: changed-packages
+                # `set -eo pipefail` plus an explicit assignment ensures a lerna
+                # crash fails the step instead of being swallowed by the outer
+                # `echo | tee` (which would otherwise emit `changed_packages=0`
+                # and skip the publish step silently).
+                run: |
+                    set -eo pipefail
+                    changed=$(node ./node_modules/.bin/lerna changed -p | wc -l | xargs)
+                    echo "changed_packages=$changed" | tee -a "$GITHUB_OUTPUT"
+
+            -   name: Report nothing to release
+                if: steps.changed-packages.outputs.changed_packages == '0'
+                run: echo "Nothing to release"
+
+            -   name: Publish packages
+                if: steps.changed-packages.outputs.changed_packages != '0'
+                uses: apify/actions/execute-workflow@v1.4.1
+                with:
+                    workflow: publish-to-npm.yml
+                    inputs: >
+                      {
+                        "ref": "${{ steps.commit.outputs.commit_long_sha || github.sha }}",
+                        "dist-tag": "v4"
+                      }
+
+            # Docker image builds are only published off master; gated here so this block
+            # carries cleanly to master when v4 is integrated, without firing on v4 pushes.
+            -   name: Collect versions for Docker images
+                id: versions
+                if: github.ref == 'refs/heads/master'
+                run: |
+                    crawlee=`node -p "require('./packages/crawlee/package.json').version"`
+                    echo "crawlee=$crawlee" | tee -a $GITHUB_OUTPUT
+
+            -   name: Trigger Docker image builds
+                uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4.0.1
+                # Trigger next images only if we have something new pushed
+                if: github.ref == 'refs/heads/master' && steps.changed-packages.outputs.changed_packages != '0'
+                with:
+                    token: ${{ secrets.APIFY_SERVICE_ACCOUNT_GITHUB_TOKEN }}
+                    repository: apify/apify-actor-docker
+                    event-type: build-node-images
+                    client-payload: >
+                        {
+                          "crawlee_version": "${{ steps.versions.outputs.crawlee }}",
+                          "release_tag": "beta"
+                        }

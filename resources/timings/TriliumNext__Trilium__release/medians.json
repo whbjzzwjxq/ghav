@@ -1,0 +1,1205 @@
+{
+  "benchmark": "TriliumNext/Trilium@2f848fc8e7ab09c71014e71175dd410f2f25bee2:.github/workflows/release.yml",
+  "benchmark_id": "TriliumNext__Trilium__release",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        32284623795,
+        30159720255,
+        29642158378,
+        25822857250,
+        24005672270
+      ],
+      "window_count": 1
+    }
+  },
+  "jobs": {
+    "Build Linux Server (arm64)": {
+      "duration_seconds": 190.0,
+      "durations": [
+        203.0,
+        190.0,
+        189.0,
+        158.0,
+        272.0
+      ],
+      "main_step_counts": [
+        0,
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        203.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            19.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            182.0,
+            178.0,
+            148.0,
+            246.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 180.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build Linux Server (x64)": {
+      "duration_seconds": 183.0,
+      "durations": [
+        163.0,
+        165.0,
+        183.0,
+        190.0,
+        239.0
+      ],
+      "main_step_counts": [
+        0,
+        3
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        163.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            155.0,
+            170.0,
+            177.0,
+            226.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 173.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Make Electron (arm64, linux, ubuntu-24.04-arm, bash, linux)": {
+      "duration_seconds": 504.0,
+      "durations": [
+        504.0,
+        467.0,
+        518.0,
+        406.0,
+        574.0
+      ],
+      "main_step_counts": [
+        0,
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        504.0,
+        4.0,
+        6.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            78.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            39.0,
+            9.0,
+            9.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            46.0,
+            26.0,
+            16.0,
+            13.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            373.0,
+            417.0,
+            347.0,
+            444.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 395.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            20.0,
+            20.0,
+            20.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Make Electron (arm64, macos, macos-latest, bash, darwin)": {
+      "duration_seconds": 474.0,
+      "durations": [
+        455.0,
+        620.0,
+        373.0,
+        474.0,
+        642.0
+      ],
+      "main_step_counts": [
+        0,
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        455.0,
+        5.0,
+        8.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            8.0,
+            12.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            8.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            46.0,
+            70.0,
+            67.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 68.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            114.0,
+            34.0,
+            63.0,
+            96.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 79.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            400.0,
+            266.0,
+            311.0,
+            439.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 355.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            12.0,
+            13.0,
+            15.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Make Electron (arm64, windows, win-signing, cmd, win32)": {
+      "duration_seconds": 815.0,
+      "durations": [
+        815.0,
+        614.0,
+        919.0,
+        1375.0,
+        531.0
+      ],
+      "main_step_counts": [
+        0,
+        6
+      ],
+      "overhead_seconds": 10.0,
+      "overheads": [
+        815.0,
+        10.0,
+        11.0,
+        10.0,
+        9.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            42.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            35.0,
+            34.0,
+            29.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            28.0,
+            27.0,
+            25.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 27.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            270.0,
+            324.0,
+            311.0,
+            226.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 290.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            224.0,
+            454.0,
+            945.0,
+            209.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 339.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            36.0,
+            64.0,
+            45.0,
+            30.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 40.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Make Electron (x64, linux, ubuntu-22.04, bash, linux)": {
+      "duration_seconds": 422.0,
+      "durations": [
+        404.0,
+        422.0,
+        420.0,
+        473.0,
+        686.0
+      ],
+      "main_step_counts": [
+        0,
+        6
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        404.0,
+        7.0,
+        5.0,
+        3.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            37.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            8.0,
+            9.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            10.0,
+            12.0,
+            10.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            18.0,
+            18.0,
+            18.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            344.0,
+            351.0,
+            401.0,
+            579.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 376.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            22.0,
+            26.0,
+            27.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Make Electron (x64, macos, macos-latest, bash, darwin)": {
+      "duration_seconds": 561.0,
+      "durations": [
+        581.0,
+        608.0,
+        419.0,
+        552.0,
+        561.0
+      ],
+      "main_step_counts": [
+        0,
+        6
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        581.0,
+        6.0,
+        5.0,
+        8.0,
+        7.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            8.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            6.0,
+            12.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            82.0,
+            36.0,
+            60.0,
+            61.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 60.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            97.0,
+            43.0,
+            89.0,
+            57.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 73.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            399.0,
+            315.0,
+            369.0,
+            398.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 383.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            12.0,
+            14.0,
+            18.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Make Electron (x64, windows, win-signing, cmd, win32)": {
+      "duration_seconds": 783.0,
+      "durations": [
+        783.0,
+        559.0,
+        892.0,
+        805.0,
+        626.0
+      ],
+      "main_step_counts": [
+        0,
+        6
+      ],
+      "overhead_seconds": 10.0,
+      "overheads": [
+        783.0,
+        10.0,
+        10.0,
+        10.0,
+        16.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            34.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            39.0,
+            52.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 39.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            39.0,
+            37.0,
+            49.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 38.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            4.0,
+            6.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            266.0,
+            330.0,
+            315.0,
+            241.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 290.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            187.0,
+            427.0,
+            358.0,
+            227.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 292.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            45.0,
+            42.0,
+            35.0
+          ],
+          "name": "Upload the artifact",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 38.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Publish release": {
+      "duration_seconds": 67.0,
+      "durations": [
+        42.0,
+        62.0,
+        67.0,
+        94.0,
+        104.0
+      ],
+      "main_step_counts": [
+        0,
+        4,
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        42.0,
+        3.0,
+        2.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run mkdir upload",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            28.0,
+            41.0,
+            56.0
+          ],
+          "name": "Download all artifacts",
+          "occurrence": 0,
+          "positions": [
+            2,
+            4
+          ],
+          "seconds": 34.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Run actions/setup-node@v7",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Compose the release body",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            35.0,
+            46.0,
+            41.0
+          ],
+          "name": "Publish stable release",
+          "occurrence": 0,
+          "positions": [
+            3,
+            5
+          ],
+          "seconds": 38.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Sanity Check": {
+      "duration_seconds": 36.0,
+      "durations": [
+        36.0,
+        35.0,
+        37.0,
+        36.0,
+        38.0
+      ],
+      "main_step_counts": [
+        0,
+        5
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        36.0,
+        4.0,
+        5.0,
+        7.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            4.0,
+            8.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            15.0,
+            13.0,
+            14.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check version consistency",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "44f5be88b776078fe268dc9877411cb144df3a46": "29568a23d8e23721620f614a9fa85d4b7844435c",
+      "744646d07bff459d1db305b1c0a8ea0c99b9c27c": "24ee581ca556499e6a67c80abf5d967662cc4020",
+      "97860e205cd34d5ba2cfc47cbbf6f7e830c30855": "cf71ebe2d988130e6c80bc767a9b05f6f618f484",
+      "a0908a6e1e1741a3c3824d803da07300183dcb0c": "5b746a7cc6ffc7541427e437d287427582e97b5e",
+      "bf234397923e912b4f8c5b898ab79aa37f5cc286": "14210f03a7071a56c3a6862a0806015b3ce213e8"
+    },
+    "pinned_oid": "5b746a7cc6ffc7541427e437d287427582e97b5e",
+    "runs_same_version": 1,
+    "runs_total": 5
+  }
+}

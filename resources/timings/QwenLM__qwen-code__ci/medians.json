@@ -1,0 +1,1734 @@
+{
+  "benchmark": "QwenLM/qwen-code@a8e0d293fb0a80d790175789ea0fffefec506508:.github/workflows/ci.yml",
+  "benchmark_id": "QwenLM__qwen-code__ci",
+  "count_window": {
+    "capped": false,
+    "days": 1,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-31T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33451686465,
+        33450152373,
+        33438849826,
+        33436513872,
+        33433743674
+      ],
+      "window_count": 414
+    },
+    "push": {
+      "runs": [
+        33431027457,
+        33418432631,
+        33416599933,
+        33414024821,
+        33397539906
+      ],
+      "window_count": 42
+    }
+  },
+  "jobs": {
+    "Classify PR": {
+      "duration_seconds": 5.0,
+      "durations": [
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        3.0,
+        9.0,
+        11.0,
+        9.0,
+        3.0,
+        10.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        3.0,
+        9.0,
+        11.0,
+        8.0,
+        3.0,
+        10.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect release version-sync PR",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Select Linux runner",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Desktop Shell (${{ matrix.os }})": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "Desktop Shell (ubuntu-22.04)": {
+      "duration_seconds": 15.0,
+      "durations": [
+        14.0,
+        15.0,
+        15.0,
+        15.0,
+        11.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            8.0,
+            7.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Detect desktop-shell changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install Linux dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run dtolnay/rust-toolchain@4cda84d5c5c54efe2404f9d843567869ab1699d4",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run Swatinem/rust-cache@42dc69e1aa15d09112580998cf2ef0119e2e91ae",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile and test the desktop crate",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run desktop release tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "Desktop Shell (windows-2022)": {
+      "duration_seconds": 26.0,
+      "durations": [
+        44.0,
+        24.0,
+        26.0,
+        22.0,
+        28.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            20.0,
+            15.0,
+            16.0,
+            15.0,
+            16.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            6.0,
+            5.0,
+            4.0,
+            7.0
+          ],
+          "name": "Detect desktop-shell changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install Linux dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run dtolnay/rust-toolchain@4cda84d5c5c54efe2404f9d843567869ab1699d4",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run Swatinem/rust-cache@42dc69e1aa15d09112580998cf2ef0119e2e91ae",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile and test the desktop crate",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Run desktop release tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "Integration Tests (CLI, No Sandbox)": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "Integration Tests (no-AK, No Sandbox)": {
+      "duration_seconds": 454.0,
+      "durations": [
+        411.0,
+        454.0,
+        375.0,
+        498.0,
+        1108.0
+      ],
+      "main_step_counts": [
+        12
+      ],
+      "overhead_seconds": 11.0,
+      "overheads": [
+        10.0,
+        13.0,
+        11.0,
+        4.0,
+        15.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            5.0,
+            0.0,
+            4.0
+          ],
+          "name": "Restore workspace ownership",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Clean stale .qwen before checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            7.0,
+            8.0,
+            10.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Verify checkout includes expected head commit",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Classify CI profile",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0
+          ],
+          "name": "Setup Node.js (hosted)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 4
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Use pre-installed Node.js (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.5,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure persistent npm cache (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disk floor gate (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            268.0,
+            286.0,
+            231.0,
+            325.0,
+            635.0
+          ],
+          "name": "Install Dependencies",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 286.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Report npm cache usage (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            126.0,
+            144.0,
+            121.0,
+            154.0,
+            443.0
+          ],
+          "name": "Run required no-AK integration gate",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 144.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Post Coverage Comment": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 9,
+      "steps": []
+    },
+    "Post Coverage Comment (ubuntu-latest, 22.x)": {
+      "duration_seconds": 16.0,
+      "durations": [
+        16.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Download coverage reports artifact",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Post Coverage Comment using Composite Action",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (macos-latest, Node 22.x)": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "Test (ubuntu-latest, Node 22.x)": {
+      "duration_seconds": 1601.0,
+      "durations": [
+        1726.0,
+        1542.0,
+        1664.0,
+        1858.0,
+        1281.0,
+        1641.0,
+        1509.0,
+        1530.0,
+        2980.0,
+        1561.0
+      ],
+      "main_step_counts": [
+        40
+      ],
+      "overhead_seconds": 13.5,
+      "overheads": [
+        14.0,
+        16.0,
+        14.0,
+        13.0,
+        23.0,
+        13.0,
+        13.0,
+        13.0,
+        4.0,
+        17.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            12.0,
+            9.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            4.0,
+            0.0,
+            15.0
+          ],
+          "name": "Restore workspace ownership",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Clean stale .qwen before checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            8.0,
+            7.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            9.0,
+            20.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Verify checkout includes expected head commit",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Classify CI profile",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check workflow file size",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Docs-only CI",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "GitHub CI helper checks",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Set up Node.js 22.x (hosted)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 4.0,
+          "skipped": 9
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Use pre-installed Node.js (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure persistent npm cache (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure npm for rate limiting",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disk floor gate (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            308.0,
+            305.0,
+            278.0,
+            370.0,
+            238.0,
+            336.0,
+            285.0,
+            277.0,
+            324.0,
+            307.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 306.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Report npm cache usage (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Audit critical runtime dependencies",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check lockfile",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check desktop workspace isolation",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            5.0,
+            3.0,
+            5.0,
+            3.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Check TUI dependency direction",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install linters",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            156.0,
+            153.0,
+            134.0,
+            177.0,
+            113.0,
+            161.0,
+            146.0,
+            160.0,
+            163.0,
+            158.0
+          ],
+          "name": "Run ESLint",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 157.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run actionlint",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            11.0,
+            12.0,
+            19.0,
+            10.0,
+            13.0,
+            12.0,
+            12.0,
+            13.0,
+            15.0
+          ],
+          "name": "Run shellcheck",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run yamllint",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            149.0,
+            128.0,
+            114.0,
+            133.0,
+            97.0,
+            130.0,
+            113.0,
+            125.0,
+            131.0,
+            136.0
+          ],
+          "name": "Run Prettier",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 129.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run sensitive keyword linter",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run i18n check",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate settings schema",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check settings schema is up-to-date",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Generate VS Code companion notices",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check VS Code companion notices are up-to-date",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            193.0,
+            190.0,
+            185.0,
+            191.0,
+            135.0,
+            188.0,
+            159.0,
+            172.0,
+            189.0,
+            167.0
+          ],
+          "name": "Check serve fast-path bundle closure",
+          "occurrence": 0,
+          "positions": [
+            31
+          ],
+          "seconds": 186.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            59.0,
+            56.0,
+            62.0,
+            61.0,
+            58.0,
+            59.0,
+            57.0,
+            58.0,
+            58.0,
+            56.0
+          ],
+          "name": "Run .github/scripts helper tests",
+          "occurrence": 0,
+          "positions": [
+            32
+          ],
+          "seconds": 58.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install tmux and zip tooling",
+          "occurrence": 0,
+          "positions": [
+            33
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            805.0,
+            645.0,
+            829.0,
+            862.0,
+            583.0,
+            703.0,
+            686.0,
+            670.0,
+            2056.0,
+            637.0
+          ],
+          "name": "Run tests and generate reports",
+          "occurrence": 0,
+          "positions": [
+            34
+          ],
+          "seconds": 694.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload disk-pressure samples",
+          "occurrence": 0,
+          "positions": [
+            35
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Package and scan Chrome extension artifacts",
+          "occurrence": 0,
+          "positions": [
+            36
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Publish Test Report (for non-forks)",
+          "occurrence": 0,
+          "positions": [
+            37
+          ],
+          "seconds": 1.0,
+          "skipped": 9
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            1.0,
+            5.0
+          ],
+          "name": "Upload Test Results Artifact (for forks)",
+          "occurrence": 0,
+          "positions": [
+            38
+          ],
+          "seconds": 4.0,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            9.0,
+            10.0
+          ],
+          "name": "Upload coverage reports",
+          "occurrence": 0,
+          "positions": [
+            39
+          ],
+          "seconds": 10.0,
+          "skipped": 5
+        }
+      ]
+    },
+    "Test (windows-latest, Node 22.x)": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "web-shell E2E Smoke (ubuntu-latest, Node 22.x)": {
+      "duration_seconds": 401.0,
+      "durations": [
+        349.0,
+        350.0,
+        407.0,
+        526.0,
+        401.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 10.0,
+      "overheads": [
+        10.0,
+        8.0,
+        11.0,
+        5.0,
+        11.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0
+          ],
+          "name": "Restore workspace ownership",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Clean stale .qwen before checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            11.0,
+            7.0,
+            6.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Verify checkout includes expected head commit",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Set up Node.js 22.x (hosted)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 4
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Use pre-installed Node.js (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure persistent npm cache (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Configure npm for rate limiting",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Disk floor gate (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            220.0,
+            221.0,
+            269.0,
+            322.0,
+            265.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 265.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0
+          ],
+          "name": "Install Playwright Chromium (hosted)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 20.0,
+          "skipped": 4
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Install Playwright Chromium (self-hosted)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 1.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Choose web-shell Playwright port",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            104.0,
+            109.0,
+            107.0,
+            164.0,
+            115.0
+          ],
+          "name": "Run web-shell browser smoke",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 109.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            2.0,
+            3.0
+          ],
+          "name": "Upload web-shell Playwright artifacts",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "26f5826be9abec51d4c6729014dc36a45584205a": "d9b6cbaa620de79a777a0256c77319b66be1d3be",
+      "358efdceebd79b39758adf76e91a3e890f4dfd10": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+      "39fb86e8838a46e74710a85240fcba473c902eae": "d9b6cbaa620de79a777a0256c77319b66be1d3be",
+      "3a0c4c61081bc8e956f531404a20e6d232048832": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+      "442951afee06d6968173044b26894ba3a7aaf1d1": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+      "59094201adf5fe5492e6ff750f99e47f832c6ab1": "384d71909dd566fa943ace14644582027d018081",
+      "843d991a873c45cfa3f7497fccfd4e4d51f72c23": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+      "a9bc0e06d7c975fdc192667d26fbad4453b55067": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+      "bc2f6508cd0eaf6a2c5787c71b0e467604cc3828": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+      "bd5908531160e3c68556cda5ee01b3a86a2dc1f1": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb"
+    },
+    "pinned_oid": "738d07c9356f0cdd3d5a60e89558ad0a2130efeb",
+    "runs_same_version": 7,
+    "runs_total": 10
+  }
+}

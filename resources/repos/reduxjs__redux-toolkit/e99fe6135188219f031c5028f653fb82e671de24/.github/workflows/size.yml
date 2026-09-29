@@ -1,0 +1,24 @@
+name: size
+on:
+  pull_request:
+    branches:
+      - master
+      - 'feature/infinite-query-integration'
+permissions:
+  pull-requests: write
+jobs:
+  size:
+    runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: EskiMojo14/size-limit-action@af0584be5b6cc2d056bd31a314fc2ce9c9c1a929 # v2
+        with:
+          directory: packages/toolkit
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          build_script: build-only
+          package_manager: yarn
+          size_margin: non-zero

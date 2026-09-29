@@ -1,0 +1,32 @@
+name: Prepare CI cache
+
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+      node-version:
+        required: true
+        type: string
+
+permissions: # added using https://github.com/step-security/secure-workflows
+  contents: read
+
+jobs:
+  prepare-npm-cache:
+    name: Prepare npm cache for Node v${{ inputs.node-version }} on ${{ inputs.os }}
+    runs-on: ${{ inputs.os }}
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 20
+          fetch-tags: false
+
+      - name: Setup workspace ⚙️
+        uses: ./.github/actions/setup-workspace
+        with:
+          os: ${{ inputs.os }}
+          node-version: ${{ inputs.node-version }}

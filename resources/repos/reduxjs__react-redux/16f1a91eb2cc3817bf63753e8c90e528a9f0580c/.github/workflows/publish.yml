@@ -1,0 +1,27 @@
+name: Publish Package to npmjs
+on:
+  # keeping it purely manual for now as to not accidentally trigger a release
+  #release:
+  #  types: [published]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.x'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+      - run: yarn install --immutable
+      - run: yarn test
+      - run: npm publish --access public --provenance

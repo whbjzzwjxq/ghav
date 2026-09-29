@@ -1,0 +1,94 @@
+{
+  "name": "yup",
+  "version": "1.7.1",
+  "description": "Dead simple Object schema validation",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "runkitExampleFilename": "./runkit-example.js",
+  "scripts": {
+    "test": "yarn lint && yarn testonly",
+    "testonly": "vitest run",
+    "test-sync": "vitest run --project sync",
+    "tdd": "vitest --project async",
+    "lint": "eslint src test",
+    "precommit": "lint-staged",
+    "toc": "doctoc README.md --github",
+    "release": "rollout",
+    "build:dts": "yarn tsc --emitDeclarationOnly -p . --outDir dts",
+    "build": "rm -rf dts && yarn build:dts && yarn rollup -c rollup.config.js  && yarn toc",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jquense/yup.git"
+  },
+  "author": {
+    "name": "@monasticpanic Jason Quense"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jquense/yup/issues"
+  },
+  "homepage": "https://github.com/jquense/yup",
+  "release": {
+    "conventionalCommits": true,
+    "publishDir": "lib"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@4c/cli": "^4.0.4",
+    "@4c/rollout": "patch:@4c/rollout@npm%3A4.0.2#~/.yarn/patches/@4c-rollout-npm-4.0.2-ab2b6d0bab.patch",
+    "@4c/tsconfig": "^0.4.1",
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-typescript": "^7.27.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@standard-schema/spec": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "babel-jest": "^27.5.1",
+    "babel-preset-env-modules": "^1.0.1",
+    "doctoc": "^2.2.1",
+    "dts-bundle-generator": "^6.13.0",
+    "eslint": "^8.57.1",
+    "eslint-config-jason": "^8.2.2",
+    "eslint-config-prettier": "^8.10.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-ts-expect": "^2.1.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "hookem": "^2.0.1",
+    "lint-staged": "^13.3.0",
+    "prettier": "^2.8.8",
+    "rollup": "^2.79.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-dts": "^4.2.3",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "synchronous-promise": "^2.0.17",
+    "typescript": "^4.9.5",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "property-expr": "^2.0.5",
+    "tiny-case": "^1.0.3",
+    "toposort": "^2.0.2",
+    "type-fest": "^2.19.0"
+  },
+  "packageManager": "yarn@4.10.0+sha512.8dd111dbb1658cf17089636e5bf490795958158755f36cb75c5a2db0bda6be4d84b95447753627f3330d1457cb6f7e8c1e466eaed959073c82be0242c2cd41e7",
+  "resolutions": {
+    "@4c/rollout@npm:^4.0.2": "patch:@4c/rollout@npm%3A4.0.2#~/.yarn/patches/@4c-rollout-npm-4.0.2-ab2b6d0bab.patch"
+  }
+}

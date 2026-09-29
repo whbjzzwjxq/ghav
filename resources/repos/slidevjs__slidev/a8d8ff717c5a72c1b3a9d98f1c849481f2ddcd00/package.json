@@ -1,0 +1,91 @@
+{
+  "type": "module",
+  "version": "52.19.1",
+  "private": true,
+  "packageManager": "pnpm@11.22.0",
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter=\"./packages/**\" --parallel run build",
+    "ci:publish": "zx scripts/publish.mjs",
+    "cy": "cypress open",
+    "cy:fixture": "pnpm -C cypress/fixtures/basic run dev",
+    "demo:build": "zx ./scripts/demo.mjs",
+    "demo:composable-vue": "pnpm -C demo/composable-vue run dev",
+    "demo:vue-runner": "pnpm -C demo/vue-runner run dev",
+    "demo:dev": "pnpm -C demo/starter run dev",
+    "vscode:dev": "pnpm -C packages/vscode run dev",
+    "play": "pnpm demo:dev",
+    "dev": "pnpm -r --filter=\"./packages/**\" --parallel run dev",
+    "lint": "eslint . --cache",
+    "lint:fix": "nr lint --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "docs": "pnpm -C docs run dev",
+    "docs:build": "pnpm run --filter=\"./docs...\" build && pnpm demo:build",
+    "release": "bumpp package.json packages/*/package.json docs/package.json --all -x \"zx scripts/update-versions.mjs\"",
+    "test": "vitest test",
+    "verify": "pnpm build && pnpm typecheck && pnpm lint && pnpm test",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:dev",
+    "@antfu/ni": "catalog:prod",
+    "@antfu/utils": "catalog:frontend",
+    "@modelcontextprotocol/client": "catalog:prod",
+    "@shikijs/markdown-it": "catalog:frontend",
+    "@slidev/cli": "workspace:*",
+    "@slidev/parser": "workspace:*",
+    "@slidev/types": "workspace:*",
+    "@types/cli-progress": "catalog:types",
+    "@types/connect": "catalog:types",
+    "@types/file-saver": "catalog:types",
+    "@types/js-yaml": "catalog:types",
+    "@types/katex": "catalog:types",
+    "@types/node": "catalog:types",
+    "@types/prompts": "catalog:types",
+    "@types/recordrtc": "catalog:types",
+    "@types/resolve": "catalog:types",
+    "@types/yargs": "catalog:types",
+    "@vue/compiler-sfc": "catalog:demo",
+    "@vueuse/core": "catalog:frontend",
+    "bumpp": "catalog:dev",
+    "cypress": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "katex": "catalog:frontend",
+    "lint-staged": "catalog:dev",
+    "markdown-exit": "catalog:prod",
+    "mermaid": "catalog:frontend",
+    "playwright-chromium": "catalog:dev",
+    "prettier": "catalog:dev",
+    "prettier-plugin-slidev": "catalog:dev",
+    "rimraf": "catalog:dev",
+    "shiki": "catalog:frontend",
+    "simple-git-hooks": "catalog:dev",
+    "taze": "catalog:dev",
+    "tinyexec": "catalog:prod",
+    "tsdown": "catalog:dev",
+    "tsnapi": "catalog:dev",
+    "tsx": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vite": "catalog:prod",
+    "vite-plugin-pwa": "catalog:prod",
+    "vitest": "catalog:dev",
+    "vue-tsc": "catalog:dev",
+    "zx": "catalog:dev"
+  },
+  "resolutions": {
+    "chokidar": "catalog:prod",
+    "typescript": "catalog:dev",
+    "vite": "catalog:prod"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue,json}": [
+      "eslint --fix --cache"
+    ]
+  }
+}

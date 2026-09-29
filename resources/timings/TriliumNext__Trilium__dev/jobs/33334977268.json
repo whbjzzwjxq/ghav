@@ -1,0 +1,1349 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-30T20:56:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:24Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320144126,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build Docker image",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189548",
+      "started_at": "2026-08-30T20:55:26Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:28Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:37Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:59Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:59Z",
+          "conclusion": "success",
+          "name": "Update build info",
+          "number": 6,
+          "started_at": "2026-08-30T20:55:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:16Z",
+          "conclusion": "success",
+          "name": "Trigger client build",
+          "number": 7,
+          "started_at": "2026-08-30T20:55:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:29Z",
+          "conclusion": "success",
+          "name": "Trigger server build",
+          "number": 8,
+          "started_at": "2026-08-30T20:56:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:33Z",
+          "conclusion": "success",
+          "name": "Run docker/setup-buildx-action@v4",
+          "number": 9,
+          "started_at": "2026-08-30T20:56:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:48Z",
+          "conclusion": "success",
+          "name": "Run docker/build-push-action@v7",
+          "number": 10,
+          "started_at": "2026-08-30T20:56:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:49Z",
+          "conclusion": "success",
+          "name": "Post Run docker/build-push-action@v7",
+          "number": 16,
+          "started_at": "2026-08-30T20:56:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:50Z",
+          "conclusion": "success",
+          "name": "Post Run docker/setup-buildx-action@v4",
+          "number": 17,
+          "started_at": "2026-08-30T20:56:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:50Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 18,
+          "started_at": "2026-08-30T20:56:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:51Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 19,
+          "started_at": "2026-08-30T20:56:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 20,
+          "started_at": "2026-08-30T20:56:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T20:56:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:55:39Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:24Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320144228,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Detect affected suites",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189554",
+      "started_at": "2026-08-30T20:55:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:29Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:35Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:36Z",
+          "conclusion": "success",
+          "name": "Run dorny/paths-filter@v4",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 6,
+          "started_at": "2026-08-30T20:55:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "started_at": "2026-08-30T20:55:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T21:02:26Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:24Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320144236,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test development",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189553",
+      "started_at": "2026-08-30T20:55:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:30Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:36Z",
+          "conclusion": "success",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:44Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm install --frozen-lockfile",
+          "number": 5,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:24Z",
+          "conclusion": "success",
+          "name": "Typecheck",
+          "number": 6,
+          "started_at": "2026-08-30T20:56:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:26Z",
+          "conclusion": "success",
+          "name": "Run the repo-script tests",
+          "number": 7,
+          "started_at": "2026-08-30T20:56:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:01Z",
+          "conclusion": "success",
+          "name": "Run the client-side tests",
+          "number": 8,
+          "started_at": "2026-08-30T20:56:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:04Z",
+          "conclusion": "success",
+          "name": "Upload client test report",
+          "number": 9,
+          "started_at": "2026-08-30T20:59:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:10Z",
+          "conclusion": "success",
+          "name": "Upload client coverage to Codecov",
+          "number": 10,
+          "started_at": "2026-08-30T20:59:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:13Z",
+          "conclusion": "success",
+          "name": "Upload client test results to Codecov",
+          "number": 11,
+          "started_at": "2026-08-30T20:59:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:28Z",
+          "conclusion": "success",
+          "name": "Run the desktop tests",
+          "number": 12,
+          "started_at": "2026-08-30T20:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:34Z",
+          "conclusion": "success",
+          "name": "Upload desktop coverage to Codecov",
+          "number": 13,
+          "started_at": "2026-08-30T20:59:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:37Z",
+          "conclusion": "success",
+          "name": "Upload desktop test results to Codecov",
+          "number": 14,
+          "started_at": "2026-08-30T20:59:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:44Z",
+          "conclusion": "success",
+          "name": "Run the commons tests",
+          "number": 15,
+          "started_at": "2026-08-30T20:59:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:50Z",
+          "conclusion": "success",
+          "name": "Upload commons coverage to Codecov",
+          "number": 16,
+          "started_at": "2026-08-30T20:59:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:59:53Z",
+          "conclusion": "success",
+          "name": "Upload commons test results to Codecov",
+          "number": 17,
+          "started_at": "2026-08-30T20:59:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:43Z",
+          "conclusion": "success",
+          "name": "Run the codemirror tests",
+          "number": 18,
+          "started_at": "2026-08-30T20:59:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:48Z",
+          "conclusion": "success",
+          "name": "Upload codemirror coverage to Codecov",
+          "number": 19,
+          "started_at": "2026-08-30T21:01:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:52Z",
+          "conclusion": "success",
+          "name": "Upload codemirror test results to Codecov",
+          "number": 20,
+          "started_at": "2026-08-30T21:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:55Z",
+          "conclusion": "success",
+          "name": "Run the highlightjs tests",
+          "number": 21,
+          "started_at": "2026-08-30T21:01:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:00Z",
+          "conclusion": "success",
+          "name": "Upload highlightjs coverage to Codecov",
+          "number": 22,
+          "started_at": "2026-08-30T21:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:03Z",
+          "conclusion": "success",
+          "name": "Upload highlightjs test results to Codecov",
+          "number": 23,
+          "started_at": "2026-08-30T21:02:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:08Z",
+          "conclusion": "success",
+          "name": "Run the pdfjs-viewer tests",
+          "number": 24,
+          "started_at": "2026-08-30T21:02:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:13Z",
+          "conclusion": "success",
+          "name": "Upload pdfjs-viewer coverage to Codecov",
+          "number": 25,
+          "started_at": "2026-08-30T21:02:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:16Z",
+          "conclusion": "success",
+          "name": "Upload pdfjs-viewer test results to Codecov",
+          "number": 26,
+          "started_at": "2026-08-30T21:02:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:24Z",
+          "conclusion": "success",
+          "name": "Run the rest of the tests",
+          "number": 27,
+          "started_at": "2026-08-30T21:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:24Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 52,
+          "started_at": "2026-08-30T21:02:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:24Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 53,
+          "started_at": "2026-08-30T21:02:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:25Z",
+          "conclusion": "success",
+          "name": "Post Checkout the repository",
+          "number": 54,
+          "started_at": "2026-08-30T21:02:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:02:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 55,
+          "started_at": "2026-08-30T21:02:25Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:55:44Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:39Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320174532,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test CKEditor 5 (shard 1)",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189560",
+      "started_at": "2026-08-30T20:55:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "skipped",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "skipped",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "skipped",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "skipped",
+          "name": "Run the CKEditor 5 aggregate tests",
+          "number": 6,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "skipped",
+          "name": "Upload the shard blob report",
+          "number": 7,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 8,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:58:49Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:39Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320174549,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test standalone",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189561",
+      "started_at": "2026-08-30T20:55:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:48Z",
+          "conclusion": "success",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:51Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:00Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:12Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:56:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:40Z",
+          "conclusion": "success",
+          "name": "Run the standalone tests",
+          "number": 6,
+          "started_at": "2026-08-30T20:56:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:44Z",
+          "conclusion": "success",
+          "name": "Upload standalone coverage to Codecov",
+          "number": 7,
+          "started_at": "2026-08-30T20:58:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:46Z",
+          "conclusion": "success",
+          "name": "Upload standalone test results to Codecov",
+          "number": 8,
+          "started_at": "2026-08-30T20:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:46Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 14,
+          "started_at": "2026-08-30T20:58:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:46Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 15,
+          "started_at": "2026-08-30T20:58:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:47Z",
+          "conclusion": "success",
+          "name": "Post Checkout the repository",
+          "number": 16,
+          "started_at": "2026-08-30T20:58:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-30T20:58:47Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T21:01:07Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:39Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320174551,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test server",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189563",
+      "started_at": "2026-08-30T20:55:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:48Z",
+          "conclusion": "success",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:05Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:56:19Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:56:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:00:51Z",
+          "conclusion": "success",
+          "name": "Run the server-side tests",
+          "number": 6,
+          "started_at": "2026-08-30T20:56:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:00:54Z",
+          "conclusion": "success",
+          "name": "Upload server test report",
+          "number": 7,
+          "started_at": "2026-08-30T21:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:00Z",
+          "conclusion": "success",
+          "name": "Upload server coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-30T21:00:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:03Z",
+          "conclusion": "success",
+          "name": "Upload server test results to Codecov",
+          "number": 9,
+          "started_at": "2026-08-30T21:01:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:03Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-08-30T21:01:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:03Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-08-30T21:01:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:03Z",
+          "conclusion": "success",
+          "name": "Post Checkout the repository",
+          "number": 18,
+          "started_at": "2026-08-30T21:01:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T21:01:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-30T21:01:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:55:47Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:39Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320174566,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test CKEditor 5 (shard 2)",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189562",
+      "started_at": "2026-08-30T20:55:43Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "skipped",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "skipped",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "skipped",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "skipped",
+          "name": "Run the CKEditor 5 aggregate tests",
+          "number": 6,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "skipped",
+          "name": "Upload the shard blob report",
+          "number": 7,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 8,
+          "started_at": "2026-08-30T20:55:45Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:55:56Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:55:47Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320190216,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "CKEditor 5 coverage gate",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189564",
+      "started_at": "2026-08-30T20:55:50Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:55:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Download the shard blob reports",
+          "number": 6,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Merge the shard reports and evaluate the coverage gate",
+          "number": 7,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Upload ckeditor5 coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "skipped",
+          "name": "Upload ckeditor5 test results to Codecov",
+          "number": 9,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:55:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 10,
+          "started_at": "2026-08-30T20:55:54Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:58:53Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:56:52Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320316770,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Check Docker build (Dockerfile)",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189577",
+      "started_at": "2026-08-30T20:57:18Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:57:21Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:57:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:26Z",
+          "conclusion": "success",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:57:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:34Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:57:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:43Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:57:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:57Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:57:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:58Z",
+          "conclusion": "success",
+          "name": "Update build info",
+          "number": 6,
+          "started_at": "2026-08-30T20:57:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:11Z",
+          "conclusion": "success",
+          "name": "Trigger build",
+          "number": 7,
+          "started_at": "2026-08-30T20:57:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:11Z",
+          "conclusion": "success",
+          "name": "Set IMAGE_NAME to lowercase",
+          "number": 8,
+          "started_at": "2026-08-30T20:58:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:11Z",
+          "conclusion": "success",
+          "name": "Set TEST_TAG to lowercase",
+          "number": 9,
+          "started_at": "2026-08-30T20:58:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:17Z",
+          "conclusion": "success",
+          "name": "Set up Docker Buildx",
+          "number": 10,
+          "started_at": "2026-08-30T20:58:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:44Z",
+          "conclusion": "success",
+          "name": "Build and export to Docker",
+          "number": 11,
+          "started_at": "2026-08-30T20:58:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:44Z",
+          "conclusion": "success",
+          "name": "Validate container run output",
+          "number": 12,
+          "started_at": "2026-08-30T20:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:49Z",
+          "conclusion": "success",
+          "name": "Wait for the healthchecks to pass",
+          "number": 13,
+          "started_at": "2026-08-30T20:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:49Z",
+          "conclusion": "success",
+          "name": "Print entire log",
+          "number": 14,
+          "started_at": "2026-08-30T20:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:50Z",
+          "conclusion": "success",
+          "name": "Post Build and export to Docker",
+          "number": 24,
+          "started_at": "2026-08-30T20:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:51Z",
+          "conclusion": "success",
+          "name": "Post Set up Docker Buildx",
+          "number": 25,
+          "started_at": "2026-08-30T20:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:51Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 26,
+          "started_at": "2026-08-30T20:58:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:52Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 27,
+          "started_at": "2026-08-30T20:58:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:52Z",
+          "conclusion": "success",
+          "name": "Post Checkout the repository",
+          "number": 28,
+          "started_at": "2026-08-30T20:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "started_at": "2026-08-30T20:58:52Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    },
+    {
+      "completed_at": "2026-08-30T20:58:53Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T20:56:52Z",
+      "head_sha": "b387bbf5ba70a2b4bcefdb742e963e6c622d1218",
+      "id": 99320316804,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Check Docker build (Dockerfile.alpine)",
+      "run_attempt": 1,
+      "run_id": 33334977268,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000189578",
+      "started_at": "2026-08-30T20:57:19Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T20:57:23Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T20:57:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:28Z",
+          "conclusion": "success",
+          "name": "Checkout the repository",
+          "number": 2,
+          "started_at": "2026-08-30T20:57:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:32Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-30T20:57:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:41Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-30T20:57:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:54Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-30T20:57:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:57:55Z",
+          "conclusion": "success",
+          "name": "Update build info",
+          "number": 6,
+          "started_at": "2026-08-30T20:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:09Z",
+          "conclusion": "success",
+          "name": "Trigger build",
+          "number": 7,
+          "started_at": "2026-08-30T20:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:09Z",
+          "conclusion": "success",
+          "name": "Set IMAGE_NAME to lowercase",
+          "number": 8,
+          "started_at": "2026-08-30T20:58:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:09Z",
+          "conclusion": "success",
+          "name": "Set TEST_TAG to lowercase",
+          "number": 9,
+          "started_at": "2026-08-30T20:58:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:16Z",
+          "conclusion": "success",
+          "name": "Set up Docker Buildx",
+          "number": 10,
+          "started_at": "2026-08-30T20:58:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:42Z",
+          "conclusion": "success",
+          "name": "Build and export to Docker",
+          "number": 11,
+          "started_at": "2026-08-30T20:58:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:42Z",
+          "conclusion": "success",
+          "name": "Validate container run output",
+          "number": 12,
+          "started_at": "2026-08-30T20:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:47Z",
+          "conclusion": "success",
+          "name": "Wait for the healthchecks to pass",
+          "number": 13,
+          "started_at": "2026-08-30T20:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:47Z",
+          "conclusion": "success",
+          "name": "Print entire log",
+          "number": 14,
+          "started_at": "2026-08-30T20:58:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:49Z",
+          "conclusion": "success",
+          "name": "Post Build and export to Docker",
+          "number": 24,
+          "started_at": "2026-08-30T20:58:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:49Z",
+          "conclusion": "success",
+          "name": "Post Set up Docker Buildx",
+          "number": 25,
+          "started_at": "2026-08-30T20:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:50Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 26,
+          "started_at": "2026-08-30T20:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:50Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 27,
+          "started_at": "2026-08-30T20:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:50Z",
+          "conclusion": "success",
+          "name": "Post Checkout the repository",
+          "number": 28,
+          "started_at": "2026-08-30T20:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T20:58:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "started_at": "2026-08-30T20:58:50Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Dev"
+    }
+  ],
+  "run_id": 33334977268
+}

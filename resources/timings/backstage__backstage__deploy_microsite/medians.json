@@ -1,0 +1,817 @@
+{
+  "benchmark": "backstage/backstage@b80a9f3b9b865027f22116188223cb2c5b3d578a:.github/workflows/deploy_microsite.yml",
+  "benchmark_id": "backstage__backstage__deploy_microsite",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33425329587,
+        33421440160,
+        33403375425,
+        33400833738,
+        33394422918
+      ],
+      "window_count": 215
+    }
+  },
+  "jobs": {
+    "deploy-microsite-and-storybook": {
+      "duration_seconds": 343.0,
+      "durations": [
+        343.0,
+        340.0,
+        349.0,
+        334.0,
+        355.0
+      ],
+      "main_step_counts": [
+        18
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        8.0,
+        4.0,
+        7.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            11.0,
+            7.0,
+            6.0
+          ],
+          "name": "Harden Runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            0.0,
+            1.0,
+            0.0,
+            4.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            10.0,
+            10.0,
+            9.0
+          ],
+          "name": "checkout latest release",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            49.0,
+            44.0,
+            49.0,
+            48.0,
+            51.0
+          ],
+          "name": "microsite yarn install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 49.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "download stable OpenAPI API docs",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "grab latest releases docs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "create missing generated file",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "generate stable docs",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "clear generated docs",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "checkout master",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "microsite yarn install",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "download next OpenAPI API docs",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            226.0,
+            225.0,
+            241.0,
+            216.0,
+            248.0
+          ],
+          "name": "build microsite",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 226.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "occurrence": 1,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "occurrence": 2,
+          "positions": [
+            15
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check the build output",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            26.0,
+            18.0,
+            24.0,
+            18.0
+          ],
+          "name": "Deploy both microsite and storybook to gh-pages",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "next": {
+      "duration_seconds": 256.0,
+      "durations": [
+        625.0,
+        220.0,
+        256.0,
+        917.0,
+        217.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        3.0,
+        11.0,
+        6.0,
+        8.0,
+        11.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            11.0,
+            11.0,
+            13.0,
+            9.0
+          ],
+          "name": "Harden Runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            13.0,
+            8.0,
+            13.0,
+            10.0
+          ],
+          "name": "checkout master",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            6.0,
+            0.0,
+            3.0,
+            5.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            79.0,
+            65.0,
+            83.0,
+            81.0,
+            65.0
+          ],
+          "name": "yarn install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 79.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "restore package-docs cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            405.0,
+            16.0,
+            19.0,
+            677.0,
+            19.0
+          ],
+          "name": "build API reference",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            6.0,
+            6.0,
+            5.0
+          ],
+          "name": "upload API reference",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "save package-docs cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            59.0,
+            45.0,
+            61.0,
+            57.0,
+            47.0
+          ],
+          "name": "Build Storybook",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 57.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Upload Storybook",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            38.0,
+            50.0,
+            48.0,
+            38.0
+          ],
+          "name": "microsite yarn install",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "build OpenAPI API docs",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "upload OpenAPI API docs",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "stable": {
+      "duration_seconds": 170.0,
+      "durations": [
+        169.0,
+        142.0,
+        177.0,
+        170.0,
+        179.0
+      ],
+      "main_step_counts": [
+        12
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        8.0,
+        5.0,
+        7.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            6.0,
+            12.0,
+            7.0,
+            6.0
+          ],
+          "name": "Harden Runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0
+          ],
+          "name": "find latest release branch",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "find latest release ref",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            12.0,
+            11.0,
+            11.0,
+            11.0
+          ],
+          "name": "checkout latest release",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            79.0,
+            61.0,
+            78.0,
+            81.0,
+            82.0
+          ],
+          "name": "yarn install",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 79.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "restore package-docs cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            15.0,
+            18.0,
+            19.0,
+            20.0
+          ],
+          "name": "build API reference",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            6.0,
+            5.0,
+            6.0
+          ],
+          "name": "upload API reference",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "save package-docs cache",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            28.0,
+            30.0,
+            33.0,
+            33.0
+          ],
+          "name": "microsite yarn install",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "build OpenAPI API docs",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "upload OpenAPI API docs",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "5ac63b256354275a72f3b6864ae3e715366daff1": "ac7965d805d139d94079b5d96ab6f6a89f7ff88c",
+      "6dcb08aa97b876e57a9192934914fcd7ca6d67ba": "ac7965d805d139d94079b5d96ab6f6a89f7ff88c",
+      "7bd1ff097324d99f332d9cb0c7beb3f7b7f424f0": "10d9d458ebf9be40650056e2c835b345e7e3cdb4",
+      "b80a9f3b9b865027f22116188223cb2c5b3d578a": "ac7965d805d139d94079b5d96ab6f6a89f7ff88c",
+      "ee97130ef6751077f50f7fb8a2ad0322a0db8df2": "10d9d458ebf9be40650056e2c835b345e7e3cdb4"
+    },
+    "pinned_oid": "ac7965d805d139d94079b5d96ab6f6a89f7ff88c",
+    "runs_same_version": 3,
+    "runs_total": 5
+  }
+}

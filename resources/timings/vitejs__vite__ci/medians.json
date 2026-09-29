@@ -1,0 +1,2187 @@
+{
+  "benchmark": "vitejs/vite@f40efefbb3630cdb7235286bc2b51673d9fbfc27:.github/workflows/ci.yml",
+  "benchmark_id": "vitejs__vite__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33413303271,
+        33364624306,
+        33356115833,
+        33353837439,
+        33353342659
+      ],
+      "window_count": 549
+    },
+    "push": {
+      "runs": [
+        33357084529,
+        33354557833,
+        33248810503,
+        32947514707,
+        32946506563
+      ],
+      "window_count": 162
+    }
+  },
+  "jobs": {
+    "Build & Test Failed": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "Build & Test Passed or Skipped": {
+      "duration_seconds": 4.5,
+      "durations": [
+        5.0,
+        2.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        5.0,
+        5.0,
+        4.0,
+        2.0,
+        5.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run echo \"Build & Test Passed or Skipped\"",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build&Test: node-${{ matrix.node_version }}, ${{ matrix.os }}": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 2,
+      "steps": []
+    },
+    "Build&Test: node-20, ubuntu-latest": {
+      "duration_seconds": 287.5,
+      "durations": [
+        287.0,
+        308.0,
+        279.0,
+        302.0,
+        282.0,
+        288.0,
+        287.0,
+        302.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        4.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0,
+        4.0,
+        6.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            4.0,
+            9.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 20",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set node version to 24 for builds",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            2.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            3.0,
+            5.0
+          ],
+          "name": "Cache Playwright's binary",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            11.0,
+            12.0,
+            11.0,
+            11.0,
+            11.0,
+            11.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            12.0,
+            9.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0,
+            12.0
+          ],
+          "name": "Set node version to 20",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            10.0,
+            9.0,
+            10.0
+          ],
+          "name": "Test unit",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            93.0,
+            96.0,
+            90.0,
+            97.0,
+            92.0,
+            92.0,
+            94.0,
+            95.0
+          ],
+          "name": "Test serve",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 93.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            69.0,
+            68.0,
+            63.0,
+            67.0,
+            65.0,
+            65.0,
+            66.0,
+            68.0
+          ],
+          "name": "Test serve (bundled dev)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 66.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            75.0,
+            80.0,
+            72.0,
+            77.0,
+            75.0,
+            76.0,
+            76.0,
+            79.0
+          ],
+          "name": "Test build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 76.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build&Test: node-22, ubuntu-latest": {
+      "duration_seconds": 269.5,
+      "durations": [
+        260.0,
+        273.0,
+        281.0,
+        276.0,
+        271.0,
+        268.0,
+        253.0,
+        225.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        6.0,
+        6.0,
+        4.0,
+        6.0,
+        3.0,
+        3.0,
+        6.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            9.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            8.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            9.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            5.0
+          ],
+          "name": "Set node version to 22",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24 for builds",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            9.0,
+            8.0,
+            8.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            2.0,
+            6.0,
+            5.0,
+            4.0,
+            5.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "Cache Playwright's binary",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            12.0,
+            12.0,
+            12.0,
+            13.0,
+            12.0,
+            10.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 22",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Test unit",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            86.0,
+            88.0,
+            89.0,
+            89.0,
+            88.0,
+            87.0,
+            84.0,
+            70.0
+          ],
+          "name": "Test serve",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 87.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            63.0,
+            62.0,
+            65.0,
+            62.0,
+            63.0,
+            60.0,
+            51.0
+          ],
+          "name": "Test serve (bundled dev)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 62.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            70.0,
+            72.0,
+            72.0,
+            74.0,
+            71.0,
+            72.0,
+            68.0,
+            55.0
+          ],
+          "name": "Test build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 71.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build&Test: node-24, macos-latest": {
+      "duration_seconds": 327.5,
+      "durations": [
+        333.0,
+        329.0,
+        315.0,
+        345.0,
+        376.0,
+        249.0,
+        276.0,
+        326.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        4.0,
+        6.0,
+        5.0,
+        4.0,
+        4.0,
+        8.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            4.0,
+            8.0,
+            8.0,
+            4.0,
+            5.0,
+            7.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            11.0,
+            8.0,
+            1.0,
+            2.0,
+            2.0,
+            7.0,
+            12.0
+          ],
+          "name": "Set node version to 24",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24 for builds",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            7.0,
+            21.0,
+            27.0,
+            13.0,
+            6.0,
+            10.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            7.0,
+            7.0
+          ],
+          "name": "Cache Playwright's binary",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            14.0,
+            12.0,
+            13.0,
+            10.0,
+            8.0,
+            11.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            8.0,
+            11.0,
+            13.0,
+            7.0,
+            8.0,
+            6.0,
+            6.0,
+            8.0
+          ],
+          "name": "Test unit",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            100.0,
+            94.0,
+            115.0,
+            92.0,
+            102.0,
+            78.0,
+            72.0,
+            110.0
+          ],
+          "name": "Test serve",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 97.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0,
+            72.0,
+            70.0,
+            77.0,
+            84.0,
+            60.0,
+            78.0,
+            69.0
+          ],
+          "name": "Test serve (bundled dev)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 74.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            82.0,
+            88.0,
+            70.0,
+            91.0,
+            99.0,
+            53.0,
+            78.0,
+            79.0
+          ],
+          "name": "Test build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 80.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build&Test: node-24, ubuntu-latest": {
+      "duration_seconds": 234.0,
+      "durations": [
+        245.0,
+        210.0,
+        244.0,
+        234.0,
+        205.0,
+        241.0,
+        234.0,
+        201.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        5.0,
+        6.0,
+        2.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            9.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            4.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            5.0,
+            1.0,
+            1.0,
+            3.0,
+            4.0,
+            8.0
+          ],
+          "name": "Set node version to 24",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24 for builds",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            8.0,
+            9.0,
+            9.0,
+            4.0,
+            6.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            5.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Cache Playwright's binary",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            11.0,
+            11.0,
+            9.0,
+            11.0,
+            11.0,
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            8.0,
+            8.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "name": "Test unit",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            79.0,
+            64.0,
+            78.0,
+            77.0,
+            64.0,
+            77.0,
+            77.0,
+            62.0
+          ],
+          "name": "Test serve",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 77.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            58.0,
+            49.0,
+            56.0,
+            52.0,
+            49.0,
+            56.0,
+            55.0,
+            47.0
+          ],
+          "name": "Test serve (bundled dev)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 53.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            47.0,
+            62.0,
+            61.0,
+            51.0,
+            59.0,
+            60.0,
+            47.0
+          ],
+          "name": "Test build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 59.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build&Test: node-24.15.0, windows-latest": {
+      "duration_seconds": 373.5,
+      "durations": [
+        364.0,
+        380.0,
+        361.0,
+        388.0,
+        360.0,
+        398.0,
+        367.0,
+        393.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        2.0,
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            15.0,
+            12.0,
+            9.0,
+            10.0,
+            9.0,
+            12.0,
+            11.0,
+            10.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            41.0,
+            27.0,
+            30.0,
+            23.0,
+            18.0,
+            25.0,
+            15.0,
+            25.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            42.0,
+            24.0,
+            21.0,
+            11.0,
+            8.0,
+            11.0,
+            18.0,
+            23.0
+          ],
+          "name": "Set node version to 24.15.0",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24 for builds",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            13.0,
+            22.0,
+            20.0,
+            22.0,
+            11.0,
+            14.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            6.0,
+            5.0,
+            4.0,
+            7.0,
+            7.0,
+            4.0
+          ],
+          "name": "Cache Playwright's binary",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            14.0,
+            13.0,
+            13.0,
+            17.0,
+            14.0,
+            13.0,
+            13.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24.15.0",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            11.0,
+            14.0,
+            13.0,
+            14.0,
+            15.0,
+            15.0,
+            12.0,
+            15.0
+          ],
+          "name": "Test unit",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            90.0,
+            106.0,
+            98.0,
+            106.0,
+            101.0,
+            112.0,
+            107.0,
+            107.0
+          ],
+          "name": "Test serve",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 106.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            72.0,
+            71.0,
+            77.0,
+            72.0,
+            76.0,
+            78.0,
+            74.0
+          ],
+          "name": "Test serve (bundled dev)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 73.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            69.0,
+            88.0,
+            82.0,
+            88.0,
+            82.0,
+            88.0,
+            88.0,
+            102.0
+          ],
+          "name": "Test build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 88.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build&Test: node-26, ubuntu-latest": {
+      "duration_seconds": 243.0,
+      "durations": [
+        240.0,
+        257.0,
+        246.0,
+        248.0,
+        250.0,
+        234.0,
+        199.0,
+        232.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        2.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            7.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            11.0,
+            10.0,
+            5.0,
+            5.0,
+            6.0,
+            9.0,
+            10.0
+          ],
+          "name": "Set node version to 26",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 24 for builds",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            8.0,
+            7.0,
+            7.0,
+            6.0,
+            4.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "(non-windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "(windows) Set Playwright path and Get playwright version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            6.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Cache Playwright's binary",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            12.0,
+            11.0,
+            12.0,
+            11.0,
+            10.0,
+            9.0,
+            11.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Set node version to 26",
+          "occurrence": 1,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "Test unit",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            82.0,
+            78.0,
+            77.0,
+            79.0,
+            76.0,
+            63.0,
+            74.0
+          ],
+          "name": "Test serve",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 77.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            58.0,
+            57.0,
+            54.0,
+            56.0,
+            58.0,
+            54.0,
+            45.0,
+            54.0
+          ],
+          "name": "Test serve (bundled dev)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 55.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            61.0,
+            65.0,
+            62.0,
+            62.0,
+            63.0,
+            60.0,
+            47.0,
+            59.0
+          ],
+          "name": "Test build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 61.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Get changed files": {
+      "duration_seconds": 7.5,
+      "durations": [
+        8.0,
+        7.0,
+        6.0,
+        7.0,
+        17.0,
+        7.0,
+        11.0,
+        7.0,
+        8.0,
+        11.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        10.0,
+        3.0,
+        6.0,
+        4.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            2.0,
+            2.0,
+            6.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            5.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Get changed files",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint: node-24, ubuntu-latest": {
+      "duration_seconds": 113.0,
+      "durations": [
+        124.0,
+        120.0,
+        98.0,
+        93.0,
+        104.0,
+        104.0,
+        116.0,
+        111.0,
+        115.0,
+        133.0
+      ],
+      "main_step_counts": [
+        9,
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        2.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            5.0,
+            12.0,
+            5.0,
+            12.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0,
+            6.0,
+            6.0
+          ],
+          "name": "Set node version to 24",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            10.0,
+            9.0,
+            12.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            9.0,
+            9.0,
+            10.0,
+            7.0,
+            10.0,
+            9.0,
+            10.0,
+            12.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            10.0,
+            9.0,
+            10.0,
+            8.0,
+            12.0,
+            9.0,
+            11.0,
+            13.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Check formatting",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            44.0,
+            35.0,
+            34.0,
+            37.0,
+            31.0,
+            42.0,
+            35.0,
+            42.0,
+            50.0
+          ],
+          "name": "Typecheck",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 39.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            27.0,
+            22.0,
+            21.0,
+            22.0,
+            20.0,
+            27.0,
+            22.0,
+            27.0,
+            30.0
+          ],
+          "name": "Test docs",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Check workflow files",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "238ad811c7fb9e4730cbd317d0657867ed3447b3": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "4069840b54fcf30421fb83a1c6978106a782048e": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "59eb90c3082123399be628b7901a9bce1120c182": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "75a1dde69d086b4830f63721c1d9fc76b6a222e7": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "8014a57c8dc30d02ae896db26d1a42a00be3f7b2": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "90d08f0c068a024aa5051a40b1130fb9a46849e5": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "a6a09f4f394c507ccb0a43ba9c66e5a5e36643c7": "cd3e7b7240c426d2db8db418a04a2e535703dda2",
+      "b2c84cf3da3d6164824d0ab121561a14d741a82d": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "b88256607e3a051b7bcb0b338b3c4665926b55a8": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+      "e2b597de0ef14598901703f5aa52f8c962007d02": "5e1509a5c7332822af436b0685fc13d13c95b41a"
+    },
+    "pinned_oid": "5e1509a5c7332822af436b0685fc13d13c95b41a",
+    "runs_same_version": 9,
+    "runs_total": 10
+  }
+}

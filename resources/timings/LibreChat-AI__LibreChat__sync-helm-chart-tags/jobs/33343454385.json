@@ -1,0 +1,76 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T00:05:49Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T00:04:04Z",
+      "head_sha": "56d54a94161a1ccd4615e83b20e3920699eb8368",
+      "id": 99343129412,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Sync chart tags",
+      "run_attempt": 1,
+      "run_id": 33343454385,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000257106",
+      "started_at": "2026-08-31T00:05:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T00:05:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T00:05:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T00:05:47Z",
+          "conclusion": "success",
+          "name": "Fetch main and tags",
+          "number": 2,
+          "started_at": "2026-08-31T00:05:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T00:05:47Z",
+          "conclusion": "success",
+          "name": "Create missing chart tags",
+          "number": 3,
+          "started_at": "2026-08-31T00:05:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T00:05:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 4,
+          "started_at": "2026-08-31T00:05:47Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Sync Helm Chart Tags"
+    },
+    {
+      "completed_at": "2026-08-31T00:04:04Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T00:04:04Z",
+      "head_sha": "56d54a94161a1ccd4615e83b20e3920699eb8368",
+      "id": 99343129852,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Ignore non-main push",
+      "run_attempt": 1,
+      "run_id": 33343454385,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T00:04:04Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Sync Helm Chart Tags"
+    }
+  ],
+  "run_id": 33343454385
+}

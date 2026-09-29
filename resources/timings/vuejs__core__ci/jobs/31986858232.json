@@ -1,0 +1,581 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-17T02:05:31Z",
+      "conclusion": "success",
+      "created_at": "2026-08-17T02:04:43Z",
+      "head_sha": "205fa09f90726d3ed9938ebfc87734314ea5d9ab",
+      "id": 95263255638,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "continuous-release",
+      "run_attempt": 1,
+      "run_id": 31986858232,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000191485",
+      "started_at": "2026-08-17T02:04:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-17T02:04:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-17T02:04:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:48Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "started_at": "2026-08-17T02:04:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:06Z",
+          "conclusion": "success",
+          "name": "Setup Vite+",
+          "number": 3,
+          "started_at": "2026-08-17T02:04:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:12Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-17T02:05:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:29Z",
+          "conclusion": "success",
+          "name": "Release",
+          "number": 5,
+          "started_at": "2026-08-17T02:05:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:29Z",
+          "conclusion": "success",
+          "name": "Post Setup Vite+",
+          "number": 9,
+          "started_at": "2026-08-17T02:05:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:29Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 10,
+          "started_at": "2026-08-17T02:05:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-17T02:05:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    },
+    {
+      "completed_at": "2026-08-17T02:06:05Z",
+      "conclusion": "success",
+      "created_at": "2026-08-17T02:04:43Z",
+      "head_sha": "205fa09f90726d3ed9938ebfc87734314ea5d9ab",
+      "id": 95263255684,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "test / unit-test-windows",
+      "run_attempt": 1,
+      "run_id": 31986858232,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000191486",
+      "started_at": "2026-08-17T02:04:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-17T02:04:47Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-17T02:04:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-17T02:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:32Z",
+          "conclusion": "success",
+          "name": "Setup Vite+",
+          "number": 3,
+          "started_at": "2026-08-17T02:04:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:55Z",
+          "conclusion": "success",
+          "name": "Run compiler unit tests",
+          "number": 4,
+          "started_at": "2026-08-17T02:05:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:01Z",
+          "conclusion": "success",
+          "name": "Run ssr unit tests",
+          "number": 5,
+          "started_at": "2026-08-17T02:05:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:01Z",
+          "conclusion": "success",
+          "name": "Post Setup Vite+",
+          "number": 9,
+          "started_at": "2026-08-17T02:06:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-17T02:06:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-17T02:06:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    },
+    {
+      "completed_at": "2026-08-17T02:05:30Z",
+      "conclusion": "success",
+      "created_at": "2026-08-17T02:04:43Z",
+      "head_sha": "205fa09f90726d3ed9938ebfc87734314ea5d9ab",
+      "id": 95263255686,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test / e2e-vapor",
+      "run_attempt": 1,
+      "run_id": 31986858232,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000191488",
+      "started_at": "2026-08-17T02:04:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-17T02:04:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-17T02:04:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:47Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "number": 2,
+          "started_at": "2026-08-17T02:04:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:50Z",
+          "conclusion": "success",
+          "name": "Setup cache for Playwright browsers",
+          "number": 3,
+          "started_at": "2026-08-17T02:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:07Z",
+          "conclusion": "success",
+          "name": "Setup Vite+",
+          "number": 4,
+          "started_at": "2026-08-17T02:04:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:08Z",
+          "conclusion": "success",
+          "name": "Install Playwright Chromium",
+          "number": 5,
+          "started_at": "2026-08-17T02:05:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:28Z",
+          "conclusion": "success",
+          "name": "Run e2e tests",
+          "number": 6,
+          "started_at": "2026-08-17T02:05:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:28Z",
+          "conclusion": "success",
+          "name": "Post Setup Vite+",
+          "number": 10,
+          "started_at": "2026-08-17T02:05:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:28Z",
+          "conclusion": "success",
+          "name": "Post Setup cache for Playwright browsers",
+          "number": 11,
+          "started_at": "2026-08-17T02:05:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "number": 12,
+          "started_at": "2026-08-17T02:05:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-17T02:05:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    },
+    {
+      "completed_at": "2026-08-17T02:05:36Z",
+      "conclusion": "success",
+      "created_at": "2026-08-17T02:04:43Z",
+      "head_sha": "205fa09f90726d3ed9938ebfc87734314ea5d9ab",
+      "id": 95263255694,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test / lint-and-test-dts",
+      "run_attempt": 1,
+      "run_id": 31986858232,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000191487",
+      "started_at": "2026-08-17T02:04:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-17T02:04:47Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-17T02:04:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:49Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-17T02:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:03Z",
+          "conclusion": "success",
+          "name": "Setup Vite+",
+          "number": 3,
+          "started_at": "2026-08-17T02:04:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:03Z",
+          "conclusion": "success",
+          "name": "Run lint",
+          "number": 4,
+          "started_at": "2026-08-17T02:05:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:05Z",
+          "conclusion": "success",
+          "name": "Run format check",
+          "number": 5,
+          "started_at": "2026-08-17T02:05:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:21Z",
+          "conclusion": "success",
+          "name": "Run type check",
+          "number": 6,
+          "started_at": "2026-08-17T02:05:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:34Z",
+          "conclusion": "success",
+          "name": "Run type declaration tests",
+          "number": 7,
+          "started_at": "2026-08-17T02:05:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:34Z",
+          "conclusion": "success",
+          "name": "Post Setup Vite+",
+          "number": 13,
+          "started_at": "2026-08-17T02:05:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 14,
+          "started_at": "2026-08-17T02:05:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-17T02:05:34Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    },
+    {
+      "completed_at": "2026-08-17T02:06:24Z",
+      "conclusion": "success",
+      "created_at": "2026-08-17T02:04:43Z",
+      "head_sha": "205fa09f90726d3ed9938ebfc87734314ea5d9ab",
+      "id": 95263255719,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test / unit-test",
+      "run_attempt": 1,
+      "run_id": 31986858232,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000191489",
+      "started_at": "2026-08-17T02:04:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-17T02:04:47Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-17T02:04:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:49Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-17T02:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:04Z",
+          "conclusion": "success",
+          "name": "Setup Vite+",
+          "number": 3,
+          "started_at": "2026-08-17T02:04:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:21Z",
+          "conclusion": "success",
+          "name": "Run unit tests",
+          "number": 4,
+          "started_at": "2026-08-17T02:05:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:21Z",
+          "conclusion": "success",
+          "name": "Post Setup Vite+",
+          "number": 7,
+          "started_at": "2026-08-17T02:06:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:21Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 8,
+          "started_at": "2026-08-17T02:06:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:06:21Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-17T02:06:21Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    },
+    {
+      "completed_at": "2026-08-17T02:05:33Z",
+      "conclusion": "success",
+      "created_at": "2026-08-17T02:04:43Z",
+      "head_sha": "205fa09f90726d3ed9938ebfc87734314ea5d9ab",
+      "id": 95263255735,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test / e2e-test",
+      "run_attempt": 1,
+      "run_id": 31986858232,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000191490",
+      "started_at": "2026-08-17T02:04:45Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-17T02:04:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-17T02:04:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:47Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-17T02:04:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:50Z",
+          "conclusion": "success",
+          "name": "Setup cache for Chromium binary",
+          "number": 3,
+          "started_at": "2026-08-17T02:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:04:53Z",
+          "conclusion": "success",
+          "name": "Setup cache for Playwright browsers",
+          "number": 4,
+          "started_at": "2026-08-17T02:04:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:06Z",
+          "conclusion": "success",
+          "name": "Setup Vite+",
+          "number": 5,
+          "started_at": "2026-08-17T02:04:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:06Z",
+          "conclusion": "success",
+          "name": "Run node node_modules/puppeteer/install.mjs",
+          "number": 6,
+          "started_at": "2026-08-17T02:05:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:07Z",
+          "conclusion": "success",
+          "name": "Run vp exec playwright install chromium",
+          "number": 7,
+          "started_at": "2026-08-17T02:05:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:29Z",
+          "conclusion": "success",
+          "name": "Run e2e tests",
+          "number": 8,
+          "started_at": "2026-08-17T02:05:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:30Z",
+          "conclusion": "success",
+          "name": "verify treeshaking",
+          "number": 9,
+          "started_at": "2026-08-17T02:05:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:30Z",
+          "conclusion": "success",
+          "name": "Post Setup Vite+",
+          "number": 15,
+          "started_at": "2026-08-17T02:05:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:30Z",
+          "conclusion": "success",
+          "name": "Post Setup cache for Playwright browsers",
+          "number": 16,
+          "started_at": "2026-08-17T02:05:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:30Z",
+          "conclusion": "success",
+          "name": "Post Setup cache for Chromium binary",
+          "number": 17,
+          "started_at": "2026-08-17T02:05:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 18,
+          "started_at": "2026-08-17T02:05:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-17T02:05:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-17T02:05:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    }
+  ],
+  "run_id": 31986858232
+}

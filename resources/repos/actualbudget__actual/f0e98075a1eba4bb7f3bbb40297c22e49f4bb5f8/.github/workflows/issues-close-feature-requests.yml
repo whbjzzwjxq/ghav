@@ -1,0 +1,40 @@
+name: Close feature requests with automated message
+
+on:
+  issues:
+    types: [typed]
+
+permissions:
+  issues: write
+
+jobs:
+  needs-votes:
+    if: ${{ github.event.type.name == 'Feature' }}
+    runs-on: depot-ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - name: Add needs votes label
+        run: gh issue edit "$ISSUE_NUMBER" --add-label "needs votes"
+      - name: Add reactions
+        uses: aidan-mundy/react-to-issue@109392cac5159c2df6c47c8ab3b5d6b708852fe5 # v1.1.2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          reactions: '+1'
+      - name: Create comment
+        env:
+          COMMENT_BODY: |
+            :sparkles: Thanks for sharing your idea! :sparkles:
+
+            This repository uses a voting-based system for feature requests. While enhancement issues are automatically closed, we still welcome feature requests! The voting system helps us gauge community interest in potential features. We also encourage community contributions for any feature requests marked as needing votes (just post a comment first so we can help guide you toward a successful contribution).
+
+            The enhancement backlog can be found here: https://github.com/actualbudget/actual/issues?q=label%3A%22needs+votes%22+sort%3Areactions-%2B1-desc+
+
+            Don't forget to upvote the top comment with 👍!
+
+            <!-- feature-auto-close-comment -->
+        run: gh issue comment "$ISSUE_NUMBER" --body "$COMMENT_BODY"
+      - name: Close Issue
+        run: gh issue close "$ISSUE_NUMBER"

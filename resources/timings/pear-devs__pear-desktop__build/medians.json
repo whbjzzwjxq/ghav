@@ -1,0 +1,757 @@
+{
+  "benchmark": "pear-devs/pear-desktop@8bd5c312a19f8f337fc65ff13955c4f587bd2df6:.github/workflows/build.yml",
+  "benchmark_id": "pear-devs__pear-desktop__build",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        23225216793,
+        23159001106,
+        23070500283,
+        23047685274,
+        23047671606
+      ],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33452426626,
+        33256088017,
+        33074923397,
+        32792257064,
+        32475287080
+      ],
+      "window_count": 11
+    }
+  },
+  "jobs": {
+    "Build Pear Desktop (macos-26)": {
+      "duration_seconds": 89.0,
+      "durations": [
+        41.0,
+        58.0,
+        47.0,
+        52.0,
+        45.0,
+        149.0,
+        146.0,
+        148.0,
+        190.0,
+        120.0
+      ],
+      "main_step_counts": [
+        0,
+        10
+      ],
+      "overhead_seconds": 24.0,
+      "overheads": [
+        41.0,
+        58.0,
+        47.0,
+        52.0,
+        45.0,
+        6.0,
+        6.0,
+        7.0,
+        7.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            1.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Setup NodeJS",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            0.0,
+            2.0,
+            1.0
+          ],
+          "name": "Setup NodeJS for macOS",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            28.0,
+            33.0,
+            36.0,
+            21.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 28.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Vite Build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            99.0,
+            96.0,
+            93.0,
+            125.0,
+            79.0
+          ],
+          "name": "Build and release on Mac",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 96.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Build and release on Linux",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Build and release on Windows",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            9.0,
+            13.0,
+            8.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build Pear Desktop (ubuntu-latest)": {
+      "duration_seconds": 490.0,
+      "durations": [
+        55.0,
+        46.0,
+        47.0,
+        54.0,
+        54.0,
+        980.0,
+        1014.0,
+        925.0,
+        983.0,
+        937.0
+      ],
+      "main_step_counts": [
+        0,
+        10
+      ],
+      "overhead_seconds": 26.0,
+      "overheads": [
+        55.0,
+        46.0,
+        47.0,
+        54.0,
+        54.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            5.0,
+            6.0,
+            8.0,
+            5.0
+          ],
+          "name": "Setup NodeJS",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Setup NodeJS for macOS",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Vite Build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Build and release on Mac",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            932.0,
+            980.0,
+            894.0,
+            946.0,
+            907.0
+          ],
+          "name": "Build and release on Linux",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 932.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Build and release on Windows",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            24.0,
+            11.0,
+            10.0,
+            12.0,
+            10.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build Pear Desktop (windows-latest)": {
+      "duration_seconds": 257.0,
+      "durations": [
+        90.0,
+        90.0,
+        87.0,
+        110.0,
+        93.0,
+        424.0,
+        404.0,
+        433.0,
+        415.0,
+        404.0
+      ],
+      "main_step_counts": [
+        0,
+        10
+      ],
+      "overhead_seconds": 46.0,
+      "overheads": [
+        90.0,
+        90.0,
+        87.0,
+        110.0,
+        93.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            7.0,
+            7.0,
+            9.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            5.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            23.0,
+            25.0,
+            23.0,
+            26.0
+          ],
+          "name": "Setup NodeJS",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Setup NodeJS for macOS",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            23.0,
+            21.0,
+            19.0,
+            20.0,
+            20.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Vite Build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Build and release on Mac",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Build and release on Linux",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            335.0,
+            338.0,
+            368.0,
+            349.0,
+            334.0
+          ],
+          "name": "Build and release on Windows",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 338.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            5.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Release Pear Desktop": {
+      "duration_seconds": 29.0,
+      "durations": [
+        31.0,
+        29.0,
+        31.0,
+        21.0,
+        25.0
+      ],
+      "main_step_counts": [
+        12
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        6.0,
+        7.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            4.0,
+            6.0,
+            2.0,
+            5.0
+          ],
+          "name": "Pull ghcr.io/irongut/editrelease:v1.2.0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            4.0,
+            4.0
+          ],
+          "name": "Setup NodeJS",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Setup NodeJS for macOS",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Get version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Check if version already exists in tags",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Fetch draft release",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Release (if it does not exist)",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Update changelog",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Commit changelog",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "1e2aac5706c870c93ed74ba8727ae8390d3b0fa5": "669bb428c7ccc42948961f9104c1cdb04796b7f4",
+      "3d7b4f10a940ef345a7904254852feb5e1999418": "669bb428c7ccc42948961f9104c1cdb04796b7f4",
+      "48dd89b98f24bd1b5abbb922593d1a41d3f1b49a": "669bb428c7ccc42948961f9104c1cdb04796b7f4",
+      "58fd3ce503a909e9753228cf6a59ac67bc66c5fa": "e8a753d334bb3b0d8732fa71ee765640551e8f30",
+      "61bbbf6d6a868e89cdbb97e740bfa3a7b7388ffe": "e8a753d334bb3b0d8732fa71ee765640551e8f30",
+      "8bd5c312a19f8f337fc65ff13955c4f587bd2df6": "669bb428c7ccc42948961f9104c1cdb04796b7f4",
+      "9a6d49010b4a9540d46193abafe2d9b9a9a170e9": "e8a753d334bb3b0d8732fa71ee765640551e8f30",
+      "c8ee2b5a123cb7fa5f8765b533538933ca9d0c4a": "e8a753d334bb3b0d8732fa71ee765640551e8f30",
+      "c9e5ad743c0dd74efd87088fdef55f3ec2cc69df": "669bb428c7ccc42948961f9104c1cdb04796b7f4",
+      "d3fdd9ece45fd47b9a2e2320129e645774ac5ac8": "e8a753d334bb3b0d8732fa71ee765640551e8f30"
+    },
+    "pinned_oid": "669bb428c7ccc42948961f9104c1cdb04796b7f4",
+    "runs_same_version": 5,
+    "runs_total": 10
+  }
+}

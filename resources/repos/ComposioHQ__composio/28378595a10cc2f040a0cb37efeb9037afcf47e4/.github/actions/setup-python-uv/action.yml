@@ -1,0 +1,66 @@
+name: 'Setup Python and uv from mise.lock'
+description: 'Sets up the mise-locked Python toolchain with enterprise-allowlisted actions'
+
+inputs:
+  python-version:
+    description: 'Python version to use. Defaults to mise.lock'
+    required: false
+    default: ''
+  uv-version:
+    description: 'uv version to install. Defaults to mise.lock'
+    required: false
+    default: ''
+  enable-caching:
+    description: 'Enable uv/tool cache'
+    required: false
+    default: 'true'
+
+outputs:
+  python-version:
+    description: 'The installed Python version (e.g., 3.12.0)'
+    value: ${{ steps.versions.outputs.python }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install mise CLI
+      shell: bash
+      run: bash "$GITHUB_ACTION_PATH/../../scripts/install-mise.sh"
+
+    - name: Resolve mise-locked versions
+      id: tool-versions
+      shell: bash
+      env:
+        PYTHON_VERSION: ${{ inputs.python-version }}
+        UV_VERSION: ${{ inputs.uv-version }}
+      run: |
+        resolver="$GITHUB_ACTION_PATH/../../scripts/read-mise-lock-version.sh"
+        python_version="$PYTHON_VERSION"
+        uv_version="$UV_VERSION"
+
+        if [[ -z "$python_version" ]]; then
+          python_version=$(bash "$resolver" python)
+        fi
+        if [[ -z "$uv_version" ]]; then
+          uv_version=$(bash "$resolver" uv)
+        fi
+
+        echo "python=$python_version" >> "$GITHUB_OUTPUT"
+        echo "uv=$uv_version" >> "$GITHUB_OUTPUT"
+
+    - name: Setup Python
+      uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+      with:
+        python-version: ${{ steps.tool-versions.outputs.python }}
+
+    - name: Setup uv
+      uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+      with:
+        version: ${{ steps.tool-versions.outputs.uv }}
+        enable-cache: ${{ inputs.enable-caching }}
+        prune-cache: true
+
+    - name: Report versions
+      id: versions
+      shell: bash
+      run: echo "python=$(python --version | awk '{print $2}')" >> "$GITHUB_OUTPUT"

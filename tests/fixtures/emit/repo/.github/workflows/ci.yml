@@ -1,0 +1,55 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+env:
+  CI: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+        if: github.event_name == 'pull_request'
+  test:
+    needs: lint
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [18, 20]
+        exclude:
+          - os: windows-latest
+            node: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: |
+          npm test -- --ci
+          npm run test:types
+      - name: Coverage
+        if: matrix.os == 'ubuntu-latest' && matrix.node == 20
+        uses: codecov/codecov-action@v4
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm publish

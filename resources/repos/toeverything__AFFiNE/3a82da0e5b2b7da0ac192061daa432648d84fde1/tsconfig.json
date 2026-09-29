@@ -1,0 +1,178 @@
+{
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    // Classification follows https://www.typescriptlang.org/tsconfig
+    // Type Checking
+    "strict": true,
+    "exactOptionalPropertyTypes": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "useUnknownInCatchVariables": true,
+    // Modules
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "types": ["affine__env"],
+    // Emit
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    // skip type emit for @internal types
+    // "stripInternal": true,
+    // JavaScript Support
+    "allowJs": false,
+    "checkJs": false,
+    // Interop Constraints
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    // Language and Environment
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "lib": ["ESNext", "DOM"],
+    "target": "ES2022",
+    "useDefineForClassFields": false,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+    // Projects
+    "composite": true,
+    "incremental": true,
+    // Completeness
+    "skipLibCheck": true, // skip all type checks for .d.ts files
+    "paths": {
+      "@affine/core/*": ["./packages/frontend/core/src/*"],
+      "@affine/admin/*": ["./packages/frontend/admin/src/*"],
+      "@affine/admin/components/ui/*": [
+        "./packages/frontend/admin/src/components/ui/*"
+      ],
+      "@affine/cli/*": ["./tools/cli/src/*"],
+      "@affine/server/*": ["./packages/backend/server/src/*"],
+      "@affine/component": ["./packages/frontend/component/src/index"],
+      "@affine/component/*": [
+        "./packages/frontend/component/src/components/*/index",
+        "./packages/frontend/component/src/components/*"
+      ],
+      "@affine/i18n": ["./packages/frontend/i18n/src"],
+      "@affine/debug": ["./packages/common/debug"],
+      "@affine/env": ["./packages/common/env/src"],
+      "@affine/env/*": ["./packages/common/env/src/*"],
+      "@affine/graphql": ["./packages/frontend/graphql/src"],
+      "@affine/electron/scripts/*": ["./packages/frontend/electron/scripts/*"],
+      "@affine-test/kit/*": ["./tests/kit/*"],
+      "@toeverything/infra": ["./packages/common/infra/src"],
+      "@affine/native": ["./packages/frontend/native/index.d.ts"],
+      "@affine/native/*": ["./packages/frontend/native/*"],
+      "@affine/server-native": ["./packages/backend/native/index.d.ts"],
+      // Development only
+      "@affine/electron/*": ["./packages/frontend/apps/electron/src/*"],
+      "@affine/nbstore": ["./packages/common/nbstore/src"]
+    }
+  },
+  "include": [],
+  "references": [
+    // Backend
+    {
+      "path": "./packages/backend/server"
+    },
+    {
+      "path": "./packages/backend/server/tests"
+    },
+    // Frontend
+    {
+      "path": "./packages/frontend/admin"
+    },
+    {
+      "path": "./packages/frontend/component"
+    },
+    {
+      "path": "./packages/frontend/core"
+    },
+    {
+      "path": "./packages/frontend/track"
+    },
+    {
+      "path": "./packages/frontend/apps/web"
+    },
+    {
+      "path": "./packages/frontend/apps/mobile"
+    },
+    {
+      "path": "./packages/frontend/apps/ios"
+    },
+    {
+      "path": "./packages/frontend/apps/android"
+    },
+    {
+      "path": "./packages/frontend/apps/electron/tsconfig.test.json"
+    },
+    {
+      "path": "./packages/frontend/apps/electron/renderer/tsconfig.json"
+    },
+    {
+      "path": "./packages/frontend/graphql"
+    },
+    {
+      "path": "./packages/frontend/i18n"
+    },
+    // Common
+    {
+      "path": "./packages/common/debug"
+    },
+    {
+      "path": "./packages/common/env"
+    },
+    {
+      "path": "./packages/common/infra"
+    },
+    {
+      "path": "./packages/common/nbstore"
+    },
+    // Tools
+    {
+      "path": "./tools/cli"
+    },
+    {
+      "path": "./tools/playstore-auto-bump"
+    },
+    // Tests
+    {
+      "path": "./tests/kit"
+    },
+    {
+      "path": "./tests/affine-local"
+    },
+    {
+      "path": "./tests/affine-mobile"
+    },
+    {
+      "path": "./tests/affine-cloud"
+    },
+    {
+      "path": "./tests/affine-desktop"
+    },
+    // Blocksuite
+    {
+      "path": "./blocksuite"
+    },
+    // Others
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "files": [],
+  "exclude": ["node_modules", "target", "lib", "test-results", "dist"],
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "ESNext",
+      "moduleResolution": "Node"
+    }
+  }
+}

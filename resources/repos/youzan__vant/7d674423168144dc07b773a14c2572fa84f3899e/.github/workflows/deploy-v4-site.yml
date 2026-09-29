@@ -1,0 +1,66 @@
+name: Deploy V4 Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/vant/docs/**'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    if: github.repository == 'youzan/vant'
+    runs-on: macos-26
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          ref: 'main'
+          persist-credentials: false
+
+      - name: Install pnpm
+        run: |
+          npm install -g corepack@latest --force 
+          corepack enable
+
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Site
+        run: npm run build:site
+
+      - name: Deploy for GitHub 🚀
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
+        with:
+          branch: gh-pages
+          folder: packages/vant/site-dist
+          token: ${{ secrets.VANT_UI_TOKEN }}
+          repository-name: vant-ui/vant-ui.github.io
+          target-folder: vant
+          # enable single-commit to reduce the repo size
+          single-commit: true
+          clean: true
+          clean-exclude: |
+            1.x/*
+            1.x/**/*
+            next/*
+            next/**/*
+            v1/*
+            v1/**/*
+            v2/*
+            v2/**/*
+            v3/*
+            v3/**/*
+            v4/*
+            v4/**/*
+            vant-use/*
+            vant-use/**/*

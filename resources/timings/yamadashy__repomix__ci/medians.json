@@ -1,0 +1,5202 @@
+{
+  "benchmark": "yamadashy/repomix@a6d46361166510cd359d3d956feb53d9f751c380:.github/workflows/ci.yml",
+  "benchmark_id": "yamadashy__repomix__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        32540883609,
+        32540871644,
+        32154288100,
+        32049301939,
+        32038964449
+      ],
+      "window_count": 75
+    },
+    "push": {
+      "runs": [
+        32156661086,
+        32154130960,
+        29152606741,
+        29151938971,
+        29151372600
+      ],
+      "window_count": 25
+    }
+  },
+  "jobs": {
+    "Build and run (macos-latest, 22.x)": {
+      "duration_seconds": 21.0,
+      "durations": [
+        18.0,
+        25.0,
+        22.0,
+        21.0,
+        20.0,
+        21.0,
+        22.0,
+        23.0,
+        19.0,
+        21.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            9.0,
+            10.0,
+            7.0,
+            6.0,
+            8.0,
+            8.0,
+            7.0,
+            6.0,
+            8.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (macos-latest, 24.x)": {
+      "duration_seconds": 21.0,
+      "durations": [
+        22.0,
+        18.0,
+        31.0,
+        24.0,
+        19.0,
+        29.0,
+        19.0,
+        30.0,
+        20.0,
+        16.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        3.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            5.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            6.0,
+            13.0,
+            9.0,
+            7.0,
+            13.0,
+            8.0,
+            12.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (macos-latest, 26.x)": {
+      "duration_seconds": 27.0,
+      "durations": [
+        30.0,
+        26.0,
+        45.0,
+        22.0,
+        24.0,
+        33.0,
+        28.0,
+        33.0,
+        22.0,
+        25.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        6.0,
+        5.0,
+        6.0,
+        3.0,
+        4.0,
+        6.0,
+        5.0,
+        7.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            4.0,
+            14.0,
+            7.0,
+            7.0,
+            8.0,
+            8.0,
+            9.0,
+            6.0,
+            6.0
+          ],
+          "name": "Use Node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            9.0,
+            14.0,
+            5.0,
+            6.0,
+            9.0,
+            7.0,
+            9.0,
+            4.0,
+            7.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (ubuntu-latest, 22.x)": {
+      "duration_seconds": 19.5,
+      "durations": [
+        22.0,
+        22.0,
+        28.0,
+        15.0,
+        24.0,
+        19.0,
+        19.0,
+        16.0,
+        16.0,
+        20.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        6.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            6.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0,
+            5.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            11.0,
+            7.0,
+            9.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (ubuntu-latest, 24.x)": {
+      "duration_seconds": 18.5,
+      "durations": [
+        24.0,
+        21.0,
+        23.0,
+        16.0,
+        18.0,
+        16.0,
+        17.0,
+        19.0,
+        16.0,
+        23.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            0.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            0.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          "name": "Use Node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            10.0,
+            7.0,
+            9.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0,
+            8.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (ubuntu-latest, 26.x)": {
+      "duration_seconds": 23.0,
+      "durations": [
+        28.0,
+        23.0,
+        28.0,
+        25.0,
+        24.0,
+        21.0,
+        23.0,
+        23.0,
+        23.0,
+        23.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        2.0,
+        5.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            8.0,
+            6.0,
+            4.0,
+            5.0,
+            6.0,
+            5.0,
+            8.0
+          ],
+          "name": "Use Node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (windows-latest, 22.x)": {
+      "duration_seconds": 50.5,
+      "durations": [
+        55.0,
+        57.0,
+        53.0,
+        45.0,
+        43.0,
+        142.0,
+        48.0,
+        47.0,
+        42.0,
+        63.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        2.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            9.0,
+            16.0,
+            12.0,
+            11.0,
+            10.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            43.0,
+            7.0,
+            6.0,
+            5.0,
+            9.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            25.0,
+            25.0,
+            17.0,
+            16.0,
+            54.0,
+            17.0,
+            17.0,
+            15.0,
+            30.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            21.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (windows-latest, 24.x)": {
+      "duration_seconds": 50.0,
+      "durations": [
+        55.0,
+        57.0,
+        52.0,
+        57.0,
+        43.0,
+        44.0,
+        48.0,
+        46.0,
+        57.0,
+        47.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        2.0,
+        2.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            9.0,
+            11.0,
+            12.0,
+            14.0,
+            21.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            7.0,
+            6.0,
+            5.0
+          ],
+          "name": "Use Node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            25.0,
+            24.0,
+            16.0,
+            16.0,
+            15.0,
+            17.0,
+            15.0,
+            18.0,
+            18.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 17.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            19.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run (windows-latest, 26.x)": {
+      "duration_seconds": 49.5,
+      "durations": [
+        70.0,
+        58.0,
+        64.0,
+        48.0,
+        49.0,
+        52.0,
+        47.0,
+        50.0,
+        46.0,
+        47.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        5.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        6.0,
+        3.0,
+        4.0,
+        3.0,
+        1.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            10.0,
+            10.0,
+            11.0,
+            12.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            12.0,
+            11.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            8.0,
+            8.0,
+            14.0,
+            10.0,
+            11.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Use Node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            25.0,
+            24.0,
+            14.0,
+            17.0,
+            16.0,
+            16.0,
+            16.0,
+            16.0,
+            18.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 16.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            5.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Remove dev dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            10.0,
+            3.0,
+            4.0,
+            5.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run node bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run node bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run with Bun (macos-latest, latest)": {
+      "duration_seconds": 21.0,
+      "durations": [
+        23.0,
+        22.0,
+        19.0,
+        18.0,
+        29.0,
+        26.0,
+        20.0,
+        23.0,
+        15.0,
+        15.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        4.0,
+        2.0,
+        5.0,
+        8.0,
+        6.0,
+        6.0,
+        7.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            5.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Setup Bun latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            2.0,
+            6.0,
+            4.0,
+            6.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run bun install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install only production dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            6.0,
+            3.0,
+            6.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run bun bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run bun bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run bun bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run with Bun (ubuntu-latest, latest)": {
+      "duration_seconds": 17.5,
+      "durations": [
+        24.0,
+        21.0,
+        21.0,
+        18.0,
+        18.0,
+        17.0,
+        14.0,
+        17.0,
+        11.0,
+        16.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        2.0,
+        6.0,
+        7.0,
+        5.0,
+        4.0,
+        6.0,
+        2.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Setup Bun latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            2.0,
+            2.0,
+            5.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run bun install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Install only production dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run bun bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run bun bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run bun bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build and run with Bun (windows-latest, latest)": {
+      "duration_seconds": 63.0,
+      "durations": [
+        89.0,
+        78.0,
+        88.0,
+        61.0,
+        81.0,
+        65.0,
+        54.0,
+        59.0,
+        54.0,
+        50.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        7.0,
+        3.0,
+        4.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0,
+            10.0,
+            10.0,
+            9.0,
+            11.0,
+            10.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            14.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            12.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            10.0,
+            3.0
+          ],
+          "name": "Setup Bun latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            38.0,
+            43.0,
+            33.0,
+            53.0,
+            34.0,
+            29.0,
+            31.0,
+            17.0,
+            28.0
+          ],
+          "name": "Run bun install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 33.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            4.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "Install only production dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run bun bin/repomix.cjs",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun bin/repomix.cjs --version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run bun bin/repomix.cjs --help",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Upload build artifact",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint Biome": {
+      "duration_seconds": 18.5,
+      "durations": [
+        21.0,
+        22.0,
+        18.0,
+        19.0,
+        22.0,
+        17.0,
+        22.0,
+        15.0,
+        18.0,
+        15.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            6.0,
+            8.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            7.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            3.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run node --run lint-biome && git diff --exit-code",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint Secretlint": {
+      "duration_seconds": 34.5,
+      "durations": [
+        34.0,
+        34.0,
+        34.0,
+        33.0,
+        37.0,
+        36.0,
+        38.0,
+        35.0,
+        35.0,
+        33.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        2.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0,
+            6.0,
+            5.0,
+            7.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            16.0,
+            17.0,
+            18.0,
+            18.0,
+            20.0,
+            18.0,
+            18.0,
+            18.0,
+            16.0
+          ],
+          "name": "Run node --run lint-secretlint",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint TypeScript": {
+      "duration_seconds": 21.5,
+      "durations": [
+        22.0,
+        22.0,
+        22.0,
+        19.0,
+        22.0,
+        15.0,
+        15.0,
+        21.0,
+        18.0,
+        22.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            4.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            8.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0,
+            9.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run node --run lint-ts",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint oxlint": {
+      "duration_seconds": 19.5,
+      "durations": [
+        18.0,
+        17.0,
+        20.0,
+        19.0,
+        20.0,
+        21.0,
+        20.0,
+        18.0,
+        17.0,
+        20.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        2.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            9.0,
+            8.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            6.0,
+            3.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node --run lint-oxlint && git diff --exit-code",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (macos-latest, 22.x)": {
+      "duration_seconds": 33.0,
+      "durations": [
+        35.0,
+        31.0,
+        32.0,
+        29.0,
+        51.0,
+        32.0,
+        38.0,
+        42.0,
+        30.0,
+        34.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0,
+        6.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            7.0,
+            4.0,
+            11.0,
+            5.0,
+            8.0,
+            8.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            15.0,
+            17.0,
+            17.0,
+            29.0,
+            18.0,
+            21.0,
+            25.0,
+            17.0,
+            22.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (macos-latest, 24.x)": {
+      "duration_seconds": 39.5,
+      "durations": [
+        43.0,
+        32.0,
+        28.0,
+        47.0,
+        49.0,
+        34.0,
+        54.0,
+        51.0,
+        36.0,
+        30.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            8.0,
+            7.0,
+            9.0,
+            10.0,
+            7.0,
+            11.0,
+            11.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            15.0,
+            14.0,
+            28.0,
+            28.0,
+            18.0,
+            31.0,
+            29.0,
+            20.0,
+            16.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 20.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (macos-latest, 26.x)": {
+      "duration_seconds": 43.5,
+      "durations": [
+        35.0,
+        33.0,
+        33.0,
+        47.0,
+        50.0,
+        40.0,
+        49.0,
+        55.0,
+        34.0,
+        50.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        7.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            6.0,
+            2.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            11.0,
+            10.0,
+            5.0,
+            8.0,
+            9.0,
+            6.0,
+            8.0
+          ],
+          "name": "Use Node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            8.0,
+            8.0,
+            6.0,
+            6.0,
+            10.0,
+            5.0,
+            9.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            13.0,
+            14.0,
+            20.0,
+            23.0,
+            22.0,
+            24.0,
+            25.0,
+            16.0,
+            24.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (ubuntu-latest, 22.x)": {
+      "duration_seconds": 35.0,
+      "durations": [
+        36.0,
+        34.0,
+        32.0,
+        27.0,
+        32.0,
+        35.0,
+        35.0,
+        36.0,
+        35.0,
+        35.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            3.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            10.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            17.0,
+            15.0,
+            21.0,
+            21.0,
+            20.0,
+            21.0,
+            21.0,
+            19.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 19.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (ubuntu-latest, 24.x)": {
+      "duration_seconds": 33.0,
+      "durations": [
+        39.0,
+        34.0,
+        33.0,
+        35.0,
+        34.0,
+        31.0,
+        33.0,
+        30.0,
+        28.0,
+        33.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        5.0,
+        3.0,
+        3.0,
+        6.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        1.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Use Node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            10.0,
+            7.0,
+            8.0,
+            6.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            17.0,
+            16.0,
+            19.0,
+            19.0,
+            18.0,
+            19.0,
+            18.0,
+            17.0,
+            20.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (ubuntu-latest, 26.x)": {
+      "duration_seconds": 35.5,
+      "durations": [
+        40.0,
+        34.0,
+        35.0,
+        34.0,
+        38.0,
+        38.0,
+        38.0,
+        35.0,
+        35.0,
+        36.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            4.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            4.0
+          ],
+          "name": "Use Node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            16.0,
+            17.0,
+            18.0,
+            20.0,
+            19.0,
+            19.0,
+            16.0,
+            19.0,
+            20.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (windows-latest, 22.x)": {
+      "duration_seconds": 77.5,
+      "durations": [
+        79.0,
+        86.0,
+        79.0,
+        93.0,
+        77.0,
+        78.0,
+        67.0,
+        64.0,
+        67.0,
+        73.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        2.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            11.0,
+            20.0,
+            11.0,
+            12.0,
+            11.0,
+            11.0,
+            13.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            16.0,
+            14.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            9.0,
+            17.0,
+            5.0,
+            13.0,
+            5.0,
+            4.0,
+            7.0,
+            5.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            30.0,
+            28.0,
+            29.0,
+            19.0,
+            25.0,
+            15.0,
+            16.0,
+            16.0,
+            20.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 22.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            25.0,
+            24.0,
+            33.0,
+            30.0,
+            26.0,
+            31.0,
+            30.0,
+            31.0,
+            31.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (windows-latest, 24.x)": {
+      "duration_seconds": 66.0,
+      "durations": [
+        61.0,
+        69.0,
+        66.0,
+        67.0,
+        72.0,
+        66.0,
+        108.0,
+        58.0,
+        60.0,
+        64.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            12.0,
+            19.0,
+            9.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            20.0,
+            6.0,
+            23.0,
+            5.0,
+            6.0,
+            7.0
+          ],
+          "name": "Use Node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            25.0,
+            22.0,
+            23.0,
+            17.0,
+            17.0,
+            29.0,
+            15.0,
+            16.0,
+            17.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            26.0,
+            27.0,
+            26.0,
+            23.0,
+            26.0,
+            34.0,
+            26.0,
+            26.0,
+            27.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (windows-latest, 26.x)": {
+      "duration_seconds": 65.0,
+      "durations": [
+        73.0,
+        67.0,
+        64.0,
+        62.0,
+        64.0,
+        63.0,
+        67.0,
+        66.0,
+        55.0,
+        72.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        2.0,
+        4.0,
+        2.0,
+        4.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            9.0,
+            9.0,
+            11.0,
+            11.0,
+            9.0,
+            14.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            9.0,
+            10.0,
+            13.0,
+            10.0,
+            11.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Use Node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            22.0,
+            23.0,
+            14.0,
+            16.0,
+            15.0,
+            17.0,
+            18.0,
+            14.0,
+            14.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 16.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            22.0,
+            21.0,
+            26.0,
+            24.0,
+            25.0,
+            26.0,
+            24.0,
+            19.0,
+            31.0
+          ],
+          "name": "Run node --run test -- --reporter=verbose",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test coverage": {
+      "duration_seconds": 46.0,
+      "durations": [
+        47.0,
+        42.0,
+        45.0,
+        54.0,
+        47.0,
+        52.0,
+        44.0,
+        50.0,
+        43.0,
+        45.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        4.0,
+        7.0,
+        6.0,
+        7.0,
+        7.0,
+        7.0,
+        5.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            4.0,
+            8.0,
+            8.0,
+            6.0,
+            7.0,
+            8.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            6.0,
+            4.0,
+            7.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            15.0,
+            20.0,
+            23.0,
+            23.0,
+            23.0,
+            18.0,
+            23.0,
+            18.0,
+            18.0
+          ],
+          "name": "Run node --run test-coverage -- --reporter=verbose --reporter=junit --outputFile.junit=./test-report.junit.xml",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run codecov/test-results-action@0fa95f0e1eeaafde2c782583b36b28ad0d8c77d3",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test with Bun (macos-latest, latest)": {
+      "duration_seconds": 42.0,
+      "durations": [
+        32.0,
+        42.0,
+        30.0,
+        63.0,
+        47.0,
+        44.0,
+        38.0,
+        42.0,
+        46.0,
+        39.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        2.0,
+        7.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Setup Bun latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            4.0,
+            6.0,
+            3.0,
+            4.0,
+            2.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run bun install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            25.0,
+            19.0,
+            39.0,
+            32.0,
+            30.0,
+            25.0,
+            28.0,
+            31.0,
+            26.0
+          ],
+          "name": "Run bun run test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test with Bun (ubuntu-latest, latest)": {
+      "duration_seconds": 30.0,
+      "durations": [
+        29.0,
+        29.0,
+        26.0,
+        55.0,
+        31.0,
+        31.0,
+        28.0,
+        31.0,
+        32.0,
+        27.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        2.0,
+        4.0,
+        5.0,
+        28.0,
+        3.0,
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Setup Bun latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            5.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run bun install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            18.0,
+            15.0,
+            20.0,
+            22.0,
+            20.0,
+            20.0,
+            20.0,
+            22.0,
+            16.0
+          ],
+          "name": "Run bun run test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test with Bun (windows-latest, latest)": {
+      "duration_seconds": 85.5,
+      "durations": [
+        92.0,
+        86.0,
+        85.0,
+        77.0,
+        81.0,
+        106.0,
+        87.0,
+        100.0,
+        69.0,
+        62.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        6.0,
+        2.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            10.0,
+            12.0,
+            15.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Setup Bun latest",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            40.0,
+            36.0,
+            31.0,
+            32.0,
+            58.0,
+            36.0,
+            51.0,
+            20.0,
+            14.0
+          ],
+          "name": "Run bun install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 36.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            26.0,
+            28.0,
+            32.0,
+            32.0,
+            31.0,
+            30.0,
+            33.0,
+            33.0,
+            31.0
+          ],
+          "name": "Run bun run test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0747096087e69c5b94e82393a2ce085132f55b79": "973a582e2d415e5d71affea2a1472668a0a3cd27",
+      "262c720eb8449f84dfc17e147dbb93c7f9250a7a": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+      "367b94a1b32ac3310688a89be9a408f0c6778a82": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+      "74bc16a1aa4ad6c2e24151bd830dd5049c7970a4": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+      "912bd733df35caa5fd9fa120a5c32b5545264827": "973a582e2d415e5d71affea2a1472668a0a3cd27",
+      "a78d52500e9ae29d71453f5b7f1c73faa6c980a0": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+      "babe80e6cf1825f05b962022df13c6546623bfcf": "973a582e2d415e5d71affea2a1472668a0a3cd27",
+      "c898ff0b3612bc6222c703c965d2468ac9ead952": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+      "dfa9ba7b86aeb4ac6ce57b82de92bb9ffe3fd265": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+      "e9293fc154d2cf2f8d08e29fbc52d34ea4b0844c": "4d0f9c247ce43bda80b025fca2071ff3501d5b81"
+    },
+    "pinned_oid": "4d0f9c247ce43bda80b025fca2071ff3501d5b81",
+    "runs_same_version": 7,
+    "runs_total": 10
+  }
+}

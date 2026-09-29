@@ -1,0 +1,2266 @@
+{
+  "benchmark": "honojs/hono@e2740d5a1bd0b4254e517e3af8b60789284bc7bd:.github/workflows/ci.yml",
+  "benchmark_id": "honojs__hono__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33404463137,
+        33307737364,
+        33165961587,
+        33148321461,
+        33120233204
+      ],
+      "window_count": 152
+    },
+    "push": {
+      "runs": [
+        33148602956,
+        33026493174,
+        33026367926,
+        32920788986,
+        32920611982
+      ],
+      "window_count": 77
+    }
+  },
+  "jobs": {
+    "AWS Lambda": {
+      "duration_seconds": 17.0,
+      "durations": [
+        19.0,
+        18.0,
+        15.0,
+        15.0,
+        17.0,
+        18.0,
+        17.0,
+        21.0,
+        15.0,
+        17.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            4.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            5.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run bun run test:lambda",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bun": {
+      "duration_seconds": 12.5,
+      "durations": [
+        15.0,
+        19.0,
+        12.0,
+        8.0,
+        10.0,
+        13.0,
+        15.0,
+        14.0,
+        12.0,
+        11.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        5.0,
+        4.0,
+        2.0,
+        3.0,
+        5.0,
+        3.0,
+        6.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            5.0,
+            3.0,
+            3.0,
+            2.0,
+            8.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run bun run test:bun",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bun - Windows": {
+      "duration_seconds": 19.0,
+      "durations": [
+        30.0,
+        19.0,
+        19.0,
+        14.0,
+        16.0,
+        15.0,
+        29.0,
+        17.0,
+        22.0,
+        20.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        5.0,
+        2.0,
+        3.0,
+        4.0,
+        2.0,
+        6.0,
+        4.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            7.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            14.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            5.0,
+            6.0,
+            3.0,
+            3.0,
+            3.0,
+            13.0,
+            4.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run bun run test:bun",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Checking if it's valid for JSR": {
+      "duration_seconds": 13.5,
+      "durations": [
+        13.0,
+        13.0,
+        15.0,
+        14.0,
+        8.0,
+        12.0,
+        13.0,
+        16.0,
+        14.0,
+        14.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        2.0,
+        4.0,
+        3.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            0.0,
+            2.0,
+            1.0,
+            2.0,
+            4.0,
+            1.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            5.0,
+            7.0,
+            2.0,
+            7.0
+          ],
+          "name": "Run bunx jsr publish --dry-run",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Coverage": {
+      "duration_seconds": 9.0,
+      "durations": [
+        9.0,
+        10.0,
+        6.0,
+        10.0,
+        7.0,
+        7.0,
+        9.0,
+        12.0,
+        7.0,
+        11.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        4.0,
+        2.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        6.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deno": {
+      "duration_seconds": 17.0,
+      "durations": [
+        16.0,
+        14.0,
+        18.0,
+        17.0,
+        20.0,
+        17.0,
+        15.0,
+        18.0,
+        16.0,
+        19.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        4.0,
+        4.0,
+        7.0,
+        4.0,
+        2.0,
+        5.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run env NAME=Deno deno test --coverage=coverage/raw/deno-runtime --allow-read --allow-env --allow-write --allow-net -c runtime-tests/deno/deno.json runtime-tests/deno",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run deno test -c runtime-tests/deno-jsx/deno.precompile.json --coverage=coverage/raw/deno-precompile-jsx runtime-tests/deno-jsx",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run deno test -c runtime-tests/deno-jsx/deno.react-jsx.json --coverage=coverage/raw/deno-react-jsx runtime-tests/deno-jsx",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run grep -R '\"url\":' coverage | grep -v runtime-tests | sed -e 's/.*file:..//;s/.,//' | xargs deno cache --unstable-sloppy-imports",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run deno coverage --lcov > coverage/deno-runtime-coverage-lcov.info",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Fastly Compute": {
+      "duration_seconds": 15.5,
+      "durations": [
+        14.0,
+        24.0,
+        14.0,
+        17.0,
+        20.0,
+        17.0,
+        13.0,
+        13.0,
+        14.0,
+        18.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            0.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            7.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            5.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            6.0,
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            6.0,
+            3.0,
+            6.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun run test:fastly",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "HTTP Speed Check on PR": {
+      "duration_seconds": 83.0,
+      "durations": [
+        84.0,
+        78.0,
+        84.0,
+        83.0,
+        83.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        3.0,
+        4.0,
+        6.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            5.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install bombardier",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            70.0,
+            71.0,
+            71.0,
+            72.0
+          ],
+          "name": "Run HTTP benchmark",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 71.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Comment PR",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Show benchmark results for forks",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lambda@Edge": {
+      "duration_seconds": 15.5,
+      "durations": [
+        15.0,
+        16.0,
+        20.0,
+        19.0,
+        21.0,
+        17.0,
+        15.0,
+        14.0,
+        13.0,
+        15.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        2.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            6.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run bun run test:lambda-edge",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Main": {
+      "duration_seconds": 80.5,
+      "durations": [
+        83.0,
+        86.0,
+        81.0,
+        85.0,
+        80.0,
+        79.0,
+        78.0,
+        80.0,
+        84.0,
+        76.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        6.0,
+        2.0,
+        5.0,
+        5.0,
+        3.0,
+        6.0,
+        5.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            11.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            15.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            8.0,
+            5.0
+          ],
+          "name": "Run bun run format",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run bun run lint",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run bun run editorconfig-checker -format github-actions",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            35.0,
+            47.0,
+            45.0,
+            45.0,
+            44.0,
+            35.0,
+            41.0,
+            45.0,
+            36.0
+          ],
+          "name": "Run bun run test",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 43.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Node.js v20.x": {
+      "duration_seconds": 23.5,
+      "durations": [
+        24.0,
+        26.0,
+        20.0,
+        26.0,
+        23.0,
+        24.0,
+        24.0,
+        23.0,
+        23.0,
+        19.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        7.0,
+        4.0,
+        5.0,
+        5.0,
+        8.0,
+        5.0,
+        6.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            10.0,
+            5.0,
+            3.0,
+            5.0,
+            4.0,
+            6.0,
+            4.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            5.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            6.0,
+            3.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun run test:node",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Node.js v22.x": {
+      "duration_seconds": 17.5,
+      "durations": [
+        15.0,
+        17.0,
+        19.0,
+        19.0,
+        17.0,
+        21.0,
+        18.0,
+        19.0,
+        14.0,
+        17.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        6.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            4.0,
+            0.0,
+            2.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            4.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run bun run test:node",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Node.js v24.x": {
+      "duration_seconds": 17.0,
+      "durations": [
+        16.0,
+        16.0,
+        14.0,
+        14.0,
+        18.0,
+        20.0,
+        20.0,
+        14.0,
+        18.0,
+        20.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        6.0,
+        5.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            4.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run bun run test:node",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Type & Bundle size Check on Main": {
+      "duration_seconds": 46.0,
+      "durations": [
+        53.0,
+        46.0,
+        39.0,
+        46.0,
+        51.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        5.0,
+        2.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            47.0,
+            42.0,
+            36.0,
+            42.0,
+            46.0
+          ],
+          "name": "Run ./.github/actions/perf-measures",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Type & Bundle size Check on PR": {
+      "duration_seconds": 49.0,
+      "durations": [
+        54.0,
+        45.0,
+        49.0,
+        55.0,
+        46.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            41.0,
+            45.0,
+            48.0,
+            42.0
+          ],
+          "name": "Run ./.github/actions/perf-measures",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "workerd": {
+      "duration_seconds": 22.5,
+      "durations": [
+        22.0,
+        19.0,
+        24.0,
+        20.0,
+        24.0,
+        23.0,
+        18.0,
+        22.0,
+        26.0,
+        25.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        3.0,
+        7.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            0.0,
+            3.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run bun install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run bun run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run bun run test:workerd",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "06880c4a2b04de9dd74217f26dd831209b9c01f1": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "261e42627766a40a563fc4c223351ad47c5e663a": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "2b6af99d798ecb8e5ba772903672f0bd7a25ff11": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "499c35ebda35777fd35a7dd1906dd4f2687da61e": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "50b8788cf54cb60112b7cd93642bc5094901475c": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "531e9c5a3ae058d10de33f643055bd4009a87178": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "5f9da9d483dabb6e9fe1b2659650efbe9390bc77": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "c59cadfc82d38b3da9ff0b5eeb576b4b02faf340": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "ccc2d5c91a258fd7c93c6189fdd346599c184a3e": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+      "e2740d5a1bd0b4254e517e3af8b60789284bc7bd": "cf00861e24eccf7376a3969487a5b8a6b6908aaf"
+    },
+    "pinned_oid": "cf00861e24eccf7376a3969487a5b8a6b6908aaf",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

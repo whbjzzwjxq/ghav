@@ -1,0 +1,445 @@
+{
+  "benchmark": "ueberdosis/tiptap@2fab93e979a4b71f7e913430d3a8361125d09c6d:.github/workflows/publish.yml",
+  "benchmark_id": "ueberdosis__tiptap__publish",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33409256049,
+        33190940533,
+        33190546646,
+        33160787647,
+        33136860585
+      ],
+      "window_count": 70
+    }
+  },
+  "jobs": {
+    "Build": {
+      "duration_seconds": 121.0,
+      "durations": [
+        97.0,
+        121.0,
+        90.0,
+        127.0,
+        140.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            12.0,
+            10.0,
+            9.0,
+            12.0
+          ],
+          "name": "Run ./.github/actions/setup-env",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            9.0,
+            7.0,
+            8.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            74.0,
+            92.0,
+            63.0,
+            104.0,
+            110.0
+          ],
+          "name": "Run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 92.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Check package exports",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Archive package dist artifacts",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Upload package dist artifacts",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bump Versions OR Release to Registry": {
+      "duration_seconds": 57.0,
+      "durations": [
+        57.0,
+        57.0,
+        69.0,
+        55.0,
+        86.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        4.0,
+        6.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            12.0,
+            9.0,
+            9.0
+          ],
+          "name": "Run ./.github/actions/setup-env",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Update npm for trusted publishing",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            9.0,
+            7.0,
+            7.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download package dist artifacts",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Restore package dist artifacts",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Verify package dist artifacts",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0,
+            29.0,
+            35.0,
+            29.0,
+            62.0
+          ],
+          "name": "Run changesets release flow",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Resolve publish config": {
+      "duration_seconds": 5.0,
+      "durations": [
+        4.0,
+        6.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Validate publish config",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Look up branch in publish config",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Send failure notification to Slack": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "Send notification to Slack": {
+      "duration_seconds": 4.0,
+      "durations": [
+        4.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 4,
+      "steps": [
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Send Slack notification",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "18b39150617766506e6ca90a63cb2cedc97edb08": "9d9c9217de339f4170bae5f831837b17d39a639e",
+      "255908a3f357086f4f6ef4418ee4ae6e3d65d9c4": "25db413ebbd8f2817891a4e233df19876e30ca6b",
+      "5302fda4748a439b395e6be81bd1e825dbfcc08e": "25db413ebbd8f2817891a4e233df19876e30ca6b",
+      "afb3fccd0379dcac02d28d5388906ed9db01ae1b": "25db413ebbd8f2817891a4e233df19876e30ca6b",
+      "d02646bdaa6a1cdf88a450a67fb2596abf5305d9": "9d9c9217de339f4170bae5f831837b17d39a639e"
+    },
+    "pinned_oid": "9d9c9217de339f4170bae5f831837b17d39a639e",
+    "runs_same_version": 2,
+    "runs_total": 5
+  }
+}

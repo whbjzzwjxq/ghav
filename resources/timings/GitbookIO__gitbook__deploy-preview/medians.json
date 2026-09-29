@@ -1,0 +1,750 @@
+{
+  "benchmark": "GitbookIO/gitbook@c1b5be05ebd85c57fa57756a0e8ba229f38af54f:.github/workflows/deploy-preview.yaml",
+  "benchmark_id": "GitbookIO__gitbook__deploy-preview",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        21473887549,
+        21473330292,
+        21472899340,
+        21472295193,
+        21436994751
+      ],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        30616915911,
+        30525361179,
+        30450705115,
+        30367077269,
+        30273096085
+      ],
+      "window_count": 82
+    }
+  },
+  "jobs": {
+    "Approve Preview Deployment": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "Browserless Testing v2 (Vercel)": {
+      "duration_seconds": 37.5,
+      "durations": [
+        22.0,
+        21.0,
+        21.0,
+        24.0,
+        25.0,
+        75.0,
+        50.0,
+        50.0,
+        68.0,
+        73.0
+      ],
+      "main_step_counts": [
+        0,
+        4
+      ],
+      "overhead_seconds": 12.5,
+      "overheads": [
+        22.0,
+        21.0,
+        21.0,
+        24.0,
+        25.0,
+        2.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Setup Bun",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            15.0,
+            15.0,
+            12.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            59.0,
+            33.0,
+            30.0,
+            46.0,
+            53.0
+          ],
+          "name": "Run tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 46.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Comment Deployments (preview)": {
+      "duration_seconds": 5.0,
+      "durations": [
+        4.0,
+        4.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": []
+    },
+    "Deploy v2 to Cloudflare Worker (preview)": {
+      "duration_seconds": 237.0,
+      "durations": [
+        230.0,
+        239.0,
+        227.0,
+        234.0,
+        221.0,
+        235.0,
+        241.0,
+        276.0,
+        256.0,
+        255.0
+      ],
+      "main_step_counts": [
+        0,
+        4
+      ],
+      "overhead_seconds": 113.0,
+      "overheads": [
+        230.0,
+        239.0,
+        227.0,
+        234.0,
+        221.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            228.0,
+            234.0,
+            272.0,
+            251.0,
+            252.0
+          ],
+          "name": "Deploy to Cloudflare",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 251.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Extract Worker ID",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Outputs",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy v2 to Vercel (preview)": {
+      "duration_seconds": 221.0,
+      "durations": [
+        218.0,
+        216.0,
+        215.0,
+        212.0,
+        230.0,
+        314.0,
+        201.0,
+        226.0,
+        228.0,
+        224.0
+      ],
+      "main_step_counts": [
+        0,
+        2
+      ],
+      "overhead_seconds": 108.5,
+      "overheads": [
+        218.0,
+        216.0,
+        215.0,
+        212.0,
+        230.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            307.0,
+            194.0,
+            222.0,
+            224.0,
+            220.0
+          ],
+          "name": "Deploy to Vercel",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 222.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Visual Testing Customers v2": {
+      "duration_seconds": 240.5,
+      "durations": [
+        123.0,
+        130.0,
+        123.0,
+        197.0,
+        158.0,
+        313.0,
+        284.0,
+        323.0,
+        332.0,
+        338.0
+      ],
+      "main_step_counts": [
+        0,
+        4
+      ],
+      "overhead_seconds": 69.5,
+      "overheads": [
+        123.0,
+        130.0,
+        123.0,
+        197.0,
+        158.0,
+        5.0,
+        4.0,
+        16.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Setup Bun",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            26.0,
+            11.0,
+            12.0,
+            13.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            293.0,
+            252.0,
+            291.0,
+            310.0,
+            314.0
+          ],
+          "name": "Run Playwright tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 293.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Visual Testing Customers v2 (Cloudflare)": {
+      "duration_seconds": 251.0,
+      "durations": [
+        153.0,
+        160.0,
+        149.0,
+        139.0,
+        150.0,
+        371.0,
+        358.0,
+        342.0,
+        469.0,
+        377.0
+      ],
+      "main_step_counts": [
+        0,
+        4
+      ],
+      "overhead_seconds": 72.5,
+      "overheads": [
+        153.0,
+        160.0,
+        149.0,
+        139.0,
+        150.0,
+        6.0,
+        2.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Setup Bun",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            11.0,
+            14.0,
+            13.0,
+            12.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            342.0,
+            342.0,
+            323.0,
+            450.0,
+            360.0
+          ],
+          "name": "Run Playwright tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 342.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Visual Testing v2": {
+      "duration_seconds": 405.5,
+      "durations": [
+        453.0,
+        401.0,
+        386.0,
+        410.0,
+        439.0,
+        424.0,
+        382.0,
+        392.0,
+        436.0,
+        384.0
+      ],
+      "main_step_counts": [
+        0,
+        4
+      ],
+      "overhead_seconds": 195.5,
+      "overheads": [
+        453.0,
+        401.0,
+        386.0,
+        410.0,
+        439.0,
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Setup Bun",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            11.0,
+            12.0,
+            13.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            404.0,
+            365.0,
+            374.0,
+            414.0,
+            361.0
+          ],
+          "name": "Run Playwright tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 374.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Visual Testing v2 (Cloudflare)": {
+      "duration_seconds": 415.5,
+      "durations": [
+        399.0,
+        401.0,
+        391.0,
+        400.0,
+        429.0,
+        499.0,
+        457.0,
+        424.0,
+        407.0,
+        437.0
+      ],
+      "main_step_counts": [
+        0,
+        4
+      ],
+      "overhead_seconds": 197.5,
+      "overheads": [
+        399.0,
+        401.0,
+        391.0,
+        400.0,
+        429.0,
+        4.0,
+        4.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Setup Bun",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            15.0,
+            12.0,
+            13.0,
+            12.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            473.0,
+            433.0,
+            405.0,
+            388.0,
+            420.0
+          ],
+          "name": "Run Playwright tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 420.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "04f411e30f2c25fa79ceaa15d2ff492252553970": "b4d4be81907a3d484e1dccc67b208bfdc2e3f74c",
+      "1ee1853995c92eb777024ff946c592d146eac672": "44269f1d19102cc7558e422b91bc0bbc1d2e50e9",
+      "332089eca99bcc0e5bcbb9befb9e2637e96b4f1c": "44269f1d19102cc7558e422b91bc0bbc1d2e50e9",
+      "4ced61923fc41cdfcd159c1ec3905feb71dab2d8": "b4d4be81907a3d484e1dccc67b208bfdc2e3f74c",
+      "4e35760a8afcebd9a6d8311ae97e9542affe6e1e": "b4d4be81907a3d484e1dccc67b208bfdc2e3f74c",
+      "5d5f2188d7e541ea99af13e83aab9794c60b8971": "b4d4be81907a3d484e1dccc67b208bfdc2e3f74c",
+      "6ac4cf4b76fd5224ef5377d70eb73ecb8d57f0d2": "44269f1d19102cc7558e422b91bc0bbc1d2e50e9",
+      "996d7ec02127705470560846b23c4dca9689f038": "44269f1d19102cc7558e422b91bc0bbc1d2e50e9",
+      "c401b7cc40e6c963d08bf8772e4950a20951ab42": "b4d4be81907a3d484e1dccc67b208bfdc2e3f74c",
+      "fa9c9b38b745f1fa80717790af52faabad1acea9": "44269f1d19102cc7558e422b91bc0bbc1d2e50e9"
+    },
+    "pinned_oid": "4b0cae96c833e82f60df632ddc1d6522c3cdfdf5",
+    "runs_same_version": 0,
+    "runs_total": 10
+  }
+}

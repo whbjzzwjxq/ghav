@@ -1,0 +1,2095 @@
+{
+  "benchmark": "n8n-io/n8n@7700b7630d9d2391867c812bd762b5c93d3fb56d:.github/workflows/ci-master.yml",
+  "benchmark_id": "n8n-io__n8n__ci-master",
+  "count_window": {
+    "capped": false,
+    "days": 7,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-25T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33436805197,
+        33431825968,
+        33418418201,
+        33408191729,
+        33407128070
+      ],
+      "window_count": 216
+    }
+  },
+  "jobs": {
+    "Build for Github Cache": {
+      "duration_seconds": 155.0,
+      "durations": [
+        155.0,
+        130.0,
+        205.0,
+        294.0,
+        147.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        2.0,
+        6.0,
+        6.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            8.0,
+            10.0,
+            9.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            141.0,
+            120.0,
+            189.0,
+            279.0,
+            135.0
+          ],
+          "name": "Setup and Build",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 141.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Report build critical path",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint / Lint": {
+      "duration_seconds": 626.0,
+      "durations": [
+        620.0,
+        660.0,
+        693.0,
+        556.0,
+        626.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        6.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            26.0,
+            24.0,
+            19.0,
+            18.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            589.0,
+            629.0,
+            663.0,
+            532.0,
+            603.0
+          ],
+          "name": "Build and Test",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 603.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Notify Slack on failure": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "Performance / Benchmarks": {
+      "duration_seconds": 317.0,
+      "durations": [
+        267.0,
+        273.0,
+        371.0,
+        360.0,
+        317.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        7.0,
+        6.0,
+        6.0,
+        7.0,
+        7.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            25.0,
+            22.0,
+            20.0,
+            21.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            67.0,
+            74.0,
+            131.0,
+            133.0,
+            82.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 82.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            170.0,
+            168.0,
+            212.0,
+            200.0,
+            207.0
+          ],
+          "name": "Run benchmarks",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 200.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (24.18.1) / Backend Integration Tests": {
+      "duration_seconds": 747.0,
+      "durations": [
+        747.0,
+        722.0,
+        889.0,
+        781.0,
+        654.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        6.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            24.0,
+            22.0,
+            20.0,
+            15.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            70.0,
+            80.0,
+            115.0,
+            144.0,
+            67.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 80.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            11.0,
+            37.0,
+            2.0
+          ],
+          "name": "Test Integration (backend, except cli)",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            632.0,
+            598.0,
+            713.0,
+            558.0,
+            550.0
+          ],
+          "name": "Test Integration (cli, scoped)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 598.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            3.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            11.0,
+            7.0,
+            8.0
+          ],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            6.0,
+            5.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (24.18.1) / Backend Unit Tests": {
+      "duration_seconds": 806.0,
+      "durations": [
+        858.0,
+        774.0,
+        806.0,
+        930.0,
+        647.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        7.0,
+        6.0,
+        5.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            36.0,
+            27.0,
+            20.0,
+            20.0,
+            13.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            65.0,
+            100.0,
+            138.0,
+            71.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 71.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Verify Kafka native binding installed",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            114.0,
+            5.0,
+            61.0,
+            208.0,
+            4.0
+          ],
+          "name": "Test Unit (backend, except cli and nodes-base)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 61.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            615.0,
+            655.0,
+            604.0,
+            538.0,
+            541.0
+          ],
+          "name": "Test Unit (cli, scoped)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 604.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0
+          ],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (24.18.1) / Frontend (1/2)": {
+      "duration_seconds": 735.0,
+      "durations": [
+        735.0,
+        631.0,
+        903.0,
+        684.0,
+        735.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        4.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            22.0,
+            25.0,
+            21.0,
+            15.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            73.0,
+            69.0,
+            112.0,
+            130.0,
+            63.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 73.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            615.0,
+            519.0,
+            742.0,
+            515.0,
+            635.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 615.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            7.0,
+            4.0,
+            5.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            11.0,
+            11.0,
+            8.0,
+            10.0
+          ],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (24.18.1) / Frontend (2/2)": {
+      "duration_seconds": 713.0,
+      "durations": [
+        644.0,
+        663.0,
+        790.0,
+        713.0,
+        734.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        7.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            29.0,
+            21.0,
+            18.0,
+            15.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            69.0,
+            63.0,
+            103.0,
+            140.0,
+            77.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 77.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            538.0,
+            553.0,
+            636.0,
+            537.0,
+            622.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 553.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            7.0,
+            4.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            15.0,
+            7.0,
+            9.0
+          ],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (24.18.1) / Nodes Unit Tests": {
+      "duration_seconds": 553.0,
+      "durations": [
+        562.0,
+        452.0,
+        663.0,
+        553.0,
+        530.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            20.0,
+            21.0,
+            20.0,
+            16.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            72.0,
+            70.0,
+            101.0,
+            141.0,
+            72.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 72.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            448.0,
+            345.0,
+            525.0,
+            374.0,
+            423.0
+          ],
+          "name": "Test Nodes",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 423.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            5.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0
+          ],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (24.18.1) / Unit tests": {
+      "duration_seconds": 3.0,
+      "durations": [
+        3.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [],
+          "name": "Fail if tests failed",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "Unit tests (26.5.1) / Backend Integration Tests": {
+      "duration_seconds": 591.0,
+      "durations": [
+        759.0,
+        564.0,
+        608.0,
+        591.0,
+        537.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            25.0,
+            22.0,
+            20.0,
+            13.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            77.0,
+            108.0,
+            135.0,
+            76.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 77.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            9.0,
+            32.0,
+            2.0
+          ],
+          "name": "Test Integration (backend, except cli)",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            644.0,
+            448.0,
+            452.0,
+            389.0,
+            436.0
+          ],
+          "name": "Test Integration (cli, scoped)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 448.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            6.0,
+            5.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (26.5.1) / Backend Unit Tests": {
+      "duration_seconds": 564.0,
+      "durations": [
+        564.0,
+        491.0,
+        572.0,
+        759.0,
+        533.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        7.0,
+        5.0,
+        5.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            19.0,
+            21.0,
+            21.0,
+            17.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            68.0,
+            103.0,
+            136.0,
+            79.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 79.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Verify Kafka native binding installed",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            44.0,
+            4.0,
+            42.0,
+            207.0,
+            4.0
+          ],
+          "name": "Test Unit (backend, except cli and nodes-base)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            398.0,
+            389.0,
+            396.0,
+            380.0,
+            422.0
+          ],
+          "name": "Test Unit (cli, scoped)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 396.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (26.5.1) / Frontend (1/2)": {
+      "duration_seconds": 580.0,
+      "durations": [
+        580.0,
+        550.0,
+        648.0,
+        674.0,
+        495.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        9.0,
+        6.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            27.0,
+            22.0,
+            21.0,
+            15.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            72.0,
+            64.0,
+            104.0,
+            140.0,
+            64.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 72.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            468.0,
+            448.0,
+            513.0,
+            503.0,
+            407.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 468.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (26.5.1) / Frontend (2/2)": {
+      "duration_seconds": 592.0,
+      "durations": [
+        489.0,
+        612.0,
+        592.0,
+        821.0,
+        527.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        7.0,
+        7.0,
+        7.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            27.0,
+            19.0,
+            21.0,
+            15.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            75.0,
+            82.0,
+            103.0,
+            149.0,
+            72.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 82.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            381.0,
+            492.0,
+            459.0,
+            639.0,
+            430.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 459.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (26.5.1) / Nodes Unit Tests": {
+      "duration_seconds": 491.0,
+      "durations": [
+        491.0,
+        398.0,
+        503.0,
+        512.0,
+        424.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        7.0,
+        5.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            23.0,
+            21.0,
+            21.0,
+            14.0
+          ],
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            74.0,
+            72.0,
+            102.0,
+            135.0,
+            76.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 76.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            381.0,
+            292.0,
+            369.0,
+            346.0,
+            323.0
+          ],
+          "name": "Test Nodes",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 346.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Send Test Stats",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Upload test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit tests (26.5.1) / Unit tests": {
+      "duration_seconds": 2.0,
+      "durations": [
+        3.0,
+        3.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 2.0,
+      "overheads": [
+        3.0,
+        3.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [],
+          "name": "Fail if tests failed",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "Verify single-instance deps (npm-install) / verify": {
+      "duration_seconds": 287.0,
+      "durations": [
+        263.0,
+        342.0,
+        172.0,
+        287.0,
+        340.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        2.0,
+        6.0,
+        6.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Validate inputs",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            19.0,
+            15.0,
+            15.0,
+            16.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check the verifier is present on this ref",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            89.0,
+            165.0,
+            106.0,
+            99.0,
+            168.0
+          ],
+          "name": "Setup and Build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 106.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            157.0,
+            156.0,
+            45.0,
+            167.0,
+            151.0
+          ],
+          "name": "Verify npm-install closure (changed packages)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 156.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Verify npm-install closure (all packages)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "37045ce3bdfac265e92a0af7b87aa995d5b42a85": "50d9424f53954b9eb62962ff7a81d4fafcf1d8ad",
+      "7700b7630d9d2391867c812bd762b5c93d3fb56d": "50d9424f53954b9eb62962ff7a81d4fafcf1d8ad",
+      "e4e25df814de40b756b4046d37c313518e739ee2": "50d9424f53954b9eb62962ff7a81d4fafcf1d8ad",
+      "e93deef366ce2aa27cfb43364f65b21c6eb8f443": "50d9424f53954b9eb62962ff7a81d4fafcf1d8ad",
+      "fe61e57740aaf58861f4ffaf0032f57b3a8acdd5": "50d9424f53954b9eb62962ff7a81d4fafcf1d8ad"
+    },
+    "pinned_oid": "50d9424f53954b9eb62962ff7a81d4fafcf1d8ad",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

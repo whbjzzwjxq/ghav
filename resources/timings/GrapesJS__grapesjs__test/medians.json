@@ -1,0 +1,250 @@
+{
+  "benchmark": "GrapesJS/grapesjs@2bdeda85b82b8b9ceae42fd6558cbbcae5ec2d21:.github/workflows/test.yml",
+  "benchmark_id": "GrapesJS__grapesjs__test",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33159617319,
+        33155238453,
+        32851527900,
+        32847216277,
+        32847045050
+      ],
+      "window_count": 23
+    },
+    "push": {
+      "runs": [
+        32851995396,
+        32850100291,
+        32848642160,
+        32848607202,
+        32843268938
+      ],
+      "window_count": 10
+    }
+  },
+  "jobs": {
+    "test-cli": {
+      "duration_seconds": 117.0,
+      "durations": [
+        122.0,
+        112.0,
+        119.0,
+        87.0,
+        86.0,
+        121.0,
+        122.0,
+        109.0,
+        115.0,
+        121.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        3.0,
+        2.0,
+        4.0,
+        6.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            114.0,
+            105.0,
+            111.0,
+            81.0,
+            81.0,
+            113.0,
+            114.0,
+            103.0,
+            110.0,
+            114.0
+          ],
+          "name": "Run ./.github/actions/setup-project",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 110.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "CLI Tests",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "test-core": {
+      "duration_seconds": 151.5,
+      "durations": [
+        148.0,
+        151.0,
+        157.0,
+        166.0,
+        159.0,
+        122.0,
+        150.0,
+        152.0,
+        149.0,
+        152.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            102.0,
+            106.0,
+            108.0,
+            115.0,
+            109.0,
+            85.0,
+            102.0,
+            105.0,
+            103.0,
+            104.0
+          ],
+          "name": "Run ./.github/actions/setup-project",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 104.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            41.0,
+            41.0,
+            42.0,
+            45.0,
+            44.0,
+            31.0,
+            42.0,
+            43.0,
+            42.0,
+            42.0
+          ],
+          "name": "Core Tests",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "1376a67aa758cd15a55fd38cd0a05a3ac8db8f51": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "150bf29da9a6f7396108f026bbaf9b3e6e28c8c0": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "2bdeda85b82b8b9ceae42fd6558cbbcae5ec2d21": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "361cb9af35053c2320afa968195a3722d09bdfc4": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "36527a0b7374d3eab4e0fa2e66395cb2c485925a": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "3d61fdf19dbfd608c99102b4746d6cbb6fd7495e": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "70e3177c2f2a32ed5dbedc528e186a9081403e44": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "add7f860c05da4266f6bc5cd7ffcb0048e644716": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "aec13de782c1438a4c497b2e3cefcadaa98a5925": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+      "f249642d2f0f4d5d4a4e257e37142262fc5ed5d4": "f14aa9d2a83746242079ec12b80a2e33292a85e7"
+    },
+    "pinned_oid": "f14aa9d2a83746242079ec12b80a2e33292a85e7",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

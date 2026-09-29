@@ -1,0 +1,560 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-27T19:29:32Z",
+      "conclusion": "success",
+      "created_at": "2026-08-27T19:29:20Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645327288,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "pre-job",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m12b5gs00fbtd34y053p8w05-4vcpu",
+      "started_at": "2026-08-27T19:29:28Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-27T19:29:29Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-27T19:29:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:29Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-27T19:29:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:31Z",
+          "conclusion": "success",
+          "name": "Run CURRENT_TREE=$(gh api \"repos/$REPOSITORY/git/commits/$COMMIT_SHA\" --jq '.tree.sha')",
+          "number": 3,
+          "started_at": "2026-08-27T19:29:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:31Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 6,
+          "started_at": "2026-08-27T19:29:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "started_at": "2026-08-27T19:29:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "success",
+      "created_at": "2026-08-27T19:29:20Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645327411,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "llm-connections-filter",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m12b5gwdpyez5qt6y2vp73af-4vcpu",
+      "started_at": "2026-08-27T19:29:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-27T19:29:29Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-27T19:29:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:30Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-27T19:29:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-08-27T19:29:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:32Z",
+          "conclusion": "success",
+          "name": "Run dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706",
+          "number": 4,
+          "started_at": "2026-08-27T19:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:32Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 7,
+          "started_at": "2026-08-27T19:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:32Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 8,
+          "started_at": "2026-08-27T19:29:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-27T19:29:32Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391218,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-in-app-agent-sandbox-runtime",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391325,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-web-client",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391333,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "prettier-check",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391508,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-shared",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391539,
+      "labels": [],
+      "name": "test-docker-build (${{ matrix.component }})",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391621,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "e2e-tests",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391716,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "e2e-server-tests",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391754,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-worker (node${{ matrix.node-version }}, pg${{ matrix.postgres-version }}, mode${{ matrix.deploy-mode }})",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391793,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-storybook",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391856,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-eslint-plugin",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391876,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "tests-web (node${{ matrix.node-version }}, pg${{ matrix.postgres-version }}, mode${{ matrix.deploy-mode }})",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391940,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "knip",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:33Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:33Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645391955,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "lint",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:33Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:41Z",
+      "conclusion": "success",
+      "created_at": "2026-08-27T19:29:34Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645394649,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "all-ci-passed",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m12b5vfr2z427q8xpr5h4v8v-4vcpu",
+      "started_at": "2026-08-27T19:29:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-27T19:29:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Set check result as an output",
+          "number": 3,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Successful deploy",
+          "number": 4,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "skipped",
+          "name": "Failing deploy",
+          "number": 5,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "skipped",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 6,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "skipped",
+          "name": "Notify Slack",
+          "number": 7,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Output job results",
+          "number": 8,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-27T19:29:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-27T19:29:40Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:34Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:34Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645395627,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "test-worker-llm-connections (node24, pg15)",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:34Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:42Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:42Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645433879,
+      "labels": [],
+      "name": "build-docker-image-release",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:42Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:42Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:42Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645434238,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "publish-docker-image-release",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:42Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-08-27T19:29:42Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-27T19:29:42Z",
+      "head_sha": "7be41122b7d0fb71cf27081dd275c623fbfdb8bb",
+      "id": 98645434393,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "notify-docker-image-release",
+      "run_attempt": 1,
+      "run_id": 33108668848,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-27T19:29:42Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    }
+  ],
+  "run_id": 33108668848
+}

@@ -1,0 +1,500 @@
+{
+  "benchmark": "pmndrs/zustand@b57db4f86ef179285da216eeb291266da82c361c:.github/workflows/test-multiple-builds.yml",
+  "benchmark_id": "pmndrs__zustand__test-multiple-builds",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33426586120,
+        33200568613,
+        32728128171,
+        32253695108,
+        32233300628
+      ],
+      "window_count": 16
+    },
+    "push": {
+      "runs": [
+        32790999156,
+        32256152610,
+        32251096845,
+        32059906972,
+        31654846645
+      ],
+      "window_count": 9
+    }
+  },
+  "jobs": {
+    "test_multiple_builds (cjs, development)": {
+      "duration_seconds": 39.0,
+      "durations": [
+        41.0,
+        38.0,
+        34.0,
+        40.0,
+        45.0,
+        26.0,
+        40.0,
+        41.0,
+        34.0,
+        35.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        7.0,
+        4.0,
+        3.0,
+        5.0,
+        6.0,
+        4.0,
+        6.0,
+        5.0,
+        2.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            3.0,
+            5.0,
+            6.0,
+            10.0,
+            3.0,
+            5.0,
+            5.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            5.0,
+            3.0,
+            5.0,
+            8.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            6.0,
+            10.0,
+            10.0,
+            10.0,
+            9.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            7.0,
+            9.0,
+            5.0,
+            9.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Test cjs development",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (esm, development)": {
+      "duration_seconds": 36.5,
+      "durations": [
+        38.0,
+        38.0,
+        35.0,
+        36.0,
+        36.0,
+        49.0,
+        37.0,
+        32.0,
+        36.0,
+        39.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        6.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        6.0,
+        3.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            8.0,
+            6.0,
+            3.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            3.0,
+            4.0,
+            4.0,
+            11.0,
+            5.0,
+            3.0,
+            3.0,
+            8.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            10.0,
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            7.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Test esm development",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "06a265c4f37cecf898ff43bc7b9d8dcad4784477": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "2115efb9e270e73ad1d3472dfe0e0c7b8c6abcd4": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "9e5269bca1f110b068c1da2681e1cbe1404b6f79": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "a8f6d971a334e26e0cea07654a048b62f537492f": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "b126c338444a328d729f07ca9c192596d003c2cb": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "b57db4f86ef179285da216eeb291266da82c361c": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "d418e7eb7757911f3e13da65a050bf9d035aa99d": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "ea612a500b7dad2c6bf51ea5d8f3e50944da70a1": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "f094eebe9bd3b4b0d77b997f69ab1d273f69a877": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+      "fb3d5e98d148187767c8fcc005ed6b4f4679dddc": "cec368bbd15b62b0773f93404284a5ae21a63cc2"
+    },
+    "pinned_oid": "cec368bbd15b62b0773f93404284a5ae21a63cc2",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

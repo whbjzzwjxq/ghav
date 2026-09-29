@@ -1,0 +1,3633 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T20:54:57Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:54:08Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99640717939,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "analyze",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052612976",
+      "started_at": "2026-08-31T20:54:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:54:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:54:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:54:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-31T20:54:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:54:54Z",
+          "conclusion": "success",
+          "name": "Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d",
+          "number": 3,
+          "started_at": "2026-08-31T20:54:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:54:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 6,
+          "started_at": "2026-08-31T20:54:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:54:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 7,
+          "started_at": "2026-08-31T20:54:54Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T20:57:03Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:54:08Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99640718015,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "build",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052612933",
+      "started_at": "2026-08-31T20:54:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:54:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:54:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:54:57Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:54:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:03Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 3,
+          "started_at": "2026-08-31T20:54:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:03Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 4,
+          "started_at": "2026-08-31T20:55:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:12Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 5,
+          "started_at": "2026-08-31T20:55:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:45Z",
+          "conclusion": "success",
+          "name": "Build release targets",
+          "number": 6,
+          "started_at": "2026-08-31T20:55:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:46Z",
+          "conclusion": "success",
+          "name": "Store PR release packages",
+          "number": 7,
+          "started_at": "2026-08-31T20:56:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:00Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 13,
+          "started_at": "2026-08-31T20:56:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:01Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 14,
+          "started_at": "2026-08-31T20:57:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-31T20:57:01Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T20:57:40Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:54:08Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99640718091,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "lint",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613025",
+      "started_at": "2026-08-31T20:55:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:55:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:55:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:32Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:55:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:41Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 3,
+          "started_at": "2026-08-31T20:55:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:42Z",
+          "conclusion": "success",
+          "name": "Setup ESLint Caching",
+          "number": 4,
+          "started_at": "2026-08-31T20:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:51Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 5,
+          "started_at": "2026-08-31T20:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:25Z",
+          "conclusion": "success",
+          "name": "Generate JSON schema types",
+          "number": 6,
+          "started_at": "2026-08-31T20:55:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:56Z",
+          "conclusion": "success",
+          "name": "Run ESLint",
+          "number": 7,
+          "started_at": "2026-08-31T20:56:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:58Z",
+          "conclusion": "success",
+          "name": "Validate NgBot Configuration",
+          "number": 8,
+          "started_at": "2026-08-31T20:56:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:01Z",
+          "conclusion": "success",
+          "name": "Validate Circular Dependencies",
+          "number": 9,
+          "started_at": "2026-08-31T20:56:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:03Z",
+          "conclusion": "success",
+          "name": "Run Validation",
+          "number": 10,
+          "started_at": "2026-08-31T20:57:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:05Z",
+          "conclusion": "success",
+          "name": "Check tooling setup",
+          "number": 11,
+          "started_at": "2026-08-31T20:57:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:12Z",
+          "conclusion": "success",
+          "name": "Check commit message",
+          "number": 12,
+          "started_at": "2026-08-31T20:57:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:15Z",
+          "conclusion": "success",
+          "name": "Check code format",
+          "number": 13,
+          "started_at": "2026-08-31T20:57:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:18Z",
+          "conclusion": "success",
+          "name": "Check Package Licenses",
+          "number": 14,
+          "started_at": "2026-08-31T20:57:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:18Z",
+          "conclusion": "success",
+          "name": "Post Setup ESLint Caching",
+          "number": 26,
+          "started_at": "2026-08-31T20:57:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:38Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 27,
+          "started_at": "2026-08-31T20:57:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:38Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 28,
+          "started_at": "2026-08-31T20:57:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "started_at": "2026-08-31T20:57:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T20:57:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:54:08Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99640718127,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "build-e2e-windows-subset",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613055",
+      "started_at": "2026-08-31T20:55:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:55:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:55:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:34Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:55:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:42Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 3,
+          "started_at": "2026-08-31T20:55:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:42Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 4,
+          "started_at": "2026-08-31T20:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:55:51Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 5,
+          "started_at": "2026-08-31T20:55:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:13Z",
+          "conclusion": "success",
+          "name": "Build E2E tests for Windows on Linux",
+          "number": 6,
+          "started_at": "2026-08-31T20:55:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:29Z",
+          "conclusion": "success",
+          "name": "Store built Windows E2E tests",
+          "number": 7,
+          "started_at": "2026-08-31T20:57:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:42Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 13,
+          "started_at": "2026-08-31T20:57:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:43Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 14,
+          "started_at": "2026-08-31T20:57:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-31T20:57:43Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:00:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555026,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613610",
+      "started_at": "2026-08-31T20:57:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:57:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:57:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:12Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:18Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 3,
+          "started_at": "2026-08-31T20:58:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:18Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 4,
+          "started_at": "2026-08-31T20:58:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:27Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 5,
+          "started_at": "2026-08-31T20:58:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:29Z",
+          "conclusion": "success",
+          "name": "Run module and package tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:58:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:43Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:00:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:44Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:00:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:00:44Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:03:17Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555145,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, pnpm, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613452",
+      "started_at": "2026-08-31T20:57:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:57:19Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:57:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:42Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:57:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:51Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:57:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:25Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:25Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:58:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:54Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:58:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:14Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:02:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:15Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:03:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:03:15Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:03:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555185,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, bun, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613676",
+      "started_at": "2026-08-31T20:58:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:23Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:44Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:53Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:21Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:21Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:23Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:43Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:03:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:43Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:03:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:03:43Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:05:20Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555210,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, pnpm, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613728",
+      "started_at": "2026-08-31T20:58:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:50Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:59Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:19Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:58:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:19Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:05:04Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:05:18Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:05:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:05:19Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:05:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:05:19Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:11:21Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555224,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, esbuild, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613666",
+      "started_at": "2026-08-31T20:58:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:22Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:52Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:04Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:33Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:33Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:55Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:18Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:10:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:19Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:11:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:11:19Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:06:18Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555230,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, yarn, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613832",
+      "started_at": "2026-08-31T20:58:57Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:59:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:30Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:59:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:39Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:57Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:57Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:02Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:15Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:06:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:16Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:06:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:06:16Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:07:08Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555235,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, webpack, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613508",
+      "started_at": "2026-08-31T20:57:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:57:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:57:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:59Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:57:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:08Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:57:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:38Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:58:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:58:38Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:58:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:45Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:58:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:05Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:06:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:05Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:07:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:07:05Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:08:44Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555259,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, webpack, 5)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613794",
+      "started_at": "2026-08-31T20:58:46Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:12Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:22Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:51Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:51Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:22Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:41Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:08:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:41Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:08:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:08:41Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T22:03:28Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555267,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, yarn, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613878",
+      "started_at": "2026-08-31T20:59:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:59:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:59:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:42Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:59:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:52Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:15Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:15Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:00:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:03:14Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:00:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:03:26Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T22:03:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:03:26Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T22:03:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:03:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T22:03:26Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:07:28Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555268,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, yarn, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613873",
+      "started_at": "2026-08-31T20:59:08Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:59:13Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:59:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:44Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:54Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:21Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:21Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:00:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:14Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:00:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:25Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:07:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:26Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:07:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:07:26Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:09:26Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555276,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, webpack, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613806",
+      "started_at": "2026-08-31T20:58:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:29Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:39Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:05Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:05Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:00:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:10Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:00:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:23Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:23Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:09:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:09:23Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:09:41Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555305,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, webpack, 4)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614218",
+      "started_at": "2026-08-31T21:00:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:15Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:24Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:55Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:55Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:24Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:38Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:39Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:39Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:09:39Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:11:34Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555307,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, esbuild, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614172",
+      "started_at": "2026-08-31T21:00:37Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:03Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:12Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:38Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:38Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:11Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:31Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:11:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:32Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:11:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:11:32Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:06:54Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555309,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, webpack, 5)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613772",
+      "started_at": "2026-08-31T20:58:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:06Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:15Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:36Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:36Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:33Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:51Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:52Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:06:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:06:52Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:08:02Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555317,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, webpack, 3)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614041",
+      "started_at": "2026-08-31T20:59:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:59:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:21Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:31Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:48Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:00:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:48Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:48Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:00Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:07:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:00Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:08:00Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:06:48Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555321,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, pnpm, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614322",
+      "started_at": "2026-08-31T21:01:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:36Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:45Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:04Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:04Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:32Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:46Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:47Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:06:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:06:47Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:06:30Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555327,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, bun, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614327",
+      "started_at": "2026-08-31T21:01:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:37Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:47Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:07Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:07Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:13Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:28Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:06:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:29Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:06:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:06:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:06:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:11:56Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555328,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, esbuild, 3)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614064",
+      "started_at": "2026-08-31T21:00:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:29Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:38Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:10Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:10Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:32Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:52Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:11:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:53Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:11:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:11:53Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:08:57Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555329,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, webpack, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614118",
+      "started_at": "2026-08-31T21:00:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:26Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:44Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:53Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:12Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:00:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:12Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:40Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:55Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:08:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:56Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:08:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:08:56Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:09:38Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555335,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, esbuild, 3)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614145",
+      "started_at": "2026-08-31T21:00:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:51Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:00Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:21Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:21Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:21Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:36Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:36Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:09:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:09:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:08:17Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555358,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-package-managers (22, bun, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614467",
+      "started_at": "2026-08-31T21:01:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:26Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:38Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:02:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:00Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:02:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:03:00Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:03:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:59Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:03:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:14Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:15Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:08:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:08:15Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:12:44Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555361,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, esbuild, 4)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614338",
+      "started_at": "2026-08-31T21:01:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:20Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:42Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:51Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:11Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:11Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:12:27Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:12:42Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:12:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:12:42Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:12:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:12:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:12:42Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:10:04Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555362,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, webpack, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614103",
+      "started_at": "2026-08-31T21:00:19Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:21Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:39Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:47Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:06Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:06Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:47Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:02Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:03Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:10:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:10:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:09:32Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555364,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, esbuild, 5)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614344",
+      "started_at": "2026-08-31T21:01:19Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:26Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:53Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:03Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:26Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:02:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:26Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:14Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:29Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:29Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:09:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:09:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:10:31Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555368,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, webpack, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614144",
+      "started_at": "2026-08-31T21:00:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:00Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:08Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:28Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:28Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:17Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:28Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:10:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:29Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:10:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:10:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:11:34Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555371,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, webpack, 1)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614425",
+      "started_at": "2026-08-31T21:01:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:27Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:37Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:02:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:56Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:02:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:57Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:20Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:32Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:11:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:33Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:11:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:11:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:09:56Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555373,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, esbuild, 4)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614138",
+      "started_at": "2026-08-31T21:00:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:48Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:57Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:17Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:00:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:17Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:40Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:55Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:55Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:09:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:09:55Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:09:15Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555375,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, esbuild, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613725",
+      "started_at": "2026-08-31T20:58:28Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:58:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:01Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:10Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:30Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:30Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:59Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T20:59:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:12Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:08:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:13Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:09:13Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:10:55Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555399,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, webpack, 4)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614339",
+      "started_at": "2026-08-31T21:01:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:21Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:44Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:54Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:16Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:16Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:38Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:53Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:10:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:53Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:10:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:10:53Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:07:30Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555401,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, esbuild, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614164",
+      "started_at": "2026-08-31T21:00:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:00Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:08Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:27Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:27Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:15Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:28Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:07:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:28Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:07:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:07:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:07:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:10:17Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555421,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, esbuild, 5)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614331",
+      "started_at": "2026-08-31T21:01:14Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:35Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:44Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:08Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:09Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:09:56Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:15Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:16Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:10:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:10:16Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:11:27Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555437,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, esbuild, 2)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614353",
+      "started_at": "2026-08-31T21:01:21Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:25Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:45Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:55Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:18Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:18Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:09Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:24Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:11:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:25Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:11:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:11:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:11:25Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:10:37Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555505,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-snapshots (22, webpack, 3)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614379",
+      "started_at": "2026-08-31T21:01:28Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:01:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:50Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:01:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:59Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:17Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:01:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:17Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:02:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:21Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:02:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:36Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:10:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:36Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:10:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:10:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:10:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:08:33Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:03Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641555506,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e (22, esbuild, 0)",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052614117",
+      "started_at": "2026-08-31T21:00:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T21:00:26Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T21:00:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:49Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T21:00:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:00:58Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T21:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:28Z",
+          "conclusion": "success",
+          "name": "Setup Bazel",
+          "number": 4,
+          "started_at": "2026-08-31T21:00:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:28Z",
+          "conclusion": "success",
+          "name": "Setup Bazel RBE",
+          "number": 5,
+          "started_at": "2026-08-31T21:01:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:11Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 6,
+          "started_at": "2026-08-31T21:01:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:30Z",
+          "conclusion": "success",
+          "name": "Post Setup Bazel",
+          "number": 11,
+          "started_at": "2026-08-31T21:08:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:31Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 12,
+          "started_at": "2026-08-31T21:08:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:08:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T21:08:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    },
+    {
+      "completed_at": "2026-08-31T21:02:02Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T20:57:45Z",
+      "head_sha": "388e9b1facc6a307bd5f3ddc400a5026e7eee7c7",
+      "id": 99641753374,
+      "labels": [
+        "windows-2025"
+      ],
+      "name": "e2e-windows-subset",
+      "run_attempt": 1,
+      "run_id": 33438513182,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1052613601",
+      "started_at": "2026-08-31T20:57:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:58:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:10Z",
+          "conclusion": "success",
+          "name": "Initialize environment",
+          "number": 2,
+          "started_at": "2026-08-31T20:58:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:31Z",
+          "conclusion": "success",
+          "name": "Install node modules",
+          "number": 3,
+          "started_at": "2026-08-31T20:59:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:59:40Z",
+          "conclusion": "success",
+          "name": "Download built Windows E2E tests",
+          "number": 4,
+          "started_at": "2026-08-31T20:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:01:57Z",
+          "conclusion": "success",
+          "name": "Run CLI E2E tests",
+          "number": 5,
+          "started_at": "2026-08-31T20:59:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:00Z",
+          "conclusion": "success",
+          "name": "Post Initialize environment",
+          "number": 10,
+          "started_at": "2026-08-31T21:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T21:02:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-31T21:02:00Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Pull Request"
+    }
+  ],
+  "run_id": 33438513182
+}

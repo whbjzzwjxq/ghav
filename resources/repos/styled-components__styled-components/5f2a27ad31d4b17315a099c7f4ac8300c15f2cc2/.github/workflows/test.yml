@@ -1,0 +1,61 @@
+name: test
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read #  to fetch code (actions/checkout)
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.nvmrc'
+
+      - run: pnpm install --frozen-lockfile
+      # `biome ci` never writes, unlike `biome check --write` behind `pnpm format`.
+      - run: pnpm format:check
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.nvmrc'
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+
+      # Guards consumer type-check cost against the built .d.ts. Regressions
+      # here are invisible to the unit and type-contract suites, which measure
+      # the library's own workload over src (see #5767).
+      - run: pnpm --filter styled-components type-perf
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.nvmrc'
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test

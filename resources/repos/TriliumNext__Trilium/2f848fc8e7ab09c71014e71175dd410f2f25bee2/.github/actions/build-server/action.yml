@@ -1,0 +1,41 @@
+inputs:
+  os:
+    description: "One of the supported platforms: windows"
+    required: true
+  arch:
+    description: "The architecture to build for: x64, arm64"
+    required: true
+runs:
+  using: composite
+  steps:
+  - uses: pnpm/action-setup@v6
+  - name: Set up node & dependencies
+    uses: actions/setup-node@v7
+    with:
+      node-version: 24
+      cache: "pnpm"
+  - name: Install dependencies
+    shell: bash
+    run: pnpm install --frozen-lockfile
+  # better-sqlite3 v13's bundled prebuilds are linked against a much newer glibc
+  # than the assets previous releases shipped, which would drop distributions we
+  # still support. Recompile against an older one before the build copies
+  # node_modules/better-sqlite3 into dist/.
+  - name: Rebuild better-sqlite3 against an older glibc
+    if: ${{ inputs.os == 'linux' }}
+    shell: bash
+    run: bash scripts/build-portable-better-sqlite3.sh ${{ inputs.arch }}
+  - name: Run Linux server build
+    env:
+      MATRIX_ARCH: ${{ inputs.arch }}
+    shell: bash
+    run: |
+      pnpm run chore:update-build-info
+      pnpm run --filter server package
+  - name: Prepare artifacts
+    shell: bash
+    run: |
+      mkdir -p upload
+      file=$(find ./apps/server/out -name '*.tar.xz' -print -quit)
+      name=${{ github.ref_name }}
+      cp "$file" "upload/TriliumNotes-Server-${name//\//-}-${{ inputs.os }}-${{ inputs.arch }}.tar.xz"

@@ -1,0 +1,16 @@
+name: With inputs
+inputs:
+  greeting:
+    required: true
+  token:
+    default: ${{ github.token }}
+runs:
+  using: composite
+  steps:
+    - run: echo "${{ inputs.greeting }}"
+      shell: bash
+    - if: runner.os == 'Windows' && github.event_name == 'push'
+      run: echo "$DEPLOY_TARGET"
+      shell: bash
+      env:
+        TOKEN: ${{ inputs.token }}

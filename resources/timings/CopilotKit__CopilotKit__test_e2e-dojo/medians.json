@@ -1,0 +1,7322 @@
+{
+  "benchmark": "CopilotKit/CopilotKit@fe51cec465865375b77b00604988e2211983d58b:.github/workflows/test_e2e-dojo.yml",
+  "benchmark_id": "CopilotKit__CopilotKit__test_e2e-dojo",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33450567182,
+        33448323171,
+        33445384059,
+        33443860484,
+        33442468132
+      ],
+      "window_count": 835
+    },
+    "push": {
+      "runs": [
+        33435309756,
+        33433168226,
+        33427723767,
+        33422619496,
+        33415832688
+      ],
+      "window_count": 169
+    }
+  },
+  "jobs": {
+    "a2a-middleware": {
+      "duration_seconds": 198.0,
+      "durations": [
+        197.0,
+        231.0,
+        184.0,
+        277.0,
+        213.0,
+        202.0,
+        191.0,
+        195.0,
+        193.0,
+        199.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        7.0,
+        10.0,
+        7.0,
+        33.0,
+        10.0,
+        8.0,
+        8.0,
+        7.0,
+        8.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            10.0,
+            6.0,
+            11.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            4.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            49.0,
+            27.0,
+            44.0,
+            27.0,
+            29.0,
+            26.0,
+            30.0,
+            34.0,
+            33.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 31.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            11.0,
+            13.0,
+            14.0,
+            13.0,
+            10.0,
+            13.0,
+            10.0,
+            8.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            8.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            8.0,
+            7.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            57.0,
+            58.0,
+            52.0,
+            63.0,
+            71.0,
+            59.0,
+            51.0,
+            54.0,
+            50.0,
+            56.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 56.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            62.0,
+            54.0,
+            70.0,
+            58.0,
+            58.0,
+            57.0,
+            58.0,
+            58.0,
+            57.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 58.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            3.0,
+            6.0,
+            4.0,
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            8.0,
+            9.0,
+            8.0,
+            7.0,
+            6.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            4.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run tests – a2a-middleware",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – a2a-middleware",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "adk-middleware": {
+      "duration_seconds": 254.0,
+      "durations": [
+        260.0,
+        256.0,
+        228.0,
+        338.0,
+        259.0,
+        287.0,
+        252.0,
+        241.0,
+        251.0,
+        241.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        9.0,
+        10.0,
+        13.0,
+        37.0,
+        7.0,
+        8.0,
+        7.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            9.0,
+            5.0,
+            11.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            4.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0,
+            0.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            5.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            33.0,
+            26.0,
+            47.0,
+            47.0,
+            41.0,
+            38.0,
+            33.0,
+            42.0,
+            34.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 39.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            13.0,
+            9.0,
+            44.0,
+            10.0,
+            7.0,
+            9.0,
+            8.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            2.0,
+            0.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            5.0,
+            8.0,
+            7.0,
+            7.0,
+            6.0,
+            11.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            61.0,
+            47.0,
+            64.0,
+            53.0,
+            55.0,
+            56.0,
+            47.0,
+            59.0,
+            52.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 55.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            6.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            59.0,
+            54.0,
+            72.0,
+            58.0,
+            57.0,
+            56.0,
+            58.0,
+            55.0,
+            56.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            51.0,
+            52.0,
+            59.0,
+            53.0,
+            53.0,
+            56.0,
+            54.0,
+            51.0,
+            55.0
+          ],
+          "name": "Run tests – adk-middleware",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 53.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – adk-middleware",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "agno": {
+      "duration_seconds": 225.0,
+      "durations": [
+        222.0,
+        269.0,
+        247.0,
+        255.0,
+        203.0,
+        220.0,
+        229.0,
+        212.0,
+        209.0,
+        228.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.5,
+      "overheads": [
+        7.0,
+        12.0,
+        14.0,
+        24.0,
+        7.0,
+        7.0,
+        11.0,
+        7.0,
+        8.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            12.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            5.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            33.0,
+            50.0,
+            40.0,
+            25.0,
+            38.0,
+            34.0,
+            29.0,
+            28.0,
+            38.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 33.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            13.0,
+            10.0,
+            11.0,
+            8.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            56.0,
+            58.0,
+            50.0,
+            52.0,
+            53.0,
+            60.0,
+            52.0,
+            52.0,
+            59.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 54.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            58.0,
+            59.0,
+            58.0,
+            54.0,
+            57.0,
+            57.0,
+            57.0,
+            56.0,
+            59.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            44.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            26.0,
+            24.0,
+            24.0,
+            24.0,
+            26.0,
+            25.0,
+            25.0,
+            24.0,
+            22.0
+          ],
+          "name": "Run tests – agno",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – agno",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "aws-strands": {
+      "duration_seconds": 289.0,
+      "durations": [
+        283.0,
+        350.0,
+        286.0,
+        314.0,
+        269.0,
+        394.0,
+        287.0,
+        260.0,
+        291.0,
+        292.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 7.5,
+      "overheads": [
+        7.0,
+        13.0,
+        14.0,
+        25.0,
+        6.0,
+        7.0,
+        7.0,
+        8.0,
+        9.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            4.0,
+            10.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            10.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            1.0,
+            4.0,
+            3.0,
+            1.0,
+            4.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            5.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            1.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            49.0,
+            28.0,
+            39.0,
+            27.0,
+            28.0,
+            39.0,
+            25.0,
+            32.0,
+            42.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            20.0,
+            11.0,
+            12.0,
+            10.0,
+            60.0,
+            9.0,
+            7.0,
+            10.0,
+            8.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            65.0,
+            11.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            58.0,
+            60.0,
+            49.0,
+            50.0,
+            64.0,
+            49.0,
+            50.0,
+            54.0,
+            52.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 53.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            68.0,
+            61.0,
+            60.0,
+            63.0,
+            60.0,
+            66.0,
+            60.0,
+            67.0,
+            66.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 64.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            23.0,
+            4.0,
+            6.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            88.0,
+            91.0,
+            87.0,
+            85.0,
+            85.0,
+            88.0,
+            84.0,
+            85.0,
+            89.0,
+            86.0
+          ],
+          "name": "Run tests – aws-strands",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 86.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – aws-strands",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "crew-ai": {
+      "duration_seconds": 279.0,
+      "durations": [
+        274.0,
+        303.0,
+        292.0,
+        430.0,
+        275.0,
+        272.0,
+        274.0,
+        282.0,
+        276.0,
+        291.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        8.0,
+        11.0,
+        13.0,
+        30.0,
+        7.0,
+        8.0,
+        7.0,
+        8.0,
+        8.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            9.0,
+            6.0,
+            11.0,
+            6.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            9.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            3.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            40.0,
+            34.0,
+            49.0,
+            32.0,
+            30.0,
+            25.0,
+            28.0,
+            41.0,
+            42.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            9.0,
+            15.0,
+            8.0,
+            9.0,
+            8.0,
+            10.0,
+            7.0,
+            8.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            10.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            5.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            54.0,
+            54.0,
+            81.0,
+            53.0,
+            54.0,
+            52.0,
+            55.0,
+            48.0,
+            51.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 53.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            58.0,
+            61.0,
+            59.0,
+            88.0,
+            58.0,
+            58.0,
+            60.0,
+            60.0,
+            54.0,
+            57.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 58.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            4.0,
+            4.0,
+            5.0,
+            7.0,
+            5.0,
+            3.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            11.0,
+            13.0,
+            12.0,
+            12.0,
+            13.0,
+            11.0,
+            12.0,
+            12.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            88.0,
+            84.0,
+            84.0,
+            107.0,
+            79.0,
+            80.0,
+            82.0,
+            83.0,
+            80.0,
+            85.0
+          ],
+          "name": "Run tests – crew-ai",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 83.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload traces – crew-ai",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "detect-changes": {
+      "duration_seconds": 10.5,
+      "durations": [
+        12.0,
+        9.0,
+        11.0,
+        12.0,
+        10.0,
+        7.0,
+        12.0,
+        7.0,
+        10.0,
+        11.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        2.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            3.0,
+            8.0,
+            4.0,
+            4.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "langgraph-fastapi": {
+      "duration_seconds": 299.0,
+      "durations": [
+        298.0,
+        305.0,
+        307.0,
+        322.0,
+        280.0,
+        299.0,
+        301.0,
+        272.0,
+        299.0,
+        283.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.5,
+      "overheads": [
+        6.0,
+        11.0,
+        15.0,
+        25.0,
+        7.0,
+        9.0,
+        8.0,
+        7.0,
+        9.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            9.0,
+            6.0,
+            11.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            4.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0,
+            34.0,
+            33.0,
+            39.0,
+            31.0,
+            28.0,
+            35.0,
+            28.0,
+            28.0,
+            29.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            10.0,
+            8.0,
+            10.0,
+            17.0,
+            8.0,
+            14.0,
+            7.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            10.0,
+            7.0,
+            9.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            5.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            54.0,
+            61.0,
+            57.0,
+            48.0,
+            48.0,
+            53.0,
+            51.0,
+            49.0,
+            54.0,
+            54.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 53.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            6.0,
+            3.0,
+            3.0,
+            15.0,
+            5.0,
+            3.0,
+            5.0,
+            2.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            61.0,
+            58.0,
+            57.0,
+            54.0,
+            54.0,
+            59.0,
+            58.0,
+            54.0,
+            59.0,
+            57.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0,
+            7.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            99.0,
+            97.0,
+            98.0,
+            98.0,
+            95.0,
+            98.0,
+            97.0,
+            96.0,
+            101.0,
+            95.0
+          ],
+          "name": "Run tests – langgraph-fastapi",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 97.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload traces – langgraph-fastapi",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "langgraph-python": {
+      "duration_seconds": 314.5,
+      "durations": [
+        328.0,
+        326.0,
+        324.0,
+        341.0,
+        318.0,
+        302.0,
+        311.0,
+        309.0,
+        305.0,
+        310.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.5,
+      "overheads": [
+        7.0,
+        11.0,
+        13.0,
+        25.0,
+        6.0,
+        8.0,
+        8.0,
+        8.0,
+        9.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            9.0,
+            5.0,
+            11.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            4.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            2.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            40.0,
+            39.0,
+            39.0,
+            32.0,
+            26.0,
+            28.0,
+            29.0,
+            28.0,
+            35.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 33.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            9.0,
+            10.0,
+            12.0,
+            10.0,
+            12.0,
+            10.0,
+            12.0,
+            9.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            7.0,
+            8.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            52.0,
+            58.0,
+            50.0,
+            53.0,
+            50.0,
+            53.0,
+            53.0,
+            52.0,
+            50.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 52.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            55.0,
+            55.0,
+            54.0,
+            59.0,
+            54.0,
+            57.0,
+            59.0,
+            57.0,
+            53.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 55.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            6.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            10.0,
+            11.0,
+            9.0,
+            9.0,
+            11.0,
+            9.0,
+            9.0,
+            11.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            115.0,
+            119.0,
+            117.0,
+            114.0,
+            117.0,
+            118.0,
+            116.0,
+            117.0,
+            116.0,
+            117.0
+          ],
+          "name": "Run tests – langgraph-python",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 117.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Upload traces – langgraph-python",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "langgraph-typescript": {
+      "duration_seconds": 330.0,
+      "durations": [
+        326.0,
+        328.0,
+        332.0,
+        464.0,
+        342.0,
+        391.0,
+        310.0,
+        303.0,
+        331.0,
+        329.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.5,
+      "overheads": [
+        7.0,
+        10.0,
+        15.0,
+        28.0,
+        10.0,
+        8.0,
+        9.0,
+        8.0,
+        6.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            10.0,
+            5.0,
+            11.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            2.0,
+            5.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            4.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            30.0,
+            40.0,
+            48.0,
+            30.0,
+            71.0,
+            26.0,
+            26.0,
+            44.0,
+            39.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 34.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            5.0,
+            14.0,
+            8.0,
+            20.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            57.0,
+            55.0,
+            53.0,
+            81.0,
+            70.0,
+            59.0,
+            52.0,
+            49.0,
+            57.0,
+            49.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 56.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            7.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            59.0,
+            58.0,
+            58.0,
+            84.0,
+            58.0,
+            60.0,
+            54.0,
+            54.0,
+            58.0,
+            64.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 58.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            8.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            143.0,
+            142.0,
+            137.0,
+            169.0,
+            141.0,
+            145.0,
+            141.0,
+            138.0,
+            136.0,
+            139.0
+          ],
+          "name": "Run tests – langgraph-typescript",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 141.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – langgraph-typescript",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "llama-index": {
+      "duration_seconds": 250.5,
+      "durations": [
+        258.0,
+        240.0,
+        262.0,
+        372.0,
+        274.0,
+        230.0,
+        236.0,
+        234.0,
+        243.0,
+        317.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.5,
+      "overheads": [
+        8.0,
+        11.0,
+        14.0,
+        41.0,
+        8.0,
+        9.0,
+        8.0,
+        7.0,
+        7.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            6.0,
+            12.0,
+            9.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            6.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            1.0,
+            5.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            41.0,
+            24.0,
+            40.0,
+            46.0,
+            41.0,
+            32.0,
+            31.0,
+            36.0,
+            38.0,
+            63.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 39.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            13.0,
+            9.0,
+            13.0,
+            9.0,
+            8.0,
+            8.0,
+            10.0,
+            8.0,
+            9.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            7.0,
+            10.0,
+            8.0,
+            10.0,
+            8.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            61.0,
+            52.0,
+            61.0,
+            80.0,
+            63.0,
+            49.0,
+            50.0,
+            53.0,
+            58.0,
+            58.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 58.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            61.0,
+            61.0,
+            81.0,
+            66.0,
+            59.0,
+            63.0,
+            58.0,
+            57.0,
+            88.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 62.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            8.0,
+            6.0,
+            4.0,
+            5.0,
+            3.0,
+            6.0,
+            7.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            44.0,
+            46.0,
+            46.0,
+            56.0,
+            48.0,
+            44.0,
+            44.0,
+            44.0,
+            43.0,
+            54.0
+          ],
+          "name": "Run tests – llama-index",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – llama-index",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "mastra": {
+      "duration_seconds": 239.5,
+      "durations": [
+        261.0,
+        247.0,
+        230.0,
+        375.0,
+        236.0,
+        236.0,
+        237.0,
+        242.0,
+        224.0,
+        246.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        6.0,
+        8.0,
+        12.0,
+        40.0,
+        8.0,
+        7.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            10.0,
+            5.0,
+            11.0,
+            7.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            5.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            6.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            35.0,
+            29.0,
+            47.0,
+            32.0,
+            28.0,
+            29.0,
+            30.0,
+            30.0,
+            36.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            14.0,
+            6.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0,
+            7.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            49.0,
+            49.0,
+            47.0,
+            77.0,
+            50.0,
+            51.0,
+            48.0,
+            48.0,
+            48.0,
+            53.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 49.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            10.0,
+            3.0,
+            4.0,
+            5.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            57.0,
+            56.0,
+            55.0,
+            79.0,
+            55.0,
+            66.0,
+            62.0,
+            64.0,
+            56.0,
+            60.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 58.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            56.0,
+            56.0,
+            75.0,
+            56.0,
+            55.0,
+            61.0,
+            61.0,
+            55.0,
+            58.0
+          ],
+          "name": "Run tests – mastra",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 56.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Upload traces – mastra",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mastra-agent-local": {
+      "duration_seconds": 237.0,
+      "durations": [
+        246.0,
+        232.0,
+        242.0,
+        358.0,
+        227.0,
+        218.0,
+        215.0,
+        247.0,
+        211.0,
+        245.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        10.0,
+        12.0,
+        14.0,
+        29.0,
+        7.0,
+        8.0,
+        8.0,
+        7.0,
+        8.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            5.0,
+            11.0,
+            6.0,
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            8.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            6.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            32.0,
+            34.0,
+            49.0,
+            38.0,
+            26.0,
+            24.0,
+            43.0,
+            28.0,
+            42.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 36.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            7.0,
+            13.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            5.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            47.0,
+            51.0,
+            81.0,
+            47.0,
+            48.0,
+            48.0,
+            59.0,
+            46.0,
+            53.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 49.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            12.0,
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            58.0,
+            57.0,
+            83.0,
+            58.0,
+            58.0,
+            55.0,
+            56.0,
+            54.0,
+            61.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            51.0,
+            51.0,
+            66.0,
+            49.0,
+            53.0,
+            54.0,
+            52.0,
+            51.0,
+            52.0
+          ],
+          "name": "Run tests – mastra-agent-local",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 51.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Upload traces – mastra-agent-local",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "middleware-starter": {
+      "duration_seconds": 189.0,
+      "durations": [
+        191.0,
+        219.0,
+        174.0,
+        184.0,
+        208.0,
+        189.0,
+        189.0,
+        172.0,
+        186.0,
+        198.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 9.0,
+      "overheads": [
+        7.0,
+        10.0,
+        7.0,
+        9.0,
+        11.0,
+        9.0,
+        7.0,
+        8.0,
+        9.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            9.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            10.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            49.0,
+            26.0,
+            32.0,
+            34.0,
+            34.0,
+            27.0,
+            26.0,
+            34.0,
+            43.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            5.0,
+            7.0,
+            5.0,
+            13.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            59.0,
+            59.0,
+            48.0,
+            48.0,
+            51.0,
+            58.0,
+            48.0,
+            48.0,
+            57.0,
+            51.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 51.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            26.0,
+            3.0,
+            9.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            60.0,
+            59.0,
+            57.0,
+            60.0,
+            54.0,
+            54.0,
+            58.0,
+            58.0,
+            51.0,
+            56.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Run tests – middleware-starter",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – middleware-starter",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "pydantic-ai": {
+      "duration_seconds": 223.5,
+      "durations": [
+        222.0,
+        221.0,
+        218.0,
+        343.0,
+        245.0,
+        235.0,
+        234.0,
+        218.0,
+        225.0,
+        217.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        8.0,
+        9.0,
+        14.0,
+        29.0,
+        11.0,
+        8.0,
+        8.0,
+        7.0,
+        8.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            10.0,
+            5.0,
+            10.0,
+            6.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            4.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            5.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            29.0,
+            31.0,
+            47.0,
+            35.0,
+            35.0,
+            36.0,
+            26.0,
+            41.0,
+            28.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            7.0,
+            16.0,
+            9.0,
+            8.0,
+            7.0,
+            11.0,
+            9.0,
+            9.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            10.0,
+            9.0,
+            7.0,
+            6.0,
+            5.0,
+            7.0,
+            9.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            53.0,
+            49.0,
+            79.0,
+            73.0,
+            69.0,
+            57.0,
+            53.0,
+            49.0,
+            55.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 54.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            57.0,
+            54.0,
+            54.0,
+            79.0,
+            56.0,
+            59.0,
+            62.0,
+            57.0,
+            56.0,
+            58.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            7.0,
+            4.0,
+            5.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            36.0,
+            33.0,
+            31.0,
+            47.0,
+            30.0,
+            29.0,
+            35.0,
+            34.0,
+            32.0,
+            30.0
+          ],
+          "name": "Run tests – pydantic-ai",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – pydantic-ai",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "server-starter": {
+      "duration_seconds": 206.5,
+      "durations": [
+        185.0,
+        200.0,
+        201.0,
+        319.0,
+        223.0,
+        204.0,
+        199.0,
+        209.0,
+        233.0,
+        209.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 9.0,
+      "overheads": [
+        9.0,
+        13.0,
+        12.0,
+        29.0,
+        12.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            7.0,
+            5.0,
+            12.0,
+            6.0,
+            4.0,
+            6.0,
+            6.0,
+            5.0,
+            8.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            6.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            5.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            36.0,
+            28.0,
+            47.0,
+            34.0,
+            35.0,
+            32.0,
+            35.0,
+            56.0,
+            42.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 35.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            15.0,
+            16.0,
+            9.0,
+            8.0,
+            8.0,
+            21.0,
+            10.0,
+            7.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            10.0,
+            7.0,
+            7.0,
+            5.0,
+            7.0,
+            24.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            50.0,
+            51.0,
+            55.0,
+            80.0,
+            75.0,
+            53.0,
+            56.0,
+            56.0,
+            50.0,
+            53.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 54.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            54.0,
+            56.0,
+            82.0,
+            56.0,
+            59.0,
+            57.0,
+            54.0,
+            54.0,
+            58.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 56.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            8.0,
+            5.0,
+            7.0,
+            3.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            11.0,
+            9.0,
+            9.0,
+            12.0,
+            8.0,
+            9.0,
+            8.0
+          ],
+          "name": "Run tests – server-starter",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload traces – server-starter",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "server-starter-all": {
+      "duration_seconds": 231.5,
+      "durations": [
+        358.0,
+        246.0,
+        236.0,
+        349.0,
+        214.0,
+        217.0,
+        212.0,
+        227.0,
+        236.0,
+        220.0
+      ],
+      "main_step_counts": [
+        22
+      ],
+      "overhead_seconds": 9.0,
+      "overheads": [
+        9.0,
+        11.0,
+        14.0,
+        31.0,
+        8.0,
+        9.0,
+        9.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check relevance",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Detect fork PR",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            5.0,
+            10.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout CPK",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout AGUI",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            5.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Resolve pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            98.0,
+            32.0,
+            40.0,
+            47.0,
+            24.0,
+            28.0,
+            26.0,
+            35.0,
+            43.0,
+            30.0
+          ],
+          "name": "Cache pnpm store",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 33.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache Python dependencies (restore-only)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            13.0,
+            9.0,
+            8.0,
+            8.0,
+            10.0,
+            8.0,
+            7.0
+          ],
+          "name": "Install Poetry",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install uv",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            6.0,
+            10.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install cpk dependencies",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            50.0,
+            54.0,
+            81.0,
+            54.0,
+            53.0,
+            49.0,
+            56.0,
+            51.0,
+            55.0
+          ],
+          "name": "Build cpk packages",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 53.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install ag-ui dependencies",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            96.0,
+            54.0,
+            57.0,
+            85.0,
+            58.0,
+            57.0,
+            55.0,
+            57.0,
+            62.0,
+            55.0
+          ],
+          "name": "Prepare dojo for e2e",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 57.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Link cpk into ag-ui",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            30.0,
+            5.0,
+            8.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install e2e dependencies",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "write langgraph env files",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            7.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0
+          ],
+          "name": "Run dojo+agents",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            35.0,
+            34.0,
+            40.0,
+            34.0,
+            35.0,
+            40.0,
+            32.0,
+            34.0,
+            33.0
+          ],
+          "name": "Run tests – server-starter-all",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 34.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload traces – server-starter-all",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "04185cd5f9b97e7c6b6e36ea1be47cd808afbd13": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "0bbfc8411bfb888f4639d68ff229cc788790f626": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "302483c166927d48ed0a0c9ab06b513fb85b2bae": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "34e8473e1f9b1208a70964a5bdb6a5fd4b39d495": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "56c2378ff5526d19dd0ccd534ba063eca6dc61e4": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "6ae23c0df0e64b96844f6757ef7f029bf988ce0c": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "b07b1320f26d93c45f2eab391a3c3ec14bf3b065": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "d0d1c11215dc01835f7d10a2280f4800634e1177": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "e0d1b4bb70607c8238f6e771f9cafa7ce6140e04": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+      "f08f478cf73c46d34e8db03dedcc61f695f9b9b5": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6"
+    },
+    "pinned_oid": "3f4f40e2b930fda1aaccfa397eda932fb37c1fd6",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

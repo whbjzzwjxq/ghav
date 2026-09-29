@@ -1,0 +1,35 @@
+name: Release Floating UI
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: write # Required for changesets/action to push release branch commits
+  pull-requests: write # Required for changesets/action to open/update the release PR
+
+jobs:
+  test:
+    uses: ./.github/workflows/ci.yml
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - name: Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release
+          version: node .github/changeset-version.js
+          commit: "chore: version packages"
+          title: "chore: version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: "" # Workaround. See https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868

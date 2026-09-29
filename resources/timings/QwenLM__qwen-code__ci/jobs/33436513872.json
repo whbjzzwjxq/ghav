@@ -1,0 +1,1089 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T22:19:32Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:38Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662644777,
+      "labels": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "ecs-qwen"
+      ],
+      "name": "web-shell E2E Smoke (ubuntu-latest, Node 22.x)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "Default",
+      "runner_name": "ecs-qwen-hk5-22",
+      "started_at": "2026-08-31T22:13:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T22:13:46Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T22:13:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:47Z",
+          "conclusion": "success",
+          "name": "Restore workspace ownership",
+          "number": 2,
+          "started_at": "2026-08-31T22:13:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:47Z",
+          "conclusion": "success",
+          "name": "Clean stale .qwen before checkout",
+          "number": 3,
+          "started_at": "2026-08-31T22:13:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 4,
+          "started_at": "2026-08-31T22:13:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "success",
+          "name": "Verify checkout includes expected head commit",
+          "number": 5,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "skipped",
+          "name": "Set up Node.js 22.x (hosted)",
+          "number": 6,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "success",
+          "name": "Use pre-installed Node.js (self-hosted)",
+          "number": 7,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "success",
+          "name": "Configure persistent npm cache (self-hosted)",
+          "number": 8,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "success",
+          "name": "Configure npm for rate limiting",
+          "number": 9,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:13:53Z",
+          "conclusion": "success",
+          "name": "Disk floor gate (self-hosted)",
+          "number": 10,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:17:34Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 11,
+          "started_at": "2026-08-31T22:13:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:17:34Z",
+          "conclusion": "skipped",
+          "name": "Install Playwright Chromium (hosted)",
+          "number": 12,
+          "started_at": "2026-08-31T22:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:17:35Z",
+          "conclusion": "success",
+          "name": "Install Playwright Chromium (self-hosted)",
+          "number": 13,
+          "started_at": "2026-08-31T22:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:17:35Z",
+          "conclusion": "success",
+          "name": "Choose web-shell Playwright port",
+          "number": 14,
+          "started_at": "2026-08-31T22:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:19:24Z",
+          "conclusion": "success",
+          "name": "Run web-shell browser smoke",
+          "number": 15,
+          "started_at": "2026-08-31T22:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:19:28Z",
+          "conclusion": "success",
+          "name": "Upload web-shell Playwright artifacts",
+          "number": 16,
+          "started_at": "2026-08-31T22:19:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:19:28Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 32,
+          "started_at": "2026-08-31T22:19:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T22:19:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "started_at": "2026-08-31T22:19:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:31:58Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662644881,
+      "labels": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "ecs-qwen"
+      ],
+      "name": "Classify PR",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "Default",
+      "runner_name": "ecs-qwen-hk3-5",
+      "started_at": "2026-08-31T20:31:47Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:31:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:31:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:31:50Z",
+          "conclusion": "success",
+          "name": "Detect release version-sync PR",
+          "number": 2,
+          "started_at": "2026-08-31T20:31:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:31:50Z",
+          "conclusion": "success",
+          "name": "Select Linux runner",
+          "number": 3,
+          "started_at": "2026-08-31T20:31:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:31:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 4,
+          "started_at": "2026-08-31T20:31:50Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:32:26Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645626,
+      "labels": [
+        "windows-2022"
+      ],
+      "name": "Desktop Shell (windows-2022)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000435051",
+      "started_at": "2026-08-31T20:32:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:32:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:17Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "started_at": "2026-08-31T20:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "success",
+          "name": "Detect desktop-shell changes",
+          "number": 3,
+          "started_at": "2026-08-31T20:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "skipped",
+          "name": "Install Linux dependencies",
+          "number": 4,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "number": 5,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "skipped",
+          "name": "Run dtolnay/rust-toolchain@4cda84d5c5c54efe2404f9d843567869ab1699d4",
+          "number": 6,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "skipped",
+          "name": "Run Swatinem/rust-cache@42dc69e1aa15d09112580998cf2ef0119e2e91ae",
+          "number": 7,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "skipped",
+          "name": "Compile and test the desktop crate",
+          "number": 8,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:23Z",
+          "conclusion": "skipped",
+          "name": "Run desktop release tests",
+          "number": 9,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:25Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 18,
+          "started_at": "2026-08-31T20:32:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-31T20:32:25Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:31:58Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645724,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Test (macos-latest, Node 22.x)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T22:13:39Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:57:11Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645733,
+      "labels": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "ecs-qwen"
+      ],
+      "name": "Test (ubuntu-latest, Node 22.x)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "Default",
+      "runner_name": "ecs-qwen-hk4-2",
+      "started_at": "2026-08-31T20:32:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:32:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:11Z",
+          "conclusion": "success",
+          "name": "Restore workspace ownership",
+          "number": 2,
+          "started_at": "2026-08-31T20:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:11Z",
+          "conclusion": "success",
+          "name": "Clean stale .qwen before checkout",
+          "number": 3,
+          "started_at": "2026-08-31T20:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:17Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 4,
+          "started_at": "2026-08-31T20:32:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:17Z",
+          "conclusion": "success",
+          "name": "Verify checkout includes expected head commit",
+          "number": 5,
+          "started_at": "2026-08-31T20:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "success",
+          "name": "Classify CI profile",
+          "number": 6,
+          "started_at": "2026-08-31T20:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "success",
+          "name": "Check workflow file size",
+          "number": 7,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "skipped",
+          "name": "Docs-only CI",
+          "number": 8,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "skipped",
+          "name": "GitHub CI helper checks",
+          "number": 9,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "skipped",
+          "name": "Set up Node.js 22.x (hosted)",
+          "number": 10,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "success",
+          "name": "Use pre-installed Node.js (self-hosted)",
+          "number": 11,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "success",
+          "name": "Configure persistent npm cache (self-hosted)",
+          "number": 12,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:20Z",
+          "conclusion": "success",
+          "name": "Configure npm for rate limiting",
+          "number": 13,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:21Z",
+          "conclusion": "success",
+          "name": "Disk floor gate (self-hosted)",
+          "number": 14,
+          "started_at": "2026-08-31T20:32:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:06Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 15,
+          "started_at": "2026-08-31T20:32:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:06Z",
+          "conclusion": "success",
+          "name": "Report npm cache usage (self-hosted)",
+          "number": 16,
+          "started_at": "2026-08-31T20:37:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:07Z",
+          "conclusion": "success",
+          "name": "Audit critical runtime dependencies",
+          "number": 17,
+          "started_at": "2026-08-31T20:37:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:07Z",
+          "conclusion": "success",
+          "name": "Check lockfile",
+          "number": 18,
+          "started_at": "2026-08-31T20:37:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:09Z",
+          "conclusion": "success",
+          "name": "Check desktop workspace isolation",
+          "number": 19,
+          "started_at": "2026-08-31T20:37:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:12Z",
+          "conclusion": "success",
+          "name": "Check TUI dependency direction",
+          "number": 20,
+          "started_at": "2026-08-31T20:37:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:13Z",
+          "conclusion": "success",
+          "name": "Install linters",
+          "number": 21,
+          "started_at": "2026-08-31T20:37:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:39Z",
+          "conclusion": "success",
+          "name": "Run ESLint",
+          "number": 22,
+          "started_at": "2026-08-31T20:37:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:39Z",
+          "conclusion": "success",
+          "name": "Run actionlint",
+          "number": 23,
+          "started_at": "2026-08-31T20:39:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:51Z",
+          "conclusion": "success",
+          "name": "Run shellcheck",
+          "number": 24,
+          "started_at": "2026-08-31T20:39:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:53Z",
+          "conclusion": "success",
+          "name": "Run yamllint",
+          "number": 25,
+          "started_at": "2026-08-31T20:39:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:46Z",
+          "conclusion": "success",
+          "name": "Run Prettier",
+          "number": 26,
+          "started_at": "2026-08-31T20:39:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:47Z",
+          "conclusion": "success",
+          "name": "Run sensitive keyword linter",
+          "number": 27,
+          "started_at": "2026-08-31T20:41:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:49Z",
+          "conclusion": "success",
+          "name": "Run i18n check",
+          "number": 28,
+          "started_at": "2026-08-31T20:41:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:51Z",
+          "conclusion": "success",
+          "name": "Generate settings schema",
+          "number": 29,
+          "started_at": "2026-08-31T20:41:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:51Z",
+          "conclusion": "success",
+          "name": "Check settings schema is up-to-date",
+          "number": 30,
+          "started_at": "2026-08-31T20:41:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:51Z",
+          "conclusion": "success",
+          "name": "Generate VS Code companion notices",
+          "number": 31,
+          "started_at": "2026-08-31T20:41:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:41:51Z",
+          "conclusion": "success",
+          "name": "Check VS Code companion notices are up-to-date",
+          "number": 32,
+          "started_at": "2026-08-31T20:41:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:44:30Z",
+          "conclusion": "success",
+          "name": "Check serve fast-path bundle closure",
+          "number": 33,
+          "started_at": "2026-08-31T20:41:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:45:27Z",
+          "conclusion": "success",
+          "name": "Run .github/scripts helper tests",
+          "number": 34,
+          "started_at": "2026-08-31T20:44:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:45:27Z",
+          "conclusion": "success",
+          "name": "Install tmux and zip tooling",
+          "number": 35,
+          "started_at": "2026-08-31T20:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:53Z",
+          "conclusion": "success",
+          "name": "Run tests and generate reports",
+          "number": 36,
+          "started_at": "2026-08-31T20:45:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:53Z",
+          "conclusion": "skipped",
+          "name": "Upload disk-pressure samples",
+          "number": 37,
+          "started_at": "2026-08-31T20:56:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:54Z",
+          "conclusion": "success",
+          "name": "Package and scan Chrome extension artifacts",
+          "number": 38,
+          "started_at": "2026-08-31T20:56:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:55Z",
+          "conclusion": "success",
+          "name": "Publish Test Report (for non-forks)",
+          "number": 39,
+          "started_at": "2026-08-31T20:56:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:56:55Z",
+          "conclusion": "skipped",
+          "name": "Upload Test Results Artifact (for forks)",
+          "number": 40,
+          "started_at": "2026-08-31T20:56:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:05Z",
+          "conclusion": "success",
+          "name": "Upload coverage reports",
+          "number": 41,
+          "started_at": "2026-08-31T20:56:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:05Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 82,
+          "started_at": "2026-08-31T20:57:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 83,
+          "started_at": "2026-08-31T20:57:05Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:39:36Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645768,
+      "labels": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "ecs-qwen"
+      ],
+      "name": "Integration Tests (no-AK, No Sandbox)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "Default",
+      "runner_name": "ecs-qwen-hk4-5",
+      "started_at": "2026-08-31T20:32:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:32:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:32:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:09Z",
+          "conclusion": "success",
+          "name": "Restore workspace ownership",
+          "number": 2,
+          "started_at": "2026-08-31T20:32:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:09Z",
+          "conclusion": "success",
+          "name": "Clean stale .qwen before checkout",
+          "number": 3,
+          "started_at": "2026-08-31T20:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:17Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 4,
+          "started_at": "2026-08-31T20:32:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:17Z",
+          "conclusion": "success",
+          "name": "Verify checkout includes expected head commit",
+          "number": 5,
+          "started_at": "2026-08-31T20:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:19Z",
+          "conclusion": "success",
+          "name": "Classify CI profile",
+          "number": 6,
+          "started_at": "2026-08-31T20:32:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:19Z",
+          "conclusion": "skipped",
+          "name": "Setup Node.js (hosted)",
+          "number": 7,
+          "started_at": "2026-08-31T20:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:19Z",
+          "conclusion": "success",
+          "name": "Use pre-installed Node.js (self-hosted)",
+          "number": 8,
+          "started_at": "2026-08-31T20:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:19Z",
+          "conclusion": "success",
+          "name": "Configure persistent npm cache (self-hosted)",
+          "number": 9,
+          "started_at": "2026-08-31T20:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:19Z",
+          "conclusion": "success",
+          "name": "Disk floor gate (self-hosted)",
+          "number": 10,
+          "started_at": "2026-08-31T20:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:05Z",
+          "conclusion": "success",
+          "name": "Install Dependencies",
+          "number": 11,
+          "started_at": "2026-08-31T20:32:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:37:05Z",
+          "conclusion": "success",
+          "name": "Report npm cache usage (self-hosted)",
+          "number": 12,
+          "started_at": "2026-08-31T20:37:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:29Z",
+          "conclusion": "success",
+          "name": "Run required no-AK integration gate",
+          "number": 13,
+          "started_at": "2026-08-31T20:37:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:29Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 26,
+          "started_at": "2026-08-31T20:39:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:39:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 27,
+          "started_at": "2026-08-31T20:39:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:57:29Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645777,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Post Coverage Comment (ubuntu-latest, 22.x)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000435063",
+      "started_at": "2026-08-31T20:57:13Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:57:15Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:57:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:23Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "started_at": "2026-08-31T20:57:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:25Z",
+          "conclusion": "success",
+          "name": "Download coverage reports artifact",
+          "number": 3,
+          "started_at": "2026-08-31T20:57:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:27Z",
+          "conclusion": "success",
+          "name": "Post Coverage Comment using Composite Action",
+          "number": 4,
+          "started_at": "2026-08-31T20:57:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:27Z",
+          "conclusion": "success",
+          "name": "Post Post Coverage Comment using Composite Action",
+          "number": 7,
+          "started_at": "2026-08-31T20:57:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:28Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 8,
+          "started_at": "2026-08-31T20:57:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:57:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-31T20:57:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:31:58Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645801,
+      "labels": [
+        "self-hosted",
+        "linux",
+        "x64",
+        "ecs-qwen"
+      ],
+      "name": "Integration Tests (CLI, No Sandbox)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T22:13:39Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:31:58Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645896,
+      "labels": [
+        "windows-2022"
+      ],
+      "name": "Test (windows-latest, Node 22.x)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T22:13:39Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Qwen Code CI"
+    },
+    {
+      "completed_at": "2026-08-31T20:32:18Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T22:13:39Z",
+      "head_sha": "26f5826be9abec51d4c6729014dc36a45584205a",
+      "id": 99662645980,
+      "labels": [
+        "ubuntu-22.04"
+      ],
+      "name": "Desktop Shell (ubuntu-22.04)",
+      "run_attempt": 2,
+      "run_id": 33436513872,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000435052",
+      "started_at": "2026-08-31T20:32:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T20:32:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T20:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:14Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 2,
+          "started_at": "2026-08-31T20:32:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "success",
+          "name": "Detect desktop-shell changes",
+          "number": 3,
+          "started_at": "2026-08-31T20:32:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "skipped",
+          "name": "Install Linux dependencies",
+          "number": 4,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "number": 5,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "skipped",
+          "name": "Run dtolnay/rust-toolchain@4cda84d5c5c54efe2404f9d843567869ab1699d4",
+          "number": 6,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "skipped",
+          "name": "Run Swatinem/rust-cache@42dc69e1aa15d09112580998cf2ef0119e2e91ae",
+          "number": 7,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "skipped",
+          "name": "Compile and test the desktop crate",
+          "number": 8,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "skipped",
+          "name": "Run desktop release tests",
+          "number": 9,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 18,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T20:32:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-31T20:32:16Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Qwen Code CI"
+    }
+  ],
+  "run_id": 33436513872
+}

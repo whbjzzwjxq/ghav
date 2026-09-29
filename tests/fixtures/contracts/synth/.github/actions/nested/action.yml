@@ -1,0 +1,9 @@
+name: Nested
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/setup
+      with:
+        node-version: '22'
+    - run: npm run build
+      shell: bash

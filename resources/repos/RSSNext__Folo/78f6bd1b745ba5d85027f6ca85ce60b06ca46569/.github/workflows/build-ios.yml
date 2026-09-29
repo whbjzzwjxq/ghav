@@ -1,0 +1,158 @@
+name: 🍎 Build iOS
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - ".github/actions/setup-xcode/**"
+      - ".github/workflows/build-ios.yml"
+      - "apps/mobile/**"
+      - "pnpm-lock.yaml"
+  workflow_dispatch:
+    inputs:
+      profile:
+        type: choice
+        default: preview
+        options:
+          - preview
+          - production
+        description: "Build profile"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event.inputs.profile }}
+  cancel-in-progress: true
+
+jobs:
+  check-runner:
+    if: >-
+      github.secret_source != 'None' &&
+      (
+        github.event_name != 'push' ||
+        !(
+          (github.ref == 'refs/heads/mobile-main' && contains(github.event.head_commit.message || '', 'release(mobile):')) ||
+          (github.ref == 'refs/heads/main' && contains(github.event.head_commit.message || '', 'release(desktop):'))
+        )
+      )
+    runs-on: ubuntu-latest
+    outputs:
+      runner-label: ${{ steps.set-runner.outputs.runner-label }}
+
+    steps:
+      - name: Set runner
+        id: set-runner
+        run: |
+          runners=$(curl -s -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ secrets.RUNNER_GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/actions/runners")
+          available=$(echo "$runners" | jq '.runners[]? | select(.status == "online" and .busy == false and .labels[] .name == "macOS")')
+          if [ -n "$available" ]; then
+            echo "runner-label=self-hosted" >> $GITHUB_OUTPUT
+          else
+            echo "runner-label=macos-26" >> $GITHUB_OUTPUT
+          fi
+
+  build-ipa-self-hosted:
+    name: Build iOS IPA (self-hosted)
+    if: needs.check-runner.outputs.runner-label == 'self-hosted'
+    needs: check-runner
+    runs-on: [self-hosted, macOS]
+
+    steps:
+      - name: 📦 Checkout code
+        uses: actions/checkout@v7
+
+      - name: 📱 Setup EAS
+        uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --child-concurrency=1
+
+      - name: Build mobile web assets
+        run: pnpm --dir apps/mobile/web-app build --outDir ../../../out/rn-web/html-renderer
+
+      - name: 🔨 Build iOS IPA
+        working-directory: apps/mobile
+        run: eas build --platform ios --profile ${{ github.event.inputs.profile || 'preview' }} --non-interactive --local --output=./build.ipa
+        env:
+          EAS_BUILD_DISABLE_EXPO_DOCTOR_STEP: "1"
+          EAS_NO_FROZEN_LOCKFILE: "1"
+          SENTRY_AUTH_TOKEN: ${{ secrets.RN_SENTRY_AUTH_TOKEN }}
+          CI: true
+          npm_config_node_linker: isolated
+          npm_config_shamefully_hoist: "false"
+
+      # Optional: Upload artifact
+      - name: 📤 Upload IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: app-ios
+          path: apps/mobile/build.ipa
+          retention-days: 90
+
+      - name: Clear Xcode cache
+        run: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData
+
+      - name: Submit to App Store
+        if: github.event.inputs.profile == 'production'
+        working-directory: apps/mobile
+        run: eas submit --platform ios --path build.ipa --non-interactive
+
+  build-ipa-github:
+    name: Build iOS IPA (GitHub)
+    if: needs.check-runner.outputs.runner-label == 'macos-26'
+    needs: check-runner
+    runs-on: macos-26
+
+    steps:
+      - name: 📦 Checkout code
+        uses: actions/checkout@v7
+
+      - name: 🔧 Setup Xcode
+        uses: ./.github/actions/setup-xcode
+
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      - name: 📱 Setup EAS
+        uses: expo/expo-github-action@v9
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --child-concurrency=1
+
+      - name: Build mobile web assets
+        run: pnpm --dir apps/mobile/web-app build --outDir ../../../out/rn-web/html-renderer
+
+      - name: 🔨 Build iOS IPA
+        working-directory: apps/mobile
+        run: eas build --platform ios --profile ${{ github.event.inputs.profile || 'preview' }} --non-interactive --local --output=./build.ipa
+        env:
+          EAS_BUILD_DISABLE_EXPO_DOCTOR_STEP: "1"
+          EAS_NO_FROZEN_LOCKFILE: "1"
+          CI: true
+          SENTRY_AUTH_TOKEN: ${{ secrets.RN_SENTRY_AUTH_TOKEN }}
+          npm_config_node_linker: isolated
+          npm_config_shamefully_hoist: "false"
+      # Optional: Upload artifact
+      - name: 📤 Upload IPA
+        uses: actions/upload-artifact@v7
+        with:
+          name: app-ios
+          path: apps/mobile/build.ipa
+          retention-days: 90
+
+      - name: Submit to App Store
+        if: github.event.inputs.profile == 'production'
+        working-directory: apps/mobile
+        run: eas submit --platform ios --path build.ipa --non-interactive

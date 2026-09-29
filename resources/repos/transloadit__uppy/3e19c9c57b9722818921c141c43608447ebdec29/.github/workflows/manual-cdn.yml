@@ -1,0 +1,67 @@
+name: Manually triggered CDN upload
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Package to upload
+        required: true
+        type: choice
+        options:
+          - uppy
+          - '@uppy/locales'
+      version:
+        description: Version to upload (from npm)
+        type: string
+      force:
+        description: --force
+        type: boolean
+        default: false
+
+env:
+  YARN_ENABLE_GLOBAL_CACHE: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: auto
+      S3_BUCKET: ${{ secrets.S3_BUCKET }}
+      S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v6
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+      - name: Install upload-to-cdn dependencies
+        if: ${{ inputs.version }}
+        run: corepack yarn workspaces focus uppy
+        env:
+          # https://docs.cypress.io/guides/references/advanced-installation#Skipping-installation
+          CYPRESS_INSTALL_BINARY: 0
+      - name: Install all dependencies
+        if: ${{ !inputs.version }}
+        run: corepack yarn install --immutable
+        env:
+          # https://docs.cypress.io/guides/references/advanced-installation#Skipping-installation
+          CYPRESS_INSTALL_BINARY: 0
+      - name: Build before publishing
+        if: ${{ !inputs.version }}
+        run: corepack yarn run build
+      - name: Upload "${{ inputs.package }}" to CDN
+        if: ${{ !inputs.force }}
+        run: corepack yarn workspace uppy node upload-to-cdn.js "$PACKAGE" "$VERSION"
+        env:
+          PACKAGE: ${{inputs.package}}
+          VERSION: ${{inputs.version}}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Upload "${{ inputs.package }}" to CDN
+        if: ${{ inputs.force }}
+        run: corepack yarn workspace uppy node upload-to-cdn.js "$PACKAGE" "$VERSION" --force
+        env:
+          PACKAGE: ${{inputs.package}}
+          VERSION: ${{inputs.version}}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

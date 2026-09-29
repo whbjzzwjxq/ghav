@@ -1,0 +1,157 @@
+{
+  "benchmark": "react-navigation/react-navigation@ab1319d6bbf05eae8dc25e33cbf4dc56494e0f0c:.github/workflows/measure-typescript.yml",
+  "benchmark_id": "react-navigation__react-navigation__measure-typescript",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33319081147,
+        33257961571,
+        33256790188,
+        33194538899,
+        33027305985
+      ],
+      "window_count": 46
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "comment": {
+      "duration_seconds": 4.0,
+      "durations": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        2.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Comment noticeable variations",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "measure": {
+      "duration_seconds": 490.0,
+      "durations": [
+        530.0,
+        443.0,
+        421.0,
+        508.0,
+        490.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            8.0,
+            9.0,
+            9.0,
+            11.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            20.0,
+            19.0,
+            18.0,
+            24.0
+          ],
+          "name": "Setup",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            497.0,
+            411.0,
+            388.0,
+            478.0,
+            449.0
+          ],
+          "name": "Measure TypeScript performance",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 449.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0d7976168d085b42bf89c67d7a4e81cd7639a362": "c6df93aaeac0fdd13014af08486512e597e5960c",
+      "5085beda91c48f4774ce9a4fdd0588c8adc5995d": "c6df93aaeac0fdd13014af08486512e597e5960c",
+      "87c8056db6ce81063199a9a20e03ad1427a6357e": "c6df93aaeac0fdd13014af08486512e597e5960c",
+      "a35b9ea12db51096ee4370282a6c79b4efceea42": "c6df93aaeac0fdd13014af08486512e597e5960c",
+      "a5e56640a746a4457171a03e15756b8d7947688f": "c6df93aaeac0fdd13014af08486512e597e5960c"
+    },
+    "pinned_oid": "c6df93aaeac0fdd13014af08486512e597e5960c",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

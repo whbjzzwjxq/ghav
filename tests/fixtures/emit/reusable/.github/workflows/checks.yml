@@ -1,0 +1,23 @@
+name: Checks
+on:
+  workflow_call:
+    inputs:
+      os:
+        type: string
+        required: true
+jobs:
+  build:
+    name: Build
+    runs-on: ${{ inputs.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci && npm run build
+  test:
+    needs: build
+    runs-on: ${{ inputs.os }}
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - run: npm test -- --node=${{ matrix.node }}
+      - run: echo "${{ needs.build.result }}"

@@ -1,0 +1,2232 @@
+{
+  "benchmark": "microsoft/playwright@9e3157b5c50b91e194040d25a8dcdb89318587c8:.github/workflows/tests_primary.yml",
+  "benchmark_id": "microsoft__playwright__tests_primary",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33451232137,
+        33447405593,
+        33446740385,
+        33445774754,
+        33439141409
+      ],
+      "window_count": 291
+    },
+    "push": {
+      "runs": [
+        20377053904,
+        20359780258,
+        20358719547,
+        20356427998,
+        20356408847
+      ],
+      "window_count": 162
+    }
+  },
+  "jobs": {
+    "Installation Test macos-latest": {
+      "duration_seconds": 1007.5,
+      "durations": [
+        1117.0,
+        738.0,
+        1057.0,
+        1094.0,
+        930.0,
+        1144.0,
+        1169.0,
+        958.0,
+        818.0,
+        828.0
+      ],
+      "main_step_counts": [
+        0,
+        5
+      ],
+      "overhead_seconds": 373.0,
+      "overheads": [
+        1117.0,
+        738.0,
+        1057.0,
+        1094.0,
+        930.0,
+        8.0,
+        6.0,
+        4.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            6.0,
+            4.0,
+            6.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run npm install -g yarn@1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run npm install -g pnpm@8",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Setup Ubuntu Binary Installation",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1127.0,
+            1156.0,
+            945.0,
+            807.0,
+            810.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 945.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Installation Test ubuntu-latest": {
+      "duration_seconds": 844.0,
+      "durations": [
+        860.0,
+        849.0,
+        862.0,
+        801.0,
+        839.0,
+        958.0,
+        800.0,
+        738.0,
+        737.0,
+        892.0
+      ],
+      "main_step_counts": [
+        0,
+        5
+      ],
+      "overhead_seconds": 403.0,
+      "overheads": [
+        860.0,
+        849.0,
+        862.0,
+        801.0,
+        839.0,
+        5.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            5.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            1.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run npm install -g yarn@1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run npm install -g pnpm@8",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Setup Ubuntu Binary Installation",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            944.0,
+            786.0,
+            729.0,
+            726.0,
+            879.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 786.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Installation Test windows-latest": {
+      "duration_seconds": 1634.5,
+      "durations": [
+        1622.0,
+        1618.0,
+        1599.0,
+        1705.0,
+        2010.0,
+        1633.0,
+        1593.0,
+        1897.0,
+        1649.0,
+        1636.0
+      ],
+      "main_step_counts": [
+        0,
+        5
+      ],
+      "overhead_seconds": 801.0,
+      "overheads": [
+        1622.0,
+        1618.0,
+        1599.0,
+        1705.0,
+        2010.0,
+        3.0,
+        2.0,
+        3.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0,
+            10.0,
+            11.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            13.0,
+            8.0,
+            9.0
+          ],
+          "name": "Run npm install -g yarn@1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            19.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run npm install -g pnpm@8",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Setup Ubuntu Binary Installation",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1602.0,
+            1567.0,
+            1851.0,
+            1623.0,
+            1607.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1607.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (macos-latest, 20, 1, 2)": {
+      "duration_seconds": 1042.0,
+      "durations": [
+        985.0,
+        1042.0,
+        1232.0,
+        981.0,
+        1863.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1042.0,
+      "overheads": [
+        985.0,
+        1042.0,
+        1232.0,
+        981.0,
+        1863.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (macos-latest, 20, 2, 2)": {
+      "duration_seconds": 1721.0,
+      "durations": [
+        1388.0,
+        2066.0,
+        1721.0,
+        1661.0,
+        2115.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1721.0,
+      "overheads": [
+        1388.0,
+        2066.0,
+        1721.0,
+        1661.0,
+        2115.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (macos-latest, 22, 1, 2, 58:42)": {
+      "duration_seconds": 1448.0,
+      "durations": [
+        1616.0,
+        1448.0,
+        1445.0,
+        1861.0,
+        1440.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        6.0,
+        2.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            3.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1606.0,
+            1439.0,
+            1438.0,
+            1851.0,
+            1432.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1439.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (macos-latest, 22, 2, 2, 58:42)": {
+      "duration_seconds": 1835.0,
+      "durations": [
+        1764.0,
+        1861.0,
+        1907.0,
+        1835.0,
+        1563.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        9.0,
+        8.0,
+        5.0,
+        8.0,
+        8.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1751.0,
+            1849.0,
+            1897.0,
+            1823.0,
+            1551.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1823.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 20, 1, 2)": {
+      "duration_seconds": 1355.0,
+      "durations": [
+        1336.0,
+        1355.0,
+        1354.0,
+        1357.0,
+        1366.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1355.0,
+      "overheads": [
+        1336.0,
+        1355.0,
+        1354.0,
+        1357.0,
+        1366.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (ubuntu-latest, 20, 1, 2, 58:42)": {
+      "duration_seconds": 1218.0,
+      "durations": [
+        1267.0,
+        1009.0,
+        1020.0,
+        1218.0,
+        1324.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        5.0,
+        3.0,
+        3.0,
+        3.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1258.0,
+            1003.0,
+            1015.0,
+            1213.0,
+            1316.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1213.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 20, 2, 2)": {
+      "duration_seconds": 1815.0,
+      "durations": [
+        1795.0,
+        1825.0,
+        1829.0,
+        1813.0,
+        1815.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1815.0,
+      "overheads": [
+        1795.0,
+        1825.0,
+        1829.0,
+        1813.0,
+        1815.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (ubuntu-latest, 20, 2, 2, 58:42)": {
+      "duration_seconds": 1292.0,
+      "durations": [
+        1336.0,
+        1361.0,
+        1292.0,
+        1229.0,
+        1278.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1330.0,
+            1353.0,
+            1284.0,
+            1223.0,
+            1272.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1284.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 22, 1, 2)": {
+      "duration_seconds": 1348.0,
+      "durations": [
+        1348.0,
+        1347.0,
+        1356.0,
+        1388.0,
+        1246.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1348.0,
+      "overheads": [
+        1348.0,
+        1347.0,
+        1356.0,
+        1388.0,
+        1246.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (ubuntu-latest, 22, 1, 2, 58:42)": {
+      "duration_seconds": 1134.0,
+      "durations": [
+        1088.0,
+        1290.0,
+        1134.0,
+        1081.0,
+        1164.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        2.0,
+        5.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            1.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1083.0,
+            1281.0,
+            1127.0,
+            1072.0,
+            1156.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1127.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 22, 2, 2)": {
+      "duration_seconds": 1821.0,
+      "durations": [
+        1798.0,
+        1797.0,
+        1850.0,
+        1821.0,
+        1847.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1821.0,
+      "overheads": [
+        1798.0,
+        1797.0,
+        1850.0,
+        1821.0,
+        1847.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (ubuntu-latest, 22, 2, 2, 58:42)": {
+      "duration_seconds": 1145.0,
+      "durations": [
+        1165.0,
+        1462.0,
+        1120.0,
+        1145.0,
+        1072.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            5.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1160.0,
+            1455.0,
+            1112.0,
+            1139.0,
+            1064.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1139.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 24, 1, 2)": {
+      "duration_seconds": 1332.0,
+      "durations": [
+        1316.0,
+        1347.0,
+        1242.0,
+        1332.0,
+        1345.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1332.0,
+      "overheads": [
+        1316.0,
+        1347.0,
+        1242.0,
+        1332.0,
+        1345.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (ubuntu-latest, 24, 1, 2, 58:42)": {
+      "duration_seconds": 1086.0,
+      "durations": [
+        1086.0,
+        905.0,
+        1059.0,
+        1097.0,
+        1117.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        6.0,
+        3.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1079.0,
+            898.0,
+            1051.0,
+            1092.0,
+            1109.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1079.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 24, 2, 2)": {
+      "duration_seconds": 1805.0,
+      "durations": [
+        1800.0,
+        1759.0,
+        1854.0,
+        1805.0,
+        1810.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1805.0,
+      "overheads": [
+        1800.0,
+        1759.0,
+        1854.0,
+        1805.0,
+        1810.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (ubuntu-latest, 24, 2, 2, 58:42)": {
+      "duration_seconds": 1127.0,
+      "durations": [
+        1089.0,
+        1168.0,
+        1127.0,
+        1486.0,
+        962.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1082.0,
+            1163.0,
+            1120.0,
+            1477.0,
+            955.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1120.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 26, 1, 2, 58:42)": {
+      "duration_seconds": 1051.0,
+      "durations": [
+        1054.0,
+        997.0,
+        973.0,
+        1058.0,
+        1051.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        5.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1048.0,
+            989.0,
+            964.0,
+            1052.0,
+            1045.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1045.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (ubuntu-latest, 26, 2, 2, 58:42)": {
+      "duration_seconds": 1145.0,
+      "durations": [
+        1169.0,
+        1134.0,
+        1217.0,
+        1145.0,
+        930.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1163.0,
+            1127.0,
+            1210.0,
+            1140.0,
+            924.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1140.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (windows-latest, 20, 1, 2)": {
+      "duration_seconds": 2055.0,
+      "durations": [
+        2055.0,
+        1989.0,
+        2084.0,
+        1993.0,
+        2202.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 2055.0,
+      "overheads": [
+        2055.0,
+        1989.0,
+        2084.0,
+        1993.0,
+        2202.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (windows-latest, 20, 2, 2)": {
+      "duration_seconds": 2629.0,
+      "durations": [
+        2527.0,
+        2631.0,
+        2623.0,
+        2629.0,
+        2949.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 2629.0,
+      "overheads": [
+        2527.0,
+        2631.0,
+        2623.0,
+        2629.0,
+        2949.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "Test Runner (windows-latest, 22, 1, 3, 44:33:23)": {
+      "duration_seconds": 1469.0,
+      "durations": [
+        1461.0,
+        1503.0,
+        1433.0,
+        1469.0,
+        1489.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0,
+            8.0,
+            8.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1444.0,
+            1491.0,
+            1422.0,
+            1456.0,
+            1476.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1456.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (windows-latest, 22, 2, 3, 44:33:23)": {
+      "duration_seconds": 1192.0,
+      "durations": [
+        974.0,
+        1324.0,
+        1176.0,
+        1230.0,
+        1192.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            10.0,
+            11.0,
+            10.0,
+            8.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            964.0,
+            1311.0,
+            1162.0,
+            1216.0,
+            1181.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1181.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test Runner (windows-latest, 22, 3, 3, 44:33:23)": {
+      "duration_seconds": 1155.0,
+      "durations": [
+        1085.0,
+        1230.0,
+        1201.0,
+        1155.0,
+        1083.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        6.0,
+        3.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            9.0,
+            11.0,
+            9.0,
+            12.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1073.0,
+            1219.0,
+            1184.0,
+            1143.0,
+            1069.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1143.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "VSCode Extension": {
+      "duration_seconds": 1554.0,
+      "durations": [
+        1771.0,
+        1801.0,
+        1763.0,
+        1757.0,
+        1652.0,
+        1456.0,
+        1434.0,
+        1423.0,
+        1407.0,
+        1368.0
+      ],
+      "main_step_counts": [
+        0,
+        11
+      ],
+      "overhead_seconds": 828.5,
+      "overheads": [
+        1771.0,
+        1801.0,
+        1763.0,
+        1757.0,
+        1652.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            8.0,
+            9.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run npm run build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            10.0,
+            11.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run npx playwright install chromium",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout extension",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Print extension revision",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove @playwright/test from extension dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "Build extension",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1403.0,
+            1383.0,
+            1375.0,
+            1359.0,
+            1323.0
+          ],
+          "name": "Run extension tests",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1375.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Upload blob report",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Web Components - html-reporter": {
+      "duration_seconds": 68.0,
+      "durations": [
+        58.0,
+        99.0,
+        68.0,
+        75.0,
+        59.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        5.0,
+        4.0,
+        5.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            90.0,
+            61.0,
+            67.0,
+            53.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 61.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Web Components - web": {
+      "duration_seconds": 66.0,
+      "durations": [
+        64.0,
+        60.0,
+        84.0,
+        66.0,
+        66.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        2.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            57.0,
+            54.0,
+            79.0,
+            60.0,
+            57.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 57.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "time library - frozen": {
+      "duration_seconds": 1010.0,
+      "durations": [
+        1033.0,
+        992.0,
+        1010.0,
+        971.0,
+        1010.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1026.0,
+            986.0,
+            1001.0,
+            963.0,
+            1001.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1001.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "time library - realtime": {
+      "duration_seconds": 1087.0,
+      "durations": [
+        1087.0,
+        1090.0,
+        1082.0,
+        1129.0,
+        1005.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        2.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1081.0,
+            1085.0,
+            1074.0,
+            1122.0,
+            998.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1081.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ubuntu-22.04 (chromium - Node.js 20)": {
+      "duration_seconds": 968.5,
+      "durations": [
+        935.0,
+        932.0,
+        931.0,
+        962.0,
+        943.0,
+        1123.0,
+        1098.0,
+        975.0,
+        1017.0,
+        1055.0
+      ],
+      "main_step_counts": [
+        0,
+        2
+      ],
+      "overhead_seconds": 468.5,
+      "overheads": [
+        935.0,
+        932.0,
+        931.0,
+        962.0,
+        943.0,
+        6.0,
+        3.0,
+        4.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1114.0,
+            1092.0,
+            969.0,
+            1011.0,
+            1046.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1046.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ubuntu-22.04 (chromium - Node.js 22)": {
+      "duration_seconds": 974.0,
+      "durations": [
+        914.0,
+        902.0,
+        884.0,
+        936.0,
+        898.0,
+        1012.0,
+        1110.0,
+        1106.0,
+        1014.0,
+        1090.0
+      ],
+      "main_step_counts": [
+        0,
+        2
+      ],
+      "overhead_seconds": 444.5,
+      "overheads": [
+        914.0,
+        902.0,
+        884.0,
+        936.0,
+        898.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1007.0,
+            1102.0,
+            1099.0,
+            1008.0,
+            1083.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1083.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ubuntu-22.04 (chromium - Node.js 24)": {
+      "duration_seconds": 1003.5,
+      "durations": [
+        922.0,
+        926.0,
+        918.0,
+        916.0,
+        928.0,
+        1081.0,
+        1110.0,
+        1091.0,
+        1093.0,
+        1079.0
+      ],
+      "main_step_counts": [
+        0,
+        2
+      ],
+      "overhead_seconds": 460.5,
+      "overheads": [
+        922.0,
+        926.0,
+        918.0,
+        916.0,
+        928.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1073.0,
+            1105.0,
+            1083.0,
+            1084.0,
+            1073.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1083.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ubuntu-22.04 (chromium tip-of-tree)": {
+      "duration_seconds": 1116.0,
+      "durations": [
+        1116.0,
+        1116.0,
+        1090.0,
+        1102.0,
+        1139.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 1116.0,
+      "overheads": [
+        1116.0,
+        1116.0,
+        1090.0,
+        1102.0,
+        1139.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": []
+    },
+    "ubuntu-22.04 (firefox - Node.js 20)": {
+      "duration_seconds": 1929.5,
+      "durations": [
+        1676.0,
+        1702.0,
+        1707.0,
+        1660.0,
+        1679.0,
+        2285.0,
+        2185.0,
+        2152.0,
+        2279.0,
+        2211.0
+      ],
+      "main_step_counts": [
+        0,
+        2
+      ],
+      "overhead_seconds": 833.5,
+      "overheads": [
+        1676.0,
+        1702.0,
+        1707.0,
+        1660.0,
+        1679.0,
+        7.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2277.0,
+            2180.0,
+            2146.0,
+            2273.0,
+            2204.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2204.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ubuntu-22.04 (webkit - Node.js 20)": {
+      "duration_seconds": 2290.0,
+      "durations": [
+        2118.0,
+        2043.0,
+        2111.0,
+        2111.0,
+        2124.0,
+        2596.0,
+        2456.0,
+        2547.0,
+        2505.0,
+        2514.0
+      ],
+      "main_step_counts": [
+        0,
+        2
+      ],
+      "overhead_seconds": 1024.5,
+      "overheads": [
+        2118.0,
+        2043.0,
+        2111.0,
+        2111.0,
+        2124.0,
+        6.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2587.0,
+            2451.0,
+            2540.0,
+            2497.0,
+            2507.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2507.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ubuntu-22.04-arm (chromium - Node.js 20)": {
+      "duration_seconds": 1035.0,
+      "durations": [
+        1055.0,
+        1021.0,
+        1049.0,
+        1035.0,
+        1000.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        6.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1049.0,
+            1014.0,
+            1041.0,
+            1027.0,
+            993.0
+          ],
+          "name": "Run ./.github/actions/run-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1027.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0dbc68a4091d5c1c433405aa1d37161c108c6672": "c87282654348cbac077484248ec7353722f1d9c4",
+      "26bcc401ac0ce3df66b90771341746b58d7ec1fc": "c87282654348cbac077484248ec7353722f1d9c4",
+      "2a5b2e6e10a708d8726d4b353a6eec644cdfc521": "c01376f55ab0e092780c3e878385f3712f579e7f",
+      "326286621c0db3de4e651a00b901c754d7ff69a0": "c87282654348cbac077484248ec7353722f1d9c4",
+      "739adf5c2ad5ba6b9c2fe1e66d48e7eec6295d4e": "c01376f55ab0e092780c3e878385f3712f579e7f",
+      "85a23ee61a87c1eed94a6797f7c6824cfcab4e64": "c01376f55ab0e092780c3e878385f3712f579e7f",
+      "8dff40968065afca685499ca99720635c29f8ac7": "c87282654348cbac077484248ec7353722f1d9c4",
+      "aaa09b12de9efad59c4573ce76ca602eed221404": "c01376f55ab0e092780c3e878385f3712f579e7f",
+      "e6812385f80b14862c8d6303b9558e7293cb47d7": "c01376f55ab0e092780c3e878385f3712f579e7f",
+      "ee2773f38569fd9335b46e983e47cb70b7f232b6": "c87282654348cbac077484248ec7353722f1d9c4"
+    },
+    "pinned_oid": "c01376f55ab0e092780c3e878385f3712f579e7f",
+    "runs_same_version": 5,
+    "runs_total": 10
+  }
+}

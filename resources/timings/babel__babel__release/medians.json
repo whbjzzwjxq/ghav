@@ -1,0 +1,149 @@
+{
+  "benchmark": "babel/babel@3fbcec1ccbe9ebfa5a8575bc88afadd061899bd5:.github/workflows/release.yml",
+  "benchmark_id": "babel__babel__release",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        26397306368,
+        25386010899,
+        21548119195
+      ],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "Build, Test and Publish": {
+      "duration_seconds": 473.0,
+      "durations": [
+        454.0,
+        473.0,
+        563.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 473.0,
+      "overheads": [
+        454.0,
+        473.0,
+        563.0
+      ],
+      "samples": 3,
+      "skipped": 0,
+      "steps": []
+    },
+    "Create GitHub release draft": {
+      "duration_seconds": 24.0,
+      "durations": [
+        25.0,
+        20.0,
+        24.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 24.0,
+      "overheads": [
+        25.0,
+        20.0,
+        24.0
+      ],
+      "samples": 3,
+      "skipped": 0,
+      "steps": []
+    },
+    "Create git tag and commit": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 3,
+      "steps": []
+    },
+    "Log packages to publish": {
+      "duration_seconds": 15.0,
+      "durations": [
+        15.0,
+        15.0,
+        17.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 15.0,
+      "overheads": [
+        15.0,
+        15.0,
+        17.0
+      ],
+      "samples": 3,
+      "skipped": 0,
+      "steps": []
+    },
+    "Push release commit to \"7.x\" branch": {
+      "duration_seconds": 18.0,
+      "durations": [
+        18.0,
+        19.0,
+        17.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 18.0,
+      "overheads": [
+        18.0,
+        19.0,
+        17.0
+      ],
+      "samples": 3,
+      "skipped": 0,
+      "steps": []
+    },
+    "Update Babel types docs": {
+      "duration_seconds": 8.0,
+      "durations": [
+        17.0,
+        8.0,
+        8.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        17.0,
+        8.0,
+        8.0
+      ],
+      "samples": 3,
+      "skipped": 0,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "3cd910d838332b988ed83bdd2ddc22e849e7ea5d": "c5c9daf5ad6c1d412872b113b0368be8d34cf0f8",
+      "4fba7541180bf5f58256d8e358b544e3831ad090": "71bd00c3587d0b63f85e02549753708112220e2a",
+      "aa8394e454337d118ac3d40bfa3ee1a3cb3f3ed2": "0a463c7e5df13f6373dd301736a973a9e9c07b5f"
+    },
+    "pinned_oid": "f17ed97244bc1411acdb686354c4ae981e6375d0",
+    "runs_same_version": 0,
+    "runs_total": 3
+  }
+}

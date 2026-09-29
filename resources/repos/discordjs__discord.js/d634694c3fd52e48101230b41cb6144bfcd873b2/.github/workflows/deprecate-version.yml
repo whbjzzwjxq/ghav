@@ -1,0 +1,57 @@
+name: Deprecate version
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Package
+        required: true
+        type: choice
+        options:
+          - '@discordjs/brokers'
+          - '@discordjs/builders'
+          - '@discordjs/collection'
+          - '@discordjs/core'
+          - 'create-discord-app'
+          - 'create-discord-bot'
+          - '@discordjs/formatters'
+          - 'discord.js'
+          - '@discordjs/next'
+          - '@discordjs/proxy'
+          - '@discordjs/rest'
+          - '@discordjs/rpc'
+          - '@discordjs/structures'
+          - '@discordjs/util'
+          - '@discordjs/voice'
+          - '@discordjs/ws'
+      version:
+        description: Version(s)
+        required: true
+        type: string
+      message:
+        description: Deprecation message
+        required: false
+        type: string
+jobs:
+  deprecate:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'discordjs'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install Node.js v24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        uses: ./packages/actions/src/pnpmCache
+
+      - name: Deprecate
+        uses: ./packages/actions/src/deprecateVersion
+        with:
+          package: ${{ inputs.package }}
+          version: ${{ inputs.version }}
+          message: ${{ inputs.message }}
+          node-auth-token: ${{ secrets.NPM_PUBLISH_TOKEN }}

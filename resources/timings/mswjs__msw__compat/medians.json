@@ -1,0 +1,699 @@
+{
+  "benchmark": "mswjs/msw@49d9d47f613b072f8d20e1a025feaee7c5382b2b:.github/workflows/compat.yml",
+  "benchmark_id": "mswjs__msw__compat",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        30080612822,
+        29956338303,
+        29951065581,
+        29950755200,
+        29937670141
+      ],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        28911372404,
+        28892943994,
+        28892614546,
+        28889088851,
+        28888813647
+      ],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "exports": {
+      "duration_seconds": 72.5,
+      "durations": [
+        88.0,
+        83.0,
+        94.0,
+        85.0,
+        89.0,
+        57.0,
+        54.0,
+        62.0,
+        53.0,
+        59.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        6.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        7.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Set up pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            5.0,
+            7.0,
+            9.0,
+            10.0,
+            9.0,
+            10.0,
+            8.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            16.0,
+            18.0,
+            20.0,
+            18.0,
+            18.0,
+            16.0,
+            19.0,
+            18.0,
+            18.0
+          ],
+          "name": "Install Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            20.0,
+            22.0,
+            21.0,
+            22.0,
+            4.0,
+            3.0,
+            4.0,
+            2.0,
+            4.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Lint package",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            25.0,
+            27.0,
+            25.0,
+            26.0,
+            8.0,
+            8.0,
+            8.0,
+            6.0,
+            8.0
+          ],
+          "name": "Test modules (Node.js)",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 16.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            5.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            6.0,
+            8.0
+          ],
+          "name": "Test modules (browser)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "typescript": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "typescript (5.9)": {
+      "duration_seconds": 35.0,
+      "durations": [
+        35.0,
+        35.0,
+        38.0,
+        33.0,
+        39.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            4.0,
+            0.0,
+            0.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            12.0,
+            10.0,
+            8.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            4.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "name": "Install TypeScript 5.9",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Typings tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "typescript (6.0)": {
+      "duration_seconds": 37.0,
+      "durations": [
+        33.0,
+        37.0,
+        42.0,
+        36.0,
+        63.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        5.0,
+        7.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            4.0,
+            1.0,
+            2.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            6.0,
+            4.0,
+            31.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            10.0,
+            9.0,
+            10.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            7.0,
+            5.0
+          ],
+          "name": "Install TypeScript 6.0",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Typings tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "typescript (7.0)": {
+      "duration_seconds": 31.0,
+      "durations": [
+        33.0,
+        30.0,
+        31.0,
+        31.0,
+        36.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            5.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            9.0,
+            8.0,
+            10.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            6.0
+          ],
+          "name": "Install TypeScript 7.0",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Typings tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "233510f3f39ad4e989b94edcbe7720c6eac19d3f": "2855f6624f5ddcaab2a7cd7d5d01ce11686ffede",
+      "2a80603912d08ae3eb0f070eaee8a8bb78a46660": "2855f6624f5ddcaab2a7cd7d5d01ce11686ffede",
+      "3260327cc627e4b794707d4b382c1c65df53cfce": "2855f6624f5ddcaab2a7cd7d5d01ce11686ffede",
+      "418854a04a1424eef25a7722e1016feea433a5a9": "79b03ba270ebc4cb5ce4d89318eb4850f2366627",
+      "466384546ba3a9a51b5e9588ce33dd10d4e2e50e": "2855f6624f5ddcaab2a7cd7d5d01ce11686ffede",
+      "49d9d47f613b072f8d20e1a025feaee7c5382b2b": "79b03ba270ebc4cb5ce4d89318eb4850f2366627",
+      "7fae0cc0954b20c739ae8e95a24eefc8a78710e8": "79b03ba270ebc4cb5ce4d89318eb4850f2366627",
+      "bd8444f444e79e2ac4b20f0ed7bdc1dc3fac5eab": "2855f6624f5ddcaab2a7cd7d5d01ce11686ffede",
+      "db818ee6c943bcfad18f6ecff2bb0dc210c457ca": "79b03ba270ebc4cb5ce4d89318eb4850f2366627",
+      "ed885831bf90136044d305e1ae1035fb13491cec": "79b03ba270ebc4cb5ce4d89318eb4850f2366627"
+    },
+    "pinned_oid": "79b03ba270ebc4cb5ce4d89318eb4850f2366627",
+    "runs_same_version": 5,
+    "runs_total": 10
+  }
+}

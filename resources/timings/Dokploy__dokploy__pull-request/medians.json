@@ -1,0 +1,550 @@
+{
+  "benchmark": "Dokploy/dokploy@e8f4a1715c1923a039e191b940b42cf4244d87c2:.github/workflows/pull-request.yml",
+  "benchmark_id": "Dokploy__dokploy__pull-request",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33437556492,
+        33437172874,
+        33435937130,
+        33425687826,
+        33419780443
+      ],
+      "window_count": 367
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "pr-check (build)": {
+      "duration_seconds": 216.0,
+      "durations": [
+        216.0,
+        241.0,
+        213.0,
+        229.0,
+        207.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        5.0,
+        7.0,
+        2.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run pnpm/action-setup@v5",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            17.0,
+            11.0,
+            18.0
+          ],
+          "name": "Run actions/setup-node@v5",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install Nixpacks",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install Railpack",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Add build tools to PATH",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Initialize Docker Swarm",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            39.0,
+            36.0,
+            7.0,
+            35.0,
+            7.0
+          ],
+          "name": "Run pnpm install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 35.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run pnpm server:build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            152.0,
+            179.0,
+            173.0,
+            171.0,
+            168.0
+          ],
+          "name": "Run pnpm build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 171.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "pr-check (test)": {
+      "duration_seconds": 224.0,
+      "durations": [
+        211.0,
+        247.0,
+        224.0,
+        227.0,
+        207.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        7.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run pnpm/action-setup@v5",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            11.0,
+            19.0,
+            10.0,
+            13.0
+          ],
+          "name": "Run actions/setup-node@v5",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Install Nixpacks",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install Railpack",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Add build tools to PATH",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Initialize Docker Swarm",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            42.0,
+            6.0,
+            31.0,
+            6.0
+          ],
+          "name": "Run pnpm install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run pnpm server:build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            177.0,
+            178.0,
+            180.0,
+            169.0,
+            170.0
+          ],
+          "name": "Run pnpm test",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 177.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "pr-check (typecheck)": {
+      "duration_seconds": 66.0,
+      "durations": [
+        66.0,
+        86.0,
+        51.0,
+        82.0,
+        64.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        6.0,
+        3.0,
+        4.0,
+        7.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@v5",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            14.0,
+            11.0,
+            14.0,
+            17.0
+          ],
+          "name": "Run actions/setup-node@v5",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install Nixpacks",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install Railpack",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Add build tools to PATH",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Initialize Docker Swarm",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            30.0,
+            34.0,
+            7.0,
+            34.0,
+            7.0
+          ],
+          "name": "Run pnpm install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run pnpm server:build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            23.0,
+            21.0,
+            22.0,
+            22.0
+          ],
+          "name": "Run pnpm typecheck",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "1f5f5576f10839120db9288a26af906a847a3324": "227022a90e0d7954ee8b06d9feabf3122d271ef8",
+      "7e9b77e93f9bae7a5dd8d156066339d55614dd6b": "2ad24fc0cf58498a57125eed5e58937305afd6d2",
+      "880bb55272bf35b3752955187a914d4f704eef70": "227022a90e0d7954ee8b06d9feabf3122d271ef8",
+      "a36739eb07a424981416dbaf0671c2b6026f1cf9": "227022a90e0d7954ee8b06d9feabf3122d271ef8",
+      "cee950b6c8f946fd042763335614a6740979d718": "227022a90e0d7954ee8b06d9feabf3122d271ef8"
+    },
+    "pinned_oid": "227022a90e0d7954ee8b06d9feabf3122d271ef8",
+    "runs_same_version": 4,
+    "runs_total": 5
+  }
+}

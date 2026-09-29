@@ -1,0 +1,169 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-28T05:07:21Z",
+      "conclusion": "success",
+      "created_at": "2026-08-28T05:06:07Z",
+      "head_sha": "b2423fcca92dd49aa31f62cc20fbdd536bc958c6",
+      "id": 98760132996,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "build",
+      "run_attempt": 1,
+      "run_id": 33143738817,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000196061",
+      "started_at": "2026-08-28T05:06:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-28T05:06:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-28T05:06:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-28T05:06:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:15Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v4",
+          "number": 3,
+          "started_at": "2026-08-28T05:06:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:20Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 4,
+          "started_at": "2026-08-28T05:06:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:27Z",
+          "conclusion": "success",
+          "name": "Run pnpm install --frozen-lockfile",
+          "number": 5,
+          "started_at": "2026-08-28T05:06:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:30Z",
+          "conclusion": "success",
+          "name": "Run pnpm run lint",
+          "number": 6,
+          "started_at": "2026-08-28T05:06:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:33Z",
+          "conclusion": "success",
+          "name": "Run pnpm run test:types",
+          "number": 7,
+          "started_at": "2026-08-28T05:06:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:37Z",
+          "conclusion": "success",
+          "name": "Run pnpm run -r dev:prepare",
+          "number": 8,
+          "started_at": "2026-08-28T05:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:06:55Z",
+          "conclusion": "success",
+          "name": "Run pnpm run test:vitest",
+          "number": 9,
+          "started_at": "2026-08-28T05:06:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm run build",
+          "number": 10,
+          "started_at": "2026-08-28T05:06:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:11Z",
+          "conclusion": "success",
+          "name": "Run pnpm run test:dts",
+          "number": 11,
+          "started_at": "2026-08-28T05:07:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm run test:dist",
+          "number": 12,
+          "started_at": "2026-08-28T05:07:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:15Z",
+          "conclusion": "success",
+          "name": "Run pnpm run size",
+          "number": 13,
+          "started_at": "2026-08-28T05:07:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:18Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@v5",
+          "number": 14,
+          "started_at": "2026-08-28T05:07:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 26,
+          "started_at": "2026-08-28T05:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:18Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v4",
+          "number": 27,
+          "started_at": "2026-08-28T05:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 28,
+          "started_at": "2026-08-28T05:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T05:07:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "started_at": "2026-08-28T05:07:18Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "ci"
+    }
+  ],
+  "run_id": 33143738817
+}

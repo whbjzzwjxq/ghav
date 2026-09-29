@@ -1,0 +1,54 @@
+name: Test
+
+on:
+  workflow_call:
+    inputs:
+      os:
+        required: true
+        type: string
+      node-version:
+        required: true
+        type: string
+
+permissions: # added using https://github.com/step-security/secure-workflows
+  contents: read
+
+jobs:
+  test:
+    permissions:
+      checks: write
+      contents: read
+    name: Run tests on Node v${{ inputs.node-version }} on ${{ inputs.os }}
+    runs-on: ${{ inputs.os }}
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          fetch-depth: 20
+          fetch-tags: false
+
+      - name: Setup workspace ⚙️
+        uses: ./.github/actions/setup-workspace
+        with:
+          os: ${{ inputs.os }}
+          node-version: ${{ inputs.node-version }}
+
+      - name: Build 🔧
+        run: |
+          npm run build
+          npm run postbuild
+
+      - name: Run tests 🧪
+        run: npm run test
+        env:
+          CI: true
+          DISABLE_MOCKED_WARNING: true
+
+      - name: Run e2e tests 🧪
+        run: |
+          npm run test-e2e-cjs
+          npm run test-e2e-esm
+
+      - name: Run tests in example projects 🧪
+        run: npm run test-examples

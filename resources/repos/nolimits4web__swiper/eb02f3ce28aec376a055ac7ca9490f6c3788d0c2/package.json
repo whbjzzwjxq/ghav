@@ -1,0 +1,110 @@
+{
+  "name": "swiper-src",
+  "version": "14.2.0",
+  "description": "Most modern mobile touch slider and framework with hardware accelerated transitions",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build",
+    "build:prod": "node scripts/build --prod",
+    "build-icons-font": "python ./scripts/icon-font/generate.py",
+    "watch": "node scripts/watch",
+    "demos": "npm run build && concurrently --kill-others \"vite ./demos/\" \"npm run watch\" ",
+    "core": "npm run build && concurrently --kill-others \"vite ./playground/core\" \"npm run watch\" ",
+    "element": "npm run build && concurrently --kill-others \"vite ./playground/element\" \"npm run watch\" ",
+    "react": "npm run build && concurrently --kill-others \"vite ./playground/react\" \"npm run watch\"",
+    "vue": "npm run build && concurrently --kill-others \"vite ./playground/vue\" \"npm run watch\"",
+    "format": "oxfmt .",
+    "check-format": "oxfmt --check .",
+    "type-check": "tsc --noEmit",
+    "validate": "npm-run-all --parallel check-format type-check",
+    "bundle-size": "node scripts/bundle-size.js",
+    "bundle-size:update": "node scripts/bundle-size.js --update",
+    "contract-test": "node tests/dist-contract.test.mjs",
+    "dist-types-test": "tsc --noEmit -p tsconfig.dist-types.json",
+    "consumer-types-test": "node tests/consumer-types/run.mjs",
+    "ssr-test": "node tests/ssr/ssr.test.mjs",
+    "element-dom-test": "node tests/element-dom/element-dom.test.mjs",
+    "loop-warning-test": "node tests/element-dom/loop-warning.test.mjs",
+    "cross-realm-params-test": "node tests/params/cross-realm-params.test.mjs",
+    "release": "npm run validate && node ./scripts/release",
+    "test": "npm run validate && npm run build:prod && npm run contract-test && npm run dist-types-test && npm run consumer-types-test && npm run ssr-test && npm run element-dom-test && npm run loop-warning-test && npm run cross-realm-params-test && npm run bundle-size",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -u -s",
+    "build-sponsors": "node scripts/build-sponsors.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nolimits4web/Swiper.git"
+  },
+  "keywords": [
+    "swiper",
+    "swipe",
+    "slider",
+    "touch",
+    "ios",
+    "mobile",
+    "cordova",
+    "phonegap",
+    "app",
+    "framework",
+    "framework7",
+    "carousel",
+    "gallery",
+    "plugin",
+    "vue",
+    "slideshow"
+  ],
+  "author": "Vladimir Kharlampidi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nolimits4web/swiper/issues"
+  },
+  "homepage": "https://swiperjs.com",
+  "funding": [
+    {
+      "type": "custom",
+      "url": "https://sponsors.nolimits4web.com"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/nolimits4web"
+    }
+  ],
+  "engines": {
+    "node": ">= 20.19.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-replace": "^6.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "autoprefixer": "^10.4.21",
+    "chalk": "^5.3.0",
+    "clean-css": "^5.3.3",
+    "concurrently": "^8.2.2",
+    "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.1.1",
+    "elapsed-time-logger": "^1.1.7",
+    "exec-sh": "^0.4.0",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.2",
+    "happy-dom": "^20.10.6",
+    "inquirer": "^9.2.11",
+    "less": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "oxfmt": "^0.52.0",
+    "postcss": "^8.5.6",
+    "postcss-nested": "^7.0.2",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.60.4",
+    "terser": "^5.44.0",
+    "tslib": "^2.8.1",
+    "typescript": "^6.0.3",
+    "vite": "^4.5.0",
+    "vue": "^3.3.6"
+  }
+}

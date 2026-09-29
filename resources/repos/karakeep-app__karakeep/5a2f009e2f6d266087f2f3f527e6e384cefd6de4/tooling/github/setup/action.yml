@@ -1,0 +1,24 @@
+name: "Setup and install"
+description: "Common setup steps for Actions"
+
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6
+    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+      with:
+        node-version: 24.18.1
+        cache: "pnpm"
+        registry-url: https://registry.npmjs.org
+
+    - shell: bash
+      run: pnpm add -g turbo
+
+    - shell: bash
+      run: npm install -g corepack@latest && corepack enable pnpm
+
+    - shell: bash
+      run: pnpm install
+      env:
+        PUPPETEER_SKIP_DOWNLOAD: "true"
+        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "true"

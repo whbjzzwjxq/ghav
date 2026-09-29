@@ -1,0 +1,29 @@
+name: Update Visual Snapshots
+on: [workflow_dispatch]
+
+jobs:
+  functional-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup & install dependencies
+        uses: ./.github/actions/setup
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 0
+
+      - name: Update visual snapshots
+        run: pnpm run playwright:update
+
+      - name: Commit updated snapshots
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '.'
+          author_name: 'GitHub Actions'
+          author_email: 'github-actions@github.com'
+          message: 'test: update visual snapshots'

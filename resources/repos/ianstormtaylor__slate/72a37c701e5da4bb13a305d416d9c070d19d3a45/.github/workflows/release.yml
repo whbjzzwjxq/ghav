@@ -1,0 +1,126 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  release:
+    name: ${{ matrix.channel }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+
+    strategy:
+      max-parallel: 1
+      matrix:
+        channel: [latest, dev]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.17
+          cache: yarn
+
+      - name: Enable Corepack (Yarn)
+        run: corepack enable
+
+      - name: Upgrade npm (OIDC fixes ship in npm releases)
+        run: npm i -g npm@11.18.0
+
+      - name: Configure npm registry (no token)
+        run: |
+          cat > ~/.npmrc <<'EOF'
+          registry=https://registry.npmjs.org/
+          EOF
+
+      - name: Debug npm auth config
+        run: |
+          npm -v
+          echo "=== user npmrc ==="
+          cat ~/.npmrc || true
+          echo "=== any auth/token config? ==="
+          npm config list -l | grep -iE 'auth|token|always-auth' || true
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Prepare release
+        run: yarn prerelease
+
+      - name: Create or update release PR
+        if: matrix.channel == 'latest'
+        id: changesets
+        uses: changesets/action@v2.0.0-next.3
+        with:
+          version-script: yarn changesetversion
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+      - name: Publish to latest channel
+        if: matrix.channel == 'latest' && steps.changesets.outputs['has-changesets'] == 'false'
+        run: |
+          set -euo pipefail
+          yarn changeset publish
+
+          tags="$(git tag --points-at HEAD --list 'slate*@*')"
+          if [ -z "$tags" ]; then
+            exit 0
+          fi
+
+          while IFS= read -r tag; do
+            [ -n "$tag" ] || continue
+
+            package="${tag%@*}"
+            version="${tag##*@}"
+            changelog="packages/${package}/CHANGELOG.md"
+            notes="$RUNNER_TEMP/${tag}.md"
+
+            git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "refs/tags/${tag}"
+
+            if gh release view "$tag" >/dev/null 2>&1; then
+              continue
+            fi
+
+            awk -v version="$version" '
+              $0 ~ "^## " {
+                if (found) exit
+                if ($0 ~ "^## " version "($| )") {
+                  found = 1
+                  next
+                }
+              }
+              found { print }
+            ' "$changelog" > "$notes"
+
+            if [ ! -s "$notes" ]; then
+              printf '%s\n' "$tag" > "$notes"
+            fi
+
+            gh release create "$tag" --title "$tag" --notes-file "$notes" --verify-tag
+          done <<< "$tags"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release to @dev channel
+        if: matrix.channel == 'dev'
+        run: |
+          yarn changeset version --snapshot
+          yarn changeset publish --tag dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

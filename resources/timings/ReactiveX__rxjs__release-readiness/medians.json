@@ -1,0 +1,907 @@
+{
+  "benchmark": "ReactiveX/rxjs@54796b38a57e6309f9861e174737479bb3f63f61:.github/workflows/release-readiness.yml",
+  "benchmark_id": "ReactiveX__rxjs__release-readiness",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        32085094774,
+        31218957319,
+        31025937529,
+        31023863188,
+        30945812495
+      ],
+      "window_count": 34
+    },
+    "push": {
+      "runs": [
+        31043255914,
+        30940527701,
+        30930380735,
+        30919217240,
+        30861110592
+      ],
+      "window_count": 7
+    }
+  },
+  "jobs": {
+    "Bun 1.3.14": {
+      "duration_seconds": 37.5,
+      "durations": [
+        42.0,
+        51.0,
+        31.0,
+        39.0,
+        31.0,
+        28.0,
+        31.0,
+        44.0,
+        48.0,
+        36.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        6.0,
+        3.0,
+        5.0,
+        6.0,
+        2.0,
+        5.0,
+        6.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            22.0,
+            21.0,
+            27.0,
+            19.0,
+            18.0,
+            20.0,
+            28.0,
+            34.0,
+            27.0
+          ],
+          "name": "Install package-build dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            2.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Build runtime packages",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install Deno",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            16.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Install Bun",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run Deno contract",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run Bun contract",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Chrome, Firefox, WebKit, Webpack, and performance": {
+      "duration_seconds": 128.5,
+      "durations": [
+        144.0,
+        118.0,
+        126.0,
+        131.0,
+        105.0,
+        116.0,
+        99.0,
+        1034.0,
+        168.0,
+        231.0
+      ],
+      "main_step_counts": [
+        8,
+        9
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        2.0,
+        3.0,
+        2.0,
+        5.0,
+        7.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            23.0,
+            27.0,
+            29.0,
+            19.0,
+            21.0,
+            18.0,
+            23.0,
+            32.0,
+            25.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            6.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "Build browser packages",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            73.0,
+            51.0,
+            52.0,
+            61.0,
+            44.0,
+            48.0,
+            41.0,
+            968.0,
+            59.0,
+            154.0
+          ],
+          "name": "Install pinned browser engines",
+          "occurrence": 0,
+          "positions": [
+            3,
+            4
+          ],
+          "seconds": 55.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            22.0
+          ],
+          "name": "Run deterministic agent-plugin qualification",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 25.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            9.0,
+            7.0,
+            9.0,
+            8.0,
+            5.0,
+            8.0,
+            10.0,
+            3.0
+          ],
+          "name": "Run browser contract",
+          "occurrence": 0,
+          "positions": [
+            4,
+            5
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run Webpack ESM and bundle-budget gate",
+          "occurrence": 0,
+          "positions": [
+            5,
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run performance budgets",
+          "occurrence": 0,
+          "positions": [
+            6,
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            17.0,
+            18.0,
+            20.0,
+            17.0,
+            18.0,
+            17.0,
+            17.0,
+            19.0,
+            14.0
+          ],
+          "name": "Run packed prerelease adoption gate",
+          "occurrence": 0,
+          "positions": [
+            7,
+            8
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deno 2.8.0": {
+      "duration_seconds": 37.5,
+      "durations": [
+        44.0,
+        35.0,
+        39.0,
+        38.0,
+        33.0,
+        39.0,
+        35.0,
+        32.0,
+        45.0,
+        37.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        7.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            24.0,
+            26.0,
+            24.0,
+            21.0,
+            23.0,
+            22.0,
+            21.0,
+            31.0,
+            25.0
+          ],
+          "name": "Install package-build dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Build runtime packages",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Install Deno",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install Bun",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run Deno contract",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run Bun contract",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Desktop Safari": {
+      "duration_seconds": 91.5,
+      "durations": [
+        139.0,
+        83.0,
+        87.0,
+        146.0,
+        73.0,
+        82.0,
+        96.0,
+        75.0,
+        141.0,
+        115.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        7.0,
+        7.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            6.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            104.0,
+            56.0,
+            62.0,
+            121.0,
+            52.0,
+            53.0,
+            69.0,
+            49.0,
+            105.0,
+            92.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 65.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Build Safari packages",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Enable SafariDriver on the ephemeral runner",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Boot an available iOS simulator",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            21.0,
+            12.0,
+            12.0,
+            11.0,
+            10.0,
+            14.0,
+            11.0,
+            13.0,
+            23.0,
+            9.0
+          ],
+          "name": "Run Safari contract",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Mobile Safari (iOS simulator)": {
+      "duration_seconds": 424.0,
+      "durations": [
+        530.0,
+        263.0,
+        464.0,
+        599.0,
+        572.0,
+        357.0,
+        423.0,
+        324.0,
+        425.0,
+        294.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 21.0,
+      "overheads": [
+        21.0,
+        15.0,
+        21.0,
+        26.0,
+        21.0,
+        19.0,
+        15.0,
+        34.0,
+        31.0,
+        21.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            147.0,
+            56.0,
+            62.0,
+            155.0,
+            56.0,
+            64.0,
+            65.0,
+            44.0,
+            141.0,
+            93.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 64.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            3.0,
+            6.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Build Safari packages",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Enable SafariDriver on the ephemeral runner",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            293.0,
+            108.0,
+            321.0,
+            368.0,
+            445.0,
+            225.0,
+            203.0,
+            197.0,
+            203.0,
+            105.0
+          ],
+          "name": "Boot an available iOS simulator",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 214.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            59.0,
+            75.0,
+            51.0,
+            40.0,
+            40.0,
+            39.0,
+            128.0,
+            40.0,
+            41.0,
+            67.0
+          ],
+          "name": "Run Safari contract",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 46.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "11d931645c03cc4b67eb70ee3a1122a53f8e0bc9": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "185d1876d242b1fb30385111df83df61aa837c37": "806bdc6b43b1fa7f028ddafd04a8d6ab46ca1cb9",
+      "54796b38a57e6309f9861e174737479bb3f63f61": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "57333439f374eb3d500d962bf7b32dfb919bb13b": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "5dc1748accd5d58ac5e79c753558bbc11407409a": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "651c2e798f9ad12fb1aea00df4fe5fd9e251b720": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "86664141136d92cd039696b53ce5b061e32a90b8": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "87960a11a15fce243138f40f8e97c0964136e602": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "d05eec464377ff5a64ef397fb6e573ba06adf1b1": "2c89df793764cb2731d6427d20b67bd50c362207",
+      "d6c88a02be3d0e1154367693f019fbb4b79d424a": "806bdc6b43b1fa7f028ddafd04a8d6ab46ca1cb9"
+    },
+    "pinned_oid": "2c89df793764cb2731d6427d20b67bd50c362207",
+    "runs_same_version": 8,
+    "runs_total": 10
+  }
+}

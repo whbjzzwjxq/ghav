@@ -1,0 +1,45 @@
+{
+  "name": "fastgpt",
+  "version": "4.0",
+  "private": true,
+  "scripts": {
+    "dev:pro": "turbo run dev:pro --filter=@fastgpt/app",
+    "prepare": "husky install",
+    "gen:theme-typings": "chakra-cli tokens packages/web/styles/theme.ts --out node_modules/.pnpm/node_modules/@chakra-ui/styled-system/dist/theming.types.d.ts",
+    "gen:deploy": "node ./deploy/init.mjs",
+    "postinstall": "pnpm gen:theme-typings && pnpm run build:sdks",
+    "initIcon": "node ./scripts/icon/init.js && prettier --config \"./.prettierrc.js\" --write \"packages/web/components/common/Icon/constants.ts\"",
+    "previewIcon": "node ./scripts/icon/index.js",
+    "lint": "turbo run lint",
+    "create:i18n": "node ./scripts/i18n/index.js",
+    "clean:unused:pro": "node --experimental-strip-types ./pro/scripts/cleanup-unused.ts",
+    "clean:unused:pro:write": "node --experimental-strip-types ./pro/scripts/cleanup-unused.ts --write",
+    "test": "node ./scripts/test/run.mjs",
+    "generate:i18n-loaders": "node scripts/generate-i18n-resource-loaders.mjs",
+    "check:i18n-loaders": "node scripts/check-i18n-resource-loaders.mjs",
+    "build:sdks": "pnpm -r --filter @fastgpt-sdk/storage --filter @fastgpt-sdk/otel --filter @fastgpt-sdk/sandbox-adapter build"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "eslint": "catalog:lint",
+    "eslint-config-next": "catalog:lint",
+    "husky": "^8.0.3",
+    "i18next": "catalog:",
+    "js-yaml": "catalog:",
+    "lint-staged": "catalog:lint",
+    "mongodb-memory-server": "catalog:",
+    "next-i18next": "catalog:",
+    "prettier": "catalog:lint",
+    "react-i18next": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:lint",
+    "vitest": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.23.2"
+  },
+  "packageManager": "pnpm@10.33.4"
+}

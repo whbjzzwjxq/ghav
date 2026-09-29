@@ -1,0 +1,2945 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-18T15:23:36Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079395,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Lint oxlint",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298904",
+      "started_at": "2026-08-18T15:23:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:27Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:32Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:32Z",
+          "conclusion": "success",
+          "name": "Run node --run lint-oxlint && git diff --exit-code",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:23:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:31Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079436,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build and run (ubuntu-latest, 24.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298903",
+      "started_at": "2026-08-18T15:23:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:18Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:24Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:25Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:26Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:23:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:32Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079467,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Lint Biome",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298917",
+      "started_at": "2026-08-18T15:23:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:24Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Run node --run lint-biome && git diff --exit-code",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:23:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:30Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079481,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Lint TypeScript",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298905",
+      "started_at": "2026-08-18T15:23:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:16Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:22Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:27Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Run node --run lint-ts",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:32Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079530,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build and run with Bun (ubuntu-latest, latest)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298914",
+      "started_at": "2026-08-18T15:23:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:20Z",
+          "conclusion": "success",
+          "name": "Setup Bun latest",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:25Z",
+          "conclusion": "success",
+          "name": "Run bun install",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:26Z",
+          "conclusion": "success",
+          "name": "Run bun run build",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:26Z",
+          "conclusion": "success",
+          "name": "Install only production dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Post Setup Bun latest",
+          "number": 19,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:23:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079551,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Build and run (macos-latest, 22.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298919",
+      "started_at": "2026-08-18T15:23:24Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:25Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Use Node.js 22.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:36Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:37Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:39Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:23:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:23:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:42Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 22.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:42Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:23:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:43Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:23:42Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:34Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079607,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build and run (ubuntu-latest, 22.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298916",
+      "started_at": "2026-08-18T15:23:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:19Z",
+          "conclusion": "success",
+          "name": "Use Node.js 22.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:26Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:27Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:28Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:23:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:23:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:30Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 22.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:23:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:23:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:54Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079612,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Build and run with Bun (windows-latest, latest)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298931",
+      "started_at": "2026-08-18T15:23:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:01Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Setup Bun latest",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:37Z",
+          "conclusion": "success",
+          "name": "Run bun install",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:39Z",
+          "conclusion": "success",
+          "name": "Run bun run build",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Install only production dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:24:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:48Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:48Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:49Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:49Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:49Z",
+          "conclusion": "success",
+          "name": "Post Setup Bun latest",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:52Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:25:32Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079624,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Test with Bun (windows-latest, latest)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298929",
+      "started_at": "2026-08-18T15:23:46Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:48Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:58Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Setup Bun latest",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:58Z",
+          "conclusion": "success",
+          "name": "Run bun install",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:29Z",
+          "conclusion": "success",
+          "name": "Run bun run test",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:29Z",
+          "conclusion": "success",
+          "name": "Post Setup Bun latest",
+          "number": 9,
+          "started_at": "2026-08-18T15:25:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:25:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:25:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:35Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079628,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Lint Secretlint",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298935",
+      "started_at": "2026-08-18T15:23:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:02Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:08Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:13Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:33Z",
+          "conclusion": "success",
+          "name": "Run node --run lint-secretlint",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:43Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079633,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build and run (ubuntu-latest, 26.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298942",
+      "started_at": "2026-08-18T15:24:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:25Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:29Z",
+          "conclusion": "success",
+          "name": "Use Node.js 26.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:36Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:37Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:24:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 26.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:40Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:40Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079635,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Test (windows-latest, 24.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298921",
+      "started_at": "2026-08-18T15:23:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:47Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:53Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:10Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:36Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:36Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:21Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079641,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Build and run with Bun (macos-latest, latest)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298932",
+      "started_at": "2026-08-18T15:23:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:58Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:02Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:04Z",
+          "conclusion": "success",
+          "name": "Setup Bun latest",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:08Z",
+          "conclusion": "success",
+          "name": "Run bun install",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:09Z",
+          "conclusion": "success",
+          "name": "Run bun run build",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:10Z",
+          "conclusion": "success",
+          "name": "Install only production dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:24:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:16Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:16Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:16Z",
+          "conclusion": "success",
+          "name": "Run bun bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:17Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:17Z",
+          "conclusion": "success",
+          "name": "Post Setup Bun latest",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:18Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:26Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079642,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Build and run (windows-latest, 26.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298920",
+      "started_at": "2026-08-18T15:23:34Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:45Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:56Z",
+          "conclusion": "success",
+          "name": "Use Node.js 26.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:12Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:14Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:15Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:24:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:20Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:20Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:21Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:21Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:21Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 26.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:23Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:23Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:48Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079644,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test coverage",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298933",
+      "started_at": "2026-08-18T15:23:56Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:02Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:10Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:16Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:39Z",
+          "conclusion": "success",
+          "name": "Run node --run test-coverage -- --reporter=verbose --reporter=junit --outputFile.junit=./test-report.junit.xml",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:41Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "number": 6,
+          "started_at": "2026-08-18T15:24:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:43Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:45Z",
+          "conclusion": "success",
+          "name": "Run codecov/test-results-action@0fa95f0e1eeaafde2c782583b36b28ad0d8c77d3",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 15,
+          "started_at": "2026-08-18T15:24:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 16,
+          "started_at": "2026-08-18T15:24:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-18T15:24:45Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:04Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079647,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Build and run (macos-latest, 24.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298923",
+      "started_at": "2026-08-18T15:23:35Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:54Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:55Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:57Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:23:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:59Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:23:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:59Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:23:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:59Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:01Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:07Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079650,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test with Bun (ubuntu-latest, latest)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298924",
+      "started_at": "2026-08-18T15:23:36Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Setup Bun latest",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:43Z",
+          "conclusion": "success",
+          "name": "Run bun install",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Run bun run test",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Post Setup Bun latest",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:04Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:26:00Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079652,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Build and run (windows-latest, 22.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298927",
+      "started_at": "2026-08-18T15:23:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:53Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:36Z",
+          "conclusion": "success",
+          "name": "Use Node.js 22.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:30Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:32Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:25:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:34Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:25:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:55Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:25:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:56Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:57Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:25:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:57Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:25:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:57Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 22.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:25:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:25:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:25:59Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:23:54Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079696,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test (ubuntu-latest, 26.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298915",
+      "started_at": "2026-08-18T15:23:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:21Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:26Z",
+          "conclusion": "success",
+          "name": "Use Node.js 26.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:32Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:51Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:51Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 26.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:23:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:23:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:23:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:08Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079707,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Build and run (macos-latest, 26.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298922",
+      "started_at": "2026-08-18T15:23:35Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:49Z",
+          "conclusion": "success",
+          "name": "Use Node.js 26.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:58Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:59Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:23:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:03Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 26.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:04Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:10Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079731,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Test (macos-latest, 24.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298925",
+      "started_at": "2026-08-18T15:23:36Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:41Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:48Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:23:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:06Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:23:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:06Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:07Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:41Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079740,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test (ubuntu-latest, 24.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298938",
+      "started_at": "2026-08-18T15:24:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:11Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:14Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:20Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:56Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079756,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Test with Bun (macos-latest, latest)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298941",
+      "started_at": "2026-08-18T15:24:12Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:19Z",
+          "conclusion": "success",
+          "name": "Setup Bun latest",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:23Z",
+          "conclusion": "success",
+          "name": "Run bun install",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:53Z",
+          "conclusion": "success",
+          "name": "Run bun run test",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:54Z",
+          "conclusion": "success",
+          "name": "Post Setup Bun latest",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:54Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:42Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079815,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Build and run (windows-latest, 24.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298934",
+      "started_at": "2026-08-18T15:23:58Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:00Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:15Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:30Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:32Z",
+          "conclusion": "success",
+          "name": "Run node --run build -- --sourceMap --declaration",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:34Z",
+          "conclusion": "success",
+          "name": "Remove dev dependencies",
+          "number": 6,
+          "started_at": "2026-08-18T15:24:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:37Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs",
+          "number": 7,
+          "started_at": "2026-08-18T15:24:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --version",
+          "number": 8,
+          "started_at": "2026-08-18T15:24:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Run node bin/repomix.cjs --help",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:39Z",
+          "conclusion": "success",
+          "name": "Upload build artifact",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:39Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24.x",
+          "number": 19,
+          "started_at": "2026-08-18T15:24:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-18T15:24:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-18T15:24:41Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:25:05Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079853,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Test (windows-latest, 22.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298930",
+      "started_at": "2026-08-18T15:23:47Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:23:48Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:23:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:23:57Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:23:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:10Z",
+          "conclusion": "success",
+          "name": "Use Node.js 22.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:23:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:35Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:01Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:01Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 22.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:25:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:25:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:25:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:25:11Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079931,
+      "labels": [
+        "windows-latest"
+      ],
+      "name": "Test (windows-latest, 26.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298937",
+      "started_at": "2026-08-18T15:24:08Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:10Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:17Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:27Z",
+          "conclusion": "success",
+          "name": "Use Node.js 26.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:42Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:07Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:07Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 26.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:25:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:25:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:25:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:25:09Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:46Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767079989,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Test (macos-latest, 26.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298936",
+      "started_at": "2026-08-18T15:24:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:15Z",
+          "conclusion": "success",
+          "name": "Use Node.js 26.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:21Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:43Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:43Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 26.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:43Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767080018,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test (ubuntu-latest, 22.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298939",
+      "started_at": "2026-08-18T15:24:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:13Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:14Z",
+          "conclusion": "success",
+          "name": "Use Node.js 22.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:21Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:42Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:42Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 22.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:42Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:42Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-18T15:24:42Z",
+      "conclusion": "success",
+      "created_at": "2026-08-18T15:23:13Z",
+      "head_sha": "367b94a1b32ac3310688a89be9a408f0c6778a82",
+      "id": 95767080043,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Test (macos-latest, 22.x)",
+      "run_attempt": 1,
+      "run_id": 32154130960,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000298940",
+      "started_at": "2026-08-18T15:24:10Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-18T15:24:12Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-18T15:24:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:14Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-18T15:24:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:15Z",
+          "conclusion": "success",
+          "name": "Use Node.js 22.x",
+          "number": 3,
+          "started_at": "2026-08-18T15:24:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:20Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "started_at": "2026-08-18T15:24:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Run node --run test -- --reporter=verbose",
+          "number": 5,
+          "started_at": "2026-08-18T15:24:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 22.x",
+          "number": 9,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 10,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-18T15:24:39Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-18T15:24:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    }
+  ],
+  "run_id": 32154130960
+}

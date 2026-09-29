@@ -1,0 +1,94 @@
+name: NocoBase frontEnd test
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+      - next
+      - develop
+    paths:
+      - 'packages/**'
+      - '**/yarn.lock'
+      - '.github/workflows/nocobase-test-frontend.yml'
+      - '!packages/core/acl/**'
+      - '!packages/core/actions/**'
+      - '!packages/core/database/**'
+      - '!packages/core/server/**'
+      - '!packages/plugins/**/src/server/**'
+  pull_request:
+    paths:
+      - '.github/workflows/nocobase-test-frontend.yml'
+      - 'packages/**'
+      - '**/yarn.lock'
+      - '!packages/core/acl/**'
+      - '!packages/core/actions/**'
+      - '!packages/core/database/**'
+      - '!packages/core/server/**'
+      - '!packages/plugins/**/src/server/**'
+
+jobs:
+  install-deps:
+    strategy:
+      matrix:
+        node_version: ['22']
+    runs-on: ubuntu-latest
+    container: node:${{ matrix.node_version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: 'yarn'
+
+      - run: yarn install --frozen-lockfile
+      - name: Pack dependencies
+        run: |
+          find . -name node_modules -type d -prune -print0 > node_modules.list
+          for file in .env .env.test; do
+            if [ -f "$file" ]; then
+              printf '%s\0' "$file" >> node_modules.list
+            fi
+          done
+          tar --null -cf node_modules.tar -T node_modules.list
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frontend-node-modules-node-${{ matrix.node_version }}
+          path: node_modules.tar
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+    timeout-minutes: 30
+
+  frontend-test:
+    needs: install-deps
+    strategy:
+      fail-fast: false
+      matrix:
+        node_version: ['22']
+        shard: [1, 2, 3, 4]
+    runs-on: ubuntu-latest
+    container: node:${{ matrix.node_version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: frontend-node-modules-node-${{ matrix.node_version }}
+          path: .
+
+      - run: tar -xf node_modules.tar
+      - run: yarn test:client --shard=${{ matrix.shard }}/4 --silent
+        env:
+          LOGGER_LEVEL: error
+    timeout-minutes: 30

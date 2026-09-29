@@ -1,0 +1,171 @@
+name: Release
+on:
+  push:
+    tags:
+      - "v*"
+permissions:
+  contents: write
+  discussions: write
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sanity-check:
+    name: Sanity Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+      - name: Set up node & dependencies
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --filter source --frozen-lockfile --ignore-scripts
+
+      - name: Check version consistency
+        run: pnpm tsx ${{ github.workspace }}/scripts/check-version-consistency.ts ${{ github.ref_name }}
+  make-electron:
+    name: Make Electron
+    needs:
+      - sanity-check
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [x64, arm64]
+        os:
+          - name: macos
+            image: macos-latest
+            shell: bash
+            forge_platform: darwin
+          - name: linux
+            image: ubuntu-22.04
+            shell: bash
+            forge_platform: linux
+          - name: windows
+            image: win-signing
+            shell: cmd
+            forge_platform: win32
+        # Exclude ARM64 Linux from default matrix to use native runner
+        exclude:
+          - arch: arm64
+            os:
+              name: linux
+        # Add ARM64 Linux with native ubuntu-24.04-arm runner for better-sqlite3 compatibility
+        include:
+          - arch: arm64
+            os:
+              name: linux
+              image: ubuntu-24.04-arm
+              shell: bash
+              forge_platform: linux
+    runs-on: ${{ matrix.os.image }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - name: Set up node & dependencies
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run the build
+        uses: ./.github/actions/build-electron
+        with:
+          os: ${{ matrix.os.name }}
+          arch: ${{ matrix.arch }}
+          shell: ${{ matrix.os.shell }}
+          forge_platform: ${{ matrix.os.forge_platform }}
+        env:
+          APPLE_APP_CERTIFICATE_BASE64: ${{ secrets.APPLE_APP_CERTIFICATE_BASE64 }}
+          APPLE_APP_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_APP_CERTIFICATE_PASSWORD }}
+          APPLE_INSTALLER_CERTIFICATE_BASE64: ${{ secrets.APPLE_INSTALLER_CERTIFICATE_BASE64 }}
+          APPLE_INSTALLER_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_INSTALLER_CERTIFICATE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+          WINDOWS_SIGN_EXECUTABLE: ${{ vars.WINDOWS_SIGN_EXECUTABLE }}
+          GPG_SIGNING_KEY: ${{ secrets.GPG_SIGN_KEY }}
+
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-desktop-${{ matrix.os.name }}-${{ matrix.arch }}
+          path: apps/desktop/upload/*.*
+
+  build_server:
+    name: Build Linux Server
+    needs:
+      - sanity-check
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [x64, arm64]
+        include:
+          - arch: x64
+            runs-on: ubuntu-22.04
+          - arch: arm64
+            runs-on: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runs-on }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Run the build
+        uses: ./.github/actions/build-server
+        with:
+          os: linux
+          arch: ${{ matrix.arch }}
+
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: release-server-linux-${{ matrix.arch }}
+          path: upload/*.*
+
+  publish_release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    needs:
+      - make-electron
+      - build_server
+    steps:
+      - run: mkdir upload
+
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            docs/Release Notes
+            scripts
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      # The release body cannot be the note as it stands: its images are relative to the
+      # folder the note lives in, and GitHub resolves those against the releases URL.
+      - name: Compose the release body
+        run: node --experimental-strip-types scripts/release-notes-body.mts "${{ github.ref_name }}" "$RUNNER_TEMP/release-body.md"
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v8
+        with:
+          merge-multiple: true
+          pattern: release-*
+          path: upload
+
+      - name: Publish stable release
+        uses: softprops/action-gh-release@v3.0.2
+        with:
+          draft: false
+          body_path: ${{ runner.temp }}/release-body.md
+          fail_on_unmatched_files: true
+          files: upload/*.*
+          discussion_category_name: Releases
+          make_latest: ${{ !contains(github.ref, 'rc') }}
+          prerelease: ${{ contains(github.ref, 'rc') }}
+          token: ${{ secrets.RELEASE_PAT }}

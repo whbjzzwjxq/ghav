@@ -1,0 +1,13 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo prep
+  checks:
+    needs: prep
+    if: github.event_name == 'push'
+    uses: ./.github/workflows/checks.yml
+    with:
+      os: ubuntu-latest

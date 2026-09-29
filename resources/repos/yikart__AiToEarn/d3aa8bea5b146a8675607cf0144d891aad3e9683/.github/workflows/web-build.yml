@@ -1,0 +1,108 @@
+name: Build Web Image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'project/aitoearn-web/**'
+      - '.github/workflows/web-build.yml'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Image version (leave empty to use default generation rule)
+        required: false
+        type: string
+      push_latest:
+        description: 'Push as latest tag'
+        required: false
+        type: boolean
+        default: false
+
+env:
+  APP_NAME: aitoearn-web
+  MONOREPO_DIR: project/aitoearn-web
+  DOCKER_HUB_USERNAME: aitoearn
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ env.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+      - name: Generate version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION=$(date +%Y%m%d)-$(git rev-parse --short HEAD)
+          fi
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Determine push latest
+        id: push-latest
+        run: |
+          PUSH_LATEST=false
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            PUSH_LATEST=true
+            echo "📌 Main branch push: Will push latest tag"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.push_latest }}" = "true" ]; then
+            PUSH_LATEST=true
+            echo "📌 Manual trigger with push_latest: Will push latest tag"
+          fi
+          echo "push_latest=$PUSH_LATEST" >> $GITHUB_OUTPUT
+
+      - name: Prepare tags
+        id: tags
+        run: |
+          TAGS="${{ env.DOCKER_HUB_USERNAME }}/${{ env.APP_NAME }}:${{ steps.version.outputs.version }}"
+          if [ "${{ steps.push-latest.outputs.push_latest }}" = "true" ]; then
+            TAGS="$TAGS"$'\n'"${{ env.DOCKER_HUB_USERNAME }}/${{ env.APP_NAME }}:latest"
+          fi
+          echo "tags<<EOF" >> $GITHUB_OUTPUT
+          echo "$TAGS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Build and push application
+        uses: docker/build-push-action@v5
+        with:
+          context: ${{ env.MONOREPO_DIR }}/
+          file: ${{ env.MONOREPO_DIR }}/Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.tags.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## 📦 Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **App**: ${{ env.APP_NAME }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Version**: ${{ steps.version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Platform**: linux/amd64, linux/arm64" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🐋 Docker Hub Images" >> $GITHUB_STEP_SUMMARY
+          echo "- **Version Image**: \`${{ env.DOCKER_HUB_USERNAME }}/${{ env.APP_NAME }}:${{ steps.version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.push-latest.outputs.push_latest }}" = "true" ]; then
+            echo "- **Latest**: \`${{ env.DOCKER_HUB_USERNAME }}/${{ env.APP_NAME }}:latest\`" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔗 Quick Links" >> $GITHUB_STEP_SUMMARY
+          echo "- [Source Commit](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})" >> $GITHUB_STEP_SUMMARY
+          echo "- [Build Log](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,55 @@
+name: Deploying dev-app to Firebase [main push].
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  deployments: write
+
+env:
+  PREVIEW_PROJECT: ng-dev-previews
+  PREVIEW_SITE: ng-comp-devapp
+  PREVIEW_CHANNEL: live
+
+jobs:
+  deploy-material2-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initialize environment
+        uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@fa43fd2864c3bec677cd47f4e095370850cdf8bc # main
+      - name: Setup Bazel
+        uses: angular/dev-infra/github-actions/bazel/setup@fa43fd2864c3bec677cd47f4e095370850cdf8bc # main
+      - name: Setup Bazel RBE
+        uses: angular/dev-infra/github-actions/bazel/configure-remote@fa43fd2864c3bec677cd47f4e095370850cdf8bc # main
+      - name: Install node modules
+        run: pnpm install --frozen-lockfile
+
+      - name: Building dev-app
+        run: |
+          pnpm -s bazel build //src/dev-app:web_package --symlink_prefix=dist/
+          cp -R dist/bin/src/dev-app/web_package dist/dev-app-web-pkg
+
+      - name: Configure Firebase deploy target
+        run: |
+          # We can use `npx` as the Firebase deploy actions uses it too.
+          npx -y firebase-tools@latest target:clear --project ${{env.PREVIEW_PROJECT}} hosting dev-app
+          npx -y firebase-tools@latest target:apply --project ${{env.PREVIEW_PROJECT}} hosting dev-app ${{env.PREVIEW_SITE}}
+
+      - uses: FirebaseExtended/action-hosting-deploy@500ac625ca2dd40cbd15f7659af953801858032a # v0
+        id: deploy
+        with:
+          # Note: No token used here as the action otherwise may attempt to post a comment.
+          repoToken: ''
+          firebaseServiceAccount: '${{secrets.FIREBASE_PREVIEW_SERVICE_TOKEN}}'
+          projectId: '${{env.PREVIEW_PROJECT}}'
+          entryPoint: './'
+          channelId: '${{env.PREVIEW_CHANNEL}}'
+
+      - name: Deployment Status
+        uses: zattoo/deploy-status@00e46ff4f584a96261c36d9337a4f7d2bfc4bdd3 # v1
+        with:
+          token: '${{github.token}}'
+          environment: 'dev'
+          environment_url: 'https://ng-comp-devapp.web.app'
+          state: success

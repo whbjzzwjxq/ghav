@@ -1,0 +1,6531 @@
+{
+  "benchmark": "microsoft/vscode@d5a3b39d9c9955527607ef4615c3e4117d1b2910:.github/workflows/pr.yml",
+  "benchmark_id": "microsoft__vscode__pr",
+  "count_window": {
+    "capped": false,
+    "days": 1,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-31T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33452883703,
+        33452823888,
+        33452719313,
+        33451607151,
+        33451373954
+      ],
+      "window_count": 245
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "Compile & Hygiene": {
+      "duration_seconds": 357.0,
+      "durations": [
+        357.0,
+        350.0,
+        369.0,
+        370.0,
+        356.0
+      ],
+      "main_step_counts": [
+        14
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            24.0,
+            24.0,
+            29.0,
+            23.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install build tools",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare Electron types",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Type check /build/ scripts",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            5.0,
+            1.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Check Markdown editor manifests",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            304.0,
+            297.0,
+            315.0,
+            305.0,
+            302.0
+          ],
+          "name": "Compile & Hygiene",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 304.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check Codex protocol client is in sync",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Check cyclic dependencies",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Copilot - Check Telemetry": {
+      "duration_seconds": 18.0,
+      "durations": [
+        17.0,
+        18.0,
+        20.0,
+        18.0,
+        20.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 2.0,
+      "overheads": [
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            7.0,
+            10.0,
+            9.0,
+            8.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Validate telemetry events",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Copilot - Check Test Cache": {
+      "duration_seconds": 31.0,
+      "durations": [
+        31.0,
+        31.0,
+        31.0,
+        39.0,
+        31.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0
+          ],
+          "name": "Checkout code",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            11.0,
+            12.0,
+            11.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install root dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install copilot dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Ensure no duplicate cache keys",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            9.0,
+            3.0
+          ],
+          "name": "Ensure no untrusted cache changes",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Copilot - Test (Linux)": {
+      "duration_seconds": 475.0,
+      "durations": [
+        475.0,
+        468.0,
+        487.0,
+        488.0,
+        468.0
+      ],
+      "main_step_counts": [
+        18
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Setup Python",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Setup .NET",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            8.0,
+            3.0
+          ],
+          "name": "Install setuptools",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0
+          ],
+          "name": "Install system dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            17.0,
+            12.0,
+            11.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install root dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install copilot dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "TypeScript type checking",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            76.0,
+            76.0,
+            77.0,
+            77.0,
+            75.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 76.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Compile",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            92.0,
+            92.0,
+            91.0,
+            91.0,
+            92.0
+          ],
+          "name": "Run vitest unit tests",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 92.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            209.0,
+            204.0,
+            207.0,
+            205.0,
+            206.0
+          ],
+          "name": "Run simulation tests with cache",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 206.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run Completions Core prompt tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            33.0,
+            43.0,
+            45.0,
+            33.0
+          ],
+          "name": "Run Completions Core lib tests using VS Code",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Archive simulation output",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload simulation output",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Copilot - Test (Windows)": {
+      "duration_seconds": 678.0,
+      "durations": [
+        676.0,
+        728.0,
+        691.0,
+        661.0,
+        678.0
+      ],
+      "main_step_counts": [
+        15
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            19.0,
+            19.0,
+            18.0,
+            19.0,
+            19.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Setup Python",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            24.0,
+            25.0,
+            25.0,
+            24.0
+          ],
+          "name": "Setup .NET",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Install setuptools",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            46.0,
+            43.0,
+            42.0,
+            43.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 43.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install root dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install copilot dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "TypeScript type checking",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            100.0,
+            105.0,
+            99.0,
+            97.0,
+            99.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 99.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0
+          ],
+          "name": "Compile",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            110.0,
+            113.0,
+            110.0,
+            107.0,
+            109.0
+          ],
+          "name": "Run vitest unit tests",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 110.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            303.0,
+            340.0,
+            319.0,
+            298.0,
+            309.0
+          ],
+          "name": "Run simulation tests with cache",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 309.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run Completions Core prompt tests",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            48.0,
+            45.0,
+            43.0,
+            45.0
+          ],
+          "name": "Run Completions Core lib tests using VS Code",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux / Browser": {
+      "duration_seconds": 665.0,
+      "durations": [
+        597.0,
+        629.0,
+        665.0,
+        672.0,
+        693.0
+      ],
+      "main_step_counts": [
+        34
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        4.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0,
+            8.0,
+            9.0,
+            8.0,
+            12.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            12.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "name": "Setup system services",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            29.0,
+            31.0,
+            33.0,
+            41.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install build dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            2.0
+          ],
+          "name": "Fontconfig diagnostics and cache reset",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            16.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            22.0,
+            21.0,
+            22.0,
+            23.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            166.0,
+            202.0,
+            220.0,
+            217.0,
+            221.0
+          ],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 217.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            14.0,
+            14.0,
+            14.0,
+            15.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            133.0,
+            154.0,
+            162.0,
+            164.0,
+            163.0
+          ],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 162.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove musl Claude binary on glibc Linux",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            128.0,
+            149.0,
+            154.0,
+            155.0,
+            159.0
+          ],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": 154.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            31
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            32
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            33
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux / CLI": {
+      "duration_seconds": 112.0,
+      "durations": [
+        111.0,
+        114.0,
+        112.0,
+        112.0,
+        127.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            10.0,
+            8.0,
+            8.0,
+            9.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Install Rust",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Set Rust version",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check Rust versions",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            38.0,
+            38.0,
+            37.0,
+            41.0
+          ],
+          "name": "Clippy lint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 38.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            52.0,
+            54.0,
+            52.0,
+            53.0,
+            63.0
+          ],
+          "name": "🧪 Run unit tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 53.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux / Electron": {
+      "duration_seconds": 949.0,
+      "durations": [
+        751.0,
+        970.0,
+        918.0,
+        949.0,
+        1014.0
+      ],
+      "main_step_counts": [
+        34
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        6.0,
+        5.0,
+        2.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            11.0,
+            10.0,
+            9.0,
+            11.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            6.0,
+            4.0,
+            5.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            29.0,
+            25.0,
+            13.0,
+            13.0
+          ],
+          "name": "Setup system services",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            56.0,
+            57.0,
+            30.0,
+            40.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 40.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install build dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Fontconfig diagnostics and cache reset",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            13.0,
+            12.0,
+            14.0,
+            14.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            33.0,
+            19.0,
+            21.0,
+            23.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            217.0,
+            172.0,
+            184.0,
+            208.0,
+            224.0
+          ],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 208.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            60.0,
+            51.0,
+            54.0,
+            58.0,
+            63.0
+          ],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 58.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            13.0,
+            10.0,
+            10.0,
+            13.0,
+            13.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            360.0,
+            574.0,
+            526.0,
+            571.0,
+            592.0
+          ],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 571.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Remove musl Claude binary on glibc Linux",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            31
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            32
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            33
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux / Electron-Smoke": {
+      "duration_seconds": 773.0,
+      "durations": [
+        773.0,
+        785.0,
+        779.0,
+        723.0,
+        658.0
+      ],
+      "main_step_counts": [
+        34
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            7.0,
+            8.0,
+            8.0,
+            11.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            4.0,
+            7.0,
+            6.0,
+            4.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            12.0,
+            11.0,
+            14.0
+          ],
+          "name": "Setup system services",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            28.0,
+            30.0,
+            32.0,
+            61.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install build dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Fontconfig diagnostics and cache reset",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            22.0,
+            22.0,
+            21.0,
+            17.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            14.0,
+            13.0,
+            10.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove musl Claude binary on glibc Linux",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            645.0,
+            657.0,
+            650.0,
+            597.0,
+            500.0
+          ],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": 645.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            31
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            32
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            33
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux / Remote": {
+      "duration_seconds": 720.0,
+      "durations": [
+        707.0,
+        727.0,
+        720.0,
+        712.0,
+        770.0
+      ],
+      "main_step_counts": [
+        34
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        6.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            9.0,
+            10.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            13.0,
+            13.0,
+            14.0
+          ],
+          "name": "Setup system services",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            30.0,
+            38.0,
+            30.0,
+            43.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install build dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Fontconfig diagnostics and cache reset",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            15.0,
+            15.0,
+            15.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            20.0,
+            27.0,
+            21.0,
+            26.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            13.0,
+            14.0,
+            13.0,
+            13.0,
+            14.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            212.0,
+            213.0,
+            208.0,
+            217.0,
+            222.0
+          ],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 213.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove musl Claude binary on glibc Linux",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            370.0,
+            383.0,
+            368.0,
+            367.0,
+            394.0
+          ],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": 370.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            31
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            32
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            33
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows / Browser": {
+      "duration_seconds": 675.0,
+      "durations": [
+        687.0,
+        669.0,
+        669.0,
+        675.0,
+        689.0
+      ],
+      "main_step_counts": [
+        30
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            19.0,
+            18.0,
+            18.0,
+            19.0,
+            17.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            89.0,
+            84.0,
+            86.0,
+            85.0,
+            92.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 86.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            26.0,
+            22.0,
+            25.0,
+            25.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            166.0,
+            165.0,
+            163.0,
+            164.0,
+            168.0
+          ],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 165.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            11.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Diagnostics before integration test runs",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            147.0,
+            142.0,
+            145.0,
+            146.0,
+            149.0
+          ],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 146.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after integration test runs",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            191.0,
+            185.0,
+            186.0,
+            186.0,
+            189.0
+          ],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 186.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows / Electron": {
+      "duration_seconds": 1130.0,
+      "durations": [
+        842.0,
+        1130.0,
+        1143.0,
+        1156.0,
+        1124.0
+      ],
+      "main_step_counts": [
+        30
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            19.0,
+            19.0,
+            19.0,
+            20.0,
+            19.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            88.0,
+            86.0,
+            87.0,
+            87.0,
+            86.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 87.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            26.0,
+            25.0,
+            25.0,
+            24.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            206.0,
+            206.0,
+            209.0,
+            212.0,
+            207.0
+          ],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 207.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            96.0,
+            94.0,
+            96.0,
+            96.0,
+            95.0
+          ],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 96.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            11.0,
+            11.0,
+            10.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics before integration test runs",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            368.0,
+            660.0,
+            669.0,
+            678.0,
+            655.0
+          ],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 660.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Diagnostics after integration test runs",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows / Electron-Smoke": {
+      "duration_seconds": 691.0,
+      "durations": [
+        679.0,
+        704.0,
+        691.0,
+        690.0,
+        699.0
+      ],
+      "main_step_counts": [
+        30
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            18.0,
+            20.0,
+            18.0,
+            19.0,
+            19.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            85.0,
+            87.0,
+            85.0,
+            86.0,
+            89.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 86.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            14.0,
+            14.0,
+            14.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            28.0,
+            24.0,
+            24.0,
+            25.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics before integration test runs",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics after integration test runs",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            503.0,
+            519.0,
+            514.0,
+            512.0,
+            519.0
+          ],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 514.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows / Remote": {
+      "duration_seconds": 701.0,
+      "durations": [
+        701.0,
+        700.0,
+        712.0,
+        721.0,
+        694.0
+      ],
+      "main_step_counts": [
+        30
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            22.0,
+            19.0,
+            19.0,
+            21.0,
+            18.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            90.0,
+            88.0,
+            87.0,
+            89.0,
+            86.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 88.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            13.0,
+            14.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            28.0,
+            25.0,
+            24.0,
+            24.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Diagnostics before integration test runs",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            164.0,
+            167.0,
+            171.0,
+            179.0,
+            164.0
+          ],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 167.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics after integration test runs",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            349.0,
+            349.0,
+            361.0,
+            358.0,
+            353.0
+          ],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 353.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS / Browser": {
+      "duration_seconds": 528.0,
+      "durations": [
+        528.0,
+        455.0,
+        457.0,
+        536.0,
+        553.0
+      ],
+      "main_step_counts": [
+        31
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        5.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            16.0,
+            9.0,
+            9.0,
+            10.0,
+            12.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            42.0,
+            41.0,
+            40.0,
+            45.0,
+            52.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            7.0,
+            8.0,
+            15.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            21.0,
+            22.0,
+            22.0,
+            21.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            120.0,
+            104.0,
+            105.0,
+            136.0,
+            131.0
+          ],
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 120.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            146.0,
+            122.0,
+            119.0,
+            146.0,
+            149.0
+          ],
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 146.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            3.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install Squid for network-isolated smoke tests",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            149.0,
+            132.0,
+            136.0,
+            149.0,
+            150.0
+          ],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 149.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS / Electron": {
+      "duration_seconds": 749.0,
+      "durations": [
+        604.0,
+        747.0,
+        793.0,
+        749.0,
+        837.0
+      ],
+      "main_step_counts": [
+        31
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0,
+            17.0,
+            11.0,
+            9.0,
+            11.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            45.0,
+            45.0,
+            47.0,
+            50.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            0.0,
+            1.0,
+            2.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            10.0,
+            10.0,
+            9.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            18.0,
+            23.0,
+            22.0,
+            21.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            201.0,
+            195.0,
+            207.0,
+            208.0,
+            224.0
+          ],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 207.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            47.0,
+            50.0,
+            47.0,
+            52.0
+          ],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            250.0,
+            404.0,
+            434.0,
+            392.0,
+            451.0
+          ],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 404.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install Squid for network-isolated smoke tests",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS / Electron-Smoke": {
+      "duration_seconds": 679.0,
+      "durations": [
+        787.0,
+        762.0,
+        679.0,
+        657.0,
+        663.0
+      ],
+      "main_step_counts": [
+        31
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            8.0,
+            8.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            46.0,
+            70.0,
+            43.0,
+            40.0,
+            41.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 43.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            24.0,
+            18.0,
+            22.0,
+            20.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            501.0,
+            474.0,
+            430.0,
+            431.0,
+            426.0
+          ],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 431.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "Install Squid for network-isolated smoke tests",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            80.0,
+            70.0,
+            68.0,
+            59.0,
+            65.0
+          ],
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 68.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            87.0,
+            78.0,
+            75.0,
+            65.0,
+            69.0
+          ],
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 75.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS / Remote": {
+      "duration_seconds": 496.0,
+      "durations": [
+        496.0,
+        510.0,
+        456.0,
+        524.0,
+        449.0
+      ],
+      "main_step_counts": [
+        31
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            10.0,
+            10.0,
+            8.0,
+            11.0
+          ],
+          "name": "Checkout microsoft/vscode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Detect Agent Host E2E changes",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Setup Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            47.0,
+            49.0,
+            42.0,
+            44.0,
+            46.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 46.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create .build folder",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Prepare built-in extensions cache key",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Restore built-in extensions cache",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Download built-in extensions",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Transpile client and extensions",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            20.0,
+            22.0,
+            19.0,
+            18.0
+          ],
+          "name": "Download Electron and Playwright",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (node.js)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Compile extensions for integration tests & smoke tests",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            125.0,
+            137.0,
+            109.0,
+            131.0,
+            107.0
+          ],
+          "name": "🧪 Run integration tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 125.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Compile smoke tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics before smoke test run",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Electron)",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Install Squid for network-isolated smoke tests",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            262.0,
+            266.0,
+            246.0,
+            294.0,
+            240.0
+          ],
+          "name": "🧪 Run smoke tests (Remote)",
+          "occurrence": 0,
+          "positions": [
+            26
+          ],
+          "seconds": 262.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Diagnostics after smoke test run",
+          "occurrence": 0,
+          "positions": [
+            27
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish Crash Reports",
+          "occurrence": 0,
+          "positions": [
+            28
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Publish Node Modules",
+          "occurrence": 0,
+          "positions": [
+            29
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Publish Log Files",
+          "occurrence": 0,
+          "positions": [
+            30
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "1df14ee5e1c95414fd552be10232affa349025ff": "b04ecfe533cbf42468bb6834d745dfd5e5336430",
+      "5eec39ec9573930fc0dde15d196a8b4a5b57015b": "b04ecfe533cbf42468bb6834d745dfd5e5336430",
+      "878e695df8b921904d3da6c8bd55ec45cd257dce": "b04ecfe533cbf42468bb6834d745dfd5e5336430",
+      "a8e49f99a0ce7f9b5a7cacdf3e7ba58fe15c5282": "b04ecfe533cbf42468bb6834d745dfd5e5336430",
+      "ebdff560ce79c89111f302ea4c1cd8fecdfd422f": "b04ecfe533cbf42468bb6834d745dfd5e5336430"
+    },
+    "pinned_oid": "f196afce554fb77d694c5e750063bcf4e8b4782e",
+    "runs_same_version": 0,
+    "runs_total": 5
+  }
+}

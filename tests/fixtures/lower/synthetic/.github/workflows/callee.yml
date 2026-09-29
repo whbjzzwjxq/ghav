@@ -1,0 +1,47 @@
+name: Callee
+on:
+  workflow_call:
+    inputs:
+      os:
+        type: string
+        required: true
+      tag:
+        type: string
+      flag:
+        type: boolean
+        default: false
+      level:
+        type: number
+        default: 2
+      note:
+        type: string
+    secrets:
+      token:
+        required: false
+env:
+  SHARED: callee-${{ inputs.os }}
+defaults:
+  run:
+    working-directory: packages/core
+jobs:
+  build:
+    runs-on: ${{ inputs.os }}
+    env:
+      LOCAL: x
+    steps:
+      - run: echo ${{ inputs.tag }} ${{ inputs.level }} "${{ inputs.note }}"
+        env:
+          TOKEN: ${{ secrets.token }}
+      - if: inputs.flag
+        run: echo flag
+  test:
+    needs: build
+    name: Test on ${{ inputs.os }}
+    runs-on: ${{ inputs.os }}
+    strategy:
+      matrix:
+        shard: [1, 2]
+    steps:
+      - run: npm test -- --shard=${{ matrix.shard }}
+        working-directory: .
+      - run: echo ${{ needs.build.result }}

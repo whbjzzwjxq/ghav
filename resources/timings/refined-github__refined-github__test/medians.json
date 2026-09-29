@@ -1,0 +1,1141 @@
+{
+  "benchmark": "refined-github/refined-github@2ed52bb5d259b2955427e3e4760840cbeefa43aa:.github/workflows/test.yml",
+  "benchmark_id": "refined-github__refined-github__test",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33422360100,
+        33420845980,
+        33420314719,
+        33419869358,
+        33419314862
+      ],
+      "window_count": 197
+    },
+    "push": {
+      "runs": [
+        33420095852,
+        33392943900,
+        33390513937,
+        33380135696,
+        33380088664
+      ],
+      "window_count": 48
+    }
+  },
+  "jobs": {
+    "Build (ubuntu-latest)": {
+      "duration_seconds": 23.5,
+      "durations": [
+        27.0,
+        25.0,
+        22.0,
+        18.0,
+        24.0,
+        22.0,
+        24.0,
+        23.0,
+        20.0,
+        28.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        3.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        2.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            0.0,
+            4.0,
+            2.0,
+            3.0,
+            0.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            0.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            8.0,
+            6.0,
+            6.0,
+            9.0,
+            7.0,
+            8.0,
+            7.0,
+            8.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "Run npm run build:bundle",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload bundle stats artifact",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build (windows-latest)": {
+      "duration_seconds": 64.0,
+      "durations": [
+        52.0,
+        55.0,
+        105.0,
+        53.0,
+        70.0,
+        88.0,
+        102.0,
+        58.0,
+        49.0,
+        75.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            8.0,
+            11.0,
+            7.0,
+            11.0,
+            12.0,
+            12.0,
+            8.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            36.0,
+            16.0,
+            22.0,
+            23.0,
+            35.0,
+            15.0,
+            12.0,
+            24.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            19.0,
+            45.0,
+            19.0,
+            25.0,
+            41.0,
+            39.0,
+            19.0,
+            17.0,
+            27.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            10.0,
+            7.0,
+            7.0,
+            8.0,
+            12.0,
+            11.0,
+            10.0,
+            12.0
+          ],
+          "name": "Run npm run build:bundle",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload bundle stats artifact",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Format": {
+      "duration_seconds": 20.5,
+      "durations": [
+        23.0,
+        18.0,
+        25.0,
+        20.0,
+        22.0,
+        21.0,
+        21.0,
+        17.0,
+        17.0,
+        17.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        2.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            7.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            5.0,
+            8.0,
+            8.0,
+            8.0,
+            9.0,
+            10.0,
+            7.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            3.0
+          ],
+          "name": "Run npm run format:check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint": {
+      "duration_seconds": 51.0,
+      "durations": [
+        49.0,
+        48.0,
+        52.0,
+        50.0,
+        54.0,
+        52.0,
+        52.0,
+        73.0,
+        44.0,
+        48.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        6.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0,
+            9.0,
+            7.0,
+            9.0,
+            17.0,
+            7.0,
+            9.0,
+            21.0,
+            5.0,
+            8.0
+          ],
+          "name": "Build codespell-project/actions-codespell@8f01853be192eb0f849a5c7d721450e7a467c579",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            9.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            8.0,
+            8.0,
+            5.0,
+            10.0,
+            8.0,
+            12.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            22.0,
+            26.0,
+            28.0,
+            22.0,
+            25.0,
+            27.0,
+            20.0,
+            26.0,
+            26.0
+          ],
+          "name": "Run npm run lint:eslint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 25.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run npm run lint:biome",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            0.0,
+            0.0,
+            2.0,
+            0.0,
+            0.0,
+            3.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run codespell-project/actions-codespell@8f01853be192eb0f849a5c7d721450e7a467c579",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Security": {
+      "duration_seconds": 11.0,
+      "durations": [
+        13.0,
+        11.0,
+        10.0,
+        14.0,
+        13.0,
+        10.0,
+        14.0,
+        11.0,
+        10.0,
+        11.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            6.0,
+            6.0,
+            9.0,
+            7.0,
+            6.0,
+            9.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run npx lockfile-lint --path package-lock.json --validate-https",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Types": {
+      "duration_seconds": 25.5,
+      "durations": [
+        19.0,
+        22.0,
+        25.0,
+        26.0,
+        26.0,
+        25.0,
+        26.0,
+        26.0,
+        18.0,
+        28.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        2.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            5.0,
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            9.0,
+            8.0,
+            8.0,
+            7.0,
+            9.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "Run npm run build:svelte",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run npm run build:typescript",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Verify": {
+      "duration_seconds": 17.0,
+      "durations": [
+        19.0,
+        19.0,
+        14.0,
+        15.0,
+        19.0,
+        18.0,
+        19.0,
+        14.0,
+        14.0,
+        16.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        2.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            0.0,
+            1.0,
+            4.0,
+            2.0,
+            0.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            4.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            9.0,
+            6.0,
+            5.0,
+            8.0,
+            11.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run npm run vitest -- build/features",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Leave comment",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Vitest": {
+      "duration_seconds": 29.0,
+      "durations": [
+        30.0,
+        29.0,
+        36.0,
+        20.0,
+        28.0,
+        29.0,
+        29.0,
+        29.0,
+        26.0,
+        20.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        10.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run sudo apt-get install ripgrep",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            8.0,
+            9.0,
+            6.0,
+            7.0,
+            10.0,
+            8.0,
+            7.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run npm ci",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            7.0,
+            5.0,
+            7.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run npm run vitest -- --exclude 'build/features*' --exclude '**/selectors*'",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "28765200db2f5f87fad5320d063acc9f166b546a": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "296fb5c260b3b7bd6a2364dacba85f03ed16c36c": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "2ed52bb5d259b2955427e3e4760840cbeefa43aa": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "335785cc8e0d1369a3d504a00e99b6aa103abb64": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "6e49ea3dd82826c7781c7ad0085700e36c7177c4": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "87157e044463a7ce85ca3b2d9a5746940458dfc4": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "d85ff2439c15b9fd170a81b82d09010b1d5c09d1": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "d9e964f74a1798a390390c813b9363a1d1e8123b": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "e5a3a2976ed3b0fb9ab01667fa8548842acc4649": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+      "eecb3117976940b6813425e14f25ac0b36a267a2": "2797064fb9c3d997315206dc1b485ab5f539eaab"
+    },
+    "pinned_oid": "2797064fb9c3d997315206dc1b485ab5f539eaab",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

@@ -1,0 +1,221 @@
+name: Playwright E2E Tests
+
+on:
+  pull_request:
+    paths:
+      - "apps/web/**"
+      - "packages/**"
+      - ".github/workflows/playwright.yaml"
+
+concurrency:
+  group: e2e-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    permissions:
+      contents: read
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    env:
+      CI: "true"
+      NODE_OPTIONS: "--max-old-space-size=8192"
+      DOTENV_FLOW_SILENT: "true"
+      RUNTIME_CACHE_DISABLE_BUILD_CACHE: "true"
+      DATABASE_URL: "mysql://root:@localhost:3306/planetscale"
+      PLANETSCALE_DATABASE_URL: "http://root:unused@localhost:3900/planetscale"
+
+      NEXTAUTH_SECRET: "e2e-test-secret-at-least-32-chars-long"
+      NEXTAUTH_URL: "http://partners.localhost:8888"
+
+      E2E_PARTNER_EMAIL: "partner1@dub-internal-test.com"
+      E2E_PARTNER_PASSWORD: "password"
+
+      # TINYBIRD_API_KEY / TINYBIRD_API_URL are set after Tinybird Local is ready
+
+      # serverless-redis-http (SRH) — must match jobs.e2e.services.srh env
+      SRH_TOKEN: "e2e_srh_token"
+      UPSTASH_REDIS_REST_URL: "http://127.0.0.1:8079"
+      UPSTASH_REDIS_REST_TOKEN: "e2e_srh_token"
+      UPSTASH_VECTOR_REST_URL: "https://sensible-camel-xxxx.upstash.io"
+      UPSTASH_VECTOR_REST_TOKEN: "xx"
+
+      # QStash local-dev (User 1) — must match jobs.e2e Start QStash step
+      QSTASH_URL: "http://127.0.0.1:8080"
+      QSTASH_TOKEN: "eyJVc2VySUQiOiJkZWZhdWx0VXNlciIsIlBhc3N3b3JkIjoiZGVmYXVsdFBhc3N3b3JkIn0="
+      QSTASH_CURRENT_SIGNING_KEY: "sig_7kYjw48mhY7kAjqNGcy6cr29RJ6r"
+      QSTASH_NEXT_SIGNING_KEY: "sig_5ZB6DVzB1wjE8S6rZ7eenA8Pdnhs"
+
+      # RESEND_API_KEY must be unset so emails route through SMTP to MailHog
+      SMTP_HOST: "localhost"
+      SMTP_PORT: "1025"
+      SMTP_USER: "smtpUser"
+      SMTP_PASSWORD: "smtpPassword"
+
+      CRON_SECRET: "xx"
+      ANTHROPIC_API_KEY: "xx"
+
+      STRIPE_SECRET_KEY: "xx"
+      STRIPE_WEBHOOK_SECRET: "xx"
+      STRIPE_CONNECT_WEBHOOK_SECRET: "xx"
+      STRIPE_APP_WEBHOOK_SECRET_TEST: "xx"
+      STRIPE_APP_SECRET_KEY_TEST: "xx"
+      STRIPE_CONNECT_V2_WEBHOOK_SECRET: "xx"
+      STRIPE_APP_SECRET_KEY_SANDBOX: "xx"
+      STRIPE_APP_SECRET_KEY: "xx"
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: planetscale
+          MYSQL_ROOT_HOST: "%"
+          MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+        ports:
+          - 3306:3306
+
+      mailhog:
+        image: mailhog/mailhog:latest
+        ports:
+          - 1025:1025
+          - 8025:8025
+
+      redis:
+        image: redis:7-alpine
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+      srh:
+        image: hiett/serverless-redis-http:latest
+        env:
+          SRH_MODE: env
+          SRH_TOKEN: "e2e_srh_token"
+          SRH_CONNECTION_STRING: redis://redis:6379
+        ports:
+          - 8079:80
+
+      # Classic .datasource/.pipe project; COMPATIBILITY_MODE is required
+      tinybird:
+        image: tinybirdco/tinybird-local:latest
+        env:
+          COMPATIBILITY_MODE: "1"
+        ports:
+          - 7181:7181
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Start PlanetScale simulator
+        run: |
+          docker run -d --name ps-http-sim \
+            --network host \
+            ghcr.io/mattrobenolt/ps-http-sim:latest \
+            -listen-addr=0.0.0.0 \
+            -listen-port=3900 \
+            -mysql-dbname=planetscale \
+            -mysql-no-pass \
+            -mysql-addr=127.0.0.1
+
+      - name: Start QStash dev server
+        run: |
+          docker run -d --name qstash-dev \
+            --network host \
+            public.ecr.aws/upstash/qstash:latest \
+            qstash dev
+          for i in $(seq 1 30); do
+            if curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:8080 | grep -qE '^[0-9]{3}$'; then
+              echo "QStash is up"
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs qstash-dev
+          exit 1
+
+      - name: Configure Tinybird Local
+        working-directory: packages/tinybird
+        run: |
+          TOKEN=""
+          for i in $(seq 1 90); do
+            TOKEN=$(curl -sf http://127.0.0.1:7181/tokens | jq -r '.workspace_admin_token // empty' || true)
+            if [ -n "$TOKEN" ]; then
+              echo "Tinybird Local is up"
+              break
+            fi
+            sleep 2
+          done
+          if [ -z "$TOKEN" ]; then
+            echo "Tinybird Local did not become ready on :7181"
+            exit 1
+          fi
+
+          echo "::add-mask::$TOKEN"
+          {
+            echo "TINYBIRD_API_KEY<<EOF"
+            echo "$TOKEN"
+            echo "EOF"
+            echo "TINYBIRD_API_URL=http://127.0.0.1:7181"
+          } >> "$GITHUB_ENV"
+
+          python3 -m venv /tmp/tinybird-cli
+          /tmp/tinybird-cli/bin/pip install tinybird-cli
+          /tmp/tinybird-cli/bin/tb --host http://127.0.0.1:7181 --token "$TOKEN" auth
+          /tmp/tinybird-cli/bin/tb push --force --yes datasources/*.datasource
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('apps/web/package.json') }}
+
+      - name: Install Playwright Chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: pnpm --filter web exec playwright install chromium
+
+      - name: Generate Prisma client
+        working-directory: apps/web
+        run: pnpm prisma:generate
+
+      - name: Push database schema
+        working-directory: apps/web
+        run: pnpm prisma:push
+
+      - name: Seed test data
+        working-directory: apps/web
+        run: pnpm tsx playwright/seed.ts
+
+      - name: Build application
+        run: pnpm turbo build --filter=web
+
+      - name: Run Playwright API tests
+        working-directory: apps/web
+        run: pnpm test:e2e --project=api
+
+      - name: Run Playwright UI tests
+        working-directory: apps/web
+        run: pnpm test:e2e --project=partners --project=workspaces --project=chromium-workspace

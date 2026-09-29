@@ -1,0 +1,20 @@
+{
+  "name": "driverjs-monorepo",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev": "turbo run dev --filter=driver-playground",
+    "docs:dev": "turbo run dev --filter=driver-docs",
+    "build": "turbo run build",
+    "test": "pnpm --dir packages/driver test",
+    "test:run": "turbo run test:run",
+    "test:coverage": "turbo run test:coverage",
+    "lint:package": "turbo run lint:package",
+    "format": "prettier . --write",
+    "release": "GITHUB_TOKEN=$(gh auth token) pnpm --dir packages/driver release"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.4",
+    "turbo": "^2.6.5"
+  }
+}

@@ -1,0 +1,147 @@
+name: CI Website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.tool-versions'
+      - '.github/workflows/ci-website.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.tool-versions'
+      - '.github/workflows/ci-website.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-website-client:
+    name: Lint Website Client
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - name: Install website client dependencies
+        working-directory: website/client
+        run: npm ci
+      - name: Lint website client
+        working-directory: website/client
+        run: node --run lint
+      - name: Build website client
+        working-directory: website/client
+        run: node --run docs:build
+
+  lint-website-server:
+    name: Lint Website Server
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - name: Build and link local repomix
+        run: |
+          npm ci
+          node --run build
+          npm link
+      - name: Install website server dependencies
+        working-directory: website/server
+        run: |
+          # npm 12 fails to prepare the github:repomix git dependency: its prep
+          # child process re-reads .npmrc (min-release-age=7) and hits npm's own
+          # --before, which cannot coexist. Setting npm_config_min_release_age=0
+          # does not help (0 still counts as "provided", and the child re-reads
+          # .npmrc), so downgrade to npm 11.4.0, which predates the flag.
+          # Matches website/server/Dockerfile.
+          npm install -g npm@11.4.0
+          npm ci
+          npm link repomix
+      - name: Lint website server
+        working-directory: website/server
+        run: node --run lint
+
+  test-website-server:
+    name: Test Website Server
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - name: Build and link local repomix
+        run: |
+          npm ci
+          node --run build
+          npm link
+      - name: Install website server dependencies
+        working-directory: website/server
+        run: |
+          # npm 12 fails to prepare the github:repomix git dependency: its prep
+          # child process re-reads .npmrc (min-release-age=7) and hits npm's own
+          # --before, which cannot coexist. Setting npm_config_min_release_age=0
+          # does not help (0 still counts as "provided", and the child re-reads
+          # .npmrc), so downgrade to npm 11.4.0, which predates the flag.
+          # Matches website/server/Dockerfile.
+          npm install -g npm@11.4.0
+          npm ci
+          npm link repomix
+      - name: Test website server
+        working-directory: website/server
+        run: node --run test
+
+  bundle-website-server:
+    name: Bundle Website Server
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .tool-versions
+          cache: npm
+      - name: Build and link local repomix
+        run: |
+          npm ci
+          node --run build
+          npm link
+      - name: Install website server dependencies
+        working-directory: website/server
+        run: |
+          # npm 12 fails to prepare the github:repomix git dependency: its prep
+          # child process re-reads .npmrc (min-release-age=7) and hits npm's own
+          # --before, which cannot coexist. Setting npm_config_min_release_age=0
+          # does not help (0 still counts as "provided", and the child re-reads
+          # .npmrc), so downgrade to npm 11.4.0, which predates the flag.
+          # Matches website/server/Dockerfile.
+          npm install -g npm@11.4.0
+          npm ci
+          npm link repomix
+      - name: Bundle website server
+        working-directory: website/server
+        run: node --run bundle

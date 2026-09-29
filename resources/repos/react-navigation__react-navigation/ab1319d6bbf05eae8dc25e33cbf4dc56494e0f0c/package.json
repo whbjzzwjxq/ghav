@@ -1,0 +1,70 @@
+{
+  "description": "Routing and navigation for your React Native apps",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "example"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-navigation/react-navigation.git"
+  },
+  "author": "Satyajit Sahoo <satyajit.happy@gmail.com> (https://github.com/satya164/), Michał Osadnik <micosa97@gmail.com> (https://github.com/osdnk/)",
+  "scripts": {
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "typecheck:standalone:static": "tsc --project example/__typechecks__/standalone/static --noEmit",
+    "typecheck:standalone:dynamic": "tsc --project example/__typechecks__/standalone/dynamic --noEmit",
+    "typecheck:declarations": "tsc --declaration --emitDeclarationOnly --composite false --outDir /tmp/react-navigation-typescript-dts",
+    "test": "jest",
+    "clean": "lerna run clean",
+    "build": "lerna run prepack",
+    "publish": "lerna publish",
+    "release": "run-s build publish",
+    "versions": "node scripts/dependency-versions.mjs",
+    "example": "pnpm --filter @react-navigation/example"
+  },
+  "engines": {
+    "node": ">= 24.13.0"
+  },
+  "packageManager": "pnpm@11.13.1",
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/plugin-transform-explicit-resource-management": "^7.29.7",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@evilmartians/lefthook": "^2.1.9",
+    "@lerna-lite/cli": "^5.3.0",
+    "@lerna-lite/publish": "^5.3.0",
+    "@lerna-lite/run": "^5.3.0",
+    "@react-native/babel-preset": "0.85.3",
+    "@react-native/jest-preset": "^0.85.3",
+    "@testing-library/dom": "^10.4.1",
+    "@types/babel__core": "^7.20.5",
+    "@types/node": "^24.13.2",
+    "@types/semver": "^7.7.1",
+    "agent-device": "^0.20.1",
+    "commitlint": "^21.0.2",
+    "eslint": "^9.39.5",
+    "eslint-config-satya164": "^5.2.0",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "jest": "~30.4.2",
+    "jest-environment-node": "30.4.1",
+    "jsdom": "26.1.0",
+    "npm-run-all2": "^9.0.1",
+    "prettier": "^3.8.3",
+    "semver": "^7.8.2",
+    "typescript": "^6.0.3"
+  },
+  "prettier": {
+    "quoteProps": "as-needed",
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}

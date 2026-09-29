@@ -1,0 +1,72 @@
+{
+  // https://www.totaltypescript.com/tsconfig-cheat-sheet
+  "compilerOptions": {
+    /* Base options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    /* If NOT transpiling with TypeScript: */
+    "module": "preserve",
+    "noEmit": true,
+    /* If your code runs in the DOM: */
+    "lib": [
+      "es2023",
+      "webworker",
+      "dom",
+      "dom.iterable"
+    ],
+    "libReplacement": false,
+    "paths": {
+      "#app": [
+        "./packages/nuxt/src/app/index"
+      ],
+      "#app/*": [
+        "./packages/nuxt/src/app/*"
+      ],
+      "#unhead/composables": [
+        "./packages/nuxt/src/head/runtime/composables"
+      ],
+      "#vite-node": [
+        "./packages/vite/src/vite-node"
+      ],
+      "#vite-node-entry": [
+        "./packages/vite/src/vite-node-entry"
+      ],
+      "#vite-node-runner": [
+        "./packages/vite/src/vite-node-runner"
+      ],
+      "nuxt/app": [
+        "./packages/nuxt/src/app/index"
+      ],
+      "nuxt/app/*": [
+        "./packages/nuxt/src/app/*"
+      ]
+    }
+  },
+  "exclude": [
+    "**/dist/**",
+    "**/.nuxt/**",
+    "packages/nuxt/src/app/types/**",
+    "packages/kit/test/types-fixture/**",
+    "packages/nuxt/meta.d.ts",
+    "**/nuxt.d.ts",
+    "**/examples/**",
+    "**/docs/**",
+    "**/playground/**",
+    "**/test/nuxt/**",
+    "**/test/fixtures/**",
+    "**/test/fixtures-temp/**"
+  ]
+}

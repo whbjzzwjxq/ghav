@@ -1,0 +1,110 @@
+{
+  "benchmark": "LibreChat-AI/LibreChat@49e1e32f3a41b8e718feaa818e0134d5d0d70ae5:.github/workflows/sync-helm-chart-tags.yml",
+  "benchmark_id": "LibreChat-AI__LibreChat__sync-helm-chart-tags",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33424998205,
+        33349899731,
+        33343454385,
+        33342530037,
+        33341140599
+      ],
+      "window_count": 42
+    }
+  },
+  "jobs": {
+    "Ignore non-main push": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "Sync chart tags": {
+      "duration_seconds": 13.0,
+      "durations": [
+        13.0,
+        13.0,
+        17.0,
+        17.0,
+        13.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        3.0,
+        4.0,
+        1.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            11.0,
+            14.0,
+            13.0,
+            12.0
+          ],
+          "name": "Fetch main and tags",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create missing chart tags",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "14d4f2789d8f1d308713f7acd98fab925f8aa74d": "13add36fcf58be30ae54a75859da31efbb72f5cf",
+      "1e4cae07c79f432648c9a8287484d76f2d78e98f": "13add36fcf58be30ae54a75859da31efbb72f5cf",
+      "49e1e32f3a41b8e718feaa818e0134d5d0d70ae5": "13add36fcf58be30ae54a75859da31efbb72f5cf",
+      "56d54a94161a1ccd4615e83b20e3920699eb8368": "13add36fcf58be30ae54a75859da31efbb72f5cf",
+      "9ac801ee454fb33aedad267f39d885f74090edb8": "13add36fcf58be30ae54a75859da31efbb72f5cf"
+    },
+    "pinned_oid": "13add36fcf58be30ae54a75859da31efbb72f5cf",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

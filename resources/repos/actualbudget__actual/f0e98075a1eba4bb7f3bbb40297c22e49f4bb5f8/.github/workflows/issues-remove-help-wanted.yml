@@ -1,0 +1,20 @@
+name: Remove 'help wanted' label from closed issues
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  issues: write
+
+jobs:
+  remove-help-wanted:
+    if: ${{ github.event.issue.type.name != 'Feature' && contains(github.event.issue.labels.*.name, 'help wanted') }}
+    runs-on: depot-ubuntu-latest
+    steps:
+      - name: Remove 'help wanted' label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue edit "$ISSUE_NUMBER" --remove-label "help wanted"

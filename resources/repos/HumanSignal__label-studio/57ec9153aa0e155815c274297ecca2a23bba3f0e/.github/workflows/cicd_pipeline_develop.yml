@@ -1,0 +1,104 @@
+name: "CI/CD Pipeline Develop"
+
+on:
+  push:
+    branches:
+      - develop
+
+concurrency:
+  group: "CI/CD Pipeline-develop"
+  cancel-in-progress: false
+
+jobs:
+  gitleaks:
+    name: "Linter"
+    uses: ./.github/workflows/gitleaks.yml
+    with:
+      head_sha: ${{ github.sha }}
+      base_sha: ${{ github.event.pull_request.base.sha || github.event.before }}
+
+  bandit:
+    name: "Linter"
+    uses: ./.github/workflows/bandit.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+
+  ruff:
+    name: "Linter"
+    uses: ./.github/workflows/ruff.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+
+  biome:
+    name: "Linter"
+    uses: ./.github/workflows/biome.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+
+  build-docker:
+    name: "Build"
+    if: github.repository_owner == 'HumanSignal'
+    permissions:
+      contents: read
+      checks: write
+    uses: ./.github/workflows/docker-build.yml
+    with:
+      sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+      branch_name: ${{ github.event.pull_request.head.ref || github.ref_name }}
+    secrets: inherit
+
+  pytest:
+    name: "Tests"
+    uses: ./.github/workflows/tests.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+    secrets: inherit
+
+  migrations:
+    name: "Tests"
+    uses: ./.github/workflows/test_migrations.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+    secrets: inherit
+
+  conda-test:
+    name: "Tests"
+    uses: ./.github/workflows/test_conda.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+    secrets: inherit
+
+  tests-yarn-unit:
+    name: "Tests"
+    uses: ./.github/workflows/tests-yarn-unit.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+    secrets: inherit
+
+  tests-yarn-lsf:
+    name: "Tests"
+    uses: ./.github/workflows/tests-yarn-lsf.yml
+    with:
+      head_sha: ${{ github.event.pull_request.head.sha || github.event.after }}
+    secrets: inherit
+
+  check_gate:
+    name: "Ready to ship"
+    if: always()
+    needs:
+      - gitleaks
+      - bandit
+      - ruff
+      - biome
+      - pytest
+      - migrations
+      - build-docker
+      - tests-yarn-unit
+      - tests-yarn-lsf
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
+        with:
+          allowed-skips: gitleaks, bandit, ruff, biome, pytest, migrations, conda-test, build-docker, tests-yarn-unit, tests-yarn-lsf
+          jobs: ${{ toJSON(needs) }}

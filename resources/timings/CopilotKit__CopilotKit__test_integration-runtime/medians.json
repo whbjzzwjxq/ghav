@@ -1,0 +1,439 @@
+{
+  "benchmark": "CopilotKit/CopilotKit@fe51cec465865375b77b00604988e2211983d58b:.github/workflows/test_integration-runtime.yml",
+  "benchmark_id": "CopilotKit__CopilotKit__test_integration-runtime",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33450567352,
+        33445383953,
+        33445014318,
+        33442468022,
+        33442269978
+      ],
+      "window_count": 293
+    },
+    "push": {
+      "runs": [
+        33435309593,
+        33427723791,
+        33415832696,
+        33197450627,
+        33193713378
+      ],
+      "window_count": 59
+    }
+  },
+  "jobs": {
+    "runtime / bun": {
+      "duration_seconds": 52.0,
+      "durations": [
+        50.0,
+        132.0,
+        49.0,
+        54.0,
+        52.0,
+        52.0,
+        56.0,
+        80.0,
+        52.0,
+        48.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        8.0,
+        59.0,
+        8.0,
+        8.0,
+        11.0,
+        9.0,
+        9.0,
+        8.0,
+        8.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            9.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            5.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Setup pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Setup Bun",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            25.0,
+            15.0,
+            17.0,
+            15.0,
+            16.0,
+            17.0,
+            17.0,
+            16.0,
+            14.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            30.0,
+            21.0,
+            23.0,
+            20.0,
+            22.0,
+            23.0,
+            46.0,
+            22.0,
+            20.0
+          ],
+          "name": "Build runtime",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run Bun server integration tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "runtime / node": {
+      "duration_seconds": 65.0,
+      "durations": [
+        62.0,
+        99.0,
+        67.0,
+        62.0,
+        60.0,
+        68.0,
+        63.0,
+        71.0,
+        67.0,
+        62.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        6.0,
+        23.0,
+        7.0,
+        8.0,
+        6.0,
+        9.0,
+        7.0,
+        8.0,
+        7.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            15.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            6.0,
+            4.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Setup pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            5.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            18.0,
+            17.0,
+            15.0,
+            15.0,
+            16.0,
+            16.0,
+            16.0,
+            17.0,
+            16.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Configure Nx Cloud environment",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            22.0,
+            25.0,
+            21.0,
+            20.0,
+            24.0,
+            23.0,
+            25.0,
+            23.0,
+            21.0
+          ],
+          "name": "Build runtime",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            14.0,
+            14.0,
+            14.0,
+            15.0,
+            10.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Run Node.js server integration tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0bbfc8411bfb888f4639d68ff229cc788790f626": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "15d4fa0e04c7c7fb0e466267db2e79847390ef04": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "302483c166927d48ed0a0c9ab06b513fb85b2bae": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "34e8473e1f9b1208a70964a5bdb6a5fd4b39d495": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "56c2378ff5526d19dd0ccd534ba063eca6dc61e4": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "abcd2a23cf298489891c5223f495e5055880c658": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "b07b1320f26d93c45f2eab391a3c3ec14bf3b065": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "d692f2585285b15f7e84648f85cf949ae28b2beb": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "e55c6f7b41c5d21ab9a467895d65e33c983aedc5": "e0813d16added634ef8a1586f960089ba233fcc5",
+      "f08f478cf73c46d34e8db03dedcc61f695f9b9b5": "e0813d16added634ef8a1586f960089ba233fcc5"
+    },
+    "pinned_oid": "e0813d16added634ef8a1586f960089ba233fcc5",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

@@ -1,0 +1,54 @@
+name: Needs
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      label: v-${{ steps.v.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: v
+        run: echo "version=1" >> "$GITHUB_OUTPUT"
+      - if: failure()
+        run: echo failed
+      - if: ${{ github.event_name == 'push' }}
+        run: echo push
+      - if: "!cancelled()"
+        run: echo not-cancelled
+      - if: false
+        run: echo never
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 20]
+    steps:
+      - run: echo ${{ needs.build.outputs.version }} ${{ matrix.node }}
+  report:
+    needs: [build, test]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo done
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo deploy
+  gate:
+    needs: [test]
+    if: ${{ always() && contains(needs.*.result, 'failure') }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+  independent:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hi

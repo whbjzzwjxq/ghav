@@ -1,0 +1,285 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-13T00:34:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-13T00:34:02Z",
+      "head_sha": "2115efb9e270e73ad1d3472dfe0e0c7b8c6abcd4",
+      "id": 94306946044,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test_multiple_builds (cjs, development)",
+      "run_attempt": 1,
+      "run_id": 31654846645,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000099181",
+      "started_at": "2026-08-13T00:34:11Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-13T00:34:14Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-13T00:34:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:15Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 2,
+          "started_at": "2026-08-13T00:34:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "number": 3,
+          "started_at": "2026-08-13T00:34:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:26Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "number": 4,
+          "started_at": "2026-08-13T00:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:30Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-13T00:34:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Run pnpm run build",
+          "number": 6,
+          "started_at": "2026-08-13T00:34:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Patch for DEV-ONLY",
+          "number": 7,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "skipped",
+          "name": "Patch for PRD-ONLY",
+          "number": 8,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Patch for CJS",
+          "number": 9,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "skipped",
+          "name": "Patch for ESM",
+          "number": 10,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:48Z",
+          "conclusion": "success",
+          "name": "Test cjs development",
+          "number": 11,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "number": 20,
+          "started_at": "2026-08-13T00:34:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:48Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "number": 21,
+          "started_at": "2026-08-13T00:34:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 22,
+          "started_at": "2026-08-13T00:34:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-13T00:34:48Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Test Multiple Builds"
+    },
+    {
+      "completed_at": "2026-08-13T00:34:43Z",
+      "conclusion": "success",
+      "created_at": "2026-08-13T00:34:02Z",
+      "head_sha": "2115efb9e270e73ad1d3472dfe0e0c7b8c6abcd4",
+      "id": 94306946143,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "test_multiple_builds (esm, development)",
+      "run_attempt": 1,
+      "run_id": 31654846645,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000099182",
+      "started_at": "2026-08-13T00:34:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-13T00:34:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-13T00:34:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 2,
+          "started_at": "2026-08-13T00:34:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "number": 3,
+          "started_at": "2026-08-13T00:34:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:17Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "number": 4,
+          "started_at": "2026-08-13T00:34:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-13T00:34:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:31Z",
+          "conclusion": "success",
+          "name": "Run pnpm run build",
+          "number": 6,
+          "started_at": "2026-08-13T00:34:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:31Z",
+          "conclusion": "success",
+          "name": "Patch for DEV-ONLY",
+          "number": 7,
+          "started_at": "2026-08-13T00:34:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:31Z",
+          "conclusion": "skipped",
+          "name": "Patch for PRD-ONLY",
+          "number": 8,
+          "started_at": "2026-08-13T00:34:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:31Z",
+          "conclusion": "skipped",
+          "name": "Patch for CJS",
+          "number": 9,
+          "started_at": "2026-08-13T00:34:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:31Z",
+          "conclusion": "success",
+          "name": "Patch for ESM",
+          "number": 10,
+          "started_at": "2026-08-13T00:34:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Test esm development",
+          "number": 11,
+          "started_at": "2026-08-13T00:34:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "number": 20,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "number": 21,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 22,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T00:34:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-13T00:34:40Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Test Multiple Builds"
+    }
+  ],
+  "run_id": 31654846645
+}

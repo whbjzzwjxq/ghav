@@ -1,0 +1,213 @@
+name: Lexical e2e tests
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  # Build the dev playground once and cache the output for all test jobs
+  build-ubuntu:
+    env:
+      node-version: 24.x
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playwright
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playground
+        with:
+          node-version: ${{ env.node-version }}
+
+  build-ubuntu-prod:
+    env:
+      node-version: 24.x
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playwright
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playground
+        with:
+          node-version: ${{ env.node-version }}
+          prod: true
+
+  build-macos:
+    env:
+      node-version: 24.x
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playwright
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playground
+        with:
+          node-version: ${{ env.node-version }}
+
+  build-windows:
+    env:
+      node-version: 24.x
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playwright
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/setup-playground
+        with:
+          node-version: ${{ env.node-version }}
+
+  mac-rich:
+    needs: [build-macos]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['webkit', 'chromium', 'firefox']
+        editor-mode: ['rich-text']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'macos-latest'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: ${{ matrix.editor-mode }}
+
+  mac-plain:
+    needs: [build-macos]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['webkit']
+        editor-mode: ['plain-text']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'macos-latest'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: ${{ matrix.editor-mode }}
+
+  linux:
+    needs: [build-ubuntu]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['chromium', 'firefox']
+        editor-mode: ['rich-text', 'plain-text']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'ubuntu-latest'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: ${{ matrix.editor-mode }}
+
+  windows:
+    needs: [build-windows]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['chromium', 'firefox']
+        editor-mode: ['rich-text', 'plain-text']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'windows-2022'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: ${{ matrix.editor-mode }}
+
+  collab-mac:
+    needs: [build-macos]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['webkit']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'macos-latest'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: 'rich-text-with-collab'
+
+  collab-linux:
+    needs: [build-ubuntu]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['chromium', 'firefox']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'ubuntu-latest'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: 'rich-text-with-collab'
+
+  collab-v2-linux:
+    needs: [build-ubuntu]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['chromium', 'firefox']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'ubuntu-latest'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: 'rich-text-with-collab-v2'
+
+  collab-windows:
+    needs: [build-windows]
+    strategy:
+      matrix:
+        node-version: [24.x]
+        browser: ['chromium', 'firefox']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      os: 'windows-2022'
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: 'rich-text-with-collab'
+
+  prod:
+    needs: [build-ubuntu-prod]
+    strategy:
+      matrix:
+        os: ['ubuntu-latest']
+        node-version: [24.x]
+        browser: ['chromium']
+        editor-mode: ['rich-text']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      prod: true
+      os: ${{ matrix.os }}
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: ${{ matrix.editor-mode }}
+
+  collab-prod:
+    needs: [build-ubuntu-prod]
+    strategy:
+      matrix:
+        os: ['ubuntu-latest']
+        node-version: [24.x]
+        browser: ['chromium']
+        editor-mode: ['rich-text-with-collab']
+    uses: ./.github/workflows/call-e2e-test.yml
+    with:
+      prod: true
+      os: ${{ matrix.os }}
+      node-version: ${{ matrix.node-version }}
+      browser: ${{ matrix.browser }}
+      editor-mode: ${{ matrix.editor-mode }}

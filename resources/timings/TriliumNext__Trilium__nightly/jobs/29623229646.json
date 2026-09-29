@@ -1,0 +1,968 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-07-18T00:33:37Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332027,
+      "labels": [
+        "ubuntu-24.04-arm"
+      ],
+      "name": "Deploy server nightly (arm64)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000159654",
+      "started_at": "2026-07-18T00:30:26Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T00:30:27Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T00:30:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:31Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T00:30:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:35Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 3,
+          "started_at": "2026-07-18T00:30:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:35Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 4,
+          "started_at": "2026-07-18T00:33:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:35Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T00:33:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 8,
+          "started_at": "2026-07-18T00:33:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-07-18T00:33:35Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T00:38:44Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332048,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Deploy nightly (x64, macos, macos-latest, bash, darwin)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000159660",
+      "started_at": "2026-07-18T00:30:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T00:30:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T00:30:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T00:30:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:51Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-07-18T00:30:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:52Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-07-18T00:30:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:32:04Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-07-18T00:30:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:32:04Z",
+          "conclusion": "success",
+          "name": "Update nightly version",
+          "number": 6,
+          "started_at": "2026-07-18T00:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:28Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T00:32:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:28Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 8,
+          "started_at": "2026-07-18T00:37:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:40Z",
+          "conclusion": "success",
+          "name": "Publish artifacts",
+          "number": 9,
+          "started_at": "2026-07-18T00:37:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:40Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 15,
+          "started_at": "2026-07-18T00:37:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:38:38Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-07-18T00:37:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:38:38Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-07-18T00:38:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:38:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-07-18T00:38:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:38:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-07-18T00:38:39Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T01:18:26Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332050,
+      "labels": [
+        "win-signing"
+      ],
+      "name": "Deploy nightly (arm64, windows, win-signing, cmd, win32)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "netinventsasu",
+      "runner_name": "CERT-SIGNATURE",
+      "started_at": "2026-07-18T01:02:23Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T01:02:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T01:02:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:03:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T01:02:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:03:34Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-07-18T01:03:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:03:37Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-07-18T01:03:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:09:01Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-07-18T01:03:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:09:02Z",
+          "conclusion": "success",
+          "name": "Update nightly version",
+          "number": 6,
+          "started_at": "2026-07-18T01:09:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:16:51Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T01:09:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:16:51Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 8,
+          "started_at": "2026-07-18T01:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:18:18Z",
+          "conclusion": "success",
+          "name": "Publish artifacts",
+          "number": 9,
+          "started_at": "2026-07-18T01:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:18:18Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 15,
+          "started_at": "2026-07-18T01:18:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:18:19Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-07-18T01:18:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:18:19Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-07-18T01:18:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:18:23Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-07-18T01:18:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:18:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-07-18T01:18:23Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T00:42:08Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332055,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Deploy nightly (arm64, macos, macos-latest, bash, darwin)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000159667",
+      "started_at": "2026-07-18T00:31:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T00:31:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T00:31:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:51Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T00:31:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:58Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-07-18T00:31:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:32:00Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-07-18T00:31:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:54Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-07-18T00:32:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:56Z",
+          "conclusion": "success",
+          "name": "Update nightly version",
+          "number": 6,
+          "started_at": "2026-07-18T00:33:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:40:50Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T00:33:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:40:50Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 8,
+          "started_at": "2026-07-18T00:40:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:41:03Z",
+          "conclusion": "success",
+          "name": "Publish artifacts",
+          "number": 9,
+          "started_at": "2026-07-18T00:40:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:41:03Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 15,
+          "started_at": "2026-07-18T00:41:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:42:05Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-07-18T00:41:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:42:05Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-07-18T00:42:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:42:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-07-18T00:42:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:42:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-07-18T00:42:06Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T00:33:20Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332057,
+      "labels": [
+        "ubuntu-22.04"
+      ],
+      "name": "Deploy server nightly (x64)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000159662",
+      "started_at": "2026-07-18T00:30:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T00:30:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T00:30:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T00:30:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:13Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 3,
+          "started_at": "2026-07-18T00:30:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:13Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 4,
+          "started_at": "2026-07-18T00:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:13Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T00:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 8,
+          "started_at": "2026-07-18T00:33:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:33:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-07-18T00:33:13Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T00:37:54Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332067,
+      "labels": [
+        "ubuntu-22.04"
+      ],
+      "name": "Deploy nightly (x64, linux, ubuntu-22.04, bash, linux)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000159658",
+      "started_at": "2026-07-18T00:30:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T00:30:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T00:30:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T00:30:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:43Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-07-18T00:30:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:30:54Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-07-18T00:30:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:15Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-07-18T00:30:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:15Z",
+          "conclusion": "success",
+          "name": "Update nightly version",
+          "number": 6,
+          "started_at": "2026-07-18T00:31:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:31Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T00:31:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:31Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 8,
+          "started_at": "2026-07-18T00:37:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:52Z",
+          "conclusion": "success",
+          "name": "Publish artifacts",
+          "number": 9,
+          "started_at": "2026-07-18T00:37:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:52Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 15,
+          "started_at": "2026-07-18T00:37:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:52Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-07-18T00:37:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:52Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-07-18T00:37:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-07-18T00:37:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:37:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-07-18T00:37:52Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T00:39:11Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332076,
+      "labels": [
+        "ubuntu-24.04-arm"
+      ],
+      "name": "Deploy nightly (arm64, linux, ubuntu-24.04-arm, bash, linux)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000159663",
+      "started_at": "2026-07-18T00:30:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T00:30:58Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T00:30:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T00:30:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-07-18T00:31:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:31:40Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-07-18T00:31:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:32:02Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-07-18T00:31:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:32:03Z",
+          "conclusion": "success",
+          "name": "Update nightly version",
+          "number": 6,
+          "started_at": "2026-07-18T00:32:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:38:49Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T00:32:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:38:49Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 8,
+          "started_at": "2026-07-18T00:38:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:39:08Z",
+          "conclusion": "success",
+          "name": "Publish artifacts",
+          "number": 9,
+          "started_at": "2026-07-18T00:38:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:39:09Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 15,
+          "started_at": "2026-07-18T00:39:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:39:09Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-07-18T00:39:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:39:09Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-07-18T00:39:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:39:09Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-07-18T00:39:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T00:39:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-07-18T00:39:09Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T01:35:36Z",
+      "conclusion": "success",
+      "created_at": "2026-07-18T00:30:14Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332106,
+      "labels": [
+        "win-signing"
+      ],
+      "name": "Deploy nightly (x64, windows, win-signing, cmd, win32)",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": "netinventsasu",
+      "runner_name": "CERT-SIGNATURE",
+      "started_at": "2026-07-18T01:18:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-07-18T01:18:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-07-18T01:18:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:19:24Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-07-18T01:18:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:20:06Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-07-18T01:19:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:20:12Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-07-18T01:20:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:26:02Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-07-18T01:20:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:26:04Z",
+          "conclusion": "success",
+          "name": "Update nightly version",
+          "number": 6,
+          "started_at": "2026-07-18T01:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:34:53Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 7,
+          "started_at": "2026-07-18T01:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:34:53Z",
+          "conclusion": "skipped",
+          "name": "Publish release",
+          "number": 8,
+          "started_at": "2026-07-18T01:34:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:35:29Z",
+          "conclusion": "success",
+          "name": "Publish artifacts",
+          "number": 9,
+          "started_at": "2026-07-18T01:34:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:35:29Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 15,
+          "started_at": "2026-07-18T01:35:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:35:30Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 16,
+          "started_at": "2026-07-18T01:35:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:35:30Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 17,
+          "started_at": "2026-07-18T01:35:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:35:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-07-18T01:35:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-07-18T01:35:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-07-18T01:35:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Nightly Release"
+    },
+    {
+      "completed_at": "2026-07-18T00:30:14Z",
+      "conclusion": "skipped",
+      "created_at": "2026-07-18T00:30:15Z",
+      "head_sha": "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4",
+      "id": 88022332609,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build mobile nightly",
+      "run_attempt": 1,
+      "run_id": 29623229646,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-07-18T00:30:15Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Nightly Release"
+    }
+  ],
+  "run_id": 29623229646
+}

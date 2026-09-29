@@ -1,0 +1,2734 @@
+{
+  "benchmark": "LibreChat-AI/LibreChat@49e1e32f3a41b8e718feaa818e0134d5d0d70ae5:.github/workflows/backend-review.yml",
+  "benchmark_id": "LibreChat-AI__LibreChat__backend-review",
+  "count_window": {
+    "capped": false,
+    "days": 7,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-25T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33452904408,
+        33452813524,
+        33452057441,
+        33451804055,
+        33441514410
+      ],
+      "window_count": 846
+    },
+    "push": {
+      "runs": [
+        33423829255,
+        33423780792,
+        33423749145,
+        33423620347,
+        33416413289
+      ],
+      "window_count": 108
+    }
+  },
+  "jobs": {
+    "Build packages": {
+      "duration_seconds": 44.5,
+      "durations": [
+        45.0,
+        37.0,
+        44.0,
+        53.0,
+        37.0,
+        48.0,
+        61.0,
+        51.0,
+        37.0,
+        44.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        8.0,
+        5.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            9.0,
+            11.0,
+            7.0,
+            11.0,
+            10.0,
+            9.0,
+            8.0,
+            10.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            14.0,
+            16.0,
+            11.0,
+            14.0,
+            15.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            0.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "name": "Restore data-provider build cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            5.0
+          ],
+          "name": "Build data-provider",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Restore data-schemas build cache",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Build data-schemas",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            5.0,
+            2.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0
+          ],
+          "name": "Restore api build cache",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Build api",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 3.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload data-provider build",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Upload data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Upload api build",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Circular dependency checks": {
+      "duration_seconds": 29.0,
+      "durations": [
+        25.0,
+        37.0,
+        37.0,
+        27.0,
+        33.0,
+        26.0,
+        29.0,
+        29.0,
+        28.0,
+        35.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            2.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            10.0,
+            11.0,
+            8.0,
+            10.0,
+            7.0,
+            8.0,
+            8.0,
+            9.0,
+            10.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            17.0,
+            15.0,
+            11.0,
+            12.0,
+            10.0,
+            12.0,
+            13.0,
+            10.0,
+            15.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Detect circular dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Codegraph select": {
+      "duration_seconds": 6.0,
+      "durations": [
+        5.0,
+        9.0,
+        6.0,
+        6.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 2.0,
+      "overheads": [
+        2.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "samples": 4,
+      "skipped": 6,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Select tests, fail open on any doubt",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: @librechat/api (shard 1/4)": {
+      "duration_seconds": 130.0,
+      "durations": [
+        134.0,
+        130.0,
+        130.0,
+        132.0,
+        114.0,
+        127.0,
+        140.0,
+        130.0,
+        134.0,
+        125.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        2.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            9.0,
+            9.0,
+            8.0,
+            7.0,
+            10.0,
+            8.0,
+            11.0,
+            8.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            11.0,
+            11.0,
+            13.0,
+            12.0,
+            14.0,
+            12.0,
+            13.0,
+            10.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            105.0,
+            98.0,
+            96.0,
+            98.0,
+            80.0,
+            100.0,
+            99.0,
+            96.0,
+            96.0,
+            95.0
+          ],
+          "name": "Run unit tests (shard 1/4)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 97.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: @librechat/api (shard 2/4)": {
+      "duration_seconds": 133.0,
+      "durations": [
+        125.0,
+        139.0,
+        123.0,
+        121.0,
+        131.0,
+        130.0,
+        148.0,
+        151.0,
+        135.0,
+        159.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        8.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            9.0,
+            9.0,
+            12.0,
+            10.0,
+            11.0,
+            7.0,
+            10.0,
+            12.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            9.0,
+            15.0,
+            13.0,
+            14.0,
+            15.0,
+            11.0,
+            14.0,
+            14.0,
+            14.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            0.0,
+            2.0,
+            2.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            90.0,
+            112.0,
+            86.0,
+            81.0,
+            91.0,
+            87.0,
+            115.0,
+            118.0,
+            92.0,
+            115.0
+          ],
+          "name": "Run unit tests (shard 2/4)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 91.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: @librechat/api (shard 3/4)": {
+      "duration_seconds": 145.0,
+      "durations": [
+        137.0,
+        162.0,
+        169.0,
+        151.0,
+        146.0,
+        150.0,
+        143.0,
+        142.0,
+        135.0,
+        144.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        8.0,
+        7.0,
+        8.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            1.0,
+            4.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            11.0,
+            10.0,
+            8.0,
+            9.0,
+            8.0,
+            7.0,
+            10.0,
+            11.0,
+            7.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            15.0,
+            12.0,
+            10.0,
+            11.0,
+            11.0,
+            14.0,
+            13.0,
+            10.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            4.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            94.0,
+            118.0,
+            123.0,
+            118.0,
+            118.0,
+            118.0,
+            117.0,
+            102.0,
+            98.0,
+            118.0
+          ],
+          "name": "Run unit tests (shard 3/4)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 118.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: @librechat/api (shard 4/4)": {
+      "duration_seconds": 118.0,
+      "durations": [
+        117.0,
+        136.0,
+        129.0,
+        119.0,
+        115.0,
+        114.0,
+        134.0,
+        116.0,
+        126.0,
+        115.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        8.0,
+        7.0,
+        5.0,
+        3.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            1.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            11.0,
+            10.0,
+            8.0,
+            8.0,
+            10.0,
+            11.0,
+            7.0,
+            9.0,
+            7.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            15.0,
+            14.0,
+            12.0,
+            11.0,
+            15.0,
+            15.0,
+            12.0,
+            13.0,
+            11.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            88.0,
+            90.0,
+            87.0,
+            87.0,
+            87.0,
+            72.0,
+            91.0,
+            87.0,
+            90.0,
+            87.0
+          ],
+          "name": "Run unit tests (shard 4/4)",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 87.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: api (shard 1/3)": {
+      "duration_seconds": 112.5,
+      "durations": [
+        125.0,
+        112.0,
+        117.0,
+        113.0,
+        110.0,
+        109.0,
+        110.0,
+        121.0,
+        111.0,
+        127.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        7.0,
+        4.0,
+        5.0,
+        2.0,
+        4.0,
+        6.0,
+        5.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            10.0,
+            11.0,
+            8.0,
+            9.0,
+            9.0,
+            10.0,
+            8.0,
+            14.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            11.0,
+            16.0,
+            11.0,
+            10.0,
+            15.0,
+            14.0,
+            12.0,
+            13.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            7.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create empty auth.json file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare .env.test file",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0,
+            73.0,
+            83.0,
+            70.0,
+            82.0,
+            80.0,
+            71.0,
+            79.0,
+            80.0,
+            80.0
+          ],
+          "name": "Run unit tests (shard 1/3)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 80.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: api (shard 2/3)": {
+      "duration_seconds": 104.0,
+      "durations": [
+        108.0,
+        93.0,
+        104.0,
+        105.0,
+        115.0,
+        94.0,
+        103.0,
+        106.0,
+        104.0,
+        103.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            8.0,
+            11.0,
+            15.0,
+            7.0,
+            11.0,
+            10.0,
+            11.0,
+            8.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            12.0,
+            13.0,
+            15.0,
+            11.0,
+            10.0,
+            14.0,
+            14.0,
+            12.0,
+            11.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create empty auth.json file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare .env.test file",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            62.0,
+            69.0,
+            63.0,
+            74.0,
+            67.0,
+            64.0,
+            64.0,
+            67.0,
+            72.0
+          ],
+          "name": "Run unit tests (shard 2/3)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 66.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: api (shard 3/3)": {
+      "duration_seconds": 129.0,
+      "durations": [
+        137.0,
+        119.0,
+        144.0,
+        115.0,
+        171.0,
+        116.0,
+        149.0,
+        129.0,
+        129.0,
+        117.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        6.0,
+        4.0,
+        7.0,
+        2.0,
+        5.0,
+        4.0,
+        6.0,
+        6.0,
+        7.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            1.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            10.0,
+            7.0,
+            14.0,
+            8.0,
+            16.0,
+            9.0,
+            10.0,
+            7.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            11.0,
+            16.0,
+            12.0,
+            12.0,
+            11.0,
+            12.0,
+            12.0,
+            14.0,
+            10.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            2.0,
+            2.0,
+            0.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Create empty auth.json file",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare .env.test file",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            90.0,
+            90.0,
+            100.0,
+            88.0,
+            130.0,
+            88.0,
+            105.0,
+            91.0,
+            87.0,
+            90.0
+          ],
+          "name": "Run unit tests (shard 3/3)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 90.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: data-provider": {
+      "duration_seconds": 44.5,
+      "durations": [
+        46.0,
+        35.0,
+        48.0,
+        48.0,
+        41.0,
+        43.0,
+        46.0,
+        38.0,
+        32.0,
+        46.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        7.0,
+        6.0,
+        5.0,
+        3.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            11.0,
+            9.0,
+            9.0,
+            10.0,
+            11.0,
+            8.0,
+            7.0,
+            10.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            10.0,
+            14.0,
+            12.0,
+            14.0,
+            13.0,
+            15.0,
+            11.0,
+            12.0,
+            16.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            0.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            0.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            6.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            10.0,
+            9.0,
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "name": "Run unit tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Tests: data-schemas": {
+      "duration_seconds": 112.0,
+      "durations": [
+        106.0,
+        115.0,
+        114.0,
+        113.0,
+        111.0,
+        90.0,
+        118.0,
+        96.0,
+        127.0,
+        92.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        5.0,
+        5.0,
+        8.0,
+        6.0,
+        7.0,
+        3.0,
+        7.0,
+        3.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            1.0,
+            4.0,
+            4.0,
+            5.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            12.0,
+            13.0,
+            10.0,
+            9.0,
+            7.0,
+            10.0,
+            7.0,
+            10.0,
+            9.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            14.0,
+            15.0,
+            15.0,
+            17.0,
+            11.0,
+            14.0,
+            11.0,
+            14.0,
+            10.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0,
+            3.0
+          ],
+          "name": "Cache MongoDB memory-server binaries",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            75.0,
+            74.0,
+            70.0,
+            73.0,
+            68.0,
+            62.0,
+            78.0,
+            69.0,
+            88.0,
+            59.0
+          ],
+          "name": "Run unit tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 71.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "TypeScript type checks": {
+      "duration_seconds": 92.0,
+      "durations": [
+        88.0,
+        103.0,
+        92.0,
+        99.0,
+        91.0,
+        88.0,
+        98.0,
+        96.0,
+        80.0,
+        92.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        6.0,
+        7.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            1.0,
+            2.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            12.0,
+            11.0,
+            10.0,
+            10.0,
+            10.0,
+            11.0,
+            11.0,
+            9.0,
+            10.0
+          ],
+          "name": "Use Node.js 24.16.0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            14.0,
+            11.0,
+            17.0,
+            12.0,
+            18.0,
+            13.0,
+            13.0,
+            14.0,
+            12.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-provider build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download data-schemas build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Download api build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            6.0,
+            5.0,
+            6.0
+          ],
+          "name": "Type check data-provider",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            16.0,
+            14.0,
+            15.0,
+            14.0,
+            11.0,
+            14.0,
+            14.0,
+            10.0,
+            14.0
+          ],
+          "name": "Type check data-schemas",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            33.0,
+            31.0,
+            32.0,
+            32.0,
+            25.0,
+            33.0,
+            31.0,
+            23.0,
+            30.0
+          ],
+          "name": "Type check @librechat/api",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "Type check @librechat/client",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "2e2c29e10dbde0e54b368977d246cfa4c84200a0": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "49e1e32f3a41b8e718feaa818e0134d5d0d70ae5": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "60f0d46c472efefe0b1bf4c509d92cf3e163f888": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "69490fd26b03541356cae32c5298569da0ef9ced": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "6be3f798fcd6553a77e9ef060e180e50808815d3": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "982a9a5141bbd041c954b3cc41492e00041a7d69": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "98eb3f8b1c78b0b82a1ad01159a5d07138e1d07b": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "a86c8dc9f9b4f86b00c1790a61ab897bc3d17e89": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "b43fcde69b13424e651897fe821ab430703da434": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+      "fe6a0d670423cd94a9ba82d681da1807bef4f435": "8416585485c7208e88b3dd021bc7b1665d5d7dde"
+    },
+    "pinned_oid": "8416585485c7208e88b3dd021bc7b1665d5d7dde",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

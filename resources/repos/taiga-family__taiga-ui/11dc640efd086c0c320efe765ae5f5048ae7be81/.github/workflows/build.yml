@@ -1,0 +1,24 @@
+name: ⚙️ Build
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    if: ${{ !contains(github.head_ref, 'release/') }}
+    name: Packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.0.0
+      - uses: taiga-family/ci/actions/variables@1.12.2
+      - uses: taiga-family/ci/actions/setup-node@1.12.2
+
+      - name: Run build libraries and check it
+        run: |
+          npm run run-many:build:libs
+          npx ts-node ./scripts/check-dist.ts
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

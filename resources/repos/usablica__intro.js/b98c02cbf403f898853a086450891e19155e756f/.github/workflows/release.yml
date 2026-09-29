@@ -1,0 +1,119 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Use Node.js 24.x
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+          registry-url: "https://registry.npmjs.org"
+          package-manager-cache: false
+
+      - name: Pull Cypress Docker image
+        run: docker pull cypress/included:cypress-13.17.0-node-22.13.0-chrome-131.0.6778.264-1-ff-134.0-edge-131.0.2903.112-1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: |
+          npm run test:prettier
+          npm run test:jest
+          npx start-server-and-test dev http://localhost:10001/dist/intro.js \
+            'docker run --rm -i --network=host -v $PWD:/e2e -w /e2e --entrypoint=cypress cypress/included:cypress-13.17.0-node-22.13.0-chrome-131.0.6778.264-1-ff-134.0-edge-131.0.2903.112-1 run --env visualRegressionType=regression'
+        env:
+          CI: true
+
+      - name: Determine version bump type
+        id: detect
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          echo "prev_tag=$PREV_TAG" >> $GITHUB_OUTPUT
+
+          if [ -n "$PREV_TAG" ]; then
+            COMMITS=$(git log "$PREV_TAG"..HEAD --pretty=format:"%s")
+          else
+            COMMITS=$(git log --pretty=format:"%s")
+          fi
+
+          if echo "$COMMITS" | grep -qE "BREAKING CHANGE|^.+!:"; then
+            echo "bump=major" >> $GITHUB_OUTPUT
+          elif echo "$COMMITS" | grep -qE "^feat(\(.+\))?:"; then
+            echo "bump=minor" >> $GITHUB_OUTPUT
+          else
+            echo "bump=patch" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Bump version
+        id: bump
+        env:
+          GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version ${{ steps.detect.outputs.bump }} --no-git-tag-version
+          VERSION=$(node -e "console.log(require('./package.json').version)")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+          PREV_TAG="${{ steps.detect.outputs.prev_tag }}"
+          if [ -n "$PREV_TAG" ]; then
+            CHANGELOG=$(npx lerna-changelog --from "$PREV_TAG" --to HEAD)
+          else
+            CHANGELOG=$(npx lerna-changelog)
+          fi
+          echo "$CHANGELOG" > /tmp/changelog_entry.md
+
+          git checkout -b "release/v$VERSION"
+          git add package.json package-lock.json
+          git commit -m "chore: release v$VERSION"
+          git push origin "release/v$VERSION"
+
+      - name: Rebuild with bumped version
+        run: npm run build
+
+      - name: Create release PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.bump.outputs.version }}"
+          gh pr create \
+            --title "chore: release v$VERSION" \
+            --body-file /tmp/changelog_entry.md \
+            --base master \
+            --head "release/v$VERSION"
+
+      - name: Prepare dist for publish
+        run: |
+          cp package.json dist/
+          cp -r themes dist/
+          cp ./*.md dist/ 2>/dev/null || true
+
+      - name: Publish to npm
+        working-directory: dist
+        run: npm publish
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.bump.outputs.version }}
+          body_path: /tmp/changelog_entry.md
+          target_commitish: release/v${{ steps.bump.outputs.version }}

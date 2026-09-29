@@ -1,0 +1,103 @@
+# Update the `remix` package by auto-generating from the `@remix-run/*` packages in the repo
+# runs on any pushes/PRs to `main` that touch any `package.json` files or the generator
+# implementation itself since those can alter the sub-exports reflected in the `remix` package.
+
+# Note: Does not currently run on PRs from forked repos.
+
+name: Update Remix package
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'packages/**/package.json'
+      - 'scripts/generate-remix.ts'
+  pull_request:
+    branches-ignore:
+      - release-v2
+      - v2
+    paths:
+      - 'packages/**/package.json'
+      - 'scripts/generate-remix.ts'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate-remix:
+    if: |
+      github.repository == 'remix-run/remix' &&
+      (
+        github.event_name == 'push' ||
+        github.event.pull_request.head.repo.full_name == github.repository
+      )
+    runs-on: ubuntu-latest
+    steps:
+      # Normal checkout of the trigger branch on pushes
+      - name: Checkout
+        if: github.event_name == 'push'
+        uses: actions/checkout@v6
+        with:
+          # Use a PAT because using the default `GITHUB_TOKEN`/`github.token` will not
+          # trigger workflow runs, so use a PAT to ensure new commits will run CI checks.
+          # See: https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow#triggering-a-workflow-from-a-workflow
+          token: ${{ secrets.GH_REMIX_PAT }}
+
+      # Checkout the PR branch when running on PRs
+      - name: Checkout
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          # Use a PAT because using the default `GITHUB_TOKEN`/`github.token` will not
+          # trigger workflow runs, so use a PAT to ensure new commits will run CI checks.
+          # See: https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow#triggering-a-workflow-from-a-workflow
+          token: ${{ secrets.GH_REMIX_PAT }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Install Node.js
+        uses: ./.github/actions/setup-node-pnpm-cache
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate remix package
+        run: pnpm run generate-remix
+
+      - name: Commit and push changes
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "💿 no updates to the remix package needed"
+            exit 0
+          fi
+
+          # Check for unintentional changes
+          OUTSIDE_CHANGES=$(git status --porcelain | awk '{print $2}' | grep -v "^packages/remix/" || true)
+          if [ -n "$OUTSIDE_CHANGES" ]; then
+            echo "Refusing to commit changes outside of packages/remix/:"
+            echo "$OUTSIDE_CHANGES"
+            exit 1
+          fi
+
+          # Re-install to ensure any new remix peerDependencies are reflected
+          pnpm install --no-frozen-lockfile
+
+          git config --local user.email "hello@remix.run"
+          git config --local user.name "Remix Run Bot"
+          git add .
+          git commit -a -m "build: update remix package"
+          git push
+          echo "💿 pushed updates: https://github.com/$GITHUB_REPOSITORY/commit/$(git rev-parse HEAD)"
+          echo "new_sha=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && steps.commit.outputs.new_sha != ''
+        env:
+          # `GH_TOKEN` is required to use the `gh` CLI to add comments to PRs.
+          GH_TOKEN: ${{ secrets.GH_REMIX_PAT }}
+        run: gh pr comment ${{ github.event.pull_request.number }} --body "Changes in this PR resulted in updates to the auto-generated \`remix\` package in ${{ steps.commit.outputs.new_sha }}. Please review those changes prior to merging."

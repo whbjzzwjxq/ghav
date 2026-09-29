@@ -1,0 +1,75 @@
+name: Build and push Docker image
+on:
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: [release-published]
+
+env:
+  RELEASE_VERSION: v${{ github.event.client_payload.version }}
+  TAG_VERSION: ghcr.io/${{ github.repository_owner }}/backstage:${{ github.event.client_payload.version }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [22.x]
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          path: backstage
+          ref: ${{ github.event.client_payload.version && env.RELEASE_VERSION || github.ref }}
+
+      - name: use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/ # Needed for auth
+
+      - name: yarn install
+        uses: backstage/actions/yarn-install@2cd6978b476cbdc39fec48346f8b6ca13199dd6a # v0.7.8
+        with:
+          cache-prefix: ${{ runner.os }}-v${{ matrix.node-version }}
+
+      - name: create-app
+        run: npx @backstage/create-app
+        env:
+          BACKSTAGE_APP_NAME: example-app
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+      - name: yarn build
+        run: yarn build:backend
+        working-directory: ./example-app
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@b45d80f862d83dbcd57f89517bcf500b2ab88fb2 # v4.0.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@4d04d5d9486b7bd6fa91e7baf45bbb4f8b9deedd # v4.0.0
+
+      - name: Build and push
+        uses: docker/build-push-action@d08e5c354a6adb9ed34480a06d141179aa583294 # v7.0.0
+        with:
+          context: './example-app'
+          file: ./example-app/packages/backend/Dockerfile
+          push: ${{ (github.event_name == 'repository_dispatch') && (github.event.action == 'release-published') }}
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/backstage:latest
+            ${{ github.event.client_payload.version && env.TAG_VERSION || '' }}
+          labels: |
+            org.opencontainers.image.description=Docker image generated from the latest Backstage release; this contains what you would get out of the box by running npx @backstage/create-app and building a Docker image from the generated source. This is meant to ease the process of evaluating Backstage for the first time, but also has the severe limitation that there is no way to install additional plugins relevant to your infrastructure.

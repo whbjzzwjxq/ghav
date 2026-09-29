@@ -1,0 +1,1053 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-19T17:58:28Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:57:46Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171147311,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Sanity Check",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182432",
+      "started_at": "2026-08-19T17:57:50Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T17:57:52Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T17:57:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:57:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T17:57:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:04Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T17:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:18Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T17:58:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:24Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T17:58:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:25Z",
+          "conclusion": "success",
+          "name": "Check version consistency",
+          "number": 6,
+          "started_at": "2026-08-19T17:58:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:25Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 10,
+          "started_at": "2026-08-19T17:58:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:25Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 11,
+          "started_at": "2026-08-19T17:58:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "started_at": "2026-08-19T17:58:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-19T17:58:25Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:07:20Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364254,
+      "labels": [
+        "ubuntu-24.04-arm"
+      ],
+      "name": "Build Linux Server (arm64)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182454",
+      "started_at": "2026-08-19T18:02:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T18:02:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T18:02:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T18:02:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:14Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 3,
+          "started_at": "2026-08-19T18:03:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:17Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 4,
+          "started_at": "2026-08-19T18:07:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:17Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 7,
+          "started_at": "2026-08-19T18:07:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 8,
+          "started_at": "2026-08-19T18:07:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-19T18:07:18Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:03:04Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364353,
+      "labels": [
+        "ubuntu-22.04"
+      ],
+      "name": "Build Linux Server (x64)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182446",
+      "started_at": "2026-08-19T17:59:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T17:59:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T17:59:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:59:12Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T17:59:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:02:58Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 3,
+          "started_at": "2026-08-19T17:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:02Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 4,
+          "started_at": "2026-08-19T18:02:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:02Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 7,
+          "started_at": "2026-08-19T18:03:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 8,
+          "started_at": "2026-08-19T18:03:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-19T18:03:02Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:09:19Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364367,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Make Electron (arm64, macos, macos-latest, bash, darwin)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182445",
+      "started_at": "2026-08-19T17:58:37Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T17:58:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T17:58:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:50Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T17:58:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:58:58Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T17:58:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:59:00Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T17:58:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:00:36Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T17:59:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:54Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 6,
+          "started_at": "2026-08-19T18:00:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:09Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 7,
+          "started_at": "2026-08-19T18:07:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:10Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 11,
+          "started_at": "2026-08-19T18:08:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:15Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 12,
+          "started_at": "2026-08-19T18:08:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:15Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 13,
+          "started_at": "2026-08-19T18:09:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:09:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:09:16Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:11:06Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364370,
+      "labels": [
+        "ubuntu-24.04-arm"
+      ],
+      "name": "Make Electron (arm64, linux, ubuntu-24.04-arm, bash, linux)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182453",
+      "started_at": "2026-08-19T18:01:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T18:01:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T18:01:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:02:51Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T18:01:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:02:58Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T18:02:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:07Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T18:02:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:03:20Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T18:03:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:10:44Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 6,
+          "started_at": "2026-08-19T18:03:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:04Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 7,
+          "started_at": "2026-08-19T18:10:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:04Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 11,
+          "started_at": "2026-08-19T18:11:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:04Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 12,
+          "started_at": "2026-08-19T18:11:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:04Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 13,
+          "started_at": "2026-08-19T18:11:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:11:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:04Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:11:04Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:08:57Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364409,
+      "labels": [
+        "win-signing"
+      ],
+      "name": "Make Electron (x64, windows, win-signing, cmd, win32)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "netinventsasu",
+      "runner_name": "CERT-SIGNATURE",
+      "started_at": "2026-08-19T17:58:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T17:58:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T17:58:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T17:59:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T17:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:00:22Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T17:59:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:00:27Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T18:00:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:04:28Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T18:00:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:15Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 6,
+          "started_at": "2026-08-19T18:04:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:50Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 7,
+          "started_at": "2026-08-19T18:08:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:50Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 11,
+          "started_at": "2026-08-19T18:08:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:51Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 12,
+          "started_at": "2026-08-19T18:08:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:51Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 13,
+          "started_at": "2026-08-19T18:08:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:08:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:08:54Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:17:50Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364418,
+      "labels": [
+        "win-signing"
+      ],
+      "name": "Make Electron (arm64, windows, win-signing, cmd, win32)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "netinventsasu",
+      "runner_name": "CERT-SIGNATURE",
+      "started_at": "2026-08-19T18:08:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T18:09:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T18:09:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T18:09:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T18:09:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:59Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T18:09:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:13:45Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T18:09:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:14Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 6,
+          "started_at": "2026-08-19T18:13:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:44Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 7,
+          "started_at": "2026-08-19T18:17:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:44Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 11,
+          "started_at": "2026-08-19T18:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:45Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 12,
+          "started_at": "2026-08-19T18:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:45Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 13,
+          "started_at": "2026-08-19T18:17:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:17:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:17:48Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:11:51Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364466,
+      "labels": [
+        "ubuntu-22.04"
+      ],
+      "name": "Make Electron (x64, linux, ubuntu-22.04, bash, linux)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182451",
+      "started_at": "2026-08-19T18:00:25Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T18:00:28Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T18:00:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:01:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T18:00:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:01:14Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T18:01:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:01:23Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T18:01:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:01:41Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T18:01:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:20Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 6,
+          "started_at": "2026-08-19T18:01:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:47Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 7,
+          "started_at": "2026-08-19T18:11:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:47Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 11,
+          "started_at": "2026-08-19T18:11:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:48Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 12,
+          "started_at": "2026-08-19T18:11:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:48Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 13,
+          "started_at": "2026-08-19T18:11:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:11:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:11:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:11:48Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:09:18Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T17:58:28Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96171364504,
+      "labels": [
+        "macos-latest"
+      ],
+      "name": "Make Electron (x64, macos, macos-latest, bash, darwin)",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182450",
+      "started_at": "2026-08-19T17:59:57Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T17:59:59Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T17:59:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:00:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-19T17:59:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:00:19Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 3,
+          "started_at": "2026-08-19T18:00:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:00:20Z",
+          "conclusion": "success",
+          "name": "Set up node & dependencies",
+          "number": 4,
+          "started_at": "2026-08-19T18:00:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:01:17Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-19T18:00:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:07:55Z",
+          "conclusion": "success",
+          "name": "Run the build",
+          "number": 6,
+          "started_at": "2026-08-19T18:01:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:13Z",
+          "conclusion": "success",
+          "name": "Upload the artifact",
+          "number": 7,
+          "started_at": "2026-08-19T18:07:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:08:13Z",
+          "conclusion": "success",
+          "name": "Post Run the build",
+          "number": 11,
+          "started_at": "2026-08-19T18:08:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:13Z",
+          "conclusion": "success",
+          "name": "Post Set up node & dependencies",
+          "number": 12,
+          "started_at": "2026-08-19T18:08:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:13Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 13,
+          "started_at": "2026-08-19T18:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:09:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:09:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:09:13Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    },
+    {
+      "completed_at": "2026-08-19T18:19:38Z",
+      "conclusion": "success",
+      "created_at": "2026-08-19T18:17:51Z",
+      "head_sha": "a0908a6e1e1741a3c3824d803da07300183dcb0c",
+      "id": 96177289055,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Publish release",
+      "run_attempt": 1,
+      "run_id": 32284623795,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000182466",
+      "started_at": "2026-08-19T18:17:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-19T18:17:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-19T18:17:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:56Z",
+          "conclusion": "success",
+          "name": "Run mkdir upload",
+          "number": 2,
+          "started_at": "2026-08-19T18:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:58Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 3,
+          "started_at": "2026-08-19T18:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:58Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v7",
+          "number": 4,
+          "started_at": "2026-08-19T18:17:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:17:58Z",
+          "conclusion": "success",
+          "name": "Compose the release body",
+          "number": 5,
+          "started_at": "2026-08-19T18:17:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:18:54Z",
+          "conclusion": "success",
+          "name": "Download all artifacts",
+          "number": 6,
+          "started_at": "2026-08-19T18:17:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:19:35Z",
+          "conclusion": "success",
+          "name": "Publish stable release",
+          "number": 7,
+          "started_at": "2026-08-19T18:18:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:19:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v7",
+          "number": 13,
+          "started_at": "2026-08-19T18:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:19:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 14,
+          "started_at": "2026-08-19T18:19:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-19T18:19:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-19T18:19:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release"
+    }
+  ],
+  "run_id": 32284623795
+}

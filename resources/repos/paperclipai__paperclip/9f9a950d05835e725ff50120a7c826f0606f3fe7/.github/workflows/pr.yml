@@ -1,0 +1,13 @@
+name: PR
+
+on:
+  pull_request:
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: read
+
+jobs:
+  ci:
+    uses: paperclipai/paperclip/.github/workflows/pr-trusted.yml@39b8ee2960541d14b380f95365deecba6723d9bd

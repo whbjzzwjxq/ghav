@@ -1,0 +1,1680 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T19:45:10Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618754738,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build for Github Cache",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000909356",
+      "started_at": "2026-08-31T19:40:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:27Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:45:05Z",
+          "conclusion": "success",
+          "name": "Setup and Build",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:45:05Z",
+          "conclusion": "success",
+          "name": "Report build critical path",
+          "number": 4,
+          "started_at": "2026-08-31T19:45:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:45:06Z",
+          "conclusion": "success",
+          "name": "Post Setup and Build",
+          "number": 7,
+          "started_at": "2026-08-31T19:45:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:45:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 8,
+          "started_at": "2026-08-31T19:45:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:45:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-31T19:45:06Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:50:13Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755012,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (26.5.1) / Backend Integration Tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9snnqwp2kk8tftkd9tk-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:25Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:56Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:28Z",
+          "conclusion": "success",
+          "name": "Test Integration (backend, except cli)",
+          "number": 5,
+          "started_at": "2026-08-31T19:42:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:57Z",
+          "conclusion": "success",
+          "name": "Test Integration (cli, scoped)",
+          "number": 6,
+          "started_at": "2026-08-31T19:43:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:58Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 7,
+          "started_at": "2026-08-31T19:49:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:50:01Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:49:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:50:01Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage to Codecov",
+          "number": 9,
+          "started_at": "2026-08-31T19:50:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:50:02Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 16,
+          "started_at": "2026-08-31T19:50:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:50:05Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 17,
+          "started_at": "2026-08-31T19:50:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:50:10Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 18,
+          "started_at": "2026-08-31T19:50:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:50:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-31T19:50:10Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:46:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755025,
+      "labels": [
+        "blacksmith-2vcpu-ubuntu-2204"
+      ],
+      "name": "Performance / Benchmarks",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cmeyj550d283aqbmzzk8wv-2vcpu",
+      "started_at": "2026-08-31T19:40:23Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:27Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:27Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:43Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:56Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:16Z",
+          "conclusion": "success",
+          "name": "Run benchmarks",
+          "number": 5,
+          "started_at": "2026-08-31T19:42:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:16Z",
+          "conclusion": "success",
+          "name": "Post Run benchmarks",
+          "number": 7,
+          "started_at": "2026-08-31T19:46:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:16Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 8,
+          "started_at": "2026-08-31T19:46:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:20Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 9,
+          "started_at": "2026-08-31T19:46:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:20Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 10,
+          "started_at": "2026-08-31T19:46:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-31T19:46:20Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:45:02Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755178,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Verify single-instance deps (npm-install) / verify",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000909357",
+      "started_at": "2026-08-31T19:40:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:18Z",
+          "conclusion": "success",
+          "name": "Validate inputs",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:32Z",
+          "conclusion": "success",
+          "name": "Check the verifier is present on this ref",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:10Z",
+          "conclusion": "success",
+          "name": "Setup and Build",
+          "number": 5,
+          "started_at": "2026-08-31T19:40:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:44:57Z",
+          "conclusion": "success",
+          "name": "Verify npm-install closure (changed packages)",
+          "number": 6,
+          "started_at": "2026-08-31T19:42:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:44:57Z",
+          "conclusion": "skipped",
+          "name": "Verify npm-install closure (all packages)",
+          "number": 7,
+          "started_at": "2026-08-31T19:44:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:44:58Z",
+          "conclusion": "success",
+          "name": "Post Setup and Build",
+          "number": 13,
+          "started_at": "2026-08-31T19:44:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:44:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 14,
+          "started_at": "2026-08-31T19:44:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:44:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-31T19:44:59Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:51:36Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755230,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (26.5.1) / Frontend (1/2)",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9px7m0pfpkrm4t166g9-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:01Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:24Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 5,
+          "started_at": "2026-08-31T19:43:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:24Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 6,
+          "started_at": "2026-08-31T19:51:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:29Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 7,
+          "started_at": "2026-08-31T19:51:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:29Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:51:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:30Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 14,
+          "started_at": "2026-08-31T19:51:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:33Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 15,
+          "started_at": "2026-08-31T19:51:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:33Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-31T19:51:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T19:51:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:55:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755244,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (24.18.1) / Backend Unit Tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9r9zf2r70q01dzhqhn3-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:25Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:59Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:59Z",
+          "conclusion": "success",
+          "name": "Verify Kafka native binding installed",
+          "number": 5,
+          "started_at": "2026-08-31T19:42:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:27Z",
+          "conclusion": "success",
+          "name": "Test Unit (backend, except cli and nodes-base)",
+          "number": 6,
+          "started_at": "2026-08-31T19:42:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:25Z",
+          "conclusion": "success",
+          "name": "Test Unit (cli, scoped)",
+          "number": 7,
+          "started_at": "2026-08-31T19:46:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:25Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 8,
+          "started_at": "2026-08-31T19:55:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:31Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 9,
+          "started_at": "2026-08-31T19:55:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:40Z",
+          "conclusion": "success",
+          "name": "Upload coverage to Codecov",
+          "number": 10,
+          "started_at": "2026-08-31T19:55:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:41Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 18,
+          "started_at": "2026-08-31T19:55:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:44Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 19,
+          "started_at": "2026-08-31T19:55:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:49Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 20,
+          "started_at": "2026-08-31T19:55:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:49Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-31T19:55:49Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:51:45Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755248,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (24.18.1) / Frontend (1/2)",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9vk3y6v647pt2e0rs8f-4vcpu",
+      "started_at": "2026-08-31T19:40:21Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:51Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:26Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 5,
+          "started_at": "2026-08-31T19:42:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:26Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 6,
+          "started_at": "2026-08-31T19:51:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:30Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 7,
+          "started_at": "2026-08-31T19:51:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:38Z",
+          "conclusion": "success",
+          "name": "Upload coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:51:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:39Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 14,
+          "started_at": "2026-08-31T19:51:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:42Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 15,
+          "started_at": "2026-08-31T19:51:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:42Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-31T19:51:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:42Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T19:51:42Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:52:15Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755249,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (24.18.1) / Frontend (2/2)",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9sf68p6pevhb6em64g2-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:25Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:01Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:58Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 5,
+          "started_at": "2026-08-31T19:43:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:51:58Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 6,
+          "started_at": "2026-08-31T19:51:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:02Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 7,
+          "started_at": "2026-08-31T19:51:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:09Z",
+          "conclusion": "success",
+          "name": "Upload coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:52:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:10Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 14,
+          "started_at": "2026-08-31T19:52:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:11Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 15,
+          "started_at": "2026-08-31T19:52:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:11Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-31T19:52:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T19:52:11Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:53:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755281,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (24.18.1) / Backend Integration Tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9vfy77tj2x2kvk56pz8-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:05Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:42Z",
+          "conclusion": "success",
+          "name": "Test Integration (backend, except cli)",
+          "number": 5,
+          "started_at": "2026-08-31T19:43:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:00Z",
+          "conclusion": "success",
+          "name": "Test Integration (cli, scoped)",
+          "number": 6,
+          "started_at": "2026-08-31T19:43:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:00Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 7,
+          "started_at": "2026-08-31T19:53:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:05Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:53:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:12Z",
+          "conclusion": "success",
+          "name": "Upload coverage to Codecov",
+          "number": 9,
+          "started_at": "2026-08-31T19:53:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:13Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 16,
+          "started_at": "2026-08-31T19:53:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:15Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 17,
+          "started_at": "2026-08-31T19:53:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:20Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 18,
+          "started_at": "2026-08-31T19:53:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-31T19:53:20Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:53:01Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755338,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (26.5.1) / Backend Unit Tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9nm5mrcmen8tp7yegpf-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:58Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:58Z",
+          "conclusion": "skipped",
+          "name": "Verify Kafka native binding installed",
+          "number": 5,
+          "started_at": "2026-08-31T19:42:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:46:25Z",
+          "conclusion": "success",
+          "name": "Test Unit (backend, except cli and nodes-base)",
+          "number": 6,
+          "started_at": "2026-08-31T19:42:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:45Z",
+          "conclusion": "success",
+          "name": "Test Unit (cli, scoped)",
+          "number": 7,
+          "started_at": "2026-08-31T19:46:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:45Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 8,
+          "started_at": "2026-08-31T19:52:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:50Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 9,
+          "started_at": "2026-08-31T19:52:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:50Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage to Codecov",
+          "number": 10,
+          "started_at": "2026-08-31T19:52:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:50Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 18,
+          "started_at": "2026-08-31T19:52:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:53Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 19,
+          "started_at": "2026-08-31T19:52:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:58Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 20,
+          "started_at": "2026-08-31T19:52:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:52:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-31T19:52:58Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:49:39Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755347,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Lint / Lint",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9pqe85dd4q0weswx1bs-4vcpu",
+      "started_at": "2026-08-31T19:40:23Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:25Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:25Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:43Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:35Z",
+          "conclusion": "success",
+          "name": "Build and Test",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:35Z",
+          "conclusion": "success",
+          "name": "Post Build and Test",
+          "number": 6,
+          "started_at": "2026-08-31T19:49:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:36Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 7,
+          "started_at": "2026-08-31T19:49:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:36Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 8,
+          "started_at": "2026-08-31T19:49:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-31T19:49:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:49:36Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755413,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (24.18.1) / Nodes Unit Tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9r9e44ev3pywwsscs1j-4vcpu",
+      "started_at": "2026-08-31T19:40:23Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:26Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:26Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:44Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:04Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:18Z",
+          "conclusion": "success",
+          "name": "Test Nodes",
+          "number": 5,
+          "started_at": "2026-08-31T19:43:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:18Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 6,
+          "started_at": "2026-08-31T19:49:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:23Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 7,
+          "started_at": "2026-08-31T19:49:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:30Z",
+          "conclusion": "success",
+          "name": "Upload coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:49:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:31Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 14,
+          "started_at": "2026-08-31T19:49:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:33Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 15,
+          "started_at": "2026-08-31T19:49:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:33Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-31T19:49:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:49:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T19:49:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:48:54Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755422,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (26.5.1) / Nodes Unit Tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9xbhpgsb0zsmf3zs3e7-4vcpu",
+      "started_at": "2026-08-31T19:40:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:24Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:42Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:42:56Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:42Z",
+          "conclusion": "success",
+          "name": "Test Nodes",
+          "number": 5,
+          "started_at": "2026-08-31T19:42:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:42Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 6,
+          "started_at": "2026-08-31T19:48:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:47Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 7,
+          "started_at": "2026-08-31T19:48:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:47Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:48:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:48Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 14,
+          "started_at": "2026-08-31T19:48:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:51Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 15,
+          "started_at": "2026-08-31T19:48:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:51Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-31T19:48:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:48:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T19:48:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:54:04Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:40:12Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99618755454,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2204"
+      ],
+      "name": "Unit tests (26.5.1) / Frontend (2/2)",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "blacksmith runners 01kea2wzna6spz04nq3an7mwhp",
+      "runner_name": "blacksmith-01m1cnc9qrqe1c1st2cyfrv0jh-4vcpu",
+      "started_at": "2026-08-31T19:40:23Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:40:26Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:40:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:26Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T19:40:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:40:43Z",
+          "conclusion": "success",
+          "name": "Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 3,
+          "started_at": "2026-08-31T19:40:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:43:11Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 4,
+          "started_at": "2026-08-31T19:40:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:50Z",
+          "conclusion": "success",
+          "name": "Test",
+          "number": 5,
+          "started_at": "2026-08-31T19:43:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:51Z",
+          "conclusion": "success",
+          "name": "Send Test Stats",
+          "number": 6,
+          "started_at": "2026-08-31T19:53:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:56Z",
+          "conclusion": "success",
+          "name": "Upload test results to Codecov",
+          "number": 7,
+          "started_at": "2026-08-31T19:53:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:56Z",
+          "conclusion": "skipped",
+          "name": "Upload coverage to Codecov",
+          "number": 8,
+          "started_at": "2026-08-31T19:53:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:53:57Z",
+          "conclusion": "success",
+          "name": "Post Build",
+          "number": 14,
+          "started_at": "2026-08-31T19:53:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:54:01Z",
+          "conclusion": "success",
+          "name": "Post Run useblacksmith/checkout@41cdeedae8edb2e684ba22896a5fd2a3cb85db6b",
+          "number": 15,
+          "started_at": "2026-08-31T19:53:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:54:01Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-08-31T19:54:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:54:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T19:54:01Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:54:09Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:54:04Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99622875459,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Unit tests (26.5.1) / Unit tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000909364",
+      "started_at": "2026-08-31T19:54:07Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:54:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:54:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:54:07Z",
+          "conclusion": "skipped",
+          "name": "Fail if tests failed",
+          "number": 2,
+          "started_at": "2026-08-31T19:54:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:54:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "started_at": "2026-08-31T19:54:07Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:55:58Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T19:55:53Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99623405284,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Unit tests (24.18.1) / Unit tests",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000909365",
+      "started_at": "2026-08-31T19:55:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T19:55:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T19:55:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:56Z",
+          "conclusion": "skipped",
+          "name": "Fail if tests failed",
+          "number": 2,
+          "started_at": "2026-08-31T19:55:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T19:55:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "started_at": "2026-08-31T19:55:56Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    },
+    {
+      "completed_at": "2026-08-31T19:55:58Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T19:55:59Z",
+      "head_sha": "e93deef366ce2aa27cfb43364f65b21c6eb8f443",
+      "id": 99623434419,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Notify Slack on failure",
+      "run_attempt": 1,
+      "run_id": 33431825968,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T19:55:59Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI: Master (Build, Test, Lint)"
+    }
+  ],
+  "run_id": 33431825968
+}

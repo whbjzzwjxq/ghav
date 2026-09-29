@@ -1,0 +1,349 @@
+{
+  "benchmark": "LibreChat-AI/LibreChat@49e1e32f3a41b8e718feaa818e0134d5d0d70ae5:.github/workflows/dev-images.yml",
+  "benchmark_id": "LibreChat-AI__LibreChat__dev-images",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33424998112,
+        33343454388,
+        33342530048,
+        33341140537,
+        33313624131
+      ],
+      "window_count": 39
+    }
+  },
+  "jobs": {
+    "build (api-build, Dockerfile.multi, librechat-dev-api)": {
+      "duration_seconds": 1062.0,
+      "durations": [
+        1059.0,
+        1175.0,
+        1043.0,
+        1175.0,
+        1062.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        3.0,
+        6.0,
+        8.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            9.0,
+            7.0,
+            6.0,
+            10.0
+          ],
+          "name": "Set up QEMU",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            23.0,
+            24.0,
+            24.0,
+            24.0
+          ],
+          "name": "Set up Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Log in to GitHub Container Registry",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare environment",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Compute build metadata",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1017.0,
+            1134.0,
+            1004.0,
+            1134.0,
+            1014.0
+          ],
+          "name": "Build and push Docker images",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1017.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "build (node, Dockerfile, librechat-dev)": {
+      "duration_seconds": 1225.0,
+      "durations": [
+        1243.0,
+        1302.0,
+        1225.0,
+        1222.0,
+        974.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        7.0,
+        8.0,
+        7.0,
+        8.0,
+        8.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            11.0,
+            10.0,
+            6.0,
+            10.0
+          ],
+          "name": "Set up QEMU",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            24.0,
+            22.0,
+            24.0,
+            23.0
+          ],
+          "name": "Set up Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Log in to GitHub Container Registry",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prepare environment",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Compute build metadata",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1202.0,
+            1254.0,
+            1180.0,
+            1179.0,
+            927.0
+          ],
+          "name": "Build and push Docker images",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1180.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "1e4cae07c79f432648c9a8287484d76f2d78e98f": "616f5a6af4cba76a674bcc076f8e6729e5a4e11f",
+      "240e9e920f5eaa0197448507540b1aa7bbdd1b79": "616f5a6af4cba76a674bcc076f8e6729e5a4e11f",
+      "49e1e32f3a41b8e718feaa818e0134d5d0d70ae5": "616f5a6af4cba76a674bcc076f8e6729e5a4e11f",
+      "56d54a94161a1ccd4615e83b20e3920699eb8368": "616f5a6af4cba76a674bcc076f8e6729e5a4e11f",
+      "9ac801ee454fb33aedad267f39d885f74090edb8": "616f5a6af4cba76a674bcc076f8e6729e5a4e11f"
+    },
+    "pinned_oid": "616f5a6af4cba76a674bcc076f8e6729e5a4e11f",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

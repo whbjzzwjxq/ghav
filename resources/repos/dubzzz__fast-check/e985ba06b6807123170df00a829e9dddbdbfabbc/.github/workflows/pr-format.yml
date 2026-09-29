@@ -1,0 +1,96 @@
+name: PR Format
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref_value:
+        description: 'PR number'
+        required: true
+        type: string
+
+permissions: {}
+
+jobs:
+  format:
+    name: 'Format code and commit changes'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Determine checkout reference
+        id: ref
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.ref_value }}
+          REPO: ${{ github.repository }}
+        run: |
+          HEAD_BRANCH=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json headRefName --jq .headRefName)
+          echo "ref=$HEAD_BRANCH" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ steps.ref.outputs.ref }}
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Install pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+      - name: Using Node v24.x
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: '24.x'
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Check current branch info
+        env:
+          PR_NUMBER: ${{ github.event.inputs.ref_value }}
+        run: |
+          echo "Requested PR: $PR_NUMBER"
+          echo "Current branch: $(git branch --show-current)"
+          echo "Current commit: $(git rev-parse HEAD)"
+      - name: Check if formatting is needed
+        id: format_check
+        run: |
+          if ! pnpm format:check; then
+            echo "changes_needed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes_needed=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Run format
+        if: steps.format_check.outputs.changes_needed == 'true'
+        run: pnpm format
+      - name: Configure git
+        if: steps.format_check.outputs.changes_needed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+      - name: Commit formatting changes
+        if: steps.format_check.outputs.changes_needed == 'true'
+        env:
+          WORKFLOW_NAME: ${{ github.workflow }}
+          RUN_ID: ${{ github.run_id }}
+          PR_NUMBER: ${{ github.event.inputs.ref_value }}
+        run: |
+          git add .
+          if ! git diff --cached --quiet; then
+            echo "Committing formatting changes..."
+            git commit -m "💄 Format code with prettier
+
+            Applied by GitHub Action workflow: $WORKFLOW_NAME
+            Run ID: $RUN_ID
+            Target PR: $PR_NUMBER"
+            
+            echo "Pushing changes..."
+            git push
+          else
+            echo "No changes to commit after formatting"
+          fi
+      - name: Output result
+        env:
+          CHANGES_NEEDED: ${{ steps.format_check.outputs.changes_needed }}
+        run: |
+          if [ "$CHANGES_NEEDED" = "true" ]; then
+            echo "✅ Formatting changes have been committed and pushed"
+          else
+            echo "✅ Code is already properly formatted, no changes needed"
+          fi

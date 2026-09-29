@@ -1,0 +1,5452 @@
+{
+  "benchmark": "langfuse/langfuse@983c2a6e5bbe9e8f35fe10eb017c9abd6220833b:.github/workflows/pipeline.yml",
+  "benchmark_id": "langfuse__langfuse__pipeline",
+  "count_window": {
+    "capped": false,
+    "days": 7,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-25T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33444802262,
+        33439154153,
+        33438923161,
+        33438877675,
+        33435862748
+      ],
+      "window_count": 995
+    },
+    "push": {
+      "runs": [
+        33114153068,
+        33110133110,
+        33108668848,
+        33108316011,
+        33103388918
+      ],
+      "window_count": 215
+    }
+  },
+  "jobs": {
+    "all-ci-passed": {
+      "duration_seconds": 3.5,
+      "durations": [
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        15.0,
+        4.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        2.0,
+        3.0,
+        3.0,
+        2.0,
+        3.0,
+        5.0,
+        4.0,
+        15.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set check result as an output",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Successful deploy",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Failing deploy",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [],
+          "name": "Notify Slack",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Output job results",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "build-docker-image-release": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "e2e-server-tests": {
+      "duration_seconds": 210.0,
+      "durations": [
+        212.0,
+        242.0,
+        204.0,
+        164.0,
+        174.0,
+        211.0,
+        210.0
+      ],
+      "main_step_counts": [
+        20
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        8.0,
+        6.0,
+        7.0,
+        6.0,
+        6.0,
+        7.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            5.0,
+            6.0,
+            8.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            5.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            18.0,
+            14.0,
+            15.0,
+            12.0,
+            10.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            2.0,
+            1.0,
+            4.0,
+            7.0
+          ],
+          "name": "Setup Turbo cache",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 4.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dev containers in background",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            97.0,
+            125.0,
+            90.0,
+            66.0,
+            72.0,
+            92.0,
+            92.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 92.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Wait for dev containers",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            11.0,
+            10.0,
+            10.0,
+            15.0,
+            12.0
+          ],
+          "name": "Seed DB",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run server",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            3.0,
+            1.0
+          ],
+          "name": "Check worker health",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check server health",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            53.0,
+            53.0,
+            50.0,
+            51.0,
+            52.0,
+            52.0
+          ],
+          "name": "Run e2e tests",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 52.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prune stale turbo cache entries",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "e2e-tests": {
+      "duration_seconds": 173.0,
+      "durations": [
+        199.0,
+        223.0,
+        228.0,
+        173.0,
+        166.0,
+        167.0,
+        143.0
+      ],
+      "main_step_counts": [
+        20
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        8.0,
+        7.0,
+        6.0,
+        8.0,
+        7.0,
+        7.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            7.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            12.0,
+            7.0,
+            5.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            14.0,
+            2.0,
+            1.0,
+            3.0,
+            5.0
+          ],
+          "name": "Setup Turbo cache",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            20.0,
+            21.0,
+            20.0,
+            21.0,
+            16.0
+          ],
+          "name": "Cache Next.js builds",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 20.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            13.0,
+            12.0,
+            19.0,
+            15.0,
+            15.0,
+            11.0,
+            9.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dev containers in background",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install playwright in background",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            86.0,
+            81.0,
+            69.0,
+            65.0,
+            25.0,
+            19.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 65.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            8.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0,
+            8.0
+          ],
+          "name": "Scan client bundle for minifier-dropped bindings",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Wait for dev containers",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            10.0,
+            9.0
+          ],
+          "name": "Seed DB",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Wait for playwright install",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            51.0,
+            53.0,
+            48.0,
+            47.0,
+            52.0,
+            48.0
+          ],
+          "name": "Run e2e tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 51.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "knip": {
+      "duration_seconds": 34.0,
+      "durations": [
+        31.0,
+        42.0,
+        44.0,
+        32.0,
+        28.0,
+        43.0,
+        34.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            4.0,
+            4.0,
+            7.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            4.0,
+            7.0,
+            6.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            16.0,
+            20.0,
+            15.0,
+            14.0,
+            17.0,
+            12.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "run knip",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "lint": {
+      "duration_seconds": 140.0,
+      "durations": [
+        152.0,
+        140.0,
+        151.0,
+        110.0,
+        115.0,
+        118.0,
+        147.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            8.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Setup Turbo cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            18.0,
+            12.0,
+            14.0,
+            9.0,
+            10.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "agent shims are committed and current",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "agent guidance paths resolve",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            108.0,
+            97.0,
+            104.0,
+            77.0,
+            80.0,
+            82.0,
+            107.0
+          ],
+          "name": "lint web",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 97.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            13.0,
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            10.0
+          ],
+          "name": "typecheck",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "llm-connections-filter": {
+      "duration_seconds": 7.0,
+      "durations": [
+        7.0,
+        7.0,
+        6.0,
+        8.0,
+        8.0,
+        7.0,
+        7.0,
+        8.0,
+        7.0,
+        9.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "notify-docker-image-release": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "pre-job": {
+      "duration_seconds": 4.0,
+      "durations": [
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 2.0,
+      "overheads": [
+        2.0,
+        1.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run CURRENT_TREE=$(gh api \"repos/$REPOSITORY/git/commits/$COMMIT_SHA\" --jq '.tree.sha')",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "prettier-check": {
+      "duration_seconds": 49.0,
+      "durations": [
+        39.0,
+        51.0,
+        63.0,
+        41.0,
+        40.0,
+        51.0,
+        49.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        7.0,
+        5.0,
+        4.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            27.0,
+            14.0,
+            14.0,
+            13.0,
+            13.0,
+            15.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            4.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            8.0,
+            7.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            29.0,
+            16.0,
+            14.0,
+            15.0,
+            15.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            3.0,
+            1.0,
+            1.0,
+            4.0,
+            0.0
+          ],
+          "name": "Check formatting on changed files",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "publish-docker-image-release": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "test-docker-build (${{ matrix.component }})": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 3,
+      "steps": []
+    },
+    "test-docker-build (web)": {
+      "duration_seconds": 132.0,
+      "durations": [
+        129.0,
+        135.0,
+        162.0,
+        39.0,
+        112.0,
+        165.0,
+        132.0
+      ],
+      "main_step_counts": [
+        12
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        6.0,
+        7.0,
+        5.0,
+        5.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            6.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Setup Blacksmith Builder",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set NEXT_PUBLIC_BUILD_ID",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dependency containers in background",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            98.0,
+            102.0,
+            128.0,
+            10.0,
+            82.0,
+            126.0,
+            101.0
+          ],
+          "name": "Build images",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 101.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            15.0,
+            15.0,
+            14.0,
+            14.0,
+            22.0,
+            14.0
+          ],
+          "name": "Start compose services and wait for healthchecks",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check service health",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture docker diagnostics on failure",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [],
+          "name": "Upload docker diagnostics",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test-docker-build (worker)": {
+      "duration_seconds": 65.0,
+      "durations": [
+        65.0,
+        37.0,
+        466.0,
+        118.0,
+        117.0,
+        42.0,
+        37.0
+      ],
+      "main_step_counts": [
+        12
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        5.0,
+        46.0,
+        6.0,
+        5.0,
+        6.0,
+        7.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            260.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            5.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Setup Blacksmith Builder",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set NEXT_PUBLIC_BUILD_ID",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dependency containers in background",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0,
+            16.0,
+            145.0,
+            97.0,
+            96.0,
+            21.0,
+            15.0
+          ],
+          "name": "Build images",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start compose services and wait for healthchecks",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check service health",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture docker diagnostics on failure",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [],
+          "name": "Upload docker diagnostics",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test-worker-llm-connections (node24, pg15)": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    },
+    "tests-eslint-plugin": {
+      "duration_seconds": 37.0,
+      "durations": [
+        37.0,
+        42.0,
+        41.0,
+        29.0,
+        29.0,
+        29.0,
+        60.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            9.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            9.0,
+            6.0,
+            5.0,
+            13.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            21.0,
+            14.0,
+            15.0,
+            8.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "run eslint-plugin tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-in-app-agent-sandbox-runtime": {
+      "duration_seconds": 47.0,
+      "durations": [
+        55.0,
+        44.0,
+        58.0,
+        37.0,
+        39.0,
+        47.0,
+        55.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        5.0,
+        7.0,
+        7.0,
+        7.0,
+        5.0,
+        5.0,
+        10.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            7.0,
+            4.0,
+            5.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            8.0,
+            5.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            15.0,
+            11.0,
+            24.0,
+            14.0,
+            14.0,
+            12.0,
+            15.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "typecheck sandbox runtime",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "run sandbox runtime unit tests",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            12.0,
+            10.0,
+            8.0,
+            10.0,
+            10.0,
+            13.0
+          ],
+          "name": "run sandbox runtime docker e2e tests",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-shared": {
+      "duration_seconds": 63.0,
+      "durations": [
+        50.0,
+        56.0,
+        77.0,
+        63.0,
+        63.0,
+        121.0,
+        100.0
+      ],
+      "main_step_counts": [
+        10,
+        12
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            8.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            4.0,
+            13.0,
+            7.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            18.0,
+            15.0,
+            15.0,
+            16.0,
+            17.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env (for prisma generate)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "generate prisma client",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            23.0,
+            24.0,
+            21.0,
+            22.0,
+            56.0,
+            39.0
+          ],
+          "name": "run shared tests",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            9,
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            11.0,
+            10.0,
+            13.0,
+            17.0
+          ],
+          "name": "Install ClickHouse binary for SQL-equivalence tests",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            4.0,
+            3.0
+          ],
+          "name": "run SQL-equivalence tests (non-blocking)",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-storybook": {
+      "duration_seconds": 210.0,
+      "durations": [
+        190.0,
+        278.0,
+        277.0,
+        175.0,
+        144.0,
+        307.0,
+        210.0
+      ],
+      "main_step_counts": [
+        12
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        5.0,
+        5.0,
+        7.0,
+        5.0,
+        14.0,
+        5.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            18.0,
+            3.0,
+            111.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            6.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            14.0,
+            18.0,
+            21.0,
+            14.0,
+            15.0,
+            11.0,
+            14.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env (for prisma generate)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "generate prisma client",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            15.0,
+            21.0,
+            14.0,
+            19.0,
+            14.0
+          ],
+          "name": "Install playwright",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            78.0,
+            118.0,
+            71.0,
+            55.0,
+            50.0,
+            74.0,
+            81.0
+          ],
+          "name": "run Storybook tests",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 74.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            61.0,
+            101.0,
+            151.0,
+            53.0,
+            52.0,
+            68.0,
+            79.0
+          ],
+          "name": "build Storybook",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 68.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-web (node${{ matrix.node-version }}, pg${{ matrix.postgres-version }}, mode${{ matrix.deploy-mode }})": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 3,
+      "steps": []
+    },
+    "tests-web (node24, pg15, mode)": {
+      "duration_seconds": 216.0,
+      "durations": [
+        266.0,
+        216.0,
+        246.0,
+        192.0,
+        183.0,
+        239.0,
+        207.0
+      ],
+      "main_step_counts": [
+        21
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        6.0,
+        7.0,
+        7.0,
+        8.0,
+        8.0,
+        7.0,
+        7.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            19.0,
+            13.0,
+            12.0,
+            10.0,
+            9.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            1.0,
+            0.0,
+            2.0,
+            8.0
+          ],
+          "name": "Setup Turbo cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 2.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dev containers in background",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            63.0,
+            71.0,
+            53.0,
+            50.0,
+            64.0,
+            56.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 63.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            9.0,
+            8.0,
+            13.0,
+            8.0
+          ],
+          "name": "Finalize build for runtime environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Wait for dev containers",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Migrate DB",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Setup Dev Tables",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start Langfuse",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            137.0,
+            96.0,
+            114.0,
+            89.0,
+            85.0,
+            114.0,
+            92.0
+          ],
+          "name": "run tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 96.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prune stale turbo cache entries",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-web (node24, pg15, mode-azure)": {
+      "duration_seconds": 220.0,
+      "durations": [
+        236.0,
+        285.0,
+        192.0,
+        177.0,
+        183.0,
+        220.0,
+        238.0
+      ],
+      "main_step_counts": [
+        21
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        7.0,
+        7.0,
+        8.0,
+        8.0,
+        7.0,
+        10.0,
+        8.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            3.0,
+            5.0,
+            7.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            14.0,
+            15.0,
+            12.0,
+            14.0,
+            10.0,
+            11.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            0.0,
+            1.0,
+            2.0,
+            7.0
+          ],
+          "name": "Setup Turbo cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 2.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dev containers in background",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            68.0,
+            83.0,
+            51.0,
+            48.0,
+            52.0,
+            63.0,
+            75.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 63.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            9.0,
+            9.0,
+            8.0,
+            9.0,
+            10.0
+          ],
+          "name": "Finalize build for runtime environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Wait for dev containers",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Migrate DB",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [],
+          "name": "Setup Dev Tables",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start Langfuse",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            108.0,
+            136.0,
+            84.0,
+            81.0,
+            82.0,
+            99.0,
+            98.0
+          ],
+          "name": "run tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 98.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prune stale turbo cache entries",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-web (node24, pg15, mode-redis-cluster)": {
+      "duration_seconds": 266.0,
+      "durations": [
+        280.0,
+        266.0,
+        305.0,
+        193.0,
+        184.0,
+        330.0,
+        247.0
+      ],
+      "main_step_counts": [
+        21
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        8.0,
+        7.0,
+        7.0,
+        7.0,
+        8.0,
+        31.0,
+        7.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            96.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            0.0,
+            2.0,
+            0.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            7.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            32.0,
+            13.0,
+            13.0,
+            8.0,
+            11.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            1.0,
+            0.0,
+            4.0,
+            5.0
+          ],
+          "name": "Setup Turbo cache",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 4.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start dev containers in background",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            80.0,
+            80.0,
+            96.0,
+            50.0,
+            49.0,
+            67.0,
+            73.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 73.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            12.0,
+            13.0,
+            9.0,
+            9.0,
+            10.0,
+            12.0
+          ],
+          "name": "Finalize build for runtime environment",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Wait for dev containers",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Migrate DB",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [],
+          "name": "Setup Dev Tables",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Start Langfuse",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            134.0,
+            125.0,
+            126.0,
+            94.0,
+            85.0,
+            91.0,
+            109.0
+          ],
+          "name": "run tests",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 109.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Prune stale turbo cache entries",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-web-client": {
+      "duration_seconds": 132.0,
+      "durations": [
+        132.0,
+        116.0,
+        418.0,
+        107.0,
+        105.0,
+        266.0,
+        150.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        16.0,
+        5.0,
+        5.0,
+        11.0,
+        5.0
+      ],
+      "samples": 7,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            3.0,
+            282.0,
+            4.0,
+            3.0,
+            110.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            10.0,
+            14.0,
+            14.0,
+            11.0,
+            18.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            7.0
+          ],
+          "name": "Build client test dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            92.0,
+            80.0,
+            96.0,
+            76.0,
+            75.0,
+            118.0,
+            106.0
+          ],
+          "name": "run test-client",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 92.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-worker (node${{ matrix.node-version }}, pg${{ matrix.postgres-version }}, mode${{ matrix.deploy-mode }})": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 3,
+      "steps": []
+    },
+    "tests-worker (node24, pg15, mode)": {
+      "duration_seconds": 179.0,
+      "durations": [
+        185.0,
+        179.0,
+        226.0,
+        157.0,
+        155.0,
+        173.0,
+        210.0
+      ],
+      "main_step_counts": [
+        17
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            13.0,
+            35.0,
+            14.0,
+            14.0,
+            10.0,
+            11.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            13.0,
+            14.0,
+            12.0,
+            13.0,
+            17.0,
+            13.0
+          ],
+          "name": "Run + migrate",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Ensure no unhealthy status",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            16.0,
+            9.0,
+            9.0,
+            11.0,
+            13.0
+          ],
+          "name": "Seed DB",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Setup Dev Tables",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            3.0,
+            4.0,
+            4.0,
+            7.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            125.0,
+            114.0,
+            133.0,
+            104.0,
+            101.0,
+            109.0,
+            143.0
+          ],
+          "name": "run tests",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 114.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-worker (node24, pg15, mode-azure)": {
+      "duration_seconds": 179.0,
+      "durations": [
+        215.0,
+        222.0,
+        179.0,
+        155.0,
+        156.0,
+        222.0,
+        166.0
+      ],
+      "main_step_counts": [
+        17
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            7.0,
+            7.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 6.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            11.0,
+            13.0,
+            20.0,
+            15.0,
+            14.0,
+            13.0,
+            10.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            25.0,
+            14.0,
+            11.0,
+            13.0,
+            31.0,
+            13.0
+          ],
+          "name": "Run + migrate",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Ensure no unhealthy status",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            9.0,
+            8.0,
+            9.0,
+            11.0,
+            11.0
+          ],
+          "name": "Seed DB",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [],
+          "name": "Setup Dev Tables",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            155.0,
+            148.0,
+            112.0,
+            102.0,
+            103.0,
+            138.0,
+            106.0
+          ],
+          "name": "run tests",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 112.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "tests-worker (node24, pg15, mode-redis-cluster)": {
+      "duration_seconds": 213.0,
+      "durations": [
+        192.0,
+        218.0,
+        249.0,
+        158.0,
+        192.0,
+        213.0,
+        346.0
+      ],
+      "main_step_counts": [
+        17
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        7.0,
+        5.0,
+        6.0,
+        8.0,
+        11.0
+      ],
+      "samples": 7,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            35.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Use Node.js 24 without cache",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            7.0,
+            8.0,
+            9.0
+          ],
+          "name": "Use Node.js 24 with pnpm cache",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            28.0,
+            14.0,
+            14.0,
+            13.0,
+            20.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install golang-migrate for Clickhouse migrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Load default env",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            14.0,
+            13.0,
+            13.0,
+            13.0,
+            24.0
+          ],
+          "name": "Run + migrate",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Ensure no unhealthy status",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            15.0,
+            17.0,
+            9.0,
+            10.0,
+            11.0,
+            38.0
+          ],
+          "name": "Seed DB",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [],
+          "name": "Setup Dev Tables",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            7.0,
+            3.0,
+            3.0,
+            5.0,
+            11.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            136.0,
+            155.0,
+            158.0,
+            105.0,
+            107.0,
+            145.0,
+            221.0
+          ],
+          "name": "run tests",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 145.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "2872068b8500e46741978b2b94cd59aa18303ec5": "d41d54df8d6a1d995f3567a1711a915bdc7e7c6a",
+      "4ac585cbc92eb6c683c45c05022c51369b39f16f": "d41d54df8d6a1d995f3567a1711a915bdc7e7c6a",
+      "59d92c7cf365150d10b753b5a0d1708902a2ed60": "0517c13c679cf00162485f7eaa71955cf7624add",
+      "7be41122b7d0fb71cf27081dd275c623fbfdb8bb": "0517c13c679cf00162485f7eaa71955cf7624add",
+      "81162cf510a08dbf29b8bd44af37e04570ca20f9": "0517c13c679cf00162485f7eaa71955cf7624add",
+      "95933f73a6685884ae946961cb3a77249d68520d": "0517c13c679cf00162485f7eaa71955cf7624add",
+      "a614e16f22bb48aea2225176c48601eedcd37e9f": "d41d54df8d6a1d995f3567a1711a915bdc7e7c6a",
+      "c45eced62bd8b5857bfc21de14d07f97795a00bc": "d41d54df8d6a1d995f3567a1711a915bdc7e7c6a",
+      "c502f992dd68874099ff212c269e48757517ee9b": "0517c13c679cf00162485f7eaa71955cf7624add",
+      "f0038a2eb9967be64cf64188273611e2c2ff2832": "d41d54df8d6a1d995f3567a1711a915bdc7e7c6a"
+    },
+    "pinned_oid": "d41d54df8d6a1d995f3567a1711a915bdc7e7c6a",
+    "runs_same_version": 5,
+    "runs_total": 10
+  }
+}

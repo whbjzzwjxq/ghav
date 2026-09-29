@@ -1,0 +1,891 @@
+name: publish
+
+on:
+  # Automated schedule - canary releases from master
+  schedule:
+    - cron: "0 19 * * 1-5" # Monday - Friday, at 19:00 UTC (7pm UTC)
+  # Manual trigger - PR releases or dry-runs (based on workflow inputs)
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "PR Number - If set, a real release will be created for the branch associated with the given PR number. If blank, a dry-run of the currently selected branch will be performed."
+        required: false
+        type: number
+  release:
+    types: [ published ]
+
+# Dynamically generate the display name for the GitHub UI based on the event type and inputs
+run-name: ${{ github.event.inputs.pr && format('PR Release for {0}', github.event.inputs.pr) || github.event_name == 'schedule' && 'Canary Release' || github.event_name == 'workflow_dispatch' && !github.event.inputs.pr && 'Release Dry-Run' || github.ref_name }}
+
+env:
+  DEBUG: napi:*
+  # Published binaries must never be built incrementally: the root Cargo.toml
+  # turns incremental on for the release profile so local rebuilds are fast, and
+  # incremental partitioning changes codegen. This must reach every build below,
+  # including the docker and FreeBSD ones, which forward env explicitly.
+  CARGO_INCREMENTAL: '0'
+  NX_RUN_GROUP: ${{ github.run_id }}-${{ github.run_attempt }}
+  CYPRESS_INSTALL_BINARY: 0
+  NODE_VERSION: 26.7.0
+  PNPM_VERSION: 11.22.0 # Aligned with root package.json (pnpm/action-setup will helpfully error if out of sync)
+  NX_GRADLE_PROJECT_GRAPH_TIMEOUT: 600
+
+jobs:
+  # We first need to determine the version we are releasing, and if we need a custom repo or ref to use for the git checkout in subsequent steps.
+  # These values depend upon the event type that triggered the workflow:
+  #
+  # - schedule:
+  #   - We are running a canary release which always comes from the master branch, we can use default ref resolution
+  #     in actions/checkout. The exact version will be generated within scripts/nx-release.ts.
+  #
+  # - release:
+  #   - We are running a full release which is based on the tag that triggered the release event, we can use default
+  #     ref resolution in actions/checkout. The exact version will be generated within scripts/nx-release.ts.
+  #
+  # - workflow_dispatch:
+  #   - We are either running a dry-run on the current branch, in which case the version will be static and we can use
+  #     default ref resolution in actions/checkout, or we are creating a PR release for the given PR number, in which case
+  #     we should generate an applicable version number within publish-resolve-data.js and use a custom ref of the PR branch name.
+  resolve-required-data:
+    name: Resolve Required Data
+    if: ${{ github.repository_owner == 'nrwl' }}
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.script.outputs.version }}
+      dry_run_flag: ${{ steps.script.outputs.dry_run_flag }}
+      success_comment: ${{ steps.script.outputs.success_comment }}
+      publish_branch: ${{ steps.script.outputs.publish_branch }}
+      ref: ${{ steps.script.outputs.ref }}
+      repo: ${{ steps.script.outputs.repo }}
+      pr_number: ${{ steps.script.outputs.pr_number }}
+      pr_author: ${{ steps.script.outputs.pr_author }}
+    steps:
+      # Default checkout on the triggering branch so that the latest publish-resolve-data.js script is available
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Setup node
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://registry.npmjs.org'
+          check-latest: true
+          package-manager-cache: false
+
+      - name: Resolve and set checkout and version data to use for release
+        id: script
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          PR_NUMBER: ${{ github.event.inputs.pr }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const script = require('${{ github.workspace }}/scripts/publish-resolve-data.js');
+            await script({ github, context, core });
+
+      - name: (PR Release Only) Check out latest master
+        if: ${{ steps.script.outputs.ref != '' }}
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          # Check out the latest master branch to get its copy of nx-release.ts
+          repository: nrwl/nx
+          ref: master
+          path: latest-master-checkout
+
+      - name: (PR Release Only) Check out PR branch
+        if: ${{ steps.script.outputs.ref != '' }}
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          # Check out the PR branch to get its copy of nx-release.ts
+          repository: ${{ steps.script.outputs.repo }}
+          ref: ${{ steps.script.outputs.ref }}
+          path: pr-branch-checkout
+
+      - name: (PR Release Only) Ensure that release scripts have not changed in the PR being released
+        if: ${{ steps.script.outputs.ref != '' }}
+        run: |
+          # List of files that must not change in PR releases
+          FILES_TO_CHECK=(
+            "scripts/nx-release.ts"
+            "scripts/publish-resolve-data.js"
+          )
+
+          for FILE in "${FILES_TO_CHECK[@]}"; do
+            if ! cmp -s "latest-master-checkout/$FILE" "pr-branch-checkout/$FILE"; then
+              echo "🛑 Error: The file $FILE is different on the ${{ steps.script.outputs.ref }} branch on ${{ steps.script.outputs.repo }} vs latest master on nrwl/nx, cancelling workflow."
+              echo "If you did not modify the file, then you likely just need to rebase/merge latest master."
+              exit 1
+            else
+              echo "✅ The file $FILE is identical between the ${{ steps.script.outputs.ref }} branch on ${{ steps.script.outputs.repo }} and latest master on nrwl/nx."
+            fi
+          done
+
+  build:
+    needs: [ resolve-required-data ]
+    if: ${{ github.repository_owner == 'nrwl' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        settings:
+          - host: macos-latest
+            target: x86_64-apple-darwin
+            setup: |-
+              rustup target add x86_64-apple-darwin
+            build: |
+              pnpm nx run-many --target=build-native -- --target=x86_64-apple-darwin
+          - host: windows-latest
+            setup: |-
+              choco install openjdk --version=21.0.0 -y
+              choco install dotnet-9.0-sdk -y
+              rustup target add aarch64-pc-windows-msvc
+            build: |
+              export JAVA_HOME="C:\Program Files\OpenJDK\jdk-21"
+              export PATH="$JAVA_HOME\bin:$PATH"
+              java -version
+              pnpm nx run-many --target=build-native -- --target=x86_64-pc-windows-msvc
+            target: x86_64-pc-windows-msvc
+          # Windows 32bit (not needed)
+          # - host: windows-latest
+          #   build: |
+          #     yarn nx -- run-many --target=build-native -- --target=i686-pc-windows-msvc
+          #   target: i686-pc-windows-msvc
+          - host: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
+            build: |
+              set -e
+              apt-get update
+              apt-get install -y curl ca-certificates git xz-utils gpg
+
+              # Install mise from the signed apt repo
+              install -dm 755 /etc/apt/keyrings
+              curl -fsSL https://mise.jdx.dev/gpg-key.pub | gpg --dearmor -o /etc/apt/keyrings/mise-archive-keyring.gpg
+              echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=$(dpkg --print-architecture)] https://mise.jdx.dev/deb stable main" > /etc/apt/sources.list.d/mise.list
+              apt-get update
+              apt-get install -y mise
+
+              # Provision Node, Java, .NET, Maven, corepack from mise.toml
+              cd /build
+              mise trust mise.toml
+              mise install
+              eval "$(mise env -s bash)"
+
+              corepack enable
+              corepack prepare --activate
+
+              pnpm install --frozen-lockfile
+              rustup target add x86_64-unknown-linux-gnu
+              pnpm nx run-many --verbose --target=build-native -- --target=x86_64-unknown-linux-gnu
+          - host: ubuntu-latest
+            target: x86_64-unknown-linux-musl
+            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine
+            build: |
+              bash -c "
+                set -e
+                # mise's core node/java backends don't ship musl binaries and fall back to
+                # compile-from-source on Alpine, which fails. Install via apk + tarball instead.
+                echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
+                apk add --no-cache curl xz openjdk21 build-base lld dotnet9-sdk
+
+                # Java 21
+                export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+                export PATH=\"\$JAVA_HOME/bin:\$PATH\"
+                java --version
+
+                # .NET 9 SDK (needed by @nx/dotnet plugin)
+                dotnet --version
+
+                # Node.js musl build from unofficial-builds.nodejs.org
+                curl -fsSL https://unofficial-builds.nodejs.org/download/release/v\${NODE_VERSION}/node-v\${NODE_VERSION}-linux-x64-musl.tar.xz -o node.tar.xz
+                tar -xJf node.tar.xz
+                mv node-v\${NODE_VERSION}-linux-x64-musl /usr/local/node
+                export PATH=\"/usr/local/node/bin:\$PATH\"
+                node --version
+
+                npm i -g pnpm@\${PNPM_VERSION} --force
+
+                # Help clang find GCC runtime (crtbeginS.o, libgcc) and use lld for jemalloc build
+                GCC_DIR=\$(dirname \$(find /usr/lib/gcc -name crtbeginS.o | head -1))
+                export CFLAGS=\"\${CFLAGS} -fuse-ld=lld --gcc-install-dir=\${GCC_DIR}\"
+
+                pnpm install --frozen-lockfile
+                rustup target add x86_64-unknown-linux-musl
+                pnpm nx run-many --verbose --target=build-native -- --target=x86_64-unknown-linux-musl
+              "
+          - host: macos-latest
+            target: aarch64-apple-darwin
+            setup: |-
+              rustup target add aarch64-apple-darwin
+            build: |
+              sudo rm -Rf /Library/Developer/CommandLineTools/SDKs/*;
+              export CC=$(xcrun -f clang);
+              export CXX=$(xcrun -f clang++);
+              SYSROOT=$(xcrun --sdk macosx --show-sdk-path);
+              export CFLAGS="-isysroot $SYSROOT -isystem $SYSROOT";
+              pnpm nx run-many --target=build-native -- --target=aarch64-apple-darwin
+          - host: ubuntu-latest
+            target: aarch64-unknown-linux-gnu
+            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-aarch64
+            build: |
+              set -e
+              apt-get update
+              apt-get install -y curl ca-certificates git xz-utils gpg
+
+              # Install mise from the signed apt repo
+              install -dm 755 /etc/apt/keyrings
+              curl -fsSL https://mise.jdx.dev/gpg-key.pub | gpg --dearmor -o /etc/apt/keyrings/mise-archive-keyring.gpg
+              echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=$(dpkg --print-architecture)] https://mise.jdx.dev/deb stable main" > /etc/apt/sources.list.d/mise.list
+              apt-get update
+              apt-get install -y mise
+
+              # Provision Node, Java, .NET, Maven, corepack from mise.toml
+              cd /build
+              mise trust mise.toml
+              mise install
+              eval "$(mise env -s bash)"
+
+              # Help clang find GCC runtime (crtbeginS.o, libgcc) and use lld for jemalloc build
+              export CFLAGS="${CFLAGS} -fuse-ld=lld --gcc-toolchain=/usr/aarch64-unknown-linux-gnu"
+
+              # Build jemalloc with 64 KiB allocator page so the binary works on aarch64
+              # Linux kernels with 4K/16K/64K pages (Asahi, Ampere, Graviton, etc.).
+              export JEMALLOC_SYS_WITH_LG_PAGE=16
+
+              corepack enable
+              corepack prepare --activate
+
+              pnpm install --frozen-lockfile
+              rustup target add aarch64-unknown-linux-gnu
+              pnpm nx run-many --verbose --target=build-native -- --target=aarch64-unknown-linux-gnu
+          - host: ubuntu-latest
+            target: armv7-unknown-linux-gnueabihf
+            setup: |
+              sudo apt-get update
+              sudo apt-get install gcc-arm-linux-gnueabihf -y
+              rustup target add armv7-unknown-linux-gnueabihf
+            build: |
+              CARGO_TARGET_ARMV7_UNKNOWN_LINUX_GNUEABIHF_LINKER=/usr/bin/arm-linux-gnueabihf-gcc pnpm nx run-many --target=build-native -- --target=armv7-unknown-linux-gnueabihf
+          # Android (not needed)
+          # - host: ubuntu-latest
+          #   target: aarch64-linux-android
+          #   build: |
+          #     pnpm nx run-many --target=build-native -- --target=aarch64-linux-android
+          # - host: ubuntu-latest
+          #   target: armv7-linux-androideabi
+          #   build: |
+          #     pnpm nx run-many --target=build-native -- --target=armv7-linux-androideabi
+          - host: ubuntu-latest
+            target: aarch64-unknown-linux-musl
+            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine
+            build: |
+              bash -c "
+                set -e
+                # mise's core node/java backends don't ship musl binaries and fall back to
+                # compile-from-source on Alpine, which fails. Install via apk + tarball instead.
+                echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
+                apk add --no-cache curl xz openjdk21 build-base lld dotnet9-sdk
+
+                # Java 21
+                export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+                export PATH=\"\$JAVA_HOME/bin:\$PATH\"
+                java --version
+
+                # .NET 9 SDK (needed by @nx/dotnet plugin)
+                dotnet --version
+
+                # Node.js musl build from unofficial-builds.nodejs.org. Container is x64;
+                # rust cross-compiles to aarch64-unknown-linux-musl, so the host node binary
+                # is x64-musl regardless of the build target.
+                curl -fsSL https://unofficial-builds.nodejs.org/download/release/v\${NODE_VERSION}/node-v\${NODE_VERSION}-linux-x64-musl.tar.xz -o node.tar.xz
+                tar -xJf node.tar.xz
+                mv node-v\${NODE_VERSION}-linux-x64-musl /usr/local/node
+                export PATH=\"/usr/local/node/bin:\$PATH\"
+                node --version
+
+                npm i -g pnpm@\${PNPM_VERSION} --force
+
+                # Help clang find GCC runtime (crtbeginS.o, libgcc) and use lld for jemalloc build
+                GCC_DIR=\$(dirname \$(find /aarch64-linux-musl-cross/lib/gcc -name crtbeginS.o | head -1))
+                export CFLAGS=\"\${CFLAGS} -fuse-ld=lld --gcc-install-dir=\${GCC_DIR}\"
+
+                # Build jemalloc with 64 KiB allocator page so the binary works on aarch64
+                # Linux kernels with 4K/16K/64K pages (Asahi, Ampere, Graviton, etc.).
+                export JEMALLOC_SYS_WITH_LG_PAGE=16
+
+                pnpm install --frozen-lockfile
+                rustup target add aarch64-unknown-linux-musl
+                pnpm nx run-many --verbose --target=build-native -- --target=aarch64-unknown-linux-musl
+              "
+          - host: windows-latest
+            target: aarch64-pc-windows-msvc
+            setup: |-
+              choco install openjdk --version=21.0.0 -y
+              choco install dotnet-9.0-sdk -y
+              rustup target add aarch64-pc-windows-msvc
+            build: |
+              export JAVA_HOME="C:\Program Files\OpenJDK\jdk-21"
+              export PATH="$JAVA_HOME\bin:$PATH"
+              java -version
+              pnpm nx run-many --target=build-native -- --target=aarch64-pc-windows-msvc
+    name: stable - ${{ matrix.settings.target }} - node@26.7.0
+    runs-on: ${{ matrix.settings.host }}
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          repository: ${{ needs.resolve-required-data.outputs.repo || github.repository }}
+          ref: ${{ needs.resolve-required-data.outputs.ref || github.ref }}
+
+      - name: Set verbose logging from debug mode
+        if: runner.debug == '1'
+        run: echo "NX_VERBOSE_LOGGING=true" >> "$GITHUB_ENV"
+
+      - name: Setup dev tools with mise
+        uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3
+        if: ${{ !matrix.settings.docker }}
+
+      - name: Enable corepack and install pnpm
+        if: ${{ !matrix.settings.docker }}
+        run: |
+          corepack enable
+          corepack prepare --activate
+
+      # Restore always, but only save from master. A cache written on a tag or PR ref
+      # is scoped to that ref, so nothing can ever read it back — it just consumes the
+      # repo-wide 10GB budget and evicts the master entries these builds depend on.
+      - name: Restore cargo cache
+        id: cargo-cache
+        uses: actions/cache/restore@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
+        with:
+          path: |
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            .cargo-cache
+            target/
+          key: ${{ matrix.settings.target }}-cargo-registry
+
+      - name: Setup toolchain
+        run: ${{ matrix.settings.setup }}
+        if: ${{ matrix.settings.setup }}
+        shell: bash
+
+      - name: Setup node x86
+        if: matrix.settings.target == 'i686-pc-windows-msvc'
+        run: yarn config set supportedArchitectures.cpu "ia32"
+        shell: bash
+
+      - name: Install dependencies
+        if: ${{ !matrix.settings.docker }}
+        run: pnpm install --frozen-lockfile
+        timeout-minutes: 30
+
+      - name: Setup node x86
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        if: matrix.settings.target == 'i686-pc-windows-msvc'
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          check-latest: true
+          cache: pnpm
+          architecture: x86
+
+      - name: Build in docker
+        if: ${{ matrix.settings.docker }}
+        shell: bash
+        env:
+          BUILD_SCRIPT: ${{ matrix.settings.build }}
+        run: |
+          SCRIPT_FILE=$(mktemp)
+          echo "$BUILD_SCRIPT" > "$SCRIPT_FILE"
+          docker run --rm \
+            --user 0:0 \
+            -e NODE_VERSION \
+            -e PNPM_VERSION \
+            -e NX_GRADLE_PROJECT_GRAPH_TIMEOUT \
+            -e NX_VERBOSE_LOGGING \
+            -e CARGO_INCREMENTAL \
+            -v ${{ github.workspace }}/.cargo-cache/git/db:/usr/local/cargo/git/db \
+            -v ${{ github.workspace }}/.cargo/registry/cache:/usr/local/cargo/registry/cache \
+            -v ${{ github.workspace }}/.cargo/registry/index:/usr/local/cargo/registry/index \
+            -v ${{ github.workspace }}:/build \
+            -v "$SCRIPT_FILE:/build-script.sh" \
+            -w /build \
+            ${{ matrix.settings.docker }} \
+            bash /build-script.sh
+
+      - name: Build
+        run: ${{ matrix.settings.build }}
+        if: ${{ !matrix.settings.docker }}
+        shell: bash
+
+      - name: Save cargo cache
+        if: github.ref == 'refs/heads/master' && steps.cargo-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
+        with:
+          path: |
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            .cargo-cache
+            target/
+          key: ${{ matrix.settings.target }}-cargo-registry
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: bindings-${{ matrix.settings.target }}
+          path: |
+            packages/nx/src/native/*.node
+            packages/nx/src/native/*.wasm
+          if-no-files-found: error
+
+  build-freebsd:
+    needs: [ resolve-required-data ]
+    if: ${{ github.repository_owner == 'nrwl' }}
+    runs-on: ubuntu-latest
+    name: Build FreeBSD
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          repository: ${{ needs.resolve-required-data.outputs.repo || github.repository }}
+          ref: ${{ needs.resolve-required-data.outputs.ref || github.ref }}
+
+      - name: Build
+        id: build
+        uses: cross-platform-actions/action@462ed697694d2ac9aa49e1225f395f7bb6dd49fe # v0.29.0
+        env:
+          DEBUG: napi:*
+          RUSTUP_IO_THREADS: 1
+          CARGO_INCREMENTAL: '0'
+          PLAYWRIGHT_BROWSERS_PATH: 0
+          NODE_VERSION: 26.7.0
+          NX_GRADLE_DISABLE: 'true'
+          NX_DOTNET_DISABLE: 'true'
+          NODE_OPTIONS: '--max-old-space-size=4096'
+        with:
+          operating_system: freebsd
+          version: '14.0'
+          architecture: x86-64
+          environment_variables: DEBUG RUSTUP_IO_THREADS CARGO_INCREMENTAL CI PLAYWRIGHT_BROWSERS_PATH NODE_VERSION NX_GRADLE_DISABLE NX_DOTNET_DISABLE NODE_OPTIONS
+          shell: bash
+          run: |
+            env
+            whoami
+            sudo pkg install -y -f node libnghttp2 www/npm git ca_root_nss
+            sudo npm install --location=global --ignore-scripts pnpm@11.22.0
+            curl https://sh.rustup.rs -sSf --output rustup.sh
+            sh rustup.sh -y --profile minimal --default-toolchain stable
+            source "$HOME/.cargo/env"
+            echo "~~~~ rustc --version ~~~~"
+            rustc --version
+            echo "~~~~ node -v ~~~~"
+            node -v
+            echo "~~~~ pnpm --version ~~~~"
+            pnpm --version
+            pwd
+            ls -lah
+            whoami
+            env
+            freebsd-version
+            echo "Installing dependencies"
+            pnpm install --frozen-lockfile --ignore-scripts
+            
+            echo "Checking disk space before cleanup"
+            df -h
+            echo "Removing unnecessary preinstalled packages"
+            # List all packages first to see what's installed
+            sudo pkg info -a
+            echo "Cleaning up to free disk space"
+            # Clean package caches
+            sudo pkg clean -a -y
+            sudo pkg autoremove -y
+            # Remove unnecessary system files
+            sudo rm -rf /usr/local/lib/*.a
+            sudo rm -rf /usr/local/share/doc/*
+            sudo rm -rf /usr/local/share/man/*
+            sudo rm -rf /usr/local/share/examples/*
+            sudo rm -rf /usr/local/share/locale/*
+            sudo rm -rf /usr/local/share/gtk-doc/*
+            sudo rm -rf /usr/local/share/info/*
+            sudo rm -rf /usr/src/*
+            sudo rm -rf /usr/obj/*
+            sudo rm -rf /usr/tests/*
+            sudo rm -rf /usr/lib/debug/*
+            # Clean var directories
+            sudo rm -rf /var/cache/pkg/*
+            sudo rm -rf /var/db/pkg/*.tbz
+            sudo rm -rf /var/log/*.log
+            sudo rm -rf /var/log/*.old
+            # Clean temporary files
+            sudo rm -rf /tmp/*
+            sudo rm -rf /var/tmp/*
+            # Remove Python cache if present
+            sudo find /usr/local -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+            sudo find /usr/local -name "*.pyc" -delete 2>/dev/null || true
+            sudo find /usr/local -name "*.pyo" -delete 2>/dev/null || true
+            # Clean npm/pnpm caches
+            npm cache clean --force || true
+            pnpm store prune || true
+            rm -rf ~/.npm || true
+            rm -rf ~/.pnpm-store || true
+            # Clean Rust extras but keep registry/git (needed for cargo to resolve deps)
+            rm -rf ~/.rustup/toolchains/*/share || true
+            # Remove other development tool caches
+            rm -rf ~/.cache/* || true
+
+            # Remove unnecessary workspace directories
+            rm -rf docs astro-docs nx-dev || true
+
+            echo "Checking disk space after cleanup"
+            df -h
+            
+            # Disable core dumps - OOM'd Node processes write multi-GB core files that fill the disk
+            ulimit -c 0
+
+            echo "Building FreeBSD bindings"
+            BUILD_EXIT=0
+            pnpm nx run-many --verbose --outputStyle stream --target=build-native -- --target=x86_64-unknown-freebsd || BUILD_EXIT=$?
+
+            echo "=== Disk usage after build ==="
+            df -h
+
+            if [ "$BUILD_EXIT" -ne 0 ]; then
+              echo "Build failed with exit code $BUILD_EXIT"
+              echo "=== Disk usage by top-level directories ==="
+              du -sh /* 2>/dev/null | sort -rh | head -20
+              echo "=== Disk usage in home directory ==="
+              du -sh ~/* 2>/dev/null | sort -rh | head -20
+              echo "=== Disk usage in workspace ==="
+              du -sh /home/runner/work/nx/nx/* 2>/dev/null | sort -rh | head -20
+              echo "=== Disk usage in .nx ==="
+              du -sh /home/runner/work/nx/nx/.nx/* 2>/dev/null | sort -rh | head -20
+              echo "=== Disk usage in cargo/rustup ==="
+              du -sh ~/.cargo/* ~/.rustup/* 2>/dev/null | sort -rh | head -20
+              echo "=== Core dumps ==="
+              find / -name "*.core" -o -name "core.*" -o -name "core" 2>/dev/null | head -10
+              exit $BUILD_EXIT
+            fi
+
+            echo "Build succeeded"
+            
+            echo "Cleaning up"
+            pnpm nx reset
+            rm -rf node_modules
+            rm -rf dist
+            echo "KILL ALL NODE PROCESSES"
+            killall node || true
+            echo "COMPLETE"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: bindings-freebsd
+          path: |
+            packages/nx/src/native/*.node
+          if-no-files-found: error
+
+  publish:
+    if: ${{ github.repository_owner == 'nrwl' }}
+    name: Publish
+    runs-on: ubuntu-latest
+    environment: npm-registry
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
+    needs:
+      - resolve-required-data
+      - build-freebsd
+      - build
+      - report-pending-publish
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          repository: ${{ needs.resolve-required-data.outputs.repo || github.repository }}
+          ref: ${{ needs.resolve-required-data.outputs.ref || github.ref }}
+
+      # Built here (rather than inline in the `with:` block below) to keep the construction
+      # style consistent with the other Slack-posting steps in this file.
+      - name: Build Slack reaction payload
+        id: approved-reaction
+        if: ${{ needs.report-pending-publish.outputs.slack_thread_ts }}
+        env:
+          THREAD_TS: ${{ needs.report-pending-publish.outputs.slack_thread_ts }}
+        run: |
+          PAYLOAD=$(jq -nc --arg ts "$THREAD_TS" '{
+            channel: "C024JCL7TST",
+            timestamp: $ts,
+            name: "white_check_mark"
+          }')
+          echo "payload=$PAYLOAD" >> "$GITHUB_OUTPUT"
+
+      # Best-effort acknowledgement that the manual review gate has been passed and the
+      # publish is proceeding, expressed as a ✅ reaction on the original pending-review
+      # message (rather than a threaded reply) so the approval doesn't add extra noise to
+      # the channel. Requires the SLACK_BOT_TOKEN secret to carry the `reactions:write`
+      # scope and a valid ts to react to; if either is missing this step no-ops without
+      # affecting the actual publish below.
+      - name: React to Slack message to indicate publish was approved
+        id: notify-approved
+        if: ${{ needs.report-pending-publish.outputs.slack_thread_ts }}
+        continue-on-error: true
+        uses: slackapi/slack-github-action@91efab103c0de0a537f72a35f6b8cda0ee76bf0a # v2.1.1
+        with:
+          method: reactions.add
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          errors: true
+          payload: ${{ steps.approved-reaction.outputs.payload }}
+
+      - name: Set verbose logging from debug mode
+        if: runner.debug == '1'
+        run: echo "NX_VERBOSE_LOGGING=true" >> "$GITHUB_ENV"
+
+      - name: Setup dev tools with mise
+        uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3
+
+      - name: Enable corepack and install pnpm
+        run: |
+          corepack enable
+          corepack prepare --activate
+
+      - name: Use npm 11.5.2
+        run: npm install -g npm@11.5.2 --ignore-scripts
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Restore .NET packages
+        run: dotnet restore nx.sln
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0 # v5.0.0
+        with:
+          path: artifacts
+
+      # This command will appropriately fail if no artifacts are available
+      - name: List artifacts
+        run: ls -R artifacts
+        shell: bash
+      - name: Build Wasm
+        run: |
+          wget https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-23/wasi-sdk-23.0-x86_64-linux.tar.gz
+          tar -xvf wasi-sdk-23.0-x86_64-linux.tar.gz
+          rustup toolchain install nightly-2025-05-09
+          pnpm build:wasm
+      - name: Publish
+        env:
+          # Not named `VERSION` to avoid MSBuild adopting it as $(Version).
+          NX_PUBLISH_VERSION: ${{ needs.resolve-required-data.outputs.version }}
+          DRY_RUN: ${{ needs.resolve-required-data.outputs.dry_run_flag }}
+          PUBLISH_BRANCH: ${{ needs.resolve-required-data.outputs.publish_branch }}
+        run: |
+          echo ""
+          # Create and check out the publish branch
+          git checkout -b $PUBLISH_BRANCH
+          echo ""
+          echo "Version set to: $NX_PUBLISH_VERSION"
+          echo "DRY_RUN set to: $DRY_RUN"
+          echo ""
+          pnpm nx-release --local=false $NX_PUBLISH_VERSION $DRY_RUN
+
+      - name: (Stable Release Only) Trigger Docs Release
+        # Publish docs only on a full release
+        if: ${{ !github.event.release.prerelease && github.event_name == 'release' }}
+        run: npx tsx ./scripts/release-docs.ts
+
+      - name: (PR Release Only) Create comment for successful PR release
+        if: success() && github.event.inputs.pr
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          SUCCESS_COMMENT: ${{ needs.resolve-required-data.outputs.success_comment }}
+        with:
+          # github-token defaults to ${{ github.token }} so we don't need to specify it
+          script: |
+            const successComment = JSON.parse(process.env.SUCCESS_COMMENT);
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.inputs.pr }},
+              body: successComment
+            });
+
+  report-pending-publish:
+    name: Report Pending Publish to Slack
+    if: ${{ github.repository_owner == 'nrwl' }}
+    needs:
+      - resolve-required-data
+      - build-freebsd
+      - build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true  # Don't fail the workflow if notification fails
+    outputs:
+      slack_thread_ts: ${{ steps.notify.outputs.ts }}
+    steps:
+      # Decide who to mention: pinging the person who triggered the run themselves is
+      # pointless noise (they already know they're publishing), and mentioning a whole
+      # group invites the bystander effect where everyone assumes someone else will
+      # review it. So we mention Jason by default, unless *he* is the triggering actor,
+      # in which case we mention Craigory and Jack instead.
+      #
+      # Jason Jean's GitHub login is `FrozenPandaz` - confirmed via his GitHub profile
+      # (github.com/FrozenPandaz, which displays "Jason Jean" as the account's real
+      # name) and cross-checked against his extensive merged-PR history on nrwl/nx.
+      - name: Determine which reviewers to mention
+        id: reviewers
+        env:
+          TRIGGERING_ACTOR: ${{ github.triggering_actor }}
+        run: |
+          if [ "$TRIGGERING_ACTOR" = "FrozenPandaz" ]; then
+            echo "mentions=<@U020RK8EMRR> <@UD688H84E>" >> "$GITHUB_OUTPUT" # Craigory Coppola + Jack Hsu
+          else
+            echo "mentions=<@U9NPA6C90>" >> "$GITHUB_OUTPUT" # Jason Jean
+          fi
+
+      # Built here (rather than inline in the payload below) to avoid fragile nested
+      # GitHub Actions expressions inside a YAML block, and so the conditional PR/non-PR
+      # wording stays readable.
+      - name: Build Slack message payload
+        id: message
+        env:
+          VERSION: ${{ needs.resolve-required-data.outputs.version }}
+          PR_NUMBER: ${{ needs.resolve-required-data.outputs.pr_number }}
+          PR_AUTHOR: ${{ needs.resolve-required-data.outputs.pr_author }}
+          MENTIONS: ${{ steps.reviewers.outputs.mentions }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -n "$PR_NUMBER" ]; then
+            TITLE_TEXT="📦 PR #${PR_NUMBER} Publish Pending Review"
+            MAIN_TEXT="*Version ${VERSION}* from PR #${PR_NUMBER} by @${PR_AUTHOR} is being published to NPM - manual review is required ${MENTIONS}"
+          else
+            TITLE_TEXT="📦 Publish Pending Review"
+            MAIN_TEXT="*Version ${VERSION}* is being published to NPM - manual review is required ${MENTIONS}"
+          fi
+          PAYLOAD=$(jq -nc \
+            --arg title "$TITLE_TEXT" \
+            --arg main "$MAIN_TEXT" \
+            --arg run_url "$RUN_URL" \
+            '{
+              channel: "C024JCL7TST",
+              text: $title,
+              attachments: [
+                {
+                  color: "good",
+                  blocks: [
+                    {
+                      type: "section",
+                      text: { type: "mrkdwn", text: $main }
+                    },
+                    {
+                      type: "context",
+                      elements: [
+                        { type: "mrkdwn", text: ("<" + $run_url + "|View Workflow Run>") }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }')
+          echo "payload=$PAYLOAD" >> "$GITHUB_OUTPUT"
+
+      # Uses the bot-token based slack-github-action (rather than the incoming-webhook
+      # based ravsamhq/notify-slack-action used previously) because only a bot token can
+      # return a message `ts`, which downstream jobs need in order to post threaded
+      # replies once the publish is approved and once it completes. Requires the
+      # SLACK_BOT_TOKEN repo secret (a Slack bot token with chat:write + chat:write.public
+      # scopes); until that secret exists this step - and therefore the whole job, which
+      # is continue-on-error - fails harmlessly without blocking the publish.
+      - name: Send Slack notification
+        id: notify
+        uses: slackapi/slack-github-action@91efab103c0de0a537f72a35f6b8cda0ee76bf0a # v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          errors: true
+          payload: ${{ steps.message.outputs.payload }}
+
+  report-published:
+    name: Report Successful Publish to Slack
+    if: ${{ github.repository_owner == 'nrwl' }}
+    needs:
+      - resolve-required-data
+      - publish
+      - report-pending-publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    continue-on-error: true  # Don't fail the workflow if notification fails
+    steps:
+      # Only fires once `publish` has actually succeeded - if `publish` fails, GitHub
+      # skips this job by default since it's a listed `needs` dependency that didn't succeed.
+      - name: Build Slack message payload
+        id: message
+        env:
+          VERSION: ${{ needs.resolve-required-data.outputs.version }}
+          THREAD_TS: ${{ needs.report-pending-publish.outputs.slack_thread_ts }}
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          MAIN_TEXT="*Version ${VERSION}* was published to NPM successfully."
+          PAYLOAD=$(jq -nc \
+            --arg main "$MAIN_TEXT" \
+            --arg ts "$THREAD_TS" \
+            --arg run_url "$RUN_URL" \
+            '{
+              channel: "C024JCL7TST",
+              text: "🎉 Published Successfully",
+              thread_ts: $ts,
+              attachments: [
+                {
+                  color: "good",
+                  blocks: [
+                    {
+                      type: "section",
+                      text: { type: "mrkdwn", text: $main }
+                    },
+                    {
+                      type: "context",
+                      elements: [
+                        { type: "mrkdwn", text: ("<" + $run_url + "|View Workflow Run>") }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }')
+          echo "payload=$PAYLOAD" >> "$GITHUB_OUTPUT"
+
+      - name: Send Slack notification
+        if: ${{ needs.report-pending-publish.outputs.slack_thread_ts }}
+        uses: slackapi/slack-github-action@91efab103c0de0a537f72a35f6b8cda0ee76bf0a # v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACK_BOT_TOKEN }}
+          errors: true
+          payload: ${{ steps.message.outputs.payload }}
+
+  pr_failure_comment:
+    # Run this job if it is a PR release, running on the nrwl origin, and any of the required jobs failed
+    if: ${{ github.repository_owner == 'nrwl' && github.event.inputs.pr && always() && contains(needs.*.result, 'failure') }}
+    needs: [ resolve-required-data, build, build-freebsd, publish ]
+    name: (PR Release Failure Only) Create comment for failed PR release
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Create comment for failed PR release
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        with:
+          # This script is intentionally kept inline (and e.g. not generated in publish-resolve-data.js)
+          # to ensure that an error within the data generation itself is not missed.
+          script: |
+            const message = `
+              Failed to publish a PR release of this pull request, triggered by @${{ github.triggering_actor }}.
+              See the failed workflow run at: https://github.com/nrwl/nx/actions/runs/${{ github.run_id }}
+            `;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: ${{ github.event.inputs.pr }},
+              body: message
+            });
+

@@ -1,0 +1,40 @@
+name: Caller
+on:
+  push:
+  pull_request:
+jobs:
+  prep:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.t.outputs.tag }}
+    steps:
+      - id: t
+        run: echo "tag=x" >> "$GITHUB_OUTPUT"
+  call:
+    needs: prep
+    if: github.event_name == 'push'
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    uses: ./.github/workflows/callee.yml
+    with:
+      os: ${{ matrix.os }}
+      tag: ${{ needs.prep.outputs.tag }}
+      flag: true
+    secrets:
+      token: ${{ secrets.NPM_TOKEN }}
+  call-always:
+    needs: prep
+    if: always()
+    uses: ./.github/workflows/callee.yml
+    with:
+      os: ubuntu-latest
+  after:
+    needs: call
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo after
+  missing:
+    uses: ./.github/workflows/does-not-exist.yml

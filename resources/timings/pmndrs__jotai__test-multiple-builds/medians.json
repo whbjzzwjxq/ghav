@@ -1,0 +1,1768 @@
+{
+  "benchmark": "pmndrs/jotai@3e0b9ffad54b2fbedf2165a82d06ae6bcf1ebd67:.github/workflows/test-multiple-builds.yml",
+  "benchmark_id": "pmndrs__jotai__test-multiple-builds",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        32706872397,
+        32703087716,
+        32304666347,
+        32256178429,
+        31856225331
+      ],
+      "window_count": 8
+    },
+    "push": {
+      "runs": [
+        32700220354,
+        32700013830,
+        30871020548,
+        30413531809,
+        29741444576
+      ],
+      "window_count": 3
+    }
+  },
+  "jobs": {
+    "test_multiple_builds (cjs, development)": {
+      "duration_seconds": 76.0,
+      "durations": [
+        56.0,
+        71.0,
+        84.0,
+        75.0,
+        75.0,
+        79.0,
+        81.0,
+        77.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        3.0,
+        7.0,
+        4.0,
+        5.0,
+        6.0,
+        6.0,
+        5.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            7.0,
+            6.0,
+            4.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            4.0,
+            11.0,
+            8.0,
+            7.0,
+            7.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            12.0,
+            13.0,
+            13.0,
+            14.0,
+            14.0,
+            13.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            19.0,
+            20.0,
+            18.0,
+            20.0,
+            19.0,
+            18.0,
+            18.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Use React 17 for production test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for UMD",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for SystemJS",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            15.0,
+            25.0,
+            26.0,
+            24.0,
+            25.0,
+            24.0,
+            24.0,
+            23.0
+          ],
+          "name": "Test cjs development",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (cjs, production)": {
+      "duration_seconds": 85.0,
+      "durations": [
+        74.0,
+        94.0,
+        96.0,
+        80.0,
+        82.0,
+        83.0,
+        87.0,
+        90.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        6.0,
+        4.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            7.0,
+            7.0,
+            3.0,
+            8.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            10.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            12.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            14.0,
+            13.0,
+            25.0,
+            13.0,
+            16.0,
+            12.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            19.0,
+            20.0,
+            18.0,
+            13.0,
+            18.0,
+            18.0,
+            19.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            13.0,
+            10.0,
+            10.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "name": "Use React 17 for production test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for UMD",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for SystemJS",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            19.0,
+            24.0,
+            25.0,
+            23.0,
+            16.0,
+            24.0,
+            24.0,
+            25.0
+          ],
+          "name": "Test cjs production",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (development)": {
+      "duration_seconds": 54.5,
+      "durations": [
+        56.0,
+        53.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 2.5,
+      "overheads": [
+        2.0,
+        3.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            11.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [],
+          "name": "Patch dist for production",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            21.0
+          ],
+          "name": "Test ESM development",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 21.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (esm, development)": {
+      "duration_seconds": 71.0,
+      "durations": [
+        76.0,
+        66.0,
+        82.0,
+        78.0,
+        62.0,
+        72.0,
+        70.0,
+        61.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        6.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            3.0,
+            7.0,
+            5.0,
+            2.0,
+            7.0,
+            7.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            5.0,
+            9.0,
+            11.0,
+            5.0,
+            6.0,
+            10.0,
+            9.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            18.0,
+            12.0,
+            11.0,
+            13.0,
+            12.0,
+            15.0,
+            12.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            16.0,
+            20.0,
+            19.0,
+            17.0,
+            18.0,
+            14.0,
+            14.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 17.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Use React 17 for production test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for UMD",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for SystemJS",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            24.0,
+            19.0,
+            25.0,
+            26.0,
+            20.0,
+            24.0,
+            18.0,
+            19.0
+          ],
+          "name": "Test esm development",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (esm, production)": {
+      "duration_seconds": 85.0,
+      "durations": [
+        89.0,
+        84.0,
+        86.0,
+        81.0,
+        97.0,
+        88.0,
+        83.0,
+        79.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            7.0,
+            3.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            5.0,
+            7.0,
+            6.0,
+            11.0,
+            9.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            12.0,
+            17.0,
+            13.0,
+            12.0,
+            11.0,
+            12.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            19.0,
+            20.0,
+            17.0,
+            21.0,
+            20.0,
+            20.0,
+            18.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            13.0,
+            10.0,
+            12.0,
+            12.0,
+            11.0,
+            11.0
+          ],
+          "name": "Use React 17 for production test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for UMD",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for SystemJS",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            25.0,
+            24.0,
+            25.0,
+            22.0,
+            26.0,
+            25.0,
+            25.0,
+            23.0
+          ],
+          "name": "Test esm production",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (production)": {
+      "duration_seconds": 57.5,
+      "durations": [
+        57.0,
+        58.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        4.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Patch dist for production",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0
+          ],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            24.0
+          ],
+          "name": "Test ESM production",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (umd, development)": {
+      "duration_seconds": 67.5,
+      "durations": [
+        79.0,
+        67.0,
+        77.0,
+        62.0,
+        62.0,
+        68.0,
+        64.0,
+        68.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            4.0,
+            8.0,
+            2.0,
+            7.0,
+            8.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            4.0,
+            10.0,
+            5.0,
+            11.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            16.0,
+            14.0,
+            10.0,
+            14.0,
+            15.0,
+            13.0,
+            11.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            18.0,
+            18.0,
+            18.0,
+            11.0,
+            15.0,
+            17.0,
+            18.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Use React 17 for production test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for UMD",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for SystemJS",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            23.0,
+            22.0,
+            22.0,
+            21.0,
+            12.0,
+            16.0,
+            16.0,
+            21.0
+          ],
+          "name": "Test umd development",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test_multiple_builds (umd, production)": {
+      "duration_seconds": 84.0,
+      "durations": [
+        78.0,
+        102.0,
+        90.0,
+        85.0,
+        82.0,
+        83.0,
+        86.0,
+        79.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            8.0,
+            8.0,
+            7.0,
+            3.0,
+            5.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            23.0,
+            12.0,
+            11.0,
+            13.0,
+            11.0,
+            16.0,
+            12.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            19.0,
+            19.0
+          ],
+          "name": "Run pnpm run build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            15.0,
+            12.0,
+            10.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "name": "Use React 17 for production test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for DEV-ONLY",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for PRD-ONLY",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for CJS",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [],
+          "name": "Patch for ESM",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Patch for UMD",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Patch for SystemJS",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": null,
+          "skipped": 8
+        },
+        {
+          "durations": [
+            22.0,
+            23.0,
+            23.0,
+            22.0,
+            22.0,
+            22.0,
+            23.0,
+            22.0
+          ],
+          "name": "Test umd production",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "31ab526f759bb18332fecf97116abf0082f3fb81": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "3e0b9ffad54b2fbedf2165a82d06ae6bcf1ebd67": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "56a9cc51de8a5dd762b95a145820f12589cc47c9": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "56bf4442b3bfc7bcfa40e9c43d9f55d76485e5a0": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "5f5c844c503dd37e5e4d14e3e742cfd9b3f5aa17": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "76bc2e8f86333d57b30e5fc3fab5d52a5cc2e1b4": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "81b6afc9d9915be119198bbed28badda6b82fbad": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "86e74bd5789489801fe1d9f7d550bc4211268fe7": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+      "aac4532700aa26766c083fa45a5d8dc54e387e87": "e2ebdbb1b1a837a014b64e7835869039be4e02dc",
+      "bb36785640b2ff289d9d26cbd93a181cad5fccf6": "e2ebdbb1b1a837a014b64e7835869039be4e02dc"
+    },
+    "pinned_oid": "b27d0880d29685a20b4b6e138c8485f18ac7dc3d",
+    "runs_same_version": 8,
+    "runs_total": 10
+  }
+}

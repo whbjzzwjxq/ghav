@@ -1,0 +1,1008 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T11:29:53Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T11:25:27Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99471413286,
+      "labels": [
+        "namespace-profile-default"
+      ],
+      "name": "Linux /  upgrade",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": "Default",
+      "runner_name": "nsc-runner-j0ql3rd19smjs",
+      "started_at": "2026-08-31T11:25:36Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T11:25:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T11:25:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:38Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T11:25:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T11:25:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:43Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-08-31T11:25:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:43Z",
+          "conclusion": "success",
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "number": 5,
+          "started_at": "2026-08-31T11:25:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:46Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24",
+          "number": 6,
+          "started_at": "2026-08-31T11:25:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:49Z",
+          "conclusion": "success",
+          "name": "Cache cargo",
+          "number": 7,
+          "started_at": "2026-08-31T11:25:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:49Z",
+          "conclusion": "success",
+          "name": "Cache oxide build",
+          "number": 8,
+          "started_at": "2026-08-31T11:25:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:58Z",
+          "conclusion": "success",
+          "name": "Setup WASM target",
+          "number": 9,
+          "started_at": "2026-08-31T11:25:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:19Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T11:25:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:08Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 11,
+          "started_at": "2026-08-31T11:26:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:49Z",
+          "conclusion": "success",
+          "name": "Test upgrade",
+          "number": 12,
+          "started_at": "2026-08-31T11:27:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:49Z",
+          "conclusion": "success",
+          "name": "Post Cache oxide build",
+          "number": 20,
+          "started_at": "2026-08-31T11:29:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:50Z",
+          "conclusion": "success",
+          "name": "Post Cache cargo",
+          "number": 21,
+          "started_at": "2026-08-31T11:29:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:50Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24",
+          "number": 22,
+          "started_at": "2026-08-31T11:29:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:50Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 23,
+          "started_at": "2026-08-31T11:29:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 24,
+          "started_at": "2026-08-31T11:29:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:29:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-08-31T11:29:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Integration Tests"
+    },
+    {
+      "completed_at": "2026-08-31T11:27:46Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T11:25:27Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99471413395,
+      "labels": [
+        "namespace-profile-default"
+      ],
+      "name": "Linux /  webpack",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": "Default",
+      "runner_name": "nsc-runner-bflsr8i37rs2i",
+      "started_at": "2026-08-31T11:25:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T11:25:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "number": 5,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:51Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24",
+          "number": 6,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:55Z",
+          "conclusion": "success",
+          "name": "Cache cargo",
+          "number": 7,
+          "started_at": "2026-08-31T11:25:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:55Z",
+          "conclusion": "success",
+          "name": "Cache oxide build",
+          "number": 8,
+          "started_at": "2026-08-31T11:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:05Z",
+          "conclusion": "success",
+          "name": "Setup WASM target",
+          "number": 9,
+          "started_at": "2026-08-31T11:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:32Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T11:26:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:28Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 11,
+          "started_at": "2026-08-31T11:26:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:43Z",
+          "conclusion": "success",
+          "name": "Test webpack",
+          "number": 12,
+          "started_at": "2026-08-31T11:27:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:43Z",
+          "conclusion": "success",
+          "name": "Post Cache oxide build",
+          "number": 20,
+          "started_at": "2026-08-31T11:27:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:44Z",
+          "conclusion": "success",
+          "name": "Post Cache cargo",
+          "number": 21,
+          "started_at": "2026-08-31T11:27:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:44Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24",
+          "number": 22,
+          "started_at": "2026-08-31T11:27:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:44Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 23,
+          "started_at": "2026-08-31T11:27:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 24,
+          "started_at": "2026-08-31T11:27:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-08-31T11:27:45Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Integration Tests"
+    },
+    {
+      "completed_at": "2026-08-31T11:28:08Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T11:25:27Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99471413424,
+      "labels": [
+        "namespace-profile-default"
+      ],
+      "name": "Linux /  cli",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": "Default",
+      "runner_name": "nsc-runner-de9j0b7jjp1bm",
+      "started_at": "2026-08-31T11:25:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T11:25:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "number": 5,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:51Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24",
+          "number": 6,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:55Z",
+          "conclusion": "success",
+          "name": "Cache cargo",
+          "number": 7,
+          "started_at": "2026-08-31T11:25:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:55Z",
+          "conclusion": "success",
+          "name": "Cache oxide build",
+          "number": 8,
+          "started_at": "2026-08-31T11:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:04Z",
+          "conclusion": "success",
+          "name": "Setup WASM target",
+          "number": 9,
+          "started_at": "2026-08-31T11:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:29Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T11:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:16Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 11,
+          "started_at": "2026-08-31T11:26:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:04Z",
+          "conclusion": "success",
+          "name": "Test cli",
+          "number": 12,
+          "started_at": "2026-08-31T11:27:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:04Z",
+          "conclusion": "success",
+          "name": "Post Cache oxide build",
+          "number": 20,
+          "started_at": "2026-08-31T11:28:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:06Z",
+          "conclusion": "success",
+          "name": "Post Cache cargo",
+          "number": 21,
+          "started_at": "2026-08-31T11:28:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:06Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24",
+          "number": 22,
+          "started_at": "2026-08-31T11:28:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:06Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 23,
+          "started_at": "2026-08-31T11:28:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 24,
+          "started_at": "2026-08-31T11:28:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-08-31T11:28:06Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Integration Tests"
+    },
+    {
+      "completed_at": "2026-08-31T11:28:30Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T11:25:27Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99471413505,
+      "labels": [
+        "namespace-profile-default"
+      ],
+      "name": "Linux /  postcss",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": "Default",
+      "runner_name": "nsc-runner-k9cf8q6bpo66c",
+      "started_at": "2026-08-31T11:25:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T11:25:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:42Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-08-31T11:25:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "number": 5,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:52Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24",
+          "number": 6,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:54Z",
+          "conclusion": "success",
+          "name": "Cache cargo",
+          "number": 7,
+          "started_at": "2026-08-31T11:25:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:55Z",
+          "conclusion": "success",
+          "name": "Cache oxide build",
+          "number": 8,
+          "started_at": "2026-08-31T11:25:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:04Z",
+          "conclusion": "success",
+          "name": "Setup WASM target",
+          "number": 9,
+          "started_at": "2026-08-31T11:25:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:30Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T11:26:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:26Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 11,
+          "started_at": "2026-08-31T11:26:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:26Z",
+          "conclusion": "success",
+          "name": "Test postcss",
+          "number": 12,
+          "started_at": "2026-08-31T11:27:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:26Z",
+          "conclusion": "success",
+          "name": "Post Cache oxide build",
+          "number": 20,
+          "started_at": "2026-08-31T11:28:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:27Z",
+          "conclusion": "success",
+          "name": "Post Cache cargo",
+          "number": 21,
+          "started_at": "2026-08-31T11:28:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:28Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24",
+          "number": 22,
+          "started_at": "2026-08-31T11:28:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:28Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 23,
+          "started_at": "2026-08-31T11:28:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 24,
+          "started_at": "2026-08-31T11:28:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-08-31T11:28:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Integration Tests"
+    },
+    {
+      "completed_at": "2026-08-31T11:27:27Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T11:25:27Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99471413551,
+      "labels": [
+        "namespace-profile-default"
+      ],
+      "name": "Linux /  oxide",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": "Default",
+      "runner_name": "nsc-runner-bvehbiru7ktci",
+      "started_at": "2026-08-31T11:25:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T11:25:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:47Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:47Z",
+          "conclusion": "success",
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "number": 5,
+          "started_at": "2026-08-31T11:25:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:51Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24",
+          "number": 6,
+          "started_at": "2026-08-31T11:25:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:53Z",
+          "conclusion": "success",
+          "name": "Cache cargo",
+          "number": 7,
+          "started_at": "2026-08-31T11:25:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:53Z",
+          "conclusion": "success",
+          "name": "Cache oxide build",
+          "number": 8,
+          "started_at": "2026-08-31T11:25:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:02Z",
+          "conclusion": "success",
+          "name": "Setup WASM target",
+          "number": 9,
+          "started_at": "2026-08-31T11:25:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:27Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T11:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:20Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 11,
+          "started_at": "2026-08-31T11:26:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:23Z",
+          "conclusion": "success",
+          "name": "Test oxide",
+          "number": 12,
+          "started_at": "2026-08-31T11:27:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:24Z",
+          "conclusion": "success",
+          "name": "Post Cache oxide build",
+          "number": 20,
+          "started_at": "2026-08-31T11:27:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:25Z",
+          "conclusion": "success",
+          "name": "Post Cache cargo",
+          "number": 21,
+          "started_at": "2026-08-31T11:27:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:25Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24",
+          "number": 22,
+          "started_at": "2026-08-31T11:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:25Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 23,
+          "started_at": "2026-08-31T11:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 24,
+          "started_at": "2026-08-31T11:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-08-31T11:27:25Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Integration Tests"
+    },
+    {
+      "completed_at": "2026-08-31T11:28:47Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T11:25:27Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99471413561,
+      "labels": [
+        "namespace-profile-default"
+      ],
+      "name": "Linux /  vite",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": "Default",
+      "runner_name": "nsc-runner-ae3jfhahb0q9i",
+      "started_at": "2026-08-31T11:25:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T11:25:40Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T11:25:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-31T11:25:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 3,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-08-31T11:25:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:48Z",
+          "conclusion": "success",
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "number": 5,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:51Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24",
+          "number": 6,
+          "started_at": "2026-08-31T11:25:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:53Z",
+          "conclusion": "success",
+          "name": "Cache cargo",
+          "number": 7,
+          "started_at": "2026-08-31T11:25:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:25:53Z",
+          "conclusion": "success",
+          "name": "Cache oxide build",
+          "number": 8,
+          "started_at": "2026-08-31T11:25:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:02Z",
+          "conclusion": "success",
+          "name": "Setup WASM target",
+          "number": 9,
+          "started_at": "2026-08-31T11:25:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:26:30Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T11:26:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:27:25Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 11,
+          "started_at": "2026-08-31T11:26:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:44Z",
+          "conclusion": "success",
+          "name": "Test vite",
+          "number": 12,
+          "started_at": "2026-08-31T11:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:44Z",
+          "conclusion": "success",
+          "name": "Post Cache oxide build",
+          "number": 20,
+          "started_at": "2026-08-31T11:28:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:45Z",
+          "conclusion": "success",
+          "name": "Post Cache cargo",
+          "number": 21,
+          "started_at": "2026-08-31T11:28:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:45Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24",
+          "number": 22,
+          "started_at": "2026-08-31T11:28:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:45Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 23,
+          "started_at": "2026-08-31T11:28:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "number": 24,
+          "started_at": "2026-08-31T11:28:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T11:28:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-08-31T11:28:46Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Integration Tests"
+    },
+    {
+      "completed_at": "2026-08-31T11:29:53Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T11:29:54Z",
+      "head_sha": "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a",
+      "id": 99472485197,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "notify",
+      "run_attempt": 1,
+      "run_id": 33386888998,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T11:29:54Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Integration Tests"
+    }
+  ],
+  "run_id": 33386888998
+}

@@ -1,0 +1,39 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint:
+    if: github.event.pull_request.draft == false
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: "npm"
+
+      - name: Setup neovim
+        id: nvim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: "stable"
+
+      - name: Install Dependencies
+        run: npm install --frozen-lockfile
+
+      - name: Check Types by TSC
+        run: npm run lint:typecheck
+
+      - name: Lint Oxlint
+        run: npm run lint

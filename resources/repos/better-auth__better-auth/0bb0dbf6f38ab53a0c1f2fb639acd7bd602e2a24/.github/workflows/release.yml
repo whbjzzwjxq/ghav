@@ -1,0 +1,365 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - next
+      - 'v*.*.x'
+  workflow_dispatch:
+    inputs:
+      snapshot:
+        description: 'Snapshot tag (e.g. "snapshot"). Leave empty for normal release.'
+        required: false
+        default: ''
+        type: string
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: false
+
+env:
+  BETTER_AUTH_TELEMETRY_ENDPOINT: ${{ vars.BETTER_AUTH_TELEMETRY_ENDPOINT }}
+
+jobs:
+  release:
+    if: >
+      (github.event_name != 'workflow_dispatch' || inputs.snapshot == '') &&
+      github.repository_owner == 'better-auth' &&
+      (github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next' || (startsWith(github.ref, 'refs/heads/v') && endsWith(github.ref, '.x')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: Release
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    env:
+      # The release bot's auto-commit must not be gated by the local pre-commit hooks.
+      LEFTHOOK: "0"
+    steps:
+      - name: Generate App Token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        if: vars.RELEASE_APP_ID != ''
+        with:
+          app-id: ${{ vars.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          token: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+
+      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Guard next branch pre-release state
+        id: guard
+        if: github.ref_name == 'next'
+        run: |
+          if [ ! -f .changeset/pre.json ]; then
+            echo "::warning::next branch is not in pre-release mode (promote in progress). Skipping release."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Determine npm dist-tag
+        id: npm-tag
+        run: |
+          REF="${GITHUB_REF_NAME}"
+          if [[ "$REF" == "main" ]]; then
+            echo "tag=latest" >> "$GITHUB_OUTPUT"
+          elif [[ "$REF" =~ ^v([0-9]+)\.([0-9]+)\.x$ ]]; then
+            TAG="release-${BASH_REMATCH[1]}.${BASH_REMATCH[2]}"
+            echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          elif [ "$REF" = "next" ]; then
+            echo "tag=" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::Unsupported release branch ${REF}"
+            exit 1
+          fi
+        env:
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+
+      - name: Detect release commit
+        id: release-candidate
+        run: |
+          CURRENT_VERSION=$(jq -r '.version' packages/better-auth/package.json)
+          pnpm --filter @better-auth/release-tooling release-notes candidate \
+            --version "$CURRENT_VERSION" \
+            --branch "$GITHUB_SHA"
+
+      - name: Resolve approved release notes
+        id: approved-notes
+        if: steps.guard.outputs.skip != 'true' && steps.release-candidate.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.release-candidate.outputs.version }}
+          VERSION_COMMIT: ${{ steps.release-candidate.outputs.version_commit }}
+          RELEASE_APP_ID: ${{ vars.RELEASE_APP_ID }}
+        run: |
+          if [[ ! "$VERSION_COMMIT" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Release version commit is not a valid SHA"
+            exit 1
+          fi
+          PR_NUMBER=""
+          for COMMIT_SHA in "$VERSION_COMMIT" $(git show -s --format='%P' "$VERSION_COMMIT"); do
+            PULLS=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${COMMIT_SHA}/pulls" \
+              -H 'Accept: application/vnd.github+json')
+            PR_NUMBER=$(echo "$PULLS" | jq -r --arg base "$GITHUB_REF_NAME" \
+              '[.[] | select(.merged_at != null) | select(.base.ref == $base) | select((.head.ref | startswith("changeset-release/")) or (.head.ref == "next" and .base.ref == "main"))] | last | .number // empty')
+            [ -n "$PR_NUMBER" ] && break
+          done
+          if [ -z "$PR_NUMBER" ]; then
+            echo "::error::Could not find the merged Version or promotion PR"
+            exit 1
+          fi
+
+          PR=$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}")
+          PR_HEAD_SHA=$(echo "$PR" | jq -r '.head.sha')
+          RELEASE_COMMIT=$(echo "$PR" | jq -r '.merge_commit_sha // empty')
+          if [[ ! "$RELEASE_COMMIT" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "::error::Release PR merge commit is not a valid SHA"
+            exit 1
+          fi
+          COMMENTS=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${PR_NUMBER}/comments?per_page=100" | jq -s 'add')
+          if [ -n "$RELEASE_APP_ID" ]; then
+            COMMENT=$(echo "$COMMENTS" | jq -c --arg app "$RELEASE_APP_ID" \
+              '[.[] | select((.performed_via_github_app.id | tostring) == $app) | select(.body | startswith("<!-- better-auth-release-notes:v1 -->"))] | sort_by(.updated_at) | last // empty')
+          else
+            COMMENT=$(echo "$COMMENTS" | jq -c \
+              '[.[] | select(.user.login == "github-actions[bot]") | select(.body | startswith("<!-- better-auth-release-notes:v1 -->"))] | sort_by(.updated_at) | last // empty')
+          fi
+          if [ -z "$COMMENT" ]; then
+            {
+              echo "### Approved release notes are missing"
+              echo ""
+              echo "Comment \`/release-notes\` on merged PR #${PR_NUMBER}, review the generated preview, then re-run this failed Release workflow."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::No approved release notes comment found on PR #${PR_NUMBER}"
+            exit 1
+          fi
+
+          COMMENT_FILE="$RUNNER_TEMP/release-notes-comment.md"
+          NOTES_FILE="$RUNNER_TEMP/release-notes-approved.md"
+          echo "$COMMENT" | jq -r '.body' > "$COMMENT_FILE"
+          pnpm --filter @better-auth/release-tooling release-notes:comment extract \
+            --version "$VERSION" \
+            --head "$PR_HEAD_SHA" \
+            --comment "$COMMENT_FILE" \
+            --output "$NOTES_FILE"
+          if [ "$GITHUB_SHA" != "$RELEASE_COMMIT" ]; then
+            {
+              echo "### Release retry requires the original workflow run"
+              echo ""
+              echo "- Version: \`v${VERSION}\`"
+              echo "- Release commit: \`${RELEASE_COMMIT}\`"
+              echo "- Current workflow commit: \`${GITHUB_SHA}\`"
+              echo ""
+              echo "Re-run the original failed Release workflow so npm packages and the GitHub tag are built from the approved release commit."
+            } >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::Current commit does not match the approved release commit"
+            exit 1
+          fi
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "release_commit=$RELEASE_COMMIT" >> "$GITHUB_OUTPUT"
+          echo "notes_path=$NOTES_FILE" >> "$GITHUB_OUTPUT"
+
+      - name: Reject release commits with pending changesets
+        if: steps.guard.outputs.skip != 'true' && steps.release-candidate.outputs.release == 'true'
+        run: |
+          if pnpm --filter @better-auth/release-tooling release-notes \
+            check-changesets --branch "$GITHUB_SHA"; then
+            exit 0
+          fi
+
+          {
+            echo "### Unsafe release merge"
+            echo ""
+            echo "This release commit still contains changesets that were not included in the approved Version PR. Publishing it would ship unapproved changes under the current version."
+            echo ""
+            echo "Revert this release merge, let Changesets regenerate the Version PR, then run `/release-notes` again."
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "::error::Release commit contains unconsumed changesets"
+          exit 1
+
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        if: steps.guard.outputs.skip != 'true'
+        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1.9.0
+        with:
+          version: pnpm ci:version
+          publish: pnpm ci:release
+          title: "chore: release"
+          commit: "chore: release"
+          createGithubReleases: false
+          prDraft: always
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_TAG: ${{ steps.npm-tag.outputs.tag }}
+
+      - name: Rename release PR with version
+        if: steps.changesets.outputs.pullRequestNumber
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.changesets.outputs.pullRequestNumber }}
+        run: |
+          PR_DATA=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefName,headRefOid)
+          HEAD_REF=$(echo "$PR_DATA" | jq -r '.headRefName')
+          HEAD_SHA=$(echo "$PR_DATA" | jq -r '.headRefOid')
+          git fetch origin "$HEAD_REF"
+          VERSION=$(git show "${HEAD_SHA}:packages/better-auth/package.json" | jq -r '.version')
+          gh pr edit "$PR_NUMBER" --title "chore: release v${VERSION}"
+
+          BODY=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json body --jq '.body')
+          if ! printf '%s' "$BODY" | grep -qF '<!-- release-notes-draft -->'; then
+            NOTICE='<!-- release-notes-draft -->
+          > [!IMPORTANT]
+          > Keep this PR in Draft. Run `/release-notes` to generate and review the release notes.
+          > The release bot marks the PR ready when the preview matches the current head. Do not manually mark it ready.'
+            BODY_FILE=$(mktemp)
+            printf '%s\n\n%s\n' "$NOTICE" "$BODY" > "$BODY_FILE"
+            gh pr edit "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$BODY_FILE"
+            rm -f "$BODY_FILE"
+          fi
+
+      - name: Create GitHub Release
+        if: steps.guard.outputs.skip != 'true' && steps.release-candidate.outputs.release == 'true' && steps.changesets.outputs.hasChangesets == 'false'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.release-candidate.outputs.version }}
+          RELEASE_COMMIT: ${{ steps.approved-notes.outputs.release_commit }}
+          NOTES_FILE: ${{ steps.approved-notes.outputs.notes_path }}
+        run: |
+          if [ -z "$VERSION" ] || [ ! -s "$NOTES_FILE" ]; then
+            echo "::error::Approved release notes are missing"
+            exit 1
+          fi
+          TAG="v${VERSION}"
+
+          PRERELEASE_FLAG=""
+          if echo "$VERSION" | grep -q '-'; then
+            PRERELEASE_FLAG="--prerelease"
+          fi
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" \
+              --notes-file "$NOTES_FILE" $PRERELEASE_FLAG
+            echo "Updated release ${TAG}"
+          else
+            gh release create "$TAG" --repo "$GITHUB_REPOSITORY" \
+              --title "$TAG" \
+              --notes-file "$NOTES_FILE" \
+              --target "$RELEASE_COMMIT" \
+              $PRERELEASE_FLAG
+            echo "Created release ${TAG}"
+          fi
+
+      - name: Sync main to next via PR
+        if: github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch origin next || { echo "next branch does not exist, skipping"; exit 0; }
+
+          AHEAD=$(git rev-list --count origin/next..origin/main)
+          if [ "$AHEAD" -eq 0 ]; then
+            echo "No new commits to sync"
+            exit 0
+          fi
+          echo "Found $AHEAD commit(s) to sync from main to next"
+
+          EXISTING=$(gh pr list --base next --head "${GITHUB_REPOSITORY_OWNER}:main" --state open --repo "$GITHUB_REPOSITORY" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Sync PR #$EXISTING already exists ($AHEAD commits pending)"
+            gh pr edit "$EXISTING" --repo "$GITHUB_REPOSITORY" --add-label devops || true
+          else
+            SYNC_BODY="Brings stable fixes from main into the next branch."
+            SYNC_BODY="$SYNC_BODY\n\n**This PR must be merged by a maintainer using 'Create a merge commit'** (not squash, not rebase). This preserves individual fix commits and their verified signatures."
+            SYNC_BODY="$SYNC_BODY\n\nIf there are conflicts, resolve them by keeping next's versions for \`package.json\` files (next is always ahead of main in version numbers)."
+
+            gh pr create \
+              --base next \
+              --head main \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "chore: sync main to next" \
+              --label devops \
+              --body "$(echo -e "$SYNC_BODY")" || true
+
+            EXISTING=$(gh pr list --base next --head "${GITHUB_REPOSITORY_OWNER}:main" --state open --repo "$GITHUB_REPOSITORY" --json number --jq '.[0].number // empty')
+          fi
+
+          # Check for merge conflicts (GitHub computes merge state asynchronously)
+          if [ -n "$EXISTING" ]; then
+            sleep 10
+            for _ in 1 2 3 4 5; do
+              MERGEABLE=$(gh pr view "$EXISTING" --repo "$GITHUB_REPOSITORY" --json mergeable --jq '.mergeable')
+              [ "$MERGEABLE" != "UNKNOWN" ] && break
+              sleep 10
+            done
+            if [ "$MERGEABLE" = "CONFLICTING" ]; then
+              gh pr edit "$EXISTING" --repo "$GITHUB_REPOSITORY" --add-label "has-conflicts" || true
+              echo "::warning::Sync PR #$EXISTING has merge conflicts. Resolve by keeping next's versions for package.json files."
+            elif [ "$MERGEABLE" = "MERGEABLE" ]; then
+              gh pr edit "$EXISTING" --repo "$GITHUB_REPOSITORY" --remove-label "has-conflicts" 2>/dev/null || true
+            fi
+          fi
+
+  snapshot:
+    if: github.event_name == 'workflow_dispatch' && inputs.snapshot != '' && github.repository_owner == 'better-auth'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment: Release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093 # v6.0.8
+
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Version snapshot
+        env:
+          SNAPSHOT_TAG: ${{ inputs.snapshot }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f .changeset/pre.json ]; then
+            echo "::error::Snapshots are not supported on branches in pre-release mode."
+            exit 1
+          fi
+          if echo "$SNAPSHOT_TAG" | grep -qE '^(latest|next|beta|rc)$'; then
+            echo "::error::Snapshot tag '$SNAPSHOT_TAG' conflicts with a stable dist-tag. Use a descriptive name."
+            exit 1
+          fi
+          pnpm changeset version --snapshot "$SNAPSHOT_TAG"
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish snapshot
+        env:
+          SNAPSHOT_TAG: ${{ inputs.snapshot }}
+        run: pnpm changeset publish --no-git-tag --tag "$SNAPSHOT_TAG"

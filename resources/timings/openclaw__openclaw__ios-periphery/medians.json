@@ -1,0 +1,110 @@
+{
+  "benchmark": "openclaw/openclaw@1c526e6376b1629115fe1549b59ea100fc7f7031:.github/workflows/ios-periphery.yml",
+  "benchmark_id": "openclaw__openclaw__ios-periphery",
+  "count_window": {
+    "capped": true,
+    "days": 1,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-31T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33452885735,
+        33452547947,
+        33452509734,
+        33452509346,
+        33452507337
+      ],
+      "window_count": 2448
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "Detect iOS scan scope": {
+      "duration_seconds": 30.0,
+      "durations": [
+        30.0,
+        29.0,
+        30.0,
+        27.0,
+        30.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            27.0,
+            24.0,
+            25.0,
+            23.0,
+            26.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Detect changed paths",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Scan iOS dead code": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0a16d3b6a2c26bb0d036f72f008bdd31cf32d959": "b53006e37cd1186ad8aeaf2c76b07df7332d5ec9",
+      "26ce3d8aebafd7209efbb6f2633b48a6e386300e": "b53006e37cd1186ad8aeaf2c76b07df7332d5ec9",
+      "530b3a99d024288e487013ea057bc3b5ab912c0f": "b53006e37cd1186ad8aeaf2c76b07df7332d5ec9",
+      "5d5a9cd713700d886319ff30b4d3010cb43518d6": null,
+      "ac020f4fbe4f5be6f61094455e24d16097edf153": "b53006e37cd1186ad8aeaf2c76b07df7332d5ec9"
+    },
+    "pinned_oid": "b53006e37cd1186ad8aeaf2c76b07df7332d5ec9",
+    "runs_same_version": 4,
+    "runs_total": 5
+  }
+}

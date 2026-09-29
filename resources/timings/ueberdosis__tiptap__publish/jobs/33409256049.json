@@ -1,0 +1,360 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T15:35:00Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T15:34:52Z",
+      "head_sha": "5302fda4748a439b395e6be81bd1e825dbfcc08e",
+      "id": 99544426440,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Resolve publish config",
+      "run_attempt": 1,
+      "run_id": 33409256049,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000074798",
+      "started_at": "2026-08-31T15:34:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T15:34:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T15:34:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:34:57Z",
+          "conclusion": "success",
+          "name": "Checkout repo",
+          "number": 2,
+          "started_at": "2026-08-31T15:34:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:34:57Z",
+          "conclusion": "success",
+          "name": "Validate publish config",
+          "number": 3,
+          "started_at": "2026-08-31T15:34:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:34:57Z",
+          "conclusion": "success",
+          "name": "Look up branch in publish config",
+          "number": 4,
+          "started_at": "2026-08-31T15:34:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:34:58Z",
+          "conclusion": "success",
+          "name": "Post Checkout repo",
+          "number": 8,
+          "started_at": "2026-08-31T15:34:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:34:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-31T15:34:58Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Publish"
+    },
+    {
+      "completed_at": "2026-08-31T15:37:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T15:35:00Z",
+      "head_sha": "5302fda4748a439b395e6be81bd1e825dbfcc08e",
+      "id": 99544467793,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Build",
+      "run_attempt": 1,
+      "run_id": 33409256049,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000074799",
+      "started_at": "2026-08-31T15:35:03Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T15:35:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T15:35:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:35:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T15:35:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:35:18Z",
+          "conclusion": "success",
+          "name": "Run ./.github/actions/setup-env",
+          "number": 3,
+          "started_at": "2026-08-31T15:35:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:35:26Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 4,
+          "started_at": "2026-08-31T15:35:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:16Z",
+          "conclusion": "success",
+          "name": "Run build",
+          "number": 5,
+          "started_at": "2026-08-31T15:35:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:17Z",
+          "conclusion": "success",
+          "name": "Check package exports",
+          "number": 6,
+          "started_at": "2026-08-31T15:37:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:17Z",
+          "conclusion": "success",
+          "name": "Archive package dist artifacts",
+          "number": 7,
+          "started_at": "2026-08-31T15:37:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:19Z",
+          "conclusion": "success",
+          "name": "Upload package dist artifacts",
+          "number": 8,
+          "started_at": "2026-08-31T15:37:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:19Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/actions/setup-env",
+          "number": 15,
+          "started_at": "2026-08-31T15:37:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 16,
+          "started_at": "2026-08-31T15:37:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:19Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T15:37:19Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Publish"
+    },
+    {
+      "completed_at": "2026-08-31T15:38:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T15:37:23Z",
+      "head_sha": "5302fda4748a439b395e6be81bd1e825dbfcc08e",
+      "id": 99545230610,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Bump Versions OR Release to Registry",
+      "run_attempt": 1,
+      "run_id": 33409256049,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000074803",
+      "started_at": "2026-08-31T15:37:26Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T15:37:28Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T15:37:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:29Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T15:37:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:38Z",
+          "conclusion": "success",
+          "name": "Run ./.github/actions/setup-env",
+          "number": 3,
+          "started_at": "2026-08-31T15:37:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:41Z",
+          "conclusion": "success",
+          "name": "Update npm for trusted publishing",
+          "number": 4,
+          "started_at": "2026-08-31T15:37:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:48Z",
+          "conclusion": "success",
+          "name": "Install dependencies",
+          "number": 5,
+          "started_at": "2026-08-31T15:37:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:49Z",
+          "conclusion": "success",
+          "name": "Download package dist artifacts",
+          "number": 6,
+          "started_at": "2026-08-31T15:37:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:49Z",
+          "conclusion": "success",
+          "name": "Restore package dist artifacts",
+          "number": 7,
+          "started_at": "2026-08-31T15:37:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:37:49Z",
+          "conclusion": "success",
+          "name": "Verify package dist artifacts",
+          "number": 8,
+          "started_at": "2026-08-31T15:37:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:38:51Z",
+          "conclusion": "success",
+          "name": "Run changesets release flow",
+          "number": 9,
+          "started_at": "2026-08-31T15:37:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:38:51Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/actions/setup-env",
+          "number": 17,
+          "started_at": "2026-08-31T15:38:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:38:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 18,
+          "started_at": "2026-08-31T15:38:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:38:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-08-31T15:38:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Publish"
+    },
+    {
+      "completed_at": "2026-08-31T15:39:00Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T15:38:53Z",
+      "head_sha": "5302fda4748a439b395e6be81bd1e825dbfcc08e",
+      "id": 99545698214,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Send notification to Slack",
+      "run_attempt": 1,
+      "run_id": 33409256049,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000074808",
+      "started_at": "2026-08-31T15:38:56Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T15:38:58Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T15:38:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:38:58Z",
+          "conclusion": "success",
+          "name": "Send Slack notification",
+          "number": 2,
+          "started_at": "2026-08-31T15:38:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T15:38:58Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "started_at": "2026-08-31T15:38:58Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Publish"
+    },
+    {
+      "completed_at": "2026-08-31T15:38:53Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-31T15:38:53Z",
+      "head_sha": "5302fda4748a439b395e6be81bd1e825dbfcc08e",
+      "id": 99545702129,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Send failure notification to Slack",
+      "run_attempt": 1,
+      "run_id": 33409256049,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-31T15:38:53Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Publish"
+    }
+  ],
+  "run_id": 33409256049
+}

@@ -1,0 +1,1512 @@
+{
+  "benchmark": "CopilotKit/CopilotKit@fe51cec465865375b77b00604988e2211983d58b:.github/workflows/test_smoke-starter.yml",
+  "benchmark_id": "CopilotKit__CopilotKit__test_smoke-starter",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33446597812,
+        33446178819,
+        33442468135,
+        33442270138,
+        33440294722
+      ],
+      "window_count": 120
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "smoke-starter (adk)": {
+      "duration_seconds": 221.0,
+      "durations": [
+        218.0,
+        241.0,
+        246.0,
+        213.0,
+        221.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        6.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            207.0,
+            229.0,
+            234.0,
+            202.0,
+            209.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 209.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (agno)": {
+      "duration_seconds": 234.0,
+      "durations": [
+        289.0,
+        234.0,
+        224.0,
+        224.0,
+        243.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        6.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            277.0,
+            224.0,
+            213.0,
+            213.0,
+            232.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 224.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (crewai-crews)": {
+      "duration_seconds": 190.0,
+      "durations": [
+        181.0,
+        201.0,
+        190.0,
+        201.0,
+        186.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        7.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            4.0,
+            8.0,
+            6.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            170.0,
+            190.0,
+            178.0,
+            187.0,
+            176.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 178.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (langgraph-fastapi)": {
+      "duration_seconds": 254.0,
+      "durations": [
+        252.0,
+        256.0,
+        287.0,
+        247.0,
+        254.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        6.0,
+        5.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            8.0,
+            4.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            243.0,
+            245.0,
+            276.0,
+            235.0,
+            244.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 244.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (langgraph-js)": {
+      "duration_seconds": 207.0,
+      "durations": [
+        209.0,
+        223.0,
+        195.0,
+        196.0,
+        207.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            198.0,
+            210.0,
+            185.0,
+            185.0,
+            197.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 197.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (langgraph-python)": {
+      "duration_seconds": 198.0,
+      "durations": [
+        227.0,
+        214.0,
+        190.0,
+        197.0,
+        198.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            216.0,
+            203.0,
+            178.0,
+            186.0,
+            185.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 186.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (llamaindex)": {
+      "duration_seconds": 284.0,
+      "durations": [
+        284.0,
+        275.0,
+        296.0,
+        280.0,
+        310.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        4.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            274.0,
+            266.0,
+            286.0,
+            268.0,
+            296.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 274.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (mastra)": {
+      "duration_seconds": 253.0,
+      "durations": [
+        263.0,
+        252.0,
+        235.0,
+        265.0,
+        253.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            5.0,
+            7.0,
+            9.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            252.0,
+            242.0,
+            224.0,
+            253.0,
+            240.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 242.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (ms-agent-framework-dotnet)": {
+      "duration_seconds": 235.0,
+      "durations": [
+        235.0,
+        246.0,
+        262.0,
+        232.0,
+        230.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            224.0,
+            236.0,
+            251.0,
+            221.0,
+            217.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 224.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (ms-agent-framework-python)": {
+      "duration_seconds": 222.0,
+      "durations": [
+        225.0,
+        218.0,
+        280.0,
+        220.0,
+        222.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        2.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            9.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            213.0,
+            207.0,
+            268.0,
+            209.0,
+            213.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 213.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (pydantic-ai)": {
+      "duration_seconds": 223.0,
+      "durations": [
+        220.0,
+        217.0,
+        223.0,
+        230.0,
+        233.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        7.0,
+        4.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            6.0,
+            6.0,
+            5.0,
+            8.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            209.0,
+            207.0,
+            212.0,
+            219.0,
+            219.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 212.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (strands-python)": {
+      "duration_seconds": 194.0,
+      "durations": [
+        213.0,
+        194.0,
+        191.0,
+        188.0,
+        199.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        4.0,
+        2.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            5.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            202.0,
+            184.0,
+            179.0,
+            179.0,
+            188.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 184.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "smoke-starter (strands-typescript)": {
+      "duration_seconds": 203.0,
+      "durations": [
+        247.0,
+        188.0,
+        202.0,
+        203.0,
+        219.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        6.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            5.0,
+            8.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            236.0,
+            177.0,
+            191.0,
+            192.0,
+            208.0
+          ],
+          "name": "Run starter smoke tests",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 192.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Capture failure cause",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Tear down",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload test artifacts on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Prepare Slack alert fields",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [],
+          "name": "Alert Slack on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "064c5ed9104b28a592c6625227854a0d7ea750b0": "520304bf26fec8e7bbee7db88f85468de2c07cb1",
+      "4eb470dfe2eeaf1cdc6fa9bbbab20cb4a2c91b20": "520304bf26fec8e7bbee7db88f85468de2c07cb1",
+      "56c2378ff5526d19dd0ccd534ba063eca6dc61e4": "520304bf26fec8e7bbee7db88f85468de2c07cb1",
+      "7abff7bf50192912fbcaedac7ba7c70565eb84f5": "520304bf26fec8e7bbee7db88f85468de2c07cb1",
+      "abcd2a23cf298489891c5223f495e5055880c658": "520304bf26fec8e7bbee7db88f85468de2c07cb1"
+    },
+    "pinned_oid": "520304bf26fec8e7bbee7db88f85468de2c07cb1",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

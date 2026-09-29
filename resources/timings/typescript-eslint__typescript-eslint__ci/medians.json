@@ -1,0 +1,5844 @@
+{
+  "benchmark": "typescript-eslint/typescript-eslint@9a6e546823e5d8f2dc015df2aa66c0230615e209:.github/workflows/ci.yml",
+  "benchmark_id": "typescript-eslint__typescript-eslint__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        32754618242,
+        32749269467,
+        32653872200,
+        32639401070,
+        32636197569
+      ],
+      "window_count": 457
+    },
+    "push": {
+      "runs": [
+        33417767324,
+        33394880302,
+        33339604076,
+        33339444749,
+        33101883568
+      ],
+      "window_count": 73
+    }
+  },
+  "jobs": {
+    "Are The Types Wrong?": {
+      "duration_seconds": 90.5,
+      "durations": [
+        74.0,
+        92.0,
+        67.0,
+        91.0,
+        90.0,
+        95.0,
+        110.0,
+        78.0,
+        78.0,
+        110.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        6.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        11.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            2.0,
+            3.0,
+            3.0,
+            4.0,
+            8.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            37.0,
+            31.0,
+            42.0,
+            37.0,
+            41.0,
+            49.0,
+            30.0,
+            32.0,
+            42.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 37.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            13.0,
+            10.0,
+            13.0,
+            18.0,
+            18.0,
+            22.0,
+            15.0,
+            12.0,
+            17.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            33.0,
+            20.0,
+            29.0,
+            26.0,
+            27.0,
+            28.0,
+            25.0,
+            27.0,
+            36.0
+          ],
+          "name": "Run Check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build All Packages": {
+      "duration_seconds": 32.0,
+      "durations": [
+        30.0,
+        27.0,
+        31.0,
+        35.0,
+        33.0,
+        29.0,
+        34.0,
+        25.0,
+        36.0,
+        45.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            11.0,
+            14.0,
+            14.0,
+            11.0,
+            12.0,
+            12.0,
+            13.0,
+            15.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            13.0,
+            14.0,
+            12.0,
+            10.0,
+            15.0,
+            8.0,
+            16.0,
+            22.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Checkout and Install": {
+      "duration_seconds": 21.5,
+      "durations": [
+        22.0,
+        18.0,
+        16.0,
+        23.0,
+        23.0,
+        19.0,
+        19.0,
+        21.0,
+        22.0,
+        25.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        2.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            7.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            11.0,
+            16.0,
+            15.0,
+            9.0,
+            14.0,
+            14.0,
+            16.0,
+            20.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Determine Affected Projects for Tests": {
+      "duration_seconds": 48.5,
+      "durations": [
+        46.0,
+        47.0,
+        53.0,
+        59.0,
+        45.0,
+        57.0,
+        57.0,
+        48.0,
+        46.0,
+        49.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        7.0,
+        4.0,
+        5.0,
+        9.0,
+        7.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            5.0,
+            3.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            30.0,
+            35.0,
+            36.0,
+            30.0,
+            39.0,
+            36.0,
+            32.0,
+            32.0,
+            33.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            8.0,
+            9.0,
+            12.0,
+            7.0,
+            8.0,
+            9.0,
+            6.0,
+            7.0,
+            9.0
+          ],
+          "name": "Get affected projects",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Filter affected packages for test matrices",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Generate Configs": {
+      "duration_seconds": 60.0,
+      "durations": [
+        62.0,
+        66.0,
+        50.0,
+        52.0,
+        102.0,
+        153.0,
+        58.0,
+        57.0,
+        55.0,
+        74.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        7.0,
+        6.0,
+        4.0,
+        4.0,
+        6.0,
+        11.0,
+        4.0,
+        3.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            5.0,
+            2.0,
+            3.0,
+            6.0,
+            13.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            38.0,
+            26.0,
+            31.0,
+            49.0,
+            78.0,
+            30.0,
+            32.0,
+            29.0,
+            42.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            17.0,
+            17.0,
+            14.0,
+            41.0,
+            50.0,
+            22.0,
+            18.0,
+            19.0,
+            21.0
+          ],
+          "name": "Run pnpm exec nx run generate-configs",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run git status --porcelain",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run echo \"Outdated result detected from pnpm run generate-configs. Please check in any file changes.\"",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Lint with build (1/4, --concurrency=auto, eslint-plugin)": {
+      "duration_seconds": 91.0,
+      "durations": [
+        91.0,
+        86.0,
+        82.0,
+        94.0,
+        92.0,
+        93.0,
+        93.0,
+        83.0,
+        91.0,
+        84.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            9.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            14.0,
+            13.0,
+            15.0,
+            11.0,
+            12.0,
+            9.0,
+            12.0,
+            10.0
+          ],
+          "name": "Run ./.github/actions/prepare-install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            9.0,
+            8.0,
+            7.0,
+            9.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run ./.github/actions/prepare-build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            65.0,
+            60.0,
+            53.0,
+            66.0,
+            62.0,
+            60.0,
+            66.0,
+            62.0,
+            64.0,
+            62.0
+          ],
+          "name": "Run pnpm lint --projects=eslint-plugin --concurrency=auto",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 62.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint with build (2/4, ast-spec, utils, scope-manager, eslint-plugin-internal)": {
+      "duration_seconds": 54.5,
+      "durations": [
+        54.0,
+        53.0,
+        56.0,
+        60.0,
+        53.0,
+        57.0,
+        53.0,
+        55.0,
+        52.0,
+        58.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        2.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            12.0,
+            12.0,
+            11.0,
+            11.0,
+            10.0,
+            12.0,
+            13.0,
+            12.0
+          ],
+          "name": "Run ./.github/actions/prepare-install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            9.0,
+            7.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run ./.github/actions/prepare-build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            29.0,
+            29.0,
+            33.0,
+            30.0,
+            34.0,
+            33.0,
+            32.0,
+            26.0,
+            32.0
+          ],
+          "name": "Run pnpm lint --projects=ast-spec,utils,scope-manager,eslint-plugin-internal ",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint with build (3/4, typescript-estree, types, website, rule-tester, visitor-keys)": {
+      "duration_seconds": 78.0,
+      "durations": [
+        78.0,
+        74.0,
+        92.0,
+        75.0,
+        80.0,
+        91.0,
+        78.0,
+        73.0,
+        77.0,
+        90.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        2.0,
+        7.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        1.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            14.0,
+            14.0,
+            13.0,
+            13.0,
+            12.0,
+            9.0,
+            13.0,
+            16.0
+          ],
+          "name": "Run ./.github/actions/prepare-install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            4.0,
+            9.0,
+            7.0,
+            6.0,
+            8.0,
+            6.0,
+            5.0,
+            7.0,
+            8.0
+          ],
+          "name": "Run ./.github/actions/prepare-build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            54.0,
+            56.0,
+            60.0,
+            47.0,
+            55.0,
+            63.0,
+            55.0,
+            55.0,
+            50.0,
+            59.0
+          ],
+          "name": "Run pnpm lint --projects=typescript-estree,types,website,rule-tester,visitor-keys ",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 55.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint with build (4/4, parser, type-utils, rule-schema-to-typescript-types, typescript-eslint, rep...": {
+      "duration_seconds": 52.5,
+      "durations": [
+        50.0,
+        52.0,
+        51.0,
+        48.0,
+        53.0,
+        64.0,
+        62.0,
+        58.0,
+        56.0,
+        50.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            14.0,
+            12.0,
+            12.0,
+            13.0,
+            16.0,
+            12.0,
+            11.0,
+            11.0,
+            10.0
+          ],
+          "name": "Run ./.github/actions/prepare-install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            9.0,
+            8.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run ./.github/actions/prepare-build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            28.0,
+            26.0,
+            25.0,
+            26.0,
+            31.0,
+            33.0,
+            32.0,
+            31.0,
+            29.0
+          ],
+          "name": "Run pnpm lint --projects=parser,type-utils,rule-schema-to-typescript-types,typescript-eslint,repo,website-eslint,integration-tests ",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 28.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint with build (knip)": {
+      "duration_seconds": 25.5,
+      "durations": [
+        27.0,
+        25.0,
+        33.0,
+        25.0,
+        23.0,
+        32.0,
+        23.0,
+        23.0,
+        30.0,
+        26.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        5.0,
+        2.0,
+        2.0,
+        5.0,
+        3.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            14.0,
+            10.0,
+            9.0,
+            13.0,
+            9.0,
+            10.0,
+            13.0,
+            10.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            8.0,
+            6.0,
+            5.0,
+            8.0,
+            5.0,
+            5.0,
+            7.0,
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run Check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint with build (typecheck)": {
+      "duration_seconds": 91.5,
+      "durations": [
+        81.0,
+        102.0,
+        86.0,
+        98.0,
+        83.0,
+        99.0,
+        77.0,
+        97.0,
+        84.0,
+        101.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        5.0,
+        3.0,
+        4.0,
+        2.0,
+        5.0,
+        3.0,
+        4.0,
+        2.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            15.0,
+            11.0,
+            12.0,
+            10.0,
+            13.0,
+            10.0,
+            12.0,
+            10.0,
+            12.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            6.0,
+            7.0,
+            5.0,
+            8.0,
+            6.0,
+            8.0,
+            5.0,
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            72.0,
+            64.0,
+            72.0,
+            63.0,
+            71.0,
+            56.0,
+            71.0,
+            64.0,
+            72.0
+          ],
+          "name": "Run Check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 67.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint with build (typecheck:tsgo)": {
+      "duration_seconds": 60.5,
+      "durations": [
+        59.0,
+        60.0,
+        63.0,
+        58.0,
+        72.0,
+        77.0,
+        70.0,
+        58.0,
+        60.0,
+        61.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        3.0,
+        2.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            11.0,
+            9.0,
+            13.0,
+            17.0,
+            13.0,
+            9.0,
+            9.0,
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            8.0,
+            8.0,
+            5.0,
+            7.0,
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            38.0,
+            40.0,
+            38.0,
+            46.0,
+            46.0,
+            43.0,
+            38.0,
+            39.0,
+            35.0
+          ],
+          "name": "Run Check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 38.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint without build": {
+      "duration_seconds": 61.5,
+      "durations": [
+        60.0,
+        70.0,
+        62.0,
+        70.0,
+        61.0,
+        59.0,
+        63.0,
+        54.0,
+        66.0,
+        55.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 0.0,
+      "overheads": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            14.0,
+            12.0,
+            17.0,
+            11.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            12.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            20.0,
+            17.0,
+            20.0,
+            18.0,
+            18.0,
+            19.0,
+            12.0,
+            19.0,
+            14.0
+          ],
+          "name": "Run Spell Check",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            49.0,
+            45.0,
+            46.0,
+            44.0,
+            45.0,
+            46.0,
+            35.0,
+            46.0,
+            36.0
+          ],
+          "name": "Run Format Check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0,
+            34.0,
+            32.0,
+            33.0,
+            33.0,
+            33.0,
+            33.0,
+            25.0,
+            33.0,
+            22.0
+          ],
+          "name": "Run Markdown Lint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run Stylelint",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            26.0,
+            22.0,
+            24.0,
+            27.0,
+            23.0,
+            25.0,
+            20.0,
+            23.0,
+            19.0
+          ],
+          "name": "Run Deduplicate Check",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            49.0,
+            45.0,
+            46.0,
+            44.0,
+            45.0,
+            46.0,
+            35.0,
+            46.0,
+            36.0
+          ],
+          "name": "Parallel group",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Required Checks": {
+      "duration_seconds": 3.0,
+      "durations": [
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [],
+          "name": "Fail if any dependency failed or was cancelled",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 18, eslint-plugin, --shard=1/4)": {
+      "duration_seconds": 77.5,
+      "durations": [
+        68.0,
+        38.0,
+        67.0,
+        76.0,
+        93.0,
+        79.0,
+        80.0,
+        89.0,
+        68.0,
+        86.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            19.0,
+            12.0,
+            13.0,
+            18.0,
+            15.0,
+            14.0,
+            17.0,
+            14.0,
+            18.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            5.0,
+            7.0,
+            8.0,
+            6.0,
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            44.0,
+            7.0,
+            41.0,
+            51.0,
+            60.0,
+            53.0,
+            53.0,
+            58.0,
+            42.0,
+            54.0
+          ],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 52.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 18, eslint-plugin, --shard=2/4)": {
+      "duration_seconds": 85.0,
+      "durations": [
+        97.0,
+        38.0,
+        86.0,
+        79.0,
+        82.0,
+        96.0,
+        89.0,
+        71.0,
+        85.0,
+        85.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        5.0,
+        3.0,
+        5.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            15.0,
+            14.0,
+            16.0,
+            14.0,
+            19.0,
+            20.0,
+            16.0,
+            15.0,
+            15.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            7.0,
+            7.0,
+            5.0,
+            10.0,
+            9.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            65.0,
+            7.0,
+            59.0,
+            47.0,
+            59.0,
+            59.0,
+            53.0,
+            42.0,
+            58.0,
+            56.0
+          ],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 57.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 18, eslint-plugin, --shard=3/4)": {
+      "duration_seconds": 96.5,
+      "durations": [
+        93.0,
+        31.0,
+        111.0,
+        104.0,
+        93.0,
+        102.0,
+        100.0,
+        90.0,
+        88.0,
+        113.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        5.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            5.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            17.0,
+            13.0,
+            14.0,
+            16.0,
+            14.0,
+            17.0,
+            17.0,
+            19.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            5.0,
+            6.0,
+            7.0,
+            6.0,
+            6.0,
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            69.0,
+            6.0,
+            80.0,
+            75.0,
+            69.0,
+            75.0,
+            73.0,
+            60.0,
+            60.0,
+            78.0
+          ],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 71.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 18, eslint-plugin, --shard=4/4)": {
+      "duration_seconds": 79.0,
+      "durations": [
+        74.0,
+        29.0,
+        74.0,
+        66.0,
+        84.0,
+        73.0,
+        86.0,
+        87.0,
+        91.0,
+        91.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        5.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            5.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            13.0,
+            18.0,
+            16.0,
+            15.0,
+            13.0,
+            15.0,
+            15.0,
+            24.0,
+            18.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            48.0,
+            5.0,
+            43.0,
+            40.0,
+            54.0,
+            49.0,
+            54.0,
+            56.0,
+            51.0,
+            55.0
+          ],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 50.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, ast-spec)": {
+      "duration_seconds": 53.0,
+      "durations": [
+        53.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0
+          ],
+          "name": "Run unit tests with coverage for ast-spec",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for ast-spec",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, eslint-plugin, --shard=1/4)": {
+      "duration_seconds": 88.5,
+      "durations": [
+        84.0,
+        23.0,
+        83.0,
+        93.0,
+        93.0,
+        94.0,
+        95.0,
+        96.0,
+        78.0,
+        82.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        3.0,
+        2.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            11.0,
+            11.0,
+            13.0,
+            12.0,
+            13.0,
+            12.0,
+            13.0,
+            9.0,
+            10.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            7.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            5.0,
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            62.0,
+            3.0,
+            62.0,
+            65.0,
+            65.0,
+            65.0,
+            68.0,
+            66.0,
+            58.0,
+            61.0
+          ],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 63.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, eslint-plugin, --shard=2/4)": {
+      "duration_seconds": 102.0,
+      "durations": [
+        113.0,
+        24.0,
+        105.0,
+        101.0,
+        105.0,
+        99.0,
+        96.0,
+        103.0,
+        95.0,
+        112.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0,
+        2.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            4.0,
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            9.0,
+            12.0,
+            11.0,
+            12.0,
+            15.0,
+            10.0,
+            16.0,
+            11.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            8.0,
+            6.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            84.0,
+            4.0,
+            77.0,
+            75.0,
+            76.0,
+            74.0,
+            74.0,
+            74.0,
+            68.0,
+            83.0
+          ],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 74.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, eslint-plugin, --shard=3/4)": {
+      "duration_seconds": 118.0,
+      "durations": [
+        127.0,
+        32.0,
+        102.0,
+        92.0,
+        124.0,
+        143.0,
+        126.0,
+        113.0,
+        101.0,
+        123.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        2.0,
+        5.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        2.0,
+        3.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            3.0,
+            7.0,
+            8.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            16.0,
+            13.0,
+            12.0,
+            14.0,
+            18.0,
+            13.0,
+            8.0,
+            16.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            6.0,
+            5.0,
+            6.0,
+            9.0,
+            8.0,
+            5.0,
+            9.0,
+            7.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            101.0,
+            3.0,
+            74.0,
+            62.0,
+            91.0,
+            108.0,
+            98.0,
+            94.0,
+            70.0,
+            96.0
+          ],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 92.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, eslint-plugin, --shard=4/4)": {
+      "duration_seconds": 84.5,
+      "durations": [
+        101.0,
+        35.0,
+        80.0,
+        84.0,
+        94.0,
+        85.0,
+        84.0,
+        84.0,
+        90.0,
+        101.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        4.0,
+        2.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            9.0,
+            19.0,
+            13.0,
+            22.0,
+            11.0,
+            9.0,
+            11.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            5.0,
+            10.0,
+            7.0,
+            6.0,
+            5.0,
+            6.0,
+            8.0,
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            70.0,
+            6.0,
+            60.0,
+            46.0,
+            66.0,
+            50.0,
+            63.0,
+            64.0,
+            63.0,
+            70.0
+          ],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 63.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, eslint-plugin-internal)": {
+      "duration_seconds": 29.0,
+      "durations": [
+        34.0,
+        24.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        6.0,
+        2.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            3.0
+          ],
+          "name": "Run unit tests with coverage for eslint-plugin-internal",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for eslint-plugin-internal",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            2.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, parser)": {
+      "duration_seconds": 39.0,
+      "durations": [
+        39.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Run unit tests with coverage for parser",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for parser",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, project-service)": {
+      "duration_seconds": 38.0,
+      "durations": [
+        38.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run unit tests with coverage for project-service",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for project-service",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, repo)": {
+      "duration_seconds": 30.5,
+      "durations": [
+        25.0,
+        31.0,
+        26.0,
+        25.0,
+        30.0,
+        40.0,
+        29.0,
+        34.0,
+        41.0,
+        37.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        4.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        6.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            12.0,
+            10.0,
+            11.0,
+            15.0,
+            10.0,
+            13.0,
+            14.0,
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            4.0,
+            7.0,
+            9.0,
+            6.0,
+            7.0,
+            9.0,
+            7.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            8.0,
+            5.0,
+            5.0,
+            6.0,
+            9.0,
+            6.0,
+            8.0,
+            10.0,
+            7.0
+          ],
+          "name": "Run unit tests with coverage for repo",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for repo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, rule-schema-to-typescript-types)": {
+      "duration_seconds": 30.5,
+      "durations": [
+        36.0,
+        25.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        6.0,
+        2.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            10.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0
+          ],
+          "name": "Run unit tests with coverage for rule-schema-to-typescript-types",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for rule-schema-to-typescript-types",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            1.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, rule-tester)": {
+      "duration_seconds": 45.0,
+      "durations": [
+        45.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0
+          ],
+          "name": "Run unit tests with coverage for rule-tester",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for rule-tester",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, scope-manager)": {
+      "duration_seconds": 34.0,
+      "durations": [
+        34.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0
+          ],
+          "name": "Run unit tests with coverage for scope-manager",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for scope-manager",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, tsconfig-utils)": {
+      "duration_seconds": 33.0,
+      "durations": [
+        33.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run unit tests with coverage for tsconfig-utils",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for tsconfig-utils",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, type-utils)": {
+      "duration_seconds": 38.0,
+      "durations": [
+        41.0,
+        35.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        3.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            10.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            13.0
+          ],
+          "name": "Run unit tests with coverage for type-utils",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for type-utils",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            1.0,
+            0.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, types)": {
+      "duration_seconds": 30.0,
+      "durations": [
+        30.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run unit tests with coverage for types",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for types",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, typescript-eslint)": {
+      "duration_seconds": 40.0,
+      "durations": [
+        43.0,
+        39.0,
+        46.0,
+        48.0,
+        33.0,
+        40.0,
+        27.0,
+        40.0,
+        30.0,
+        49.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        3.0,
+        2.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            11.0,
+            16.0,
+            18.0,
+            10.0,
+            10.0,
+            9.0,
+            12.0,
+            9.0,
+            14.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            10.0,
+            7.0,
+            7.0,
+            5.0,
+            5.0,
+            8.0,
+            5.0,
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            13.0,
+            13.0,
+            15.0,
+            10.0,
+            20.0,
+            9.0,
+            12.0,
+            9.0,
+            19.0
+          ],
+          "name": "Run unit tests with coverage for typescript-eslint",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for typescript-eslint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, typescript-estree)": {
+      "duration_seconds": 113.0,
+      "durations": [
+        113.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            74.0
+          ],
+          "name": "Run unit tests with coverage for typescript-estree",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 74.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for typescript-estree",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, utils)": {
+      "duration_seconds": 33.0,
+      "durations": [
+        33.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0
+          ],
+          "name": "Run unit tests with coverage for utils",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for utils",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (ubuntu-latest, 24, visitor-keys)": {
+      "duration_seconds": 33.0,
+      "durations": [
+        33.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run unit tests with coverage for visitor-keys",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests for visitor-keys",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, eslint-plugin)": {
+      "duration_seconds": 105.0,
+      "durations": [
+        119.0,
+        87.0,
+        103.0,
+        105.0,
+        89.0,
+        105.0,
+        111.0,
+        110.0,
+        143.0,
+        89.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        2.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0,
+            11.0,
+            13.0,
+            11.0,
+            11.0,
+            12.0,
+            13.0,
+            14.0,
+            13.0,
+            9.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            47.0,
+            47.0,
+            55.0,
+            41.0,
+            51.0,
+            54.0,
+            51.0,
+            53.0,
+            35.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 51.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            22.0,
+            18.0,
+            17.0,
+            14.0,
+            19.0,
+            20.0,
+            19.0,
+            53.0,
+            18.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            18.0,
+            5.0,
+            22.0,
+            18.0,
+            19.0,
+            20.0,
+            19.0,
+            21.0,
+            21.0,
+            20.0
+          ],
+          "name": "Run unit tests for eslint-plugin",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 19.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, parser)": {
+      "duration_seconds": 119.0,
+      "durations": [
+        119.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            67.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 67.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for parser",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Run unit tests for parser",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, project-service)": {
+      "duration_seconds": 86.0,
+      "durations": [
+        86.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            11.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for project-service",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Run unit tests for project-service",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, repo)": {
+      "duration_seconds": 88.5,
+      "durations": [
+        87.0,
+        92.0,
+        86.0,
+        96.0,
+        79.0,
+        87.0,
+        89.0,
+        88.0,
+        92.0,
+        99.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            11.0,
+            11.0,
+            10.0,
+            10.0,
+            12.0,
+            12.0,
+            11.0,
+            11.0,
+            11.0,
+            11.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            49.0,
+            49.0,
+            50.0,
+            42.0,
+            48.0,
+            47.0,
+            48.0,
+            51.0,
+            62.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 48.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            23.0,
+            18.0,
+            26.0,
+            15.0,
+            18.0,
+            23.0,
+            20.0,
+            21.0,
+            13.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for repo",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            10.0
+          ],
+          "name": "Run unit tests for repo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, rule-tester)": {
+      "duration_seconds": 87.0,
+      "durations": [
+        87.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            47.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 47.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for rule-tester",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Run unit tests for rule-tester",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, tsconfig-utils)": {
+      "duration_seconds": 82.0,
+      "durations": [
+        82.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for tsconfig-utils",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Run unit tests for tsconfig-utils",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, type-utils)": {
+      "duration_seconds": 120.5,
+      "durations": [
+        103.0,
+        138.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        3.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            11.0,
+            19.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            56.0,
+            64.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 60.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            41.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 30.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for type-utils",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 2
+        },
+        {
+          "durations": [
+            12.0,
+            11.0
+          ],
+          "name": "Run unit tests for type-utils",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 2
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, types)": {
+      "duration_seconds": 108.0,
+      "durations": [
+        108.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 55.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for types",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Run unit tests for types",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, typescript-eslint)": {
+      "duration_seconds": 107.5,
+      "durations": [
+        107.0,
+        100.0,
+        129.0,
+        90.0,
+        121.0,
+        93.0,
+        108.0,
+        85.0,
+        133.0,
+        116.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            14.0,
+            16.0,
+            16.0,
+            11.0,
+            28.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            15.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            52.0,
+            43.0,
+            68.0,
+            44.0,
+            52.0,
+            50.0,
+            52.0,
+            41.0,
+            55.0,
+            55.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 52.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            20.0,
+            30.0,
+            18.0,
+            24.0,
+            16.0,
+            25.0,
+            18.0,
+            45.0,
+            19.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for typescript-eslint",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            14.0,
+            16.0,
+            11.0,
+            13.0,
+            12.0,
+            12.0,
+            16.0,
+            11.0,
+            17.0,
+            22.0
+          ],
+          "name": "Run unit tests for typescript-eslint",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Run Unit Tests (windows-latest, 24, typescript-estree)": {
+      "duration_seconds": 103.0,
+      "durations": [
+        103.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 2.0,
+      "overheads": [
+        2.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            42.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run unit tests with coverage for typescript-estree",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            32.0
+          ],
+          "name": "Run unit tests for typescript-estree",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Store coverage for uploading",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Run Unit Tests with Project Service": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 8,
+      "steps": []
+    },
+    "Run Unit Tests with Project Service (eslint-plugin-internal)": {
+      "duration_seconds": 35.5,
+      "durations": [
+        32.0,
+        39.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        5.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            16.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0
+          ],
+          "name": "Run unit tests for eslint-plugin-internal",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run Unit Tests with Project Service (typescript-estree)": {
+      "duration_seconds": 42.0,
+      "durations": [
+        42.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0
+          ],
+          "name": "Run unit tests for typescript-estree",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Run integration tests on primary Node.js version": {
+      "duration_seconds": 27.0,
+      "durations": [
+        26.0,
+        25.0,
+        26.0,
+        34.0,
+        25.0,
+        27.0,
+        33.0,
+        34.0,
+        29.0,
+        27.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        2.0,
+        3.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            12.0,
+            10.0,
+            12.0,
+            9.0,
+            11.0,
+            11.0,
+            14.0,
+            12.0,
+            11.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            7.0,
+            8.0,
+            5.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0,
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            7.0,
+            5.0,
+            4.0,
+            7.0,
+            8.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run integration tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Upload Codecov Coverage": {
+      "duration_seconds": 15.0,
+      "durations": [
+        11.0,
+        17.0,
+        29.0,
+        16.0,
+        43.0,
+        11.0,
+        12.0,
+        14.0,
+        12.0,
+        17.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        11.0,
+        6.0,
+        12.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            6.0,
+            9.0,
+            5.0,
+            12.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            2.0
+          ],
+          "name": "Download coverage reports",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            6.0,
+            6.0,
+            4.0,
+            17.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Publish code coverage report",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Verify ast-spec snapshots are clean": {
+      "duration_seconds": 57.0,
+      "durations": [
+        57.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 9,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Delete all ast-spec fixture snapshots",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0
+          ],
+          "name": "Regenerate ast-spec fixture snapshots",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Fail if regenerating snapshots produced a diff",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Verify scope-manager snapshots are clean": {
+      "duration_seconds": 41.0,
+      "durations": [
+        41.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0
+      ],
+      "samples": 1,
+      "skipped": 9,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Delete all scope-manager fixture snapshots",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0
+          ],
+          "name": "Regenerate scope-manager fixture snapshots",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Fail if regenerating snapshots produced a diff",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "1dba4c50f0599cc212e9d1eca9ec0f21a818f0b5": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "3ed5b55d5b0e40fadd210cb7fdff33dae6fe81af": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "513638effe9e7b78566cc153d4d809a1435153f3": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "529f33439514f078010a846744c98e2a54dc7a0c": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "8c7e6bb0f41cad0885bb980aadadec3ce76a13e0": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "9a6e546823e5d8f2dc015df2aa66c0230615e209": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "a23069df170bc4f9c35c8aaf3a8634635591844a": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "a2fccae39c7cb1e516a29b1c746b7767bffa03e2": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "be1da54095cadcf1f46b69567f429137a470ed87": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+      "f5eeed571f35b842ca87ac23a5cb64654a46579a": "97d8c3130f731b08295f81b1f7d8955e842704bb"
+    },
+    "pinned_oid": "97d8c3130f731b08295f81b1f7d8955e842704bb",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

@@ -1,0 +1,20 @@
+on:
+  pull_request:
+  issues:
+name: Label PR with team
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  team-labeler:
+    runs-on: ubuntu-latest
+    # Skip PRs opened from forks (community contributions): they run with a
+    # read-only GITHUB_TOKEN, so labeling fails, and team labels don't apply to
+    # non-team authors anyway. Issues and same-repo (team) PRs still run.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+    - id: label-the-PR
+      uses: actions/labeler@v5
+    - uses: JulienKode/team-labeler-action@v1.1.0
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"

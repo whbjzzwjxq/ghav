@@ -1,0 +1,118 @@
+name: TypeScript Benchmark
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/tsconfig*.json'
+      - '**/package.json'
+      - 'pnpm-lock.yaml'
+      - 'scripts/measure-typescript.ts'
+      - '.github/workflows/measure-typescript.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      report: ${{ steps.measure.outputs.report }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Measure TypeScript performance
+        id: measure
+        run: |
+          {
+            echo 'report<<EOF'
+            node scripts/measure-typescript.ts "origin/${{ github.base_ref }}"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+  comment:
+    needs: measure
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Comment noticeable variations
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+        env:
+          REPORT: ${{ needs.measure.outputs.report }}
+        with:
+          script: |
+            const MARKER = '<!-- ts-perf-report -->';
+
+            const output = process.env.REPORT ?? '';
+            const noticeable = output.includes('Detected a noticeable performance change');
+            const report = output.split('\n---\n')[1]?.trim();
+
+            if (!report) {
+              core.setFailed('Could not find the performance report in the script output.');
+              return;
+            }
+
+            const body = `${MARKER}\n${report}\n`;
+
+            core.info(body);
+
+            try {
+              const { data: comments } = await github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+              });
+
+              const existing = comments.find((c) => c.body?.startsWith(MARKER));
+
+              if (!noticeable) {
+                if (existing) {
+                  await github.rest.issues.deleteComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    comment_id: existing.id,
+                  });
+                }
+
+                core.info('No noticeable change - skipping PR comment.');
+                return;
+              }
+
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: existing.id,
+                  body,
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  body,
+                });
+              }
+            } catch (error) {
+              if (error.status === 403) {
+                core.warning(`Skipping TypeScript performance comment: ${error.message}`);
+                return;
+              }
+
+              throw error;
+            }

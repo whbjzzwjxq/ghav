@@ -1,0 +1,876 @@
+{
+  "benchmark": "pmndrs/zustand@b57db4f86ef179285da216eeb291266da82c361c:.github/workflows/test-multiple-builds.yml",
+  "format": "ghav-trace/1",
+  "instances": {
+    "test_multiple_builds[build=cjs,env=development]": {
+      "check_name": "test_multiple_builds (cjs, development)",
+      "complete": true,
+      "environment": {
+        "head": "b57db4f86ef179285da216eeb291266da82c361c",
+        "node": "v22.19.0",
+        "package_manager": "pnpm@11.3.0 via npx",
+        "platform": "Darwin-arm64",
+        "runs_on_in_workflow": "ubuntu-latest"
+      },
+      "event": "push",
+      "instance": "test_multiple_builds[build=cjs,env=development]",
+      "matrix": {
+        "build": "cjs",
+        "env": "development"
+      },
+      "steps": [
+        {
+          "binding": {
+            "env": {},
+            "kind": "uses",
+            "shell": null,
+            "text": "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+            "with": {
+              "persist-credentials": "false"
+            },
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 0,
+          "kind": "uses",
+          "known_effects": "Writes the repository at the pinned commit into the workspace (src). Trace: done by the tool's shallow clone before the first snapshot; .git is not snapshotted.",
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            0
+          ],
+          "skipped_reason": "action"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "uses",
+            "shell": null,
+            "text": "pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+            "with": {},
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 1,
+          "kind": "uses",
+          "known_effects": "Installs pnpm (version from packageManager when not given) outside the workspace (dep). Trace: PATH shim running `npx --yes pnpm@<packageManager version>`.",
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            1
+          ],
+          "skipped_reason": "action"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "uses",
+            "shell": null,
+            "text": "actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+            "with": {
+              "cache": "pnpm",
+              "node-version": "lts/*"
+            },
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 2,
+          "kind": "uses",
+          "known_effects": "Installs node outside the workspace and adds it to PATH (dep); with `cache:` restores and saves the package-manager store outside the workspace. Trace: host node; cold cache (no restore).",
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            2
+          ],
+          "skipped_reason": "action"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "pnpm install",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 16723,
+            "deleted": 0,
+            "modified": 0
+          },
+          "created": [
+            "node_modules/"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 3,
+          "kind": "run",
+          "modified": [],
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            3
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 14.0,
+          "writes": [
+            "node_modules/"
+          ]
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "pnpm run build",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 52,
+            "deleted": 0,
+            "modified": 0
+          },
+          "created": [
+            "dist/"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 4,
+          "kind": "run",
+          "modified": [],
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            4
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 6.9,
+          "writes": [
+            "dist/"
+          ]
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/it[.a-zA-Z]*('\\[DEV-ONLY\\]/it('/\" tests/*.tsx\nsed -i~ \"s/it[.a-zA-Z]*('\\[PRD-ONLY\\]/it.skip('/\" tests/*.tsx\n",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 10,
+            "deleted": 0,
+            "modified": 1
+          },
+          "created": [
+            "tests/basic.test.tsx~",
+            "tests/devtools.test.tsx~",
+            "tests/immer.test.tsx~",
+            "tests/middlewareTypes.test.tsx~",
+            "tests/persistAsync.test.tsx~",
+            "tests/persistSync.test.tsx~",
+            "tests/shallow.test.tsx~",
+            "tests/ssr.test.tsx~",
+            "tests/subscribe.test.tsx~",
+            "tests/types.test.tsx~"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 5,
+          "kind": "run",
+          "modified": [
+            "tests/devtools.test.tsx"
+          ],
+          "name": "Patch for DEV-ONLY",
+          "origin": [
+            "test_multiple_builds",
+            5
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 0.0,
+          "writes": [
+            "tests/basic.test.tsx~",
+            "tests/devtools.test.tsx",
+            "tests/devtools.test.tsx~",
+            "tests/immer.test.tsx~",
+            "tests/middlewareTypes.test.tsx~",
+            "tests/persistAsync.test.tsx~",
+            "tests/persistSync.test.tsx~",
+            "tests/shallow.test.tsx~",
+            "tests/ssr.test.tsx~",
+            "tests/subscribe.test.tsx~",
+            "tests/types.test.tsx~"
+          ]
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/it[.a-zA-Z]*('\\[PRD-ONLY\\]/it('/\" tests/*.tsx\nsed -i~ \"s/it[.a-zA-Z]*('\\[DEV-ONLY\\]/it.skip('/\" tests/*.tsx\n",
+            "with": {},
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 6,
+          "kind": "run",
+          "name": "Patch for PRD-ONLY",
+          "origin": [
+            "test_multiple_builds",
+            6
+          ],
+          "skipped_reason": "condition"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/resolve('\\.\\/src\\(.*\\)\\.ts')/resolve('\\.\\/dist\\1.js')/\" vitest.config.mts\n",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 1,
+            "deleted": 0,
+            "modified": 1
+          },
+          "created": [
+            "vitest.config.mts~"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 7,
+          "kind": "run",
+          "modified": [
+            "vitest.config.mts"
+          ],
+          "name": "Patch for CJS",
+          "origin": [
+            "test_multiple_builds",
+            7
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 0.0,
+          "writes": [
+            "vitest.config.mts",
+            "vitest.config.mts~"
+          ]
+        },
+        {
+          "binding": {
+            "env": {
+              "NODE_ENV": "development"
+            },
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/resolve('\\.\\/src\\(.*\\)\\.ts')/resolve('\\.\\/dist\\/esm\\1.mjs')/\" vitest.config.mts\nsed -i~ \"1s/^/import.meta.env.MODE='${NODE_ENV}';/\" tests/*.tsx\n",
+            "with": {},
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 8,
+          "kind": "run",
+          "name": "Patch for ESM",
+          "origin": [
+            "test_multiple_builds",
+            8
+          ],
+          "skipped_reason": "condition"
+        },
+        {
+          "binding": {
+            "env": {
+              "NODE_ENV": "development"
+            },
+            "kind": "run",
+            "shell": null,
+            "text": "pnpm run test:spec\n",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 1,
+            "deleted": 0,
+            "modified": 0
+          },
+          "created": [
+            "node_modules/.vite/"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 9,
+          "kind": "run",
+          "modified": [],
+          "name": "Test cjs development",
+          "origin": [
+            "test_multiple_builds",
+            9
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 4.0,
+          "writes": [
+            "node_modules/.vite/"
+          ]
+        }
+      ]
+    },
+    "test_multiple_builds[build=esm,env=development]": {
+      "check_name": "test_multiple_builds (esm, development)",
+      "complete": true,
+      "environment": {
+        "head": "b57db4f86ef179285da216eeb291266da82c361c",
+        "node": "v22.19.0",
+        "package_manager": "pnpm@11.3.0 via npx",
+        "platform": "Darwin-arm64",
+        "runs_on_in_workflow": "ubuntu-latest"
+      },
+      "event": "push",
+      "instance": "test_multiple_builds[build=esm,env=development]",
+      "matrix": {
+        "build": "esm",
+        "env": "development"
+      },
+      "steps": [
+        {
+          "binding": {
+            "env": {},
+            "kind": "uses",
+            "shell": null,
+            "text": "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+            "with": {
+              "persist-credentials": "false"
+            },
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 0,
+          "kind": "uses",
+          "known_effects": "Writes the repository at the pinned commit into the workspace (src). Trace: done by the tool's shallow clone before the first snapshot; .git is not snapshotted.",
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            0
+          ],
+          "skipped_reason": "action"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "uses",
+            "shell": null,
+            "text": "pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093",
+            "with": {},
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 1,
+          "kind": "uses",
+          "known_effects": "Installs pnpm (version from packageManager when not given) outside the workspace (dep). Trace: PATH shim running `npx --yes pnpm@<packageManager version>`.",
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            1
+          ],
+          "skipped_reason": "action"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "uses",
+            "shell": null,
+            "text": "actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e",
+            "with": {
+              "cache": "pnpm",
+              "node-version": "lts/*"
+            },
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 2,
+          "kind": "uses",
+          "known_effects": "Installs node outside the workspace and adds it to PATH (dep); with `cache:` restores and saves the package-manager store outside the workspace. Trace: host node; cold cache (no restore).",
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            2
+          ],
+          "skipped_reason": "action"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "pnpm install",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 16723,
+            "deleted": 0,
+            "modified": 0
+          },
+          "created": [
+            "node_modules/"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 3,
+          "kind": "run",
+          "modified": [],
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            3
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 26.5,
+          "writes": [
+            "node_modules/"
+          ]
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "pnpm run build",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 52,
+            "deleted": 0,
+            "modified": 0
+          },
+          "created": [
+            "dist/"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 4,
+          "kind": "run",
+          "modified": [],
+          "name": null,
+          "origin": [
+            "test_multiple_builds",
+            4
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 6.8,
+          "writes": [
+            "dist/"
+          ]
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/it[.a-zA-Z]*('\\[DEV-ONLY\\]/it('/\" tests/*.tsx\nsed -i~ \"s/it[.a-zA-Z]*('\\[PRD-ONLY\\]/it.skip('/\" tests/*.tsx\n",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 10,
+            "deleted": 0,
+            "modified": 1
+          },
+          "created": [
+            "tests/basic.test.tsx~",
+            "tests/devtools.test.tsx~",
+            "tests/immer.test.tsx~",
+            "tests/middlewareTypes.test.tsx~",
+            "tests/persistAsync.test.tsx~",
+            "tests/persistSync.test.tsx~",
+            "tests/shallow.test.tsx~",
+            "tests/ssr.test.tsx~",
+            "tests/subscribe.test.tsx~",
+            "tests/types.test.tsx~"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 5,
+          "kind": "run",
+          "modified": [
+            "tests/devtools.test.tsx"
+          ],
+          "name": "Patch for DEV-ONLY",
+          "origin": [
+            "test_multiple_builds",
+            5
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 0.0,
+          "writes": [
+            "tests/basic.test.tsx~",
+            "tests/devtools.test.tsx",
+            "tests/devtools.test.tsx~",
+            "tests/immer.test.tsx~",
+            "tests/middlewareTypes.test.tsx~",
+            "tests/persistAsync.test.tsx~",
+            "tests/persistSync.test.tsx~",
+            "tests/shallow.test.tsx~",
+            "tests/ssr.test.tsx~",
+            "tests/subscribe.test.tsx~",
+            "tests/types.test.tsx~"
+          ]
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/it[.a-zA-Z]*('\\[PRD-ONLY\\]/it('/\" tests/*.tsx\nsed -i~ \"s/it[.a-zA-Z]*('\\[DEV-ONLY\\]/it.skip('/\" tests/*.tsx\n",
+            "with": {},
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 6,
+          "kind": "run",
+          "name": "Patch for PRD-ONLY",
+          "origin": [
+            "test_multiple_builds",
+            6
+          ],
+          "skipped_reason": "condition"
+        },
+        {
+          "binding": {
+            "env": {},
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/resolve('\\.\\/src\\(.*\\)\\.ts')/resolve('\\.\\/dist\\1.js')/\" vitest.config.mts\n",
+            "with": {},
+            "working_directory": null
+          },
+          "executed": false,
+          "index": 7,
+          "kind": "run",
+          "name": "Patch for CJS",
+          "origin": [
+            "test_multiple_builds",
+            7
+          ],
+          "skipped_reason": "condition"
+        },
+        {
+          "binding": {
+            "env": {
+              "NODE_ENV": "development"
+            },
+            "kind": "run",
+            "shell": null,
+            "text": "sed -i~ \"s/resolve('\\.\\/src\\(.*\\)\\.ts')/resolve('\\.\\/dist\\/esm\\1.mjs')/\" vitest.config.mts\nsed -i~ \"1s/^/import.meta.env.MODE='${NODE_ENV}';/\" tests/*.tsx\n",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 1,
+            "deleted": 0,
+            "modified": 11
+          },
+          "created": [
+            "vitest.config.mts~"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 8,
+          "kind": "run",
+          "modified": [
+            "tests/basic.test.tsx",
+            "tests/devtools.test.tsx",
+            "tests/immer.test.tsx",
+            "tests/middlewareTypes.test.tsx",
+            "tests/persistAsync.test.tsx",
+            "tests/persistSync.test.tsx",
+            "tests/shallow.test.tsx",
+            "tests/ssr.test.tsx",
+            "tests/subscribe.test.tsx",
+            "tests/types.test.tsx",
+            "vitest.config.mts"
+          ],
+          "name": "Patch for ESM",
+          "origin": [
+            "test_multiple_builds",
+            8
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 0.0,
+          "writes": [
+            "tests/basic.test.tsx",
+            "tests/devtools.test.tsx",
+            "tests/immer.test.tsx",
+            "tests/middlewareTypes.test.tsx",
+            "tests/persistAsync.test.tsx",
+            "tests/persistSync.test.tsx",
+            "tests/shallow.test.tsx",
+            "tests/ssr.test.tsx",
+            "tests/subscribe.test.tsx",
+            "tests/types.test.tsx",
+            "vitest.config.mts",
+            "vitest.config.mts~"
+          ]
+        },
+        {
+          "binding": {
+            "env": {
+              "NODE_ENV": "development"
+            },
+            "kind": "run",
+            "shell": null,
+            "text": "pnpm run test:spec\n",
+            "with": {},
+            "working_directory": null
+          },
+          "counts": {
+            "created": 1,
+            "deleted": 0,
+            "modified": 0
+          },
+          "created": [
+            "node_modules/.vite/"
+          ],
+          "deletes": [],
+          "executed": true,
+          "exit_code": 0,
+          "index": 9,
+          "kind": "run",
+          "modified": [],
+          "name": "Test esm development",
+          "origin": [
+            "test_multiple_builds",
+            9
+          ],
+          "unresolved_expressions": [],
+          "wall_seconds": 3.9,
+          "writes": [
+            "node_modules/.vite/"
+          ]
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "pnpm install",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 3,
+      "instance": "test_multiple_builds[build=cjs,env=development]",
+      "writes": [
+        "node_modules/"
+      ]
+    },
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "pnpm run build",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 4,
+      "instance": "test_multiple_builds[build=cjs,env=development]",
+      "writes": [
+        "dist/"
+      ]
+    },
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "sed -i~ \"s/it[.a-zA-Z]*('\\[DEV-ONLY\\]/it('/\" tests/*.tsx\nsed -i~ \"s/it[.a-zA-Z]*('\\[PRD-ONLY\\]/it.skip('/\" tests/*.tsx\n",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 5,
+      "instance": "test_multiple_builds[build=cjs,env=development]",
+      "writes": [
+        "tests/basic.test.tsx~",
+        "tests/devtools.test.tsx",
+        "tests/devtools.test.tsx~",
+        "tests/immer.test.tsx~",
+        "tests/middlewareTypes.test.tsx~",
+        "tests/persistAsync.test.tsx~",
+        "tests/persistSync.test.tsx~",
+        "tests/shallow.test.tsx~",
+        "tests/ssr.test.tsx~",
+        "tests/subscribe.test.tsx~",
+        "tests/types.test.tsx~"
+      ]
+    },
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "sed -i~ \"s/resolve('\\.\\/src\\(.*\\)\\.ts')/resolve('\\.\\/dist\\1.js')/\" vitest.config.mts\n",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 7,
+      "instance": "test_multiple_builds[build=cjs,env=development]",
+      "writes": [
+        "vitest.config.mts",
+        "vitest.config.mts~"
+      ]
+    },
+    {
+      "binding": {
+        "env": {
+          "NODE_ENV": "development"
+        },
+        "kind": "run",
+        "shell": null,
+        "text": "pnpm run test:spec\n",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 9,
+      "instance": "test_multiple_builds[build=cjs,env=development]",
+      "writes": [
+        "node_modules/.vite/"
+      ]
+    },
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "pnpm install",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 3,
+      "instance": "test_multiple_builds[build=esm,env=development]",
+      "writes": [
+        "node_modules/"
+      ]
+    },
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "pnpm run build",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 4,
+      "instance": "test_multiple_builds[build=esm,env=development]",
+      "writes": [
+        "dist/"
+      ]
+    },
+    {
+      "binding": {
+        "env": {},
+        "kind": "run",
+        "shell": null,
+        "text": "sed -i~ \"s/it[.a-zA-Z]*('\\[DEV-ONLY\\]/it('/\" tests/*.tsx\nsed -i~ \"s/it[.a-zA-Z]*('\\[PRD-ONLY\\]/it.skip('/\" tests/*.tsx\n",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 5,
+      "instance": "test_multiple_builds[build=esm,env=development]",
+      "writes": [
+        "tests/basic.test.tsx~",
+        "tests/devtools.test.tsx",
+        "tests/devtools.test.tsx~",
+        "tests/immer.test.tsx~",
+        "tests/middlewareTypes.test.tsx~",
+        "tests/persistAsync.test.tsx~",
+        "tests/persistSync.test.tsx~",
+        "tests/shallow.test.tsx~",
+        "tests/ssr.test.tsx~",
+        "tests/subscribe.test.tsx~",
+        "tests/types.test.tsx~"
+      ]
+    },
+    {
+      "binding": {
+        "env": {
+          "NODE_ENV": "development"
+        },
+        "kind": "run",
+        "shell": null,
+        "text": "sed -i~ \"s/resolve('\\.\\/src\\(.*\\)\\.ts')/resolve('\\.\\/dist\\/esm\\1.mjs')/\" vitest.config.mts\nsed -i~ \"1s/^/import.meta.env.MODE='${NODE_ENV}';/\" tests/*.tsx\n",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 8,
+      "instance": "test_multiple_builds[build=esm,env=development]",
+      "writes": [
+        "tests/basic.test.tsx",
+        "tests/devtools.test.tsx",
+        "tests/immer.test.tsx",
+        "tests/middlewareTypes.test.tsx",
+        "tests/persistAsync.test.tsx",
+        "tests/persistSync.test.tsx",
+        "tests/shallow.test.tsx",
+        "tests/ssr.test.tsx",
+        "tests/subscribe.test.tsx",
+        "tests/types.test.tsx",
+        "vitest.config.mts",
+        "vitest.config.mts~"
+      ]
+    },
+    {
+      "binding": {
+        "env": {
+          "NODE_ENV": "development"
+        },
+        "kind": "run",
+        "shell": null,
+        "text": "pnpm run test:spec\n",
+        "with": {},
+        "working_directory": null
+      },
+      "deletes": [],
+      "external": [],
+      "index": 9,
+      "instance": "test_multiple_builds[build=esm,env=development]",
+      "writes": [
+        "node_modules/.vite/"
+      ]
+    }
+  ]
+}

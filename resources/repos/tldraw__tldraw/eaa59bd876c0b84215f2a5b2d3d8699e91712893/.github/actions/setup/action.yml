@@ -1,0 +1,39 @@
+name: Setup tldraw/tldraw
+description: Set up node & yarn
+
+runs:
+  using: composite
+  steps:
+    # see https://github.com/actions/setup-node/issues/899 for one of the reasons why this
+    # needs to be done before action/setup-node
+    - name: Enable corepack
+      run: npm i -g corepack
+      shell: bash
+
+    - name: Setup Node.js Environment
+      id: setup-node
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24.17.0
+
+    - name: Restore node_modules cache
+      uses: actions/cache@v5
+      id: node-modules-cache
+      with:
+        path: |
+          node_modules
+          **/node_modules
+          .yarn/cache
+          .yarn/unplugged
+          .yarn/install-state.gz
+        key: ${{ runner.os }}-${{ runner.arch }}-node-${{ steps.setup-node.outputs.node-version }}-yarn-${{ hashFiles('yarn.lock', '.yarnrc.yml', '.yarn/patches/*') }}
+        restore-keys: |
+          ${{ runner.os }}-${{ runner.arch }}-node-${{ steps.setup-node.outputs.node-version }}-yarn-
+
+    - name: Install dependencies
+      run: yarn install --immutable
+      shell: bash
+      env:
+        # Hardened mode enables --check-resolutions on public PRs, adding ~15s.
+        # See https://yarnpkg.com/features/security - Yarn recommends disabling in most jobs.
+        YARN_ENABLE_HARDENED_MODE: 0

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./.ts-temp",
+    "strict": true
+  },
+  "exclude": [
+    "./libdefs/*.js",
+    "**/__tests__/**",
+    "**/__bench__/**",
+    "**/__mocks__/**",
+    "**/dist/**",
+    "**/npm/**",
+    "**/node_modules/**",
+    "./packages/*/*.js",
+    "./packages/lexical-devtools/**",
+    "./packages/lexical-playground/**",
+    "./packages/lexical-website/**"
+  ],
+  "extends": "./tsconfig.json"
+}

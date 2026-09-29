@@ -1,0 +1,1896 @@
+{
+  "benchmark": "Effect-TS/effect@d812596a10c4257f0e01d1936658ae91a87a1d48:.github/workflows/check.yml",
+  "benchmark_id": "Effect-TS__effect__check",
+  "count_window": {
+    "capped": false,
+    "days": 7,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-25T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33452449653,
+        33450816927,
+        33448941317,
+        33448386252,
+        33447773835
+      ],
+      "window_count": 301
+    },
+    "push": {
+      "runs": [
+        31113618577,
+        31113614612,
+        31113509711,
+        31113497489,
+        31113189225
+      ],
+      "window_count": 185
+    }
+  },
+  "jobs": {
+    "AI Documentation Generation": {
+      "duration_seconds": 36.0,
+      "durations": [
+        51.0,
+        27.0,
+        36.0,
+        34.0,
+        37.0,
+        36.0,
+        32.0,
+        30.0,
+        36.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        2.0,
+        2.0,
+        3.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            21.0,
+            27.0,
+            26.0,
+            29.0,
+            27.0,
+            25.0,
+            24.0,
+            29.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Generate AI Documentation",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Verify AI Documentation is up-to-date",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build": {
+      "duration_seconds": 98.0,
+      "durations": [
+        92.0,
+        98.0,
+        89.0,
+        104.0,
+        101.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        5.0,
+        2.0,
+        5.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 4,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            44.0,
+            27.0,
+            22.0,
+            31.0,
+            29.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 29.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set strip internals config",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            42.0,
+            64.0,
+            62.0,
+            65.0,
+            65.0
+          ],
+          "name": "Run pnpm build",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 64.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bundle": {
+      "duration_seconds": 208.0,
+      "durations": [
+        209.0,
+        199.0,
+        224.0,
+        208.0,
+        199.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 4,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            25.0,
+            31.0,
+            25.0,
+            35.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Clone base ref",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set strip internals config",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            120.0,
+            115.0,
+            128.0,
+            121.0,
+            106.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 120.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            50.0,
+            49.0,
+            54.0,
+            52.0,
+            46.0
+          ],
+          "name": "Compare bundle size",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 50.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload stats artifact",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Circular Dependencies": {
+      "duration_seconds": 42.0,
+      "durations": [
+        33.0,
+        37.0,
+        42.0,
+        36.0,
+        44.0,
+        38.0,
+        46.0,
+        43.0,
+        49.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        2.0,
+        4.0,
+        2.0,
+        3.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            22.0,
+            26.0,
+            20.0,
+            28.0,
+            22.0,
+            28.0,
+            28.0,
+            31.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            9.0,
+            10.0,
+            9.0,
+            10.0,
+            11.0,
+            10.0,
+            10.0
+          ],
+          "name": "Check for circular dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Documentation Tests": {
+      "duration_seconds": 85.0,
+      "durations": [
+        85.0,
+        77.0,
+        84.0,
+        87.0,
+        78.0,
+        90.0,
+        89.0,
+        86.0,
+        85.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        4.0,
+        3.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            20.0,
+            24.0,
+            26.0,
+            30.0,
+            29.0,
+            28.0,
+            28.0,
+            24.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            52.0,
+            53.0,
+            54.0,
+            41.0,
+            55.0,
+            52.0,
+            51.0,
+            56.0
+          ],
+          "name": "Test Documentation",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 52.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint": {
+      "duration_seconds": 52.5,
+      "durations": [
+        52.0,
+        43.0,
+        76.0,
+        54.0,
+        53.0,
+        47.0,
+        54.0,
+        57.0,
+        46.0,
+        47.0
+      ],
+      "main_step_counts": [
+        3,
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        2.0,
+        6.0,
+        5.0,
+        2.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            6.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            22.0,
+            18.0,
+            28.0,
+            30.0,
+            27.0,
+            29.0,
+            33.0,
+            24.0,
+            28.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 28.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Run pnpm circular",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            33.0,
+            16.0,
+            15.0,
+            16.0,
+            16.0,
+            17.0,
+            16.0,
+            15.0
+          ],
+          "name": "Run pnpm lint",
+          "occurrence": 0,
+          "positions": [
+            2,
+            3
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run pnpm codegen",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Check for codegen changes",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (1/2, Deno)": {
+      "duration_seconds": 198.0,
+      "durations": [
+        187.0,
+        197.0,
+        196.0,
+        198.0,
+        202.0,
+        257.0,
+        198.0,
+        210.0,
+        220.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        6.0,
+        5.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            8.0,
+            4.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            30.0,
+            30.0,
+            29.0,
+            27.0,
+            53.0,
+            27.0,
+            29.0,
+            30.0
+          ],
+          "name": "Pre-pull test container images",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 9
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 9
+        },
+        {
+          "durations": [
+            22.0,
+            30.0,
+            30.0,
+            31.0,
+            29.0,
+            31.0,
+            30.0,
+            24.0,
+            29.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            130.0,
+            128.0,
+            128.0,
+            125.0,
+            139.0,
+            164.0,
+            134.0,
+            153.0,
+            153.0
+          ],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            5
+          ],
+          "seconds": 134.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (1/2, Node)": {
+      "duration_seconds": 206.0,
+      "durations": [
+        214.0,
+        226.0,
+        207.0,
+        206.0,
+        195.0,
+        197.0,
+        199.0,
+        217.0,
+        203.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        2.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            4.0,
+            6.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            32.0,
+            47.0,
+            30.0,
+            28.0,
+            42.0,
+            43.0,
+            29.0,
+            30.0
+          ],
+          "name": "Pre-pull test container images",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            25.0,
+            24.0,
+            21.0,
+            24.0,
+            24.0,
+            24.0,
+            29.0,
+            22.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            146.0,
+            162.0,
+            128.0,
+            147.0,
+            137.0,
+            123.0,
+            125.0,
+            149.0,
+            146.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 146.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 9
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 9
+        }
+      ]
+    },
+    "Test (2/2, Deno)": {
+      "duration_seconds": 286.0,
+      "durations": [
+        283.0,
+        272.0,
+        291.0,
+        284.0,
+        346.0,
+        286.0,
+        282.0,
+        291.0,
+        326.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        2.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            29.0,
+            30.0,
+            30.0,
+            56.0,
+            29.0,
+            30.0,
+            50.0,
+            53.0
+          ],
+          "name": "Pre-pull test container images",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 9
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 9
+        },
+        {
+          "durations": [
+            21.0,
+            21.0,
+            24.0,
+            21.0,
+            33.0,
+            24.0,
+            28.0,
+            30.0,
+            26.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            227.0,
+            216.0,
+            231.0,
+            228.0,
+            249.0,
+            227.0,
+            215.0,
+            204.0,
+            241.0
+          ],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            5
+          ],
+          "seconds": 227.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (2/2, Node)": {
+      "duration_seconds": 253.0,
+      "durations": [
+        235.0,
+        238.0,
+        215.0,
+        225.0,
+        258.0,
+        269.0,
+        253.0,
+        293.0,
+        271.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        6.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            1.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            29.0,
+            30.0,
+            31.0,
+            30.0,
+            31.0,
+            30.0,
+            56.0,
+            42.0
+          ],
+          "name": "Pre-pull test container images",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            27.0,
+            18.0,
+            24.0,
+            24.0,
+            27.0,
+            24.0,
+            28.0,
+            26.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            167.0,
+            173.0,
+            161.0,
+            162.0,
+            197.0,
+            204.0,
+            194.0,
+            201.0,
+            196.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 194.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 9
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 9
+        }
+      ]
+    },
+    "Test (Node 1/4)": {
+      "duration_seconds": 167.0,
+      "durations": [
+        167.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run oven-sh/setup-bun@v1",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            144.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 144.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Test (Node 2/4)": {
+      "duration_seconds": 138.0,
+      "durations": [
+        138.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run oven-sh/setup-bun@v1",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            117.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 117.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Test (Node 3/4)": {
+      "duration_seconds": 258.0,
+      "durations": [
+        258.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run oven-sh/setup-bun@v1",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            232.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 232.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Test (Node 4/4)": {
+      "duration_seconds": 171.0,
+      "durations": [
+        171.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run oven-sh/setup-bun@v1",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            143.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 143.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 1,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Test on Bun": {
+      "duration_seconds": 39.0,
+      "durations": [
+        32.0,
+        38.0,
+        41.0,
+        29.0,
+        35.0,
+        41.0,
+        43.0,
+        39.0,
+        50.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            29.0,
+            31.0,
+            21.0,
+            26.0,
+            31.0,
+            30.0,
+            29.0,
+            41.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 29.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Types": {
+      "duration_seconds": 114.5,
+      "durations": [
+        112.0,
+        131.0,
+        286.0,
+        100.0,
+        117.0,
+        115.0,
+        113.0,
+        114.0,
+        129.0,
+        114.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        2.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            11.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            29.0,
+            16.0,
+            29.0,
+            25.0,
+            27.0,
+            27.0,
+            23.0,
+            33.0,
+            27.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            44.0,
+            118.0,
+            33.0,
+            43.0,
+            37.0,
+            38.0,
+            40.0,
+            42.0,
+            40.0
+          ],
+          "name": "Run pnpm check",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 41.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            145.0
+          ],
+          "name": "Run pnpm test-types --target '>=5.4'",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 145.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            42.0,
+            32.0,
+            42.0,
+            43.0,
+            42.0,
+            47.0,
+            47.0,
+            43.0
+          ],
+          "name": "Run pnpm test-types --target '>=5.9'",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 43.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Types on Deno": {
+      "duration_seconds": 104.0,
+      "durations": [
+        97.0,
+        89.0,
+        104.0,
+        92.0,
+        99.0,
+        108.0,
+        115.0,
+        105.0,
+        105.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            31.0,
+            27.0,
+            23.0,
+            27.0,
+            29.0,
+            29.0,
+            33.0,
+            29.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 29.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set strip internals config",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            51.0,
+            69.0,
+            64.0,
+            67.0,
+            73.0,
+            77.0,
+            65.0,
+            70.0
+          ],
+          "name": "Run deno check .",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 67.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0110894584d63b1d900ca3be329db8aed59b4803": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "074e0dff84131f2b430a47835d11d8bea3b79e11": "3a7a6866eeeb691c4bb04f6f841d373b20fcc203",
+      "0813cfae68e160c52866f1bde3e9711d0e621233": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "4c28b0fb5fc7611e0a0583785a71365a09b11e1d": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "5c38fddfa355b2ee1d29327c39bcc680ceccb6d4": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "63817a89eabebbd6fe6f75c2d65038daef82a92d": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "abfa638233979679c0bf3e45b40dbf2badf6cdaf": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "d3e63dd5d95ad473a4c20fb7192bf016526b7ef8": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+      "f9eb553a2383fff5dbb198131654dd019ddf24d3": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a"
+    },
+    "pinned_oid": "bbb1c979d7f80908ddcd64fbed1cd9af9098846a",
+    "runs_same_version": 8,
+    "runs_total": 9
+  }
+}

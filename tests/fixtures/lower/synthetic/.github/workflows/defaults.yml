@@ -1,0 +1,24 @@
+name: Defaults
+on: push
+env:
+  CI: true
+  TOKEN: ${{ secrets.TOKEN }}
+defaults:
+  run:
+    shell: bash
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    env:
+      NODE: 20
+    steps:
+      - run: npm ci
+      - run: npm test
+        shell: sh
+        working-directory: api
+      - uses: ./.github/actions/setup
+        with:
+          node-version: 20

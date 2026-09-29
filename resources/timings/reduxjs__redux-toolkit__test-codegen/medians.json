@@ -1,0 +1,527 @@
+{
+  "benchmark": "reduxjs/redux-toolkit@e99fe6135188219f031c5028f653fb82e671de24:.github/workflows/test-codegen.yml",
+  "benchmark_id": "reduxjs__redux-toolkit__test-codegen",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33440531118,
+        33288136490,
+        33287903861,
+        33287553211,
+        33286645050
+      ],
+      "window_count": 78
+    },
+    "push": {
+      "runs": [
+        30352298025,
+        30220678458,
+        30220214390,
+        30220178842,
+        30220051306
+      ],
+      "window_count": 34
+    }
+  },
+  "jobs": {
+    "Build artifact: ${{ matrix.os }} + Node ${{ matrix.node-version }}": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 6,
+      "steps": []
+    },
+    "Build artifact: ubuntu-latest + Node 24.x": {
+      "duration_seconds": 54.0,
+      "durations": [
+        54.0,
+        54.0,
+        51.0,
+        78.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        6.0,
+        7.0,
+        2.0
+      ],
+      "samples": 4,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "Setup Node 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            33.0,
+            30.0,
+            61.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Pack",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Upload artifact",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Did we fail?",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 4
+        }
+      ]
+    },
+    "Check for changes": {
+      "duration_seconds": 4.5,
+      "durations": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        4.0,
+        9.0,
+        5.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        2.0,
+        2.0,
+        3.0,
+        4.0,
+        3.0,
+        4.0,
+        2.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run dorny/paths-filter@d1c1ffe0248fe513906c8e24db8ea791d46f8590",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Check package definition with are-the-types-wrong": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 6,
+      "steps": []
+    },
+    "Check package definition with are-the-types-wrong (24.x)": {
+      "duration_seconds": 47.5,
+      "durations": [
+        45.0,
+        43.0,
+        50.0,
+        70.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        3.0,
+        5.0,
+        3.0
+      ],
+      "samples": 4,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            8.0,
+            4.0
+          ],
+          "name": "Use node 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0,
+            32.0,
+            33.0,
+            60.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 33.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download artifact",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run are-the-types-wrong",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test build artifact: ${{ matrix.os }} + Node ${{ matrix.node-version }}": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 6,
+      "steps": []
+    },
+    "Test build artifact: ubuntu-latest + Node 24.x": {
+      "duration_seconds": 56.0,
+      "durations": [
+        55.0,
+        56.0,
+        56.0,
+        92.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        6.0
+      ],
+      "samples": 4,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            7.0
+          ],
+          "name": "Setup Node 24.x",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Download artifact",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            32.0,
+            32.0,
+            62.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Install build artifact",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove path alias",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            11.0,
+            9.0
+          ],
+          "name": "Run tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Did we fail?",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 4
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "02d943ff662cbba45616829c3b7d78ddc07af535": "ff2b3d4283fc21d433640469847bea4eab3dd8ee",
+      "073a989ac98c5b28c0fc1446c34fdce10afb8df8": "ff2b3d4283fc21d433640469847bea4eab3dd8ee",
+      "4b92eb0b1f112423b7ca03809418d1dcc1f464eb": "ff2b3d4283fc21d433640469847bea4eab3dd8ee",
+      "529b0f3347b0bf79bc00921c5a9a5083c51b6828": "a2454e6393c20236d6ef2a95949ad05ef4527179",
+      "7b9c0f2639bda6b66c10e3ab109807517809e8bd": "a2454e6393c20236d6ef2a95949ad05ef4527179",
+      "b1c5130154c454ca8387f55da6122fcb507c560c": "ff2b3d4283fc21d433640469847bea4eab3dd8ee",
+      "d391ada24d8108f9e543a61db925b049327d2508": "a2454e6393c20236d6ef2a95949ad05ef4527179",
+      "d398d8f6091b9bf1cb81e125a5fcc99eb12edb9d": "ff2b3d4283fc21d433640469847bea4eab3dd8ee",
+      "dfbac3b17aee82894673834d7be051f6b520e273": "a2454e6393c20236d6ef2a95949ad05ef4527179",
+      "feccd4a0daa6a1d34dd00ac8e0b5a93101ef0dcc": "a2454e6393c20236d6ef2a95949ad05ef4527179"
+    },
+    "pinned_oid": "a2454e6393c20236d6ef2a95949ad05ef4527179",
+    "runs_same_version": 5,
+    "runs_total": 10
+  }
+}

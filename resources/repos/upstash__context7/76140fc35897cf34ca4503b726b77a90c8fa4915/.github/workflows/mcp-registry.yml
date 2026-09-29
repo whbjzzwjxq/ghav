@@ -1,0 +1,53 @@
+name: Publish to MCP Registry
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish (defaults to packages/mcp/package.json version)"
+        required: false
+        type: string
+  workflow_call:
+
+jobs:
+  publish-mcp:
+    name: Publish to MCP Registry
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for OIDC authentication with MCP Registry
+      contents: read
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      - name: Set version in server.json
+        run: |
+          VERSION="${{ inputs.version }}"
+          VERSION="${VERSION#v}"
+          if [ -z "$VERSION" ]; then
+            VERSION=$(node -p "require('./packages/mcp/package.json').version")
+          fi
+          echo "Publishing version: $VERSION"
+          jq --arg v "$VERSION" '.version = $v | .packages[].version = $v' server.json > server.tmp && mv server.tmp server.json
+
+      - name: Install MCP Publisher
+        run: |
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
+
+      - name: Login to MCP Registry
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish to MCP Registry
+        # Retry to tolerate npm propagation delay when chained after a release
+        run: |
+          for i in 1 2 3; do
+            ./mcp-publisher publish && exit 0
+            echo "Publish failed (attempt $i), retrying in 30s..."
+            sleep 30
+          done
+          exit 1

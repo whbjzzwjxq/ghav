@@ -1,0 +1,157 @@
+{
+  "benchmark": "langfuse/langfuse@983c2a6e5bbe9e8f35fe10eb017c9abd6220833b:.github/workflows/release.yml",
+  "benchmark_id": "langfuse__langfuse__release",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33421888269,
+        33383480340,
+        33174636469,
+        33171133579,
+        33168795583
+      ],
+      "window_count": 33
+    }
+  },
+  "jobs": {
+    "notify-slack-on-failure": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "release": {
+      "duration_seconds": 19.0,
+      "durations": [
+        19.0,
+        15.0,
+        19.0,
+        21.0,
+        27.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            11.0,
+            12.0,
+            14.0,
+            20.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check released commit is on main",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Push to production",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Complete runner",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0037ad19dac83b857201632ba9e37c06a1c7eacd": "7bd8f93985c3727988c0c7b5d0f47169ef50554b",
+      "171690bb454039ada6482de746ee863e798bac67": "7bd8f93985c3727988c0c7b5d0f47169ef50554b",
+      "60dfa8bc18ad3a71d26dec512d1c580de5ff2420": "7bd8f93985c3727988c0c7b5d0f47169ef50554b",
+      "d79db344e30c1596c9a6e31d4ecdb7f37889928c": "7bd8f93985c3727988c0c7b5d0f47169ef50554b",
+      "f914e2c11838973d9d37f2baa275ce8e1e444ede": "7bd8f93985c3727988c0c7b5d0f47169ef50554b"
+    },
+    "pinned_oid": "7bd8f93985c3727988c0c7b5d0f47169ef50554b",
+    "runs_same_version": 5,
+    "runs_total": 5
+  }
+}

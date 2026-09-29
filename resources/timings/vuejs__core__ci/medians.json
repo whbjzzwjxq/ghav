@@ -1,0 +1,724 @@
+{
+  "benchmark": "vuejs/core@d63616ca17de965ed32dcb449a4c5cd9982f15d2:.github/workflows/ci.yml",
+  "benchmark_id": "vuejs__core__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33375418188,
+        33375417737,
+        33375321672,
+        33375018309,
+        33373388235
+      ],
+      "window_count": 317
+    },
+    "push": {
+      "runs": [
+        32003581617,
+        32000303190,
+        31999013998,
+        31987099744,
+        31986858232
+      ],
+      "window_count": 320
+    }
+  },
+  "jobs": {
+    "continuous-release": {
+      "duration_seconds": 50.5,
+      "durations": [
+        46.0,
+        45.0,
+        52.0,
+        46.0,
+        51.0,
+        47.0,
+        57.0,
+        50.0,
+        53.0,
+        55.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0,
+        3.0,
+        6.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            4.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            17.0,
+            22.0,
+            17.0,
+            18.0,
+            21.0,
+            24.0,
+            21.0,
+            25.0,
+            27.0
+          ],
+          "name": "Setup Vite+",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            16.0,
+            16.0,
+            17.0,
+            18.0,
+            16.0,
+            19.0,
+            18.0,
+            16.0,
+            16.0
+          ],
+          "name": "Release",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 16.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "test": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 5,
+      "steps": []
+    },
+    "test / e2e-test": {
+      "duration_seconds": 48.0,
+      "durations": [
+        48.0,
+        47.0,
+        47.0,
+        49.0,
+        56.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Setup cache for Chromium binary",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            4.0,
+            7.0
+          ],
+          "name": "Setup cache for Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            12.0,
+            13.0,
+            15.0
+          ],
+          "name": "Setup Vite+",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run node node_modules/puppeteer/install.mjs",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run vp exec playwright install chromium",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            23.0,
+            22.0,
+            23.0,
+            20.0
+          ],
+          "name": "Run e2e tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "verify treeshaking",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test / e2e-vapor": {
+      "duration_seconds": 48.0,
+      "durations": [
+        45.0,
+        48.0,
+        52.0,
+        45.0,
+        48.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        2.0,
+        5.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            4.0,
+            3.0,
+            5.0
+          ],
+          "name": "Setup cache for Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            20.0,
+            21.0,
+            18.0,
+            18.0
+          ],
+          "name": "Setup Vite+",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install Playwright Chromium",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            19.0,
+            20.0,
+            19.0,
+            18.0
+          ],
+          "name": "Run e2e tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test / lint-and-test-dts": {
+      "duration_seconds": 57.0,
+      "durations": [
+        51.0,
+        61.0,
+        57.0,
+        48.0,
+        63.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            16.0,
+            13.0,
+            14.0,
+            17.0
+          ],
+          "name": "Setup Vite+",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run lint",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run format check",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            20.0,
+            19.0,
+            15.0,
+            20.0
+          ],
+          "name": "Run type check",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            16.0,
+            16.0,
+            12.0,
+            17.0
+          ],
+          "name": "Run type declaration tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test / unit-test": {
+      "duration_seconds": 97.0,
+      "durations": [
+        99.0,
+        87.0,
+        97.0,
+        99.0,
+        88.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        6.0,
+        5.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            13.0,
+            15.0,
+            17.0,
+            13.0
+          ],
+          "name": "Setup Vite+",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            70.0,
+            75.0,
+            76.0,
+            72.0
+          ],
+          "name": "Run unit tests",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 75.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test / unit-test-windows": {
+      "duration_seconds": 80.0,
+      "durations": [
+        80.0,
+        69.0,
+        78.0,
+        95.0,
+        95.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            9.0,
+            10.0,
+            11.0,
+            11.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            37.0,
+            29.0,
+            36.0,
+            51.0,
+            51.0
+          ],
+          "name": "Setup Vite+",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 37.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            21.0,
+            23.0,
+            23.0,
+            22.0
+          ],
+          "name": "Run compiler unit tests",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run ssr unit tests",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0334833d1ee52e442778904f56fe85b99c456fb4": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "0e9f717978ca8e5be0c1dd7d14dadad66c65f07d": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "205fa09f90726d3ed9938ebfc87734314ea5d9ab": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "3c1ce9add484ec3aaae65552ea171e5f432f76ca": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "4b1d20c7c16e2d9b2642036676bd4822d44934e0": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "5f2d76aa3475e7c362b855758665f14f579b1f4a": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "6ec4725064aeef0eeae1a3fd3a6731baecb5f9e8": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "739cfb0112c392183df4406e3420c238c94a1d93": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "d24b4c12befcd0cf7917c421392aee7314768877": "846a8024cb16777f68277ac0b97f1db81d633e98",
+      "f86f54ebea7e8c16d67d0052bba122bbb4588925": "846a8024cb16777f68277ac0b97f1db81d633e98"
+    },
+    "pinned_oid": "355d164fcd863dea5331cb1262b90939ce53be43",
+    "runs_same_version": 0,
+    "runs_total": 10
+  }
+}

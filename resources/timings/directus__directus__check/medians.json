@@ -1,0 +1,530 @@
+{
+  "benchmark": "directus/directus@f2427749765f03c0a42a7332bb5a2540cc7c5bd1:.github/workflows/check.yml",
+  "benchmark_id": "directus__directus__check",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33448000716,
+        33444017849,
+        33439126250,
+        33432393549,
+        33420373862
+      ],
+      "window_count": 539
+    },
+    "push": {
+      "runs": [
+        33407941053,
+        33117406412,
+        33104776642,
+        32892599631,
+        32887052080
+      ],
+      "window_count": 47
+    }
+  },
+  "jobs": {
+    "Format": {
+      "duration_seconds": 43.0,
+      "durations": [
+        37.0,
+        34.0,
+        38.0,
+        31.0,
+        27.0,
+        51.0,
+        50.0,
+        50.0,
+        52.0,
+        48.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            22.0,
+            21.0,
+            18.0,
+            19.0,
+            19.0
+          ],
+          "name": "Get changed files",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            26.0,
+            30.0,
+            22.0,
+            20.0,
+            23.0,
+            21.0,
+            24.0,
+            24.0,
+            25.0
+          ],
+          "name": "Prepare",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run Formatter",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint": {
+      "duration_seconds": 40.0,
+      "durations": [
+        30.0,
+        29.0,
+        32.0,
+        32.0,
+        33.0,
+        51.0,
+        52.0,
+        54.0,
+        50.0,
+        47.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            21.0,
+            20.0,
+            23.0,
+            19.0,
+            19.0
+          ],
+          "name": "Get changed files",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            22.0,
+            24.0,
+            23.0,
+            25.0,
+            21.0,
+            22.0,
+            23.0,
+            23.0,
+            22.0
+          ],
+          "name": "Prepare",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 22.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run Linter",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Stylelint": {
+      "duration_seconds": 46.0,
+      "durations": [
+        42.0,
+        28.0,
+        46.0,
+        43.0,
+        32.0,
+        56.0,
+        55.0,
+        55.0,
+        47.0,
+        46.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        11.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            1.0,
+            5.0,
+            3.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            21.0,
+            22.0,
+            20.0,
+            19.0,
+            20.0
+          ],
+          "name": "Get changed files",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            21.0,
+            28.0,
+            34.0,
+            25.0,
+            27.0,
+            25.0,
+            28.0,
+            22.0,
+            20.0
+          ],
+          "name": "Prepare",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run Stylelinter",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Unit Tests": {
+      "duration_seconds": 1015.0,
+      "durations": [
+        1032.0,
+        1087.0,
+        609.0,
+        1091.0,
+        1015.0,
+        1092.0,
+        1013.0,
+        1015.0,
+        868.0,
+        782.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        5.0,
+        5.0,
+        3.0,
+        4.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            23.0,
+            23.0,
+            18.0,
+            22.0,
+            23.0,
+            44.0,
+            22.0,
+            23.0,
+            24.0,
+            22.0
+          ],
+          "name": "Checkout repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            70.0,
+            45.0,
+            65.0,
+            70.0,
+            70.0,
+            63.0,
+            62.0,
+            67.0,
+            58.0
+          ],
+          "name": "Prepare",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 66.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            809.0,
+            839.0,
+            449.0,
+            839.0,
+            788.0,
+            831.0,
+            803.0,
+            803.0,
+            663.0,
+            597.0
+          ],
+          "name": "Run Tests",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 803.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            126.0,
+            150.0,
+            92.0,
+            160.0,
+            131.0,
+            143.0,
+            123.0,
+            125.0,
+            110.0,
+            101.0
+          ],
+          "name": "Upload coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 125.5,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "270e35e824f0a7f016b825e0b92c41ff9047dde1": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "61f43d365a9310fa14f31a35914ffb5301e23a6f": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "98e7e3310685d84098bb5c8704dd0fe1f4594a73": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "a6c460a765c590c15b2e4d71e820247cbc25179e": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "b20e3eb399f37d8cd22abf52c30c6d5eb504e655": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "c76747d8d28970fbbe4d4ff7de85b2e0fcb6f716": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "ccddd937d9a6a66a46548c6b89a3ca2c709ed9c7": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "e29e467f8b1baec686d1e0ec6473ddf0ded762d4": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "f4288c2f5bfcbad49b5d09632e107fca2618b04d": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+      "fe3cde5c1a9846fcfd191fd18e1f492a8011e6e0": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8"
+    },
+    "pinned_oid": "99ab93e27a2acb1eb7f33b81e1673b029cf946d8",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

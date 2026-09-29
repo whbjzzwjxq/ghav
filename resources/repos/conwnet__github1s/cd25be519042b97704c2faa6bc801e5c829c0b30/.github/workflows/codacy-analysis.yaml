@@ -1,0 +1,37 @@
+name: Codacy Security Scan
+
+on:
+  push:
+    branches: ['master', 'main']
+  pull_request:
+    branches: ['master', 'main']
+
+jobs:
+  codacy-security-scan:
+    name: Codacy Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
+        with:
+          # Run analysis without SARIF output to avoid GitHub Code Scanning integration issues
+          # See: https://github.com/codacy/codacy-analysis-cli-action/issues/142
+          # The Codacy tool generates multiple SARIF runs which is incompatible with
+          # GitHub's new policy as of July 2025
+          verbose: true
+          # Force 0 exit code to prevent workflow failures
+          max-allowed-issues: 2147483647
+          # only scan the github1s directory
+          directory: $GITHUB_WORKSPACE/extensions/github1s
+
+      # SARIF upload is temporarily disabled due to incompatibility
+      # See: https://github.com/codacy/codacy-analysis-cli-action/issues/142
+      # TODO: Re-enable when Codacy fixes the multiple runs issue
+      # - name: Upload SARIF results file
+      #   uses: github/codeql-action/upload-sarif@v4
+      #   with:
+      #     sarif_file: results.sarif
+      #     category: codacy-security-scan

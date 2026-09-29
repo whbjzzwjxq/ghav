@@ -1,0 +1,177 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Superseding a queued or running release is safe: snapshot versions are
+# timestamped, and the surviving run announces every changeset touched since the
+# previous tag, so nothing is lost by cancelling an earlier one.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create Release Pull Request
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+
+      # changesets/action omits package changelogs when the PR body would exceed
+      # GitHub's 65536-character limit. Rewrite with a fence-safe truncation instead.
+      #
+      # Use the job token + REST for the body write. `gh pr edit` goes through
+      # GraphQL that demands `read:org` for a `login` field even when only the
+      # body changes; RELEASE_GITHUB_TOKEN is a classic PAT without that scope
+      # (cli/cli#13575). Job `pull-requests: write` is enough for REST.
+      - name: Enrich Version Packages PR body
+        if: steps.changesets.outputs.pullRequestNumber != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION_PR_BASE_BRANCH: main
+          VERSION_PR_BODY_OUT: ${{ runner.temp }}/version-pr-body.md
+          VERSION_PR_HAS_PUBLISH_SCRIPT: 'true'
+          VERSION_PR_VERSION_BRANCH: changeset-release/main
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          node scripts/release-notes/build-version-pr-body.ts
+          PR_NUMBER="${{ steps.changesets.outputs.pullRequestNumber }}"
+          CURRENT_FILE="${{ runner.temp }}/version-pr-body-current.md"
+          gh api "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --jq .body > "$CURRENT_FILE"
+          if cmp -s "$CURRENT_FILE" "$VERSION_PR_BODY_OUT"; then
+            echo "Version Packages PR body already up to date."
+            exit 0
+          fi
+          jq -n --rawfile body "$VERSION_PR_BODY_OUT" '{body: $body}' \
+            | gh api --method PATCH "repos/${GITHUB_REPOSITORY}/pulls/${PR_NUMBER}" --input - \
+            --jq '"Updated Version Packages PR body (" + (.body | length | tostring) + " chars)."'
+
+  prerelease:
+    name: Prerelease
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check for pending changesets
+        id: changesets
+        shell: bash
+        run: |
+          shopt -s nullglob
+          count=0
+          for f in .changeset/*.md; do
+            [ "$(basename "$f")" = "README.md" ] && continue
+            count=$((count + 1))
+          done
+          echo "has_pending=$([ $count -gt 0 ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Configure git identity
+        if: steps.changesets.outputs.has_pending == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # `changeset version` deletes each consumed `.md` from `.changeset/`, so
+      # the release-notes step below would find nothing. Stash a copy first.
+      - name: Stash pending changesets for release-note generation
+        if: steps.changesets.outputs.has_pending == 'true'
+        run: |
+          mkdir -p /tmp/changeset-stash
+          cp .changeset/*.md /tmp/changeset-stash/
+
+      - name: Snapshot version bump (in-place, not committed)
+        if: steps.changesets.outputs.has_pending == 'true'
+        run: |
+          pnpm changeset version --snapshot prerelease
+          # Restore the stashed `.md` files so the release-notes builder can
+          # read them via `@changesets/read`. `changeset publish` does not
+          # re-consume them, so this is safe.
+          cp /tmp/changeset-stash/*.md .changeset/
+          echo "## Snapshot versions" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          for pkg_json in packages/*/package.json; do
+            is_private=$(jq -r '.private // false' "$pkg_json")
+            [ "$is_private" = "true" ] && continue
+            echo "$(jq -r '.name' "$pkg_json")@$(jq -r '.version' "$pkg_json")" | tee -a "$GITHUB_STEP_SUMMARY"
+          done
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build release notes per package
+        if: steps.changesets.outputs.has_pending == 'true'
+        shell: bash
+        env:
+          RELEASE_NOTES_OUTPUT_DIR: /tmp/release-notes
+        run: |
+          mkdir -p "$RELEASE_NOTES_OUTPUT_DIR"
+          node scripts/release-notes/build-prerelease-release-notes.ts
+
+      - name: Publish to npm test tag
+        if: steps.changesets.outputs.has_pending == 'true'
+        run: pnpm release --tag test --no-git-tag
+
+      - name: Create git tag + GitHub prerelease per published package
+        if: steps.changesets.outputs.has_pending == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for pkg_json in packages/*/package.json; do
+            is_private=$(jq -r '.private // false' "$pkg_json")
+            [ "$is_private" = "true" ] && continue
+            name=$(jq -r '.name' "$pkg_json")
+            version=$(jq -r '.version' "$pkg_json")
+            ref="${name}@${version}"
+            safe=$(printf '%s' "$name" | tr '@/' '_')
+            notes_file="/tmp/release-notes/${safe}.md"
+            git tag -a "$ref" -m "$ref"
+            git push origin "refs/tags/$ref"
+            if [ -s "$notes_file" ]; then
+              gh release create "$ref" --prerelease --title "$ref" --notes-file "$notes_file"
+            else
+              gh release create "$ref" --prerelease --title "$ref" --notes "Internal changes only."
+            fi
+          done

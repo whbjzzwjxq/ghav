@@ -1,0 +1,18 @@
+# Copied from https://github.com/rhysd/actionlint/blob/048c97d90b98b832450d3adf00fc7757b0ed9953/docs/usage.md#use-actionlint-on-github-actions
+name: actionlint
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/*.yml
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false # Disable git write access
+      - uses: docker://rhysd/actionlint:latest
+        with:
+          args: -color

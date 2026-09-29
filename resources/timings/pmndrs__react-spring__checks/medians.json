@@ -1,0 +1,186 @@
+{
+  "benchmark": "pmndrs/react-spring@4be40b8b590238dc80872a48b91a42d92201d895:.github/workflows/checks.yml",
+  "benchmark_id": "pmndrs__react-spring__checks",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33000581477,
+        32157204837,
+        32113121297,
+        32112669677,
+        32112296352
+      ],
+      "window_count": 28
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "Style Checks": {
+      "duration_seconds": 34.0,
+      "durations": [
+        34.0,
+        29.0,
+        29.0,
+        44.0,
+        48.0
+      ],
+      "main_step_counts": [
+        5,
+        7
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cancel Previous Runs",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            7.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            20.0,
+            21.0,
+            35.0
+          ],
+          "name": "Run ./.github/actions/setup",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0
+          ],
+          "name": "Setup pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            3,
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Format",
+          "occurrence": 0,
+          "positions": [
+            4,
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0c2cbd006a29665a6222eb095531e0621f716141": "d76e4d28f941f96a169186f38a82e27ca4f02c4b",
+      "15e4483fee197cd464457c19ebcce481fe7ca3ba": "d76e4d28f941f96a169186f38a82e27ca4f02c4b",
+      "4e944294a400086ea2c997d6b60c05549b21ed16": "9052363459ad003dfad187f36e862be49af5bf61",
+      "89c74291d7706ee31ec18feef7276927ebe05d2d": "d76e4d28f941f96a169186f38a82e27ca4f02c4b",
+      "d4bc6ee402cb103aa587451ac4e7aaf901612aab": "d76e4d28f941f96a169186f38a82e27ca4f02c4b"
+    },
+    "pinned_oid": "d76e4d28f941f96a169186f38a82e27ca4f02c4b",
+    "runs_same_version": 4,
+    "runs_total": 5
+  }
+}

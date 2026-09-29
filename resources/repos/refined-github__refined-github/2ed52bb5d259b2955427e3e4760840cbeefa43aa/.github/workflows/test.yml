@@ -1,0 +1,130 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - main
+      - 'test/*'
+
+jobs:
+  Security:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: npx lockfile-lint --path package-lock.json --validate-https
+
+  Vitest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: sudo apt-get install ripgrep
+      - run: npm ci
+      - run: npm run vitest -- --exclude 'build/features*' --exclude '**/selectors*'
+
+      # TODO: Restore
+      # For some reason it fails on CI, but not locally
+      # Mentioned in https://github.com/refined-github/refined-github/issues/7747
+      # - run: npm run vitest -- selectors
+      #   if: false
+      #   continue-on-error: true
+
+  Verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: npm ci
+      - run: npm run vitest -- build/features
+      - name: Leave comment
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
+        if: failure() && github.event_name == 'pull_request'  && github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR'
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Don't worry about fixing this yet, you can wait for the feature to be finalized before documenting it.
+
+            FYI: you can run `npm run fix` to automatically fix a lot of issues and update snapshots. Similar tips can be found in the [contributing wiki](https://github.com/refined-github/refined-github/wiki/Contributing).
+
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:eslint
+      - run: npm run lint:biome
+      - uses: codespell-project/actions-codespell@8f01853be192eb0f849a5c7d721450e7a467c579 # v2.2
+        with:
+          ignore_words_list: eror,usera
+          exclude_file: ${{ github.workspace }}/package-lock.json
+          skip: '*.json'
+
+  Types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: npm ci
+      - run: npm run build:svelte
+      - run: npm run build:typescript
+
+  Format:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+
+  Build:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: package.json
+          cache: npm
+      - run: npm ci
+      - run: npm run build:bundle
+        env:
+          RELATIVE_CI_STATS: true
+      - name: Upload bundle stats artifact
+        if: matrix.os == 'ubuntu-latest'
+        uses: relative-ci/agent-upload-artifact-action@a2b5741b4f7e6a989c84ec1a3059696b23c152e5 # v2.0.0
+        with:
+          webpackStatsFile: ./distribution/assets/webpack-stats.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: matrix.os == 'ubuntu-latest'
+        with:
+          name: refined-github
+          path: |
+            distribution
+            !./distribution/assets/webpack-stats.json

@@ -1,0 +1,377 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-28T20:21:49Z",
+      "conclusion": "success",
+      "created_at": "2026-08-28T20:21:45Z",
+      "head_sha": "0a092ee2a49938403554a9912d2b3c449da85783",
+      "id": 98973563589,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "mode",
+      "run_attempt": 1,
+      "run_id": 33207873239,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000005346",
+      "started_at": "2026-08-28T20:21:47Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-28T20:21:48Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-28T20:21:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:21:48Z",
+          "conclusion": "success",
+          "name": "Determine publishing mode",
+          "number": 2,
+          "started_at": "2026-08-28T20:21:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:21:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "started_at": "2026-08-28T20:21:48Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Build Docker Image"
+    },
+    {
+      "completed_at": "2026-08-28T20:27:38Z",
+      "conclusion": "success",
+      "created_at": "2026-08-28T20:21:50Z",
+      "head_sha": "0a092ee2a49938403554a9912d2b3c449da85783",
+      "id": 98973586008,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "build (linux/amd64, ubuntu-latest, amd64)",
+      "run_attempt": 1,
+      "run_id": 33207873239,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000005347",
+      "started_at": "2026-08-28T20:21:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-28T20:21:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-28T20:21:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:22:00Z",
+          "conclusion": "success",
+          "name": "Checkout Repository",
+          "number": 2,
+          "started_at": "2026-08-28T20:21:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:22:00Z",
+          "conclusion": "success",
+          "name": "Get version from package.json",
+          "number": 3,
+          "started_at": "2026-08-28T20:22:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:22:13Z",
+          "conclusion": "success",
+          "name": "Setup Docker Buildx",
+          "number": 4,
+          "started_at": "2026-08-28T20:22:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:22:13Z",
+          "conclusion": "success",
+          "name": "Login to Docker Hub",
+          "number": 5,
+          "started_at": "2026-08-28T20:22:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:22:14Z",
+          "conclusion": "success",
+          "name": "Login to GitHub Container Registry",
+          "number": 6,
+          "started_at": "2026-08-28T20:22:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:22:14Z",
+          "conclusion": "success",
+          "name": "Extract metadata (tags, labels) for Docker",
+          "number": 7,
+          "started_at": "2026-08-28T20:22:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:25Z",
+          "conclusion": "success",
+          "name": "Build and Push by Digest",
+          "number": 8,
+          "started_at": "2026-08-28T20:22:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:25Z",
+          "conclusion": "success",
+          "name": "Export digest",
+          "number": 9,
+          "started_at": "2026-08-28T20:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:26Z",
+          "conclusion": "success",
+          "name": "Upload digest",
+          "number": 10,
+          "started_at": "2026-08-28T20:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:28Z",
+          "conclusion": "success",
+          "name": "Post Build and Push by Digest",
+          "number": 16,
+          "started_at": "2026-08-28T20:27:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:28Z",
+          "conclusion": "success",
+          "name": "Post Login to GitHub Container Registry",
+          "number": 17,
+          "started_at": "2026-08-28T20:27:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:29Z",
+          "conclusion": "success",
+          "name": "Post Login to Docker Hub",
+          "number": 18,
+          "started_at": "2026-08-28T20:27:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:36Z",
+          "conclusion": "success",
+          "name": "Post Setup Docker Buildx",
+          "number": 19,
+          "started_at": "2026-08-28T20:27:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:36Z",
+          "conclusion": "success",
+          "name": "Post Checkout Repository",
+          "number": 20,
+          "started_at": "2026-08-28T20:27:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-28T20:27:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Build Docker Image"
+    },
+    {
+      "completed_at": "2026-08-28T20:28:07Z",
+      "conclusion": "success",
+      "created_at": "2026-08-28T20:27:38Z",
+      "head_sha": "0a092ee2a49938403554a9912d2b3c449da85783",
+      "id": 98974992185,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "merge",
+      "run_attempt": 1,
+      "run_id": 33207873239,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000005348",
+      "started_at": "2026-08-28T20:27:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-28T20:27:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-28T20:27:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:45Z",
+          "conclusion": "success",
+          "name": "Checkout Repository",
+          "number": 2,
+          "started_at": "2026-08-28T20:27:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:45Z",
+          "conclusion": "success",
+          "name": "Get version from package.json",
+          "number": 3,
+          "started_at": "2026-08-28T20:27:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:45Z",
+          "conclusion": "success",
+          "name": "Download digests",
+          "number": 4,
+          "started_at": "2026-08-28T20:27:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:51Z",
+          "conclusion": "success",
+          "name": "Setup Docker Buildx",
+          "number": 5,
+          "started_at": "2026-08-28T20:27:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:51Z",
+          "conclusion": "success",
+          "name": "Login to Docker Hub",
+          "number": 6,
+          "started_at": "2026-08-28T20:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:51Z",
+          "conclusion": "success",
+          "name": "Login to GitHub Container Registry",
+          "number": 7,
+          "started_at": "2026-08-28T20:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:52Z",
+          "conclusion": "success",
+          "name": "Parse version components",
+          "number": 8,
+          "started_at": "2026-08-28T20:27:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:52Z",
+          "conclusion": "success",
+          "name": "Extract metadata for Docker",
+          "number": 9,
+          "started_at": "2026-08-28T20:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:58Z",
+          "conclusion": "success",
+          "name": "Create manifest list and push",
+          "number": 10,
+          "started_at": "2026-08-28T20:27:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:27:58Z",
+          "conclusion": "success",
+          "name": "Install Cosign",
+          "number": 11,
+          "started_at": "2026-08-28T20:27:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:04Z",
+          "conclusion": "success",
+          "name": "Sign images with Cosign",
+          "number": 12,
+          "started_at": "2026-08-28T20:27:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:05Z",
+          "conclusion": "success",
+          "name": "Inspect image",
+          "number": 13,
+          "started_at": "2026-08-28T20:28:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:05Z",
+          "conclusion": "skipped",
+          "name": "Redeploy Stack",
+          "number": 14,
+          "started_at": "2026-08-28T20:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:05Z",
+          "conclusion": "skipped",
+          "name": "Purge Cloudflare cache",
+          "number": 15,
+          "started_at": "2026-08-28T20:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:05Z",
+          "conclusion": "success",
+          "name": "Post Login to GitHub Container Registry",
+          "number": 27,
+          "started_at": "2026-08-28T20:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:05Z",
+          "conclusion": "success",
+          "name": "Post Login to Docker Hub",
+          "number": 28,
+          "started_at": "2026-08-28T20:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:06Z",
+          "conclusion": "success",
+          "name": "Post Setup Docker Buildx",
+          "number": 29,
+          "started_at": "2026-08-28T20:28:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:06Z",
+          "conclusion": "success",
+          "name": "Post Checkout Repository",
+          "number": 30,
+          "started_at": "2026-08-28T20:28:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T20:28:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 31,
+          "started_at": "2026-08-28T20:28:06Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Build Docker Image"
+    }
+  ],
+  "run_id": 33207873239
+}

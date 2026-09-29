@@ -1,0 +1,68 @@
+name: preview
+
+permissions: {}
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    paths:
+      - '**/*'
+      - '!.github/workflows/*.yml'
+      - '.github/workflows/preview.yml'
+      - '!assets/**'
+      - '!docs/**'
+      - '!example/**'
+      - '!site/**'
+      - '!test/**'
+      - '!.node-version'
+      - '!.nvmrc'
+      - '!.prettierignore'
+      - '!.prettierrc.json'
+      - '!*.md'
+      - '!deno.check*'
+      - '!deno.lint.json'
+      - '!docker-compose.yml'
+      - '!jsr.json'
+      - '!LICENSE'
+
+jobs:
+  release:
+    concurrency:
+      cancel-in-progress: ${{ github.ref_name != 'master' }}
+      group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+
+    name: Release preview build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c # v2.21.0
+        with:
+          egress-policy: audit
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+        with:
+          cache: false # cache can be poisoned by malicious actors.
+
+      - name: Use Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: lts/*
+          package-manager-cache: false # cache can be poisoned by malicious actors.
+          registry-url: https://registry.npmjs.org/
+
+      - name: Install dependencies
+        run: pnpm with latest-10 install
+
+      - name: Build
+        run: pnpm with latest-10 build
+
+      - name: Release preview version
+        run: pnpm with latest-10 dlx pkg-pr-new@0.0.71 publish --template './example'

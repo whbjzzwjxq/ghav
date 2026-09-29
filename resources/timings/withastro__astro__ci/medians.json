@@ -1,0 +1,3668 @@
+{
+  "benchmark": "withastro/astro@916b738b0447728f1c274e32677c9bac09be78f6:.github/workflows/ci.yml",
+  "benchmark_id": "withastro__astro__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33432670894,
+        33422849695,
+        33412466642,
+        33410129511,
+        33407293658
+      ],
+      "window_count": 741
+    },
+    "push": {
+      "runs": [
+        33432477548,
+        33409824632,
+        33403063324,
+        33396096215,
+        33386678016
+      ],
+      "window_count": 170
+    }
+  },
+  "jobs": {
+    "Build: ubuntu-latest": {
+      "duration_seconds": 93.5,
+      "durations": [
+        45.0,
+        48.0,
+        42.0,
+        130.0,
+        40.0,
+        114.0,
+        81.0,
+        116.0,
+        152.0,
+        106.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0,
+        6.0,
+        6.0,
+        2.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            7.0,
+            6.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            6.0,
+            7.0,
+            3.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            11.0,
+            6.0,
+            7.0,
+            6.0,
+            9.0,
+            9.0,
+            7.0,
+            18.0,
+            7.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            21.0,
+            21.0,
+            23.0,
+            21.0,
+            22.0,
+            23.0,
+            21.0,
+            24.0,
+            27.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            88.0,
+            3.0,
+            71.0,
+            37.0,
+            78.0,
+            95.0,
+            64.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 50.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Build: windows-2025": {
+      "duration_seconds": 101.0,
+      "durations": [
+        146.0,
+        99.0,
+        119.0,
+        90.0,
+        115.0,
+        100.0,
+        102.0,
+        96.0,
+        116.0,
+        98.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            11.0,
+            9.0,
+            9.0,
+            9.0,
+            10.0,
+            10.0,
+            9.0,
+            9.0,
+            11.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0,
+            15.0,
+            31.0,
+            15.0,
+            27.0,
+            18.0,
+            17.0,
+            19.0,
+            27.0,
+            18.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            37.0,
+            28.0,
+            38.0,
+            26.0,
+            34.0,
+            29.0,
+            32.0,
+            27.0,
+            25.0,
+            23.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 28.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            62.0,
+            40.0,
+            36.0,
+            35.0,
+            39.0,
+            38.0,
+            38.0,
+            37.0,
+            50.0,
+            42.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 38.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Lint": {
+      "duration_seconds": 218.5,
+      "durations": [
+        220.0,
+        217.0,
+        238.0,
+        216.0,
+        211.0,
+        246.0,
+        192.0,
+        227.0,
+        215.0,
+        232.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        2.0,
+        4.0,
+        4.0,
+        7.0,
+        3.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            6.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            9.0,
+            3.0,
+            4.0,
+            4.0,
+            16.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            15.0,
+            11.0,
+            10.0,
+            12.0,
+            13.0,
+            10.0,
+            14.0,
+            9.0
+          ],
+          "name": "Setup Node",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            21.0,
+            21.0,
+            21.0,
+            21.0,
+            24.0,
+            23.0,
+            22.0,
+            23.0,
+            27.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            69.0,
+            67.0,
+            72.0,
+            68.0,
+            67.0,
+            77.0,
+            48.0,
+            72.0,
+            66.0,
+            72.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 68.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            94.0,
+            93.0,
+            98.0,
+            93.0,
+            89.0,
+            105.0,
+            68.0,
+            98.0,
+            90.0,
+            100.0
+          ],
+          "name": "Lint source code",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 93.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            12.0,
+            11.0,
+            11.0,
+            12.0,
+            7.0,
+            11.0,
+            10.0,
+            11.0
+          ],
+          "name": "Lint publish code",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Type-check files",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (E2E): ubuntu-latest (node@22)": {
+      "duration_seconds": 628.0,
+      "durations": [
+        581.0,
+        683.0,
+        654.0,
+        587.0,
+        657.0,
+        602.0,
+        555.0,
+        666.0,
+        549.0,
+        675.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        6.0,
+        4.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            5.0,
+            4.0,
+            4.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            9.0,
+            4.0,
+            6.0,
+            5.0,
+            4.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            10.0,
+            10.0,
+            8.0,
+            8.0,
+            10.0,
+            8.0,
+            7.0,
+            10.0,
+            10.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            24.0,
+            20.0,
+            27.0,
+            27.0,
+            20.0,
+            21.0,
+            21.0,
+            18.0,
+            22.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            538.0,
+            633.0,
+            609.0,
+            534.0,
+            605.0,
+            551.0,
+            511.0,
+            621.0,
+            506.0,
+            630.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 578.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (E2E): windows-2025 (node@22)": {
+      "duration_seconds": 947.0,
+      "durations": [
+        863.0,
+        905.0,
+        1034.0,
+        942.0,
+        884.0,
+        1008.0,
+        1048.0,
+        859.0,
+        1003.0,
+        952.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            8.0,
+            11.0,
+            11.0,
+            10.0,
+            8.0,
+            11.0,
+            10.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            16.0,
+            21.0,
+            13.0,
+            16.0,
+            38.0,
+            43.0,
+            17.0,
+            21.0,
+            14.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            25.0,
+            32.0,
+            25.0,
+            28.0,
+            27.0,
+            39.0,
+            28.0,
+            31.0,
+            25.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 27.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0,
+            37.0,
+            41.0,
+            34.0,
+            35.0,
+            41.0,
+            43.0,
+            36.0,
+            39.0,
+            34.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 36.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            101.0,
+            5.0,
+            60.0,
+            103.0,
+            4.0,
+            95.0,
+            92.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            766.0,
+            808.0,
+            918.0,
+            757.0,
+            783.0,
+            825.0,
+            803.0,
+            761.0,
+            799.0,
+            773.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 791.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (Smoke): ubuntu-latest (node@22)": {
+      "duration_seconds": 295.0,
+      "durations": [
+        231.0,
+        251.0,
+        136.0,
+        316.0,
+        235.0,
+        304.0,
+        318.0,
+        315.0,
+        310.0,
+        286.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        2.0,
+        5.0,
+        3.0,
+        6.0,
+        3.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            8.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0,
+            9.0,
+            10.0,
+            13.0,
+            6.0,
+            7.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            5.0
+          ],
+          "name": "Checkout docs",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            53.0,
+            57.0,
+            54.0,
+            55.0,
+            54.0,
+            53.0,
+            56.0,
+            54.0,
+            59.0,
+            53.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 54.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            74.0,
+            3.0,
+            76.0,
+            77.0,
+            77.0,
+            76.0,
+            66.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 70.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove docs translations except for English and Korean",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Check if docs changed",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Build autogenerated docs pages from current astro branch",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            157.0,
+            164.0,
+            58.0,
+            156.0,
+            159.0,
+            150.0,
+            158.0,
+            154.0,
+            155.0,
+            143.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 155.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (Smoke): windows-2025 (node@22)": {
+      "duration_seconds": 448.5,
+      "durations": [
+        360.0,
+        368.0,
+        388.0,
+        509.0,
+        289.0,
+        467.0,
+        471.0,
+        454.0,
+        450.0,
+        447.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        3.0,
+        5.0,
+        5.0,
+        5.0,
+        6.0,
+        7.0,
+        9.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            10.0,
+            9.0,
+            11.0,
+            9.0,
+            10.0,
+            11.0,
+            11.0,
+            9.0,
+            9.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            13.0,
+            14.0,
+            29.0,
+            25.0,
+            16.0,
+            15.0,
+            18.0,
+            17.0,
+            22.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            26.0,
+            32.0,
+            33.0,
+            31.0,
+            28.0,
+            33.0,
+            29.0,
+            27.0,
+            43.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            10.0,
+            10.0,
+            8.0,
+            8.0,
+            9.0,
+            10.0,
+            8.0,
+            9.0
+          ],
+          "name": "Checkout docs",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            83.0,
+            84.0,
+            89.0,
+            94.0,
+            64.0,
+            90.0,
+            87.0,
+            85.0,
+            87.0,
+            84.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 86.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            109.0,
+            4.0,
+            99.0,
+            98.0,
+            91.0,
+            97.0,
+            81.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 86.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Remove docs translations except for English and Korean",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Check if docs changed",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Build autogenerated docs pages from current astro branch",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            209.0,
+            215.0,
+            221.0,
+            215.0,
+            139.0,
+            208.0,
+            209.0,
+            199.0,
+            199.0,
+            193.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 208.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (astro): macos-14 (node@24)": {
+      "duration_seconds": 426.5,
+      "durations": [
+        63.0,
+        395.0,
+        75.0,
+        386.0,
+        84.0,
+        496.0,
+        514.0,
+        529.0,
+        458.0,
+        489.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        6.0,
+        7.0,
+        8.0,
+        7.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            15.0,
+            13.0,
+            14.0,
+            16.0,
+            22.0,
+            14.0,
+            18.0,
+            24.0,
+            13.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            3.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            32.0,
+            19.0,
+            18.0,
+            14.0,
+            23.0,
+            20.0,
+            23.0,
+            74.0,
+            31.0
+          ],
+          "name": "Setup node@24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 21.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            23.0,
+            46.0,
+            29.0,
+            22.0,
+            35.0,
+            29.0,
+            27.0,
+            31.0,
+            34.0,
+            33.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            3.0,
+            53.0,
+            5.0,
+            55.0,
+            66.0,
+            49.0,
+            52.0,
+            45.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 47.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            287.0,
+            2.0,
+            272.0,
+            3.0,
+            355.0,
+            374.0,
+            396.0,
+            265.0,
+            358.0
+          ],
+          "name": "Test astro",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 279.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (astro): ubuntu-latest (node@22)": {
+      "duration_seconds": 382.5,
+      "durations": [
+        52.0,
+        404.0,
+        59.0,
+        347.0,
+        54.0,
+        361.0,
+        466.0,
+        460.0,
+        457.0,
+        429.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        3.0,
+        6.0,
+        6.0,
+        7.0,
+        2.0,
+        6.0,
+        8.0,
+        4.0,
+        6.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            14.0,
+            12.0,
+            11.0,
+            14.0,
+            14.0,
+            15.0,
+            11.0,
+            13.0,
+            14.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            6.0,
+            19.0,
+            4.0,
+            5.0,
+            11.0,
+            5.0,
+            4.0,
+            3.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            9.0,
+            13.0,
+            7.0,
+            7.0,
+            12.0,
+            7.0,
+            9.0,
+            8.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            21.0,
+            23.0,
+            21.0,
+            26.0,
+            22.0,
+            23.0,
+            22.0,
+            22.0,
+            22.0,
+            22.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            345.0,
+            2.0,
+            269.0,
+            2.0,
+            303.0,
+            395.0,
+            408.0,
+            399.0,
+            371.0
+          ],
+          "name": "Test astro",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 324.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (astro): ubuntu-latest (node@24)": {
+      "duration_seconds": 369.5,
+      "durations": [
+        51.0,
+        373.0,
+        71.0,
+        408.0,
+        59.0,
+        399.0,
+        411.0,
+        404.0,
+        366.0,
+        352.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        7.0,
+        7.0,
+        4.0,
+        4.0,
+        5.0,
+        7.0,
+        4.0,
+        5.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            13.0,
+            21.0,
+            13.0,
+            14.0,
+            13.0,
+            14.0,
+            12.0,
+            14.0,
+            13.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            5.0,
+            4.0,
+            8.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            9.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            11.0,
+            6.0,
+            7.0,
+            7.0,
+            10.0,
+            6.0,
+            8.0,
+            9.0
+          ],
+          "name": "Setup node@24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            21.0,
+            23.0,
+            22.0,
+            23.0,
+            22.0,
+            22.0,
+            21.0,
+            22.0,
+            23.0,
+            24.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            315.0,
+            2.0,
+            355.0,
+            1.0,
+            347.0,
+            353.0,
+            354.0,
+            310.0,
+            286.0
+          ],
+          "name": "Test astro",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 312.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (astro): windows-2025 (node@24)": {
+      "duration_seconds": 596.0,
+      "durations": [
+        125.0,
+        541.0,
+        115.0,
+        665.0,
+        209.0,
+        715.0,
+        714.0,
+        597.0,
+        672.0,
+        595.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        13.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        9.0,
+        6.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            21.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            37.0,
+            22.0,
+            23.0,
+            22.0,
+            22.0,
+            26.0,
+            29.0,
+            22.0,
+            20.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            25.0,
+            14.0,
+            16.0,
+            89.0,
+            17.0,
+            19.0,
+            18.0,
+            18.0,
+            12.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 17.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            37.0,
+            28.0,
+            29.0,
+            49.0,
+            31.0,
+            32.0,
+            26.0,
+            27.0,
+            28.0
+          ],
+          "name": "Setup node@24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 29.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            37.0,
+            30.0,
+            38.0,
+            35.0,
+            37.0,
+            39.0,
+            37.0,
+            33.0,
+            35.0,
+            35.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 36.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            66.0,
+            4.0,
+            62.0,
+            65.0,
+            5.0,
+            87.0,
+            5.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            374.0,
+            3.0,
+            489.0,
+            3.0,
+            537.0,
+            525.0,
+            478.0,
+            479.0,
+            490.0
+          ],
+          "name": "Test astro",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 478.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (integrations): macos-14 (node@24)": {
+      "duration_seconds": 406.5,
+      "durations": [
+        81.0,
+        460.0,
+        90.0,
+        541.0,
+        99.0,
+        353.0,
+        515.0,
+        96.0,
+        498.0,
+        469.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        4.0,
+        6.0,
+        5.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        8.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            18.0,
+            18.0,
+            18.0,
+            22.0,
+            18.0,
+            20.0,
+            19.0,
+            20.0,
+            17.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            29.0,
+            23.0,
+            21.0,
+            23.0,
+            17.0,
+            23.0,
+            24.0,
+            28.0,
+            40.0
+          ],
+          "name": "Setup node@24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            48.0,
+            28.0,
+            28.0,
+            30.0,
+            25.0,
+            32.0,
+            30.0,
+            53.0,
+            51.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            43.0,
+            4.0,
+            55.0,
+            76.0,
+            3.0,
+            53.0,
+            68.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            349.0,
+            5.0,
+            419.0,
+            7.0,
+            223.0,
+            351.0,
+            6.0,
+            333.0,
+            278.0
+          ],
+          "name": "Test integrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 250.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (integrations): ubuntu-latest (node@22)": {
+      "duration_seconds": 419.5,
+      "durations": [
+        56.0,
+        481.0,
+        57.0,
+        419.0,
+        90.0,
+        420.0,
+        525.0,
+        493.0,
+        525.0,
+        203.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        3.0,
+        7.0,
+        4.0,
+        3.0,
+        6.0,
+        3.0,
+        3.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            12.0,
+            11.0,
+            12.0,
+            12.0,
+            11.0,
+            14.0,
+            12.0,
+            13.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            8.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            7.0,
+            5.0,
+            10.0,
+            7.0,
+            10.0,
+            6.0,
+            14.0,
+            8.0
+          ],
+          "name": "Setup node@22",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            29.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            21.0,
+            22.0,
+            20.0,
+            21.0,
+            24.0,
+            23.0,
+            23.0,
+            22.0,
+            21.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            421.0,
+            5.0,
+            372.0,
+            6.0,
+            367.0,
+            470.0,
+            437.0,
+            461.0,
+            144.0
+          ],
+          "name": "Test integrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 369.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (integrations): ubuntu-latest (node@24)": {
+      "duration_seconds": 282.0,
+      "durations": [
+        65.0,
+        73.0,
+        55.0,
+        483.0,
+        58.0,
+        442.0,
+        365.0,
+        450.0,
+        462.0,
+        199.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        7.0,
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        7.0,
+        7.0,
+        8.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            16.0,
+            11.0,
+            13.0,
+            13.0,
+            30.0,
+            10.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            10.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            7.0,
+            7.0,
+            8.0,
+            10.0,
+            8.0,
+            8.0,
+            6.0,
+            7.0
+          ],
+          "name": "Setup node@24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            26.0,
+            21.0,
+            22.0,
+            23.0,
+            23.0,
+            18.0,
+            22.0,
+            20.0,
+            23.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            5.0,
+            429.0,
+            4.0,
+            362.0,
+            312.0,
+            389.0,
+            410.0,
+            138.0
+          ],
+          "name": "Test integrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 225.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (integrations): windows-2025 (node@24)": {
+      "duration_seconds": 612.0,
+      "durations": [
+        121.0,
+        680.0,
+        126.0,
+        756.0,
+        135.0,
+        510.0,
+        756.0,
+        601.0,
+        800.0,
+        623.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        2.0,
+        4.0,
+        3.0,
+        7.0,
+        8.0,
+        6.0,
+        6.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Disable git crlf",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            22.0,
+            23.0,
+            24.0,
+            23.0,
+            21.0,
+            24.0,
+            22.0,
+            25.0,
+            27.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            17.0,
+            21.0,
+            17.0,
+            24.0,
+            18.0,
+            16.0,
+            61.0,
+            16.0,
+            38.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            28.0,
+            27.0,
+            31.0,
+            28.0,
+            23.0,
+            30.0,
+            30.0,
+            34.0,
+            29.0
+          ],
+          "name": "Setup node@24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 28.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Pin Deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            37.0,
+            37.0,
+            43.0,
+            36.0,
+            29.0,
+            36.0,
+            42.0,
+            54.0,
+            38.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 37.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            5.0,
+            56.0,
+            5.0,
+            63.0,
+            70.0,
+            4.0,
+            62.0,
+            5.0
+          ],
+          "name": "Build Packages",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            562.0,
+            7.0,
+            575.0,
+            7.0,
+            347.0,
+            570.0,
+            436.0,
+            600.0,
+            478.0
+          ],
+          "name": "Test integrations",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 457.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (language-tools): node-${{ matrix.node_version }}, ${{ matrix.os }}": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 9,
+      "steps": []
+    },
+    "Test (language-tools): node-22.22.2, macos-latest": {
+      "duration_seconds": 183.0,
+      "durations": [
+        183.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0
+          ],
+          "name": "Setup node@22.22.2",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            62.0
+          ],
+          "name": "Build the packages",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 62.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test (Linux)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [],
+          "name": "Test ts-plugin (Linux, flaky)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            49.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 49.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (language-tools): node-22.22.2, ubuntu-latest": {
+      "duration_seconds": 207.0,
+      "durations": [
+        207.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Setup node@22.22.2",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Build the packages",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0
+          ],
+          "name": "Test (Linux)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 43.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            113.0
+          ],
+          "name": "Test ts-plugin (Linux, flaky)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 113.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "Test (language-tools): node-22.22.2, windows-latest": {
+      "duration_seconds": 258.0,
+      "durations": [
+        258.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            11.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0
+          ],
+          "name": "Setup node@22.22.2",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 38.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0
+          ],
+          "name": "Build the packages",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 81.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test (Linux)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [],
+          "name": "Test ts-plugin (Linux, flaky)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            72.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 72.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test (language-tools): node-24.15.0, ubuntu-latest": {
+      "duration_seconds": 213.0,
+      "durations": [
+        213.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Setup PNPM",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Setup node@24.15.0",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Build the packages",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0
+          ],
+          "name": "Test (Linux)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            116.0
+          ],
+          "name": "Test ts-plugin (Linux, flaky)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 116.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "biome-lint": {
+      "duration_seconds": 9.5,
+      "durations": [
+        9.0,
+        8.0,
+        8.0,
+        12.0,
+        10.0,
+        12.0,
+        11.0,
+        8.0,
+        9.0,
+        11.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        2.0,
+        2.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Setup Biome",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run Biome",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "changes": {
+      "duration_seconds": 6.5,
+      "durations": [
+        5.0,
+        6.0,
+        7.0,
+        9.0,
+        5.0,
+        5.0,
+        8.0,
+        5.0,
+        7.0,
+        8.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        5.0,
+        2.0,
+        2.0,
+        5.0,
+        2.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run dorny/paths-filter@d1c1ffe0248fe513906c8e24db8ea791d46f8590",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0d47aeee9a7e16b6d2eb3785498502ac199e791a": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "0f1293d6ec1c4722021518e212542ab947e7f67f": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "2548abf1874f2fdfc7438aab51cfea03424753cc": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "4ba5cd58698b2831df8a123ffe806d7b49b60e50": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "4c422e2603170db2d9fcf476de91763d618d6e9a": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "4f002c953e0dc47da539e8b661e009e61fa1995e": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "76eff3d5fbc5f940acb1dcb341d4b1c9d95fa2a3": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "d1a6204ae39bb71a53c36e32d1fdc06e3de1b59b": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "ddbcccf6cf0087076a56669eb2f0c6d3802d2b27": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+      "f25963683cc83b42b236594ad43d101cd01fcdd5": "40b03c1894602384d809d12a503f9b5360c3b4f4"
+    },
+    "pinned_oid": "40b03c1894602384d809d12a503f9b5360c3b4f4",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

@@ -1,0 +1,625 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-30T23:59:01Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357524,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test tsd",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067207",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:58Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:58Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:14Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:57:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:58Z",
+          "conclusion": "success",
+          "name": "Run npm run test:tsd",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 9,
+          "started_at": "2026-08-30T23:58:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 10,
+          "started_at": "2026-08-30T23:58:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-30T23:58:59Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-30T23:58:36Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357552,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "TypeScript latest",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067208",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:57Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:12Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:57:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:14Z",
+          "conclusion": "success",
+          "name": "Run npm install typescript@latest --legacy-peer-deps",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:34Z",
+          "conclusion": "success",
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "number": 6,
+          "started_at": "2026-08-30T23:58:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 11,
+          "started_at": "2026-08-30T23:58:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 12,
+          "started_at": "2026-08-30T23:58:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-30T23:58:35Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-30T23:59:54Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357570,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test xo",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067209",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:56Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:12Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:53Z",
+          "conclusion": "success",
+          "name": "Run npm run test:xo",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 9,
+          "started_at": "2026-08-30T23:59:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 10,
+          "started_at": "2026-08-30T23:59:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-30T23:59:53Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-30T23:58:46Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357574,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "TypeScript ~7.0.0",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067211",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:57Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:21Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:57:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:23Z",
+          "conclusion": "success",
+          "name": "Run npm install typescript@~7.0.0 --legacy-peer-deps",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:43Z",
+          "conclusion": "success",
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "number": 6,
+          "started_at": "2026-08-30T23:58:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 11,
+          "started_at": "2026-08-30T23:58:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:44Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 12,
+          "started_at": "2026-08-30T23:58:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-30T23:58:44Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-30T23:59:05Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357578,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "TypeScript ~6.0.0",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067212",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:56Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:18Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:19Z",
+          "conclusion": "success",
+          "name": "Run npm install typescript@~6.0.0 --legacy-peer-deps",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:02Z",
+          "conclusion": "success",
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "number": 6,
+          "started_at": "2026-08-30T23:58:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 11,
+          "started_at": "2026-08-30T23:59:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 12,
+          "started_at": "2026-08-30T23:59:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-30T23:59:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-30T23:59:08Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357583,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "TypeScript ~5.9.0",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067210",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:00Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:19Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:58:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:20Z",
+          "conclusion": "success",
+          "name": "Run npm install typescript@~5.9.0 --legacy-peer-deps",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:05Z",
+          "conclusion": "success",
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "number": 6,
+          "started_at": "2026-08-30T23:58:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 11,
+          "started_at": "2026-08-30T23:59:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 12,
+          "started_at": "2026-08-30T23:59:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:59:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-30T23:59:06Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    },
+    {
+      "completed_at": "2026-08-30T23:58:25Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T23:57:51Z",
+      "head_sha": "3919b6481ab4c7a1316a6fed9da20b58e470e6a4",
+      "id": 99342357591,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test linter",
+      "run_attempt": 1,
+      "run_id": 33343172506,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000067213",
+      "started_at": "2026-08-30T23:57:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T23:57:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T23:57:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:57:55Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 3,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:11Z",
+          "conclusion": "success",
+          "name": "Run npm install",
+          "number": 4,
+          "started_at": "2026-08-30T23:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:24Z",
+          "conclusion": "success",
+          "name": "Run npm run test:linter",
+          "number": 5,
+          "started_at": "2026-08-30T23:58:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 9,
+          "started_at": "2026-08-30T23:58:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 10,
+          "started_at": "2026-08-30T23:58:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T23:58:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-30T23:58:24Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI"
+    }
+  ],
+  "run_id": 33343172506
+}

@@ -1,0 +1,7 @@
+name: setup
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/node
+    - run: npm ci
+      shell: bash

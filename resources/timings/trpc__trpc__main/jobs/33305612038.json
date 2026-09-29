@@ -1,0 +1,4113 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-30T10:06:29Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:05:14Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241514902,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "build",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087338",
+      "started_at": "2026-08-30T10:05:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:05:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:05:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:05:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:05:52Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:05:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:15Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 4,
+          "started_at": "2026-08-30T10:05:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:28Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 7,
+          "started_at": "2026-08-30T10:06:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 8,
+          "started_at": "2026-08-30T10:06:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-30T10:06:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:18Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:05:14Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241514929,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "unit and integration tests",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087339",
+      "started_at": "2026-08-30T10:05:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:05:20Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:05:27Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:05:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:04Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:05:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:53Z",
+          "conclusion": "success",
+          "name": "Run MUTE_REACT_ACT_WARNINGS=1 pnpm test --coverage",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:53Z",
+          "conclusion": "success",
+          "name": "Verify committed openapi test fixtures",
+          "number": 5,
+          "started_at": "2026-08-30T10:08:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:59Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:08:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:16Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 11,
+          "started_at": "2026-08-30T10:08:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 12,
+          "started_at": "2026-08-30T10:09:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-30T10:09:16Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:06:42Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:05:14Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241515000,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "typecheck",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087340",
+      "started_at": "2026-08-30T10:05:17Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:05:18Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:05:24Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:05:58Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:05:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:22Z",
+          "conclusion": "success",
+          "name": "Run pnpm typecheck-packages",
+          "number": 4,
+          "started_at": "2026-08-30T10:05:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:40Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 7,
+          "started_at": "2026-08-30T10:06:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:40Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 8,
+          "started_at": "2026-08-30T10:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-30T10:06:40Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:07:47Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653158,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test a monorepo using built declaration files",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087342",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:14Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:33Z",
+          "conclusion": "success",
+          "name": "Run pnpm monotest-build",
+          "number": 4,
+          "started_at": "2026-08-30T10:07:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:46Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:14Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653183,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (Deno) (deno-deploy)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087356",
+      "started_at": "2026-08-30T10:06:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:22Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 4,
+          "started_at": "2026-08-30T10:07:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run denoland/setup-deno@v1",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run deno --version",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:54Z",
+          "conclusion": "success",
+          "name": "Run cd ./examples/deno-deploy",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:11Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 13,
+          "started_at": "2026-08-30T10:07:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 14,
+          "started_at": "2026-08-30T10:08:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-08-30T10:08:12Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:11Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653197,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Release using pkg.pr.new",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087343",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:13Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:36Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 4,
+          "started_at": "2026-08-30T10:07:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:52Z",
+          "conclusion": "success",
+          "name": "Run pnpx pkg-pr-new publish './packages/*'",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:08Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:09Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-30T10:09:08Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:18Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653255,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-legacy-node (next-prisma-todomvc, 20.x)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087344",
+      "started_at": "2026-08-30T10:06:33Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:36Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:44Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:52Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:26Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:51Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:59Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:59Z",
+          "conclusion": "success",
+          "name": "Run node -v",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:16Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc test-dev",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:44Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc build",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:49Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc typecheck",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc test-start",
+          "number": 11,
+          "started_at": "2026-08-30T10:08:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:58Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:15Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:15Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 22,
+          "started_at": "2026-08-30T10:09:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-30T10:09:15Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:07:54Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653260,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "typecheck-www",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087347",
+      "started_at": "2026-08-30T10:06:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:23Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:42Z",
+          "conclusion": "success",
+          "name": "Run pnpm typecheck-www",
+          "number": 4,
+          "started_at": "2026-08-30T10:07:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:53Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:53Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653289,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-legacy-node (next-prisma-starter, 18.x)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087345",
+      "started_at": "2026-08-30T10:06:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:40Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:45Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:18Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:43Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run node -v",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter test-dev",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:20Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter build",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:25Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter typecheck",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:05Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter test-start",
+          "number": 11,
+          "started_at": "2026-08-30T10:08:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:21Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:22Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:22Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 22,
+          "started_at": "2026-08-30T10:09:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-30T10:09:22Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:20Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653292,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (Bun) (bun, ubuntu-latest)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087355",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:26Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 4,
+          "started_at": "2026-08-30T10:07:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:51Z",
+          "conclusion": "success",
+          "name": "Run oven-sh/setup-bun@v2",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:51Z",
+          "conclusion": "success",
+          "name": "Run bun --version",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:54Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/bun test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:55Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/bun build",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:59Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/bun typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:03Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/bun test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:05Z",
+          "conclusion": "success",
+          "name": "Post Run oven-sh/setup-bun@v2",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:18Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:18Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:08Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653309,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-legacy-node (next-prisma-websockets-starter, 18.x)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087348",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:35Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:51Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:42Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:04Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:04Z",
+          "conclusion": "success",
+          "name": "Run node -v",
+          "number": 7,
+          "started_at": "2026-08-30T10:08:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:29Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter test-dev",
+          "number": 8,
+          "started_at": "2026-08-30T10:08:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter build",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter typecheck",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter test-start",
+          "number": 11,
+          "started_at": "2026-08-30T10:08:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:57Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:04Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:05Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 22,
+          "started_at": "2026-08-30T10:09:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:05Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-30T10:09:05Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:09Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653337,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-legacy-node (next-prisma-todomvc, 18.x)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087346",
+      "started_at": "2026-08-30T10:06:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:40Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:45Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:18Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:42Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:50Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:50Z",
+          "conclusion": "success",
+          "name": "Run node -v",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:14Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc test-dev",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:40Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc build",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:45Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc typecheck",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:54Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc test-start",
+          "number": 11,
+          "started_at": "2026-08-30T10:08:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:07Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:08Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:08Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 22,
+          "started_at": "2026-08-30T10:09:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:08Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-30T10:09:08Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653344,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-legacy-node (next-prisma-starter, 20.x)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087354",
+      "started_at": "2026-08-30T10:06:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:40Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:45Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:17Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:42Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:49Z",
+          "conclusion": "success",
+          "name": "Run node -v",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter test-dev",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:18Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter build",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:22Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter typecheck",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:04Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter test-start",
+          "number": 11,
+          "started_at": "2026-08-30T10:08:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:21Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:21Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:22Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 22,
+          "started_at": "2026-08-30T10:09:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-30T10:09:22Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:11:34Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653396,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "e2e-legacy-node (next-prisma-websockets-starter, 20.x)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087371",
+      "started_at": "2026-08-30T10:08:48Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:50Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:58Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:51Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:09:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:14Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:21Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 6,
+          "started_at": "2026-08-30T10:10:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:21Z",
+          "conclusion": "success",
+          "name": "Run node -v",
+          "number": 7,
+          "started_at": "2026-08-30T10:10:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:37Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter test-dev",
+          "number": 8,
+          "started_at": "2026-08-30T10:10:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:10Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter build",
+          "number": 9,
+          "started_at": "2026-08-30T10:10:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:11Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter typecheck",
+          "number": 10,
+          "started_at": "2026-08-30T10:11:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:18Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter test-start",
+          "number": 11,
+          "started_at": "2026-08-30T10:11:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:11:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:31Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 20,
+          "started_at": "2026-08-30T10:11:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 21,
+          "started_at": "2026-08-30T10:11:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:32Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 22,
+          "started_at": "2026-08-30T10:11:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-08-30T10:11:32Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:02Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653439,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (.experimental/next-app-dir)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087351",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:41Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:46Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:20Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:43Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:43Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/.experimental/next-app-dir/.env.example ./examples/.experimental/next-app-dir/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.experimental/next-app-dir test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:33Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.experimental/next-app-dir build",
+          "number": 8,
+          "started_at": "2026-08-30T10:08:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:34Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.experimental/next-app-dir typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:42Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.experimental/next-app-dir test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:59Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:59Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:59Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:23Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653444,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (fastify-server)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087349",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:42Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:24Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:48Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/fastify-server/.env.example ./examples/fastify-server/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:55Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/fastify-server test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/fastify-server build",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:00Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/fastify-server typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:07Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/fastify-server test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:21Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:21Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:21Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:21Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:21Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:37Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653447,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (nuxt)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087350",
+      "started_at": "2026-08-30T10:06:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:41Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:46Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:25Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:43Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:43Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/nuxt/.env.example ./examples/nuxt/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:07Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/nuxt test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/nuxt build",
+          "number": 8,
+          "started_at": "2026-08-30T10:08:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:14Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/nuxt typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:24Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/nuxt test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:35Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:35Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:35Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:46Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653448,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (next-minimal-starter)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087352",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:41Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:46Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:22Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/next-minimal-starter/.env.example ./examples/next-minimal-starter/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:47Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-minimal-starter test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:07Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-minimal-starter build",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:08Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-minimal-starter typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:26Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-minimal-starter test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:43Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:44Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:44Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:44Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:44Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:07Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653450,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (.test/diagnostics-big-router)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087353",
+      "started_at": "2026-08-30T10:06:31Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:39Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:44Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:15Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:40Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:40Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/.test/diagnostics-big-router/.env.example ./examples/.test/diagnostics-big-router/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:41Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/diagnostics-big-router test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/diagnostics-big-router build",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:46Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/diagnostics-big-router typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:47Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/diagnostics-big-router test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:07:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:05Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:07:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:05Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:06Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:06Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:10:03Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653469,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (cloudflare-workers)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087364",
+      "started_at": "2026-08-30T10:08:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:23Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:37Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:42Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:23Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:44Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:44Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/cloudflare-workers/.env.example ./examples/cloudflare-workers/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:48Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/cloudflare-workers test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:49Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/cloudflare-workers build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:49Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/cloudflare-workers typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/cloudflare-workers test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:01Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:09:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:10:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:01Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:10:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:10:01Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:40Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653473,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (next-formdata)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087357",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:33Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:41Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:46Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:16Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:40Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:40Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/next-formdata/.env.example ./examples/next-formdata/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:41Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-formdata test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:01Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-formdata build",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:02Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-formdata typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-formdata test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:38Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:39Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:39Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:39Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653475,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (express-server)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087362",
+      "started_at": "2026-08-30T10:08:09Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:10Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:21Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:26Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:10Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:28Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:28Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/express-server/.env.example ./examples/express-server/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:31Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-server test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:32Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-server build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:34Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-server typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:38Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-server test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:49Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:50Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:35Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:29Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653477,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (minimal-react)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087359",
+      "started_at": "2026-08-30T10:06:44Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:45Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:51Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:27Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:51Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:51Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/minimal-react/.env.example ./examples/minimal-react/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:03Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/minimal-react test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:10Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/minimal-react build",
+          "number": 8,
+          "started_at": "2026-08-30T10:08:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:10Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/minimal-react typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:16Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/minimal-react test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:33Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:33Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:34Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:34Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:43Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653485,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (standalone-server)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087361",
+      "started_at": "2026-08-30T10:07:56Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:07:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:07:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:12Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:07:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:59Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:18Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:08:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:18Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/standalone-server/.env.example ./examples/standalone-server/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:22Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/standalone-server test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:23Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/standalone-server build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:25Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/standalone-server typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:29Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/standalone-server test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:41Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:09:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:41Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:41Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:11:20Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653486,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (next-prisma-starter)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087368",
+      "started_at": "2026-08-30T10:08:39Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:49Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:55Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:31Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:55Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:55Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/next-prisma-starter/.env.example ./examples/next-prisma-starter/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:56Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:24Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:10:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:59Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-starter test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:10:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:17Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:10:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:11:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:17Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:11:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:17Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:11:17Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:56Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653488,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (.test/internal-types-export)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087365",
+      "started_at": "2026-08-30T10:08:25Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:27Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:33Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:09Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:33Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:33Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/.test/internal-types-export/.env.example ./examples/.test/internal-types-export/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:33Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/internal-types-export test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:39Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/internal-types-export build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:39Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/internal-types-export typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:41Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/internal-types-export test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:54Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:09:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:54Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:54Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:54Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:54Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:37Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653496,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (soa)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087360",
+      "started_at": "2026-08-30T10:07:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:07:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:01Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:07:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:41Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:07Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:08:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:07Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/soa/.env.example ./examples/soa/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/soa test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:15Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/soa build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:16Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/soa typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:17Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/soa test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:34Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:09:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:34Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:34Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:34Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:11:24Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653516,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (next-prisma-todomvc)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087369",
+      "started_at": "2026-08-30T10:08:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:01Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:09:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:51Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:09:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:12Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/next-prisma-todomvc/.env.example ./examples/next-prisma-todomvc/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:10:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:36Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:10:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc build",
+          "number": 8,
+          "started_at": "2026-08-30T10:10:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:01Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:10:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-todomvc test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:11:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:21Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:11:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:21Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:11:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:22Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:11:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:22Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:11:22Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:08:39Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653517,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (.test/ssg)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087358",
+      "started_at": "2026-08-30T10:06:32Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:06:34Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:06:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:43Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:06:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:06:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:06:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:18Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:06:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:42Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:42Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/.test/ssg/.env.example ./examples/.test/ssg/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:07:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:07:59Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/ssg test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:07:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:18Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/ssg build",
+          "number": 8,
+          "started_at": "2026-08-30T10:07:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:19Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/ssg typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:08:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:24Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/.test/ssg test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:08:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:36Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:08:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:08:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:37Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:08:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:08:37Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:10:21Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653524,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (openapi-codegen)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087366",
+      "started_at": "2026-08-30T10:08:37Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:47Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:52Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:31Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:49Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:49Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/openapi-codegen/.env.example ./examples/openapi-codegen/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:53Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/openapi-codegen test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:56Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/openapi-codegen build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:02Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/openapi-codegen typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:08Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/openapi-codegen test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:10:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:19Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:10:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:19Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:10:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:20Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:10:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:20Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:10:20Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:11:15Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653527,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (next-prisma-websockets-starter)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087367",
+      "started_at": "2026-08-30T10:08:37Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:39Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:46Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:52Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:32Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:56Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:56Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/next-prisma-websockets-starter/.env.example ./examples/next-prisma-websockets-starter/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:19Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter build",
+          "number": 8,
+          "started_at": "2026-08-30T10:10:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:51Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:10:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:00Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/next-prisma-websockets-starter test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:10:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:13Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:11:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:11:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:13Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:11:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:11:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:11:13Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:09:52Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653529,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (vercel-edge-runtime)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087363",
+      "started_at": "2026-08-30T10:08:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:27Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:05Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:29Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:29Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/vercel-edge-runtime/.env.example ./examples/vercel-edge-runtime/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:33Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/vercel-edge-runtime test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:34Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/vercel-edge-runtime build",
+          "number": 8,
+          "started_at": "2026-08-30T10:09:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:35Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/vercel-edge-runtime typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:36Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/vercel-edge-runtime test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:09:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:49Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:09:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:09:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:09:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:50Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:09:50Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    },
+    {
+      "completed_at": "2026-08-30T10:10:25Z",
+      "conclusion": "success",
+      "created_at": "2026-08-30T10:06:30Z",
+      "head_sha": "ffd984a61a38a00eb1561d99167536abf2e94725",
+      "id": 99241653541,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "E2E-tests (express-minimal)",
+      "run_attempt": 1,
+      "run_id": 33305612038,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000087370",
+      "started_at": "2026-08-30T10:08:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-30T10:08:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-30T10:08:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:52Z",
+          "conclusion": "success",
+          "name": "Initialize containers",
+          "number": 2,
+          "started_at": "2026-08-30T10:08:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:08:58Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 3,
+          "started_at": "2026-08-30T10:08:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:31Z",
+          "conclusion": "success",
+          "name": "Run ./.github/setup",
+          "number": 4,
+          "started_at": "2026-08-30T10:08:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:57Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 5,
+          "started_at": "2026-08-30T10:09:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:09:57Z",
+          "conclusion": "success",
+          "name": "Run cp ./examples/express-minimal/.env.example ./examples/express-minimal/.env || true",
+          "number": 6,
+          "started_at": "2026-08-30T10:09:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:01Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-minimal test-dev",
+          "number": 7,
+          "started_at": "2026-08-30T10:09:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:02Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-minimal build",
+          "number": 8,
+          "started_at": "2026-08-30T10:10:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:05Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-minimal typecheck",
+          "number": 9,
+          "started_at": "2026-08-30T10:10:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm turbo --filter ./examples/express-minimal test-start",
+          "number": 10,
+          "started_at": "2026-08-30T10:10:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:24Z",
+          "conclusion": "success",
+          "name": "Post Run ./.github/setup",
+          "number": 18,
+          "started_at": "2026-08-30T10:10:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 19,
+          "started_at": "2026-08-30T10:10:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:24Z",
+          "conclusion": "success",
+          "name": "Stop containers",
+          "number": 20,
+          "started_at": "2026-08-30T10:10:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-30T10:10:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-30T10:10:24Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "main"
+    }
+  ],
+  "run_id": 33305612038
+}

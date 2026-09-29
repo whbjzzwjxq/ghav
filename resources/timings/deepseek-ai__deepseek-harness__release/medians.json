@@ -1,0 +1,218 @@
+{
+  "benchmark": "deepseek-ai/deepseek-harness@dd6322d604e00eec1ba5e0c8541159906a21094a:.github/workflows/release.yml",
+  "benchmark_id": "deepseek-ai__deepseek-harness__release",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        31701562303
+      ],
+      "window_count": 1
+    }
+  },
+  "jobs": {
+    "Pack npm tarballs": {
+      "duration_seconds": 404.0,
+      "durations": [
+        404.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        7.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            16.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run pnpm/action-setup@v4",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Configure pnpm store path",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Run actions/cache/restore@v4",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0
+          ],
+          "name": "Install (immutable)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Verify release version",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            125.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 125.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            124.0
+          ],
+          "name": "Pack release tarballs",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 124.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Pack the vendored framework for verification",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Pack the Landlock entry for verification",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            84.0
+          ],
+          "name": "Verify packed install",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 84.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/upload-artifact@v4",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Publish to npm": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 1,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "47f943859bef60e4160492346772ded9b24f765a": "2e20c215fdfe0545017acb9da81d184096f9d771"
+    },
+    "pinned_oid": "ad6c64ae67276342fd5ac114fe767068d16699e2",
+    "runs_same_version": 0,
+    "runs_total": 1
+  }
+}

@@ -1,0 +1,108 @@
+name: Frozen
+on: push
+jobs:
+  with-container:
+    runs-on: ubuntu-latest
+    container: node:20
+    steps:
+      - run: npm test
+  with-services:
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis
+    steps:
+      - run: npm test
+  job-coe:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - run: npm test
+  job-coe-false:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    steps:
+      - run: npm test
+  job-timeout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: npm test
+  step-timeout:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
+        timeout-minutes: 5
+      - run: npm run lint
+        continue-on-error: true
+  job-concurrency:
+    runs-on: ubuntu-latest
+    concurrency: deploy
+    steps:
+      - run: npm test
+  remote:
+    uses: octo-org/octo-repo/.github/workflows/reusable.yml@v1
+  self-hosted:
+    runs-on: [self-hosted, linux]
+    steps:
+      - run: npm test
+  max-par:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      matrix:
+        shard: [1, 2]
+    steps:
+      - run: npm test -- --shard=${{ matrix.shard }}
+  opaque-out:
+    runs-on: ubuntu-latest
+    outputs:
+      key: ${{ fromJSON(steps.a.outputs.json).key }}
+    steps:
+      - id: a
+        run: echo 'json={"key":1}' >> "$GITHUB_OUTPUT"
+  env-job:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - run: npm publish
+  dyn-matrix:
+    needs: opaque-out
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJSON(needs.opaque-out.outputs.key) }}
+    steps:
+      - run: echo ${{ matrix.x }}
+  dyn-runs-on:
+    runs-on: ${{ github.repository == 'a/b' && 'ubuntu-latest' || 'macos-latest' }}
+    steps:
+      - run: npm test
+  runner-group:
+    runs-on:
+      group: large
+      labels: ubuntu-latest
+    steps:
+      - run: npm test
+  plain:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
+  self-hosted-dynamic:
+    runs-on: [self-hosted, "JobId=x-${{ github.run_id }}"]
+    steps:
+      - run: npm test
+  parallel-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm ci
+      - parallel:
+          - run: npm run lint
+          - run: npm test
+  coe-matrix:
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      matrix:
+        experimental: [true, false]
+    steps:
+      - run: npm test

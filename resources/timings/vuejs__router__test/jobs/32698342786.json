@@ -1,0 +1,137 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-24T06:42:05Z",
+      "conclusion": "success",
+      "created_at": "2026-08-24T06:41:20Z",
+      "head_sha": "8f47fc5baacc29ebe3f897fac8bd712ba83898b6",
+      "id": 97344697447,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "build",
+      "run_attempt": 1,
+      "run_id": 32698342786,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000193620",
+      "started_at": "2026-08-24T06:41:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-24T06:41:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-24T06:41:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:25Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "started_at": "2026-08-24T06:41:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:32Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 3,
+          "started_at": "2026-08-24T06:41:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:36Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 4,
+          "started_at": "2026-08-24T06:41:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:40Z",
+          "conclusion": "success",
+          "name": "Run pnpm install --frozen-lockfile",
+          "number": 5,
+          "started_at": "2026-08-24T06:41:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:43Z",
+          "conclusion": "success",
+          "name": "Run pnpm run lint",
+          "number": 6,
+          "started_at": "2026-08-24T06:41:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:49Z",
+          "conclusion": "success",
+          "name": "Run pnpm run -r build",
+          "number": 7,
+          "started_at": "2026-08-24T06:41:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:41:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm run -r test:types",
+          "number": 8,
+          "started_at": "2026-08-24T06:41:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:42:01Z",
+          "conclusion": "success",
+          "name": "Run pnpm run -r test:unit",
+          "number": 9,
+          "started_at": "2026-08-24T06:41:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:42:03Z",
+          "conclusion": "success",
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "number": 10,
+          "started_at": "2026-08-24T06:42:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:42:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 18,
+          "started_at": "2026-08-24T06:42:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:42:03Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 19,
+          "started_at": "2026-08-24T06:42:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:42:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "started_at": "2026-08-24T06:42:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-24T06:42:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-24T06:42:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test"
+    }
+  ],
+  "run_id": 32698342786
+}

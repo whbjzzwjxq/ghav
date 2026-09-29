@@ -1,0 +1,415 @@
+name: Build CLI Binaries
+
+on:
+  push:
+    branches: [next]
+    paths:
+      - 'ts/packages/cli/**'
+      - 'ts/packages/cli-local-tools/**'
+      - '.github/actions/setup-node-pnpm-bun/action.yml'
+      - '.github/scripts/cli-release/**'
+      - '.github/workflows/build-cli-binaries.yml'
+      - 'install.sh'
+      - 'install/**'
+      - 'mise.toml'
+      - 'mise.lock'
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to do (select the beta tag as the workflow ref for promote-stable)'
+        type: choice
+        options:
+          - build-beta
+          - promote-stable
+        default: build-beta
+      version:
+        description: 'Optional semver base for a manual beta (e.g. 0.3.0); omit for the next patch after latest stable'
+        required: false
+
+# Least privilege by default: only the release job creates/edits releases and uploads assets.
+# `prepare` reads releases (gh release list) and `build` uploads workflow artifacts — both work
+# with read access. The release job opts up to `contents: write` for itself.
+permissions:
+  contents: read
+
+# Print Turborepo telemetry events to the logs instead of sending them.
+env:
+  TURBO_TELEMETRY_DEBUG: 1
+
+jobs:
+  prepare:
+    name: Resolve Release Metadata
+    runs-on: ubuntu-latest
+    outputs:
+      release_name: ${{ steps.resolve.outputs.release_name }}
+      release_tag: ${{ steps.resolve.outputs.release_tag }}
+      release_version: ${{ steps.resolve.outputs.release_version }}
+      prerelease: ${{ steps.resolve.outputs.prerelease }}
+      make_latest: ${{ steps.resolve.outputs.make_latest }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Resolve release target
+        id: resolve
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          ACTION_INPUT: ${{ inputs.action }}
+          VERSION_INPUT: ${{ inputs.version }}
+          REF_NAME: ${{ github.ref_name }}
+          REF_TYPE: ${{ github.ref_type }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_NUMBER: ${{ github.run_number }}
+          COMMIT_SHA: ${{ github.sha }}
+        run: bash .github/scripts/cli-release/resolve-release-target.sh
+
+      # The baked toolkit slugs decide whether `composio execute` resolves a
+      # toolkit locally or pays for a catalog fetch. A stale list is never
+      # wrong, only slow, so this warns and never blocks a release.
+      # Refresh with the `CLI - Update Toolkit Slugs` workflow.
+      - name: Check baked toolkit slugs freshness
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          refreshed_at=$(sed -n "s/.*BAKED_TOOLKIT_SLUGS_REFRESHED_AT = '\(.*\)'.*/\1/p" \
+            ts/packages/cli/src/generated/toolkit-slugs.ts)
+          age_days=$(( ( $(date -u +%s) - $(date -u -d "$refreshed_at" +%s) ) / 86400 ))
+          echo "Baked toolkit slugs were refreshed $age_days day(s) ago ($refreshed_at)."
+          if [ "$age_days" -gt 14 ]; then
+            echo "::warning::Baked toolkit slugs are $age_days days old. Run the 'CLI - Update Toolkit Slugs' workflow."
+          fi
+
+  build:
+    name: Build ${{ matrix.artifact }}
+    needs: prepare
+    if: needs.prepare.result == 'success'
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      # Never publish a partial platform set: with fail-fast disabled, the build job's
+      # result is `success` only when EVERY matrix leg passes, so a single failure makes
+      # `needs.build.result != 'success'` and the release job is skipped. It also surfaces
+      # all platform failures at once instead of cancelling siblings on the first error.
+      fail-fast: false
+      matrix:
+        include:
+          - target: bun-linux-x64
+            artifact: composio-linux-x64
+            runner: ubuntu-latest
+            local_tools_target: ''
+            codex_target: linux-x64
+          - target: bun-linux-arm64
+            artifact: composio-linux-aarch64
+            runner: ubuntu-latest
+            local_tools_target: ''
+            codex_target: linux-arm64
+          - target: bun-darwin-x64
+            artifact: composio-darwin-x64
+            runner: macos-15-intel
+            local_tools_target: ''
+            codex_target: darwin-x64
+          - target: bun-darwin-arm64
+            artifact: composio-darwin-aarch64
+            runner: macos-15
+            local_tools_target: darwin-arm64
+            codex_target: darwin-arm64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Setup Node.js, pnpm, Bun
+        uses: ./.github/actions/setup-node-pnpm-bun
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Setup Swift 6.2 for local-tool sidecars
+        if: matrix.local_tools_target != ''
+        uses: swift-actions/setup-swift@364295d9c23900ce04d4e5cc708387921b4e50f9 # v3
+        with:
+          swift-version: '6.2'
+
+      - name: Verify Swift toolchain
+        if: matrix.local_tools_target != ''
+        run: swift --version
+
+      - name: Build packages
+        run: pnpm build:packages
+
+      - name: Build local-tool sidecar binaries
+        if: matrix.local_tools_target != ''
+        run: pnpm --filter @composio/cli-local-tools build:local-tool-binaries -- --target ${{ matrix.local_tools_target }}
+
+      - name: Verify local-tool sidecars
+        if: matrix.local_tools_target != ''
+        run: |
+          test -x ts/packages/cli-local-tools/local-tools-binaries/beeper-imessage/${{ matrix.local_tools_target }}/imessage-cli
+          test -x ts/packages/cli-local-tools/local-tools-binaries/peekaboo/${{ matrix.local_tools_target }}/peekaboo
+          test -x ts/packages/cli-local-tools/local-tools-binaries/composio-native-ui/${{ matrix.local_tools_target }}/composio-native-ui
+
+      - name: Cross-compile CLI binary
+        working-directory: ts/packages/cli
+        env:
+          COMPOSIO_POSTHOG_PROJECT_API_KEY: ${{ vars.COMPOSIO_POSTHOG_PROJECT_API_KEY }}
+          RELEASE_TAG: ${{ needs.prepare.outputs.release_tag }}
+        run: pnpm build:binary:cross --target ${{ matrix.target }}
+
+      - name: Verify binary
+        working-directory: ts/packages/cli
+        run: |
+          ls -la dist/binaries/${{ matrix.artifact }}
+          file dist/binaries/${{ matrix.artifact }}
+
+      - name: Verify binary version
+        if: matrix.target == 'bun-linux-x64'
+        working-directory: ts/packages/cli
+        run: |
+          expected_version='${{ needs.prepare.outputs.release_tag }}'
+          test "$(./dist/binaries/${{ matrix.artifact }} --version)" = "${expected_version#@composio/cli@}"
+
+      - name: Test binary
+        if: matrix.target == 'bun-linux-x64'
+        working-directory: ts/packages/cli
+        env:
+          COMPOSIO_USER_API_KEY: test-dummy-api-key-for-ci
+        run: |
+          ./dist/binaries/${{ matrix.artifact }} --version
+          ./dist/binaries/${{ matrix.artifact }} --help | head -5
+
+      - name: Create archive
+        working-directory: ts/packages/cli
+        env:
+          RELEASE_TAG: ${{ needs.prepare.outputs.release_tag }}
+        run: pnpm build:binary:package
+
+      - name: Verify release metadata in archive
+        working-directory: ts/packages/cli
+        run: unzip -p dist/binaries/${{ matrix.artifact }}.zip ${{ matrix.artifact }}/release-tag.txt | grep -Fx '${{ needs.prepare.outputs.release_tag }}'
+
+      - name: Verify companion adapters in archive
+        working-directory: ts/packages/cli
+        env:
+          ARCHIVE: dist/binaries/${{ matrix.artifact }}.zip
+          ARTIFACT: ${{ matrix.artifact }}
+          HOST_CODEX_TARGET: ${{ matrix.codex_target }}
+        run: bash "${{ github.workspace }}/.github/scripts/cli-release/verify-archive-companions.sh"
+
+      - name: Verify local-tool sidecars in archive
+        if: matrix.local_tools_target != ''
+        working-directory: ts/packages/cli
+        run: |
+          unzip -Z1 dist/binaries/${{ matrix.artifact }}.zip | grep -F "local-tools-binaries/beeper-imessage/${{ matrix.local_tools_target }}/imessage-cli"
+          unzip -Z1 dist/binaries/${{ matrix.artifact }}.zip | grep -F "local-tools-binaries/peekaboo/${{ matrix.local_tools_target }}/peekaboo"
+          unzip -Z1 dist/binaries/${{ matrix.artifact }}.zip | grep -F "local-tools-binaries/composio-native-ui/${{ matrix.local_tools_target }}/composio-native-ui"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: ${{ matrix.artifact }}
+          path: ts/packages/cli/dist/binaries/${{ matrix.artifact }}.zip
+          retention-days: 7
+
+  release:
+    name: Release (draft → verify → publish)
+    needs: [prepare, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # create/edit the GitHub Release and upload assets
+    # fail-fast: false on the build matrix ⇒ this is `success` only if ALL platforms built,
+    # so a partial set can never reach the release path.
+    if: needs.build.result == 'success'
+    # Serialize runs that target the SAME release tag (e.g. two quick pushes, or a re-run
+    # racing the original) so they cannot interleave uploads. Keyed on the resolved tag so
+    # unrelated beta builds are not serialized behind each other. Job-level concurrency may
+    # read `needs.*` outputs (workflow-level cannot). The serialized loser fails loudly at the
+    # "already published" guard in create-or-resume-draft.sh — that red ❌ is by design.
+    concurrency:
+      group: cli-release-${{ needs.prepare.outputs.release_tag }}
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_TAG: ${{ needs.prepare.outputs.release_tag }}
+      RELEASE_NAME: ${{ needs.prepare.outputs.release_name }}
+      PRERELEASE: ${{ needs.prepare.outputs.prerelease }}
+      MAKE_LATEST: ${{ needs.prepare.outputs.make_latest }}
+      CHECKOUT_REF: ${{ github.sha }}
+      RELEASE_HELPERS_DIR: ${{ github.workspace }}/.release-workflow/.github/scripts/cli-release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Setup Node.js, pnpm, Bun
+        uses: ./.github/actions/setup-node-pnpm-bun
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          path: ts/packages/cli/dist/binaries
+          merge-multiple: true
+
+      # Package skills BEFORE generating checksums so composio-skill.zip is included in
+      # checksums.txt alongside the platform binaries (generate-checksums hashes every .zip
+      # in dist/binaries).
+      - name: Package skill files
+        working-directory: ts/packages/cli
+        env:
+          PRERELEASE: ${{ needs.prepare.outputs.prerelease }}
+        run: |
+          pnpm run validate:skills
+          if [[ "$PRERELEASE" == "true" ]]; then
+            channel=beta
+          else
+            channel=stable
+          fi
+          pnpm run build:skills -- --channel "$channel" --output-dir ./dist/skills
+          cd dist/skills && zip -r ../binaries/composio-skill.zip composio-cli/
+
+      - name: Generate checksums
+        working-directory: ts/packages/cli
+        run: bun run ./scripts/generate-checksums.ts
+
+      - name: Display checksums
+        run: cat ts/packages/cli/dist/binaries/checksums.txt
+
+      - name: Checkout workflow release helpers
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: .release-workflow
+          sparse-checkout: |
+            .github/scripts/cli-release
+          sparse-checkout-cone-mode: false
+
+      # Build the release as a DRAFT first. Drafts fire no `release: published` event and are
+      # excluded from the `/releases/latest` redirect, so no anonymous consumer (install.sh,
+      # the redirect) can ever observe a release before its assets are attached and
+      # verified. The release is only flipped to published as the final step below.
+      - name: Create draft release with all assets
+        run: bash "$RELEASE_HELPERS_DIR/create-or-resume-draft.sh"
+
+      # Loud failure gate: assert the full canonical asset set is attached AND fully uploaded.
+      # An asset can appear in the list while still processing (`state != "uploaded"`), which is
+      # exactly how a release ends up serving 404s, so we require state == "uploaded".
+      - name: Verify all release assets are present and uploaded
+        run: bash "$RELEASE_HELPERS_DIR/verify-assets.sh"
+
+      # Publishing is the ONLY step that exposes the release. Do not edit the body here: a known
+      # GitHub PATCH race drops body changes made in the same call as the draft flip, and the
+      # notes were already generated at draft creation. Prerelease status was set on the draft.
+      - name: Publish release (flip draft → published)
+        run: gh release edit "$RELEASE_TAG" --draft=false --latest="$MAKE_LATEST"
+
+  test-installation:
+    name: Test Installation
+    needs: [prepare, release]
+    if: always() && !cancelled() && needs.release.result == 'success'
+    uses: ./.github/workflows/cli.test-installation.yml
+    with:
+      version: ${{ needs.prepare.outputs.release_tag }}
+
+  create-install-instructions:
+    name: Create Install Instructions
+    needs: [prepare, release]
+    runs-on: ubuntu-latest
+    if: always() && !cancelled() && needs.release.result == 'success'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Create installation README
+        run: |
+          RELEASE_TAG="${{ needs.prepare.outputs.release_tag }}"
+          cat > INSTALL.md << 'EOF'
+          # Composio CLI installation
+
+          ## Quick install
+
+          ```bash
+          curl -fsSL https://composio.dev/install | sh
+          ```
+
+          The installer downloads the CLI and sets up your shell automatically: when
+          your login shell (`$SHELL`) is zsh, bash, or fish, it adds the CLI's
+          directory to `PATH` in that shell's startup file. Re-running the installer
+          never duplicates the entry.
+
+          ### Install without shell setup
+
+          ```bash
+          curl -fsSL https://composio.dev/install | COMPOSIO_INSTALL_SHELL=none sh
+          ```
+
+          Use `COMPOSIO_INSTALL_SHELL=none` in CI, Docker images, or when you manage
+          shell startup files yourself: it installs the CLI and leaves every startup
+          file untouched. Set `COMPOSIO_INSTALL_SHELL=zsh`, `bash`, or `fish` instead
+          to configure a specific shell regardless of `$SHELL`.
+
+          ### Install specific version
+          ```bash
+          curl -fsSL https://composio.dev/install | sh -s -- RELEASE_TAG_PLACEHOLDER
+          ```
+
+          ## Manual Installation
+
+          1. Download the appropriate binary for your platform from the [releases page](https://github.com/ComposioHQ/composio/releases)
+          2. Extract and install the complete bundle. The CLI loads support files shipped next to the executable, so do not move only the nested `composio` file.
+
+          ```bash
+          # Replace this with the downloaded archive name, without ".zip"
+          bundle=composio-linux-x64
+          COMPOSIO_INSTALL_DIR=${COMPOSIO_INSTALL_DIR:-"$HOME/.composio"}
+          COMPOSIO_BIN_DIR=${COMPOSIO_BIN_DIR:-"$HOME/.local/bin"}
+
+          unzip "$bundle.zip"
+          mkdir -p "$COMPOSIO_INSTALL_DIR"
+          cp -Rp "$bundle"/. "$COMPOSIO_INSTALL_DIR/"
+          chmod +x "$COMPOSIO_INSTALL_DIR/composio"
+          mkdir -p "$COMPOSIO_BIN_DIR"
+          if [ "$COMPOSIO_BIN_DIR" != "$COMPOSIO_INSTALL_DIR" ]; then
+            ln -sf "$COMPOSIO_INSTALL_DIR/composio" "$COMPOSIO_BIN_DIR/composio"
+          fi
+          export PATH="$COMPOSIO_BIN_DIR:$PATH"
+          ```
+
+          After a manual installation, run `composio install --shell zsh|bash|fish`
+          (with your shell in place of `zsh|bash|fish`) to add the CLI to your
+          shell's `PATH` permanently.
+
+          ## Usage
+
+          ```bash
+          composio --help
+          composio login
+          composio generate
+          ```
+
+          ## Supported Platforms
+
+          - Linux x64
+          - Linux ARM64
+          - macOS x64 (Intel)
+          - macOS ARM64 (Apple Silicon)
+
+          **Not supported:**
+          - Windows: use [WSL](https://learn.microsoft.com/windows/wsl/install) and run the installer inside your WSL distribution
+          EOF
+          sed -i.bak "s|RELEASE_TAG_PLACEHOLDER|$RELEASE_TAG|g" INSTALL.md && rm -f INSTALL.md.bak
+
+      - name: Upload install instructions
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: install-instructions
+          path: INSTALL.md

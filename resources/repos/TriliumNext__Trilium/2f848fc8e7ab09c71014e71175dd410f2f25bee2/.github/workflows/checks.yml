@@ -1,0 +1,18 @@
+name: Checks
+on:
+  push:
+  pull_request_target:
+    types: [synchronize]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check if PRs have conflicts
+        uses: eps1lon/actions-label-merge-conflict@v3
+        if: ${{ github.repository == vars.REPO_MAIN && github.actor != 'dependabot[bot]' }}
+        with:
+          dirtyLabel: "merge-conflicts"
+          repoToken: "${{ secrets.MERGE_CONFLICT_LABEL_PAT }}"

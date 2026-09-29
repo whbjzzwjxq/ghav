@@ -1,0 +1,452 @@
+{
+  "benchmark": "remix-run/react-router@da2a0f0948af60ba45d9590b427d5e58fe4b0109:.github/workflows/release.yml",
+  "benchmark_id": "remix-run__react-router__release",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33181511150,
+        33180189422,
+        33112606458,
+        33111868054,
+        33111442836
+      ],
+      "window_count": 44
+    }
+  },
+  "jobs": {
+    "Check release readiness": {
+      "duration_seconds": 7.0,
+      "durations": [
+        5.0,
+        7.0,
+        5.0,
+        7.0,
+        7.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Check for change files",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0
+          ],
+          "name": "needs-publish",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 3
+        }
+      ]
+    },
+    "Comment on released issues/pull requests": {
+      "duration_seconds": 83.0,
+      "durations": [
+        83.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 2,
+      "steps": [
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Setup pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            54.0
+          ],
+          "name": "Comment on released issues and pull requests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 54.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Experimental Release": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 3,
+      "steps": []
+    },
+    "Open pull request": {
+      "duration_seconds": 33.0,
+      "durations": [
+        27.0,
+        35.0,
+        33.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 3,
+      "skipped": 2,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            7.0,
+            5.0
+          ],
+          "name": "Checkout",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            6.0
+          ],
+          "name": "Install pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install Node.js",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            13.0,
+            12.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Update PR",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Publish": {
+      "duration_seconds": 114.5,
+      "durations": [
+        135.0,
+        94.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        6.0
+      ],
+      "samples": 2,
+      "skipped": 3,
+      "steps": [
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "⬇️ Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Setup pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "📦 Setup pnpm",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "⎔ Setup node",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Install deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0
+          ],
+          "name": "📥 Install deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            46.0,
+            19.0
+          ],
+          "name": "Build packages",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            48.0
+          ],
+          "name": "Publish to npm and create releases",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 56.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "📝 Comment on released issues/pull requests": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 2,
+      "steps": []
+    },
+    "🧪 Experimental Release": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 2,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "23166dfe7f61323f0d2775af67d2691f9ed0843d": "9e3b85623ea54c0e653de9ae264773ac71cf8014",
+      "2e0bf721591e218611841242ad4077111663f7f5": "fa731c548abcd7b104c755dd224e244c26a51ad1",
+      "917e6fdc0f8beb141e3380e83e27634d7be84e1d": "fa731c548abcd7b104c755dd224e244c26a51ad1",
+      "da2a0f0948af60ba45d9590b427d5e58fe4b0109": "fa731c548abcd7b104c755dd224e244c26a51ad1",
+      "dd336cf6c1335259f950731dfee1268444f8563f": "9e3b85623ea54c0e653de9ae264773ac71cf8014"
+    },
+    "pinned_oid": "fa731c548abcd7b104c755dd224e244c26a51ad1",
+    "runs_same_version": 3,
+    "runs_total": 5
+  }
+}

@@ -1,0 +1,33 @@
+name: Setup workspace
+
+inputs:
+  os:
+    description: Runner OS used for workspace setup
+    required: true
+  node-version:
+    description: Node.js version to install
+    required: true
+
+permissions: # added using https://github.com/step-security/secure-workflows
+  contents: read
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node version ⚙️
+      uses: ./.github/actions/setup-node
+      with:
+        cache-dependency-path: 'package-lock.json'
+        node-version: ${{ inputs.node-version }}
+
+    - name: Restore cached node modules ♻️
+      id: cache-npm
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+      with:
+        path: '**/node_modules'
+        key: ${{ inputs.os }}-${{ inputs.node-version }}-build-${{ hashFiles('package-lock.json') }}
+
+    - name: Install 🔧
+      if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+      run: npm ci --ignore-scripts --prefer-offline
+      shell: bash

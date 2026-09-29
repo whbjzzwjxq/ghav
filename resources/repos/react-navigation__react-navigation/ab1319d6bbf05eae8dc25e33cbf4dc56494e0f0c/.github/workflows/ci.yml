@@ -1,0 +1,79 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Verify dependency versions
+        run: pnpm versions check
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Lint files
+        run: pnpm lint
+
+      - name: Typecheck files
+        run: |
+          pnpm typecheck
+          pnpm typecheck:standalone:static
+          pnpm typecheck:standalone:dynamic
+          pnpm typecheck:declarations
+
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Run unit tests
+        run: pnpm test --maxWorkers=2 --coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@57e3a136b779b570ffcdbf80b3bdc90e7fab3de2
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build packages in the monorepo
+        run: pnpm lerna run prepack
+
+      - name: Verify types are correct
+        run: pnpm typecheck
+
+      - name: Bundle example JavaScript with Metro
+        run: pnpm example exec expo export --platform all
+
+      - name: Bundle example JavaScript with Vite
+        run: pnpm example web build

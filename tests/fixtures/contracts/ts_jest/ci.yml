@@ -1,0 +1,144 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '**'
+    paths:
+      - '**/*'
+      - '!website'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test-ubuntu:
+    permissions:
+      checks: write
+      contents: read
+    uses: ./.github/workflows/test.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20, 22]
+    with:
+      os: ubuntu-latest
+      node-version: ${{ matrix.node-version }}
+
+  test-windows:
+    permissions:
+      checks: write
+      contents: read
+    uses: ./.github/workflows/test.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18, 20, 22]
+    with:
+      os: windows-latest
+      node-version: ${{ matrix.node-version }}
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 20
+          fetch-tags: false
+
+      - name: Setup workspace ⚙️
+        uses: ./.github/actions/setup-workspace
+        with:
+          os: ubuntu-latest
+          node-version: 22
+
+      - name: Run lint 🔍
+        run: npm run lint
+
+      - name: Run prettier 💅
+        run: npm run lint-prettier-ci
+
+  typescript-compatibility:
+    name: ${{ matrix.name }} compatibility
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: TypeScript 4.3
+            packages: typescript@4.3.5
+            test-args: --api-major 4 --compiler-bin tsc
+          - name: TypeScript 5.9
+            packages: typescript@5.9.3
+            test-args: --api-major 5 --compiler-bin tsc
+          - name: TypeScript 6 compatibility API
+            packages: typescript@npm:@typescript/typescript6@6.0.2
+            test-args: --api-major 6 --compiler-bin tsc6
+          - name: TypeScript 7 side-by-side aliases
+            packages: '@typescript/native@npm:typescript@7.0.2 typescript@npm:@typescript/typescript6@6.0.2'
+            test-args: --api-major 6 --compiler-bin tsc --compiler-bin tsc6 --native --check-public-types
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 20
+          fetch-tags: false
+
+      - name: Setup workspace ⚙️
+        uses: ./.github/actions/setup-workspace
+        with:
+          os: ubuntu-latest
+          node-version: 22
+
+      - name: Build with the development compiler 🔧
+        run: npm run build
+
+      - name: Install ${{ matrix.name }} 🔧
+        run: npm install --ignore-scripts --legacy-peer-deps --no-save --package-lock=false ${{ matrix.packages }}
+
+      - name: Run TypeScript compatibility tests 🧪
+        run: node scripts/test-typescript-compatibility.js ${{ matrix.test-args }}
+
+  sonar-scan:
+    permissions:
+      checks: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          fetch-tags: false
+
+      - name: Setup workspace ⚙️
+        uses: ./.github/actions/setup-workspace
+        with:
+          os: ubuntu-latest
+          node-version: 22
+
+      - name: Build 🔧
+        run: |
+          npm run build
+          npm run postbuild
+
+      - name: Collect coverage 🧪
+        run: npm run test -- --coverage
+        env:
+          CI: true
+          DISABLE_MOCKED_WARNING: true
+
+      - name: SonarCloud Scan 📊
+        uses: SonarSource/sonarqube-scan-action@fd88b7d7ccbaefd23d8f36f73b59db7a3d246602 # v6.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

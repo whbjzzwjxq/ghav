@@ -1,0 +1,9107 @@
+{
+  "benchmark": "kysely-org/kysely@b9674df67734fb7a68a2a49bf5b1754a16776481:.github/workflows/test.yml",
+  "benchmark_id": "kysely-org__kysely__test",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33369903879,
+        33279257697,
+        33279223452,
+        32944383024,
+        32944380248
+      ],
+      "window_count": 64
+    },
+    "push": {
+      "runs": [
+        30149644416,
+        29600208991,
+        29599449096,
+        29592552026,
+        29588271897
+      ],
+      "window_count": 11
+    }
+  },
+  "jobs": {
+    "Browser": {
+      "duration_seconds": 60.0,
+      "durations": [
+        49.0,
+        44.0,
+        62.0,
+        50.0,
+        65.0,
+        77.0,
+        64.0,
+        58.0,
+        57.0,
+        63.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        6.0,
+        5.0,
+        5.0,
+        3.0,
+        7.0,
+        6.0,
+        4.0,
+        3.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            8.0,
+            7.0,
+            10.0,
+            6.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            5.0,
+            9.0,
+            4.0,
+            6.0,
+            19.0,
+            10.0,
+            6.0,
+            5.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            6.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            20.0,
+            20.0,
+            29.0,
+            20.0,
+            26.0,
+            23.0,
+            24.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 21.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            10.0,
+            9.0,
+            8.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "install playwright",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "run browser tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bun (1.1.44)": {
+      "duration_seconds": 81.0,
+      "durations": [
+        64.0,
+        58.0,
+        71.0,
+        86.0,
+        71.0,
+        78.0,
+        89.0,
+        84.0,
+        95.0,
+        89.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        6.0,
+        3.0,
+        6.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            8.0,
+            6.0,
+            8.0,
+            7.0,
+            11.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            22.0,
+            22.0,
+            26.0,
+            26.0,
+            26.0,
+            25.0,
+            25.0,
+            36.0,
+            23.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            13.0,
+            10.0,
+            9.0,
+            9.0,
+            12.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            6.0,
+            1.0,
+            3.0,
+            4.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            21.0,
+            24.0,
+            19.0,
+            20.0,
+            27.0,
+            25.0,
+            23.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "use bun 1.1.44",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "run bun tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bun (1.2.23)": {
+      "duration_seconds": 86.5,
+      "durations": [
+        64.0,
+        62.0,
+        79.0,
+        89.0,
+        80.0,
+        87.0,
+        88.0,
+        86.0,
+        115.0,
+        159.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.5,
+      "overheads": [
+        7.0,
+        5.0,
+        5.0,
+        7.0,
+        7.0,
+        6.0,
+        7.0,
+        9.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0,
+            6.0,
+            7.0,
+            13.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            25.0,
+            24.0,
+            37.0,
+            24.0,
+            23.0,
+            25.0,
+            23.0,
+            42.0,
+            53.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            13.0,
+            8.0,
+            10.0,
+            16.0,
+            11.0,
+            10.0,
+            20.0,
+            21.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            4.0,
+            1.0,
+            2.0,
+            7.0,
+            6.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            20.0,
+            19.0,
+            22.0,
+            20.0,
+            27.0,
+            26.0,
+            26.0,
+            49.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "use bun 1.2.23",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "run bun tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Bun (1.3)": {
+      "duration_seconds": 77.5,
+      "durations": [
+        61.0,
+        58.0,
+        79.0,
+        71.0,
+        73.0,
+        83.0,
+        97.0,
+        76.0,
+        90.0,
+        81.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        3.0,
+        4.0,
+        4.0,
+        2.0,
+        7.0,
+        5.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            8.0,
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            6.0,
+            9.0,
+            10.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            24.0,
+            26.0,
+            22.0,
+            24.0,
+            22.0,
+            35.0,
+            23.0,
+            35.0,
+            27.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            10.0,
+            9.0,
+            8.0,
+            15.0,
+            15.0,
+            9.0,
+            8.0,
+            9.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            6.0,
+            1.0,
+            3.0,
+            3.0,
+            6.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            20.0,
+            20.0,
+            20.0,
+            20.0,
+            22.0,
+            24.0,
+            21.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "use bun 1.3",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "run bun tests",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Cloudflare Workers": {
+      "duration_seconds": 82.5,
+      "durations": [
+        64.0,
+        58.0,
+        85.0,
+        71.0,
+        86.0,
+        83.0,
+        82.0,
+        81.0,
+        85.0,
+        144.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            14.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            9.0,
+            5.0,
+            10.0,
+            13.0,
+            11.0,
+            7.0,
+            11.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            4.0,
+            4.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            21.0,
+            21.0,
+            21.0,
+            20.0,
+            25.0,
+            25.0,
+            25.0,
+            30.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            22.0,
+            29.0,
+            23.0,
+            25.0,
+            26.0,
+            23.0,
+            25.0,
+            25.0,
+            74.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            10.0,
+            8.0,
+            9.0,
+            10.0,
+            9.0,
+            9.0
+          ],
+          "name": "run cloudflare workers test",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deno (2.5.x)": {
+      "duration_seconds": 75.0,
+      "durations": [
+        68.0,
+        61.0,
+        75.0,
+        86.0,
+        85.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        7.0,
+        9.0,
+        5.0,
+        8.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            4.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            20.0,
+            24.0,
+            34.0,
+            33.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            7.0,
+            9.0,
+            7.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            6.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "use deno 2.5.x",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            21.0,
+            19.0,
+            18.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "build",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "run deno tests",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "lint for deno/jsr",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deno (2.7.x)": {
+      "duration_seconds": 77.0,
+      "durations": [
+        84.0,
+        57.0,
+        97.0,
+        77.0,
+        72.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        8.0,
+        3.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            37.0,
+            23.0,
+            42.0,
+            23.0,
+            22.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            9.0,
+            8.0,
+            10.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            4.0,
+            2.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "use deno 2.7.x",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            9.0,
+            24.0,
+            22.0,
+            19.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "build",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "run deno tests",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "lint for deno/jsr",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deno (2.9.x)": {
+      "duration_seconds": 79.0,
+      "durations": [
+        76.0,
+        90.0,
+        79.0,
+        83.0,
+        76.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        8.0,
+        5.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            8.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            34.0,
+            25.0,
+            36.0,
+            22.0
+          ],
+          "name": "spin up databases",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            6.0,
+            9.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "use deno 2.9.x",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            21.0,
+            26.0,
+            22.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "build",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "run deno tests",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "lint for deno/jsr",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "JSDocs": {
+      "duration_seconds": 54.5,
+      "durations": [
+        50.0,
+        46.0,
+        52.0,
+        55.0,
+        48.0,
+        61.0,
+        65.0,
+        55.0,
+        59.0,
+        54.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        7.0,
+        4.0,
+        6.0,
+        7.0,
+        3.0,
+        5.0,
+        5.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            7.0,
+            9.0,
+            7.0,
+            8.0,
+            11.0,
+            8.0,
+            9.0,
+            7.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            5.0,
+            6.0,
+            4.0,
+            9.0,
+            12.0,
+            6.0,
+            9.0,
+            5.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "use deno",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            18.0,
+            21.0,
+            19.0,
+            20.0,
+            26.0,
+            24.0,
+            24.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 20.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            8.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0,
+            7.0,
+            7.0
+          ],
+          "name": "type-check jsdocs code blocks",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "JSR": {
+      "duration_seconds": 47.5,
+      "durations": [
+        31.0,
+        27.0,
+        47.0,
+        49.0,
+        52.0,
+        47.0,
+        51.0,
+        48.0,
+        70.0,
+        47.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        2.0,
+        4.0,
+        5.0,
+        7.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            10.0,
+            12.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            3.0,
+            6.0,
+            6.0,
+            7.0,
+            11.0,
+            8.0,
+            5.0,
+            16.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            5.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            23.0,
+            21.0,
+            23.0,
+            20.0,
+            25.0,
+            25.0,
+            26.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "prepare for publish",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "dry-run jsr publish",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Older TypeScript version (~5.4.0)": {
+      "duration_seconds": 72.0,
+      "durations": [
+        61.0,
+        68.0,
+        70.0,
+        72.0,
+        72.0,
+        78.0,
+        74.0,
+        76.0,
+        75.0,
+        69.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        7.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            6.0,
+            8.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            5.0,
+            5.0,
+            6.0,
+            10.0,
+            6.0,
+            7.0,
+            6.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            19.0,
+            21.0,
+            20.0,
+            21.0,
+            25.0,
+            24.0,
+            24.0,
+            22.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "run build with newer typescript",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "set typeScript and tsd versions",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            17.0,
+            18.0,
+            17.0,
+            15.0,
+            15.0,
+            16.0,
+            15.0,
+            13.0
+          ],
+          "name": "install typescript (~5.4.0) and tsd (0.31.2)",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "make `tsconfig` backwards compatible",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            14.0,
+            14.0,
+            15.0,
+            14.0,
+            13.0,
+            14.0,
+            13.0,
+            10.0
+          ],
+          "name": "run tests with older typescript version",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Older TypeScript version (~5.8.0)": {
+      "duration_seconds": 76.0,
+      "durations": [
+        61.0,
+        69.0,
+        74.0,
+        76.0,
+        76.0,
+        81.0,
+        81.0,
+        76.0,
+        78.0,
+        76.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        7.0,
+        4.0,
+        5.0,
+        5.0,
+        2.0,
+        4.0,
+        3.0,
+        3.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            9.0,
+            9.0,
+            13.0,
+            8.0,
+            9.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            12.0,
+            5.0,
+            6.0,
+            8.0,
+            5.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            20.0,
+            20.0,
+            20.0,
+            21.0,
+            31.0,
+            24.0,
+            25.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 20.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "run build with newer typescript",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "set typeScript and tsd versions",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            18.0,
+            17.0,
+            17.0,
+            15.0,
+            12.0,
+            15.0,
+            14.0,
+            15.0
+          ],
+          "name": "install typescript (~5.8.0) and tsd (0.32.0)",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "make `tsconfig` backwards compatible",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            11.0,
+            13.0,
+            13.0,
+            14.0
+          ],
+          "name": "run tests with older typescript version",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Older TypeScript version (~5.9.0)": {
+      "duration_seconds": 76.0,
+      "durations": [
+        64.0,
+        66.0,
+        75.0,
+        81.0,
+        73.0,
+        63.0,
+        77.0,
+        78.0,
+        82.0,
+        89.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        6.0,
+        4.0,
+        4.0,
+        7.0,
+        3.0,
+        3.0,
+        2.0,
+        6.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            8.0,
+            8.0,
+            6.0,
+            7.0,
+            6.0,
+            9.0,
+            7.0,
+            8.0,
+            9.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            2.0,
+            13.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            4.0,
+            9.0,
+            6.0,
+            8.0,
+            5.0,
+            7.0,
+            9.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            21.0,
+            20.0,
+            19.0,
+            18.0,
+            25.0,
+            24.0,
+            25.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 20.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "run build with newer typescript",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "set typeScript and tsd versions",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            17.0,
+            17.0,
+            17.0,
+            17.0,
+            11.0,
+            15.0,
+            14.0,
+            15.0,
+            15.0
+          ],
+          "name": "install typescript (~5.9.0) and tsd (0.33.0)",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "make `tsconfig` backwards compatible",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            14.0,
+            15.0,
+            14.0,
+            10.0,
+            14.0,
+            13.0,
+            13.0,
+            14.0
+          ],
+          "name": "run tests with older typescript version",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "TypeScript Composite": {
+      "duration_seconds": 49.5,
+      "durations": [
+        38.0,
+        30.0,
+        51.0,
+        44.0,
+        50.0,
+        49.0,
+        54.0,
+        49.0,
+        57.0,
+        54.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        2.0,
+        6.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            9.0,
+            7.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            10.0,
+            4.0,
+            7.0,
+            10.0,
+            9.0,
+            5.0,
+            9.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            19.0,
+            21.0,
+            21.0,
+            21.0,
+            24.0,
+            23.0,
+            26.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            7.0,
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "test",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mssql on Node.js (22.x)": {
+      "duration_seconds": 109.0,
+      "durations": [
+        104.0,
+        98.0,
+        126.0,
+        110.0,
+        108.0,
+        114.0,
+        104.0,
+        105.0,
+        116.0,
+        115.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        7.0,
+        4.0,
+        7.0,
+        7.0,
+        2.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            10.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            18.0,
+            24.0,
+            19.0,
+            19.0,
+            18.0,
+            17.0,
+            18.0,
+            19.0,
+            19.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            11.0,
+            7.0,
+            5.0,
+            10.0,
+            8.0,
+            6.0,
+            9.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            0.0,
+            3.0,
+            1.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            27.0,
+            25.0,
+            25.0,
+            23.0,
+            26.0,
+            24.0,
+            27.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            44.0,
+            46.0,
+            46.0,
+            42.0,
+            46.0,
+            45.0,
+            43.0,
+            45.0,
+            50.0,
+            47.0
+          ],
+          "name": "Run mssql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 45.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mssql on Node.js (22.x) /w transformer": {
+      "duration_seconds": 111.5,
+      "durations": [
+        100.0,
+        108.0,
+        110.0,
+        113.0,
+        107.0,
+        114.0,
+        115.0,
+        114.0,
+        105.0,
+        119.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        2.0,
+        7.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        5.0,
+        5.0,
+        5.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            9.0,
+            8.0,
+            5.0,
+            8.0,
+            10.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            19.0,
+            19.0,
+            21.0,
+            17.0,
+            26.0,
+            19.0,
+            21.0,
+            16.0,
+            28.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            11.0,
+            8.0,
+            9.0,
+            7.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            26.0,
+            27.0,
+            24.0,
+            20.0,
+            25.0,
+            25.0,
+            22.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            47.0,
+            44.0,
+            44.0,
+            47.0,
+            39.0,
+            46.0,
+            47.0,
+            44.0,
+            40.0
+          ],
+          "name": "Run mssql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 44.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "mssql on Node.js (24.x)": {
+      "duration_seconds": 111.5,
+      "durations": [
+        94.0,
+        88.0,
+        114.0,
+        102.0,
+        113.0,
+        101.0,
+        110.0,
+        120.0,
+        122.0,
+        126.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        8.0,
+        8.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            11.0,
+            6.0,
+            8.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            18.0,
+            21.0,
+            18.0,
+            25.0,
+            18.0,
+            17.0,
+            19.0,
+            19.0,
+            33.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            9.0,
+            6.0,
+            5.0,
+            11.0,
+            10.0,
+            8.0,
+            10.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            4.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            27.0,
+            26.0,
+            23.0,
+            20.0,
+            26.0,
+            26.0,
+            27.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            39.0,
+            40.0,
+            39.0,
+            42.0,
+            40.0,
+            43.0,
+            49.0,
+            49.0,
+            40.0
+          ],
+          "name": "Run mssql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 41.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "mssql on Node.js (24.x) /w transformer": {
+      "duration_seconds": 104.0,
+      "durations": [
+        124.0,
+        105.0,
+        102.0,
+        99.0,
+        111.0,
+        102.0,
+        102.0,
+        119.0,
+        116.0,
+        103.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        7.0,
+        6.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        3.0,
+        7.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            9.0,
+            8.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            28.0,
+            17.0,
+            17.0,
+            21.0,
+            17.0,
+            17.0,
+            19.0,
+            26.0,
+            18.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            6.0,
+            5.0,
+            6.0,
+            8.0,
+            12.0,
+            7.0,
+            9.0,
+            9.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            1.0,
+            1.0,
+            0.0,
+            3.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            26.0,
+            25.0,
+            26.0,
+            19.0,
+            26.0,
+            26.0,
+            23.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            47.0,
+            36.0,
+            41.0,
+            40.0,
+            43.0,
+            40.0,
+            40.0,
+            49.0,
+            41.0,
+            41.0
+          ],
+          "name": "Run mssql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 41.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "mssql on Node.js (26.x)": {
+      "duration_seconds": 114.5,
+      "durations": [
+        101.0,
+        103.0,
+        113.0,
+        130.0,
+        127.0,
+        115.0,
+        117.0,
+        114.0,
+        116.0,
+        113.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        7.0,
+        6.0,
+        7.0,
+        5.0,
+        5.0,
+        3.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            10.0,
+            6.0,
+            7.0,
+            8.0,
+            8.0,
+            5.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            18.0,
+            21.0,
+            30.0,
+            19.0,
+            20.0,
+            21.0,
+            18.0,
+            18.0,
+            18.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            13.0,
+            14.0,
+            9.0,
+            7.0,
+            10.0,
+            9.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            25.0,
+            25.0,
+            27.0,
+            22.0,
+            25.0,
+            25.0,
+            25.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            40.0,
+            42.0,
+            41.0,
+            44.0,
+            45.0,
+            40.0,
+            43.0,
+            44.0,
+            42.0,
+            42.0
+          ],
+          "name": "Run mssql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 42.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mssql on Node.js (26.x) /w transformer": {
+      "duration_seconds": 113.5,
+      "durations": [
+        93.0,
+        102.0,
+        112.0,
+        102.0,
+        129.0,
+        127.0,
+        118.0,
+        115.0,
+        116.0,
+        112.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        3.0,
+        6.0,
+        6.0,
+        3.0,
+        9.0,
+        5.0,
+        6.0,
+        4.0,
+        4.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            11.0,
+            6.0,
+            7.0,
+            12.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            19.0,
+            17.0,
+            18.0,
+            26.0,
+            31.0,
+            18.0,
+            18.0,
+            25.0,
+            18.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            8.0,
+            5.0,
+            11.0,
+            13.0,
+            8.0,
+            7.0,
+            6.0,
+            9.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            25.0,
+            24.0,
+            25.0,
+            17.0,
+            26.0,
+            25.0,
+            20.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            39.0,
+            41.0,
+            42.0,
+            41.0,
+            42.0,
+            33.0,
+            46.0,
+            45.0,
+            43.0,
+            39.0
+          ],
+          "name": "Run mssql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 41.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "mysql on Node.js (22.x)": {
+      "duration_seconds": 97.5,
+      "durations": [
+        131.0,
+        176.0,
+        105.0,
+        93.0,
+        86.0,
+        100.0,
+        94.0,
+        95.0,
+        100.0,
+        92.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        6.0,
+        6.0,
+        7.0,
+        2.0,
+        7.0,
+        5.0,
+        7.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0,
+            10.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            10.0,
+            11.0,
+            8.0,
+            6.0,
+            15.0,
+            10.0,
+            8.0,
+            9.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            5.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            31.0,
+            28.0,
+            25.0,
+            25.0,
+            22.0,
+            25.0,
+            25.0,
+            27.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            78.0,
+            103.0,
+            39.0,
+            35.0,
+            34.0,
+            35.0,
+            36.0,
+            35.0,
+            38.0,
+            34.0
+          ],
+          "name": "Run mysql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 35.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mysql on Node.js (22.x) /w transformer": {
+      "duration_seconds": 95.0,
+      "durations": [
+        91.0,
+        80.0,
+        96.0,
+        97.0,
+        96.0,
+        89.0,
+        99.0,
+        94.0,
+        90.0,
+        102.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        7.0,
+        3.0,
+        5.0,
+        6.0,
+        6.0,
+        3.0,
+        5.0,
+        6.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            8.0,
+            6.0,
+            7.0,
+            10.0,
+            8.0,
+            7.0,
+            6.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            6.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            11.0,
+            10.0,
+            9.0,
+            9.0,
+            12.0,
+            9.0,
+            8.0,
+            11.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            10.0,
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            7.0,
+            9.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            3.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            25.0,
+            26.0,
+            26.0,
+            21.0,
+            26.0,
+            25.0,
+            25.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            34.0,
+            39.0,
+            36.0,
+            35.0,
+            34.0,
+            36.0,
+            35.0,
+            36.0,
+            34.0
+          ],
+          "name": "Run mysql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 35.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "mysql on Node.js (24.x)": {
+      "duration_seconds": 95.0,
+      "durations": [
+        89.0,
+        76.0,
+        93.0,
+        87.0,
+        101.0,
+        107.0,
+        151.0,
+        102.0,
+        97.0,
+        91.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        6.0,
+        3.0,
+        5.0,
+        3.0,
+        7.0,
+        6.0,
+        5.0,
+        6.0,
+        5.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            8.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            13.0,
+            11.0,
+            8.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            12.0,
+            11.0,
+            13.0,
+            12.0,
+            11.0,
+            9.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            5.0,
+            7.0,
+            5.0,
+            9.0,
+            19.0,
+            13.0,
+            7.0,
+            9.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            26.0,
+            26.0,
+            27.0,
+            22.0,
+            24.0,
+            25.0,
+            27.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            36.0,
+            32.0,
+            32.0,
+            33.0,
+            36.0,
+            36.0,
+            79.0,
+            38.0,
+            33.0,
+            34.0
+          ],
+          "name": "Run mysql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 35.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mysql on Node.js (24.x) /w transformer": {
+      "duration_seconds": 89.5,
+      "durations": [
+        71.0,
+        115.0,
+        93.0,
+        92.0,
+        123.0,
+        93.0,
+        87.0,
+        86.0,
+        81.0,
+        84.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        7.0,
+        2.0,
+        6.0,
+        7.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            9.0,
+            7.0,
+            6.0,
+            12.0,
+            5.0,
+            9.0,
+            8.0,
+            5.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            12.0,
+            9.0,
+            12.0,
+            14.0,
+            11.0,
+            9.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            13.0,
+            7.0,
+            7.0,
+            11.0,
+            15.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            20.0,
+            27.0,
+            25.0,
+            25.0,
+            21.0,
+            26.0,
+            25.0,
+            23.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            51.0,
+            35.0,
+            32.0,
+            50.0,
+            32.0,
+            32.0,
+            32.0,
+            31.0,
+            32.0
+          ],
+          "name": "Run mysql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "mysql on Node.js (26.x)": {
+      "duration_seconds": 91.0,
+      "durations": [
+        87.0,
+        89.0,
+        85.0,
+        93.0,
+        106.0,
+        105.0,
+        88.0,
+        101.0,
+        97.0,
+        84.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        2.0,
+        3.0,
+        5.0,
+        5.0,
+        5.0,
+        6.0,
+        6.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            7.0,
+            5.0,
+            10.0,
+            6.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            9.0,
+            12.0,
+            15.0,
+            10.0,
+            8.0,
+            10.0,
+            9.0,
+            9.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            8.0,
+            12.0,
+            10.0,
+            7.0,
+            10.0,
+            9.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            17.0,
+            23.0,
+            24.0,
+            25.0,
+            17.0,
+            23.0,
+            26.0,
+            24.0,
+            23.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0,
+            35.0,
+            32.0,
+            32.0,
+            36.0,
+            44.0,
+            31.0,
+            34.0,
+            34.0,
+            30.0
+          ],
+          "name": "Run mysql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "mysql on Node.js (26.x) /w transformer": {
+      "duration_seconds": 95.0,
+      "durations": [
+        76.0,
+        81.0,
+        125.0,
+        89.0,
+        95.0,
+        100.0,
+        101.0,
+        95.0,
+        96.0,
+        94.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        7.0,
+        3.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            8.0,
+            6.0,
+            7.0,
+            8.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            11.0,
+            8.0,
+            13.0,
+            13.0,
+            12.0,
+            10.0,
+            11.0,
+            10.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            9.0,
+            7.0,
+            7.0,
+            16.0,
+            12.0,
+            8.0,
+            7.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0,
+            5.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            26.0,
+            25.0,
+            25.0,
+            21.0,
+            26.0,
+            25.0,
+            22.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            34.0,
+            58.0,
+            32.0,
+            31.0,
+            32.0,
+            33.0,
+            33.0,
+            37.0,
+            33.0
+          ],
+          "name": "Run mysql tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 33.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "pglite on Node.js (22.x)": {
+      "duration_seconds": 124.0,
+      "durations": [
+        109.0,
+        121.0,
+        124.0,
+        130.0,
+        124.0,
+        129.0,
+        122.0,
+        109.0,
+        127.0,
+        126.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        13.0,
+        5.0,
+        7.0,
+        3.0,
+        7.0,
+        5.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            9.0,
+            5.0,
+            5.0,
+            11.0,
+            7.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            6.0,
+            7.0,
+            5.0,
+            12.0,
+            7.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            2.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            25.0,
+            27.0,
+            25.0,
+            22.0,
+            23.0,
+            20.0,
+            26.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            78.0,
+            79.0,
+            78.0,
+            80.0,
+            79.0,
+            80.0,
+            78.0,
+            64.0,
+            81.0,
+            80.0
+          ],
+          "name": "Run pglite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 79.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "pglite on Node.js (22.x) /w transformer": {
+      "duration_seconds": 123.0,
+      "durations": [
+        117.0,
+        99.0,
+        122.0,
+        131.0,
+        124.0,
+        133.0,
+        125.0,
+        110.0,
+        125.0,
+        119.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        7.0,
+        5.0,
+        5.0,
+        3.0,
+        7.0,
+        7.0,
+        7.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            8.0,
+            6.0,
+            6.0,
+            9.0,
+            5.0,
+            7.0,
+            11.0,
+            5.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            9.0,
+            7.0,
+            14.0,
+            13.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            25.0,
+            26.0,
+            26.0,
+            23.0,
+            28.0,
+            23.0,
+            23.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0,
+            61.0,
+            79.0,
+            81.0,
+            76.0,
+            81.0,
+            66.0,
+            61.0,
+            81.0,
+            76.0
+          ],
+          "name": "Run pglite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 77.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "pglite on Node.js (24.x)": {
+      "duration_seconds": 117.5,
+      "durations": [
+        116.0,
+        117.0,
+        100.0,
+        124.0,
+        118.0,
+        125.0,
+        122.0,
+        102.0,
+        121.0,
+        91.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        7.0,
+        6.0,
+        4.0,
+        4.0,
+        6.0,
+        5.0,
+        7.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0,
+            6.0,
+            8.0,
+            11.0,
+            6.0,
+            12.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            12.0,
+            9.0,
+            6.0,
+            6.0,
+            5.0,
+            13.0,
+            8.0,
+            5.0,
+            7.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            3.0,
+            0.0,
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            23.0,
+            27.0,
+            26.0,
+            22.0,
+            23.0,
+            21.0,
+            24.0,
+            22.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            75.0,
+            74.0,
+            54.0,
+            74.0,
+            71.0,
+            75.0,
+            73.0,
+            55.0,
+            73.0,
+            43.0
+          ],
+          "name": "Run pglite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 73.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "pglite on Node.js (24.x) /w transformer": {
+      "duration_seconds": 110.5,
+      "durations": [
+        107.0,
+        102.0,
+        109.0,
+        104.0,
+        116.0,
+        112.0,
+        119.0,
+        122.0,
+        99.0,
+        128.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        5.0,
+        3.0,
+        2.0,
+        6.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        2.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            8.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            8.0,
+            12.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            11.0,
+            8.0,
+            4.0,
+            5.0,
+            5.0,
+            9.0,
+            5.0,
+            7.0,
+            4.0,
+            10.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            3.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            15.0,
+            24.0,
+            22.0,
+            26.0,
+            21.0,
+            25.0,
+            24.0,
+            21.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            69.0,
+            69.0,
+            61.0,
+            74.0,
+            67.0,
+            75.0,
+            75.0,
+            58.0,
+            75.0
+          ],
+          "name": "Run pglite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 69.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "pglite on Node.js (26.x)": {
+      "duration_seconds": 115.0,
+      "durations": [
+        102.0,
+        104.0,
+        108.0,
+        126.0,
+        127.0,
+        124.0,
+        122.0,
+        126.0,
+        100.0,
+        108.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        4.0,
+        5.0,
+        9.0,
+        8.0,
+        6.0,
+        5.0,
+        6.0,
+        6.0,
+        7.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            5.0,
+            5.0,
+            11.0,
+            5.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            7.0,
+            8.0,
+            10.0,
+            12.0,
+            7.0,
+            6.0,
+            6.0,
+            10.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            22.0,
+            25.0,
+            25.0,
+            21.0,
+            25.0,
+            25.0,
+            21.0,
+            22.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            67.0,
+            55.0,
+            71.0,
+            72.0,
+            72.0,
+            71.0,
+            70.0,
+            53.0,
+            55.0
+          ],
+          "name": "Run pglite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 68.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "pglite on Node.js (26.x) /w transformer": {
+      "duration_seconds": 119.0,
+      "durations": [
+        104.0,
+        103.0,
+        109.0,
+        120.0,
+        131.0,
+        125.0,
+        131.0,
+        119.0,
+        119.0,
+        113.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        3.0,
+        7.0,
+        8.0,
+        6.0,
+        6.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            7.0,
+            6.0,
+            6.0,
+            9.0,
+            8.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            9.0,
+            8.0,
+            12.0,
+            12.0,
+            7.0,
+            6.0,
+            5.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            23.0,
+            24.0,
+            25.0,
+            21.0,
+            26.0,
+            24.0,
+            25.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            68.0,
+            69.0,
+            66.0,
+            67.0,
+            74.0,
+            71.0,
+            73.0,
+            73.0,
+            72.0,
+            67.0
+          ],
+          "name": "Run pglite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 70.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "postgres on Node.js (22.x)": {
+      "duration_seconds": 86.0,
+      "durations": [
+        71.0,
+        83.0,
+        83.0,
+        81.0,
+        90.0,
+        91.0,
+        89.0,
+        97.0,
+        83.0,
+        93.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        3.0,
+        7.0,
+        4.0,
+        4.0,
+        3.0,
+        6.0,
+        4.0,
+        7.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            9.0,
+            5.0,
+            8.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            9.0,
+            9.0,
+            7.0,
+            8.0,
+            7.0,
+            7.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            11.0,
+            4.0,
+            5.0,
+            6.0,
+            12.0,
+            9.0,
+            9.0,
+            6.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            0.0,
+            1.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            26.0,
+            24.0,
+            27.0,
+            22.0,
+            26.0,
+            27.0,
+            25.0,
+            27.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            32.0,
+            32.0,
+            31.0,
+            33.0,
+            33.0,
+            32.0,
+            35.0,
+            32.0,
+            34.0
+          ],
+          "name": "Run postgres tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "postgres on Node.js (22.x) /w transformer": {
+      "duration_seconds": 85.0,
+      "durations": [
+        68.0,
+        68.0,
+        89.0,
+        80.0,
+        87.0,
+        107.0,
+        88.0,
+        82.0,
+        115.0,
+        83.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        2.0,
+        2.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        4.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            6.0,
+            8.0,
+            6.0,
+            6.0,
+            8.0,
+            14.0,
+            9.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            9.0,
+            6.0,
+            10.0,
+            16.0,
+            12.0,
+            6.0,
+            20.0,
+            6.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            14.0,
+            8.0,
+            5.0,
+            7.0,
+            5.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            4.0,
+            1.0,
+            1.0,
+            3.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            25.0,
+            25.0,
+            25.0,
+            24.0,
+            23.0,
+            24.0,
+            31.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0,
+            31.0,
+            35.0,
+            30.0,
+            32.0,
+            38.0,
+            31.0,
+            32.0,
+            35.0,
+            32.0
+          ],
+          "name": "Run postgres tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "postgres on Node.js (24.x)": {
+      "duration_seconds": 86.5,
+      "durations": [
+        69.0,
+        81.0,
+        78.0,
+        97.0,
+        91.0,
+        84.0,
+        96.0,
+        85.0,
+        96.0,
+        88.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        6.0,
+        4.0,
+        7.0,
+        3.0,
+        4.0,
+        6.0,
+        6.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            9.0,
+            6.0,
+            9.0,
+            10.0,
+            7.0,
+            8.0,
+            5.0,
+            10.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            9.0,
+            6.0,
+            10.0,
+            9.0,
+            7.0,
+            8.0,
+            7.0,
+            10.0,
+            9.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            8.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            0.0,
+            4.0,
+            4.0,
+            1.0,
+            0.0,
+            4.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            17.0,
+            25.0,
+            26.0,
+            26.0,
+            21.0,
+            27.0,
+            25.0,
+            28.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            30.0,
+            29.0,
+            30.0,
+            32.0,
+            29.0,
+            33.0,
+            31.0,
+            32.0,
+            30.0
+          ],
+          "name": "Run postgres tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "postgres on Node.js (24.x) /w transformer": {
+      "duration_seconds": 88.5,
+      "durations": [
+        73.0,
+        68.0,
+        168.0,
+        82.0,
+        94.0,
+        88.0,
+        89.0,
+        80.0,
+        92.0,
+        103.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        100.0,
+        2.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            7.0,
+            5.0,
+            8.0,
+            10.0,
+            6.0,
+            6.0,
+            9.0,
+            5.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            9.0,
+            7.0,
+            7.0,
+            10.0,
+            12.0,
+            7.0,
+            8.0,
+            14.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            10.0,
+            9.0,
+            12.0,
+            5.0,
+            11.0,
+            8.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            0.0,
+            1.0,
+            4.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            21.0,
+            27.0,
+            26.0,
+            22.0,
+            21.0,
+            25.0,
+            27.0,
+            23.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 22.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            30.0,
+            25.0,
+            31.0,
+            32.0,
+            34.0,
+            31.0,
+            30.0,
+            32.0,
+            42.0
+          ],
+          "name": "Run postgres tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "postgres on Node.js (26.x)": {
+      "duration_seconds": 87.0,
+      "durations": [
+        74.0,
+        73.0,
+        84.0,
+        88.0,
+        108.0,
+        86.0,
+        91.0,
+        88.0,
+        81.0,
+        88.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        9.0,
+        7.0,
+        7.0,
+        5.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            8.0,
+            11.0,
+            7.0,
+            9.0,
+            6.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            9.0,
+            8.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            5.0,
+            8.0,
+            11.0,
+            7.0,
+            6.0,
+            5.0,
+            6.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            4.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            13.0,
+            25.0,
+            26.0,
+            35.0,
+            16.0,
+            25.0,
+            23.0,
+            24.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            29.0,
+            31.0,
+            32.0,
+            31.0,
+            26.0,
+            29.0,
+            29.0,
+            29.0,
+            30.0
+          ],
+          "name": "Run postgres tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 29.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "postgres on Node.js (26.x) /w transformer": {
+      "duration_seconds": 85.0,
+      "durations": [
+        79.0,
+        86.0,
+        90.0,
+        105.0,
+        83.0,
+        83.0,
+        97.0,
+        84.0,
+        82.0,
+        92.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        8.0,
+        6.0,
+        4.0,
+        5.0,
+        3.0,
+        7.0,
+        6.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            6.0,
+            8.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            7.0,
+            6.0,
+            13.0,
+            9.0,
+            8.0,
+            8.0
+          ],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            9.0,
+            8.0,
+            4.0,
+            5.0,
+            9.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            16.0,
+            25.0,
+            20.0,
+            24.0,
+            20.0,
+            24.0,
+            20.0,
+            22.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            32.0,
+            30.0,
+            54.0,
+            30.0,
+            30.0,
+            32.0,
+            29.0,
+            29.0,
+            30.0
+          ],
+          "name": "Run postgres tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "sqlite on Node.js (22.x)": {
+      "duration_seconds": 71.0,
+      "durations": [
+        69.0,
+        64.0,
+        79.0,
+        73.0,
+        79.0,
+        73.0,
+        56.0,
+        75.0,
+        67.0,
+        68.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        6.0,
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        3.0,
+        6.0,
+        6.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            8.0,
+            7.0,
+            7.0,
+            8.0,
+            8.0,
+            5.0,
+            6.0,
+            8.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            9.0,
+            6.0,
+            6.0,
+            10.0,
+            5.0,
+            9.0,
+            6.0,
+            5.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            0.0,
+            0.0,
+            0.0,
+            3.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            27.0,
+            26.0,
+            26.0,
+            22.0,
+            21.0,
+            26.0,
+            23.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            25.0,
+            28.0,
+            26.0,
+            27.0,
+            27.0,
+            15.0,
+            26.0,
+            25.0,
+            25.0
+          ],
+          "name": "Run sqlite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "sqlite on Node.js (22.x) /w transformer": {
+      "duration_seconds": 70.5,
+      "durations": [
+        69.0,
+        59.0,
+        75.0,
+        68.0,
+        78.0,
+        77.0,
+        72.0,
+        67.0,
+        68.0,
+        75.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        5.0,
+        3.0,
+        4.0,
+        3.0,
+        6.0,
+        3.0,
+        6.0,
+        3.0,
+        3.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            6.0,
+            7.0,
+            7.0,
+            8.0,
+            8.0,
+            8.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            9.0,
+            5.0,
+            9.0,
+            11.0,
+            6.0,
+            5.0,
+            8.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            0.0,
+            1.0,
+            0.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "use node.js 22.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            16.0,
+            26.0,
+            26.0,
+            25.0,
+            23.0,
+            23.0,
+            24.0,
+            23.0,
+            26.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            26.0,
+            26.0,
+            26.0,
+            27.0,
+            27.0,
+            26.0,
+            26.0,
+            22.0,
+            27.0
+          ],
+          "name": "Run sqlite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "sqlite on Node.js (24.x)": {
+      "duration_seconds": 67.0,
+      "durations": [
+        54.0,
+        54.0,
+        64.0,
+        66.0,
+        80.0,
+        69.0,
+        68.0,
+        61.0,
+        71.0,
+        83.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        3.0,
+        2.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            6.0,
+            8.0,
+            9.0,
+            8.0,
+            6.0,
+            5.0,
+            6.0,
+            8.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            5.0,
+            9.0,
+            11.0,
+            6.0,
+            5.0,
+            8.0,
+            11.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            15.0,
+            25.0,
+            25.0,
+            27.0,
+            21.0,
+            25.0,
+            23.0,
+            26.0,
+            27.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            23.0,
+            23.0,
+            24.0,
+            25.0,
+            23.0,
+            23.0,
+            19.0,
+            25.0,
+            24.0
+          ],
+          "name": "Run sqlite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "sqlite on Node.js (24.x) /w transformer": {
+      "duration_seconds": 70.5,
+      "durations": [
+        57.0,
+        57.0,
+        71.0,
+        75.0,
+        87.0,
+        70.0,
+        67.0,
+        71.0,
+        74.0,
+        69.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        5.0,
+        10.0,
+        6.0,
+        11.0,
+        5.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            7.0,
+            9.0,
+            8.0,
+            6.0,
+            7.0,
+            10.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            7.0,
+            5.0,
+            13.0,
+            10.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            5.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "use node.js 24.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            26.0,
+            27.0,
+            27.0,
+            21.0,
+            25.0,
+            25.0,
+            24.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            18.0,
+            24.0,
+            23.0,
+            26.0,
+            24.0,
+            23.0,
+            24.0,
+            22.0,
+            24.0
+          ],
+          "name": "Run sqlite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "sqlite on Node.js (26.x)": {
+      "duration_seconds": 74.5,
+      "durations": [
+        61.0,
+        71.0,
+        77.0,
+        75.0,
+        77.0,
+        77.0,
+        69.0,
+        76.0,
+        70.0,
+        74.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        3.0,
+        7.0,
+        7.0,
+        3.0,
+        6.0,
+        6.0,
+        3.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            7.0,
+            8.0,
+            7.0,
+            7.0,
+            7.0,
+            9.0,
+            7.0,
+            6.0,
+            11.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            11.0,
+            8.0,
+            10.0,
+            13.0,
+            5.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            17.0,
+            24.0,
+            25.0,
+            24.0,
+            21.0,
+            24.0,
+            27.0,
+            24.0,
+            24.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            25.0,
+            18.0,
+            24.0,
+            23.0,
+            22.0,
+            21.0,
+            23.0,
+            22.0,
+            20.0
+          ],
+          "name": "Run sqlite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "sqlite on Node.js (26.x) /w transformer": {
+      "duration_seconds": 70.0,
+      "durations": [
+        61.0,
+        60.0,
+        71.0,
+        66.0,
+        70.0,
+        70.0,
+        74.0,
+        68.0,
+        74.0,
+        73.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        7.0,
+        3.0,
+        4.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            6.0,
+            8.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "harden runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "spin up database",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            8.0,
+            5.0,
+            7.0,
+            11.0,
+            6.0,
+            7.0,
+            9.0,
+            9.0
+          ],
+          "name": "install pnpm",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "use node.js 26.x",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            24.0,
+            24.0,
+            23.0,
+            21.0,
+            26.0,
+            24.0,
+            26.0,
+            25.0
+          ],
+          "name": "install dependencies",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            23.0,
+            23.0,
+            22.0,
+            22.0,
+            23.0,
+            24.0,
+            22.0,
+            23.0,
+            23.0
+          ],
+          "name": "Run sqlite tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run esbuild test",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "15a2cd5e9fd7f37463b13e245644f1ab569aa3cc": "5a3ed2048469fe10c945df54ab0be9589874b560",
+      "1ca8834b4ba6af689019a1f1b285c6138b8a7fca": "ac1ffeec1744e492e141d0eae090be8d3abe92f3",
+      "1e9904f939ec1c8e41bd816863e15844633dacc0": "ac1ffeec1744e492e141d0eae090be8d3abe92f3",
+      "34cacf8ff731650bef408ad44c53ef62a48cedd2": "3ffd843767f6659158fa554de4fbe4b38865c1d8",
+      "4b58cbefda5c28a87ffcd852d0feacf98999bba9": "5a3ed2048469fe10c945df54ab0be9589874b560",
+      "4ba0bd495a4cbe11d8d58ef02537586dc4d56532": "ac1ffeec1744e492e141d0eae090be8d3abe92f3",
+      "9a28192b2825a53d7c120a78e0a6eb3326822ac9": "5a3ed2048469fe10c945df54ab0be9589874b560",
+      "ba3258c5e4416b06227a90170697c3284b5086fc": "5a3ed2048469fe10c945df54ab0be9589874b560",
+      "bcd6e4e3c60f8068da6de105bb2f2c82d3a6b04b": "ac1ffeec1744e492e141d0eae090be8d3abe92f3",
+      "de2fe02a53c9e5b34a1c40b01a94b2c3c9285022": "ac1ffeec1744e492e141d0eae090be8d3abe92f3"
+    },
+    "pinned_oid": "5a3ed2048469fe10c945df54ab0be9589874b560",
+    "runs_same_version": 4,
+    "runs_total": 10
+  }
+}

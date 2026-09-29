@@ -1,0 +1,178 @@
+name: "Release"
+
+on:
+  push:
+    branches:
+      - master
+      - release/*
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_TS_DOCS_PROJECT_ID: "prj_iBhTlkv2hj2E6BiA3GeacxgNHIEL"
+  VERCEL_TS_DOCS_API_PROJECT_ID: "prj_hBydWalwFfqTPkpKTIy82abixInS"
+  VERCEL_TS_TEMPLATE_PROJECT_ID: "prj_syuKtl2KTIU4OvO2mRccdbIt55BN"
+  NPM_CONFIG_PROVENANCE: "true"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: npm-deploy
+    permissions: write-all
+    # First check ensures that the workflow runs only when the changesets PR commit is pushed into the branch.
+    # Second check ensures that the workflow runs only after a commit is pushed into the branch,
+    # and not when the branch is created.
+    # This is to avoid running the workflow when a release/* branch is created.
+    if: |
+      startsWith(github.event.head_commit.message, 'ci(release):') &&
+      github.event.before != '0000000000000000000000000000000000000000'
+
+    steps:
+      - name: Create Fuel Docs GitHub Token
+        uses: actions/create-github-app-token@v2
+        id: docs-token
+        with:
+          app-id: ${{ vars.FUEL_DOCS_BOT_APP_ID }}
+          private-key: ${{ secrets.FUEL_DOCS_BOT_APP_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: |
+            docs-hub
+            migrations-and-disclosures
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: CI Setup
+        uses: ./.github/actions/ci-setup
+
+      # if there are changesets present, package.json will be bumped
+      - name: Bump and Collect Versions
+        run: |
+          pnpm changeset version
+          echo "RELEASE_VERSION=v$(sed -nE 's/^\s*"version": "(.*?)",$/\1/p' packages/fuels/package.json)" >> $GITHUB_ENV
+          echo "FUEL_CORE_VERSION=$(cat ./internal/fuel-core/VERSION)" >> $GITHUB_ENV
+          echo "FORC_VERSION=$(cat ./internal/forc/VERSION)" >> $GITHUB_ENV
+          git reset --hard
+
+      # Ensure latest NPM is installed to support OIDC publishing
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - name: Build
+        run: pnpm build
+
+      - name: Get latest release
+        run: |
+          LATEST_RELEASE=$(pnpm run --silent changeset:get-latest-release)
+          echo "LATEST_RELEASE=$LATEST_RELEASE" >> $GITHUB_ENV
+
+          pnpm add --global semver
+          echo "RELEASE_VERSION_HIGHER_THAN_LATEST=$(semver $LATEST_RELEASE $RELEASE_VERSION | tail -n1 | grep ${RELEASE_VERSION#v} --silent && echo true || echo false)" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npm
+        uses: FuelLabs/changesets-action@main
+        with:
+          publish: pnpm changeset:publish ${{ env.RELEASE_VERSION }} ${{ github.ref_name }}
+          createGithubReleases: aggregate
+          githubReleaseName: ${{ env.RELEASE_VERSION }}
+          githubTagName: ${{ env.RELEASE_VERSION }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: "true"
+
+      - name: Prettify changelog
+        run: pnpm changeset:update-changelog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ env.RELEASE_VERSION }}
+          PUBLISHED: "true"
+          REF_NAME: ${{ github.ref_name }}
+          LATEST_RELEASE: ${{ env.LATEST_RELEASE }}
+          RELEASE_VERSION_HIGHER_THAN_LATEST: ${{ env.RELEASE_VERSION_HIGHER_THAN_LATEST }}
+
+      - name: Install Vercel
+        run: pnpm install --global vercel@latest
+
+      - name: Deploy `docs` to Vercel
+        id: deploy-docs
+        if: github.ref_name == 'master'
+        uses: ./.github/actions/vercel-deploy
+        with:
+          environment: ${{ env.RELEASE_VERSION_HIGHER_THAN_LATEST && 'production' || 'nightly' }}
+          token: ${{ secrets.VERCEL_TOKEN }}
+          project-id: ${{ env.VERCEL_TS_DOCS_PROJECT_ID }}
+
+      - name: Deploy `docs-api` to Vercel
+        id: deploy-docs-api
+        if: github.ref_name == 'master'
+        uses: ./.github/actions/vercel-deploy
+        with:
+          environment: ${{ env.RELEASE_VERSION_HIGHER_THAN_LATEST && 'production' || 'nightly' }}
+          token: ${{ secrets.VERCEL_TOKEN }}
+          project-id: ${{ env.VERCEL_TS_DOCS_API_PROJECT_ID }}
+
+      - name: Deploy `template` to Vercel
+        id: deploy-template
+        if: github.ref_name == 'master'
+        uses: ./.github/actions/vercel-deploy
+        with:
+          environment: ${{ env.RELEASE_VERSION_HIGHER_THAN_LATEST && 'production' || 'nightly' }}
+          token: ${{ secrets.VERCEL_TOKEN }}
+          project-id: ${{ env.VERCEL_TS_TEMPLATE_PROJECT_ID }}
+
+      - name: Update docs
+        if: github.ref_name == 'master'
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: update-nightly.yml
+          ref: master
+          repo: FuelLabs/docs-hub
+          token: ${{ steps.docs-token.outputs.token }}
+
+      - name: Create PR to apply latest release to master
+        if: |
+          startsWith(github.ref_name, 'release/') &&
+          env.RELEASE_VERSION_HIGHER_THAN_LATEST == 'true'
+        run: |
+          PR_TITLE_TEXT='apply `latest` release to `master`'
+          if [ ${RELEASE_VERSION#v} = "$(semver "$LATEST_VERSION" --increment minor)" ]; then
+              PR_TITLE="build!: $PR_TITLE_TEXT"
+          else
+              PR_TITLE="build: $PR_TITLE_TEXT"
+          fi
+
+          PR_BODY='Automatically created when `latest` published release is newer than `master` due to publishing done via `release/*` branches.'
+
+          gh pr create -B master -H $GITHUB_REF_NAME --title "$PR_TITLE" --body "$PR_BODY"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_VERSION: ${{ env.RELEASE_VERSION }}
+          LATEST_VERSION: ${{ env.LATEST_VERSION }}
+
+      - name: Delete the release branch
+        # We check env.RELEASE_VERSION_HIGHER_THAN_LATEST == 'false'
+        # because we don't want to delete the branch that is used in the "Create PR to apply latest release to master" step above
+        if: |
+          startsWith(github.ref_name, 'release/') &&
+          env.RELEASE_VERSION_HIGHER_THAN_LATEST == 'false'
+        run: git push origin --delete ${{ github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify migrations and disclosures of the new release (breaking changes)
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: migrations.yml
+          ref: master
+          repo: FuelLabs/migrations-and-disclosures
+          token: ${{ steps.docs-token.outputs.token }}

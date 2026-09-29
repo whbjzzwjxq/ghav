@@ -1,0 +1,97 @@
+name: "Install node and dependencies"
+description: Install node and dependencies
+inputs:
+  node-version:
+    description: "A specific version of node to install (rather than the value specified in the volta config in package.json)"
+    required: false
+  install-command:
+    description: "The command to run to install dependencies"
+    required: false
+    default: "npm ci"
+  install-additional-package-managers:
+    description: "Whether to install package managers used by the integration and e2e test suites"
+    required: false
+    default: "true"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Node based on the given value (or the Volta config in package.json)
+      uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+      with:
+        node-version-file: ${{ inputs.node-version == '' && 'package.json' || '' }}
+        node-version: ${{ inputs.node-version }}
+      # The volta action seems to failing to install/unpack a lot recently https://github.com/volta-cli/action/issues/77#issuecomment-1481045178
+      # uses: volta-cli/action@v4
+      # with:
+      #   node-version: ${{ inputs.node-version }}
+
+    # Github actions/cache now recommends _not_ caching node_modules when using npm ci
+    # https://github.com/actions/cache/blob/940f3d7cf195ba83374c77632d1e2cbb2f24ae68/examples.md#node---npm
+
+    - name: Install Corepack for the primary Node version
+      if: ${{ inputs.node-version == '' && inputs.install-additional-package-managers == 'true' }}
+      # Windows runners already provide Yarn shims that Corepack needs to replace.
+      run: npm install --global corepack@0.35.0 --min-release-age=0 --ignore-scripts --force
+      shell: bash
+
+    - name: Enable corepack
+      if: ${{ inputs.install-additional-package-managers == 'true' }}
+      run: corepack enable
+      shell: bash
+      env:
+        COREPACK_ENABLE_AUTO_PIN: "0"
+        COREPACK_ENABLE_STRICT: "0"
+
+    - name: Install the pinned npm version
+      if: ${{ inputs.node-version == '' }}
+      run: npm install --global "$(node -p "require('./package.json').packageManager")" --min-release-age=0 --ignore-scripts
+      shell: bash
+
+    - name: Install pnpm v8
+      if: ${{ inputs.install-additional-package-managers == 'true' }}
+      run: corepack install -g pnpm@8
+      shell: bash
+      env:
+        COREPACK_ENABLE_AUTO_PIN: "0"
+        COREPACK_ENABLE_STRICT: "0"
+
+    - name: Install Yarn classic
+      if: ${{ inputs.install-additional-package-managers == 'true' }}
+      run: corepack install -g yarn@1.22.22
+      shell: bash
+      env:
+        COREPACK_ENABLE_AUTO_PIN: "0"
+        COREPACK_ENABLE_STRICT: "0"
+
+    - name: Install Bun
+      if: ${{ inputs.install-additional-package-managers == 'true' }}
+      uses: oven-sh/setup-bun@e3914758a49697077f7bcd190d36582a61667aad # v2 (Node.js 24 runtime)
+      with:
+        # Latest 1.x so e2e exercises the text-based bun.lock format that has been bun's
+        # default since 1.2 (the legacy binary bun.lockb handling is covered by unit tests)
+        bun-version: "1.x"
+
+    - name: Print installed Node and npm versions
+      run: |
+        node --version
+        npm --version
+      shell: bash
+
+    - name: Print installed yarn, pnpm and bun versions
+      if: ${{ inputs.install-additional-package-managers == 'true' }}
+      run: |
+        yarn --version
+        pnpm --version
+        bun --version
+      shell: bash
+      env:
+        COREPACK_ENABLE_AUTO_PIN: "0"
+        COREPACK_ENABLE_STRICT: "0"
+
+    - name: Install dependencies
+      run: ${{ inputs.install-command }}
+      shell: bash
+      env:
+        COREPACK_ENABLE_AUTO_PIN: "0"
+        COREPACK_ENABLE_STRICT: "0"

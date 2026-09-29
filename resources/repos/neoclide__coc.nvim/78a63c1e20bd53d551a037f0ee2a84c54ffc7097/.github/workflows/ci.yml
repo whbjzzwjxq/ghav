@@ -1,0 +1,117 @@
+name: Dev
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    if: github.event.pull_request.draft == false
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        versions:
+          - neovim: "stable"
+            vim: "v9.0.0438"
+          - neovim: "nightly"
+            vim: "nightly"
+        node:
+          - "24"
+
+    env:
+      NODE_ENV: test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - name: Resolve vim cache identity
+        if: matrix.versions.vim != 'nightly'
+        id: vim-cache-id
+        shell: bash
+        env:
+          VIM_VERSION: ${{ matrix.versions.vim }}
+        run: |
+          . /etc/os-release
+          echo "key=vim-install-v1-$RUNNER_OS-$RUNNER_ARCH-$ID-$VERSION_ID-$VIM_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Restore vim installation
+        if: matrix.versions.vim != 'nightly'
+        id: vim-cache
+        uses: actions/cache@v6
+        with:
+          path: ~/vim-${{ matrix.versions.vim }}
+          key: ${{ steps.vim-cache-id.outputs.key }}
+
+      - parallel:
+        - name: Setup Node.js ${{ matrix.node }}
+          uses: actions/setup-node@v6
+          with:
+            node-version: ${{ matrix.node }}
+            cache: "npm"
+
+        - name: Setup python3
+          uses: actions/setup-python@v6
+          with:
+            python-version: "3.x"
+
+        - name: Setup vim
+          if: matrix.versions.vim == 'nightly' || steps.vim-cache.outputs.cache-hit != 'true'
+          uses: rhysd/action-setup-vim@v1
+          with:
+            version: ${{ matrix.versions.vim }}
+
+        - name: Setup neovim
+          id: nvim
+          uses: rhysd/action-setup-vim@v1
+          with:
+            neovim: true
+            version: ${{ matrix.versions.neovim }}
+
+        - name: Setup rg/ctags
+          run: sudo apt-get install -y ripgrep exuberant-ctags
+
+      - name: Expose vim
+        id: vim
+        env:
+          VIM_VERSION: ${{ matrix.versions.vim }}
+        run: |
+          vim_bin="$HOME/vim-$VIM_VERSION/bin"
+          test -x "$vim_bin/vim"
+          echo "$vim_bin" >> "$GITHUB_PATH"
+          echo "executable=$vim_bin/vim" >> "$GITHUB_OUTPUT"
+
+      - name: Install Dependencies
+        run: |
+          npm i -g bytes
+          npm ci
+          pip install pynvim
+          rg --version
+          ctags --version
+          vim --version
+          nvim --version
+
+      - name: Run tests
+        env:
+          VIM_COMMAND: ${{ steps.vim.outputs.executable }}
+          NVIM_COMMAND: ${{ steps.nvim.outputs.executable }}
+          COVERAGE_ARGS: ${{ matrix.versions.neovim == 'stable' && '--coverage' || '' }}
+        run: |
+          node --enable-source-maps scripts/test/cli.mjs -j 2 $COVERAGE_ARGS
+
+      - name: Codecov
+        uses: codecov/codecov-action@v6
+        if: matrix.versions.neovim == 'stable'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
+          verbose: true

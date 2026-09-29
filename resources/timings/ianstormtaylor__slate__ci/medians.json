@@ -1,0 +1,605 @@
+{
+  "benchmark": "ianstormtaylor/slate@72a37c701e5da4bb13a305d416d9c070d19d3a45:.github/workflows/ci.yml",
+  "benchmark_id": "ianstormtaylor__slate__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33380575676,
+        33377767971,
+        32343859587,
+        32183340127,
+        31334919754
+      ],
+      "window_count": 15
+    },
+    "push": {
+      "runs": [
+        32815499856,
+        32814484648,
+        32814430375,
+        32814341030,
+        32183048906
+      ],
+      "window_count": 16
+    }
+  },
+  "jobs": {
+    "lint:eslint": {
+      "duration_seconds": 94.5,
+      "durations": [
+        116.0,
+        108.0,
+        101.0,
+        101.0,
+        78.0,
+        61.0,
+        89.0,
+        74.0,
+        93.0,
+        96.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        6.0,
+        4.0,
+        5.0,
+        3.0,
+        5.0,
+        2.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            8.0,
+            10.0,
+            9.0,
+            8.0,
+            9.0,
+            9.0,
+            8.0,
+            7.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            105.0,
+            95.0,
+            87.0,
+            84.0,
+            63.0,
+            48.0,
+            75.0,
+            59.0,
+            82.0,
+            84.0
+          ],
+          "name": "Run lint:eslint",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 83.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload Playwright test results",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "lint:prettier": {
+      "duration_seconds": 85.5,
+      "durations": [
+        107.0,
+        81.0,
+        84.0,
+        96.0,
+        79.0,
+        83.0,
+        99.0,
+        84.0,
+        109.0,
+        87.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        10.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            10.0,
+            8.0,
+            14.0,
+            7.0,
+            10.0,
+            14.0,
+            7.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            96.0,
+            69.0,
+            74.0,
+            79.0,
+            65.0,
+            64.0,
+            86.0,
+            67.0,
+            84.0,
+            75.0
+          ],
+          "name": "Run lint:prettier",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 74.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload Playwright test results",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "lint:typescript": {
+      "duration_seconds": 92.5,
+      "durations": [
+        107.0,
+        97.0,
+        95.0,
+        90.0,
+        80.0,
+        80.0,
+        98.0,
+        84.0,
+        96.0,
+        62.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        6.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            6.0,
+            10.0,
+            8.0,
+            7.0,
+            8.0,
+            6.0,
+            13.0,
+            14.0,
+            8.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            93.0,
+            84.0,
+            77.0,
+            77.0,
+            68.0,
+            66.0,
+            87.0,
+            64.0,
+            76.0,
+            49.0
+          ],
+          "name": "Run lint:typescript",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 76.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload Playwright test results",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "test": {
+      "duration_seconds": 104.0,
+      "durations": [
+        134.0,
+        97.0,
+        115.0,
+        109.0,
+        97.0,
+        74.0,
+        95.0,
+        106.0,
+        104.0,
+        104.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        6.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            13.0,
+            11.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            120.0,
+            87.0,
+            96.0,
+            93.0,
+            84.0,
+            61.0,
+            80.0,
+            94.0,
+            89.0,
+            92.0
+          ],
+          "name": "Run test",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 90.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Upload Playwright test results",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "test:integration": {
+      "duration_seconds": 327.0,
+      "durations": [
+        365.0,
+        355.0,
+        498.0,
+        312.0,
+        264.0,
+        287.0,
+        328.0,
+        277.0,
+        326.0,
+        339.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0,
+        6.0,
+        6.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout repo",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            8.0,
+            9.0,
+            9.0,
+            7.0,
+            7.0,
+            8.0,
+            10.0,
+            10.0
+          ],
+          "name": "Setup node",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            350.0,
+            344.0,
+            485.0,
+            296.0,
+            248.0,
+            275.0,
+            314.0,
+            262.0,
+            310.0,
+            321.0
+          ],
+          "name": "Run test:integration",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 312.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            2.0
+          ],
+          "name": "Upload Playwright test results",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0a7e31eeec3260587bfcb6e1046e25feeb1f1fa1": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "0fb03a3b1957ca2785d8e7e71465d0968adbfbc4": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "ad04f91c7f2e9b254bea324eefff1707b6b13bc7": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "b68a1d6022697f817a7d4636cbe1ec23d59a4077": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "b96028a57a90099d07c615a0b8d8ae06c3b86f12": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "df2fc346afd3755f10465f1aa61c776a32b8ac0e": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "e06076c1935d4716f398d93aae266b9d30ae6048": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "e474d9149b63707913490b9445a580368c9dcca5": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "e7d816b610e7b9205bb1e9c568dde33bf873eb91": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+      "eaa4b4bed496e016aea094e315a9ba3aa39a7483": "fc852184ad27517d9d805c7c11e14f34f1051bab"
+    },
+    "pinned_oid": "fc852184ad27517d9d805c7c11e14f34f1051bab",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

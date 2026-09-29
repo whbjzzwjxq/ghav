@@ -1,0 +1,36 @@
+name: Update "Release" PR
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GH_REMIX_PAT }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Install Node.js
+        uses: ./.github/actions/setup-node-pnpm-cache
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Update PR
+        run: node scripts/release-pr.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_REMIX_PAT }}

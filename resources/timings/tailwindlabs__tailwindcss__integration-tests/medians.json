@@ -1,0 +1,3880 @@
+{
+  "benchmark": "tailwindlabs/tailwindcss@f723e834ad032aa0f42405f95f684be3cfcac8ef:.github/workflows/integration-tests.yml",
+  "benchmark_id": "tailwindlabs__tailwindcss__integration-tests",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33386888998,
+        33381059909,
+        32449000831,
+        31834095850,
+        31832223374
+      ],
+      "window_count": 95
+    },
+    "push": {
+      "runs": [
+        33381540514,
+        31834567763,
+        31820985724,
+        31791522153,
+        31744895604
+      ],
+      "window_count": 25
+    }
+  },
+  "jobs": {
+    "Linux /  cli": {
+      "duration_seconds": 167.0,
+      "durations": [
+        201.0,
+        153.0,
+        163.0,
+        172.0,
+        180.0,
+        177.0,
+        170.0,
+        164.0,
+        163.0,
+        150.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            6.0,
+            8.0,
+            8.0,
+            8.0,
+            6.0,
+            6.0,
+            5.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            8.0,
+            2.0,
+            3.0,
+            5.0,
+            6.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            9.0,
+            10.0,
+            10.0,
+            11.0,
+            8.0,
+            9.0,
+            9.0,
+            9.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            23.0,
+            26.0,
+            29.0,
+            28.0,
+            30.0,
+            24.0,
+            25.0,
+            24.0,
+            25.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 25.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            67.0,
+            52.0,
+            52.0,
+            56.0,
+            55.0,
+            57.0,
+            66.0,
+            54.0,
+            51.0,
+            47.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 54.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            70.0,
+            52.0,
+            57.0,
+            54.0,
+            64.0,
+            54.0,
+            56.0,
+            58.0,
+            57.0,
+            48.0
+          ],
+          "name": "Test cli",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 56.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux /  oxide": {
+      "duration_seconds": 116.0,
+      "durations": [
+        149.0,
+        107.0,
+        127.0,
+        117.0,
+        123.0,
+        124.0,
+        108.0,
+        115.0,
+        105.0,
+        109.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0,
+            5.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            5.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            7.0,
+            6.0,
+            3.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0,
+            9.0,
+            8.0,
+            10.0,
+            10.0,
+            9.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            36.0,
+            25.0,
+            30.0,
+            28.0,
+            29.0,
+            29.0,
+            21.0,
+            26.0,
+            24.0,
+            25.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            76.0,
+            51.0,
+            63.0,
+            56.0,
+            59.0,
+            61.0,
+            60.0,
+            52.0,
+            48.0,
+            53.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0
+          ],
+          "name": "Test oxide",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux /  postcss": {
+      "duration_seconds": 179.5,
+      "durations": [
+        200.0,
+        136.0,
+        168.0,
+        179.0,
+        185.0,
+        222.0,
+        180.0,
+        170.0,
+        185.0,
+        171.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            6.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            2.0,
+            4.0,
+            6.0,
+            3.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            10.0,
+            9.0,
+            10.0,
+            11.0,
+            9.0,
+            9.0,
+            8.0,
+            9.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            20.0,
+            25.0,
+            27.0,
+            30.0,
+            32.0,
+            24.0,
+            27.0,
+            30.0,
+            26.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            63.0,
+            44.0,
+            55.0,
+            56.0,
+            59.0,
+            69.0,
+            71.0,
+            54.0,
+            59.0,
+            56.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            76.0,
+            46.0,
+            59.0,
+            66.0,
+            65.0,
+            87.0,
+            60.0,
+            59.0,
+            67.0,
+            60.0
+          ],
+          "name": "Test postcss",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 62.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux /  upgrade": {
+      "duration_seconds": 328.5,
+      "durations": [
+        333.0,
+        309.0,
+        324.0,
+        365.0,
+        382.0,
+        390.0,
+        315.0,
+        318.0,
+        336.0,
+        257.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            5.0,
+            3.0,
+            6.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            10.0,
+            9.0,
+            9.0,
+            8.0,
+            10.0,
+            9.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            25.0,
+            26.0,
+            29.0,
+            29.0,
+            29.0,
+            25.0,
+            26.0,
+            27.0,
+            21.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            52.0,
+            52.0,
+            59.0,
+            58.0,
+            66.0,
+            69.0,
+            55.0,
+            60.0,
+            49.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 56.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            225.0,
+            204.0,
+            217.0,
+            247.0,
+            264.0,
+            263.0,
+            195.0,
+            208.0,
+            219.0,
+            161.0
+          ],
+          "name": "Test upgrade",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 218.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux /  vite": {
+      "duration_seconds": 194.5,
+      "durations": [
+        204.0,
+        184.0,
+        194.0,
+        196.0,
+        247.0,
+        225.0,
+        186.0,
+        195.0,
+        187.0,
+        189.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        6.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            8.0,
+            4.0,
+            7.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            9.0,
+            1.0,
+            3.0,
+            5.0,
+            3.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            11.0,
+            11.0,
+            8.0,
+            9.0,
+            10.0,
+            9.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            26.0,
+            27.0,
+            28.0,
+            31.0,
+            30.0,
+            22.0,
+            27.0,
+            28.0,
+            28.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 28.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            56.0,
+            51.0,
+            56.0,
+            56.0,
+            69.0,
+            69.0,
+            65.0,
+            56.0,
+            49.0,
+            55.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 56.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            90.0,
+            79.0,
+            84.0,
+            83.0,
+            113.0,
+            89.0,
+            76.0,
+            84.0,
+            77.0,
+            79.0
+          ],
+          "name": "Test vite",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 83.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Linux /  webpack": {
+      "duration_seconds": 131.0,
+      "durations": [
+        143.0,
+        128.0,
+        129.0,
+        119.0,
+        135.0,
+        139.0,
+        133.0,
+        117.0,
+        133.0,
+        128.0
+      ],
+      "main_step_counts": [
+        11
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        6.0,
+        3.0,
+        4.0,
+        4.0,
+        6.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set up runner",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            9.0,
+            8.0,
+            9.0,
+            10.0,
+            9.0,
+            8.0,
+            10.0,
+            10.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 9.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            32.0,
+            29.0,
+            25.0,
+            25.0,
+            29.0,
+            28.0,
+            25.0,
+            24.0,
+            25.0,
+            27.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            64.0,
+            55.0,
+            60.0,
+            52.0,
+            61.0,
+            62.0,
+            71.0,
+            50.0,
+            65.0,
+            56.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 60.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            14.0,
+            16.0,
+            15.0,
+            16.0,
+            18.0,
+            14.0,
+            17.0,
+            14.0,
+            15.0
+          ],
+          "name": "Test webpack",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows /  cli": {
+      "duration_seconds": 381.0,
+      "durations": [
+        449.0,
+        381.0,
+        402.0,
+        356.0,
+        352.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        7.0,
+        1.0,
+        7.0,
+        4.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            15.0,
+            9.0,
+            10.0,
+            16.0,
+            12.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            40.0,
+            13.0,
+            17.0,
+            21.0,
+            21.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            7.0,
+            9.0,
+            8.0,
+            7.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            55.0,
+            46.0,
+            48.0,
+            46.0,
+            56.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            39.0,
+            24.0,
+            25.0,
+            26.0,
+            28.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            155.0,
+            161.0,
+            170.0,
+            131.0,
+            124.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 155.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            109.0,
+            114.0,
+            107.0,
+            96.0,
+            93.0
+          ],
+          "name": "Test cli",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 107.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows /  oxide": {
+      "duration_seconds": 296.0,
+      "durations": [
+        368.0,
+        299.0,
+        296.0,
+        252.0,
+        273.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            10.0,
+            12.0,
+            8.0,
+            8.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            17.0,
+            17.0,
+            12.0,
+            29.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            6.0,
+            18.0,
+            5.0,
+            7.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            10.0,
+            7.0,
+            6.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            83.0,
+            75.0,
+            49.0,
+            47.0,
+            54.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 54.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            26.0,
+            33.0,
+            28.0,
+            34.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 28.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            157.0,
+            149.0,
+            147.0,
+            137.0,
+            129.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 147.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Test oxide",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows /  postcss": {
+      "duration_seconds": 475.0,
+      "durations": [
+        471.0,
+        512.0,
+        561.0,
+        463.0,
+        475.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        3.0,
+        3.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            20.0,
+            9.0,
+            12.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            70.0,
+            56.0,
+            34.0,
+            28.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 34.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            19.0,
+            9.0,
+            11.0,
+            19.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            9.0,
+            8.0,
+            8.0,
+            9.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            51.0,
+            70.0,
+            56.0,
+            46.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 51.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            38.0,
+            27.0,
+            65.0,
+            26.0,
+            39.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 38.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            166.0,
+            154.0,
+            181.0,
+            159.0,
+            152.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 159.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            155.0,
+            166.0,
+            154.0,
+            152.0,
+            164.0
+          ],
+          "name": "Test postcss",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 155.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows /  upgrade": {
+      "duration_seconds": 712.0,
+      "durations": [
+        712.0,
+        783.0,
+        678.0,
+        740.0,
+        677.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            12.0,
+            10.0,
+            23.0,
+            18.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            51.0,
+            28.0,
+            24.0,
+            15.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            18.0,
+            5.0,
+            9.0,
+            6.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            7.0,
+            10.0,
+            10.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            48.0,
+            61.0,
+            49.0,
+            47.0,
+            47.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 48.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            44.0,
+            30.0,
+            30.0,
+            25.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            153.0,
+            161.0,
+            144.0,
+            156.0,
+            151.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 153.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            432.0,
+            419.0,
+            400.0,
+            433.0,
+            398.0
+          ],
+          "name": "Test upgrade",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 419.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows /  vite": {
+      "duration_seconds": 534.0,
+      "durations": [
+        569.0,
+        522.0,
+        531.0,
+        534.0,
+        586.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            25.0,
+            28.0,
+            21.0,
+            34.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            16.0,
+            19.0,
+            6.0,
+            12.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            8.0,
+            9.0,
+            10.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            3.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            75.0,
+            45.0,
+            48.0,
+            51.0,
+            50.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 50.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            36.0,
+            32.0,
+            36.0,
+            27.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 32.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            158.0,
+            163.0,
+            152.0,
+            152.0,
+            182.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 158.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            263.0,
+            214.0,
+            226.0,
+            240.0,
+            252.0
+          ],
+          "name": "Test vite",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 240.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Windows /  webpack": {
+      "duration_seconds": 361.0,
+      "durations": [
+        361.0,
+        340.0,
+        368.0,
+        347.0,
+        404.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        6.0,
+        3.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            9.0,
+            10.0,
+            8.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            23.0,
+            26.0,
+            17.0,
+            38.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            16.0,
+            5.0,
+            14.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            12.0,
+            11.0,
+            8.0,
+            9.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            46.0,
+            47.0,
+            73.0,
+            61.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 51.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            30.0,
+            34.0,
+            25.0,
+            36.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            170.0,
+            155.0,
+            160.0,
+            151.0,
+            161.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 160.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            61.0,
+            54.0,
+            55.0,
+            56.0,
+            68.0
+          ],
+          "name": "Test webpack",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 56.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS /  cli": {
+      "duration_seconds": 233.0,
+      "durations": [
+        281.0,
+        233.0,
+        285.0,
+        205.0,
+        178.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        3.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            5.0,
+            10.0,
+            7.0,
+            5.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            4.0,
+            3.0,
+            1.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            14.0,
+            16.0,
+            13.0,
+            14.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            21.0,
+            25.0,
+            20.0,
+            18.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            124.0,
+            106.0,
+            123.0,
+            90.0,
+            75.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 106.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            75.0,
+            94.0,
+            61.0,
+            53.0
+          ],
+          "name": "Test cli",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 75.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS /  oxide": {
+      "duration_seconds": 153.0,
+      "durations": [
+        169.0,
+        149.0,
+        132.0,
+        158.0,
+        153.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            6.0,
+            2.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            2.0,
+            1.0,
+            0.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            7.0,
+            4.0,
+            9.0,
+            7.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            13.0,
+            15.0,
+            14.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            19.0,
+            17.0,
+            18.0,
+            19.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            110.0,
+            92.0,
+            81.0,
+            94.0,
+            98.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 94.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Test oxide",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS /  postcss": {
+      "duration_seconds": 265.0,
+      "durations": [
+        266.0,
+        265.0,
+        228.0,
+        282.0,
+        208.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        4.0,
+        8.0,
+        6.0,
+        6.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            7.0,
+            5.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            8.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            3.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            15.0,
+            17.0,
+            13.0,
+            12.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            29.0,
+            22.0,
+            16.0,
+            17.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            99.0,
+            108.0,
+            89.0,
+            98.0,
+            83.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 98.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            120.0,
+            83.0,
+            76.0,
+            133.0,
+            77.0
+          ],
+          "name": "Test postcss",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 83.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS /  upgrade": {
+      "duration_seconds": 457.0,
+      "durations": [
+        515.0,
+        457.0,
+        477.0,
+        389.0,
+        395.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        6.0,
+        6.0,
+        5.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            12.0,
+            10.0,
+            5.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            14.0,
+            14.0,
+            15.0,
+            15.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            25.0,
+            25.0,
+            24.0,
+            19.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            125.0,
+            116.0,
+            115.0,
+            88.0,
+            84.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 115.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            320.0,
+            275.0,
+            295.0,
+            237.0,
+            260.0
+          ],
+          "name": "Test upgrade",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 275.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS /  vite": {
+      "duration_seconds": 315.0,
+      "durations": [
+        380.0,
+        259.0,
+        315.0,
+        609.0,
+        257.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        6.0,
+        3.0,
+        5.0,
+        7.0,
+        6.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            4.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            4.0,
+            7.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            2.0,
+            2.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            7.0,
+            12.0,
+            7.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            2.0,
+            4.0,
+            5.0,
+            2.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            13.0,
+            13.0,
+            21.0,
+            15.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            20.0,
+            18.0,
+            38.0,
+            20.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            111.0,
+            79.0,
+            81.0,
+            188.0,
+            77.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 81.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            199.0,
+            128.0,
+            181.0,
+            325.0,
+            122.0
+          ],
+          "name": "Test vite",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 181.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "macOS /  webpack": {
+      "duration_seconds": 197.0,
+      "durations": [
+        207.0,
+        148.0,
+        251.0,
+        193.0,
+        197.0
+      ],
+      "main_step_counts": [
+        10
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        5.0,
+        7.0,
+        6.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            3.0,
+            6.0,
+            3.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Run git config --global user.name \"github-actions[bot]\"",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Use Node.js 24",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            8.0,
+            10.0,
+            8.0,
+            6.0
+          ],
+          "name": "Cache cargo",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Cache oxide build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            14.0,
+            17.0,
+            14.0,
+            16.0
+          ],
+          "name": "Setup WASM target",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            16.0,
+            26.0,
+            19.0,
+            21.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            110.0,
+            78.0,
+            136.0,
+            108.0,
+            113.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 110.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            30.0,
+            18.0,
+            40.0,
+            27.0,
+            24.0
+          ],
+          "name": "Test webpack",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 27.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "notify": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 10,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "021b7fe6f239ea6351c80bec84eb8ca91acfcb2f": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "21a35c1f3e6bfec691ca395780ebd642ed55964c": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "59308bb37deae2ba5f3d7bbab40e4487b6c1e23a": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "635abb67893f9a45e809b0e257797268dc86f700": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "7a7f38664821fcd7e97939fee893b5b680670363": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "90f8ff41c8e2a4d17bc76921e23e9d672123da76": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "e532ee047e10070684c3176f0361b9ba6f1a33ba": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "f58dc96f600049719624db1baa4dec958c9ed8a2": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "f723e834ad032aa0f42405f95f684be3cfcac8ef": "457c38424e079633b6ace1ea26736870b48d5f9c",
+      "f7f58f08060dee84a5d41f1f84ca466f2ee062c6": "457c38424e079633b6ace1ea26736870b48d5f9c"
+    },
+    "pinned_oid": "457c38424e079633b6ace1ea26736870b48d5f9c",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

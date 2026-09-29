@@ -1,0 +1,1037 @@
+{
+  "benchmark": "colinhacks/zod@764ac59f1afc1a46e7ecc2d5e8e86c57b7d66164:.github/workflows/test.yml",
+  "benchmark_id": "colinhacks__zod__test",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33452168577,
+        33452102665,
+        33451285027,
+        33450128268,
+        33447095003
+      ],
+      "window_count": 733
+    },
+    "push": {
+      "runs": [
+        33452521905,
+        33450730400,
+        33447580353,
+        33445635679,
+        33443118168
+      ],
+      "window_count": 241
+    }
+  },
+  "jobs": {
+    "Check for circular dependencies": {
+      "duration_seconds": 30.0,
+      "durations": [
+        28.0,
+        33.0,
+        28.0,
+        32.0,
+        32.0,
+        32.0,
+        28.0,
+        29.0,
+        31.0,
+        29.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        2.0,
+        5.0,
+        2.0,
+        6.0,
+        4.0,
+        5.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            5.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run actions/setup-node@v7",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            12.0,
+            10.0,
+            10.0,
+            11.0,
+            10.0,
+            9.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run pnpm check:circular",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Lint on Node latest": {
+      "duration_seconds": 27.5,
+      "durations": [
+        27.0,
+        26.0,
+        29.0,
+        26.0,
+        32.0,
+        32.0,
+        26.0,
+        26.0,
+        28.0,
+        33.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        2.0,
+        3.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0
+          ],
+          "name": "Run actions/setup-node@v7",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            11.0,
+            9.0,
+            11.0,
+            11.0,
+            9.0,
+            10.0,
+            9.0,
+            12.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run pnpm format:check",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run pnpm lint:check",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run pnpm check:comments",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test with TypeScript 5.5 on Node lts/* (ubuntu-latest)": {
+      "duration_seconds": 153.5,
+      "durations": [
+        156.0,
+        157.0,
+        162.0,
+        152.0,
+        151.0,
+        155.0,
+        132.0,
+        126.0,
+        158.0,
+        139.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        5.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            4.0,
+            1.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/setup-node@v7",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            8.0,
+            3.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            9.0,
+            9.0,
+            9.0,
+            10.0,
+            11.0,
+            9.0,
+            12.0,
+            10.0,
+            10.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            17.0,
+            15.0,
+            14.0,
+            15.0,
+            13.0,
+            12.0,
+            16.0,
+            13.0
+          ],
+          "name": "Run pnpm build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run pnpm add typescript@5.5 -w",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            77.0,
+            76.0,
+            82.0,
+            74.0,
+            74.0,
+            72.0,
+            64.0,
+            58.0,
+            78.0,
+            66.0
+          ],
+          "name": "Run pnpm test",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 74.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            12.0,
+            11.0,
+            11.0,
+            11.0,
+            9.0,
+            10.0,
+            12.0,
+            10.0
+          ],
+          "name": "Run pnpm run --filter @zod/resolution test:all",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            24.0,
+            26.0,
+            23.0,
+            23.0,
+            22.0,
+            20.0,
+            18.0,
+            25.0,
+            21.0
+          ],
+          "name": "Run pnpm run --filter @zod/integration test:all",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test with TypeScript 6 on Node lts/* (ubuntu-latest)": {
+      "duration_seconds": 158.5,
+      "durations": [
+        170.0,
+        152.0,
+        161.0,
+        158.0,
+        122.0,
+        150.0,
+        159.0,
+        158.0,
+        159.0,
+        160.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        2.0,
+        5.0,
+        5.0,
+        3.0,
+        5.0,
+        4.0,
+        2.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            4.0,
+            4.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/setup-node@v7",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            11.0,
+            10.0,
+            10.0,
+            9.0,
+            10.0,
+            11.0,
+            10.0,
+            10.0,
+            11.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            15.0,
+            15.0,
+            16.0,
+            12.0,
+            15.0,
+            16.0,
+            17.0,
+            16.0,
+            15.0
+          ],
+          "name": "Run pnpm build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            6.0,
+            5.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            7.0
+          ],
+          "name": "Run pnpm add typescript@6 -w",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            82.0,
+            73.0,
+            77.0,
+            78.0,
+            59.0,
+            74.0,
+            79.0,
+            80.0,
+            79.0,
+            78.0
+          ],
+          "name": "Run pnpm test",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 78.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            9.0,
+            11.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "name": "Run pnpm run --filter @zod/resolution test:all",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            23.0,
+            25.0,
+            24.0,
+            19.0,
+            23.0,
+            24.0,
+            24.0,
+            24.0,
+            25.0
+          ],
+          "name": "Run pnpm run --filter @zod/integration test:all",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test with TypeScript latest on Node lts/* (ubuntu-latest)": {
+      "duration_seconds": 135.0,
+      "durations": [
+        137.0,
+        139.0,
+        137.0,
+        128.0,
+        134.0,
+        148.0,
+        124.0,
+        136.0,
+        128.0,
+        114.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        5.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        3.0,
+        6.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/setup-node@v7",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            10.0,
+            9.0,
+            9.0,
+            10.0,
+            16.0,
+            10.0,
+            10.0,
+            9.0,
+            11.0
+          ],
+          "name": "Run pnpm install",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            17.0,
+            16.0,
+            15.0,
+            16.0,
+            14.0,
+            15.0,
+            15.0,
+            12.0
+          ],
+          "name": "Run pnpm build",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 15.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run pnpm add typescript@latest -w",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            68.0,
+            69.0,
+            63.0,
+            66.0,
+            69.0,
+            63.0,
+            66.0,
+            64.0,
+            53.0
+          ],
+          "name": "Run pnpm test",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 66.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run pnpm run --filter @zod/resolution test:all",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            24.0,
+            26.0,
+            25.0,
+            24.0,
+            24.0,
+            25.0,
+            23.0,
+            25.0,
+            23.0,
+            19.0
+          ],
+          "name": "Run pnpm run --filter @zod/integration test:all",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "18e71c71daff6e79ab8f00a48db252ccb340da1f": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "334e604269be6555c633e7416b32d35c38912b5f": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "4d7308828b1a56768741d7cfd6cf476eaead45af": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "5fc20ff49066869db72335019ccba9d7437d0632": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "68aca3dc402c59f5c4e30322e83028389e44b8b5": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "69c2748cd3c0c08d2f10e8d744e2ae412c7e323f": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "892e010246163b161790814a993fd1f7f9837da0": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "90269c601aae25499ee87e78a07508564825867f": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "a906e585c1439fc88aa386b737ca90d163732582": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+      "eca96871536603076bdd00b8779b947144133aa4": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c"
+    },
+    "pinned_oid": "201cae42a3363f42f6b081c8dc6c29db36a8cd2c",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

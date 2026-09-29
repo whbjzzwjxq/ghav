@@ -1,0 +1,2239 @@
+{
+  "benchmark": "TriliumNext/Trilium@2f848fc8e7ab09c71014e71175dd410f2f25bee2:.github/workflows/dev.yml",
+  "benchmark_id": "TriliumNext__Trilium__dev",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33452235848,
+        33451820310,
+        33451660760,
+        33450978948,
+        33450539376
+      ],
+      "window_count": 830
+    },
+    "push": {
+      "runs": [
+        33340022189,
+        33335447970,
+        33334977268,
+        33334428240,
+        33330682013
+      ],
+      "window_count": 374
+    }
+  },
+  "jobs": {
+    "Build Docker image": {
+      "duration_seconds": 101.5,
+      "durations": [
+        100.0,
+        105.0,
+        86.0,
+        117.0,
+        93.0,
+        103.0,
+        94.0,
+        96.0,
+        116.0,
+        109.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        6.0,
+        3.0,
+        4.0,
+        3.0,
+        7.0,
+        3.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            7.0,
+            6.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            6.0,
+            5.0,
+            16.0,
+            5.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            8.0,
+            10.0,
+            10.0,
+            10.0,
+            12.0,
+            9.0,
+            12.0,
+            16.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            14.0,
+            19.0,
+            17.0,
+            14.0,
+            13.0,
+            13.0,
+            14.0,
+            15.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Update build info",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            16.0,
+            17.0,
+            12.0,
+            13.0,
+            13.0,
+            15.0,
+            16.0,
+            16.0,
+            17.0
+          ],
+          "name": "Trigger client build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 16.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            13.0,
+            10.0,
+            11.0,
+            12.0,
+            13.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "name": "Trigger server build",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            8.0,
+            5.0,
+            12.0,
+            7.0,
+            10.0,
+            7.0,
+            5.0,
+            8.0,
+            7.0
+          ],
+          "name": "Run docker/setup-buildx-action@v4",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            27.0,
+            16.0,
+            27.0,
+            21.0,
+            27.0,
+            19.0,
+            23.0,
+            36.0,
+            25.0
+          ],
+          "name": "Run docker/build-push-action@v7",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 25.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "CKEditor 5 coverage gate": {
+      "duration_seconds": 6.5,
+      "durations": [
+        9.0,
+        56.0,
+        6.0,
+        7.0,
+        3.0,
+        51.0,
+        56.0,
+        5.0,
+        6.0,
+        3.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        9.0,
+        6.0,
+        6.0,
+        7.0,
+        3.0,
+        6.0,
+        6.0,
+        5.0,
+        6.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            12.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            14.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Download the shard blob reports",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0
+          ],
+          "name": "Merge the shard reports and evaluate the coverage gate",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 2.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            6.0
+          ],
+          "name": "Upload ckeditor5 coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 6.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload ckeditor5 test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.0,
+          "skipped": 7
+        }
+      ]
+    },
+    "Check Docker build (Dockerfile)": {
+      "duration_seconds": 102.5,
+      "durations": [
+        107.0,
+        104.0,
+        95.0,
+        99.0,
+        81.0,
+        84.0,
+        106.0,
+        101.0,
+        127.0,
+        104.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        8.0,
+        8.0,
+        4.0,
+        9.0,
+        3.0,
+        3.0,
+        7.0,
+        6.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            2.0,
+            3.0,
+            4.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            9.0,
+            5.0,
+            4.0,
+            5.0,
+            8.0,
+            5.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            13.0,
+            9.0,
+            13.0,
+            9.0,
+            10.0,
+            12.0,
+            12.0,
+            12.0,
+            8.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            15.0,
+            14.0,
+            15.0,
+            15.0,
+            15.0,
+            15.0,
+            15.0,
+            17.0,
+            14.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Update build info",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            13.0,
+            13.0,
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            11.0,
+            10.0
+          ],
+          "name": "Trigger build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set IMAGE_NAME to lowercase",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set TEST_TAG to lowercase",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0,
+            7.0,
+            8.0,
+            6.0,
+            23.0,
+            15.0
+          ],
+          "name": "Set up Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            33.0,
+            33.0,
+            28.0,
+            27.0,
+            22.0,
+            21.0,
+            33.0,
+            32.0,
+            38.0,
+            34.0
+          ],
+          "name": "Build and export to Docker",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 32.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Validate container run output",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Wait for the healthchecks to pass",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Print entire log",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Check Docker build (Dockerfile.alpine)": {
+      "duration_seconds": 100.5,
+      "durations": [
+        238.0,
+        95.0,
+        94.0,
+        106.0,
+        81.0,
+        105.0,
+        96.0,
+        89.0,
+        114.0,
+        115.0
+      ],
+      "main_step_counts": [
+        13
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        6.0,
+        7.0,
+        7.0,
+        7.0,
+        5.0,
+        8.0,
+        7.0,
+        5.0,
+        6.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0,
+            3.0,
+            5.0,
+            5.0,
+            4.0,
+            5.0,
+            2.0,
+            5.0,
+            7.0,
+            6.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            6.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            4.0,
+            5.0,
+            9.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            11.0,
+            10.0,
+            9.0,
+            8.0,
+            13.0,
+            12.0,
+            11.0,
+            9.0,
+            16.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            13.0,
+            14.0,
+            14.0,
+            14.0,
+            14.0,
+            16.0,
+            16.0,
+            16.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Update build info",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            14.0,
+            13.0,
+            13.0,
+            13.0,
+            13.0,
+            14.0,
+            14.0,
+            10.0
+          ],
+          "name": "Trigger build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set IMAGE_NAME to lowercase",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Set TEST_TAG to lowercase",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            7.0,
+            15.0,
+            5.0,
+            10.0,
+            7.0,
+            4.0,
+            15.0,
+            13.0
+          ],
+          "name": "Set up Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            165.0,
+            28.0,
+            28.0,
+            32.0,
+            20.0,
+            29.0,
+            31.0,
+            24.0,
+            33.0,
+            37.0
+          ],
+          "name": "Build and export to Docker",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 30.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Validate container run output",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Wait for the healthchecks to pass",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Print entire log",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Detect affected suites": {
+      "duration_seconds": 10.0,
+      "durations": [
+        10.0,
+        8.0,
+        12.0,
+        5.0,
+        9.0,
+        11.0,
+        11.0,
+        8.0,
+        13.0,
+        10.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        2.0,
+        5.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0,
+        1.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            5.0,
+            6.0,
+            3.0,
+            5.0,
+            7.0,
+            7.0,
+            7.0,
+            8.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run dorny/paths-filter@v4",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test CKEditor 5 (shard 1)": {
+      "duration_seconds": 4.5,
+      "durations": [
+        5.0,
+        129.0,
+        3.0,
+        2.0,
+        4.0,
+        122.0,
+        125.0,
+        4.0,
+        3.0,
+        5.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        5.0,
+        5.0,
+        3.0,
+        2.0,
+        4.0,
+        3.0,
+        2.0,
+        4.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            7.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            11.0,
+            10.0,
+            9.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            14.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            88.0,
+            84.0,
+            88.0
+          ],
+          "name": "Run the CKEditor 5 aggregate tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 88.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload the shard blob report",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 7
+        }
+      ]
+    },
+    "Test CKEditor 5 (shard 2)": {
+      "duration_seconds": 4.5,
+      "durations": [
+        4.0,
+        121.0,
+        4.0,
+        3.0,
+        5.0,
+        112.0,
+        102.0,
+        6.0,
+        2.0,
+        3.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        6.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0,
+        4.0,
+        6.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            2.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            16.0,
+            7.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 7.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            19.0,
+            12.0,
+            9.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            16.0,
+            12.0,
+            14.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            59.0,
+            71.0,
+            68.0
+          ],
+          "name": "Run the CKEditor 5 aggregate tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 68.0,
+          "skipped": 7
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload the shard blob report",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 7
+        }
+      ]
+    },
+    "Test development": {
+      "duration_seconds": 371.5,
+      "durations": [
+        289.0,
+        308.0,
+        419.0,
+        377.0,
+        416.0,
+        334.0,
+        311.0,
+        422.0,
+        397.0,
+        366.0
+      ],
+      "main_step_counts": [
+        26
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        6.0,
+        4.0,
+        7.0,
+        8.0,
+        6.0,
+        6.0,
+        8.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            4.0,
+            7.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            12.0,
+            3.0,
+            8.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            11.0,
+            10.0,
+            7.0,
+            12.0,
+            11.0,
+            8.0,
+            13.0,
+            11.0,
+            10.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            16.0,
+            14.0,
+            15.0,
+            13.0,
+            15.0,
+            14.0,
+            14.0,
+            13.0,
+            13.0,
+            16.0
+          ],
+          "name": "Run pnpm install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            15.0,
+            15.0,
+            15.0,
+            13.0,
+            12.0,
+            15.0,
+            14.0,
+            14.0
+          ],
+          "name": "Typecheck",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run the repo-script tests",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            102.0,
+            116.0,
+            155.0,
+            143.0,
+            152.0,
+            127.0,
+            120.0,
+            156.0,
+            147.0,
+            134.0
+          ],
+          "name": "Run the client-side tests",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 138.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload client test report",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            4.0,
+            7.0,
+            6.0,
+            5.0
+          ],
+          "name": "Upload client coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Upload client test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            15.0,
+            14.0,
+            14.0,
+            13.0,
+            12.0,
+            15.0,
+            14.0,
+            12.0
+          ],
+          "name": "Run the desktop tests",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 13.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            6.0,
+            5.0,
+            6.0,
+            5.0,
+            4.0,
+            6.0,
+            6.0,
+            5.0
+          ],
+          "name": "Upload desktop coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Upload desktop test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            7.0,
+            7.0,
+            7.0,
+            5.0,
+            6.0,
+            7.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run the commons tests",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0
+          ],
+          "name": "Upload commons coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            4.0,
+            2.0
+          ],
+          "name": "Upload commons test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            60.0,
+            67.0,
+            110.0,
+            95.0,
+            109.0,
+            72.0,
+            70.0,
+            111.0,
+            103.0,
+            98.0
+          ],
+          "name": "Run the codemirror tests",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 96.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            4.0,
+            5.0,
+            7.0,
+            5.0
+          ],
+          "name": "Upload codemirror coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload codemirror test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            18
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run the highlightjs tests",
+          "occurrence": 0,
+          "positions": [
+            19
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            4.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0
+          ],
+          "name": "Upload highlightjs coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            20
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload highlightjs test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            21
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            5.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run the pdfjs-viewer tests",
+          "occurrence": 0,
+          "positions": [
+            22
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0
+          ],
+          "name": "Upload pdfjs-viewer coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            23
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload pdfjs-viewer test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            24
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            8.0,
+            7.0,
+            8.0,
+            7.0,
+            5.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "name": "Run the rest of the tests",
+          "occurrence": 0,
+          "positions": [
+            25
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test server": {
+      "duration_seconds": 6.5,
+      "durations": [
+        3.0,
+        313.0,
+        325.0,
+        5.0,
+        5.0,
+        230.0,
+        336.0,
+        8.0,
+        3.0,
+        5.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        4.0,
+        8.0,
+        5.0,
+        5.0,
+        7.0,
+        7.0,
+        8.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            2.0,
+            6.0,
+            4.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            4.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            9.0,
+            11.0,
+            12.0,
+            13.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.5,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            19.0,
+            15.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            266.0,
+            272.0,
+            171.0,
+            280.0
+          ],
+          "name": "Run the server-side tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 269.0,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Upload server test report",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 3.0,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            4.0,
+            6.0
+          ],
+          "name": "Upload server coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 5.5,
+          "skipped": 6
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            4.0
+          ],
+          "name": "Upload server test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 3.5,
+          "skipped": 6
+        }
+      ]
+    },
+    "Test standalone": {
+      "duration_seconds": 96.0,
+      "durations": [
+        322.0,
+        295.0,
+        187.0,
+        4.0,
+        5.0,
+        228.0,
+        302.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        7.0,
+        3.0,
+        5.0,
+        4.0,
+        5.0,
+        4.0,
+        7.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            5.0,
+            4.0,
+            6.0,
+            4.0
+          ],
+          "name": "Checkout the repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            8.0,
+            4.0,
+            3.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            15.0,
+            9.0,
+            9.0,
+            7.0,
+            10.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 9.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            16.0,
+            14.0,
+            12.0,
+            14.0,
+            15.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            263.0,
+            252.0,
+            148.0,
+            184.0,
+            251.0
+          ],
+          "name": "Run the standalone tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 251.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            4.0,
+            4.0,
+            6.0
+          ],
+          "name": "Upload standalone coverage to Codecov",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 5.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "name": "Upload standalone test results to Codecov",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 5
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "33420dc8acfd9d6c81ce90c87f0291574995e04d": "fdf3ba4fa50973947413be427313da129f25b103",
+      "5661e115573eee28e93dec67b7bb878a3fa9fab4": "fdf3ba4fa50973947413be427313da129f25b103",
+      "8a173b6819040e071e6154a57d3e3b3d66a07326": "fdf3ba4fa50973947413be427313da129f25b103",
+      "9209c1429deca13accff5ce6cf42c5fe17c684c1": "fdf3ba4fa50973947413be427313da129f25b103",
+      "afb30815726843908e19b6066360b193f9cd0fd6": "fdf3ba4fa50973947413be427313da129f25b103",
+      "b387bbf5ba70a2b4bcefdb742e963e6c622d1218": "fdf3ba4fa50973947413be427313da129f25b103",
+      "c15f69cee7db820c888aa98160831c01acb14100": "fdf3ba4fa50973947413be427313da129f25b103",
+      "d5faf7f2283aa254d06643d030ff7ab984666ced": "fdf3ba4fa50973947413be427313da129f25b103",
+      "e6e9362c4b86acb5987fa6d0b82e8325010b8e08": "fdf3ba4fa50973947413be427313da129f25b103",
+      "ebf0e142f45f0558a3f17302a61f00b57a1a0b7a": "fdf3ba4fa50973947413be427313da129f25b103"
+    },
+    "pinned_oid": "fdf3ba4fa50973947413be427313da129f25b103",
+    "runs_same_version": 10,
+    "runs_total": 10
+  }
+}

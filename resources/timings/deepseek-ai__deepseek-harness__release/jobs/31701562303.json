@@ -1,0 +1,188 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-13T12:52:19Z",
+      "conclusion": "success",
+      "created_at": "2026-08-13T12:45:32Z",
+      "head_sha": "47f943859bef60e4160492346772ded9b24f765a",
+      "id": 94451698870,
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "name": "Pack npm tarballs",
+      "run_attempt": 1,
+      "run_id": 31701562303,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000003942",
+      "started_at": "2026-08-13T12:45:35Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-13T12:45:38Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-13T12:45:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:45:54Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v6",
+          "number": 2,
+          "started_at": "2026-08-13T12:45:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:45:56Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v4",
+          "number": 3,
+          "started_at": "2026-08-13T12:45:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:45:56Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6",
+          "number": 4,
+          "started_at": "2026-08-13T12:45:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:45:57Z",
+          "conclusion": "success",
+          "name": "Configure pnpm store path",
+          "number": 5,
+          "started_at": "2026-08-13T12:45:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:45:58Z",
+          "conclusion": "success",
+          "name": "Run actions/cache/restore@v4",
+          "number": 6,
+          "started_at": "2026-08-13T12:45:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:46:30Z",
+          "conclusion": "success",
+          "name": "Install (immutable)",
+          "number": 7,
+          "started_at": "2026-08-13T12:45:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:46:31Z",
+          "conclusion": "success",
+          "name": "Verify release version",
+          "number": 8,
+          "started_at": "2026-08-13T12:46:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:48:36Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 9,
+          "started_at": "2026-08-13T12:46:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:50:40Z",
+          "conclusion": "success",
+          "name": "Pack release tarballs",
+          "number": 10,
+          "started_at": "2026-08-13T12:48:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:50:45Z",
+          "conclusion": "success",
+          "name": "Pack the vendored framework for verification",
+          "number": 11,
+          "started_at": "2026-08-13T12:50:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:50:48Z",
+          "conclusion": "success",
+          "name": "Pack the Landlock entry for verification",
+          "number": 12,
+          "started_at": "2026-08-13T12:50:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:52:12Z",
+          "conclusion": "success",
+          "name": "Verify packed install",
+          "number": 13,
+          "started_at": "2026-08-13T12:50:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:52:15Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 14,
+          "started_at": "2026-08-13T12:52:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:52:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6",
+          "number": 26,
+          "started_at": "2026-08-13T12:52:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:52:15Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v4",
+          "number": 27,
+          "started_at": "2026-08-13T12:52:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:52:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v6",
+          "number": 28,
+          "started_at": "2026-08-13T12:52:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-13T12:52:15Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 29,
+          "started_at": "2026-08-13T12:52:15Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Release (dsh)"
+    },
+    {
+      "completed_at": "2026-08-13T12:52:19Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-13T12:52:19Z",
+      "head_sha": "47f943859bef60e4160492346772ded9b24f765a",
+      "id": 94453505118,
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "name": "Publish to npm",
+      "run_attempt": 1,
+      "run_id": 31701562303,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-13T12:52:19Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "Release (dsh)"
+    }
+  ],
+  "run_id": 31701562303
+}

@@ -1,0 +1,89 @@
+// TypeScript config file that matches all source files in the project. This file is read by
+// IDEs and TSLint. For IDEs it ensures that `experimentalDecorator` warnings are not showing up.
+{
+  "compilerOptions": {
+    "outDir": "./dist/packages/all",
+    "rootDir": "./",
+    "stableTypeOrdering": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "strictFunctionTypes": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "strictBindCallApply": true,
+    "target": "es2022",
+    "lib": ["es2020", "dom"],
+    "types": ["jasmine"],
+    "paths": {
+      "@angular/aria": ["./src/aria"],
+      "@angular/aria/*": ["./src/aria/*"],
+      "@angular/cdk": ["./src/cdk"],
+      "@angular/cdk/*": ["./src/cdk/*"],
+      "@angular/material/*": ["./src/material/*"],
+      "@angular/material-experimental/*": ["./src/material-experimental/*"],
+      "@angular/material-experimental": ["./src/material-experimental"],
+      "@angular/cdk-experimental/*": ["./src/cdk-experimental/*"],
+      "@angular/cdk-experimental": ["./src/cdk-experimental"],
+      "@angular/material-moment-adapter": ["./src/material-moment-adapter"],
+      "@angular/material-luxon-adapter": ["./src/material-luxon-adapter"],
+      "@angular/material-date-fns-adapter": ["./src/material-date-fns-adapter"],
+      "@angular/components-examples": ["./src/components-examples"],
+      "@angular/components-examples/*": ["./src/components-examples/*"],
+      "@angular/google-maps": ["./src/google-maps"],
+      "@angular/youtube-player": ["./src/youtube-player"]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true,
+    "typeCheckHostBindings": true,
+    "strictInputAccessModifiers": true,
+    "strictInputTypes": true,
+    "strictOutputEventTypes": true,
+    "strictDomEventTypes": true,
+    "extendedDiagnostics": {
+      "defaultCategory": "error"
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "e2e/**/*.ts",
+    "test/**/*.ts",
+    "tools/**/*.ts",
+    "tools/**/*.mts",
+    "integration/**/*.ts",
+    "scripts/**/*.ts",
+    "docs/**/*.ts"
+  ],
+  "exclude": [
+    // Exclude files that depend on Node APIs because those depend on the Node types and therefore
+    // cause ambiguous imports. For example `setTimeout()` will return a Timer instead of a number.
+    "./src/universal-app/prerender.ts",
+
+    // Exclude the API goldens in order to not slow-down IDE's using this tsconfig file
+    "goldens/**/*",
+
+    // IDEs should not type-check the different node_modules directories of the different packages.
+    // This would cause the IDEs to be slower and also linters would check the node_modules.
+    "node_modules/",
+
+    // Exclude schematic template files and test cases which aren't valid TS files.
+    "src/material/schematics/ng-generate/*/files/**/*",
+    "src/cdk/schematics/ng-generate/*/files/**/*",
+    "src/cdk/schematics/ng-update/test-cases/**/*_input.ts",
+    "src/cdk/schematics/ng-update/test-cases/**/*_expected_output.ts",
+    "src/material/schematics/ng-update/test-cases/**/*_input.ts",
+    "src/material/schematics/ng-update/test-cases/**/*_expected_output.ts"
+  ]
+}

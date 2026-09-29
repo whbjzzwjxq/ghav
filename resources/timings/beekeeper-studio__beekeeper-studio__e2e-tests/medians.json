@@ -1,0 +1,520 @@
+{
+  "benchmark": "beekeeper-studio/beekeeper-studio@bfbabe6f4ad4e8397f127989ea7360fb7b48fcdf:.github/workflows/e2e-tests.yml",
+  "benchmark_id": "beekeeper-studio__beekeeper-studio__e2e-tests",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        25570015259,
+        25566673839,
+        25566310005,
+        25566299449,
+        25565576714
+      ],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        32462963886,
+        32448347676,
+        32437844361,
+        32310608202,
+        32294188818
+      ],
+      "window_count": 54
+    }
+  },
+  "jobs": {
+    "E2E Tests": {
+      "duration_seconds": 261.5,
+      "durations": [
+        285.0,
+        272.0,
+        251.0,
+        206.0,
+        261.0,
+        1670.0,
+        249.0,
+        262.0,
+        225.0,
+        288.0
+      ],
+      "main_step_counts": [
+        11,
+        12
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        6.0,
+        8.0,
+        3.0,
+        4.0,
+        4.0,
+        7.0,
+        3.0,
+        4.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            6.0,
+            5.0,
+            6.0,
+            7.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            5.0,
+            8.0
+          ],
+          "name": "Check out Git repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Install Python 3.11",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            8.0,
+            4.0,
+            4.0,
+            5.0,
+            7.0,
+            5.0,
+            6.0,
+            7.0
+          ],
+          "name": "Install Node.js, NPM and Yarn",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Compute runner image cache id",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            10.0,
+            6.0,
+            8.0,
+            8.0,
+            9.0,
+            7.0,
+            6.0,
+            13.0
+          ],
+          "name": "Restore node_modules cache",
+          "occurrence": 0,
+          "positions": [
+            3,
+            4
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            6.0,
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0,
+            3.0,
+            7.0
+          ],
+          "name": "Restore Playwright browsers cache",
+          "occurrence": 0,
+          "positions": [
+            4,
+            5
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            21.0,
+            25.0,
+            19.0,
+            22.0,
+            1459.0,
+            16.0,
+            11.0,
+            13.0,
+            17.0
+          ],
+          "name": "Install Playwright system dependencies",
+          "occurrence": 0,
+          "positions": [
+            5,
+            6
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            7.0,
+            8.0,
+            10.0,
+            5.0,
+            4.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Build UI Kit",
+          "occurrence": 0,
+          "positions": [
+            6,
+            7
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            20.0,
+            15.0,
+            18.0,
+            19.0,
+            8.0,
+            7.0,
+            9.0,
+            8.0,
+            9.0
+          ],
+          "name": "Build App",
+          "occurrence": 0,
+          "positions": [
+            7,
+            8
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            35.0,
+            8.0,
+            15.0,
+            8.0,
+            7.0,
+            7.0,
+            15.0,
+            9.0,
+            8.0,
+            10.0
+          ],
+          "name": "Start postgres container",
+          "occurrence": 0,
+          "positions": [
+            8,
+            9
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            173.0,
+            179.0,
+            150.0,
+            130.0,
+            179.0,
+            167.0,
+            173.0,
+            204.0,
+            166.0,
+            203.0
+          ],
+          "name": "Run Tests",
+          "occurrence": 0,
+          "positions": [
+            9,
+            10
+          ],
+          "seconds": 173.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Upload test results",
+          "occurrence": 0,
+          "positions": [
+            10,
+            11
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "prep": {
+      "duration_seconds": 29.5,
+      "durations": [
+        39.0,
+        29.0,
+        23.0,
+        27.0,
+        31.0,
+        38.0,
+        25.0,
+        31.0,
+        27.0,
+        30.0
+      ],
+      "main_step_counts": [
+        6,
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            7.0,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0
+          ],
+          "name": "Run actions/checkout@v5",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            5.0,
+            5.0,
+            7.0,
+            5.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Install Node.js, NPM and Yarn",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            9.0,
+            7.0,
+            8.0,
+            10.0,
+            9.0,
+            6.0,
+            8.0,
+            8.0,
+            9.0
+          ],
+          "name": "Cache node_modules",
+          "occurrence": 0,
+          "positions": [
+            2,
+            3
+          ],
+          "seconds": 8.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Compute runner image cache id",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3,
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            4,
+            5
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            7.0,
+            7.0
+          ],
+          "name": "Install Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            5,
+            6
+          ],
+          "seconds": 7.0,
+          "skipped": 7
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "05144d83b0508a870e40d57e56e5245660aa923f": "0b4375a3c51690e7d10de0a5de50f169a9490908",
+      "298485d9e51399f400613bef0bcbed089f9792be": "92599edc6b5948aa1a9029151ba724b642a1be5c",
+      "3ab4cd47f4a9a360efa1a56f62522445527cdb38": "0b4375a3c51690e7d10de0a5de50f169a9490908",
+      "3f5df6470064cc3dc9890592d22b5d75e600bbb4": "e938893ff784ffde0d9645d844ee60690a51afe4",
+      "61957196272fedcb35ea0b1160eb3a71d91bb51c": "0b4375a3c51690e7d10de0a5de50f169a9490908",
+      "7d8f3f0589a6b1c927211a69fe03d7f9ad50b9c6": "e938893ff784ffde0d9645d844ee60690a51afe4",
+      "930a233b0af1641ba6f1d5d5f93438272a7a495c": "e938893ff784ffde0d9645d844ee60690a51afe4",
+      "966ce6be88071e4c4bd9113b4bd1f3d9eaf208c5": "92599edc6b5948aa1a9029151ba724b642a1be5c",
+      "caebb93e5eb0f1f44451d43fbb9f6771aab99024": "0b4375a3c51690e7d10de0a5de50f169a9490908",
+      "ecc22477283099a3390f0a621d7a68a25721af7e": "0b4375a3c51690e7d10de0a5de50f169a9490908"
+    },
+    "pinned_oid": "0b4375a3c51690e7d10de0a5de50f169a9490908",
+    "runs_same_version": 5,
+    "runs_total": 10
+  }
+}

@@ -1,0 +1,4529 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-09-01T00:04:50Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474742,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-ubuntu-22.04-x64",
+        "JobId=compile-33452883703-60855-1"
+      ],
+      "name": "Compile & Hygiene",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "5d4dfeacc000000",
+      "started_at": "2026-08-31T23:58:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:03Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:08Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:31Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:31Z",
+          "conclusion": "skipped",
+          "name": "Install build tools",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:31Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:32Z",
+          "conclusion": "success",
+          "name": "Prepare Electron types",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:33Z",
+          "conclusion": "success",
+          "name": "Type check /build/ scripts",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:37Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:38Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:38Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:38Z",
+          "conclusion": "success",
+          "name": "Check Markdown editor manifests",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:40Z",
+          "conclusion": "success",
+          "name": "Compile & Hygiene",
+          "number": 13,
+          "started_at": "2026-08-31T23:59:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:41Z",
+          "conclusion": "success",
+          "name": "Check Codex protocol client is in sync",
+          "number": 14,
+          "started_at": "2026-09-01T00:04:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:47Z",
+          "conclusion": "success",
+          "name": "Check cyclic dependencies",
+          "number": 15,
+          "started_at": "2026-09-01T00:04:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:47Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 29,
+          "started_at": "2026-09-01T00:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:47Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 30,
+          "started_at": "2026-09-01T00:04:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 31,
+          "started_at": "2026-09-01T00:04:47Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-08-31T23:59:25Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474866,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-ubuntu-22.04-x64",
+        "JobId=copilot-check-test-cache-33452883703-60855-1"
+      ],
+      "name": "Copilot - Check Test Cache",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "7db436dbc000003",
+      "started_at": "2026-08-31T23:58:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:03Z",
+          "conclusion": "success",
+          "name": "Checkout code",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:08Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:19Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:19Z",
+          "conclusion": "skipped",
+          "name": "Install root dependencies",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:19Z",
+          "conclusion": "skipped",
+          "name": "Install copilot dependencies",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:20Z",
+          "conclusion": "success",
+          "name": "Ensure no duplicate cache keys",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:23Z",
+          "conclusion": "success",
+          "name": "Ensure no untrusted cache changes",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 15,
+          "started_at": "2026-08-31T23:59:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:24Z",
+          "conclusion": "success",
+          "name": "Post Checkout code",
+          "number": 16,
+          "started_at": "2026-08-31T23:59:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T23:59:24Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:09:39Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474867,
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "name": "Linux / Electron-Smoke",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712180",
+      "started_at": "2026-08-31T23:58:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:55Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:55Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:01Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:15Z",
+          "conclusion": "success",
+          "name": "Setup system services",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:16Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:16Z",
+          "conclusion": "skipped",
+          "name": "Install build dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T00:00:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:16Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T00:00:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:16Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 9,
+          "started_at": "2026-09-01T00:00:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:17Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 10,
+          "started_at": "2026-09-01T00:00:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:18Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 11,
+          "started_at": "2026-09-01T00:00:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:18Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 12,
+          "started_at": "2026-09-01T00:00:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:18Z",
+          "conclusion": "success",
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "number": 13,
+          "started_at": "2026-09-01T00:00:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:18Z",
+          "conclusion": "success",
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "number": 14,
+          "started_at": "2026-09-01T00:00:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:21Z",
+          "conclusion": "success",
+          "name": "Fontconfig diagnostics and cache reset",
+          "number": 15,
+          "started_at": "2026-09-01T00:00:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:34Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 16,
+          "started_at": "2026-09-01T00:00:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 17,
+          "started_at": "2026-09-01T00:00:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 19,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 20,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:01Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:01Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 22,
+          "started_at": "2026-09-01T00:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:01Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 23,
+          "started_at": "2026-09-01T00:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:01Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 24,
+          "started_at": "2026-09-01T00:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:05Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 25,
+          "started_at": "2026-09-01T00:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:13Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 26,
+          "started_at": "2026-09-01T00:01:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:13Z",
+          "conclusion": "success",
+          "name": "Remove musl Claude binary on glibc Linux",
+          "number": 27,
+          "started_at": "2026-09-01T00:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:14Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 28,
+          "started_at": "2026-09-01T00:01:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:34Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 29,
+          "started_at": "2026-09-01T00:01:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:34Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 30,
+          "started_at": "2026-09-01T00:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:34Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 31,
+          "started_at": "2026-09-01T00:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:35Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 32,
+          "started_at": "2026-09-01T00:09:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:35Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 33,
+          "started_at": "2026-09-01T00:09:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:35Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 34,
+          "started_at": "2026-09-01T00:09:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:37Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 35,
+          "started_at": "2026-09-01T00:09:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:37Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 69,
+          "started_at": "2026-09-01T00:09:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:37Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 70,
+          "started_at": "2026-09-01T00:09:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 71,
+          "started_at": "2026-09-01T00:09:37Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:11:31Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474902,
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "name": "Linux / Remote",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712182",
+      "started_at": "2026-08-31T23:58:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:53Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:53Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:58Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Setup system services",
+          "number": 5,
+          "started_at": "2026-08-31T23:58:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:55Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:55Z",
+          "conclusion": "skipped",
+          "name": "Install build dependencies",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:55Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:55Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:55Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:57Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:57Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:57Z",
+          "conclusion": "success",
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "number": 13,
+          "started_at": "2026-08-31T23:59:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:58Z",
+          "conclusion": "success",
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "number": 14,
+          "started_at": "2026-08-31T23:59:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:01Z",
+          "conclusion": "success",
+          "name": "Fontconfig diagnostics and cache reset",
+          "number": 15,
+          "started_at": "2026-08-31T23:59:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:16Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 16,
+          "started_at": "2026-09-01T00:00:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:42Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 17,
+          "started_at": "2026-09-01T00:00:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:42Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:42Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 19,
+          "started_at": "2026-09-01T00:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:42Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 20,
+          "started_at": "2026-09-01T00:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:56Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:00:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:56Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 22,
+          "started_at": "2026-09-01T00:00:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:56Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 23,
+          "started_at": "2026-09-01T00:00:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:38Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 24,
+          "started_at": "2026-09-01T00:00:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:43Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 25,
+          "started_at": "2026-09-01T00:04:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:51Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 26,
+          "started_at": "2026-09-01T00:04:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:51Z",
+          "conclusion": "success",
+          "name": "Remove musl Claude binary on glibc Linux",
+          "number": 27,
+          "started_at": "2026-09-01T00:04:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:51Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 28,
+          "started_at": "2026-09-01T00:04:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:51Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 29,
+          "started_at": "2026-09-01T00:04:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:51Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 30,
+          "started_at": "2026-09-01T00:04:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:25Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 31,
+          "started_at": "2026-09-01T00:04:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:25Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 32,
+          "started_at": "2026-09-01T00:11:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:25Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 33,
+          "started_at": "2026-09-01T00:11:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:25Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 34,
+          "started_at": "2026-09-01T00:11:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:27Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 35,
+          "started_at": "2026-09-01T00:11:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:28Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 69,
+          "started_at": "2026-09-01T00:11:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:28Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 70,
+          "started_at": "2026-09-01T00:11:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:11:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 71,
+          "started_at": "2026-09-01T00:11:28Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:10:14Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474921,
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "name": "Linux / Browser",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712181",
+      "started_at": "2026-08-31T23:58:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:54Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:54Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:00Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:13Z",
+          "conclusion": "success",
+          "name": "Setup system services",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "skipped",
+          "name": "Install build dependencies",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:56Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:56Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:56Z",
+          "conclusion": "success",
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "number": 13,
+          "started_at": "2026-08-31T23:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:56Z",
+          "conclusion": "success",
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "number": 14,
+          "started_at": "2026-08-31T23:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:58Z",
+          "conclusion": "success",
+          "name": "Fontconfig diagnostics and cache reset",
+          "number": 15,
+          "started_at": "2026-08-31T23:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:14Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 16,
+          "started_at": "2026-08-31T23:59:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:37Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 17,
+          "started_at": "2026-09-01T00:00:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:37Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:37Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 19,
+          "started_at": "2026-09-01T00:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:18Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 20,
+          "started_at": "2026-09-01T00:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:33Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:04:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:33Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 22,
+          "started_at": "2026-09-01T00:04:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:16Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 23,
+          "started_at": "2026-09-01T00:04:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:16Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 24,
+          "started_at": "2026-09-01T00:07:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:20Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 25,
+          "started_at": "2026-09-01T00:07:16Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:28Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 26,
+          "started_at": "2026-09-01T00:07:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:28Z",
+          "conclusion": "success",
+          "name": "Remove musl Claude binary on glibc Linux",
+          "number": 27,
+          "started_at": "2026-09-01T00:07:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:29Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 28,
+          "started_at": "2026-09-01T00:07:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 29,
+          "started_at": "2026-09-01T00:07:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:08Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 30,
+          "started_at": "2026-09-01T00:07:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:08Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 31,
+          "started_at": "2026-09-01T00:10:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:08Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 32,
+          "started_at": "2026-09-01T00:10:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:08Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 33,
+          "started_at": "2026-09-01T00:10:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:08Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 34,
+          "started_at": "2026-09-01T00:10:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:10Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 35,
+          "started_at": "2026-09-01T00:10:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:10Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 69,
+          "started_at": "2026-09-01T00:10:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:11Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 70,
+          "started_at": "2026-09-01T00:10:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 71,
+          "started_at": "2026-09-01T00:10:11Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:09:43Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474948,
+      "labels": [
+        "macos-26-xlarge"
+      ],
+      "name": "macOS / Electron-Smoke",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712177",
+      "started_at": "2026-08-31T23:58:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:49Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:49Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:49Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:30Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:58:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:30Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:30Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:31Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:31Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:31Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:39Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:59Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:59Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-08-31T23:59:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:59Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-08-31T23:59:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:59Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "number": 15,
+          "started_at": "2026-08-31T23:59:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:05Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-08-31T23:59:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 17,
+          "started_at": "2026-09-01T00:00:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "number": 18,
+          "started_at": "2026-09-01T00:00:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 19,
+          "started_at": "2026-09-01T00:00:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:07Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 20,
+          "started_at": "2026-09-01T00:00:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:11Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:00:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:12Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run",
+          "number": 22,
+          "started_at": "2026-09-01T00:00:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:18Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 23,
+          "started_at": "2026-09-01T00:00:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:24Z",
+          "conclusion": "success",
+          "name": "Install Squid for network-isolated smoke tests",
+          "number": 24,
+          "started_at": "2026-09-01T00:07:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:08:29Z",
+          "conclusion": "success",
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "number": 25,
+          "started_at": "2026-09-01T00:07:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:38Z",
+          "conclusion": "success",
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "number": 26,
+          "started_at": "2026-09-01T00:08:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:38Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 27,
+          "started_at": "2026-09-01T00:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:38Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 28,
+          "started_at": "2026-09-01T00:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:38Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run",
+          "number": 29,
+          "started_at": "2026-09-01T00:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:38Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 30,
+          "started_at": "2026-09-01T00:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:38Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 31,
+          "started_at": "2026-09-01T00:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:40Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 32,
+          "started_at": "2026-09-01T00:09:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:40Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 63,
+          "started_at": "2026-09-01T00:09:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:40Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 64,
+          "started_at": "2026-09-01T00:09:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 65,
+          "started_at": "2026-09-01T00:09:40Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:10:12Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474972,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-windows-2022-x64",
+        "JobId=copilot-windows-tests-33452883703-60855-1"
+      ],
+      "name": "Copilot - Test (Windows)",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "c7f873a4c000004",
+      "started_at": "2026-08-31T23:58:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:13Z",
+          "conclusion": "success",
+          "name": "Checkout repository",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:19Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:19Z",
+          "conclusion": "success",
+          "name": "Setup Python",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:43Z",
+          "conclusion": "success",
+          "name": "Setup .NET",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:50Z",
+          "conclusion": "success",
+          "name": "Install setuptools",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:33Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:33Z",
+          "conclusion": "skipped",
+          "name": "Install root dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T00:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:33Z",
+          "conclusion": "skipped",
+          "name": "Install copilot dependencies",
+          "number": 9,
+          "started_at": "2026-09-01T00:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:38Z",
+          "conclusion": "success",
+          "name": "TypeScript type checking",
+          "number": 10,
+          "started_at": "2026-09-01T00:00:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:17Z",
+          "conclusion": "success",
+          "name": "Lint",
+          "number": 11,
+          "started_at": "2026-09-01T00:00:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:22Z",
+          "conclusion": "success",
+          "name": "Compile",
+          "number": 12,
+          "started_at": "2026-09-01T00:02:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:11Z",
+          "conclusion": "success",
+          "name": "Run vitest unit tests",
+          "number": 13,
+          "started_at": "2026-09-01T00:02:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:20Z",
+          "conclusion": "success",
+          "name": "Run simulation tests with cache",
+          "number": 14,
+          "started_at": "2026-09-01T00:04:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:09:24Z",
+          "conclusion": "success",
+          "name": "Run Completions Core prompt tests",
+          "number": 15,
+          "started_at": "2026-09-01T00:09:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:09Z",
+          "conclusion": "success",
+          "name": "Run Completions Core lib tests using VS Code",
+          "number": 16,
+          "started_at": "2026-09-01T00:09:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:09Z",
+          "conclusion": "success",
+          "name": "Post Setup .NET",
+          "number": 29,
+          "started_at": "2026-09-01T00:10:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:09Z",
+          "conclusion": "success",
+          "name": "Post Setup Python",
+          "number": 30,
+          "started_at": "2026-09-01T00:10:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:09Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 31,
+          "started_at": "2026-09-01T00:10:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:11Z",
+          "conclusion": "success",
+          "name": "Post Checkout repository",
+          "number": 32,
+          "started_at": "2026-09-01T00:10:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "started_at": "2026-09-01T00:10:11Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:07:53Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474973,
+      "labels": [
+        "macos-26-xlarge"
+      ],
+      "name": "macOS / Browser",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712175",
+      "started_at": "2026-08-31T23:58:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:52Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:52Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:53Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:45Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:45Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:46Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:46Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:48Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:48Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:03Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:24Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-09-01T00:00:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:24Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:00:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:24Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:00:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:35Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "number": 15,
+          "started_at": "2026-09-01T00:00:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:42Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:02:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:42Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 17,
+          "started_at": "2026-09-01T00:02:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:11Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "number": 18,
+          "started_at": "2026-09-01T00:02:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:11Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 19,
+          "started_at": "2026-09-01T00:05:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:14Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 20,
+          "started_at": "2026-09-01T00:05:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:19Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:05:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:19Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run",
+          "number": 22,
+          "started_at": "2026-09-01T00:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:19Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 23,
+          "started_at": "2026-09-01T00:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:19Z",
+          "conclusion": "skipped",
+          "name": "Install Squid for network-isolated smoke tests",
+          "number": 24,
+          "started_at": "2026-09-01T00:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:19Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "number": 25,
+          "started_at": "2026-09-01T00:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:19Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "number": 26,
+          "started_at": "2026-09-01T00:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:49Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 27,
+          "started_at": "2026-09-01T00:05:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:49Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 28,
+          "started_at": "2026-09-01T00:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:49Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run",
+          "number": 29,
+          "started_at": "2026-09-01T00:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:49Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 30,
+          "started_at": "2026-09-01T00:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:49Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 31,
+          "started_at": "2026-09-01T00:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:50Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 32,
+          "started_at": "2026-09-01T00:07:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:50Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 63,
+          "started_at": "2026-09-01T00:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:51Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 64,
+          "started_at": "2026-09-01T00:07:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 65,
+          "started_at": "2026-09-01T00:07:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:12:37Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474975,
+      "labels": [
+        "macos-26-xlarge"
+      ],
+      "name": "macOS / Electron",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712176",
+      "started_at": "2026-08-31T23:58:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:41Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:52Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:54Z",
+          "conclusion": "success",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:55Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:45Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:45Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:45Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:45Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:47Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:47Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:56Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:17Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:01Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:00:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:53Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:04:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:53Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "number": 15,
+          "started_at": "2026-09-01T00:04:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:00Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:04:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 17,
+          "started_at": "2026-09-01T00:05:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "number": 18,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 19,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "Compile smoke tests",
+          "number": 20,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics before smoke test run",
+          "number": 22,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 23,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:31Z",
+          "conclusion": "skipped",
+          "name": "Install Squid for network-isolated smoke tests",
+          "number": 24,
+          "started_at": "2026-09-01T00:12:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "number": 25,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "number": 26,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 27,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 28,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics after smoke test run",
+          "number": 29,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 30,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:32Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 31,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:33Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 32,
+          "started_at": "2026-09-01T00:12:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:33Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 63,
+          "started_at": "2026-09-01T00:12:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:33Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 64,
+          "started_at": "2026-09-01T00:12:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:12:34Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 65,
+          "started_at": "2026-09-01T00:12:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:06:42Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474976,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-ubuntu-22.04-x64",
+        "JobId=copilot-linux-tests-33452883703-60855-1"
+      ],
+      "name": "Copilot - Test (Linux)",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "7db436dbc000001",
+      "started_at": "2026-08-31T23:58:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:04Z",
+          "conclusion": "success",
+          "name": "Checkout repository",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:09Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:09Z",
+          "conclusion": "success",
+          "name": "Setup Python",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:18Z",
+          "conclusion": "success",
+          "name": "Setup .NET",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:21Z",
+          "conclusion": "success",
+          "name": "Install setuptools",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:26Z",
+          "conclusion": "success",
+          "name": "Install system dependencies",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:37Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:37Z",
+          "conclusion": "skipped",
+          "name": "Install root dependencies",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:37Z",
+          "conclusion": "skipped",
+          "name": "Install copilot dependencies",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:41Z",
+          "conclusion": "success",
+          "name": "TypeScript type checking",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:56Z",
+          "conclusion": "success",
+          "name": "Lint",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:01Z",
+          "conclusion": "success",
+          "name": "Compile",
+          "number": 13,
+          "started_at": "2026-09-01T00:00:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:33Z",
+          "conclusion": "success",
+          "name": "Run vitest unit tests",
+          "number": 14,
+          "started_at": "2026-09-01T00:01:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:59Z",
+          "conclusion": "success",
+          "name": "Run simulation tests with cache",
+          "number": 15,
+          "started_at": "2026-09-01T00:02:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:02Z",
+          "conclusion": "success",
+          "name": "Run Completions Core prompt tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:05:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:35Z",
+          "conclusion": "success",
+          "name": "Run Completions Core lib tests using VS Code",
+          "number": 17,
+          "started_at": "2026-09-01T00:06:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:39Z",
+          "conclusion": "success",
+          "name": "Archive simulation output",
+          "number": 18,
+          "started_at": "2026-09-01T00:06:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:40Z",
+          "conclusion": "success",
+          "name": "Upload simulation output",
+          "number": 19,
+          "started_at": "2026-09-01T00:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:40Z",
+          "conclusion": "success",
+          "name": "Post Setup .NET",
+          "number": 35,
+          "started_at": "2026-09-01T00:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:40Z",
+          "conclusion": "success",
+          "name": "Post Setup Python",
+          "number": 36,
+          "started_at": "2026-09-01T00:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:41Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 37,
+          "started_at": "2026-09-01T00:06:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:41Z",
+          "conclusion": "success",
+          "name": "Post Checkout repository",
+          "number": 38,
+          "started_at": "2026-09-01T00:06:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 39,
+          "started_at": "2026-09-01T00:06:41Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:01:00Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474984,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-ubuntu-22.04-x64",
+        "JobId=linux-cli-test-CLI-33452883703-60855-1"
+      ],
+      "name": "Linux / CLI",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "482d5189c000000",
+      "started_at": "2026-08-31T23:58:53Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:03Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:13Z",
+          "conclusion": "success",
+          "name": "Install Rust",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:14Z",
+          "conclusion": "success",
+          "name": "Set Rust version",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:14Z",
+          "conclusion": "success",
+          "name": "Check Rust versions",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:55Z",
+          "conclusion": "success",
+          "name": "Clippy lint",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:58Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:59Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 14,
+          "started_at": "2026-09-01T00:00:58Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "started_at": "2026-09-01T00:00:59Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-08-31T23:59:14Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686474999,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-ubuntu-22.04-x64",
+        "JobId=copilot-check-telemetry-33452883703-60855-1"
+      ],
+      "name": "Copilot - Check Telemetry",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "7db436dbc000000",
+      "started_at": "2026-08-31T23:58:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:04Z",
+          "conclusion": "success",
+          "name": "Checkout code",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:09Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Validate telemetry events",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Post Checkout code",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:15:35Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686475070,
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "name": "Linux / Electron",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712183",
+      "started_at": "2026-08-31T23:58:41Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:53Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:54Z",
+          "conclusion": "success",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:59Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Setup system services",
+          "number": 5,
+          "started_at": "2026-08-31T23:58:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:52Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:52Z",
+          "conclusion": "skipped",
+          "name": "Install build dependencies",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:52Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:52Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:52Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:54Z",
+          "conclusion": "success",
+          "name": "Workaround expat NULL deref CVEs in fontconfig parsing",
+          "number": 13,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:56Z",
+          "conclusion": "success",
+          "name": "Pre-initialize fontconfig to avoid Pango threaded FcInit crash",
+          "number": 14,
+          "started_at": "2026-08-31T23:59:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:00Z",
+          "conclusion": "success",
+          "name": "Fontconfig diagnostics and cache reset",
+          "number": 15,
+          "started_at": "2026-08-31T23:59:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:14Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 16,
+          "started_at": "2026-09-01T00:00:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:37Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 17,
+          "started_at": "2026-09-01T00:00:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:21Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:00:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:24Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 19,
+          "started_at": "2026-09-01T00:04:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:24Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 20,
+          "started_at": "2026-09-01T00:05:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:05:37Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:05:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 22,
+          "started_at": "2026-09-01T00:05:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 23,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 24,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Compile smoke tests",
+          "number": 25,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 26,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Remove musl Claude binary on glibc Linux",
+          "number": 27,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics before smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 28,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 29,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 30,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 31,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics after smoke test run (processes, max_user_watches, number of opened file handles)",
+          "number": 32,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 33,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:29Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 34,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:31Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 35,
+          "started_at": "2026-09-01T00:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:31Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 69,
+          "started_at": "2026-09-01T00:15:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:32Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 70,
+          "started_at": "2026-09-01T00:15:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:15:32Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 71,
+          "started_at": "2026-09-01T00:15:32Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:17:39Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686475073,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-windows-2022-x64",
+        "JobId=windows-test-Electron-33452883703-60855-1"
+      ],
+      "name": "Windows / Electron",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "c7f873a4c000001",
+      "started_at": "2026-08-31T23:58:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:14Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:15Z",
+          "conclusion": "success",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:21Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:47Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:47Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-09-01T00:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:47Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-09-01T00:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:48Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-09-01T00:00:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:49Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-09-01T00:00:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:49Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-09-01T00:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:02Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-09-01T00:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:26Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-09-01T00:01:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:53Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:01:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:28Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:04:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:28Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 15,
+          "started_at": "2026-09-01T00:06:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:38Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:06:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:39Z",
+          "conclusion": "success",
+          "name": "Diagnostics before integration test runs",
+          "number": 17,
+          "started_at": "2026-09-01T00:06:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:34Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:06:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:34Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 19,
+          "started_at": "2026-09-01T00:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:34Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 20,
+          "started_at": "2026-09-01T00:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "success",
+          "name": "Diagnostics after integration test runs",
+          "number": 21,
+          "started_at": "2026-09-01T00:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "Compile smoke tests",
+          "number": 22,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 23,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics before smoke test run",
+          "number": 24,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 25,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 26,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 27,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics after smoke test run",
+          "number": 28,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 29,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:35Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 30,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:36Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 31,
+          "started_at": "2026-09-01T00:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:36Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 61,
+          "started_at": "2026-09-01T00:17:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:38Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 62,
+          "started_at": "2026-09-01T00:17:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:17:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 63,
+          "started_at": "2026-09-01T00:17:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:10:28Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686475083,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-windows-2022-x64",
+        "JobId=windows-test-Remote-33452883703-60855-1"
+      ],
+      "name": "Windows / Remote",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "3f41a87ec000002",
+      "started_at": "2026-08-31T23:58:54Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:56Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:12Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:18Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:44Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:44Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-09-01T00:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:44Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-09-01T00:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:45Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-09-01T00:00:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:45Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-09-01T00:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:46Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-09-01T00:00:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:59Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-09-01T00:00:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:23Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-09-01T00:00:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:23Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:01:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:23Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:01:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:23Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 15,
+          "started_at": "2026-09-01T00:01:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:33Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:01:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:34Z",
+          "conclusion": "success",
+          "name": "Diagnostics before integration test runs",
+          "number": 17,
+          "started_at": "2026-09-01T00:01:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:34Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:01:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:34Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 19,
+          "started_at": "2026-09-01T00:01:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:18Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 20,
+          "started_at": "2026-09-01T00:01:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:19Z",
+          "conclusion": "success",
+          "name": "Diagnostics after integration test runs",
+          "number": 21,
+          "started_at": "2026-09-01T00:04:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:24Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 22,
+          "started_at": "2026-09-01T00:04:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:29Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 23,
+          "started_at": "2026-09-01T00:04:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:30Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run",
+          "number": 24,
+          "started_at": "2026-09-01T00:04:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:30Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 25,
+          "started_at": "2026-09-01T00:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:30Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 26,
+          "started_at": "2026-09-01T00:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:23Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 27,
+          "started_at": "2026-09-01T00:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:23Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run",
+          "number": 28,
+          "started_at": "2026-09-01T00:10:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:23Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 29,
+          "started_at": "2026-09-01T00:10:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:23Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 30,
+          "started_at": "2026-09-01T00:10:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:25Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 31,
+          "started_at": "2026-09-01T00:10:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:25Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 61,
+          "started_at": "2026-09-01T00:10:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:27Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 62,
+          "started_at": "2026-09-01T00:10:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 63,
+          "started_at": "2026-09-01T00:10:27Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:06:09Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686475088,
+      "labels": [
+        "macos-26-xlarge"
+      ],
+      "name": "macOS / Remote",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1056712178",
+      "started_at": "2026-08-31T23:58:40Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:42Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:52Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:52Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:58:53Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:58:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:39Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:58:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:39Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-08-31T23:59:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:39Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-08-31T23:59:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:40Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-08-31T23:59:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:41Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-08-31T23:59:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:41Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-08-31T23:59:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:48Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-08-31T23:59:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:06Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-08-31T23:59:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:06Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:00:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:06Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:00:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:06Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Webkit)",
+          "number": 15,
+          "started_at": "2026-09-01T00:00:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:12Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:00:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:12Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 17,
+          "started_at": "2026-09-01T00:00:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:12Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Webkit)",
+          "number": 18,
+          "started_at": "2026-09-01T00:00:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:59Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 19,
+          "started_at": "2026-09-01T00:00:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:01Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 20,
+          "started_at": "2026-09-01T00:01:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 21,
+          "started_at": "2026-09-01T00:02:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run",
+          "number": 22,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 23,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "skipped",
+          "name": "Install Squid for network-isolated smoke tests",
+          "number": 24,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run Agents Window smoke tests through macOS PAC proxy",
+          "number": 25,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run Agents Window smoke tests through Kerberos-authenticated macOS PAC proxy",
+          "number": 26,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:02:05Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 27,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:05Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 28,
+          "started_at": "2026-09-01T00:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:05Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run",
+          "number": 29,
+          "started_at": "2026-09-01T00:06:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:05Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 30,
+          "started_at": "2026-09-01T00:06:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:05Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 31,
+          "started_at": "2026-09-01T00:06:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:06Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 32,
+          "started_at": "2026-09-01T00:06:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:06Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 63,
+          "started_at": "2026-09-01T00:06:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:07Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 64,
+          "started_at": "2026-09-01T00:06:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 65,
+          "started_at": "2026-09-01T00:06:07Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:10:24Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686475127,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-windows-2022-x64",
+        "JobId=windows-test-Browser-33452883703-60855-1"
+      ],
+      "name": "Windows / Browser",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "3f41a87ec000000",
+      "started_at": "2026-08-31T23:58:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:55Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:13Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:13Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:19Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:51Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:52Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-09-01T00:00:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:53Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-09-01T00:00:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:53Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-09-01T00:00:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:06Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-09-01T00:00:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:31Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-09-01T00:01:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:31Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:01:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:31Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:01:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:19Z",
+          "conclusion": "success",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 15,
+          "started_at": "2026-09-01T00:01:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:30Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:04:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:30Z",
+          "conclusion": "success",
+          "name": "Diagnostics before integration test runs",
+          "number": 17,
+          "started_at": "2026-09-01T00:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:04:30Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:59Z",
+          "conclusion": "success",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 19,
+          "started_at": "2026-09-01T00:04:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:59Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 20,
+          "started_at": "2026-09-01T00:06:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:06:59Z",
+          "conclusion": "success",
+          "name": "Diagnostics after integration test runs",
+          "number": 21,
+          "started_at": "2026-09-01T00:06:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:04Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 22,
+          "started_at": "2026-09-01T00:06:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:10Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 23,
+          "started_at": "2026-09-01T00:07:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:11Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run",
+          "number": 24,
+          "started_at": "2026-09-01T00:07:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:07:11Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 25,
+          "started_at": "2026-09-01T00:07:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:20Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 26,
+          "started_at": "2026-09-01T00:07:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:20Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 27,
+          "started_at": "2026-09-01T00:10:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:20Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run",
+          "number": 28,
+          "started_at": "2026-09-01T00:10:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:20Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 29,
+          "started_at": "2026-09-01T00:10:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:20Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 30,
+          "started_at": "2026-09-01T00:10:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:21Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 31,
+          "started_at": "2026-09-01T00:10:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:22Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 61,
+          "started_at": "2026-09-01T00:10:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:23Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 62,
+          "started_at": "2026-09-01T00:10:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:23Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 63,
+          "started_at": "2026-09-01T00:10:23Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    },
+    {
+      "completed_at": "2026-09-01T00:10:34Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:58:33Z",
+      "head_sha": "878e695df8b921904d3da6c8bd55ec45cd257dce",
+      "id": 99686475148,
+      "labels": [
+        "self-hosted",
+        "1ES.Pool=1es-vscode-oss-windows-2022-x64",
+        "JobId=windows-test-Electron-Smoke-33452883703-60855-1"
+      ],
+      "name": "Windows / Electron-Smoke",
+      "run_attempt": 1,
+      "run_id": 33452883703,
+      "runner_group_name": "Default",
+      "runner_name": "c7f873a4c000002",
+      "started_at": "2026-08-31T23:58:55Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:58:57Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:58:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:14Z",
+          "conclusion": "success",
+          "name": "Checkout microsoft/vscode",
+          "number": 2,
+          "started_at": "2026-08-31T23:58:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:14Z",
+          "conclusion": "skipped",
+          "name": "Detect Agent Host E2E changes",
+          "number": 3,
+          "started_at": "2026-08-31T23:59:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:59:20Z",
+          "conclusion": "success",
+          "name": "Setup Node.js",
+          "number": 4,
+          "started_at": "2026-08-31T23:59:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:49Z",
+          "conclusion": "success",
+          "name": "Restore node_modules cache",
+          "number": 5,
+          "started_at": "2026-08-31T23:59:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:49Z",
+          "conclusion": "skipped",
+          "name": "Install dependencies",
+          "number": 6,
+          "started_at": "2026-09-01T00:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:49Z",
+          "conclusion": "success",
+          "name": "Create .build folder",
+          "number": 7,
+          "started_at": "2026-09-01T00:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:49Z",
+          "conclusion": "success",
+          "name": "Prepare built-in extensions cache key",
+          "number": 8,
+          "started_at": "2026-09-01T00:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:50Z",
+          "conclusion": "success",
+          "name": "Restore built-in extensions cache",
+          "number": 9,
+          "started_at": "2026-09-01T00:00:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:00:50Z",
+          "conclusion": "skipped",
+          "name": "Download built-in extensions",
+          "number": 10,
+          "started_at": "2026-09-01T00:00:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:04Z",
+          "conclusion": "success",
+          "name": "Transpile client and extensions",
+          "number": 11,
+          "started_at": "2026-09-01T00:00:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:29Z",
+          "conclusion": "success",
+          "name": "Download Electron and Playwright",
+          "number": 12,
+          "started_at": "2026-09-01T00:01:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Electron)",
+          "number": 13,
+          "started_at": "2026-09-01T00:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (node.js)",
+          "number": 14,
+          "started_at": "2026-09-01T00:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run unit tests (Browser, Chromium)",
+          "number": 15,
+          "started_at": "2026-09-01T00:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:39Z",
+          "conclusion": "success",
+          "name": "Compile extensions for integration tests & smoke tests",
+          "number": 16,
+          "started_at": "2026-09-01T00:01:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:39Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics before integration test runs",
+          "number": 17,
+          "started_at": "2026-09-01T00:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:39Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Electron)",
+          "number": 18,
+          "started_at": "2026-09-01T00:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:39Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Browser, Chromium)",
+          "number": 19,
+          "started_at": "2026-09-01T00:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:39Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run integration tests (Remote)",
+          "number": 20,
+          "started_at": "2026-09-01T00:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:39Z",
+          "conclusion": "skipped",
+          "name": "Diagnostics after integration test runs",
+          "number": 21,
+          "started_at": "2026-09-01T00:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:44Z",
+          "conclusion": "success",
+          "name": "Compile smoke tests",
+          "number": 22,
+          "started_at": "2026-09-01T00:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:50Z",
+          "conclusion": "success",
+          "name": "Compile Copilot Chat extension for smoke tests",
+          "number": 23,
+          "started_at": "2026-09-01T00:01:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:01:50Z",
+          "conclusion": "success",
+          "name": "Diagnostics before smoke test run",
+          "number": 24,
+          "started_at": "2026-09-01T00:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:29Z",
+          "conclusion": "success",
+          "name": "🧪 Run smoke tests (Electron)",
+          "number": 25,
+          "started_at": "2026-09-01T00:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Browser, Chromium)",
+          "number": 26,
+          "started_at": "2026-09-01T00:10:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:29Z",
+          "conclusion": "skipped",
+          "name": "🧪 Run smoke tests (Remote)",
+          "number": 27,
+          "started_at": "2026-09-01T00:10:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:29Z",
+          "conclusion": "success",
+          "name": "Diagnostics after smoke test run",
+          "number": 28,
+          "started_at": "2026-09-01T00:10:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:29Z",
+          "conclusion": "skipped",
+          "name": "Publish Crash Reports",
+          "number": 29,
+          "started_at": "2026-09-01T00:10:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:29Z",
+          "conclusion": "skipped",
+          "name": "Publish Node Modules",
+          "number": 30,
+          "started_at": "2026-09-01T00:10:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:31Z",
+          "conclusion": "success",
+          "name": "Publish Log Files",
+          "number": 31,
+          "started_at": "2026-09-01T00:10:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:31Z",
+          "conclusion": "success",
+          "name": "Post Setup Node.js",
+          "number": 61,
+          "started_at": "2026-09-01T00:10:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:33Z",
+          "conclusion": "success",
+          "name": "Post Checkout microsoft/vscode",
+          "number": 62,
+          "started_at": "2026-09-01T00:10:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T00:10:33Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 63,
+          "started_at": "2026-09-01T00:10:33Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "Code OSS"
+    }
+  ],
+  "run_id": 33452883703
+}

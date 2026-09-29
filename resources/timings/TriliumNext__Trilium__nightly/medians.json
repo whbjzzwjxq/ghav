@@ -1,0 +1,1452 @@
+{
+  "benchmark": "TriliumNext/Trilium@2f848fc8e7ab09c71014e71175dd410f2f25bee2:.github/workflows/nightly.yml",
+  "benchmark_id": "TriliumNext__Trilium__nightly",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        29623229646,
+        29623080398,
+        27993517080,
+        27888440432,
+        24866574708
+      ],
+      "window_count": 1
+    },
+    "push": {
+      "runs": [
+        20940983111,
+        18399642963,
+        18375168193,
+        18373074734,
+        18371229716
+      ],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "Build mobile nightly": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 4,
+      "steps": []
+    },
+    "Deploy nightly (arm64, linux, ubuntu-22.04, bash, linux)": {
+      "duration_seconds": 429.0,
+      "durations": [
+        594.0,
+        429.0,
+        416.0,
+        429.0
+      ],
+      "main_step_counts": [
+        0
+      ],
+      "overhead_seconds": 429.0,
+      "overheads": [
+        594.0,
+        429.0,
+        416.0,
+        429.0
+      ],
+      "samples": 4,
+      "skipped": 0,
+      "steps": []
+    },
+    "Deploy nightly (arm64, linux, ubuntu-24.04-arm, bash, linux)": {
+      "duration_seconds": 497.5,
+      "durations": [
+        439.0,
+        499.0,
+        525.0,
+        481.0,
+        553.0,
+        496.0
+      ],
+      "main_step_counts": [
+        0,
+        8
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        439.0,
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            7.0,
+            6.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            6.0,
+            7.0,
+            6.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            11.0,
+            11.0,
+            42.0,
+            31.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            96.0,
+            23.0,
+            20.0,
+            25.0,
+            22.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            364.0,
+            457.0,
+            412.0,
+            447.0,
+            407.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 412.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            20.0,
+            20.0,
+            19.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (arm64, macos, macos-latest, bash, darwin)": {
+      "duration_seconds": 631.0,
+      "durations": [
+        635.0,
+        635.0,
+        541.0,
+        633.0,
+        826.0,
+        380.0,
+        432.0,
+        672.0,
+        526.0,
+        629.0
+      ],
+      "main_step_counts": [
+        0,
+        8
+      ],
+      "overhead_seconds": 274.5,
+      "overheads": [
+        635.0,
+        635.0,
+        541.0,
+        633.0,
+        826.0,
+        7.0,
+        5.0,
+        8.0,
+        6.0,
+        6.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            5.0,
+            4.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            6.0,
+            4.0,
+            7.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            55.0,
+            60.0,
+            84.0,
+            64.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 60.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            97.0,
+            62.0,
+            105.0,
+            63.0,
+            114.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 97.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            255.0,
+            291.0,
+            471.0,
+            349.0,
+            414.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 349.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            10.0,
+            11.0,
+            16.0,
+            15.0,
+            13.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (arm64, windows, win-signing, cmd, win32)": {
+      "duration_seconds": 1135.0,
+      "durations": [
+        1135.0,
+        1142.0,
+        1169.0,
+        1143.0,
+        788.0,
+        702.0,
+        696.0,
+        1139.0,
+        963.0
+      ],
+      "main_step_counts": [
+        0,
+        8
+      ],
+      "overhead_seconds": 788.0,
+      "overheads": [
+        1135.0,
+        1142.0,
+        1169.0,
+        1143.0,
+        788.0,
+        10.0,
+        13.0,
+        12.0,
+        12.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            37.0,
+            42.0,
+            81.0,
+            37.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 39.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            29.0,
+            32.0,
+            52.0,
+            29.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 30.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            6.0,
+            9.0,
+            4.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            276.0,
+            248.0,
+            352.0,
+            324.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 300.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            305.0,
+            309.0,
+            561.0,
+            469.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 389.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 4
+        },
+        {
+          "durations": [
+            39.0,
+            45.0,
+            70.0,
+            87.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 57.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (arm64, windows, windows-latest, cmd, win32)": {
+      "duration_seconds": 316.0,
+      "durations": [
+        316.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 8.0,
+      "overheads": [
+        8.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 9.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            95.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 95.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            167.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 167.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            14.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (x64, linux, ubuntu-22.04, bash, linux)": {
+      "duration_seconds": 434.5,
+      "durations": [
+        419.0,
+        424.0,
+        428.0,
+        592.0,
+        402.0,
+        412.0,
+        487.0,
+        452.0,
+        441.0,
+        442.0
+      ],
+      "main_step_counts": [
+        0,
+        8
+      ],
+      "overhead_seconds": 205.0,
+      "overheads": [
+        419.0,
+        424.0,
+        428.0,
+        592.0,
+        402.0,
+        8.0,
+        4.0,
+        5.0,
+        6.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            3.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            6.0,
+            3.0,
+            5.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            12.0,
+            14.0,
+            16.0,
+            11.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            34.0,
+            16.0,
+            15.0,
+            19.0,
+            21.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            331.0,
+            419.0,
+            381.0,
+            368.0,
+            376.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 376.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            23.0,
+            26.0,
+            26.0,
+            26.0,
+            21.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (x64, macos, macos-latest, bash, darwin)": {
+      "duration_seconds": 555.5,
+      "durations": [
+        514.0,
+        658.0,
+        482.0,
+        486.0,
+        692.0,
+        557.0,
+        554.0,
+        679.0,
+        621.0,
+        483.0
+      ],
+      "main_step_counts": [
+        0,
+        8
+      ],
+      "overhead_seconds": 246.0,
+      "overheads": [
+        514.0,
+        658.0,
+        482.0,
+        486.0,
+        692.0,
+        9.0,
+        6.0,
+        9.0,
+        10.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            7.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            6.0,
+            5.0,
+            3.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            67.0,
+            95.0,
+            112.0,
+            59.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 67.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            156.0,
+            67.0,
+            101.0,
+            77.0,
+            72.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 77.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            361.0,
+            390.0,
+            443.0,
+            391.0,
+            324.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 390.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            18.0,
+            14.0,
+            18.0,
+            18.0,
+            12.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (x64, windows, win-signing, cmd, win32)": {
+      "duration_seconds": 1027.0,
+      "durations": [
+        1140.0,
+        1146.0,
+        1174.0,
+        1166.0,
+        721.0,
+        678.0,
+        629.0,
+        978.0,
+        1027.0
+      ],
+      "main_step_counts": [
+        0,
+        8
+      ],
+      "overhead_seconds": 721.0,
+      "overheads": [
+        1140.0,
+        1146.0,
+        1174.0,
+        1166.0,
+        721.0,
+        12.0,
+        11.0,
+        12.0,
+        12.0
+      ],
+      "samples": 9,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            39.0,
+            34.0,
+            36.0,
+            49.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 37.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0,
+            30.0,
+            33.0,
+            42.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 31.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            6.0,
+            3.0,
+            7.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            275.0,
+            241.0,
+            312.0,
+            350.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 293.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            281.0,
+            271.0,
+            522.0,
+            529.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 401.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 4
+        },
+        {
+          "durations": [
+            35.0,
+            34.0,
+            58.0,
+            36.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 35.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy nightly (x64, windows, windows-latest, cmd, win32)": {
+      "duration_seconds": 282.0,
+      "durations": [
+        282.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 7.0,
+      "overheads": [
+        7.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            12.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 12.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0
+          ],
+          "name": "Run pnpm/action-setup@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0
+          ],
+          "name": "Set up node & dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            95.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 95.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Update nightly version",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            125.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 125.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 1
+        },
+        {
+          "durations": [
+            14.0
+          ],
+          "name": "Publish artifacts",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 14.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Deploy server nightly (arm64)": {
+      "duration_seconds": 191.5,
+      "durations": [
+        174.0,
+        178.0,
+        205.0,
+        177.0,
+        192.0,
+        212.0,
+        230.0,
+        168.0,
+        202.0,
+        191.0
+      ],
+      "main_step_counts": [
+        0,
+        3
+      ],
+      "overhead_seconds": 90.5,
+      "overheads": [
+        174.0,
+        178.0,
+        205.0,
+        177.0,
+        192.0,
+        7.0,
+        7.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            3.0,
+            5.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            200.0,
+            218.0,
+            161.0,
+            192.0,
+            184.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 192.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    },
+    "Deploy server nightly (x64)": {
+      "duration_seconds": 168.0,
+      "durations": [
+        174.0,
+        164.0,
+        159.0,
+        169.0,
+        187.0,
+        169.0,
+        167.0,
+        165.0,
+        171.0,
+        151.0
+      ],
+      "main_step_counts": [
+        0,
+        3
+      ],
+      "overhead_seconds": 84.0,
+      "overheads": [
+        174.0,
+        164.0,
+        159.0,
+        169.0,
+        187.0,
+        3.0,
+        5.0,
+        3.0,
+        5.0,
+        9.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@v7",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            162.0,
+            158.0,
+            158.0,
+            161.0,
+            137.0
+          ],
+          "name": "Run the build",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 158.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Publish release",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": null,
+          "skipped": 5
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0d7013698091f397a4558acadce98480fab71551": "5c17047ae35bbe74cf4ef1bac702567c64bbb1f8",
+      "269bb3984284c809c4d77c7e60194aa4f583ea6c": "15dd91acb5d9d2bd16bee1ca88ecb46f4654a8bc",
+      "5117cb7e9f651d928bff7d42aafcdf64cac4c2d4": "4fe4ac84f9d1949e23c01d86c3ca3bf2fe6f4818",
+      "61270263137a00148cc172c7854a3b57bf725a6a": "15dd91acb5d9d2bd16bee1ca88ecb46f4654a8bc",
+      "6c8e6f242960876d08196bfd698d9e0feb9ac0d2": "ac287dc91bf90b1b67fa1e07b7b31487a2e77c24",
+      "8dce0ef98df7cc0b624e1f25193939a6decf305f": "8d4969399cfe57c79a7255324b607a8efd341112",
+      "9e9260c97da1824c8b702d8355395b285d24f434": "f675ab14b7288564088e0366f97f377ce6aa0bc1",
+      "cf21706f26c9ef544aaf30977708cf0619aaa4f4": "50c97417c876a279e71b32ace0b5ce7a77821037",
+      "dd96652a19a948ef6fa7cb51be79bd904edda7f0": "7670842e8a23734d395a6ac5166f07a0d1938491",
+      "f596080d061104123a351648ac8365320112d8f8": "15dd91acb5d9d2bd16bee1ca88ecb46f4654a8bc"
+    },
+    "pinned_oid": "69764cadb195c01a572c8625a8f54cb8191806d5",
+    "runs_same_version": 0,
+    "runs_total": 10
+  }
+}

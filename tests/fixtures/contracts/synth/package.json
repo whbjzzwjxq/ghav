@@ -1,0 +1,41 @@
+{
+  "name": "synthetic-fixture",
+  "private": true,
+  "scripts": {
+    "prebuild": "echo cleaning",
+    "build": "tsc",
+    "postbuild": "echo built",
+    "build:check": "tsc -p tsconfig.check.json",
+    "build:vite": "vite build --outDir web-dist",
+    "build:all": "turbo run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --cache",
+    "lint:fmt": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:node": "node --test",
+    "e2e": "node scripts/e2e.js",
+    "ci": "npm run lint && npm run test",
+    "env-use": "vitest run --reporter=$REPORTER",
+    "d1": "npm run d2",
+    "d2": "npm run d3",
+    "d3": "npm run d4",
+    "d4": "npm run d5",
+    "d5": "npm run d6",
+    "d6": "echo too-deep",
+    "e1": "npm run e2",
+    "e2": "npm run e3",
+    "e3": "npm run e4",
+    "e4": "echo deep-enough",
+    "cyc-a": "npm run cyc-b",
+    "cyc-b": "npm run cyc-a",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  }
+}

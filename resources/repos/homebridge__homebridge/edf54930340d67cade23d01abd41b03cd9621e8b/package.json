@@ -1,0 +1,82 @@
+{
+  "name": "homebridge",
+  "type": "module",
+  "version": "2.4.0",
+  "description": "HomeKit support for the impatient",
+  "author": "Nick Farina",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/homebridge/homebridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/homebridge/homebridge/issues"
+  },
+  "exports": "./dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "maintainers": [
+    "oznu <dev@oz.nu>",
+    "Andreas Bauer <mail@anderl-bauer.de>"
+  ],
+  "bin": {
+    "homebridge": "bin/homebridge.js"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "bin",
+    "config-sample.json",
+    "dist"
+  ],
+  "engines": {
+    "node": "^22 || ^24 || ^26"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "check": "npm install && npm outdated",
+    "clean": "rimraf dist && rimraf coverage",
+    "dev": "DEBUG=* ./bin/homebridge.js -D -P example-plugins/ || true",
+    "docs": "typedoc",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint-docs": "typedoc --emit none --treatWarningsAsErrors",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
+    "pretest": "npm run typecheck",
+    "test": "vitest run",
+    "test-coverage": "npm run test -- --coverage",
+    "typecheck": "tsc -p tsconfig.typecheck.json",
+    "watch": "nodemon"
+  },
+  "dependencies": {
+    "@homebridge/hap-nodejs": "2.2.2",
+    "@matter/main": "0.17.9",
+    "chalk": "6.0.0",
+    "commander": "15.0.0",
+    "fs-extra": "11.4.0",
+    "qrcode-terminal": "0.12.0",
+    "semver": "7.8.5",
+    "source-map-support": "0.5.21"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.3.0",
+    "@prettier/plugin-xml": "^3.4.2",
+    "@types/debug": "^4.1.13",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^26.2.0",
+    "@types/semver": "^7.8.0",
+    "@types/source-map-support": "^0.5.10",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint-plugin-format": "^2.0.1",
+    "nodemon": "^3.1.14",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.28.20",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "allowScripts": {
+    "fsevents": true
+  }
+}

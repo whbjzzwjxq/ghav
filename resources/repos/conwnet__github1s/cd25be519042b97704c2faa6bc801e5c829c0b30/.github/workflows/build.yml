@@ -1,0 +1,32 @@
+name: Build & Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-14]
+        node-version: [24.x]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm install
+      - run: npm run eslint
+      - run: npm run build
+      - uses: microsoft/playwright-github-action@v1
+      - run: npm run test:ci

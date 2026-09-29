@@ -1,0 +1,936 @@
+{
+  "benchmark": "THU-MAIC/OpenMAIC@f6cf8fd4b74ac83ea969e88b6dc2c974931b4d65:.github/workflows/ci.yml",
+  "benchmark_id": "THU-MAIC__OpenMAIC__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33444464853,
+        33440858976,
+        33431720408,
+        33431677996,
+        33426055412
+      ],
+      "window_count": 747
+    },
+    "push": {
+      "runs": [
+        33386657589,
+        33385813404,
+        33372498503,
+        33271807573,
+        33265877814
+      ],
+      "window_count": 191
+    }
+  },
+  "jobs": {
+    "E2E Tests": {
+      "duration_seconds": 302.5,
+      "durations": [
+        301.0,
+        312.0,
+        298.0,
+        309.0,
+        314.0,
+        295.0,
+        300.0,
+        300.0,
+        304.0,
+        318.0
+      ],
+      "main_step_counts": [
+        14
+      ],
+      "overhead_seconds": 5.5,
+      "overheads": [
+        6.0,
+        5.0,
+        4.0,
+        6.0,
+        6.0,
+        4.0,
+        6.0,
+        3.0,
+        5.0,
+        7.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            7.0,
+            4.0,
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            4.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run pnpm/action-setup@v4",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            15.0,
+            12.0,
+            18.0,
+            15.0,
+            10.0,
+            15.0,
+            12.0,
+            14.0,
+            16.0
+          ],
+          "name": "Run actions/setup-node@v4",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            82.0,
+            89.0,
+            87.0,
+            88.0,
+            93.0,
+            87.0,
+            86.0,
+            91.0,
+            89.0,
+            90.0
+          ],
+          "name": "Run pnpm install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 88.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            3.0,
+            6.0,
+            5.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0,
+            5.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Install Playwright Chromium",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            15.0,
+            15.0,
+            14.0,
+            13.0,
+            14.0,
+            14.0,
+            15.0,
+            15.0,
+            14.0
+          ],
+          "name": "Cover-card layout guardrail",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "Interactive static HTML Chromium smoke",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Materialize Hyperframes lint samples",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            11.0,
+            12.0,
+            9.0,
+            10.0,
+            12.0,
+            8.0,
+            9.0,
+            8.0,
+            10.0,
+            10.0
+          ],
+          "name": "Lint Hyperframes samples",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            2.0
+          ],
+          "name": "Cache Next.js build",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            95.0,
+            97.0,
+            96.0,
+            94.0,
+            95.0,
+            96.0,
+            93.0,
+            97.0,
+            95.0,
+            98.0
+          ],
+          "name": "Build",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 95.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            58.0,
+            61.0,
+            60.0,
+            59.0,
+            61.0,
+            60.0,
+            60.0,
+            61.0,
+            60.0,
+            65.0
+          ],
+          "name": "Run e2e tests",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 60.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run actions/upload-artifact@v4",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "Lint, Typecheck & Unit Tests": {
+      "duration_seconds": 569.0,
+      "durations": [
+        605.0,
+        564.0,
+        421.0,
+        577.0,
+        574.0,
+        612.0,
+        485.0,
+        563.0,
+        484.0,
+        594.0
+      ],
+      "main_step_counts": [
+        18
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        4.0,
+        3.0,
+        3.0,
+        6.0,
+        6.0,
+        7.0,
+        4.0,
+        5.0,
+        8.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0,
+            5.0,
+            8.0,
+            4.0,
+            4.0,
+            8.0,
+            5.0,
+            6.0,
+            6.0,
+            4.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Parallel runner self-test",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run pnpm/action-setup@v4",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0,
+            13.0,
+            22.0,
+            11.0,
+            13.0,
+            15.0,
+            24.0,
+            14.0,
+            20.0,
+            16.0
+          ],
+          "name": "Run actions/setup-node@v4",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Package version bumps",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Package version bumps (main push)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 0.0,
+          "skipped": 5
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Internal dependency ranges",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            92.0,
+            87.0,
+            72.0,
+            87.0,
+            83.0,
+            89.0,
+            73.0,
+            85.0,
+            86.0,
+            87.0
+          ],
+          "name": "Run pnpm install --frozen-lockfile",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 86.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Verify the install did not rewrite tracked package files",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            114.0,
+            108.0,
+            71.0,
+            110.0,
+            107.0,
+            113.0,
+            83.0,
+            101.0,
+            87.0,
+            105.0
+          ],
+          "name": "Prettier, ESLint, TypeScript, i18n",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 106.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            209.0,
+            194.0,
+            133.0,
+            198.0,
+            192.0,
+            206.0,
+            157.0,
+            193.0,
+            154.0,
+            204.0
+          ],
+          "name": "Unit Tests",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 193.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            3.0,
+            5.0,
+            4.0,
+            6.0,
+            4.0,
+            5.0,
+            3.0,
+            5.0
+          ],
+          "name": "Unit Tests (importer)",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            4.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0,
+            3.0,
+            3.0,
+            3.0,
+            4.0
+          ],
+          "name": "Unit Tests (dsl)",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0
+          ],
+          "name": "TypeScript (generation)",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            3.0,
+            2.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            4.0,
+            2.0,
+            3.0
+          ],
+          "name": "Unit Tests (generation)",
+          "occurrence": 0,
+          "positions": [
+            14
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ],
+          "name": "Node consumer smoke (generation scene)",
+          "occurrence": 0,
+          "positions": [
+            15
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            6.0,
+            4.0,
+            7.0,
+            6.0,
+            8.0,
+            6.0,
+            7.0,
+            5.0,
+            7.0
+          ],
+          "name": "TypeScript (storage, incl. tests)",
+          "occurrence": 0,
+          "positions": [
+            16
+          ],
+          "seconds": 6.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            140.0,
+            129.0,
+            96.0,
+            138.0,
+            144.0,
+            146.0,
+            115.0,
+            135.0,
+            107.0,
+            145.0
+          ],
+          "name": "Unit Tests (storage)",
+          "occurrence": 0,
+          "positions": [
+            17
+          ],
+          "seconds": 136.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "Render Service (typecheck + tests)": {
+      "duration_seconds": 70.0,
+      "durations": [
+        64.0,
+        86.0,
+        106.0,
+        85.0,
+        78.0,
+        58.0,
+        73.0,
+        67.0,
+        65.0,
+        65.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0,
+            4.0,
+            5.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            8.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            4.0
+          ],
+          "name": "Run actions/setup-node@v4",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            6.0,
+            4.0,
+            4.0,
+            3.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "name": "Install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "TypeScript",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Unit Tests",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0,
+            66.0,
+            86.0,
+            64.0,
+            55.0,
+            43.0,
+            57.0,
+            45.0,
+            45.0,
+            43.0
+          ],
+          "name": "Build container image",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 50.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "141cf47dabc25a1f705c3e92b6e9cf4c3834a14f": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "1a3cd9890db6abd003672bfe02d59f47ab548358": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "22f3555776e027028b7fba8f437a98e4d81b5b57": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "9d16e68296dbfdf6002e0572fef98ea3689fee29": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "aa7d5fd5856bdb75f9cbd1850b69147d4079f56d": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "b4c89dfc0929eae3597ba5a4deb8731c65e07ac3": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "bb99eebffb30af2bd87b8204e50ff56a9ebf2c71": "d6ea9c8c90185c352702f4d21e1cd3a41d07fa38",
+      "dfebbcf33f3a56064129903faeab70a9e4243146": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "f6cf8fd4b74ac83ea969e88b6dc2c974931b4d65": "f6295915dc44a9edda9e1554786eedde165d7398",
+      "f8b30ef0f0041f279303ee01442265411df1a26b": "f6295915dc44a9edda9e1554786eedde165d7398"
+    },
+    "pinned_oid": "f6295915dc44a9edda9e1554786eedde165d7398",
+    "runs_same_version": 9,
+    "runs_total": 10
+  }
+}

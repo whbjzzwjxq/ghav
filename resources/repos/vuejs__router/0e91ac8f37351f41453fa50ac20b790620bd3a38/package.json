@@ -1,0 +1,65 @@
+{
+  "name": "@vue/router-root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "release": "node scripts/release.ts",
+    "size": "node scripts/check-size.mjs",
+    "build": "pnpm run -r build",
+    "docs": "pnpm run --filter ./packages/docs -r docs",
+    "docs:api": "pnpm run --filter ./packages/docs -r docs:api",
+    "docs:translation:compare": "pnpm run --filter ./packages/docs -r docs:translation:compare",
+    "docs:translation:update": "pnpm run --filter ./packages/docs -r docs:translation:update",
+    "docs:translation:status": "pnpm run --filter ./packages/docs -r docs:translation:status",
+    "netlify": "pnpm run -C packages/router build && pnpm run docs:build",
+    "docs:build": "pnpm run docs:api && pnpm run --filter ./packages/docs -r docs:build",
+    "docs:preview": "pnpm run --filter ./packages/docs -r docs:preview",
+    "play": "pnpm run -r play",
+    "build:size": "pnpm run -r build:size",
+    "lint": "oxfmt --check && oxlint",
+    "lint:fix": "oxlint --fix && oxfmt",
+    "test": "pnpm run -r test",
+    "postinstall": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@clack/prompts": "npm:@posva/clack-prompts@^1.2.1",
+    "@types/node": "^24.10.4",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitest/browser-playwright": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/ui": "^4.1.10",
+    "brotli": "^1.3.3",
+    "chalk": "^5.6.2",
+    "conventional-changelog": "^7.2.1",
+    "conventional-changelog-angular": "^8.3.1",
+    "lint-staged": "^17.0.8",
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0",
+    "playwright": "^1.62.1",
+    "semver": "^7.8.5",
+    "simple-git-hooks": "^2.13.1",
+    "typedoc": "^0.28.20",
+    "typedoc-plugin-markdown": "^4.12.0",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.10",
+    "vitest-browser-vue": "^2.1.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "node scripts/verifyCommit.mjs"
+  },
+  "lint-staged": {
+    "*.{ts,vue,js,mts,mjs}": "oxlint --fix --no-error-on-unmatched-pattern",
+    "*": "oxfmt --no-error-on-unmatched-pattern"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "volta": {
+    "node": "24.7.0"
+  },
+  "packageManager": "pnpm@11.21.0"
+}

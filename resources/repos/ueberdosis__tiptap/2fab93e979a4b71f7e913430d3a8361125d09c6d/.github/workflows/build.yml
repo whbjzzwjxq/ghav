@@ -1,0 +1,167 @@
+name: Verify
+
+env:
+  NODE_VERSION: 24
+  VP_GIT_HOOKS: 0
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+      - next
+      - release/*
+  pull_request:
+    branches:
+      - main
+      - next
+      - release/*
+
+jobs:
+  install-node-dependencies:
+    name: Install node dependencies
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-env
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'true'
+
+      - name: Install dependencies
+        run: vp install --frozen-lockfile -- --strict-peer-dependencies
+
+  build-packages:
+    name: Build packages
+    runs-on: ubuntu-latest
+    needs: install-node-dependencies
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-env
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'true'
+
+      - uses: ./.github/actions/restore-dependencies
+
+      - name: Build packages
+        run: vp run build && vp run build:demos
+
+      - name: Check package exports
+        run: vp run check:package-exports
+
+  check-linting-formatting:
+    name: Check linting & formatting
+    runs-on: ubuntu-latest
+    needs: install-node-dependencies
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-env
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'true'
+
+      - uses: ./.github/actions/restore-dependencies
+
+      - name: Run linting and formatting checks
+        run: vp check
+
+  run-unit-tests:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    needs: install-node-dependencies
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-env
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'true'
+
+      - uses: ./.github/actions/restore-dependencies
+
+      - name: Run unit tests
+        run: vp test
+
+  run-e2e-tests:
+    name: Run e2e tests (shard ${{ matrix.shard }}/${{ matrix.total }})
+    runs-on: ubuntu-latest
+    needs: build-packages
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4]
+        total: [4]
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-env
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'true'
+
+      - uses: ./.github/actions/restore-dependencies
+
+      - uses: ./.github/actions/setup-playwright
+
+      - name: Run Playwright tests
+        run: vp exec playwright test --project=chromium --shard=${{ matrix.shard }}/${{ matrix.total }}
+
+      - name: Upload blob report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: e2e-blob-report-${{ matrix.shard }}
+          path: blob-report
+          retention-days: 7
+
+  merge-e2e-reports:
+    name: Merge e2e reports
+    runs-on: ubuntu-latest
+    needs: [install-node-dependencies, run-e2e-tests]
+    if: always() && needs.install-node-dependencies.result == 'success'
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ./.github/actions/setup-env
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'true'
+
+      - uses: ./.github/actions/restore-dependencies
+
+      - name: Download blob reports
+        uses: actions/download-artifact@v8
+        with:
+          path: all-blob-reports
+          pattern: e2e-blob-report-*
+          merge-multiple: true
+
+      - name: Merge into HTML report
+        if: ${{ hashFiles('all-blob-reports/**') != '' }}
+        run: vp exec playwright merge-reports --reporter html ./all-blob-reports
+
+      - name: Upload merged HTML report
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-html-report
+          path: playwright-report
+          retention-days: 14

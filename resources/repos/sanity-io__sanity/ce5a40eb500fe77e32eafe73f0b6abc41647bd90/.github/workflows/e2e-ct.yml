@@ -1,0 +1,95 @@
+name: End-to-End Component Tests
+on:
+  # Build on pushes branches that have a PR (including drafts)
+  pull_request:
+  # Build on commits pushed to branches without a PR if it's in the allowlist
+  push:
+    branches: [next]
+jobs:
+  test:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-${{ runner.os }}-pnpm-store-${{ env.cache-name }}-
+            v1-${{ runner.os }}-pnpm-store-
+            v1-${{ runner.os }}-
+
+      - name: Install project dependencies
+        run: pnpm install
+
+      - name: Store Playwright's Version
+        run: |
+          PLAYWRIGHT_VERSION=$(npx playwright --version | sed 's/Version //')
+          echo "Playwright's Version: $PLAYWRIGHT_VERSION"
+          echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
+      - name: Cache Playwright Browsers for Playwright's Version
+        id: cache-playwright-browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ env.PLAYWRIGHT_VERSION }}
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Build packages
+        run: pnpm build --output-logs=full --log-order=grouped
+      - name: Run end-to-end tests
+        run: pnpm --filter sanity test:ct
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+      - name: Get Current Job Log URL
+        uses: Tiryoh/gha-jobid-action@c1d1cf7334b70c29374ae382b91053674c8049a2 # v1
+        id: job_html_url
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: "test"
+      - name: Parse playwright report
+        id: parse-playwright-report
+        if: always()
+        run: pnpm --filter sanity write:playwright-report-as-pr-comment
+        env:
+          GITHUB_WORKFLOW_URL: "${{ steps.job_html_url.outputs.html_url }}"
+      - name: PR comment with report
+        uses: thollander/actions-comment-pull-request@fabd468d3a1a0b97feee5f6b9e499eab0dd903f6 # v2
+        if: ${{ always() && steps.parse-playwright-report.conclusion == 'success' && github.event_name == 'pull_request' }}
+        with:
+          comment_tag: "playwright-ct-report"
+          filePath: ${{ github.workspace }}/packages/sanity/playwright-ct/results/playwright-report-pr-comment.md
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-ct-report
+          path: |
+            ${{ github.workspace }}/packages/sanity/playwright-ct/report
+            ${{ github.workspace }}/packages/sanity/playwright-ct/results
+          retention-days: 30

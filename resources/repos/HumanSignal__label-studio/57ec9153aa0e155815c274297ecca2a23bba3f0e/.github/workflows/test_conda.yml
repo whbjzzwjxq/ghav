@@ -1,0 +1,62 @@
+name: "Conda"
+
+on:
+  workflow_call:
+    inputs:
+      head_sha:
+        required: true
+        type: string
+
+env:
+  CACHE_NAME_PREFIX: v1
+
+jobs:
+  conda:
+    name: Conda
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ "ubuntu-latest", "windows-latest" ]
+        python-version: [ "3.13" ]
+        include:
+          - os: "ubuntu-latest"
+            pip-cache-path: "~/.cache/pip"
+          - os: "windows-latest"
+            pip-cache-path: "~\\AppData\\Local\\pip\\Cache"
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: hmarr/debug-action@v3.0.0
+
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          ref: ${{ inputs.head_sha }}
+
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v4.0.1
+        with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+          activate-environment: test-environment
+
+      - name: "Set up uv"
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: '3.13'
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Install Python dependencies
+        run: |
+          uv sync --frozen --group test
+
+      - name: Conda info
+        shell: bash -el {0}
+        run: |
+          conda info
+          conda list

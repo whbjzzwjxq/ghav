@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+      - uses: ./.github/actions/ci-setup
+        with:
+          package-manager-cache: 'false'
+      - uses: ./.github/actions/ci-checks
+
+      - name: Create release PR or publish to npm
+        id: changesets
+        uses: xyflow/changeset-action@v1
+        with:
+          publish: pnpm release
+          title: Release packages
+          commit: 'chore(packages): bump'
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true

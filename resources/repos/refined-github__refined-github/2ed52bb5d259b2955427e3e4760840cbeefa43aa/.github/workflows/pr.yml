@@ -1,0 +1,129 @@
+name: PR
+
+on:
+  pull_request_target:
+    types: [opened, reopened, edited, closed, synchronize]
+
+jobs:
+  block-ai:
+    if: github.event.action == 'opened' || github.event.action == 'edited'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .github/workflows/pr.js
+
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            await require('./.github/workflows/pr.js')
+             .blockAi({github, context, core});
+
+  labels:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Check if PR has no labels
+        id: check
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          result-encoding: string
+          script: |
+            const labels = context.payload.pull_request.labels;
+            return labels.length === 0;
+
+      - name: Post comment if unlabeled
+        if: steps.check.outputs.result == 'true'
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          message: 'To maintainers: Please add labels to this PR'
+
+  sync:
+    if: github.event.pull_request.state == 'open'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: read
+      contents: read
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .github/workflows/pr.js
+
+      - uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            await require('./.github/workflows/pr.js')
+             .inheritLabels({github, context, core});
+
+  no-force-push:
+    if: >-
+      github.event.action == 'synchronize' &&
+      github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Check if force push
+        id: check
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          result-encoding: string
+          script: |
+            const { data } = await github.rest.repos.compareCommits({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              base: context.payload.before,
+              head: context.payload.after,
+            });
+
+            // This intentionally allows "force push to undo commit"
+            return String(data.status === 'diverged');
+
+      - if: steps.check.outputs.result == 'true'
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          message: |
+            Please avoid force-pushing to this PR. It makes it harder for reviewers to track what changed since the last review.
+
+            Just push new commits on top of the branch instead — PRs are squashed on merge, so the commit history doesn't need to be clean.
+
+  manifest-version:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          allow-unsafe-pr-checkout: true
+          sparse-checkout: source/manifest.json
+
+      - name: Ensure it's still 0.0.0
+        run: |
+          jq -r '.version | "version=\(.)"' source/manifest.json
+          jq -e '.version == "0.0.0"' source/manifest.json
+
+      - if: failure()
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          header: manifest-version
+          message: ❌ Please change `source/manifest.json`'s `"version"` back to `"0.0.0"` before merging.
+
+      - if: success()
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          header: manifest-version
+          delete: true

@@ -1,0 +1,124 @@
+name: "Tests"
+
+on:
+  workflow_call:
+    inputs:
+      head_sha:
+        required: true
+        type: string
+
+env:
+  DJANGO_SETTINGS_MODULE: core.settings.label_studio
+  COVERAGE_PROCESS_START: label_studio/.coveragerc
+  LOG_DIR: pytest_logs
+  COLLECT_ANALYTICS: true
+  DEBUG_CONTEXTLOG: true
+  LABEL_STUDIO_TEST_ENVIRONMENT: false
+  SENTRY_RATE: 0
+  JSON_LOG: 0
+
+jobs:
+  sqlite-migrations:
+    name: "sqlite-migrations"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DJANGO_DB: sqlite
+      SENTRY_ENVIRONMENT: tests-ubuntu-sqlite
+
+    steps:
+      - uses: hmarr/debug-action@v3.0.0
+
+      - name: "Checkout"
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: "Set up uv"
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: '3.13'
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: "Install OS dependencies"
+        run: |
+          sudo apt-get update
+          sudo apt-get install libsasl2-dev python3-dev libldap2-dev libssl-dev libxml2-dev libxslt-dev
+
+      - name: "Install dependencies"
+        run: uv sync --frozen
+
+      - name: "Test migrations"
+        run: |
+          output=$(uv run --no-sync python label_studio/manage.py makemigrations)
+          if ! grep 'No changes detected' <<< "${output}"; then
+            error="${output}"
+            error="${error//'%'/'%25'}"
+            error="${error//$'\n'/'%0A'}"
+            error="${error//$'\r'/'%0D'}"
+            echo "::error::${error}"
+            exit 1
+          fi
+
+  pgsql-migrations:
+    name: "pgsql-migrations"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SENTRY_ENVIRONMENT: tests-ubuntu-pgsql
+      DJANGO_DB: default
+      CI: true
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: hmarr/debug-action@v3.0.0
+
+      - name: "Checkout"
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+          fetch-depth: 2147483647
+
+      - name: "Set up uv"
+        uses: astral-sh/setup-uv@v7
+        with:
+          python-version: '3.13'
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: "Install OS dependencies"
+        run: |
+          sudo apt-get update
+          sudo apt-get install libsasl2-dev python3-dev libldap2-dev libssl-dev libxml2-dev libxslt-dev
+
+      - name: "Install dependencies"
+        run: |
+          uv sync --frozen
+
+      - name: "Test migrations"
+        run: |
+          uv run --no-sync python label_studio/manage.py makemigrations
+
+      - name: "Lint migrations"
+        run: |
+          BASE_SHA="${{ github.event.pull_request.base.sha || github.event.before }}"
+          if ! git cat-file -e "$BASE_SHA" 2>/dev/null; then
+            echo "Base commit $BASE_SHA is not reachable (force-push or new branch), skipping migration lint"
+            exit 0
+          fi
+          uv run --no-sync python label_studio/manage.py lintmigrations --warnings-as-errors --project-root-path '.' --git-commit-id "$BASE_SHA"

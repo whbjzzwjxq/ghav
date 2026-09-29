@@ -1,0 +1,40 @@
+name: Generate Changelog
+
+on: workflow_dispatch
+
+permissions:
+  contents: read
+
+jobs:
+  generate_changelog:
+    name: 'Generate Changelog'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Install pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+      - name: Configure GIT
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+      - name: Generate Changelog
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const {run} = require('./.github/workflows/scripts/generate-changelog.cjs');
+            const {branchName, commitName, content, errors, changelogs} = await run();
+            const owner = context.payload.repository.owner.login;
+            const repo = context.payload.repository.name;
+            const title = commitName;
+            const head = branchName;
+            const base = 'main';
+            const bodyChangelogs = changelogs.map(c => `- ${c}`).join('\n');
+            const bodyErrors = errors.length !== 0 ? `Got the following errors:\n${errors.map(e => `- ${e}`).join('\n')}` : '';
+            const body = `Resulting CHANGELOG at:\n${bodyChangelogs}\n\n${bodyErrors}`
+            await github.rest.pulls.create({owner, repo, title, head, base, body});

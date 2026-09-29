@@ -1,0 +1,618 @@
+{
+  "benchmark": "reactive-resume/reactive-resume@0a092ee2a49938403554a9912d2b3c449da85783:.github/workflows/docker-build.yml",
+  "benchmark_id": "reactive-resume__reactive-resume__docker-build",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [],
+      "window_count": 0
+    },
+    "push": {
+      "runs": [
+        33207873239,
+        33093074470,
+        33050811670,
+        33030990889,
+        33030663432
+      ],
+      "window_count": 66
+    }
+  },
+  "jobs": {
+    "build (linux/amd64, ubuntu-latest, amd64)": {
+      "duration_seconds": 275.0,
+      "durations": [
+        275.0,
+        216.0,
+        281.0,
+        249.0,
+        345.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        3.0,
+        8.0,
+        4.0,
+        6.0,
+        5.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            6.0,
+            4.0
+          ],
+          "name": "Checkout Repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Get version from package.json",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            15.0,
+            20.0,
+            15.0,
+            20.0
+          ],
+          "name": "Setup Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Login to GitHub Container Registry",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Extract metadata (tags, labels) for Docker",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            245.0,
+            184.0,
+            250.0,
+            219.0,
+            313.0
+          ],
+          "name": "Build and Push by Digest",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 245.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Export digest",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Upload digest",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "build (linux/arm64, ubuntu-24.04-arm, arm64)": {
+      "duration_seconds": 349.0,
+      "durations": [
+        349.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            4.0
+          ],
+          "name": "Checkout Repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Get version from package.json",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            13.0
+          ],
+          "name": "Setup Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Login to GitHub Container Registry",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Extract metadata (tags, labels) for Docker",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            323.0
+          ],
+          "name": "Build and Push by Digest",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 323.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Export digest",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Upload digest",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "merge": {
+      "duration_seconds": 37.0,
+      "durations": [
+        38.0,
+        109.0,
+        37.0,
+        34.0,
+        26.0
+      ],
+      "main_step_counts": [
+        14
+      ],
+      "overhead_seconds": 6.0,
+      "overheads": [
+        7.0,
+        5.0,
+        7.0,
+        6.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Checkout Repository",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Get version from package.json",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Download digests",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            7.0,
+            7.0,
+            8.0,
+            7.0
+          ],
+          "name": "Setup Docker Buildx",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 7.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Login to Docker Hub",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Login to GitHub Container Registry",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Parse version components",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "name": "Extract metadata for Docker",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            9.0,
+            10.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "Create manifest list and push",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0
+          ],
+          "name": "Install Cosign",
+          "occurrence": 0,
+          "positions": [
+            9
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0,
+            12.0,
+            8.0,
+            7.0,
+            6.0
+          ],
+          "name": "Sign images with Cosign",
+          "occurrence": 0,
+          "positions": [
+            10
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Inspect image",
+          "occurrence": 0,
+          "positions": [
+            11
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            70.0
+          ],
+          "name": "Redeploy Stack",
+          "occurrence": 0,
+          "positions": [
+            12
+          ],
+          "seconds": 70.0,
+          "skipped": 4
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Purge Cloudflare cache",
+          "occurrence": 0,
+          "positions": [
+            13
+          ],
+          "seconds": 0.0,
+          "skipped": 4
+        }
+      ]
+    },
+    "mode": {
+      "duration_seconds": 3.0,
+      "durations": [
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        2.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        2.0
+      ],
+      "samples": 5,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Determine publishing mode",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0a092ee2a49938403554a9912d2b3c449da85783": "88a66a97f2640bdfe99b2b693f1dfac4ed3d4bf1",
+      "3fa9de140c926b4551ef95f83d8d7505cc16d9a4": "88a66a97f2640bdfe99b2b693f1dfac4ed3d4bf1",
+      "c288675b166001fbe6b33cfbd59250a8036a90a9": "88a66a97f2640bdfe99b2b693f1dfac4ed3d4bf1",
+      "f046f6fc510ad79e152b2d41379a658e06982071": "88a66a97f2640bdfe99b2b693f1dfac4ed3d4bf1"
+    },
+    "pinned_oid": "88a66a97f2640bdfe99b2b693f1dfac4ed3d4bf1",
+    "runs_same_version": 4,
+    "runs_total": 4
+  }
+}

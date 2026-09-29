@@ -1,0 +1,187 @@
+{
+  "benchmark": "wechaty/wechaty@5a0520ac7d0567777d6931eee53f81bbfcae1453:.github/workflows/npm.yml",
+  "benchmark_id": "wechaty__wechaty__npm",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        26270638242
+      ],
+      "window_count": 1
+    },
+    "push": {
+      "runs": [],
+      "window_count": 0
+    }
+  },
+  "jobs": {
+    "Build (22)": {
+      "duration_seconds": 97.0,
+      "durations": [
+        97.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 2.0,
+      "overheads": [
+        2.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0
+          ],
+          "name": "Use Node.js 22",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            39.0
+          ],
+          "name": "Install Dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 39.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            50.0
+          ],
+          "name": "Test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 50.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Pack": {
+      "duration_seconds": 53.0,
+      "durations": [
+        53.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0
+          ],
+          "name": "Run actions/setup-node@v4",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0
+          ],
+          "name": "Generate Package JSON",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            28.0
+          ],
+          "name": "Run ./scripts/npm-pack-testing.sh",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 28.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Publish": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 1,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "54ab5e47e4aa782606938c27600f83e1dc8438ab": "b17439812404b5edfd2e089dcd5d987adb88b968"
+    },
+    "pinned_oid": "b17439812404b5edfd2e089dcd5d987adb88b968",
+    "runs_same_version": 1,
+    "runs_total": 1
+  }
+}

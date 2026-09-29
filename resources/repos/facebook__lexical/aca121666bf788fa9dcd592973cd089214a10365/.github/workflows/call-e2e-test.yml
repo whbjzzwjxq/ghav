@@ -1,0 +1,55 @@
+name: Lexical e2e test runner
+
+on:
+  workflow_call:
+    inputs:
+      # Make sure that all of these are present in the name of the actions/upload-artifact@v7 action below
+      os: {required: true, type: string}
+      node-version: {required: true, type: string}
+      browser: {required: true, type: string}
+      editor-mode: {required: true, type: string}
+      prod: {required: false, type: boolean}
+      fail-on-cache-miss: {required: false, type: boolean, default: false}
+
+permissions: {}
+
+jobs:
+  e2e-test:
+    runs-on: ${{ inputs.os }}
+    if: (inputs.browser != 'webkit' || inputs.os == 'macos-latest')
+    env:
+      CI: true
+      E2E_EDITOR_MODE: ${{ inputs.editor-mode }}
+      E2E_PORT: 4000
+      test_results_path: 'test-results/'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ./.github/actions/setup-pnpm
+        with:
+          node-version: ${{ inputs.node-version }}
+      - uses: ./.github/actions/setup-playground
+        with:
+          node-version: ${{ inputs.node-version }}
+          prod: ${{ inputs.prod }}
+          fail-on-cache-miss: ${{ inputs.fail-on-cache-miss }}
+      - uses: ./.github/actions/setup-playwright
+        with:
+          node-version: ${{ inputs.node-version }}
+          fail-on-cache-miss: ${{ inputs.fail-on-cache-miss }}
+      - name: Run tests
+        if: ${{ !startsWith(inputs.editor-mode, 'rich-text-with-collab') }}
+        run: pnpm run test-e2e-${{ inputs.prod && 'prod-' || '' }}${{ inputs.browser }}
+      - name: Run collab tests
+        if: ${{ startsWith(inputs.editor-mode, 'rich-text-with-collab') }}
+        shell: bash
+        run: |
+          pnpm exec concurrently -k -s first \
+            "pnpm run collab" \
+            "pnpm run test-e2e-collab-${{ inputs.editor-mode == 'rich-text-with-collab-v2' && 'v2-' || '' }}${{ inputs.prod && 'prod-' || '' }}${{ inputs.browser }}"
+      - name: Upload Artifacts
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: Test Results ${{ inputs.os }}-${{ inputs.browser }}-${{ inputs.editor-mode }}-${{ inputs.prod && 'prod' || 'dev' }}-${{ inputs.node-version }}-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.test_results_path }}
+          retention-days: 7

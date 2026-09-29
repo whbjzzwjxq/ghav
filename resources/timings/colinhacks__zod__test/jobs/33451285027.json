@@ -1,0 +1,617 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-31T23:37:05Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:34:59Z",
+      "head_sha": "892e010246163b161790814a993fd1f7f9837da0",
+      "id": 99681521668,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test with TypeScript latest on Node lts/* (ubuntu-latest)",
+      "run_attempt": 1,
+      "run_id": 33451285027,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000022024",
+      "started_at": "2026-08-31T23:35:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:35:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:35:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T23:35:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:04Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v7",
+          "number": 3,
+          "started_at": "2026-08-31T23:35:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:07Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 4,
+          "started_at": "2026-08-31T23:35:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:17Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-31T23:35:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:31Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 6,
+          "started_at": "2026-08-31T23:35:17Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:37Z",
+          "conclusion": "success",
+          "name": "Run pnpm add typescript@latest -w",
+          "number": 7,
+          "started_at": "2026-08-31T23:35:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:36:40Z",
+          "conclusion": "success",
+          "name": "Run pnpm test",
+          "number": 8,
+          "started_at": "2026-08-31T23:35:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:36:40Z",
+          "conclusion": "skipped",
+          "name": "Run pnpm run --filter @zod/resolution test:all",
+          "number": 9,
+          "started_at": "2026-08-31T23:36:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:03Z",
+          "conclusion": "success",
+          "name": "Run pnpm run --filter @zod/integration test:all",
+          "number": 10,
+          "started_at": "2026-08-31T23:36:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:03Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 18,
+          "started_at": "2026-08-31T23:37:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v7",
+          "number": 19,
+          "started_at": "2026-08-31T23:37:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:03Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 20,
+          "started_at": "2026-08-31T23:37:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:03Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-31T23:37:03Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test"
+    },
+    {
+      "completed_at": "2026-08-31T23:35:28Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:34:59Z",
+      "head_sha": "892e010246163b161790814a993fd1f7f9837da0",
+      "id": 99681521839,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Check for circular dependencies",
+      "run_attempt": 1,
+      "run_id": 33451285027,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000022025",
+      "started_at": "2026-08-31T23:35:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:35:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:35:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T23:35:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v7",
+          "number": 3,
+          "started_at": "2026-08-31T23:35:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 4,
+          "started_at": "2026-08-31T23:35:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-31T23:35:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:26Z",
+          "conclusion": "success",
+          "name": "Run pnpm check:circular",
+          "number": 6,
+          "started_at": "2026-08-31T23:35:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:27Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 10,
+          "started_at": "2026-08-31T23:35:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v7",
+          "number": 11,
+          "started_at": "2026-08-31T23:35:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:27Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 12,
+          "started_at": "2026-08-31T23:35:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:27Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "started_at": "2026-08-31T23:35:27Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test"
+    },
+    {
+      "completed_at": "2026-08-31T23:35:27Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:34:59Z",
+      "head_sha": "892e010246163b161790814a993fd1f7f9837da0",
+      "id": 99681521847,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Lint on Node latest",
+      "run_attempt": 1,
+      "run_id": 33451285027,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000022026",
+      "started_at": "2026-08-31T23:35:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:35:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:35:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T23:35:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:08Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v7",
+          "number": 3,
+          "started_at": "2026-08-31T23:35:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 4,
+          "started_at": "2026-08-31T23:35:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-31T23:35:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:22Z",
+          "conclusion": "success",
+          "name": "Run pnpm format:check",
+          "number": 6,
+          "started_at": "2026-08-31T23:35:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:23Z",
+          "conclusion": "success",
+          "name": "Run pnpm lint:check",
+          "number": 7,
+          "started_at": "2026-08-31T23:35:22Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:25Z",
+          "conclusion": "success",
+          "name": "Run pnpm check:comments",
+          "number": 8,
+          "started_at": "2026-08-31T23:35:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:25Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 14,
+          "started_at": "2026-08-31T23:35:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v7",
+          "number": 15,
+          "started_at": "2026-08-31T23:35:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:26Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 16,
+          "started_at": "2026-08-31T23:35:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:26Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-08-31T23:35:26Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test"
+    },
+    {
+      "completed_at": "2026-08-31T23:37:40Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:34:59Z",
+      "head_sha": "892e010246163b161790814a993fd1f7f9837da0",
+      "id": 99681521926,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test with TypeScript 6 on Node lts/* (ubuntu-latest)",
+      "run_attempt": 1,
+      "run_id": 33451285027,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000022027",
+      "started_at": "2026-08-31T23:35:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:35:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:35:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:04Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T23:35:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:05Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v7",
+          "number": 3,
+          "started_at": "2026-08-31T23:35:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:09Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 4,
+          "started_at": "2026-08-31T23:35:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:20Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-31T23:35:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:36Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 6,
+          "started_at": "2026-08-31T23:35:20Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:42Z",
+          "conclusion": "success",
+          "name": "Run pnpm add typescript@6 -w",
+          "number": 7,
+          "started_at": "2026-08-31T23:35:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:01Z",
+          "conclusion": "success",
+          "name": "Run pnpm test",
+          "number": 8,
+          "started_at": "2026-08-31T23:35:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm run --filter @zod/resolution test:all",
+          "number": 9,
+          "started_at": "2026-08-31T23:37:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:37Z",
+          "conclusion": "success",
+          "name": "Run pnpm run --filter @zod/integration test:all",
+          "number": 10,
+          "started_at": "2026-08-31T23:37:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:37Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 18,
+          "started_at": "2026-08-31T23:37:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v7",
+          "number": 19,
+          "started_at": "2026-08-31T23:37:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 20,
+          "started_at": "2026-08-31T23:37:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-31T23:37:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test"
+    },
+    {
+      "completed_at": "2026-08-31T23:37:13Z",
+      "conclusion": "success",
+      "created_at": "2026-08-31T23:34:59Z",
+      "head_sha": "892e010246163b161790814a993fd1f7f9837da0",
+      "id": 99681522046,
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "name": "Test with TypeScript 5.5 on Node lts/* (ubuntu-latest)",
+      "run_attempt": 1,
+      "run_id": 33451285027,
+      "runner_group_name": "GitHub Actions",
+      "runner_name": "GitHub Actions 1000022028",
+      "started_at": "2026-08-31T23:35:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-31T23:35:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-31T23:35:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:05Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7",
+          "number": 2,
+          "started_at": "2026-08-31T23:35:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:07Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v7",
+          "number": 3,
+          "started_at": "2026-08-31T23:35:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:10Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6",
+          "number": 4,
+          "started_at": "2026-08-31T23:35:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:19Z",
+          "conclusion": "success",
+          "name": "Run pnpm install",
+          "number": 5,
+          "started_at": "2026-08-31T23:35:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:32Z",
+          "conclusion": "success",
+          "name": "Run pnpm build",
+          "number": 6,
+          "started_at": "2026-08-31T23:35:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:35:37Z",
+          "conclusion": "success",
+          "name": "Run pnpm add typescript@5.5 -w",
+          "number": 7,
+          "started_at": "2026-08-31T23:35:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:36:41Z",
+          "conclusion": "success",
+          "name": "Run pnpm test",
+          "number": 8,
+          "started_at": "2026-08-31T23:35:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:36:50Z",
+          "conclusion": "success",
+          "name": "Run pnpm run --filter @zod/resolution test:all",
+          "number": 9,
+          "started_at": "2026-08-31T23:36:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:10Z",
+          "conclusion": "success",
+          "name": "Run pnpm run --filter @zod/integration test:all",
+          "number": 10,
+          "started_at": "2026-08-31T23:36:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:10Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6",
+          "number": 18,
+          "started_at": "2026-08-31T23:37:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v7",
+          "number": 19,
+          "started_at": "2026-08-31T23:37:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:11Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7",
+          "number": 20,
+          "started_at": "2026-08-31T23:37:11Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-31T23:37:11Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-08-31T23:37:11Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "test"
+    }
+  ],
+  "run_id": 33451285027
+}

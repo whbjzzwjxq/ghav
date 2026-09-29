@@ -1,0 +1,42 @@
+name: Setup
+description: Setup Node.js and install dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
+      with:
+        node-version-file: .nvmrc
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271
+
+    - name: Get pnpm store path
+      id: pnpm-store
+      run: echo "path=$(pnpm store path --silent)" >> "$GITHUB_OUTPUT"
+      shell: bash
+
+    - name: Restore pnpm store
+      id: pnpm-cache
+      uses: actions/cache/restore@27d5ce7f107fe9357f9df03efb73ab90386fccae
+      with:
+        path: ${{ steps.pnpm-store.outputs.path }}
+        key: ${{ runner.os }}-pnpm-store-v1-${{ hashFiles('pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-v1-
+
+    - name: Disable minimum release age
+      run: echo "PNPM_CONFIG_MINIMUM_RELEASE_AGE=0" >> "$GITHUB_ENV"
+      shell: bash
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile --prefer-offline
+      shell: bash
+
+    - name: Cache pnpm store
+      if: steps.pnpm-cache.outputs.cache-hit != 'true'
+      uses: actions/cache/save@27d5ce7f107fe9357f9df03efb73ab90386fccae
+      with:
+        path: ${{ steps.pnpm-store.outputs.path }}
+        key: ${{ steps.pnpm-cache.outputs.cache-primary-key }}

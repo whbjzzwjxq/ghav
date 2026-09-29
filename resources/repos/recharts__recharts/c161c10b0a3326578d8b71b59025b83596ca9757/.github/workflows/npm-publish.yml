@@ -1,0 +1,101 @@
+# This workflow installs dependencies, builds the package, and publishes it to npm when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: npm publish
+
+on:
+  release:
+    types: [published]
+env:
+  NODE_VERSION: 26.x
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout Recharts Repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://registry.npmjs.org/
+          package-manager-cache: false # never use caching in release builds
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build main lib
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: |
+            es6/
+            lib/
+            umd/
+            types/
+          retention-days: 1
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # https://docs.npmjs.com/trusted-publishers#step-2-configure-your-cicd-workflow
+      id-token: write # Required for OIDC
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://registry.npmjs.org/
+          package-manager-cache: false # never use caching in release builds
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+
+      - name: Determine release version and npm dist-tag
+        id: release-info
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          PACKAGE_VERSION="$(node -p "require('./package.json').version")"
+          RELEASE_TAG="${RELEASE_TAG}"
+          # GitHub release tags are expected to look like v3.8.2 or v3.8.2-canary.0.
+          if [[ "$RELEASE_TAG" != v* ]]; then
+            echo "Release tag must start with 'v' (got: $RELEASE_TAG)." >&2
+            exit 1
+          fi
+          RELEASE_VERSION="${RELEASE_TAG#v}"
+
+          # Fail fast if the release tag and package metadata disagree, so we do not
+          # publish one version while advertising another in GitHub.
+          if [ "$PACKAGE_VERSION" != "$RELEASE_VERSION" ]; then
+            echo "Release tag ($RELEASE_TAG) does not match package.json version ($PACKAGE_VERSION)." >&2
+            exit 1
+          fi
+
+          NPM_TAG=latest
+          # Stable versions have no prerelease suffix and stay on npm's default
+          # dist-tag. For prereleases like 3.8.2-alpha.0 or 3.8.2-canary.7, this
+          # regex captures the first identifier after the hyphen ("alpha",
+          # "canary", "beta", ...) and ignores the numeric suffix.
+          if [[ "$PACKAGE_VERSION" =~ -([0-9A-Za-z]+)(\.[0-9A-Za-z.-]+)?$ ]]; then
+            NPM_TAG="${BASH_REMATCH[1]}"
+          fi
+
+          echo "npm_tag=$NPM_TAG" >> "$GITHUB_OUTPUT"
+      - run: npm publish --tag "${{ steps.release-info.outputs.npm_tag }}"

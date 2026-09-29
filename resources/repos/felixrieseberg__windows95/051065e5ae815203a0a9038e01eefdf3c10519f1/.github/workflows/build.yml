@@ -1,0 +1,110 @@
+name: Build & Release
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - v*
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: 20.x
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: lint
+        run: npm run lint
+  build:
+    needs: lint
+    name: Build (${{ matrix.os }} - ${{ matrix.arch }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # Build for supported platforms
+        # https://github.com/electron/electron-packager/blob/ebcbd439ff3e0f6f92fa880ff28a8670a9bcf2ab/src/targets.js#L9
+        # 32-bit Linux unsupported as of 2019: https://www.electronjs.org/blog/linux-32bit-support
+        os: [ macOS-latest, ubuntu-latest, windows-latest ]
+        arch: [ x64, arm64 ]
+        include:
+        - os: windows-latest
+          arch: ia32
+        - os: ubuntu-latest
+          arch: armv7l
+        # Publishing artifacts for multiple Windows architectures has
+        # a bug which can cause the wrong architecture to be downloaded
+        # for an update, so until that is fixed, only build Windows x64
+        exclude:
+        - os: windows-latest
+          arch: arm64
+
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Setup Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: 20.x
+          cache: npm
+      - name: Set MacOS signing certs
+        if: matrix.os == 'macOS-latest'
+        run: chmod +x tools/add-macos-cert.sh && ./tools/add-macos-cert.sh
+        env:
+          MACOS_CERT_P12: ${{ secrets.MACOS_CERT_P12 }}
+          MACOS_CERT_PASSWORD: ${{ secrets.MACOS_CERT_PASSWORD }}
+      - name: Set up Azure Trusted Signing
+        if: matrix.os == 'windows-latest' && startsWith(github.ref, 'refs/tags/')
+        shell: pwsh
+        run: |
+          nuget install Microsoft.Trusted.Signing.Client -Version 1.0.60 -OutputDirectory . -NonInteractive
+          $signtool = Get-ChildItem -Path "C:\Program Files (x86)\Windows Kits\10\bin" -Recurse -Filter signtool.exe | Where-Object { $_.FullName -like "*\x64\*" } | Sort-Object FullName -Descending | Select-Object -First 1
+          echo "SIGNTOOL_PATH=$($signtool.FullName)" >> $env:GITHUB_ENV
+          echo "AZURE_CODE_SIGNING_DLIB=$((Resolve-Path 'Microsoft.Trusted.Signing.Client.1.0.60/bin/x64/Azure.CodeSigning.Dlib.dll').Path)" >> $env:GITHUB_ENV
+      - name: Download disk image (ps1)
+        run: tools/download-disk.ps1
+        if: matrix.os == 'windows-latest' && startsWith(github.ref, 'refs/tags/')
+        env:
+          DISK_REPO: ${{ vars.DISK_REPO }}
+          DISK_TAG: ${{ vars.DISK_TAG }}
+          GH_TOKEN: ${{ secrets.IMAGES_REPO_TOKEN }}
+      - name: Download disk image (sh)
+        run: chmod +x tools/download-disk.sh && ./tools/download-disk.sh
+        if: matrix.os != 'windows-latest' && startsWith(github.ref, 'refs/tags/')
+        env:
+          DISK_REPO: ${{ vars.DISK_REPO }}
+          DISK_TAG: ${{ vars.DISK_TAG }}
+          GH_TOKEN: ${{ secrets.IMAGES_REPO_TOKEN }}
+      - name: Install
+        run: npm ci
+      - name: Make
+        if: startsWith(github.ref, 'refs/tags/')
+        run: npm run make -- --arch=${{ matrix.arch }}
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_ID_PASSWORD: ${{ secrets.APPLE_ID_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_CODE_SIGNING_ACCOUNT_NAME: ${{ secrets.AZURE_CODE_SIGNING_ACCOUNT_NAME }}
+          AZURE_CODE_SIGNING_CERTIFICATE_PROFILE_NAME: ${{ secrets.AZURE_CODE_SIGNING_CERTIFICATE_PROFILE_NAME }}
+      - name: Release
+        uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe # v2.6.1
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: true
+          files: |
+            out/**/*.deb
+            out/**/*.dmg
+            out/**/*setup*.exe
+            out/**/*.rpm
+            out/**/*.zip

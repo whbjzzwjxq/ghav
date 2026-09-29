@@ -1,0 +1,2975 @@
+{
+  "benchmark": "nuxt/nuxt@ab157ba3466c7b3bee8d3ea89011ea65d2b86257:.github/workflows/ci.yml",
+  "benchmark_id": "nuxt__nuxt__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        33448672088,
+        33443637967,
+        33443534719,
+        33440671297,
+        33435081579
+      ],
+      "window_count": 692
+    },
+    "push": {
+      "runs": [
+        33222645446,
+        33222493771,
+        33220532450,
+        33217973856,
+        33217798634
+      ],
+      "window_count": 145
+    }
+  },
+  "jobs": {
+    "build": {
+      "duration_seconds": 65.5,
+      "durations": [
+        62.0,
+        67.0,
+        60.0,
+        72.0,
+        65.0,
+        67.0,
+        66.0,
+        64.0,
+        62.0,
+        66.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            23.0,
+            18.0,
+            26.0,
+            19.0,
+            22.0,
+            21.0,
+            20.0,
+            18.0,
+            20.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            14.0,
+            14.0,
+            15.0,
+            15.0,
+            14.0,
+            14.0,
+            14.0,
+            15.0,
+            15.0
+          ],
+          "name": "Typecheck",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 14.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            20.0,
+            20.0,
+            21.0,
+            22.0,
+            22.0,
+            22.0,
+            21.0,
+            21.0,
+            23.0
+          ],
+          "name": "Build and check built types",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0
+          ],
+          "name": "Check public API type surface",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "changes": {
+      "duration_seconds": 5.5,
+      "durations": [
+        6.0,
+        4.0,
+        7.0,
+        7.0,
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        2.0,
+        5.0,
+        5.0,
+        4.0,
+        2.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Resolve Playwright version",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "ci-ok": {
+      "duration_seconds": 3.0,
+      "durations": [
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        2.0,
+        4.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "main_step_counts": [
+        1
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        2.0,
+        3.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Check required jobs",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "codeql (actions)": {
+      "duration_seconds": 58.5,
+      "durations": [
+        60.0,
+        58.0,
+        66.0,
+        51.0,
+        60.0,
+        59.0,
+        58.0,
+        51.0,
+        64.0,
+        56.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        6.0,
+        5.0,
+        4.0,
+        4.0,
+        2.0,
+        5.0,
+        6.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            15.0,
+            13.0,
+            16.0,
+            13.0,
+            15.0,
+            15.0,
+            17.0,
+            15.0,
+            17.0,
+            15.0
+          ],
+          "name": "Initialize CodeQL",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 15.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            40.0,
+            40.0,
+            42.0,
+            31.0,
+            39.0,
+            39.0,
+            38.0,
+            29.0,
+            40.0,
+            38.0
+          ],
+          "name": "Perform CodeQL Analysis",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 39.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "codeql (javascript-typescript)": {
+      "duration_seconds": 71.0,
+      "durations": [
+        108.0,
+        115.0,
+        114.0,
+        68.0,
+        108.0,
+        63.0,
+        63.0,
+        57.0,
+        74.0,
+        66.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        5.0,
+        6.0,
+        5.0,
+        3.0,
+        6.0,
+        4.0,
+        4.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            4.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            18.0,
+            18.0,
+            13.0,
+            17.0,
+            19.0,
+            18.0,
+            18.0,
+            20.0,
+            19.0
+          ],
+          "name": "Initialize CodeQL",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            85.0,
+            90.0,
+            89.0,
+            46.0,
+            86.0,
+            37.0,
+            39.0,
+            33.0,
+            48.0,
+            42.0
+          ],
+          "name": "Perform CodeQL Analysis",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 47.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "knip": {
+      "duration_seconds": 50.5,
+      "durations": [
+        50.0,
+        55.0,
+        57.0,
+        51.0,
+        45.0,
+        55.0,
+        52.0,
+        48.0,
+        49.0,
+        48.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 0.0,
+      "overheads": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            24.0,
+            26.0,
+            21.0,
+            19.0,
+            23.0,
+            20.0,
+            19.0,
+            17.0,
+            19.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            18.0,
+            17.0,
+            18.0,
+            15.0,
+            19.0,
+            18.0,
+            18.0,
+            18.0,
+            18.0
+          ],
+          "name": "Prepare",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            8.0,
+            9.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            7.0
+          ],
+          "name": "Knip",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            7.0
+          ],
+          "name": "Knip (production)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            8.0,
+            7.0,
+            8.0,
+            9.0,
+            7.0,
+            8.0,
+            8.0,
+            7.0,
+            8.0,
+            7.0
+          ],
+          "name": "Parallel group",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "lint-and-test": {
+      "duration_seconds": 149.0,
+      "durations": [
+        149.0
+      ],
+      "main_step_counts": [
+        9
+      ],
+      "overhead_seconds": 0.0,
+      "overheads": [
+        0.0
+      ],
+      "samples": 1,
+      "skipped": 9,
+      "steps": [
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0
+          ],
+          "name": "Prepare",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            102.0
+          ],
+          "name": "Lint",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 102.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            45.0
+          ],
+          "name": "Test (nuxt runtime)",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            81.0
+          ],
+          "name": "Test (unit)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 81.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0
+          ],
+          "name": "Test (no jiti)",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            102.0
+          ],
+          "name": "Parallel group",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": 102.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            8
+          ],
+          "seconds": null,
+          "skipped": 1
+        }
+      ]
+    },
+    "release-nightly": {
+      "duration_seconds": 97.0,
+      "durations": [
+        94.0,
+        94.0,
+        97.0,
+        98.0,
+        101.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        3.0,
+        4.0,
+        2.0,
+        4.0,
+        4.0
+      ],
+      "samples": 5,
+      "skipped": 5,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            8.0,
+            9.0,
+            8.0,
+            8.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            19.0,
+            22.0,
+            22.0,
+            24.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            62.0,
+            63.0,
+            64.0,
+            64.0,
+            65.0
+          ],
+          "name": "Release nightly",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 64.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "release-pkg-pr-new": {
+      "duration_seconds": 55.5,
+      "durations": [
+        57.0,
+        56.0,
+        55.0,
+        55.0,
+        54.0,
+        61.0,
+        55.0,
+        56.0,
+        58.0,
+        54.0
+      ],
+      "main_step_counts": [
+        3
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            8.0,
+            9.0,
+            8.0,
+            7.0,
+            7.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 8.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            19.0,
+            21.0,
+            18.0,
+            22.0,
+            18.0,
+            20.0,
+            20.0,
+            18.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            26.0,
+            25.0,
+            25.0,
+            27.0,
+            25.0
+          ],
+          "name": "Run vp exec pkg-pr-new publish --compact --pnpm --packageManager=pnpm,npm,yarn './packages/kit' './packages/nitro-server' './packages/nuxt' './packages/rspack' './packages/schema' './packages/vite' './packages/vite-server' './packages/webpack'",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            27.0,
+            26.0,
+            24.0,
+            24.0
+          ],
+          "name": "Run vp exec pkg-pr-new publish --compact --pnpm --packageManager=pnpm,npm,yarn './packages/kit' './packages/nitro-server' './packages/nuxt' './packages/rspack' './packages/schema' './packages/vite' './packages/webpack'",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 26.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test-benchmark": {
+      "duration_seconds": 632.0,
+      "durations": [
+        660.0,
+        635.0,
+        639.0,
+        571.0,
+        658.0,
+        641.0,
+        629.0,
+        629.0,
+        505.0,
+        629.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        7.0,
+        10.0,
+        5.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            3.0,
+            3.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            22.0,
+            26.0,
+            27.0,
+            19.0,
+            23.0,
+            16.0,
+            24.0,
+            23.0,
+            25.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            31.0,
+            29.0,
+            29.0,
+            34.0,
+            30.0,
+            32.0,
+            31.0,
+            31.0,
+            30.0,
+            32.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 31.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            601.0,
+            576.0,
+            572.0,
+            503.0,
+            604.0,
+            581.0,
+            576.0,
+            566.0,
+            443.0,
+            565.0
+          ],
+          "name": "Run benchmarks",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 574.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "test-e2e": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 4,
+      "steps": []
+    },
+    "test-e2e (ubuntu-24.04-arm)": {
+      "duration_seconds": 965.5,
+      "durations": [
+        826.0,
+        964.0,
+        991.0,
+        967.0,
+        847.0,
+        994.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        3.0,
+        4.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            27.0,
+            25.0,
+            20.0,
+            21.0,
+            20.0,
+            22.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            4.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            19.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            25.0,
+            25.0,
+            23.0,
+            25.0,
+            25.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 25.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            764.0,
+            905.0,
+            938.0,
+            913.0,
+            794.0,
+            921.0
+          ],
+          "name": "Test (e2e)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 909.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-e2e (windows-latest, --shard=1/2)": {
+      "duration_seconds": 871.5,
+      "durations": [
+        1005.0,
+        824.0,
+        862.0,
+        881.0,
+        996.0,
+        785.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        5.0,
+        3.0,
+        5.0,
+        7.0,
+        3.0,
+        3.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            14.0,
+            10.0,
+            12.0,
+            12.0,
+            11.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            118.0,
+            73.0,
+            65.0,
+            81.0,
+            82.0,
+            75.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 78.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0,
+            4.0,
+            6.0,
+            7.0,
+            4.0,
+            4.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            5.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            122.0,
+            79.0,
+            97.0,
+            82.0,
+            154.0,
+            72.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 89.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            739.0,
+            653.0,
+            676.0,
+            690.0,
+            741.0,
+            615.0
+          ],
+          "name": "Test (e2e)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 683.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-e2e (windows-latest, --shard=2/2)": {
+      "duration_seconds": 744.0,
+      "durations": [
+        866.0,
+        747.0,
+        728.0,
+        741.0,
+        819.0,
+        673.0
+      ],
+      "main_step_counts": [
+        7
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        2.0,
+        6.0,
+        5.0,
+        5.0,
+        6.0,
+        5.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            10.0,
+            11.0,
+            15.0,
+            11.0,
+            17.0,
+            11.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            86.0,
+            91.0,
+            64.0,
+            80.0,
+            89.0,
+            73.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 83.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            5.0,
+            4.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 5.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            9.0,
+            2.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            189.0,
+            80.0,
+            93.0,
+            78.0,
+            148.0,
+            72.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 86.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            573.0,
+            552.0,
+            545.0,
+            560.0,
+            545.0,
+            506.0
+          ],
+          "name": "Test (e2e)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 548.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-fixtures": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 4,
+      "steps": []
+    },
+    "test-fixtures (ubuntu-24.04-arm, --project \"fixtures:vite-built-*\" --project \"fixtures:webpack-bu...": {
+      "duration_seconds": 345.0,
+      "durations": [
+        671.0,
+        344.0,
+        344.0,
+        325.0,
+        730.0,
+        346.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        5.0,
+        4.0,
+        3.0,
+        6.0,
+        3.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            22.0,
+            21.0,
+            20.0,
+            38.0,
+            20.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            4.0,
+            4.0,
+            4.0,
+            5.0,
+            1.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            11.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            25.0,
+            25.0,
+            23.0,
+            24.0,
+            24.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 24.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            617.0,
+            284.0,
+            286.0,
+            272.0,
+            651.0,
+            282.0
+          ],
+          "name": "Test (fixtures)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 285.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            2.0,
+            2.0,
+            4.0,
+            3.0
+          ],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 3.0,
+          "skipped": 1
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-fixtures (ubuntu-24.04-arm, --project \"fixtures:vite-dev-*\" --project \"fixtures:rspack-*\")": {
+      "duration_seconds": 456.5,
+      "durations": [
+        565.0,
+        441.0,
+        436.0,
+        468.0,
+        558.0,
+        445.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        6.0,
+        4.0,
+        6.0,
+        4.0,
+        4.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            19.0,
+            21.0,
+            20.0,
+            23.0,
+            19.0,
+            19.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            8.0,
+            3.0,
+            6.0,
+            2.0,
+            2.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            10.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            25.0,
+            24.0,
+            24.0,
+            24.0,
+            25.0,
+            25.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 24.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            512.0,
+            378.0,
+            382.0,
+            405.0,
+            504.0,
+            382.0
+          ],
+          "name": "Test (fixtures)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 393.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 1
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-fixtures (ubuntu-24.04-arm, --project \"fixtures:webpack-dev-*\" --project \"fixtures:nitro-vit...": {
+      "duration_seconds": 255.5,
+      "durations": [
+        256.0,
+        265.0,
+        247.0,
+        255.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        4.0,
+        5.0,
+        3.0,
+        5.0
+      ],
+      "samples": 4,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            23.0,
+            22.0,
+            19.0,
+            19.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            5.0,
+            2.0,
+            4.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            9.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            24.0,
+            21.0,
+            23.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 23.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            198.0,
+            204.0,
+            197.0,
+            192.0
+          ],
+          "name": "Test (fixtures)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 197.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            3.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 4
+        }
+      ]
+    },
+    "test-fixtures (ubuntu-24.04-arm, --project \"fixtures:webpack-dev-*\")": {
+      "duration_seconds": 193.5,
+      "durations": [
+        192.0,
+        195.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0
+      ],
+      "samples": 2,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            24.0,
+            18.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            3.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 3.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            24.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 23.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            138.0,
+            141.0
+          ],
+          "name": "Test (fixtures)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 139.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0
+          ],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": 2.0,
+          "skipped": 1
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 2
+        }
+      ]
+    },
+    "test-fixtures (windows-latest, --project \"fixtures:vite-built-*\")": {
+      "duration_seconds": 460.5,
+      "durations": [
+        587.0,
+        448.0,
+        455.0,
+        466.0,
+        735.0,
+        437.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 5.0,
+      "overheads": [
+        5.0,
+        9.0,
+        5.0,
+        4.0,
+        4.0,
+        8.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            15.0,
+            11.0,
+            11.0,
+            11.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 11.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            71.0,
+            82.0,
+            68.0,
+            100.0,
+            80.0,
+            86.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 81.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            4.0,
+            8.0,
+            4.0,
+            4.0,
+            5.0,
+            5.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            86.0,
+            96.0,
+            111.0,
+            91.0,
+            148.0,
+            81.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 93.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            410.0,
+            237.0,
+            254.0,
+            255.0,
+            486.0,
+            245.0
+          ],
+          "name": "Test (fixtures)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 254.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 6
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-fixtures (windows-latest, --project \"fixtures:vite-dev-*\")": {
+      "duration_seconds": 521.0,
+      "durations": [
+        721.0,
+        516.0,
+        483.0,
+        526.0,
+        675.0,
+        461.0
+      ],
+      "main_step_counts": [
+        8
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        6.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            13.0,
+            11.0,
+            10.0,
+            10.0,
+            10.0,
+            9.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            88.0,
+            69.0,
+            67.0,
+            80.0,
+            70.0,
+            69.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 69.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            3.0,
+            5.0,
+            7.0,
+            5.0,
+            4.0,
+            3.0
+          ],
+          "name": "Cache Playwright browsers",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 4.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Install Playwright",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            122.0,
+            71.0,
+            80.0,
+            93.0,
+            138.0,
+            84.0
+          ],
+          "name": "Prepare test fixtures",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 88.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            487.0,
+            354.0,
+            313.0,
+            331.0,
+            448.0,
+            291.0
+          ],
+          "name": "Test (fixtures)",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": 342.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Run codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f",
+          "occurrence": 0,
+          "positions": [
+            6
+          ],
+          "seconds": null,
+          "skipped": 6
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            7
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "test-size": {
+      "duration_seconds": 59.0,
+      "durations": [
+        71.0,
+        61.0,
+        57.0,
+        57.0,
+        75.0,
+        56.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        3.0,
+        4.0,
+        4.0,
+        3.0,
+        5.0,
+        2.0
+      ],
+      "samples": 6,
+      "skipped": 4,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            20.0,
+            21.0,
+            18.0,
+            19.0,
+            20.0,
+            20.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 20.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            46.0,
+            35.0,
+            34.0,
+            33.0,
+            48.0,
+            33.0
+          ],
+          "name": "Check bundle size",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 34.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "typecheck": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 4,
+      "steps": []
+    },
+    "typecheck (ubuntu-24.04-arm, bundler)": {
+      "duration_seconds": 155.5,
+      "durations": [
+        164.0,
+        171.0,
+        153.0,
+        147.0,
+        145.0,
+        158.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 0.0,
+      "overheads": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            19.0,
+            17.0,
+            21.0,
+            17.0,
+            20.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 19.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            66.0,
+            78.0,
+            72.0,
+            59.0,
+            66.0,
+            72.0
+          ],
+          "name": "Test (types)",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 69.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            139.0,
+            148.0,
+            134.0,
+            120.0,
+            125.0,
+            131.0
+          ],
+          "name": "Typecheck (docs)",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 132.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            139.0,
+            148.0,
+            134.0,
+            120.0,
+            125.0,
+            131.0
+          ],
+          "name": "Parallel group",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 132.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "typecheck (windows-latest, bundler)": {
+      "duration_seconds": 331.5,
+      "durations": [
+        402.0,
+        372.0,
+        299.0,
+        345.0,
+        304.0,
+        318.0
+      ],
+      "main_step_counts": [
+        6
+      ],
+      "overhead_seconds": 0.0,
+      "overheads": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "samples": 6,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            9.0,
+            9.0,
+            10.0,
+            10.0,
+            11.0,
+            12.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            95.0,
+            113.0,
+            53.0,
+            109.0,
+            74.0,
+            68.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 84.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            218.0,
+            182.0,
+            162.0,
+            155.0,
+            157.0,
+            159.0
+          ],
+          "name": "Test (types)",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 160.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            290.0,
+            246.0,
+            232.0,
+            222.0,
+            216.0,
+            235.0
+          ],
+          "name": "Typecheck (docs)",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 233.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            290.0,
+            246.0,
+            232.0,
+            222.0,
+            216.0,
+            235.0
+          ],
+          "name": "Parallel group",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 233.5,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            5
+          ],
+          "seconds": null,
+          "skipped": 6
+        }
+      ]
+    },
+    "ui-templates-generated": {
+      "duration_seconds": 29.5,
+      "durations": [
+        52.0,
+        32.0,
+        27.0,
+        33.0,
+        29.0,
+        32.0,
+        28.0,
+        27.0,
+        30.0,
+        25.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        6.0,
+        4.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            3.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            41.0,
+            25.0,
+            20.0,
+            25.0,
+            22.0,
+            25.0,
+            21.0,
+            20.0,
+            22.0,
+            20.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 22.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Regenerate ui-templates output",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "name": "Fail if committed output is stale",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 0.0,
+          "skipped": 0
+        },
+        {
+          "durations": [],
+          "name": "Cancel workflow on failure",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": null,
+          "skipped": 10
+        }
+      ]
+    },
+    "warm-windows-cache": {
+      "duration_seconds": 82.0,
+      "durations": [
+        82.0,
+        82.0,
+        82.0,
+        78.0
+      ],
+      "main_step_counts": [
+        2
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        5.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 4,
+      "skipped": 6,
+      "steps": [
+        {
+          "durations": [
+            12.0,
+            10.0,
+            9.0,
+            10.0
+          ],
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            65.0,
+            67.0,
+            69.0,
+            65.0
+          ],
+          "name": "Run voidzero-dev/setup-vp@1b32467adbe183473499fd9d5d372c3ed9641754",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 66.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "0fc87a9db1ba2f40ddf77d826240969e7d5640b7": "4cb068c6d5237c369a58b945591f288251ec7950",
+      "2c53c191076974ba23e62030e10e5e88753572e9": "9e3d65178550c835b048ff6aef32a0bce12d3be7",
+      "37d621161cf98b6d01e91edacb72abe015f4c5cd": "4cb068c6d5237c369a58b945591f288251ec7950",
+      "404cfaf91510cb72340edc74ab0e4ebc5c87765e": "4cb068c6d5237c369a58b945591f288251ec7950",
+      "a55a3a66ddf7443283b5fb91eee2dad07d1a41d0": "a35c1851a3ab230535ea64750b45c9a976e0c216",
+      "ac5ff6b5b408994a3d169915c7d34f8e96d672af": "59e3369d1edc5e931930f125a845a581856b7433",
+      "bb58c9ff6287bc6da413ee9ba95f9bc577b2d82c": "9e3d65178550c835b048ff6aef32a0bce12d3be7",
+      "ed6b0afcfee4de9b764d05f6fec2e743dde02322": "9e3d65178550c835b048ff6aef32a0bce12d3be7",
+      "f2f0e9bb0add0575121a29e87f243179f8a4084f": "4cb068c6d5237c369a58b945591f288251ec7950",
+      "fe21865f895fa936e157e6bdf79cb08763758f2a": "9e3d65178550c835b048ff6aef32a0bce12d3be7"
+    },
+    "pinned_oid": "4cb068c6d5237c369a58b945591f288251ec7950",
+    "runs_same_version": 4,
+    "runs_total": 10
+  }
+}

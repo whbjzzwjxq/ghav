@@ -1,0 +1,63 @@
+name: Test Typescript SDK
+
+on:
+  push:
+    branches: [master, next]
+    paths:
+      - '.changeset/**'
+      - 'ts/**'
+      - '.github/actions/setup-node-pnpm-bun/action.yml'
+      - '.github/workflows/ts.release.yml'
+      - '.github/workflows/ts.test.yml'
+      - 'mise.toml'
+      - 'mise.lock'
+      - 'package.json'
+      - 'pnpm-workspace.yaml'
+      - 'pnpm-lock.yaml'
+      - 'test/release-workflow.test.ts'
+      - 'turbo.jsonc'
+  pull_request:
+    branches: [master, next]
+    paths:
+      - '.changeset/**'
+      - 'ts/**'
+      - '.github/actions/setup-node-pnpm-bun/action.yml'
+      - '.github/workflows/ts.release.yml'
+      - '.github/workflows/ts.test.yml'
+      - 'mise.toml'
+      - 'mise.lock'
+      - 'package.json'
+      - 'pnpm-workspace.yaml'
+      - 'pnpm-lock.yaml'
+      - 'test/release-workflow.test.ts'
+      - 'turbo.jsonc'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Typescript SDK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node.js, pnpm, Bun
+        uses: ./.github/actions/setup-node-pnpm-bun
+        with:
+          enable-turbo-cache: 'true'
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check Python helpers codegen is up to date
+        run: pnpm --filter @composio/experimental run check:python-helpers
+
+      - name: Run Tests
+        run: pnpm run test

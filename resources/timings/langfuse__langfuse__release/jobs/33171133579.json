@@ -1,0 +1,108 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-08-28T12:27:39Z",
+      "conclusion": "success",
+      "created_at": "2026-08-28T12:27:17Z",
+      "head_sha": "171690bb454039ada6482de746ee863e798bac67",
+      "id": 98848305358,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "release",
+      "run_attempt": 1,
+      "run_id": 33171133579,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m145de5tx0yfyw6rgghhqv2y-4vcpu",
+      "started_at": "2026-08-28T12:27:24Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-08-28T12:27:26Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-08-28T12:27:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:26Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-08-28T12:27:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:37Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-08-28T12:27:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:38Z",
+          "conclusion": "success",
+          "name": "Check released commit is on main",
+          "number": 4,
+          "started_at": "2026-08-28T12:27:37Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:38Z",
+          "conclusion": "skipped",
+          "name": "Push to production",
+          "number": 5,
+          "started_at": "2026-08-28T12:27:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 9,
+          "started_at": "2026-08-28T12:27:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:38Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 10,
+          "started_at": "2026-08-28T12:27:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-08-28T12:27:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "started_at": "2026-08-28T12:27:38Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": ".github/workflows/release.yml"
+    },
+    {
+      "completed_at": "2026-08-28T12:27:40Z",
+      "conclusion": "skipped",
+      "created_at": "2026-08-28T12:27:40Z",
+      "head_sha": "171690bb454039ada6482de746ee863e798bac67",
+      "id": 98848393102,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "notify-slack-on-failure",
+      "run_attempt": 1,
+      "run_id": 33171133579,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-08-28T12:27:40Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": ".github/workflows/release.yml"
+    }
+  ],
+  "run_id": 33171133579
+}

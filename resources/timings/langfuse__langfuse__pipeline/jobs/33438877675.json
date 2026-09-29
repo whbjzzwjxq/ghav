@@ -1,0 +1,3426 @@
+{
+  "jobs": [
+    {
+      "completed_at": "2026-09-01T09:15:08Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861080,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "llm-connections-filter",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402gv2vbe4yv2ae3y7q7q-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:03Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:01Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:03Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Run dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:36Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861725,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-worker (node24, pg15, mode-azure)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402jszanv8p7k654z0zxa-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Run + migrate",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Ensure no unhealthy status",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:48Z",
+          "conclusion": "success",
+          "name": "Seed DB",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:48Z",
+          "conclusion": "skipped",
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "number": 14,
+          "started_at": "2026-09-01T09:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:48Z",
+          "conclusion": "skipped",
+          "name": "Setup Dev Tables",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:52Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 16,
+          "started_at": "2026-09-01T09:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:34Z",
+          "conclusion": "success",
+          "name": "run tests",
+          "number": 17,
+          "started_at": "2026-09-01T09:15:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:34Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 31,
+          "started_at": "2026-09-01T09:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:34Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 32,
+          "started_at": "2026-09-01T09:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:35Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 33,
+          "started_at": "2026-09-01T09:17:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:35Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 34,
+          "started_at": "2026-09-01T09:17:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:35Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "started_at": "2026-09-01T09:17:35Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:38Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861736,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-worker (node24, pg15, mode)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402hkjrd2nfbmrth1fq0t-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Run + migrate",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Ensure no unhealthy status",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:48Z",
+          "conclusion": "success",
+          "name": "Seed DB",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:48Z",
+          "conclusion": "success",
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "number": 14,
+          "started_at": "2026-09-01T09:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:49Z",
+          "conclusion": "success",
+          "name": "Setup Dev Tables",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:48Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:52Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 16,
+          "started_at": "2026-09-01T09:15:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:36Z",
+          "conclusion": "success",
+          "name": "run tests",
+          "number": 17,
+          "started_at": "2026-09-01T09:15:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:36Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 31,
+          "started_at": "2026-09-01T09:17:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:36Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 32,
+          "started_at": "2026-09-01T09:17:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 33,
+          "started_at": "2026-09-01T09:17:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:36Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 34,
+          "started_at": "2026-09-01T09:17:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "started_at": "2026-09-01T09:17:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:16:52Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861778,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "lint",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402g65196ks4a1r7dphwb-8vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Setup Turbo cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:24Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:24Z",
+          "conclusion": "success",
+          "name": "agent shims are committed and current",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:25Z",
+          "conclusion": "success",
+          "name": "agent guidance paths resolve",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:25Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:42Z",
+          "conclusion": "success",
+          "name": "lint web",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:50Z",
+          "conclusion": "success",
+          "name": "typecheck",
+          "number": 13,
+          "started_at": "2026-09-01T09:16:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:51Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 23,
+          "started_at": "2026-09-01T09:16:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:51Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 24,
+          "started_at": "2026-09-01T09:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 25,
+          "started_at": "2026-09-01T09:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:51Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 26,
+          "started_at": "2026-09-01T09:16:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 27,
+          "started_at": "2026-09-01T09:16:51Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:15:41Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861780,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "test-docker-build (web)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402hsy1mqsh2n756brvgr-8vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Setup Blacksmith Builder",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Set NEXT_PUBLIC_BUILD_ID",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "success",
+          "name": "Start dependency containers in background",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:24Z",
+          "conclusion": "success",
+          "name": "Build images",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:38Z",
+          "conclusion": "success",
+          "name": "Start compose services and wait for healthchecks",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:38Z",
+          "conclusion": "success",
+          "name": "Check service health",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:38Z",
+          "conclusion": "skipped",
+          "name": "Capture docker diagnostics on failure",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:38Z",
+          "conclusion": "skipped",
+          "name": "Upload docker diagnostics",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Post Setup Blacksmith Builder",
+          "number": 22,
+          "started_at": "2026-09-01T09:15:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 23,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 24,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:16:48Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861783,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-web-client",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402ncseaqy0knnn7bw4s3-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:30Z",
+          "conclusion": "success",
+          "name": "Build client test dependencies",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:46Z",
+          "conclusion": "success",
+          "name": "run test-client",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:46Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 17,
+          "started_at": "2026-09-01T09:16:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:46Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 18,
+          "started_at": "2026-09-01T09:16:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 19,
+          "started_at": "2026-09-01T09:16:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:46Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 20,
+          "started_at": "2026-09-01T09:16:46Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:46Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "started_at": "2026-09-01T09:16:46Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:18:15Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861789,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "tests-web (node24, pg15, mode-redis-cluster)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402fj0q2ajm1k3fxt8g70-8vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "skipped",
+          "name": "Setup Turbo cache",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:31Z",
+          "conclusion": "success",
+          "name": "Start dev containers in background",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:21Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:30Z",
+          "conclusion": "success",
+          "name": "Finalize build for runtime environment",
+          "number": 14,
+          "started_at": "2026-09-01T09:16:21Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:30Z",
+          "conclusion": "success",
+          "name": "Wait for dev containers",
+          "number": 15,
+          "started_at": "2026-09-01T09:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:34Z",
+          "conclusion": "success",
+          "name": "Migrate DB",
+          "number": 16,
+          "started_at": "2026-09-01T09:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:34Z",
+          "conclusion": "skipped",
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "number": 17,
+          "started_at": "2026-09-01T09:16:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:34Z",
+          "conclusion": "skipped",
+          "name": "Setup Dev Tables",
+          "number": 18,
+          "started_at": "2026-09-01T09:16:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:39Z",
+          "conclusion": "success",
+          "name": "Start Langfuse",
+          "number": 19,
+          "started_at": "2026-09-01T09:16:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "success",
+          "name": "run tests",
+          "number": 20,
+          "started_at": "2026-09-01T09:16:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "skipped",
+          "name": "Prune stale turbo cache entries",
+          "number": 21,
+          "started_at": "2026-09-01T09:18:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 39,
+          "started_at": "2026-09-01T09:18:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 40,
+          "started_at": "2026-09-01T09:18:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 41,
+          "started_at": "2026-09-01T09:18:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 42,
+          "started_at": "2026-09-01T09:18:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 43,
+          "started_at": "2026-09-01T09:18:13Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:15:38Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861795,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-in-app-agent-sandbox-runtime",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402jyecj1k6r1efcexmp2-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "typecheck sandbox runtime",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "run sandbox runtime unit tests",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:36Z",
+          "conclusion": "success",
+          "name": "run sandbox runtime docker e2e tests",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:36Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 19,
+          "started_at": "2026-09-01T09:15:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:36Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 20,
+          "started_at": "2026-09-01T09:15:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 21,
+          "started_at": "2026-09-01T09:15:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:36Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 22,
+          "started_at": "2026-09-01T09:15:36Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:36Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 23,
+          "started_at": "2026-09-01T09:15:36Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:15:42Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861817,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "prettier-check",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402n4ptqa7fv84xtn8ewa-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:19Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:23Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:19Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:23Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:23Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:39Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Check formatting on changed files",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 16,
+          "started_at": "2026-09-01T09:15:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 17,
+          "started_at": "2026-09-01T09:15:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 18,
+          "started_at": "2026-09-01T09:15:40Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:40Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "started_at": "2026-09-01T09:15:40Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:15:33Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861825,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "knip",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402pewy65kp587d6vz5cm-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:30Z",
+          "conclusion": "success",
+          "name": "run knip",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:30Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:30Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 14,
+          "started_at": "2026-09-01T09:15:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:31Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-09-01T09:15:31Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-09-01T09:15:31Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:16:04Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861833,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-shared",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402jqaf2ey65ngtdyxw5j-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "Load default env (for prisma generate)",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "generate prisma client",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:49Z",
+          "conclusion": "success",
+          "name": "run shared tests",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:00Z",
+          "conclusion": "success",
+          "name": "Install ClickHouse binary for SQL-equivalence tests",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:02Z",
+          "conclusion": "success",
+          "name": "run SQL-equivalence tests (non-blocking)",
+          "number": 12,
+          "started_at": "2026-09-01T09:16:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:02Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 21,
+          "started_at": "2026-09-01T09:16:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:02Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 22,
+          "started_at": "2026-09-01T09:16:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:02Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 23,
+          "started_at": "2026-09-01T09:16:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:02Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 24,
+          "started_at": "2026-09-01T09:16:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:02Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-09-01T09:16:02Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:56Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861842,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-storybook",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402j7f0jpb34djhrh903d-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:05Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:23Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:42Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:42Z",
+          "conclusion": "success",
+          "name": "Load default env (for prisma generate)",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:44Z",
+          "conclusion": "success",
+          "name": "generate prisma client",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:42Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:05Z",
+          "conclusion": "success",
+          "name": "Install playwright",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:00Z",
+          "conclusion": "success",
+          "name": "run Storybook tests",
+          "number": 11,
+          "started_at": "2026-09-01T09:16:05Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:53Z",
+          "conclusion": "success",
+          "name": "build Storybook",
+          "number": 12,
+          "started_at": "2026-09-01T09:17:00Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:53Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 21,
+          "started_at": "2026-09-01T09:17:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:53Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 22,
+          "started_at": "2026-09-01T09:17:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 23,
+          "started_at": "2026-09-01T09:17:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:53Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 24,
+          "started_at": "2026-09-01T09:17:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:53Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-09-01T09:17:53Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:59Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861844,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "tests-web (node24, pg15, mode-azure)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402kfjc76ngrydtnv0vke-8vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:25Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:25Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:25Z",
+          "conclusion": "skipped",
+          "name": "Setup Turbo cache",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:30Z",
+          "conclusion": "success",
+          "name": "Start dev containers in background",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:18Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:27Z",
+          "conclusion": "success",
+          "name": "Finalize build for runtime environment",
+          "number": 14,
+          "started_at": "2026-09-01T09:16:18Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:27Z",
+          "conclusion": "success",
+          "name": "Wait for dev containers",
+          "number": 15,
+          "started_at": "2026-09-01T09:16:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:30Z",
+          "conclusion": "success",
+          "name": "Migrate DB",
+          "number": 16,
+          "started_at": "2026-09-01T09:16:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:30Z",
+          "conclusion": "skipped",
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "number": 17,
+          "started_at": "2026-09-01T09:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:30Z",
+          "conclusion": "skipped",
+          "name": "Setup Dev Tables",
+          "number": 18,
+          "started_at": "2026-09-01T09:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:35Z",
+          "conclusion": "success",
+          "name": "Start Langfuse",
+          "number": 19,
+          "started_at": "2026-09-01T09:16:30Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "success",
+          "name": "run tests",
+          "number": 20,
+          "started_at": "2026-09-01T09:16:35Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "skipped",
+          "name": "Prune stale turbo cache entries",
+          "number": 21,
+          "started_at": "2026-09-01T09:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 39,
+          "started_at": "2026-09-01T09:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 40,
+          "started_at": "2026-09-01T09:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 41,
+          "started_at": "2026-09-01T09:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 42,
+          "started_at": "2026-09-01T09:17:56Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:56Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 43,
+          "started_at": "2026-09-01T09:17:56Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:15:30Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861877,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-eslint-plugin",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402khsh8t09bq5f84rgfs-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:04Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:04Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:12Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:26Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:29Z",
+          "conclusion": "success",
+          "name": "run eslint-plugin tests",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:26Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:29Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:29Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 14,
+          "started_at": "2026-09-01T09:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:29Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:29Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-09-01T09:15:29Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:29Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-09-01T09:15:29Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:54Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861885,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "e2e-tests",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402bwy2j1n867xzs7qzps-4vcpu",
+      "started_at": "2026-09-01T09:15:01Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:02Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Setup Turbo cache",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Cache Next.js builds",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:33Z",
+          "conclusion": "success",
+          "name": "Start dev containers in background",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:38Z",
+          "conclusion": "success",
+          "name": "Install playwright in background",
+          "number": 14,
+          "started_at": "2026-09-01T09:15:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:47Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:54Z",
+          "conclusion": "success",
+          "name": "Scan client bundle for minifier-dropped bindings",
+          "number": 16,
+          "started_at": "2026-09-01T09:16:47Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:54Z",
+          "conclusion": "success",
+          "name": "Wait for dev containers",
+          "number": 17,
+          "started_at": "2026-09-01T09:16:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:03Z",
+          "conclusion": "success",
+          "name": "Seed DB",
+          "number": 18,
+          "started_at": "2026-09-01T09:16:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:03Z",
+          "conclusion": "success",
+          "name": "Wait for playwright install",
+          "number": 19,
+          "started_at": "2026-09-01T09:17:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:51Z",
+          "conclusion": "success",
+          "name": "Run e2e tests",
+          "number": 20,
+          "started_at": "2026-09-01T09:17:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:51Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 37,
+          "started_at": "2026-09-01T09:17:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:52Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 38,
+          "started_at": "2026-09-01T09:17:51Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:52Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 39,
+          "started_at": "2026-09-01T09:17:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:52Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 40,
+          "started_at": "2026-09-01T09:17:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:52Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 41,
+          "started_at": "2026-09-01T09:17:52Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:46Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861961,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "e2e-server-tests",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402kz7756s6tezj9fjb1z-4vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "skipped",
+          "name": "Setup Turbo cache",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:33Z",
+          "conclusion": "success",
+          "name": "Start dev containers in background",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:39Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:33Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:39Z",
+          "conclusion": "success",
+          "name": "Wait for dev containers",
+          "number": 14,
+          "started_at": "2026-09-01T09:16:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:49Z",
+          "conclusion": "success",
+          "name": "Seed DB",
+          "number": 15,
+          "started_at": "2026-09-01T09:16:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:54Z",
+          "conclusion": "success",
+          "name": "Run server",
+          "number": 16,
+          "started_at": "2026-09-01T09:16:49Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:54Z",
+          "conclusion": "success",
+          "name": "Check worker health",
+          "number": 17,
+          "started_at": "2026-09-01T09:16:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:54Z",
+          "conclusion": "success",
+          "name": "Check server health",
+          "number": 18,
+          "started_at": "2026-09-01T09:16:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:44Z",
+          "conclusion": "success",
+          "name": "Run e2e tests",
+          "number": 19,
+          "started_at": "2026-09-01T09:16:54Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:44Z",
+          "conclusion": "skipped",
+          "name": "Prune stale turbo cache entries",
+          "number": 20,
+          "started_at": "2026-09-01T09:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:44Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 37,
+          "started_at": "2026-09-01T09:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:45Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 38,
+          "started_at": "2026-09-01T09:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 39,
+          "started_at": "2026-09-01T09:17:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:45Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 40,
+          "started_at": "2026-09-01T09:17:45Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 41,
+          "started_at": "2026-09-01T09:17:45Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:18:14Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861974,
+      "labels": [
+        "blacksmith-8vcpu-ubuntu-2404"
+      ],
+      "name": "tests-web (node24, pg15, mode)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402g48r5hsevdh9dpqn89-8vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:10Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations in background",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:14Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:14Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "skipped",
+          "name": "Setup Turbo cache",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:32Z",
+          "conclusion": "success",
+          "name": "Start dev containers in background",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:25Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:32Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:34Z",
+          "conclusion": "success",
+          "name": "Finalize build for runtime environment",
+          "number": 14,
+          "started_at": "2026-09-01T09:16:25Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:34Z",
+          "conclusion": "success",
+          "name": "Wait for dev containers",
+          "number": 15,
+          "started_at": "2026-09-01T09:16:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:38Z",
+          "conclusion": "success",
+          "name": "Migrate DB",
+          "number": 16,
+          "started_at": "2026-09-01T09:16:34Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:38Z",
+          "conclusion": "success",
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "number": 17,
+          "started_at": "2026-09-01T09:16:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:38Z",
+          "conclusion": "success",
+          "name": "Setup Dev Tables",
+          "number": 18,
+          "started_at": "2026-09-01T09:16:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:43Z",
+          "conclusion": "success",
+          "name": "Start Langfuse",
+          "number": 19,
+          "started_at": "2026-09-01T09:16:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "success",
+          "name": "run tests",
+          "number": 20,
+          "started_at": "2026-09-01T09:16:43Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "skipped",
+          "name": "Prune stale turbo cache entries",
+          "number": 21,
+          "started_at": "2026-09-01T09:18:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 39,
+          "started_at": "2026-09-01T09:18:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 40,
+          "started_at": "2026-09-01T09:18:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 41,
+          "started_at": "2026-09-01T09:18:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 42,
+          "started_at": "2026-09-01T09:18:12Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:12Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 43,
+          "started_at": "2026-09-01T09:18:12Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:00Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802861979,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "test-docker-build (worker)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402gn9tfpe3ayz8x25nt8-4vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:07Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "success",
+          "name": "Checkout",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:07Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:09Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:10Z",
+          "conclusion": "success",
+          "name": "Setup Blacksmith Builder",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:10Z",
+          "conclusion": "success",
+          "name": "Set NEXT_PUBLIC_BUILD_ID",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:15Z",
+          "conclusion": "success",
+          "name": "Start dependency containers in background",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:10Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:52Z",
+          "conclusion": "success",
+          "name": "Build images",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:15Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:57Z",
+          "conclusion": "success",
+          "name": "Start compose services and wait for healthchecks",
+          "number": 9,
+          "started_at": "2026-09-01T09:16:52Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:57Z",
+          "conclusion": "success",
+          "name": "Check service health",
+          "number": 10,
+          "started_at": "2026-09-01T09:16:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:57Z",
+          "conclusion": "skipped",
+          "name": "Capture docker diagnostics on failure",
+          "number": 11,
+          "started_at": "2026-09-01T09:16:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:57Z",
+          "conclusion": "skipped",
+          "name": "Upload docker diagnostics",
+          "number": 12,
+          "started_at": "2026-09-01T09:16:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:59Z",
+          "conclusion": "success",
+          "name": "Post Setup Blacksmith Builder",
+          "number": 22,
+          "started_at": "2026-09-01T09:16:57Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:59Z",
+          "conclusion": "success",
+          "name": "Post Checkout",
+          "number": 23,
+          "started_at": "2026-09-01T09:16:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:59Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 24,
+          "started_at": "2026-09-01T09:16:59Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:16:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 25,
+          "started_at": "2026-09-01T09:16:59Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:17:40Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:14:54Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802862029,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "tests-worker (node24, pg15, mode-redis-cluster)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e402g4wdkypc7r7r6vx1nn-4vcpu",
+      "started_at": "2026-09-01T09:15:02Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:15:03Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:06Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:08Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 3,
+          "started_at": "2026-09-01T09:15:06Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 4,
+          "started_at": "2026-09-01T09:15:08Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Login to Docker Hub",
+          "number": 5,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "success",
+          "name": "Use Node.js 24 without cache",
+          "number": 6,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:13Z",
+          "conclusion": "skipped",
+          "name": "Use Node.js 24 with pnpm cache",
+          "number": 7,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:27Z",
+          "conclusion": "success",
+          "name": "install dependencies",
+          "number": 8,
+          "started_at": "2026-09-01T09:15:13Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Install golang-migrate for Clickhouse migrations",
+          "number": 9,
+          "started_at": "2026-09-01T09:15:27Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:28Z",
+          "conclusion": "success",
+          "name": "Load default env",
+          "number": 10,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:41Z",
+          "conclusion": "success",
+          "name": "Run + migrate",
+          "number": 11,
+          "started_at": "2026-09-01T09:15:28Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:41Z",
+          "conclusion": "success",
+          "name": "Ensure no unhealthy status",
+          "number": 12,
+          "started_at": "2026-09-01T09:15:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:50Z",
+          "conclusion": "success",
+          "name": "Seed DB",
+          "number": 13,
+          "started_at": "2026-09-01T09:15:41Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:50Z",
+          "conclusion": "skipped",
+          "name": "Provide ClickHouse client via dev container for dev-tables setup",
+          "number": 14,
+          "started_at": "2026-09-01T09:15:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:50Z",
+          "conclusion": "skipped",
+          "name": "Setup Dev Tables",
+          "number": 15,
+          "started_at": "2026-09-01T09:15:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:15:53Z",
+          "conclusion": "success",
+          "name": "Build",
+          "number": 16,
+          "started_at": "2026-09-01T09:15:50Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:38Z",
+          "conclusion": "success",
+          "name": "run tests",
+          "number": 17,
+          "started_at": "2026-09-01T09:15:53Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:38Z",
+          "conclusion": "success",
+          "name": "Post Use Node.js 24 without cache",
+          "number": 31,
+          "started_at": "2026-09-01T09:17:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:38Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271",
+          "number": 32,
+          "started_at": "2026-09-01T09:17:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 33,
+          "started_at": "2026-09-01T09:17:38Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:39Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 34,
+          "started_at": "2026-09-01T09:17:39Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:17:39Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 35,
+          "started_at": "2026-09-01T09:17:39Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:14:54Z",
+      "conclusion": "skipped",
+      "created_at": "2026-09-01T09:14:55Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802862629,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "pre-job",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-09-01T09:14:55Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:15:08Z",
+      "conclusion": "skipped",
+      "created_at": "2026-09-01T09:15:09Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99802930895,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "test-worker-llm-connections (node24, pg15)",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-09-01T09:15:09Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:18:27Z",
+      "conclusion": "success",
+      "created_at": "2026-09-01T09:18:15Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99803808613,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "all-ci-passed",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": "blacksmith runners 01kjz5hgdbgsv9efwfar76an3f",
+      "runner_name": "blacksmith-01m1e466pb881g91va1x5tbtrp-4vcpu",
+      "started_at": "2026-09-01T09:18:22Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "started_at": "2026-09-01T09:18:23Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Set up runner",
+          "number": 2,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Set check result as an output",
+          "number": 3,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Successful deploy",
+          "number": 4,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "skipped",
+          "name": "Failing deploy",
+          "number": 5,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "skipped",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 6,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "skipped",
+          "name": "Notify Slack",
+          "number": 7,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Output job results",
+          "number": 8,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Complete runner",
+          "number": 16,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        },
+        {
+          "completed_at": "2026-09-01T09:18:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "started_at": "2026-09-01T09:18:24Z",
+          "status": "completed"
+        }
+      ],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:18:27Z",
+      "conclusion": "skipped",
+      "created_at": "2026-09-01T09:18:27Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99803862717,
+      "labels": [],
+      "name": "build-docker-image-release",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-09-01T09:18:27Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:18:27Z",
+      "conclusion": "skipped",
+      "created_at": "2026-09-01T09:18:27Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99803863765,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "notify-docker-image-release",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-09-01T09:18:27Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    },
+    {
+      "completed_at": "2026-09-01T09:18:27Z",
+      "conclusion": "skipped",
+      "created_at": "2026-09-01T09:18:27Z",
+      "head_sha": "a614e16f22bb48aea2225176c48601eedcd37e9f",
+      "id": 99803863815,
+      "labels": [
+        "blacksmith-4vcpu-ubuntu-2404"
+      ],
+      "name": "publish-docker-image-release",
+      "run_attempt": 2,
+      "run_id": 33438877675,
+      "runner_group_name": null,
+      "runner_name": null,
+      "started_at": "2026-09-01T09:18:27Z",
+      "status": "completed",
+      "steps": [],
+      "workflow_name": "CI/CD"
+    }
+  ],
+  "run_id": 33438877675
+}

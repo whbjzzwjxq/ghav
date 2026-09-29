@@ -1,0 +1,40 @@
+name: "Check"
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+      - ready_for_review
+    branches:
+      - master
+      - develop
+      - 'release/**'
+      - 'lse-release/**'
+      - 'ls-release/**'
+
+env:
+  ACTIONS_STEP_DEBUG: '${{ secrets.ACTIONS_STEP_DEBUG }}'
+
+jobs:
+  autolabel:
+    name: "PR label validator"
+    runs-on: ubuntu-slim
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: "Validate PR's title"
+        uses: thehanimo/pr-title-checker@v1.4.3
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
+          pass_on_octokit_error: false
+          configuration_path: ".github/pr-title-checker-config.json"
+
+      - name: "Set PR's label based on title"
+        uses: release-drafter/release-drafter/autolabeler@v7.7.0
+        with:
+          config-name: autolabeler.yml

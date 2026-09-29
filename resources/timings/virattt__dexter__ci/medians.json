@@ -1,0 +1,367 @@
+{
+  "benchmark": "virattt/dexter@294e996083b36b43cc1c1b4573f1cda99a3dafca:.github/workflows/ci.yml",
+  "benchmark_id": "virattt__dexter__ci",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        31888781770,
+        31637023593,
+        31512141189,
+        30768349210,
+        30707943065
+      ],
+      "window_count": 4
+    },
+    "push": {
+      "runs": [
+        30923593343,
+        29305978222,
+        29304025748,
+        29287265209,
+        29271367340
+      ],
+      "window_count": 1
+    }
+  },
+  "jobs": {
+    "checks (test, bun test)": {
+      "duration_seconds": 11.0,
+      "durations": [
+        10.0,
+        9.0,
+        11.0,
+        11.0,
+        9.0,
+        11.0,
+        13.0,
+        11.0,
+        13.0,
+        9.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        4.0,
+        2.0,
+        3.0,
+        4.0,
+        3.0,
+        3.0,
+        6.0,
+        3.0,
+        5.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run oven-sh/setup-bun@v2",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            4.0,
+            2.0,
+            2.0,
+            4.0,
+            2.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run test",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "checks (typecheck, bun run typecheck)": {
+      "duration_seconds": 14.5,
+      "durations": [
+        15.0,
+        12.0,
+        13.0,
+        15.0,
+        13.0,
+        21.0,
+        14.0,
+        16.0,
+        15.0,
+        13.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        3.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        5.0,
+        5.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            0.0,
+            2.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 0.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            3.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run oven-sh/setup-bun@v2",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            2.0
+          ],
+          "name": "Install dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            7.0,
+            5.0,
+            5.0,
+            6.0,
+            5.0,
+            11.0,
+            5.0,
+            5.0,
+            6.0,
+            6.0
+          ],
+          "name": "Run typecheck",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 5.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "desktop-typecheck": {
+      "duration_seconds": 27.0,
+      "durations": [
+        27.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0
+      ],
+      "samples": 1,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0
+          ],
+          "name": "Run actions/checkout@v4",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Run actions/setup-node@v4",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            10.0
+          ],
+          "name": "Install desktop dependencies",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 10.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            6.0
+          ],
+          "name": "Typecheck desktop (main + preload + renderer)",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 6.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "kr-eval-replay": {
+      "duration_seconds": null,
+      "durations": [],
+      "main_step_counts": [],
+      "overhead_seconds": null,
+      "overheads": [],
+      "samples": 0,
+      "skipped": 1,
+      "steps": []
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "070ef6183a239e86e8098c06ed4f5a245e5aeee9": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "10a50b077cc8b939a2f1609922a4f10703238930": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "2a7f0a913f7b8d3eca5d1a100d571eee07744724": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "2ebef97949ba9dad1ecfb894c0a0c6b49f03a66e": "036de8ff74d174008d5a49de5f16e5f9bac679b0",
+      "334e5f001d88de7cffb7cef90509673852dcf4ed": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "5c9d2d9cbff769510cc31c562ae23e3b5cdaeaac": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "810ebde5740c1438cc7cd585822691ab0db9150b": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "823052ed687a6f3ef0e48b5e7025c73e86d95775": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "88ed7e17dd393042c9b902d443225b9c42f5a6da": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+      "ecaed3011f24ea24ef687ab536aa7f22f7294038": "fbe0c93564493819c271c7e0fff67ef82e496f23"
+    },
+    "pinned_oid": "fbe0c93564493819c271c7e0fff67ef82e496f23",
+    "runs_same_version": 9,
+    "runs_total": 10
+  }
+}

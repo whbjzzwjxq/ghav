@@ -1,0 +1,101 @@
+{
+  "name": "@antfu/ni",
+  "type": "module",
+  "version": "30.5.0",
+  "packageManager": "pnpm@11.20.0",
+  "description": "Use the right package manager",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/antfu-collective/ni#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu-collective/ni.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antfu-collective/ni/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./na": "./dist/na.mjs",
+    "./nci": "./dist/nci.mjs",
+    "./nd": "./dist/nd.mjs",
+    "./ni": "./dist/ni.mjs",
+    "./nlx": "./dist/nlx.mjs",
+    "./nr": "./dist/nr.mjs",
+    "./nun": "./dist/nun.mjs",
+    "./nup": "./dist/nup.mjs",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "ni": "bin/ni.mjs",
+    "nci": "bin/nci.mjs",
+    "nr": "bin/nr.mjs",
+    "nup": "bin/nup.mjs",
+    "nd": "bin/nd.mjs",
+    "nlx": "bin/nlx.mjs",
+    "na": "bin/na.mjs",
+    "nun": "bin/nun.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "dev": "tsx src/commands/ni.ts",
+    "nr": "tsx src/commands/nr.ts",
+    "build": "tsdown",
+    "release": "bumpp",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks",
+    "lint": "eslint",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "fzf": "catalog:prod",
+    "package-manager-detector": "catalog:prod",
+    "tinyexec": "catalog:prod",
+    "tinyglobby": "catalog:prod"
+  },
+  "inlinedDependencies": {
+    "@posva/prompts": "2.4.4",
+    "fast-npm-meta": "2.2.0",
+    "ini": "7.0.0",
+    "isexe": "4.0.0",
+    "kleur": "4.1.5",
+    "pnpm-workspace-yaml": "1.7.0",
+    "sisteransi": "1.0.5",
+    "which": "7.0.0",
+    "yaml": "2.9.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:dev",
+    "@posva/prompts": "catalog:prod-inlined",
+    "@types/ini": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "@types/which": "catalog:dev",
+    "bumpp": "catalog:dev",
+    "eslint": "catalog:dev",
+    "fast-npm-meta": "catalog:prod-inlined",
+    "ini": "catalog:prod-inlined",
+    "lint-staged": "catalog:dev",
+    "pnpm-workspace-yaml": "catalog:prod-inlined",
+    "simple-git-hooks": "catalog:dev",
+    "taze": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "tsx": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:dev",
+    "which": "catalog:prod-inlined"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

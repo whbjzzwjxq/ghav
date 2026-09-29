@@ -1,0 +1,956 @@
+{
+  "benchmark": "sindresorhus/type-fest@3919b6481ab4c7a1316a6fed9da20b58e470e6a4:.github/workflows/main.yml",
+  "benchmark_id": "sindresorhus__type-fest__main",
+  "count_window": {
+    "capped": false,
+    "days": 30,
+    "end": "2026-08-31T23:59:59Z",
+    "start": "2026-08-02T00:00:00Z"
+  },
+  "cutoff": "2026-09-01T00:00:00Z",
+  "events": {
+    "pull_request": {
+      "runs": [
+        31176788160,
+        30745757625,
+        30745550760,
+        28471490056,
+        28328408309
+      ],
+      "window_count": 39
+    },
+    "push": {
+      "runs": [
+        33343172506,
+        33343172592,
+        33343100966,
+        32287072271,
+        31314175817
+      ],
+      "window_count": 6
+    }
+  },
+  "jobs": {
+    "Test linter": {
+      "duration_seconds": 35.0,
+      "durations": [
+        35.0,
+        36.0,
+        42.0,
+        35.0,
+        33.0,
+        41.0,
+        39.0,
+        33.0,
+        32.0,
+        35.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 2.5,
+      "overheads": [
+        2.0,
+        2.0,
+        5.0,
+        5.0,
+        2.0,
+        5.0,
+        6.0,
+        2.0,
+        2.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            23.0,
+            15.0,
+            15.0,
+            21.0,
+            17.0,
+            16.0,
+            16.0,
+            17.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 17.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            14.0,
+            14.0,
+            11.0,
+            13.0,
+            13.0,
+            13.0,
+            14.0,
+            13.0,
+            13.0,
+            13.0
+          ],
+          "name": "Run npm run test:linter",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 13.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test tsd": {
+      "duration_seconds": 71.5,
+      "durations": [
+        65.0,
+        73.0,
+        77.0,
+        71.0,
+        68.0,
+        73.0,
+        79.0,
+        72.0,
+        68.0,
+        69.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        2.0,
+        5.0,
+        6.0,
+        4.0,
+        3.0,
+        4.0,
+        5.0,
+        4.0,
+        4.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            4.0,
+            4.0,
+            3.0,
+            2.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            18.0,
+            16.0,
+            16.0,
+            22.0,
+            23.0,
+            22.0,
+            16.0,
+            19.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            43.0,
+            47.0,
+            48.0,
+            47.0,
+            45.0,
+            44.0,
+            47.0,
+            44.0,
+            44.0,
+            45.0
+          ],
+          "name": "Run npm run test:tsd",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 45.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "Test xo": {
+      "duration_seconds": 120.5,
+      "durations": [
+        120.0,
+        117.0,
+        96.0,
+        115.0,
+        123.0,
+        119.0,
+        128.0,
+        125.0,
+        121.0,
+        121.0
+      ],
+      "main_step_counts": [
+        4
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        2.0,
+        3.0,
+        5.0,
+        2.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        3.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            4.0,
+            4.0,
+            5.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            17.0,
+            13.0,
+            16.0,
+            17.0,
+            16.0,
+            21.0,
+            16.0,
+            16.0,
+            17.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 16.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            99.0,
+            95.0,
+            77.0,
+            96.0,
+            98.0,
+            95.0,
+            97.0,
+            103.0,
+            101.0,
+            101.0
+          ],
+          "name": "Run npm run test:xo",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 97.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "TypeScript latest": {
+      "duration_seconds": 49.5,
+      "durations": [
+        80.0,
+        76.0,
+        48.0,
+        53.0,
+        62.0,
+        45.0,
+        49.0,
+        50.0,
+        43.0,
+        42.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.0,
+      "overheads": [
+        3.0,
+        3.0,
+        3.0,
+        5.0,
+        8.0,
+        2.0,
+        5.0,
+        6.0,
+        2.0,
+        2.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            4.0,
+            3.0,
+            10.0,
+            4.0,
+            1.0,
+            3.0,
+            2.0,
+            0.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 2.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            19.0,
+            16.0,
+            20.0,
+            19.0,
+            17.0,
+            18.0,
+            18.0,
+            15.0,
+            17.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            3.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run npm install typescript@latest --legacy-peer-deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            56.0,
+            52.0,
+            22.0,
+            22.0,
+            20.0,
+            19.0,
+            21.0,
+            20.0,
+            20.0,
+            19.0
+          ],
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 20.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "TypeScript ~5.9.0": {
+      "duration_seconds": 69.5,
+      "durations": [
+        79.0,
+        81.0,
+        67.0,
+        71.0,
+        65.0,
+        65.0,
+        67.0,
+        70.0,
+        75.0,
+        69.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.0,
+      "overheads": [
+        4.0,
+        4.0,
+        4.0,
+        6.0,
+        2.0,
+        3.0,
+        2.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            1.0,
+            3.0,
+            1.0,
+            1.0,
+            2.0,
+            0.0,
+            1.0,
+            1.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            4.0,
+            1.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            21.0,
+            18.0,
+            15.0,
+            16.0,
+            16.0,
+            16.0,
+            19.0,
+            18.0,
+            19.0,
+            19.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0
+          ],
+          "name": "Run npm install typescript@~5.9.0 --legacy-peer-deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            53.0,
+            44.0,
+            46.0,
+            43.0,
+            44.0,
+            44.0,
+            45.0,
+            45.0,
+            43.0
+          ],
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 44.5,
+          "skipped": 0
+        }
+      ]
+    },
+    "TypeScript ~6.0.0": {
+      "duration_seconds": 70.5,
+      "durations": [
+        76.0,
+        72.0,
+        66.0,
+        71.0,
+        66.0,
+        70.0,
+        58.0,
+        66.0,
+        72.0,
+        71.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 3.5,
+      "overheads": [
+        4.0,
+        4.0,
+        2.0,
+        6.0,
+        4.0,
+        2.0,
+        3.0,
+        3.0,
+        3.0,
+        5.0
+      ],
+      "samples": 10,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            2.0,
+            0.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            2.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.5,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            4.0,
+            3.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            18.0,
+            16.0,
+            15.0,
+            21.0,
+            14.0,
+            18.0,
+            19.0,
+            17.0,
+            22.0,
+            18.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 18.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            1.0,
+            2.0,
+            2.0,
+            2.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run npm install typescript@~6.0.0 --legacy-peer-deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            51.0,
+            50.0,
+            44.0,
+            40.0,
+            43.0,
+            44.0,
+            30.0,
+            44.0,
+            43.0,
+            45.0
+          ],
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 44.0,
+          "skipped": 0
+        }
+      ]
+    },
+    "TypeScript ~7.0.0": {
+      "duration_seconds": 48.5,
+      "durations": [
+        48.0,
+        49.0,
+        48.0,
+        54.0,
+        48.0,
+        50.0,
+        53.0,
+        48.0
+      ],
+      "main_step_counts": [
+        5
+      ],
+      "overhead_seconds": 4.5,
+      "overheads": [
+        6.0,
+        5.0,
+        5.0,
+        4.0,
+        2.0,
+        4.0,
+        4.0,
+        5.0
+      ],
+      "samples": 8,
+      "skipped": 0,
+      "steps": [
+        {
+          "durations": [
+            0.0,
+            1.0,
+            1.0,
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "name": "Run actions/checkout@v6",
+          "occurrence": 0,
+          "positions": [
+            0
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            1.0,
+            2.0,
+            1.0,
+            5.0,
+            3.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "name": "Run actions/setup-node@v6",
+          "occurrence": 0,
+          "positions": [
+            1
+          ],
+          "seconds": 1.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            17.0,
+            18.0,
+            18.0,
+            19.0,
+            19.0,
+            19.0,
+            24.0,
+            20.0
+          ],
+          "name": "Run npm install",
+          "occurrence": 0,
+          "positions": [
+            2
+          ],
+          "seconds": 19.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "name": "Run npm install typescript@~7.0.0 --legacy-peer-deps",
+          "occurrence": 0,
+          "positions": [
+            3
+          ],
+          "seconds": 2.0,
+          "skipped": 0
+        },
+        {
+          "durations": [
+            22.0,
+            21.0,
+            21.0,
+            23.0,
+            20.0,
+            21.0,
+            20.0,
+            19.0
+          ],
+          "name": "Run NODE_OPTIONS=\"--max-old-space-size=6144\" npx tsc",
+          "occurrence": 0,
+          "positions": [
+            4
+          ],
+          "seconds": 21.0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "runs_per_event": 5,
+  "status": "ok",
+  "workflow_versions": {
+    "oids": {
+      "07a04de0082b74b203b290e1b66593aa438a6fab": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+      "3919b6481ab4c7a1316a6fed9da20b58e470e6a4": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+      "3fe02d33596f8afa167bc465d9d9ac9ab81b497e": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+      "5e6c6b0b6c4099bc57ff56ec04d24e6b7adb1552": "8909e74a1396671e8414baf3370d6ef8d512cbe2",
+      "6f66d439562430b7568b48d3f1223e9aeecf4436": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+      "72b623e98168c2038668ba1d6e4bda68401f59c0": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+      "c45aa80fe535028cb862f4bc5f1ee90611dfe8b2": "8909e74a1396671e8414baf3370d6ef8d512cbe2",
+      "c7cae00afa9c4c1531a9d2aab9bce7d770e67348": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+      "ca27ccecef9e09badaf775def1829d8e73eedc14": "395f67204b98f0ddcff0cd762230fa7e4421d504"
+    },
+    "pinned_oid": "395f67204b98f0ddcff0cd762230fa7e4421d504",
+    "runs_same_version": 7,
+    "runs_total": 9
+  }
+}
